@@ -4,7 +4,6 @@ local-phone-priv-apps = $(private-phone-priv-apps)
 private-phone-apps := \
 Bluetooth \
 BluetoothExt \
-CellBroadcastReceiver \
 CertInstaller \
 DeviceInfo \
 DocumentsUI \
