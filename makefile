@@ -20,7 +20,7 @@ local-modified-jars :=
 local-miui-removed-apps := FM MiuiCamera
 
 local-miui-modified-apps := TeleService
-local-miui-modified-apps-smali := DeskClock MiuiSystemUI TelephonyProvider
+local-miui-modified-apps-smali := DeskClock MiuiSystemUI TelephonyProvider SecurityCenter
 
 PORT_PRODUCT := nian_z11
 
