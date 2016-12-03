@@ -31,6 +31,9 @@ function appendSmaliPart() {
 
 if [ $1 = "TeleService" ];then
     applyPatch $1 $2
+    appendSmaliPart "TeleService"
+    cp -f $1/smali/com/android/phone/*.smali $2/smali/com/android/phone/
+    cp -rf $1/smali/com/android/phone/nubia $2/smali/com/android/phone/
     sed -i '/readPermission="android.permission.READ_CONTACTS"/a\        <uses-library android:name="com.qualcomm.qcrilhook" android:required="true"/>' $2/AndroidManifest.xml
     sed -i '/readPermission="android.permission.READ_CONTACTS"/a\        <uses-library android:name="qti-telephony-common" android:required="true"/>' $2/AndroidManifest.xml
 fi
