@@ -44,6 +44,7 @@ fi
 
 if [ $1 = "MiuiSystemUI" ];then
     appendSmaliPart "MiuiSystemUI"
+	applyPatch $1 $2
 fi
 
 if [ $1 = "TelephonyProvider" ];then
