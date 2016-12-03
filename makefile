@@ -52,6 +52,7 @@ include $(PORT_BUILD)/porting.mk
 #updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
+	cp -rf other/boot.img $(ZIP_DIR)/boot.img 
 	rm -rf $(ZIP_DIR)/system/vendor/ChinaMobile
 	rm -rf $(ZIP_DIR)/system/vendor/CmccPower
 	rm -rf $(ZIP_DIR)/system/vendor/CTA
