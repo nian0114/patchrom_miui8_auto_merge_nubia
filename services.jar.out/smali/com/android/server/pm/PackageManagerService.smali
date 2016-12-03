@@ -9013,6 +9013,10 @@
     .param p1, "s2"    # [Landroid/content/pm/Signature;
 
     .prologue
+    const/4 v0, 0x0
+
+    return v0
+
     const/4 v6, 0x1
 
     const/4 v8, -0x3
