@@ -8984,25 +8984,6 @@
 
     .line 4310
     :cond_11
-    iget-object v8, p1, Lcom/android/server/am/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
-
-    iget-object v8, v8, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    invoke-static {v8, v0, v1}, Landroid/app/NubiaThemeHelper;->needRestartActivity(Ljava/lang/String;ILandroid/content/res/Configuration;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_12
-
-    .line 4318
-    const-string v8, "ActivityManager"
-
-    const-string v9, "ActivityStack needRestartActivity return true"
-
-    invoke-static {v8, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 4322
-    :cond_12
     iget v8, p1, Lcom/android/server/am/ActivityRecord;->configChangeFlags:I
 
     or-int/2addr v8, v0
