@@ -1,0 +1,8 @@
+
+.method public setStatusBarIconsColor(ILjava/lang/String;)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
