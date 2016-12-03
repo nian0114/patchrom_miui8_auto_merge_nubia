@@ -19,7 +19,7 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps :=
 
-local-miui-modified-apps :=
+local-miui-modified-apps := TeleService
 local-miui-modified-apps-smali :=
 
 PORT_PRODUCT := nian_z11
