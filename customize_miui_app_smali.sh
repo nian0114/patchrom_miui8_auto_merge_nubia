@@ -47,5 +47,6 @@ if [ $1 = "TelephonyProvider" ];then
 fi
 
 if [ $1 = "SecurityCenter" ];then
+    applyPatch $1 $2
     isPatchrom $2
 fi
