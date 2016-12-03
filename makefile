@@ -67,6 +67,7 @@ local-pre-zip-misc:
 	echo "ro.miui.type=hook" >> $(ZIP_DIR)/system/build.prop
 	rm -rf $(ZIP_DIR)/system/media/audio/ui/bootup.wav
 	touch $(ZIP_DIR)/system/media/audio/ui/bootup.wav
+	mv $(ZIP_DIR)/system/media/shutdownanimation.zip $(ZIP_DIR)/system/media/theme/shutdown/shutdownanimation.zip 
 	@echo goodbye! miui prebuilt binaries!
 	cp -rf stockrom/system/bin/app_process64 $(ZIP_DIR)/system/bin/app_process64
 	cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32
