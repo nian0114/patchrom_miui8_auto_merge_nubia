@@ -62,3 +62,6 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/vendor/ChinaMobile
 	rm -rf $(ZIP_DIR)/system/vendor/CmccPower
 	rm -rf $(ZIP_DIR)/system/vendor/CTA
+	@echo goodbye! miui prebuilt binaries!
+	cp -rf stockrom/system/bin/app_process64 $(ZIP_DIR)/system/bin/app_process64
+	cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32
