@@ -22,9 +22,15 @@
 
 .field private static final DEBUG_LOAD:Z = false
 
+.field private static final DENSITY_CONFIG:I
+
+.field private static final FONT_SCALE_CONFIG:I
+
 .field private static final ID_OTHER:I = 0x1000004
 
 .field private static final LAYOUT_DIR_CONFIG:I
+
+.field private static final SPEC_PUBLIC:I = 0x40000000
 
 .field static final TAG:Ljava/lang/String; = "Resources"
 
@@ -33,6 +39,17 @@
 .field private static final TRACE_FOR_PRELOAD:Z
 
 .field static mSystem:Landroid/content/res/Resources;
+
+.field private static final sCachedDrawables:Landroid/util/LongSparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/LongSparseArray",
+            "<",
+            "Landroid/graphics/drawable/Drawable$ConstantState;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private static sPreloaded:Z
 
@@ -96,6 +113,8 @@
 .field private final mCachedXmlBlockIds:[I
 
 .field private final mCachedXmlBlocks:[Landroid/content/res/XmlBlock;
+
+.field private mCaching:Z
 
 .field private final mColorDrawableCache:Landroid/content/res/DrawableCache;
 
@@ -166,6 +185,22 @@
     sput v0, Landroid/content/res/Resources;->LAYOUT_DIR_CONFIG:I
 
     .line 115
+    const/high16 v0, 0x40000000    # 2.0f
+
+    invoke-static {v0}, Landroid/content/pm/ActivityInfo;->activityInfoConfigToNative(I)I
+
+    move-result v0
+
+    sput v0, Landroid/content/res/Resources;->FONT_SCALE_CONFIG:I
+
+    const/16 v0, 0x1000
+
+    invoke-static {v0}, Landroid/content/pm/ActivityInfo;->activityInfoConfigToNative(I)I
+
+    move-result v0
+
+    sput v0, Landroid/content/res/Resources;->DENSITY_CONFIG:I
+
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -180,6 +215,12 @@
     sput-object v0, Landroid/content/res/Resources;->sPreloadedColorDrawables:Landroid/util/LongSparseArray;
 
     .line 124
+    new-instance v0, Landroid/util/LongSparseArray;
+
+    invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
+
+    sput-object v0, Landroid/content/res/Resources;->sCachedDrawables:Landroid/util/LongSparseArray;
+
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
@@ -802,6 +843,17 @@
     invoke-virtual/range {v1 .. v6}, Landroid/content/res/DrawableCache;->put(JLandroid/content/res/Resources$Theme;Ljava/lang/Object;Z)V
 
     .line 2702
+    iget-boolean v1, p0, Landroid/content/res/Resources;->mCaching:Z
+
+    if-eqz v1, :cond_nian_1
+
+    if-nez p2, :cond_nian_1
+
+    sget-object v1, Landroid/content/res/Resources;->sCachedDrawables:Landroid/util/LongSparseArray;
+
+    invoke-virtual {v1, p6, p7, v5}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
+
+    :cond_nian_1
     monitor-exit v7
 
     goto :goto_0
@@ -1012,6 +1064,10 @@
     sput-object v0, Landroid/content/res/Resources;->mSystem:Landroid/content/res/Resources;
 
     .line 301
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/miui/ResourcesManager;->initMiuiResource(Landroid/content/res/Resources;Ljava/lang/String;)V
+
     :cond_0
     monitor-exit v2
 
@@ -1301,10 +1357,7 @@
 
     .line 2736
     .local v2, "file":Ljava/lang/String;
-    const/4 v0, 0x0
-
     .line 2739
-    .local v0, "dr":Landroid/graphics/drawable/Drawable;
     invoke-static {v10, v11, v2}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
     .line 2741
@@ -1328,7 +1381,7 @@
 
     .line 2744
     .local v5, "rp":Landroid/content/res/XmlResourceParser;
-    invoke-static {p0, v5, p3}, Landroid/graphics/drawable/Drawable;->createFromXml(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1, v5, p2, p3}, Landroid/content/res/Resources;->createFromXml(Landroid/util/TypedValue;Landroid/content/res/XmlResourceParser;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1339,7 +1392,6 @@
 
     .line 2766
     .end local v5    # "rp":Landroid/content/res/XmlResourceParser;
-    :cond_1
     :goto_0
     invoke-static {v10, v11}, Landroid/os/Trace;->traceEnd(J)V
 
@@ -1349,12 +1401,6 @@
     .line 2750
     :cond_2
     :try_start_1
-    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->loadOverlayDrawable(Landroid/util/TypedValue;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
     .line 2754
     iget-object v6, p0, Landroid/content/res/Resources;->mAssets:Landroid/content/res/AssetManager;
 
@@ -1368,9 +1414,7 @@
 
     .line 2756
     .local v3, "is":Ljava/io/InputStream;
-    const/4 v6, 0x0
-
-    invoke-static {p0, p1, v3, v2, v6}, Landroid/graphics/drawable/Drawable;->createFromResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1, v3, v2, p2}, Landroid/content/res/Resources;->createFromResourceStream(Landroid/util/TypedValue;Ljava/io/InputStream;Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1657,7 +1701,17 @@
 
     .prologue
     .line 2570
-    const v2, -0x40001001    # -1.9995116f
+    sget v2, Landroid/content/res/Resources;->FONT_SCALE_CONFIG:I
+
+    sget v3, Landroid/content/res/Resources;->DENSITY_CONFIG:I
+
+    or-int/2addr v2, v3
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    or-int/2addr v2, v3
+
+    xor-int/lit8 v2, v2, -0x1
 
     and-int/2addr v2, p1
 
@@ -1760,6 +1814,52 @@
 
 
 # virtual methods
+.method createFromResourceStream(Landroid/util/TypedValue;Ljava/io/InputStream;Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    .prologue
+    invoke-virtual {p0, p1, p4}, Landroid/content/res/Resources;->loadOverlayDrawable(Landroid/util/TypedValue;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .local v0, "dr":Landroid/graphics/drawable/Drawable;
+    if-nez v0, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, p1, p2, p3, v1}, Landroid/graphics/drawable/Drawable;->createFromResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
+.end method
+
+.method createFromXml(Landroid/util/TypedValue;Landroid/content/res/XmlResourceParser;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/xmlpull/v1/XmlPullParserException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    invoke-virtual {p0, p1, p3}, Landroid/content/res/Resources;->loadOverlayDrawable(Landroid/util/TypedValue;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .local v0, "dr":Landroid/graphics/drawable/Drawable;
+    if-nez v0, :cond_0
+
+    invoke-static {p0, p2, p4}, Landroid/graphics/drawable/Drawable;->createFromXml(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
+.end method
+
 .method public final finishPreloading()V
     .locals 1
 
@@ -3720,6 +3820,59 @@
     goto :goto_0
 .end method
 
+.method getPreloadedDrawable(JI)Landroid/graphics/drawable/Drawable$ConstantState;
+    .locals 3
+
+    .prologue
+    sget-object v1, Landroid/content/res/Resources;->sPreloadedDrawables:[Landroid/util/LongSparseArray;
+
+    iget-object v2, p0, Landroid/content/res/Resources;->mConfiguration:Landroid/content/res/Configuration;
+
+    invoke-virtual {v2}, Landroid/content/res/Configuration;->getLayoutDirection()I
+
+    move-result v2
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {v1, p1, p2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/Drawable$ConstantState;
+
+    .local v0, "cs":Landroid/graphics/drawable/Drawable$ConstantState;
+    if-nez v0, :cond_0
+
+    sget-object v1, Landroid/content/res/Resources;->sCachedDrawables:Landroid/util/LongSparseArray;
+
+    invoke-virtual {v1, p1, p2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/Drawable$ConstantState;
+
+    .restart local v0    # "cs":Landroid/graphics/drawable/Drawable$ConstantState;
+    if-eqz v0, :cond_0
+
+    sget-object v1, Landroid/content/res/Resources;->sCachedDrawables:Landroid/util/LongSparseArray;
+
+    invoke-virtual {v1, p1, p2}, Landroid/util/LongSparseArray;->remove(J)V
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0, p3}, Landroid/content/res/Resources;->isPreloadOverlayed(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v0, 0x0
+
+    :cond_1
+    return-object v0
+.end method
+
 .method public getPreloadedDrawables()Landroid/util/LongSparseArray;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -4646,6 +4799,24 @@
     return-object v0
 .end method
 
+.method isPreloadOverlayed(I)Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method isPreloading()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/content/res/Resources;->mPreloading:Z
+
+    return v0
+.end method
+
 .method loadColorStateList(Landroid/util/TypedValue;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
     .locals 11
     .param p1, "value"    # Landroid/util/TypedValue;
@@ -5111,6 +5282,20 @@
     return-object v0
 .end method
 
+.method loadOverlayTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
+    .locals 0
+
+    .prologue
+    return-object p1
+.end method
+
+.method loadOverlayValue(Landroid/util/TypedValue;I)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
 .method loadXmlResourceParser(ILjava/lang/String;)Landroid/content/res/XmlResourceParser;
     .locals 5
     .param p1, "id"    # I
@@ -5533,7 +5718,7 @@
 
     .line 2045
     .local v0, "array":Landroid/content/res/TypedArray;
-    invoke-static {p0, v7}, Landroid/content/res/NubiaTypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
+    invoke-static {p0, v7}, Landroid/content/res/TypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
@@ -5559,7 +5744,10 @@
     .line 2059
     iput-object v8, v0, Landroid/content/res/TypedArray;->mXml:Landroid/content/res/XmlBlock$Parser;
 
-    .line 2061
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->loadOverlayTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
     return-object v0
 .end method
 
@@ -5621,7 +5809,7 @@
 
     .line 608
     .local v0, "array":Landroid/content/res/TypedArray;
-    invoke-static {p0, v1}, Landroid/content/res/NubiaTypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
+    invoke-static {p0, v1}, Landroid/content/res/TypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
@@ -5641,8 +5829,11 @@
 
     aput v4, v2, v4
 
-    .line 616
-    return-object v0
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->loadOverlayTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
+
+    move-result-object v2
+
+    return-object v2
 .end method
 
 .method public openRawResource(I)Ljava/io/InputStream;

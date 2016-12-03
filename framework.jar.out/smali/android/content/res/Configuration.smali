@@ -258,7 +258,7 @@
 
 .field public densityDpi:I
 
-.field public extraConfig:Lnubia/content/res/ExtraConfiguration;
+.field public extraConfig:Landroid/content/res/MiuiConfiguration;
 
 .field public fontScale:F
 
@@ -327,11 +327,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 672
-    new-instance v0, Lnubia/content/res/ExtraConfiguration;
+    new-instance v0, Landroid/content/res/MiuiConfiguration;
 
-    invoke-direct {v0}, Lnubia/content/res/ExtraConfiguration;-><init>()V
+    invoke-direct {v0}, Landroid/content/res/MiuiConfiguration;-><init>()V
 
-    iput-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iput-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
     .line 675
     invoke-virtual {p0}, Landroid/content/res/Configuration;->setToDefaults()V
@@ -349,11 +349,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 684
-    new-instance v0, Lnubia/content/res/ExtraConfiguration;
+    new-instance v0, Landroid/content/res/MiuiConfiguration;
 
-    invoke-direct {v0}, Lnubia/content/res/ExtraConfiguration;-><init>()V
+    invoke-direct {v0}, Landroid/content/res/MiuiConfiguration;-><init>()V
 
-    iput-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iput-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
     .line 687
     invoke-virtual {p0, p1}, Landroid/content/res/Configuration;->setTo(Landroid/content/res/Configuration;)V
@@ -371,11 +371,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1308
-    new-instance v0, Lnubia/content/res/ExtraConfiguration;
+    new-instance v0, Landroid/content/res/MiuiConfiguration;
 
-    invoke-direct {v0}, Lnubia/content/res/ExtraConfiguration;-><init>()V
+    invoke-direct {v0}, Landroid/content/res/MiuiConfiguration;-><init>()V
 
-    iput-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iput-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
     .line 1311
     invoke-virtual {p0, p1}, Landroid/content/res/Configuration;->readFromParcel(Landroid/os/Parcel;)V
@@ -749,25 +749,6 @@
 
     .line 1821
     :cond_15
-    iget-object v1, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
-
-    iget v1, v1, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
-
-    iget-object v2, p1, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
-
-    iget v2, v2, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
-
-    if-eq v1, v2, :cond_16
-
-    .line 1823
-    iget-object v1, v0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
-
-    iget-object v2, p1, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
-
-    invoke-virtual {v1, v2}, Lnubia/content/res/ExtraConfiguration;->setTo(Lnubia/content/res/ExtraConfiguration;)V
-
-    .line 1826
-    :cond_16
     return-object v0
 .end method
 
@@ -970,7 +951,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {p0}, Lnubia/content/res/ExtraConfiguration;->needNewResources(I)Z
+    invoke-static {p0}, Landroid/content/res/MiuiConfiguration;->needNewResources(I)Z
 
     move-result v0
 
@@ -2653,11 +2634,11 @@
     if-nez v2, :cond_0
 
     .line 1366
-    iget-object v3, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v3, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    iget-object v4, p1, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v4, p1, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    invoke-virtual {v3, v4}, Lnubia/content/res/ExtraConfiguration;->compareTo(Lnubia/content/res/ExtraConfiguration;)I
+    invoke-virtual {v3, v4}, Landroid/content/res/MiuiConfiguration;->compareTo(Landroid/content/res/MiuiConfiguration;)I
 
     move-result v2
 
@@ -3005,11 +2986,11 @@
 
     .line 1151
     :cond_12
-    iget-object v2, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v2, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    iget-object v3, p1, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v3, p1, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    invoke-virtual {v2, v3}, Lnubia/content/res/ExtraConfiguration;->diff(Lnubia/content/res/ExtraConfiguration;)I
+    invoke-virtual {v2, v3}, Landroid/content/res/MiuiConfiguration;->diff(Landroid/content/res/MiuiConfiguration;)I
 
     move-result v2
 
@@ -3247,13 +3228,15 @@
     add-int v0, v1, v2
 
     .line 1407
-    iget-object v1, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    mul-int/lit8 v1, v0, 0x1f
 
-    invoke-virtual {v1}, Lnubia/content/res/ExtraConfiguration;->hashCode()I
+    iget-object v2, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    move-result v1
+    invoke-virtual {v2}, Landroid/content/res/MiuiConfiguration;->hashCode()I
 
-    add-int/2addr v0, v1
+    move-result v2
+
+    add-int v0, v1, v2
 
     .line 1410
     return v0
@@ -3573,9 +3556,9 @@
     iput v0, p0, Landroid/content/res/Configuration;->seq:I
 
     .line 1286
-    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    invoke-virtual {v0, p1}, Lnubia/content/res/ExtraConfiguration;->readFromParcel(Landroid/os/Parcel;)V
+    invoke-virtual {v0, p1}, Landroid/content/res/MiuiConfiguration;->readFromParcel(Landroid/os/Parcel;)V
 
     .line 1289
     return-void
@@ -3760,11 +3743,11 @@
     iput v0, p0, Landroid/content/res/Configuration;->seq:I
 
     .line 717
-    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    iget-object v1, p1, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v1, p1, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    invoke-virtual {v0, v1}, Lnubia/content/res/ExtraConfiguration;->setTo(Lnubia/content/res/ExtraConfiguration;)V
+    invoke-virtual {v0, v1}, Landroid/content/res/MiuiConfiguration;->setTo(Landroid/content/res/MiuiConfiguration;)V
 
     .line 720
     return-void
@@ -3843,9 +3826,9 @@
     iput v1, p0, Landroid/content/res/Configuration;->seq:I
 
     .line 889
-    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    invoke-virtual {v0}, Lnubia/content/res/ExtraConfiguration;->setToDefaults()V
+    invoke-virtual {v0}, Landroid/content/res/MiuiConfiguration;->setToDefaults()V
 
     .line 892
     return-void
@@ -4225,9 +4208,9 @@
 
     .line 858
     :cond_0
-    iget-object v2, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v2, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    invoke-virtual {v2}, Lnubia/content/res/ExtraConfiguration;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/content/res/MiuiConfiguration;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -5308,11 +5291,11 @@
 
     .line 1036
     :cond_19
-    iget-object v2, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v2, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    iget-object v3, p1, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v3, p1, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    invoke-virtual {v2, v3}, Lnubia/content/res/ExtraConfiguration;->updateFrom(Lnubia/content/res/ExtraConfiguration;)I
+    invoke-virtual {v2, v3}, Landroid/content/res/MiuiConfiguration;->updateFrom(Landroid/content/res/MiuiConfiguration;)I
 
     move-result v2
 
@@ -5467,9 +5450,9 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 1253
-    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lnubia/content/res/ExtraConfiguration;
+    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    invoke-virtual {v0, p1, p2}, Lnubia/content/res/ExtraConfiguration;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p1, p2}, Landroid/content/res/MiuiConfiguration;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 1256
     return-void

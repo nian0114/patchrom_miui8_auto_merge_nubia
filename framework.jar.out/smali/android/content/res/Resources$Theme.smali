@@ -422,7 +422,7 @@
     .local v9, "array":Landroid/content/res/TypedArray;
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
-    invoke-static {v0, v10}, Landroid/content/res/NubiaTypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
+    invoke-static {v0, v10}, Landroid/content/res/TypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
 
     move-result-object v9
 
@@ -449,7 +449,7 @@
     .line 1598
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
-    invoke-virtual {v0, v9}, Landroid/content/res/Resources;->replaceTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
+    invoke-virtual {v0, v9}, Landroid/content/res/Resources;->loadOverlayTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
@@ -475,7 +475,7 @@
     .local v9, "array":Landroid/content/res/TypedArray;
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
-    invoke-static {v0, v10}, Landroid/content/res/NubiaTypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
+    invoke-static {v0, v10}, Landroid/content/res/TypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
 
     move-result-object v9
 
@@ -514,7 +514,7 @@
     .line 1713
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
-    invoke-virtual {v0, v9}, Landroid/content/res/Resources;->replaceTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
+    invoke-virtual {v0, v9}, Landroid/content/res/Resources;->loadOverlayTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
@@ -545,7 +545,7 @@
     .local v9, "array":Landroid/content/res/TypedArray;
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
-    invoke-static {v0, v10}, Landroid/content/res/NubiaTypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
+    invoke-static {v0, v10}, Landroid/content/res/TypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
 
     move-result-object v9
 
@@ -570,7 +570,7 @@
     .line 1524
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
-    invoke-virtual {v0, v9}, Landroid/content/res/Resources;->replaceTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
+    invoke-virtual {v0, v9}, Landroid/content/res/Resources;->loadOverlayTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
@@ -654,6 +654,13 @@
 
     .line 1785
     .local v0, "got":Z
+    if-eqz v0, :cond_nian_0
+
+    iget-object v1, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
+
+    invoke-virtual {v1, p2, p1}, Landroid/content/res/Resources;->loadOverlayValue(Landroid/util/TypedValue;I)V
+
+    :cond_nian_0
     return v0
 .end method
 
@@ -688,13 +695,12 @@
 
     .line 1746
     :cond_1
-    const/4 v8, 0x0
 
     .line 1748
     .local v8, "array":Landroid/content/res/TypedArray;
     iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
-    invoke-static {v0, v9}, Landroid/content/res/NubiaTypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
+    invoke-static {v0, v9}, Landroid/content/res/TypedArray;->obtain(Landroid/content/res/Resources;I)Landroid/content/res/TypedArray;
 
     move-result-object v8
 
