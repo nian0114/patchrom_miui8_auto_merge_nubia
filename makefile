@@ -53,6 +53,7 @@ include $(PORT_BUILD)/porting.mk
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp -rf other/system $(ZIP_DIR)/
+	cp -rf ../other/system $(ZIP_DIR)/
 	cp -rf other/boot.img $(ZIP_DIR)/boot.img 
 	cp -rf stockrom/system/lib64/libavcodec.so $(ZIP_DIR)/system/lib64/libavcodec.so
 	cp -rf stockrom/system/lib64/libavformat.so $(ZIP_DIR)/system/lib64/libavformat.so
