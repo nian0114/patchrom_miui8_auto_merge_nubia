@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extra_settings_config>
+    <int name="zte_Profile_powersaving_screen_powersave_enabled">0</int>
+    <int name="zte_Profile_powersaving_shutdown_all_connection_enabled">0</int>
+    <int name="zte_Profile_powersaving_haptic_feedback_tag_enabled">0</int>
+    <int name="zte_Profile_powersaving_cpu_limit_enabled">0</int>
+    <int name="zte_Powersaving_Profile_isactive">1</int>
+    <string name="zte_Profile_powersaving_original_resting_time">30*1000</string>
+    <int name="zte_Profile_powersaving_low_powersaving_enabled">0</int>
+    <int name="zte_Profile_sleep_deepsleep_enabled">0</int>
+    <int name="zte_Profile_sleep_white_list_enabled">1</int>
+    <int name="zte_Pocket_Profile_isenable">1</int>
+    <string name="zte_profile_deep_sleep_music">0:1:2:3</string>
+    <int name="extra_first_screen_negative">1</int>
+    <int name="zte_auto_brightness_adj_mode">1</int>
+    <int name="nb_vibrate_when_silent">1</int>
+    <int name="show_password">1</int>
+    <int name="power_volume_screenshot">1</int>
+    <int name="motion_active">0</int>
+    <int name="motion_turnover">0</int>
+    <int name="motion_shake">0</int>
+    <int name="motion_pickup">0</int>
+    <int name="motion_pickanswer">0</int>
+    <int name="motion_leanscan">0</int>
+    <int name="motion_pocketmod">0</int>
+    <int name="motion_rlshake">0</int>
+    <int name="motion_palmrejection">0</int>
+    <int name="motion_call">0</int>
+    <int name="motion_music">0</int>
+    <int name="motion_picture">0</int>
+    <int name="motion_phoneskin">1</int>
+    <int name="key_forward_back">0</int>
+    <int name="key_free_snap">1</int>
+    <int name=" free_snapshot">1</int>
+    <int name="key_bf_level">5000</int>
+    <string name="volley_white_list">"pkgs: com.android.gallery3d cn.nubia.launcher com.android.browser com.chaozh.iReaderFree cn.nubia.zbiglauncher.preset "</string>
+    <int name="key_slide_screen">1</int>
+    <int name="slide_screen">0</int>
+    <int name="splitscreen_slide_up">1</int>
+</extra_settings_config>
