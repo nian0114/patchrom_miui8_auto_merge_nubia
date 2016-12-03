@@ -62,6 +62,7 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/vendor/ChinaMobile
 	rm -rf $(ZIP_DIR)/system/vendor/CmccPower
 	rm -rf $(ZIP_DIR)/system/vendor/CTA
+	rm -rf $(ZIP_DIR)/system/priv-app/CMSettings
 	echo "import /system/default.prop" >> $(ZIP_DIR)/system/build.prop
 	echo "ro.miui.type=hook" >> $(ZIP_DIR)/system/build.prop
 	@echo goodbye! miui prebuilt binaries!
