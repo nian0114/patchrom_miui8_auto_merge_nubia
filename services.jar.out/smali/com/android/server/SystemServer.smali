@@ -1858,11 +1858,13 @@
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 654
-    new-instance v71, Lcom/android/server/input/InputManagerService;
+    new-instance v71, Lcom/android/server/input/MiuiInputManagerService;
 
     move-object/from16 v0, v71
 
-    invoke-direct {v0, v5}, Lcom/android/server/input/InputManagerService;-><init>(Landroid/content/Context;)V
+    const/4 v6, 0x0
+    
+    invoke-direct {v0, v5, v6}, Lcom/android/server/input/MiuiInputManagerService;-><init>(Landroid/content/Context;)V
     :try_end_9
     .catch Ljava/lang/RuntimeException; {:try_start_9 .. :try_end_9} :catch_45
 
