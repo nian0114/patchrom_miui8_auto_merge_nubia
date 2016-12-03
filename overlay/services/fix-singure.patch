@@ -1,0 +1,23 @@
+From abbb655812641dc7db7666410e2db021e5904589 Mon Sep 17 00:00:00 2001
+From: wangtongli <276792882@qq.com>
+Date: Sun, 9 Oct 2016 00:51:16 +0800
+Subject: [PATCH] fix-singure
+
+---
+ services/smali/com/miui/server/SecurityManagerService.smali | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/services/smali/com/miui/server/SecurityManagerService.smali
++++ b/services/smali/com/miui/server/SecurityManagerService.smali
+@@ -813,7 +813,7 @@
+ 
+     move-result v8
+ 
+-    if-nez v8, :cond_1
++    #if-nez v8, :cond_1
+ 
+     const/4 v7, 0x1
+ 
+-- 
+1.9.1
+
