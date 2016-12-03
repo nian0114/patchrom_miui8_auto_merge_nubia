@@ -11,6 +11,7 @@ Ds2 \
 Ds2UI \
 FingerprintServiceExtension \
 HTMLViewer \
+Idler \
 KeyChain \
 MdtpService \
 NfcNci \
@@ -19,21 +20,27 @@ PhotoTable \
 PicoTts \
 PrintSpooler \
 QtiTelephonyService \
+SingleHandPageSet \
 SmartBar \
 Stk \
+SuperSnap \
 TimeService \
 UserDictionaryProvider \
 WAPPushManager \
 ZMiniLauncher5 \
+ZNubiaEdge \
 fastdormancy \
 nubia_IRControl3 \
 nubia_IRtest3 \
+shutdownlistener \
+smartface \
 telresources
 
 private-phone-priv-apps := \
 AppSettingsInfoProvider \
 BackupRestoreConfirmation \
-Camera com.qualcomm.location \
+Camera \
+CNEService \
 DefaultContainerService \
 ExternalStorageProvider \
 FusedLocation \
