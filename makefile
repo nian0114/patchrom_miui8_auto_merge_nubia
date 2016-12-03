@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_z11.zip
 local-previous-target-dir :=
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps :=
+local-modified-apps := SettingsProvider
 
 local-modified-jars :=
 

@@ -1046,6 +1046,12 @@
 
     if-nez v2, :cond_0
 
+    invoke-static {v1, p2}, Landroid/provider/MiuiSettings$System;->isMiuiPublicSettings(Landroid/content/pm/PackageInfo;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
     .line 1084
     iget-object v2, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1097,6 +1103,12 @@
     iget v2, v2, Landroid/content/pm/ApplicationInfo;->privateFlags:I
 
     and-int/lit8 v2, v2, 0x8
+
+    if-nez v2, :cond_0
+
+    invoke-static {v1, p2}, Landroid/provider/MiuiSettings$System;->isMiuiPublicSettings(Landroid/content/pm/PackageInfo;Ljava/lang/String;)Z
+
+    move-result v2
 
     if-nez v2, :cond_0
 

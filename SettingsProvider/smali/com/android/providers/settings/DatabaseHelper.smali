@@ -2331,6 +2331,10 @@
     invoke-direct {p0, v0}, Lcom/android/providers/settings/DatabaseHelper;->loadUISoundEffectsSettings(Landroid/database/sqlite/SQLiteStatement;)V
 
     .line 2392
+    iget-object v1, p0, Lcom/android/providers/settings/DatabaseHelper;->mContext:Landroid/content/Context;
+
+    invoke-static {v0, v1}, Lmiui/provider/SettingProviderHelper;->loadDefaultRingtoneSettings(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;)V
+
     const-string v1, "pointer_speed"
 
     const v2, 0x7f05000c
