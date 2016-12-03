@@ -9648,6 +9648,12 @@
 
     if-eqz v0, :cond_0
 
+    invoke-static {v8, p3}, Lcom/android/server/pm/SettingsInjector;->checkXSpaceApp(Lcom/android/server/pm/PackageSetting;I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_miui_0
+
     .line 3677
     sget-boolean v0, Lcom/cmx/cmplus/SmartContainerConfig;->WITH_OUT_VIRTUAL_BOX:Z
 
@@ -9673,6 +9679,7 @@
     .line 3683
     if-eqz v6, :cond_1
 
+    :cond_miui_0
     .line 3684
     invoke-virtual {v8, v10, p3}, Lcom/android/server/pm/PackageSetting;->setInstalled(ZI)V
 

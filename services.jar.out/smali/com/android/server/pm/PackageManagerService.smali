@@ -53102,6 +53102,15 @@
 
     .line 3136
     .local v6, "a":Landroid/content/pm/PackageParser$Activity;
+    invoke-static {}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserCalling()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_miui_2
+
+    or-int/lit16 p2, p2, 0x2000
+
+    :cond_miui_2
     if-eqz v6, :cond_3
 
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
@@ -53707,7 +53716,7 @@
 .end method
 
 .method public getApplicationInfo(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
-    .locals 9
+    .locals 10
     .param p1, "packageName"    # Ljava/lang/String;
     .param p2, "flags"    # I
     .param p3, "userId"    # I
@@ -53816,7 +53825,22 @@
     invoke-static {v6, p2, v0, p3}, Landroid/content/pm/PackageParser;->generateApplicationInfo(Landroid/content/pm/PackageParser$Package;ILandroid/content/pm/PackageUserState;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
+    
+    if-nez v0, :cond_miui_2
+    
+    invoke-static {}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserCalling()Z
 
+    move-result v9
+
+    if-eqz v9, :cond_miui_2
+
+    or-int/lit16 p2, p2, 0x2000
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/PackageManagerService;->generateApplicationInfoFromSettingsLPw(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+    
+    :cond_miui_2
     monitor-exit v1
 
     goto :goto_0
@@ -55681,7 +55705,7 @@
 .end method
 
 .method public getPackageInfo(Ljava/lang/String;II)Landroid/content/pm/PackageInfo;
-    .locals 8
+    .locals 9
     .param p1, "packageName"    # Ljava/lang/String;
     .param p2, "flags"    # I
     .param p3, "userId"    # I
@@ -55765,6 +55789,21 @@
 
     move-result-object v0
 
+    if-nez v7, :cond_miui_1
+
+    invoke-static {}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserCalling()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_miui_1
+
+    or-int/lit16 p2, p2, 0x2000
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/PackageManagerService;->generatePackageInfoFromSettingsLPw(Ljava/lang/String;II)Landroid/content/pm/PackageInfo;
+
+    move-result-object v0
+
+    :cond_miui_1
     monitor-exit v1
 
     goto :goto_0
@@ -57770,6 +57809,15 @@
 
     .line 3209
     .local v7, "s":Landroid/content/pm/PackageParser$Service;
+    invoke-static {}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserCalling()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_miui_1
+
+    or-int/lit16 p2, p2, 0x2000
+
+    :cond_miui_1
     if-eqz v7, :cond_3
 
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
@@ -59670,6 +59718,11 @@
     .local v8, "state":Landroid/content/pm/PackageUserState;
     if-eqz v8, :cond_1
 
+    invoke-static {}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserCalling()Z
+    
+    move-result v3
+    
+    if-nez v3, :cond_1
     .line 2790
     invoke-static {v8}, Landroid/content/pm/PackageParser;->isAvailable(Landroid/content/pm/PackageUserState;)Z
 
