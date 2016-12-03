@@ -1149,12 +1149,12 @@
     iput-object v6, p0, Lcom/android/server/wm/WindowManagerService;->mFocusedApp:Lcom/android/server/wm/AppWindowToken;
 
     .line 646
-    const/high16 v6, 0x3f800000    # 1.0f
+    const/high16 v6, 0x3f000000    # 0.5f
 
     iput v6, p0, Lcom/android/server/wm/WindowManagerService;->mWindowAnimationScaleSetting:F
 
     .line 647
-    const/high16 v6, 0x3f800000    # 1.0f
+    const/high16 v6, 0x3f000000    # 0.5f
 
     iput v6, p0, Lcom/android/server/wm/WindowManagerService;->mTransitionAnimationScaleSetting:F
 
