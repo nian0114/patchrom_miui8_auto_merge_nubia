@@ -10507,7 +10507,7 @@
 .end method
 
 .method private parseBaseApk(Ljava/io/File;Landroid/content/res/AssetManager;I)Landroid/content/pm/PackageParser$Package;
-    .locals 32
+    .locals 33
     .param p1, "apkFile"    # Ljava/io/File;
     .param p2, "assets"    # Landroid/content/res/AssetManager;
     .param p3, "flags"    # I
@@ -10525,10 +10525,10 @@
 
     .line 873
     .local v23, "apkPath":Ljava/lang/String;
-    const/16 v31, 0x0
+    const/16 v32, 0x0
 
     .line 874
-    .local v31, "volumeUuid":Ljava/lang/String;
+    .local v32, "volumeUuid":Ljava/lang/String;
     const-string v5, "/mnt/expand/"
 
     move-object/from16 v0, v23
@@ -10568,7 +10568,7 @@
 
     invoke-virtual {v0, v5, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object v31
+    move-result-object v32
 
     .line 879
     .end local v26    # "end":I
@@ -10610,19 +10610,26 @@
     .line 895
     .local v28, "parser":Landroid/content/res/XmlResourceParser;
     :try_start_0
+    new-instance v31, Landroid/content/res/MiuiResources;
+
     move-object/from16 v0, p0
 
     iget-object v5, v0, Landroid/content/pm/PackageParser;->mMetrics:Landroid/util/DisplayMetrics;
 
     const/4 v6, 0x0
 
-    move-object/from16 v0, p2
+    move-object/from16 v0, v31
 
-    invoke-static {v0, v5, v6}, Landroid/content/res/NubiaClassFactory;->newResources(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)Landroid/content/res/Resources;
+    move-object/from16 v1, p2
 
-    move-result-object v30
+    invoke-direct {v0, v1, v5, v6}, Landroid/content/res/MiuiResources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
+    :try_end_0
+    .catch Landroid/content/pm/PackageParser$PackageParserException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 901
+    .end local v30    # "res":Landroid/content/res/Resources;
+    .local v31, "res":Landroid/content/res/Resources;
     const/4 v6, 0x0
 
     const/4 v7, 0x0
@@ -10655,6 +10662,7 @@
 
     const/16 v21, 0x0
 
+    :try_start_1
     sget v22, Landroid/os/Build$VERSION;->RESOURCES_SDK_INT:I
 
     move-object/from16 v5, p2
@@ -10683,7 +10691,7 @@
     .local v27, "outError":[Ljava/lang/String;
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v30
+    move-object/from16 v1, v31
 
     move-object/from16 v2, v28
 
@@ -10751,10 +10759,10 @@
     invoke-direct {v5, v6, v7}, Landroid/content/pm/PackageParser$PackageParserException;-><init>(ILjava/lang/String;)V
 
     throw v5
-    :try_end_0
-    .catch Landroid/content/pm/PackageParser$PackageParserException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_end_1
+    .catch Landroid/content/pm/PackageParser$PackageParserException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 919
     .end local v27    # "outError":[Ljava/lang/String;
@@ -10762,43 +10770,39 @@
     :catch_0
     move-exception v25
 
-    .line 920
+    move-object/from16 v30, v31
+
+    .end local v31    # "res":Landroid/content/res/Resources;
     .local v25, "e":Landroid/content/pm/PackageParser$PackageParserException;
-    :try_start_1
+    .restart local v30    # "res":Landroid/content/res/Resources;
+    :goto_0
+    :try_start_2
     throw v25
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 925
     .end local v25    # "e":Landroid/content/pm/PackageParser$PackageParserException;
     :catchall_0
     move-exception v5
 
+    :goto_1
     invoke-static/range {v28 .. v28}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     throw v5
 
-    .line 912
+    .end local v30    # "res":Landroid/content/res/Resources;
     .restart local v27    # "outError":[Ljava/lang/String;
     .restart local v29    # "pkg":Landroid/content/pm/PackageParser$Package;
+    .restart local v31    # "res":Landroid/content/res/Resources;
     :cond_1
-    :try_start_2
-    move-object/from16 v0, v31
+    :try_start_3
+    move-object/from16 v0, v32
 
     move-object/from16 v1, v29
 
     iput-object v0, v1, Landroid/content/pm/PackageParser$Package;->volumeUuid:Ljava/lang/String;
 
-    .line 913
-    move-object/from16 v0, v29
-
-    iget-object v5, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    move-object/from16 v0, v31
-
-    iput-object v0, v5, Landroid/content/pm/ApplicationInfo;->volumeUuid:Ljava/lang/String;
-
-    .line 914
     move-object/from16 v0, v23
 
     move-object/from16 v1, v29
@@ -10811,10 +10815,10 @@
     move-object/from16 v0, v29
 
     iput-object v5, v0, Landroid/content/pm/PackageParser$Package;->mSignatures:[Landroid/content/pm/Signature;
-    :try_end_2
-    .catch Landroid/content/pm/PackageParser$PackageParserException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_3
+    .catch Landroid/content/pm/PackageParser$PackageParserException; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 925
     invoke-static/range {v28 .. v28}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
@@ -10824,12 +10828,15 @@
     .line 921
     .end local v27    # "outError":[Ljava/lang/String;
     .end local v29    # "pkg":Landroid/content/pm/PackageParser$Package;
+    .end local v31    # "res":Landroid/content/res/Resources;
+    .restart local v30    # "res":Landroid/content/res/Resources;
     :catch_1
     move-exception v25
 
     .line 922
     .local v25, "e":Ljava/lang/Exception;
-    :try_start_3
+    :goto_2
+    :try_start_4
     new-instance v5, Landroid/content/pm/PackageParser$PackageParserException;
 
     const/16 v6, -0x66
@@ -10859,8 +10866,36 @@
     invoke-direct {v5, v6, v7, v0}, Landroid/content/pm/PackageParser$PackageParserException;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
 
     throw v5
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    .end local v25    # "e":Ljava/lang/Exception;
+    .end local v30    # "res":Landroid/content/res/Resources;
+    .restart local v31    # "res":Landroid/content/res/Resources;
+    :catchall_1
+    move-exception v5
+
+    move-object/from16 v30, v31
+
+    .end local v31    # "res":Landroid/content/res/Resources;
+    .restart local v30    # "res":Landroid/content/res/Resources;
+    goto :goto_1
+
+    .end local v30    # "res":Landroid/content/res/Resources;
+    .restart local v31    # "res":Landroid/content/res/Resources;
+    :catch_2
+    move-exception v25
+
+    move-object/from16 v30, v31
+
+    .end local v31    # "res":Landroid/content/res/Resources;
+    .restart local v30    # "res":Landroid/content/res/Resources;
+    goto :goto_2
+
+    :catch_3
+    move-exception v25
+
+    goto :goto_0
 .end method
 
 .method private parseBaseApplication(Landroid/content/pm/PackageParser$Package;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;I[Ljava/lang/String;)Z

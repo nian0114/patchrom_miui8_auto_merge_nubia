@@ -246,6 +246,8 @@
 
     .prologue
     .line 211
+    invoke-static {}, Lmiui/patchrom/ClassHook;->initServerHook()V
+
     invoke-static {}, Lcom/android/server/SystemServer;->removeLastSpaceFile()V
 
     .line 213
