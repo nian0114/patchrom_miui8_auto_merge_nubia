@@ -3,6 +3,7 @@
 XMLMERGYTOOL=$PORT_ROOT/tools/ResValuesModify/jar/ResValuesModify
 GIT_APPLY=$PORT_ROOT/tools/git.apply
 
+device_name=`grep "ro.product.device=" stockrom/system/build.prop | cut -d '=' -f2`
 curdir=`pwd`
 
 function applyPatch () {
@@ -28,6 +29,14 @@ function appendSmaliPart() {
     cat $file >> $dstfile
   done
 }
+
+function isPatchrom() {
+  sed -i -e "s/\"hammerhead\"/\"$device_name\"/g" `grep -lnr "hammerhead" $1/smali`
+}
+
+if [ $1 = "DeskClock" ];then
+    isPatchrom $2
+fi
 
 if [ $1 = "MiuiSystemUI" ];then
     appendSmaliPart "MiuiSystemUI"
