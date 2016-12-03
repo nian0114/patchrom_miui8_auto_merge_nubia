@@ -1,0 +1,41 @@
+From 4beb63b41c861b4fc5980ec817007446696d21d7 Mon Sep 17 00:00:00 2001
+From: nian0114 <268078545@qq.com>
+Date: Sat, 3 Dec 2016 11:27:30 +0800
+Subject: [PATCH 1/2] fix nubia ril
+
+---
+ TeleService/smali/com/android/phone/PhoneGlobals.smali | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+--- a/TeleService/smali/com/android/phone/PhoneGlobals.smali
++++ b/TeleService/smali/com/android/phone/PhoneGlobals.smali
+@@ -141,6 +141,8 @@
+ 
+     iput-object v0, p0, Lcom/android/phone/PhoneGlobals;->mHandler:Landroid/os/Handler;
+ 
++    iput-object p1, p0, Lcom/android/phone/PhoneGlobals;->mContext:Landroid/content/Context;
++
+     sput-object p0, Lcom/android/phone/PhoneGlobals;->sMe:Lcom/android/phone/PhoneGlobals;
+ 
+     return-void
+@@ -981,6 +983,9 @@
+ 
+     iput-object v10, p0, Lcom/android/phone/PhoneGlobals;->phoneMgr:Lcom/android/phone/PhoneInterfaceManager;
+ 
++    iget-object v10, p0, Lcom/android/phone/PhoneGlobals;->mContext:Landroid/content/Context;
++
++    invoke-static {v10}, Lcom/android/phone/NBPhoneExtra;->init(Landroid/content/Context;)Lcom/android/phone/NBPhoneExtra;
+     invoke-static {p0}, Lcom/android/phone/CarrierConfigLoader;->init(Landroid/content/Context;)Lcom/android/phone/CarrierConfigLoader;
+ 
+     move-result-object v10
+@@ -1157,6 +1162,8 @@
+     .end local v1    # "audioManager":Landroid/media/AudioManager;
+     .end local v3    # "hac":I
+     :cond_3
++    invoke-static/range {p0 .. p0}, Lcom/android/phone/NBHardwareClient;->getInstance(Landroid/content/Context;)Lcom/android/phone/NBHardwareClient;
++
+     return-void
+ 
+     .restart local v1    # "audioManager":Landroid/media/AudioManager;
+-- 
+2.10.1
