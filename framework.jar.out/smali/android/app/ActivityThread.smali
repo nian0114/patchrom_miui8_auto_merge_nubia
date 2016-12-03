@@ -17165,19 +17165,6 @@
 
     move-result-object v8
 
-    .line 1784
-    .local v8, "r":Landroid/content/res/Resources;
-    if-eqz v8, :cond_0
-
-    move-object v0, v8
-
-    .line 1785
-    check-cast v0, Landroid/content/res/NubiaResources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/NubiaResources;->init(Ljava/lang/String;)V
-
-    .line 1787
-    :cond_0
     return-object v8
 .end method
 

@@ -942,19 +942,6 @@
 
     move-result-object v8
 
-    .line 287
-    .local v8, "r":Landroid/content/res/Resources;
-    if-eqz v8, :cond_0
-
-    move-object v0, v8
-
-    .line 288
-    check-cast v0, Landroid/content/res/NubiaResources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/NubiaResources;->init(Ljava/lang/String;)V
-
-    .line 290
-    :cond_0
     return-object v8
 .end method
 
@@ -1342,13 +1329,16 @@
     .line 255
     :cond_b
     :goto_7
-    move-object/from16 v0, p7
+    new-instance v16, Landroid/content/res/MiuiResources;
 
-    invoke-static {v4, v6, v5, v0}, Landroid/content/res/NubiaClassFactory;->newResources(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)Landroid/content/res/Resources;
+    .end local v16    # "r":Landroid/content/res/Resources;
+    move-object/from16 v0, v16
 
-    move-result-object v16
+    move-object/from16 v1, p7
 
-    .line 264
+    invoke-direct {v0, v4, v6, v5, v1}, Landroid/content/res/MiuiResources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
+
+    .restart local v16    # "r":Landroid/content/res/Resources;
     monitor-enter p0
 
     .line 265
