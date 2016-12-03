@@ -24,6 +24,7 @@ Stk \
 TimeService \
 UserDictionaryProvider \
 WAPPushManager \
+ZMiniLauncher5 \
 fastdormancy \
 nubia_IRControl3 \
 nubia_IRtest3 \
