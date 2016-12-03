@@ -385,6 +385,8 @@
 
 .field mGlobalActions:Lcom/android/server/policy/NubiaGlobalActions;
 
+.field mGlobalActions:Lcom/android/server/policy/MiuiGlobalActions;
+
 .field private mGlobalKeyManager:Lcom/android/server/policy/GlobalKeyManager;
 
 .field private mGoToSleepOnButtonPressTheaterMode:Z
@@ -26817,20 +26819,24 @@
 
     .prologue
     .line 1304
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActions:Lcom/android/server/policy/NubiaGlobalActions;
+    const-string v1, "globalactions"
+
+    invoke-virtual {p0, v1}, Lcom/android/server/policy/PhoneWindowManager;->sendCloseSystemWindows(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActions:Lcom/android/server/policy/MiuiGlobalActions;
 
     if-nez v1, :cond_0
 
     .line 1305
-    new-instance v1, Lcom/android/server/policy/NubiaGlobalActions;
+    new-instance v1, Lcom/android/server/policy/MiuiGlobalActions;
 
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
-    invoke-direct {v1, v2, v3}, Lcom/android/server/policy/NubiaGlobalActions;-><init>(Landroid/content/Context;Landroid/view/WindowManagerPolicy$WindowManagerFuncs;)V
+    invoke-direct {v1, v2, v3}, Lcom/android/server/policy/MiuiGlobalActions;-><init>(Landroid/content/Context;Landroid/view/WindowManagerPolicy$WindowManagerFuncs;)V
 
-    iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActions:Lcom/android/server/policy/NubiaGlobalActions;
+    iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActions:Lcom/android/server/policy/MiuiGlobalActions;
 
     .line 1307
     :cond_0
@@ -26840,13 +26846,13 @@
 
     .line 1308
     .local v0, "keyguardShowing":Z
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActions:Lcom/android/server/policy/NubiaGlobalActions;
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActions:Lcom/android/server/policy/MiuiGlobalActions;
 
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->isDeviceProvisioned()Z
 
     move-result v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/server/policy/NubiaGlobalActions;->showDialog(ZZ)V
+    invoke-virtual {v1, v0, v2}, Lcom/android/server/policy/MiuiGlobalActions;->showDialog(ZZ)V
 
     .line 1309
     if-eqz v0, :cond_1
