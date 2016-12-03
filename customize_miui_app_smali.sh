@@ -18,3 +18,7 @@ function appendSmaliPart() {
 if [ $1 = "MiuiSystemUI" ];then
     appendSmaliPart "MiuiSystemUI"
 fi
+
+if [ $1 = "TelephonyProvider" ];then
+    applyPatch $1 $2
+fi

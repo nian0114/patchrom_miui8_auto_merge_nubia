@@ -1,0 +1,28 @@
+From 9e2ffa98f4c649dff46d5aae64f5891678665f20 Mon Sep 17 00:00:00 2001
+From: wangtongli <tongliwang@tju.edu.cn>
+Date: Sat, 3 Dec 2016 22:32:24 +0800
+Subject: [PATCH] fix can send mms
+
+---
+ .../smali/com/android/providers/telephony/MmsSmsDatabaseHelper.smali  | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+--- a/TelephonyProvider/smali/com/android/providers/telephony/MmsSmsDatabaseHelper.smali
++++ b/TelephonyProvider/smali/com/android/providers/telephony/MmsSmsDatabaseHelper.smali
+@@ -430,11 +430,11 @@
+     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
+ 
+     .prologue
+-    const-string v0, "CREATE TABLE sms (_id INTEGER PRIMARY KEY,thread_id INTEGER,address TEXT,person INTEGER,date INTEGER,date_sent INTEGER DEFAULT 0,protocol INTEGER,read INTEGER DEFAULT 0,status INTEGER DEFAULT -1,type INTEGER,reply_path_present INTEGER,subject TEXT,body TEXT,service_center TEXT,locked INTEGER DEFAULT 0,error_code INTEGER DEFAULT 0,seen INTEGER DEFAULT 0,timed INTEGER DEFAULT 0,deleted INTEGER DEFAULT 0,sync_state INTEGER DEFAULT 0,marker INTEGER DEFAULT 0,source TEXT,bind_id INTEGER DEFAULT 0,mx_status INTEGER DEFAULT 0,mx_id INTEGER,out_time INTEGER DEFAULT 0,account TEXT,sim_id INTEGER DEFAULT 0,block_type INTEGER DEFAULT 0,advanced_seen INTEGER DEFAULT 0,b2c_ttl INTEGER DEFAULT 0,b2c_numbers TEXT,fake_cell_type INTEGER DEFAULT 0,url_risky_type INTEGER DEFAULT 0);"
++    const-string v0, "CREATE TABLE sms (_id INTEGER PRIMARY KEY,thread_id INTEGER,address TEXT,person INTEGER,date INTEGER,date_sent INTEGER DEFAULT 0,protocol INTEGER,read INTEGER DEFAULT 0,status INTEGER DEFAULT -1,type INTEGER,reply_path_present INTEGER,subject TEXT,body TEXT,service_center TEXT,locked INTEGER DEFAULT 0,phone_id INTEGER DEFAULT -1,error_code INTEGER DEFAULT 0,seen INTEGER DEFAULT 0,timed INTEGER DEFAULT 0,deleted INTEGER DEFAULT 0,sync_state INTEGER DEFAULT 0,marker INTEGER DEFAULT 0,source TEXT,bind_id INTEGER DEFAULT 0,mx_status INTEGER DEFAULT 0,mx_id INTEGER,out_time INTEGER DEFAULT 0,account TEXT,sim_id INTEGER DEFAULT 0,block_type INTEGER DEFAULT 0,advanced_seen INTEGER DEFAULT 0,b2c_ttl INTEGER DEFAULT 0,b2c_numbers TEXT,fake_cell_type INTEGER DEFAULT 0,url_risky_type INTEGER DEFAULT 0);"
+ 
+     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+ 
+-    const-string v0, "CREATE TABLE raw (_id INTEGER PRIMARY KEY,date INTEGER,reference_number INTEGER,count INTEGER,sequence INTEGER,destination_port INTEGER,address TEXT,sim_id INTEGER DEFAULT 0,pdu TEXT);"
++    const-string v0, "CREATE TABLE raw (_id INTEGER PRIMARY KEY,date INTEGER,reference_number INTEGER,count INTEGER,sequence INTEGER,destination_port INTEGER,address TEXT,sim_id INTEGER DEFAULT 0,phone_id INTEGER DEFAULT -1, pdu TEXT);"
+ 
+     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+ 
+-- 
+1.9.1
+

@@ -21,7 +21,6 @@ PrintSpooler \
 QtiTelephonyService \
 SmartBar \
 Stk \
-TelephonyProvider \
 TimeService \
 UserDictionaryProvider \
 WAPPushManager \

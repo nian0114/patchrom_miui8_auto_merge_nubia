@@ -20,7 +20,7 @@ local-modified-jars :=
 local-miui-removed-apps :=
 
 local-miui-modified-apps := TeleService
-local-miui-modified-apps-smali := MiuiSystemUI
+local-miui-modified-apps-smali := MiuiSystemUI TelephonyProvider
 
 PORT_PRODUCT := nian_z11
 
