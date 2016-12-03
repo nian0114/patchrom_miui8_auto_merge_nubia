@@ -29,6 +29,19 @@ function appendSmaliPart() {
   done
 }
 
+function mergyXmlPart() {
+	for file in `find $1/res -name *.xml.part`
+	do
+		src=`dirname $file`
+		dst=${src/$1/$2}
+		$XMLMERGYTOOL $src $dst
+	done
+}
+
+if [ $1 = "InCallUI" ];then
+    $XMLMERGYTOOL $1/res/values $2/res/values
+fi
+
 if [ $1 = "TeleService" ];then
     applyPatch $1 $2
     appendSmaliPart "TeleService"

@@ -19,7 +19,7 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps := FM MiuiCamera
 
-local-miui-modified-apps := TeleService
+local-miui-modified-apps := TeleService InCallUI
 local-miui-modified-apps-smali := DeskClock MiuiSystemUI TelephonyProvider SecurityCenter \
 SecurityCoreAdd MiuiKeyguard XiaomiServiceFramework Settings
 
