@@ -1,4 +1,5 @@
 #!/bin/bash
-# $1: dir for miui
+# $1: dir for original
+# $2: dir for miui
 
-cp -f framework-res/res/xml/apns.xml $1/xml/apns.xml
+cp -f $1/xml/apns.xml $2/xml/apns.xml
