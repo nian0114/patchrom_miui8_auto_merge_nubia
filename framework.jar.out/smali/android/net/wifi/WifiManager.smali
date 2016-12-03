@@ -3815,46 +3815,29 @@
 .end method
 
 .method public setWifiEnabled(Z)Z
-    .locals 4
+    .locals 2
     .param p1, "enabled"    # Z
 
     .prologue
-    const/4 v1, 0x0
-
-    .line 1472
-    iget-object v2, p0, Landroid/net/wifi/WifiManager;->mAppOps:Landroid/app/AppOpsManager;
-
-    const/16 v3, 0x3f
-
-    invoke-virtual {v2, v3}, Landroid/app/AppOpsManager;->noteOp(I)I
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 1480
-    :goto_0
-    return v1
-
-    .line 1478
-    :cond_0
     :try_start_0
-    iget-object v2, p0, Landroid/net/wifi/WifiManager;->mService:Landroid/net/wifi/IWifiManager;
+    iget-object v1, p0, Landroid/net/wifi/WifiManager;->mService:Landroid/net/wifi/IWifiManager;
 
-    invoke-interface {v2, p1}, Landroid/net/wifi/IWifiManager;->setWifiEnabled(Z)Z
+    invoke-interface {v1, p1}, Landroid/net/wifi/IWifiManager;->setWifiEnabled(Z)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v1
 
-    goto :goto_0
+    :goto_0
+    return v1
 
-    .line 1479
     :catch_0
     move-exception v0
 
     .line 1480
     .local v0, "e":Landroid/os/RemoteException;
+    const/4 v1, 0x0
+
     goto :goto_0
 .end method
 
