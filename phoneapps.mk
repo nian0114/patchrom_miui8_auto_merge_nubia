@@ -27,6 +27,7 @@ SuperSnap \
 TimeService \
 UserDictionaryProvider \
 WAPPushManager \
+ZLauncher5 \
 ZMiniLauncher5 \
 ZNubiaEdge \
 fastdormancy \
