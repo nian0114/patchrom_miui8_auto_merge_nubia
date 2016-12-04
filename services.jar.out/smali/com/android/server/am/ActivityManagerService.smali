@@ -96584,7 +96584,7 @@
     .line 18000
     and-int/lit8 v3, v22, 0x4
 
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_a
 
     .line 18001
     new-instance v6, Landroid/content/Intent;
@@ -96649,21 +96649,6 @@
     invoke-direct/range {v3 .. v19}, Lcom/android/server/am/ActivityManagerService;->broadcastIntentLocked(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;[Ljava/lang/String;ILandroid/os/Bundle;ZZIII)I
 
     .line 18012
-    :cond_9
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
-
-    move/from16 v0, v22
-
-    move-object/from16 v1, v30
-
-    invoke-static {v0, v1, v3, v4}, Landroid/app/NubiaThemeHelper;->handleExtraConfigurationChanges(ILandroid/content/res/Configuration;Landroid/content/Context;Landroid/os/Handler;)V
-
     .line 18019
     .end local v6    # "intent":Landroid/content/Intent;
     .end local v20    # "ac":Lcom/android/server/AttributeCache;

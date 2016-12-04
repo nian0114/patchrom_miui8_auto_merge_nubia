@@ -260,6 +260,8 @@
 
 .field public extraConfig:Landroid/content/res/MiuiConfiguration;
 
+.field public extraConfig:Lnubia/content/res/ExtraConfiguration;
+
 .field public fontScale:F
 
 .field public hardKeyboardHidden:I
