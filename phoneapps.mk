@@ -33,7 +33,7 @@ fastdormancy \
 nubia_IRControl3 \
 nubia_IRtest3 \
 shutdownlistener \
-smartface \
+SmartFace \
 telresources
 
 private-phone-priv-apps := \
