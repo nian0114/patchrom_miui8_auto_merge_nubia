@@ -45,7 +45,6 @@ if [ $2 = "$BUILD_OUT/framework" ]
 then
     rm -rf $2/smali/android/widget/Editor*
     cp -rf $1/smali/android/widget/Editor*.smali $2/smali/android/widget/
-    rm -rf $2/smali/org/ifaa
     appendSmaliPart "framework"
 fi
 
@@ -54,3 +53,4 @@ then
     applyPatch "overlay/services"
     appendSmaliPart "services"
 fi
+
