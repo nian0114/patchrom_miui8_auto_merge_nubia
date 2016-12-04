@@ -63,11 +63,13 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/vendor/CmccPower
 	rm -rf $(ZIP_DIR)/system/vendor/CTA
 	rm -rf $(ZIP_DIR)/system/priv-app/CMSettings
+	rm -rf $(ZIP_DIR)/system/media/boot.wav
+	rm -rf $(ZIP_DIR)/system/media/shutdown.wav
 	echo "import /system/default.prop" >> $(ZIP_DIR)/system/build.prop
 	echo "ro.miui.type=hook" >> $(ZIP_DIR)/system/build.prop
 	rm -rf $(ZIP_DIR)/system/media/audio/ui/bootup.wav
 	touch $(ZIP_DIR)/system/media/audio/ui/bootup.wav
-	mv $(ZIP_DIR)/system/media/shutdownanimation.zip $(ZIP_DIR)/system/media/theme/shutdown/shutdownanimation.zip 
+	mv $(ZIP_DIR)/system/media/shutdownanimation.zip $(ZIP_DIR)/system/media/theme/shutdown/shutdownanimation.zip
 	@echo goodbye! miui prebuilt binaries!
 	cp -rf stockrom/system/bin/app_process64 $(ZIP_DIR)/system/bin/app_process64
 	cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32
