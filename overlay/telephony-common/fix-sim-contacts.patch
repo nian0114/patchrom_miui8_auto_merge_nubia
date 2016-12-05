@@ -1,0 +1,499 @@
+From 9993d1fe86d599d42d2eb84c75a229d99c938812 Mon Sep 17 00:00:00 2001
+From: wangtongli <tongliwang@tju.edu.cn>
+Date: Sun, 4 Dec 2016 22:31:33 +0800
+Subject: [PATCH] fix sim contacts
+
+---
+ .../internal/telephony/cdma/CDMALTEPhone.smali     | 12 +++
+ .../internal/telephony/cdma/CDMAPhone.smali        | 90 +++++++++++++-------
+ .../android/internal/telephony/gsm/GSMPhone.smali  | 98 +++++++++++++++-------
+ .../internal/telephony/uicc/RuimRecords.smali      | 33 ++++----
+ .../internal/telephony/uicc/SIMRecords.smali       | 18 +++-
+ 5 files changed, 173 insertions(+), 78 deletions(-)
+
+--- a/telephony-common/smali/com/android/internal/telephony/cdma/CDMALTEPhone.smali
++++ b/telephony-common/smali/com/android/internal/telephony/cdma/CDMALTEPhone.smali
+@@ -298,6 +298,12 @@
+     sget-object v0, Lcom/android/internal/telephony/PhoneConstants$DataState;->DISCONNECTED:Lcom/android/internal/telephony/PhoneConstants$DataState;
+ 
+     :goto_0
++    iget v1, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mPhoneId:I
++
++    invoke-static {v0, v1}, Lcom/android/internal/telephony/dataconnection/DcTrackerInjector;->adjustDataState(Lcom/android/internal/telephony/PhoneConstants$DataState;I)Lcom/android/internal/telephony/PhoneConstants$DataState;
++
++    move-result-object v0
++
+     new-instance v1, Ljava/lang/StringBuilder;
+ 
+     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+@@ -884,6 +890,12 @@
+ 
+     iput-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
+ 
++    new-instance v2, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
++    invoke-direct {v2, p0}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
++
++    iput-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
+     new-instance v2, Lcom/android/internal/telephony/PhoneSubInfo;
+ 
+     invoke-direct {v2, p0}, Lcom/android/internal/telephony/PhoneSubInfo;-><init>(Lcom/android/internal/telephony/Phone;)V
+--- a/telephony-common/smali/com/android/internal/telephony/cdma/CDMAPhone.smali
++++ b/telephony-common/smali/com/android/internal/telephony/cdma/CDMAPhone.smali
+@@ -1731,6 +1731,10 @@
+ 
+     invoke-virtual {v0}, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;->dispose()V
+ 
++    iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
++    invoke-virtual {v0}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;->dispose()V
++
+     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
+ 
+     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->dispose()V
+@@ -4228,6 +4232,12 @@
+ 
+     iput-object v5, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
+ 
++    new-instance v5, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
++    invoke-direct {v5, p0}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
++
++    iput-object v5, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
+     new-instance v5, Lcom/android/internal/telephony/PhoneSubInfo;
+ 
+     invoke-direct {v5, p0}, Lcom/android/internal/telephony/PhoneSubInfo;-><init>(Lcom/android/internal/telephony/Phone;)V
+@@ -4935,31 +4945,17 @@
+ 
+     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
+ 
+-    if-nez v2, :cond_1
++    if-nez v2, :cond_0
+ 
+-    :cond_0
+-    :goto_0
+     return-void
+ 
+-    :cond_1
+-    iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
+-
+-    iget-object v3, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
+-
+-    iget v4, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mPhoneId:I
+-
+-    invoke-virtual {v3, v4}, Lcom/android/internal/telephony/uicc/UiccController;->getUiccCard(I)Lcom/android/internal/telephony/uicc/UiccCard;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v2, v3}, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;->setIccCard(Lcom/android/internal/telephony/uicc/UiccCard;)V
+-
++    :cond_0
+     invoke-virtual {p0}, Lcom/android/internal/telephony/cdma/CDMAPhone;->getUiccCardApplication()Lcom/android/internal/telephony/uicc/UiccCardApplication;
+ 
+     move-result-object v1
+ 
+     .local v1, "newUiccApplication":Lcom/android/internal/telephony/uicc/UiccCardApplication;
+-    if-nez v1, :cond_2
++    if-nez v1, :cond_1
+ 
+     const-string v2, "can\'t find 3GPP2 application; trying APP_FAM_3GPP"
+ 
+@@ -4975,7 +4971,7 @@
+ 
+     move-result-object v1
+ 
+-    :cond_2
++    :cond_1
+     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mUiccApplication:Ljava/util/concurrent/atomic/AtomicReference;
+ 
+     invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+@@ -4985,9 +4981,9 @@
+     check-cast v0, Lcom/android/internal/telephony/uicc/UiccCardApplication;
+ 
+     .local v0, "app":Lcom/android/internal/telephony/uicc/UiccCardApplication;
+-    if-eq v0, v1, :cond_0
++    if-eq v0, v1, :cond_4
+ 
+-    if-eqz v0, :cond_4
++    if-eqz v0, :cond_3
+ 
+     const-string v2, "Removing stale icc objects."
+ 
+@@ -4999,11 +4995,19 @@
+ 
+     move-result-object v2
+ 
+-    if-eqz v2, :cond_3
++    if-eqz v2, :cond_2
+ 
+     invoke-virtual {p0}, Lcom/android/internal/telephony/cdma/CDMAPhone;->unregisterForRuimRecordEvents()V
+ 
+-    :cond_3
++    iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
++
++    invoke-virtual {v2, v5}, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
++
++    iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
++    invoke-virtual {v2, v5}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
++
++    :cond_2
+     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
+ 
+     invoke-virtual {v2, v5}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+@@ -5012,8 +5016,8 @@
+ 
+     invoke-virtual {v2, v5}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+ 
+-    :cond_4
+-    if-eqz v1, :cond_0
++    :cond_3
++    if-eqz v1, :cond_4
+ 
+     const-string v2, "New Uicc application found"
+ 
+@@ -5033,7 +5037,32 @@
+ 
+     invoke-virtual {p0}, Lcom/android/internal/telephony/cdma/CDMAPhone;->registerForRuimRecordEvents()V
+ 
+-    goto :goto_0
++    iget-object v3, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
++
++    iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
++
++    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
++
++    move-result-object v2
++
++    check-cast v2, Lcom/android/internal/telephony/uicc/IccRecords;
++
++    invoke-virtual {v3, v2}, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
++
++    iget-object v3, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
++    iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
++
++    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
++
++    move-result-object v2
++
++    check-cast v2, Lcom/android/internal/telephony/uicc/IccRecords;
++
++    invoke-virtual {v3, v2}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
++
++    :cond_4
++    return-void
+ .end method
+ 
+ .method public prepareEri()V
+@@ -5252,6 +5281,8 @@
+ 
+     iput-object v1, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
+ 
++    iput-object v1, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
+     iput-object v1, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
+ 
+     iput-object v1, p0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mCT:Lcom/android/internal/telephony/cdma/CdmaCallTracker;
+--- a/telephony-common/smali/com/android/internal/telephony/gsm/GSMPhone.smali
++++ b/telephony-common/smali/com/android/internal/telephony/gsm/GSMPhone.smali
+@@ -179,6 +179,12 @@
+ 
+     iput-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSimPhoneBookIntManager:Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;
+ 
++    new-instance v0, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
++    invoke-direct {v0, p0}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
++
++    iput-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
+     new-instance v0, Lcom/android/internal/telephony/PhoneSubInfo;
+ 
+     invoke-direct {v0, p0}, Lcom/android/internal/telephony/PhoneSubInfo;-><init>(Lcom/android/internal/telephony/Phone;)V
+@@ -328,6 +334,12 @@
+ 
+     iput-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSimPhoneBookIntManager:Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;
+ 
++    new-instance v0, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
++    invoke-direct {v0, p0}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
++
++    iput-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
+     new-instance v0, Lcom/android/internal/telephony/PhoneSubInfo;
+ 
+     invoke-direct {v0, p0}, Lcom/android/internal/telephony/PhoneSubInfo;-><init>(Lcom/android/internal/telephony/Phone;)V
+@@ -2910,6 +2922,10 @@
+ 
+     invoke-virtual {v0}, Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;->dispose()V
+ 
++    iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
++    invoke-virtual {v0}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;->dispose()V
++
+     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
+ 
+     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->dispose()V
+@@ -6364,25 +6380,11 @@
+ 
+     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
+ 
+-    if-nez v3, :cond_1
++    if-nez v3, :cond_0
+ 
+-    :cond_0
+-    :goto_0
+     return-void
+ 
+-    :cond_1
+-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSimPhoneBookIntManager:Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;
+-
+-    iget-object v4, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
+-
+-    iget v5, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mPhoneId:I
+-
+-    invoke-virtual {v4, v5}, Lcom/android/internal/telephony/uicc/UiccController;->getUiccCard(I)Lcom/android/internal/telephony/uicc/UiccCard;
+-
+-    move-result-object v4
+-
+-    invoke-virtual {v3, v4}, Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;->setIccCard(Lcom/android/internal/telephony/uicc/UiccCard;)V
+-
++    :cond_0
+     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
+ 
+     iget v4, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mPhoneId:I
+@@ -6397,7 +6399,7 @@
+     const/4 v1, 0x0
+ 
+     .local v1, "newIsimUiccRecords":Lcom/android/internal/telephony/uicc/IsimUiccRecords;
+-    if-eqz v2, :cond_2
++    if-eqz v2, :cond_1
+ 
+     invoke-virtual {v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->getIccRecords()Lcom/android/internal/telephony/uicc/IccRecords;
+ 
+@@ -6406,12 +6408,13 @@
+     .end local v1    # "newIsimUiccRecords":Lcom/android/internal/telephony/uicc/IsimUiccRecords;
+     check-cast v1, Lcom/android/internal/telephony/uicc/IsimUiccRecords;
+ 
+-    .restart local v1    # "newIsimUiccRecords":Lcom/android/internal/telephony/uicc/IsimUiccRecords;
++    .local v1, "newIsimUiccRecords":Lcom/android/internal/telephony/uicc/IsimUiccRecords;
+     const-string v3, "New ISIM application found"
+ 
+     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/gsm/GSMPhone;->log(Ljava/lang/String;)V
+ 
+-    :cond_2
++    .end local v1    # "newIsimUiccRecords":Lcom/android/internal/telephony/uicc/IsimUiccRecords;
++    :cond_1
+     iput-object v1, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mIsimUiccRecords:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
+ 
+     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GSMPhone;->getUiccCardApplication()Lcom/android/internal/telephony/uicc/UiccCardApplication;
+@@ -6427,9 +6430,9 @@
+     check-cast v0, Lcom/android/internal/telephony/uicc/UiccCardApplication;
+ 
+     .local v0, "app":Lcom/android/internal/telephony/uicc/UiccCardApplication;
+-    if-eq v0, v2, :cond_0
++    if-eq v0, v2, :cond_4
+ 
+-    if-eqz v0, :cond_4
++    if-eqz v0, :cond_3
+ 
+     const-string v3, "Removing stale icc objects."
+ 
+@@ -6441,11 +6444,19 @@
+ 
+     move-result-object v3
+ 
+-    if-eqz v3, :cond_3
++    if-eqz v3, :cond_2
+ 
+     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/GSMPhone;->unregisterForSimRecordEvents()V
+ 
+-    :cond_3
++    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSimPhoneBookIntManager:Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;
++
++    invoke-virtual {v3, v6}, Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
++
++    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
++    invoke-virtual {v3, v6}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
++
++    :cond_2
+     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
+ 
+     invoke-virtual {v3, v6}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+@@ -6454,8 +6465,8 @@
+ 
+     invoke-virtual {v3, v6}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+ 
+-    :cond_4
+-    if-eqz v2, :cond_0
++    :cond_3
++    if-eqz v2, :cond_4
+ 
+     const-string v3, "New Uicc application found"
+ 
+@@ -6475,7 +6486,32 @@
+ 
+     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/GSMPhone;->registerForSimRecordEvents()V
+ 
+-    goto :goto_0
++    iget-object v4, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSimPhoneBookIntManager:Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;
++
++    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
++
++    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
++
++    move-result-object v3
++
++    check-cast v3, Lcom/android/internal/telephony/uicc/IccRecords;
++
++    invoke-virtual {v4, v3}, Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
++
++    iget-object v4, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
++    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
++
++    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
++
++    move-result-object v3
++
++    check-cast v3, Lcom/android/internal/telephony/uicc/IccRecords;
++
++    invoke-virtual {v4, v3}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
++
++    :cond_4
++    return-void
+ .end method
+ 
+ .method protected processStackReady()V
+@@ -6632,6 +6668,8 @@
+ 
+     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSimPhoneBookIntManager:Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;
+ 
++    iput-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
++
+     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
+ 
+     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mCT:Lcom/android/internal/telephony/gsm/GsmCallTracker;
+--- a/telephony-common/smali/com/android/internal/telephony/uicc/RuimRecords.smali
++++ b/telephony-common/smali/com/android/internal/telephony/uicc/RuimRecords.smali
+@@ -99,6 +99,14 @@
+ 
+     iput-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
+ 
++    new-instance v0, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
++
++    iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
++
++    invoke-direct {v0, v1}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;-><init>(Lcom/android/internal/telephony/uicc/IccFileHandler;)V
++
++    iput-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
++
+     iput-boolean v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsRequested:Z
+ 
+     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
+@@ -1543,6 +1551,10 @@
+ 
+     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
+ 
++    iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
++
++    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
++
+     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/RuimRecords;->fetchRuimRecords()V
+ 
+     return-void
+@@ -1781,7 +1793,7 @@
+ 
+     array-length v7, v2
+ 
+-    invoke-static {v2, v6, v7}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
++    invoke-static {v2, v6, v7}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
+ 
+     move-result-object v6
+ 
+@@ -2080,20 +2092,6 @@
+     .local v2, "subIds":[I
+     if-eqz v2, :cond_2
+ 
+-    iget-object v3, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mContext:Landroid/content/Context;
+-
+-    invoke-static {v3}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
+-
+-    move-result-object v3
+-
+-    iget-object v4, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mMdn:Ljava/lang/String;
+-
+-    const/4 v5, 0x0
+-
+-    aget v5, v2, v5
+-
+-    invoke-virtual {v3, v4, v5}, Landroid/telephony/SubscriptionManager;->setDisplayNumber(Ljava/lang/String;I)I
+-
+     .end local v0    # "phoneId":I
+     .end local v2    # "subIds":[I
+     :cond_1
+@@ -2257,6 +2255,10 @@
+ 
+     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
+ 
++    iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
++
++    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
++
+     const/4 v0, 0x0
+ 
+     iput-boolean v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsRequested:Z
+--- a/telephony-common/smali/com/android/internal/telephony/uicc/SIMRecords.smali
++++ b/telephony-common/smali/com/android/internal/telephony/uicc/SIMRecords.smali
+@@ -990,6 +990,14 @@
+ 
+     iput-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
+ 
++    new-instance v0, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
++
++    iget-object v1, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
++
++    invoke-direct {v0, v1}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;-><init>(Lcom/android/internal/telephony/uicc/IccFileHandler;)V
++
++    iput-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
++
+     new-instance v0, Lcom/android/internal/telephony/uicc/VoiceMailConstants;
+ 
+     invoke-direct {v0}, Lcom/android/internal/telephony/uicc/VoiceMailConstants;-><init>()V
+@@ -3568,6 +3576,10 @@
+ 
+     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
+ 
++    iget-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
++
++    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
++
+     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/SIMRecords;->fetchSimRecords()V
+ 
+     :goto_0
+@@ -5077,7 +5089,7 @@
+ 
+     array-length v4, v11
+ 
+-    invoke-static {v11, v2, v4}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
++    invoke-static {v11, v2, v4}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
+ 
+     move-result-object v2
+ 
+@@ -9128,6 +9140,10 @@
+ 
+     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
+ 
++    iget-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
++
++    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
++
+     const-string v0, "SIMRecords: onRadioOffOrNotAvailable set \'gsm.sim.operator.numeric\' to operator=null"
+ 
+     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/SIMRecords;->log(Ljava/lang/String;)V
+-- 
+1.9.1
+

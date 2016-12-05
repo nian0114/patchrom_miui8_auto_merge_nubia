@@ -54,3 +54,7 @@ then
     appendSmaliPart "services"
 fi
 
+if [ $2 = "$BUILD_OUT/telephony-common" ]
+then
+    applyPatch "overlay/telephony-common"
+fi
