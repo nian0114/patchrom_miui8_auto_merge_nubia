@@ -1287,3 +1287,159 @@
 
     return v0
 .end method
+
+.method private static checkIfMiGuard()Z
+    .locals 13
+
+    .prologue
+    const/16 v12, 0x400
+
+    const/4 v11, 0x1
+
+    const/4 v10, 0x0
+
+    const/4 v2, 0x0
+
+    .local v2, "digest":Ljava/security/MessageDigest;
+    const/4 v5, 0x0
+
+    .local v5, "in":Ljava/io/FileInputStream;
+    const-string v8, "ro.recovery.md5id"
+
+    invoke-static {v8}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    const-string v9, "66666666666666666666666666666666"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_0
+
+    return v11
+
+    :cond_0
+    :try_start_0
+    new-instance v8, Ljava/io/FileInputStream;
+
+    const-string v9, "/system/priv-app/MiGuard/MiGuard.apk"
+
+    invoke-direct {v8, v9}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+
+    new-array v1, v12, [B
+
+    .local v1, "buffer":[B
+    :try_start_1
+    const-string v8, "MD5"
+
+    invoke-static {v8}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v2
+
+    .local v2, "digest":Ljava/security/MessageDigest;
+    new-instance v6, Ljava/io/FileInputStream;
+
+    const-string v8, "/system/priv-app/MiGuard/lib/arm/libSecShell.so"
+
+    invoke-direct {v6, v8}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+
+    .end local v5    # "in":Ljava/io/FileInputStream;
+    .local v6, "in":Ljava/io/FileInputStream;
+    :goto_0
+    const/4 v8, 0x0
+
+    const/16 v9, 0x400
+
+    :try_start_2
+    invoke-virtual {v6, v1, v8, v9}, Ljava/io/FileInputStream;->read([BII)I
+
+    move-result v7
+
+    .local v7, "len":I
+    const/4 v8, -0x1
+
+    if-eq v7, v8, :cond_1
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v2, v1, v8, v7}, Ljava/security/MessageDigest;->update([BII)V
+
+    goto :goto_0
+
+    .end local v7    # "len":I
+    :catch_0
+    move-exception v4
+
+    .local v4, "e":Ljava/lang/Exception;
+    move-object v5, v6
+
+    .end local v2    # "digest":Ljava/security/MessageDigest;
+    .end local v6    # "in":Ljava/io/FileInputStream;
+    :goto_1
+    return v10
+
+    .end local v1    # "buffer":[B
+    .end local v4    # "e":Ljava/lang/Exception;
+    .local v2, "digest":Ljava/security/MessageDigest;
+    .restart local v5    # "in":Ljava/io/FileInputStream;
+    :catch_1
+    move-exception v3
+
+    .local v3, "e":Ljava/io/FileNotFoundException;
+    return v10
+
+    .end local v3    # "e":Ljava/io/FileNotFoundException;
+    .end local v5    # "in":Ljava/io/FileInputStream;
+    .restart local v1    # "buffer":[B
+    .local v2, "digest":Ljava/security/MessageDigest;
+    .restart local v6    # "in":Ljava/io/FileInputStream;
+    .restart local v7    # "len":I
+    :cond_1
+    invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    new-instance v0, Ljava/math/BigInteger;
+
+    invoke-virtual {v2}, Ljava/security/MessageDigest;->digest()[B
+
+    move-result-object v8
+
+    invoke-direct {v0, v11, v8}, Ljava/math/BigInteger;-><init>(I[B)V
+
+    .local v0, "bigInt":Ljava/math/BigInteger;
+    const/16 v8, 0x10
+
+    invoke-virtual {v0, v8}, Ljava/math/BigInteger;->toString(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    const-string v9, "ro.recovery.md5id"
+
+    invoke-static {v9}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    return v8
+
+    .end local v0    # "bigInt":Ljava/math/BigInteger;
+    .end local v2    # "digest":Ljava/security/MessageDigest;
+    .end local v6    # "in":Ljava/io/FileInputStream;
+    .end local v7    # "len":I
+    .restart local v5    # "in":Ljava/io/FileInputStream;
+    :catch_2
+    move-exception v4
+
+    .restart local v4    # "e":Ljava/lang/Exception;
+    goto :goto_1
+.end method
