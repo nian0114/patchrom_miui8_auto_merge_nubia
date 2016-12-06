@@ -497,6 +497,10 @@
 .method private static isBootImageOnDisk()Z
     .locals 5
 
+    const/4 v1, 0x1
+
+    return v1
+    
     .prologue
     .line 345
     invoke-static {}, Lcom/android/server/pm/InstructionSets;->getAllDexCodeInstructionSets()[Ljava/lang/String;
