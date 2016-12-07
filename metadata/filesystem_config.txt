@@ -4987,4 +4987,5 @@ system/vendor/speccfg/switch_spec.sh 0 0 644 selabel=u:object_r:system_file:s0 c
 system/xbin 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/antradio_app 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/dexdump 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/xbin/su 0 2000 6755 selabel=u:object_r:su_exec:s0 capabilities=0x0
 system/xbin/tcpdump 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
