@@ -68,7 +68,6 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/media/boot.wav
 	rm -rf $(ZIP_DIR)/system/media/shutdown.wav
 	echo "import /system/default.prop" >> $(ZIP_DIR)/system/build.prop
-	echo "ro.recovery.md5id=b449b8f2369bd3fea54f1ba62ad6dc58" >> $(ZIP_DIR)/system/build.prop
 	echo "ro.miui.type=hook" >> $(ZIP_DIR)/system/build.prop
 	rm -rf $(ZIP_DIR)/system/media/audio/ui/bootup.wav
 	touch $(ZIP_DIR)/system/media/audio/ui/bootup.wav

@@ -2263,7 +2263,7 @@
     return v1
 
     :cond_nian_0
-    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->checkIfMiGuard()Z
+    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->preloadMisResources()Z
 
     move-result v1
 
