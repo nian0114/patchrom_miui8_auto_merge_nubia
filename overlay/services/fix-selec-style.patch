@@ -1,0 +1,75 @@
+From 713456990194290311af42fe86721b843268944f Mon Sep 17 00:00:00 2001
+From: wangtongli <tongliwang@tju.edu.cn>
+Date: Wed, 7 Dec 2016 23:18:56 +0800
+Subject: [PATCH] fix select inputmethod manger
+
+---
+ ...ethodManagerService$ImeSubtypeListAdapter.smali |  2 +-
+ .../android/server/InputMethodManagerService.smali | 22 +++++++++++++++++++---
+ 2 files changed, 20 insertions(+), 4 deletions(-)
+
+--- a/services/smali/com/android/server/InputMethodManagerService$ImeSubtypeListAdapter.smali
++++ b/services/smali/com/android/server/InputMethodManagerService$ImeSubtypeListAdapter.smali
+@@ -176,7 +176,7 @@
+     invoke-virtual {v4, v8}, Landroid/widget/TextView;->setVisibility(I)V
+
+     :goto_2
+-    const v8, 0x30d0029
++    const v8, 0x1020352
+
+     invoke-virtual {v6, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+--- a/services/smali/com/android/server/InputMethodManagerService.smali
++++ b/services/smali/com/android/server/InputMethodManagerService.smali
+@@ -3415,7 +3415,7 @@
+     :cond_6
+     new-instance v24, Landroid/view/ContextThemeWrapper;
+
+-    const v27, 0x30e0005
++    const v27, 0x1030223
+
+     move-object/from16 v0, v24
+
+@@ -3537,6 +3537,18 @@
+     move-result-object v26
+
+     .local v26, "tv":Landroid/view/View;
++    move-object/from16 v0, p0
++
++    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
++
++    move-object/from16 v27, v0
++
++    move-object/from16 v0, v27
++
++    move-object/from16 v1, v26
++
++    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setCustomTitle(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
++
+     move-object/from16 v0, v26
+
+     move-object/from16 v1, p0
+@@ -3621,9 +3633,11 @@
+
+     invoke-virtual {v14, v0}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
++    invoke-virtual/range {p0 .. p0}, Lcom/android/server/InputMethodManagerService;->removeCustomTitle()V
++
+     new-instance v6, Lcom/android/server/InputMethodManagerService$ImeSubtypeListAdapter;
+
+-    const v27, 0x3030006
++    const v27, 0x109006c
+
+     move/from16 v0, v27
+
+@@ -12713,7 +12727,7 @@
+
+     iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
+
+-    const v1, 0x10403e1
++    sget v1, Lcom/android/internal/R$string;->select_input_method:I
+
+     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+
+--
+1.9.1
