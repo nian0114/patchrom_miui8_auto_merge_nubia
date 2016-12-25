@@ -588,10 +588,12 @@
 
 # virtual methods
 .method public isAllowNotify(Ljava/lang/String;)Z
-    .locals 8
+    .locals 9
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
+    const/4 v8, 0x5
+
     const/4 v4, 0x1
 
     const/4 v5, 0x0
@@ -649,8 +651,7 @@
 
     if-nez v6, :cond_2
 
-    .line 78
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
@@ -694,9 +695,7 @@
     .line 80
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
-    const/4 v6, 0x5
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
