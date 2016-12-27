@@ -706,11 +706,6 @@
     .line 592
     invoke-direct {p0}, Lcom/android/settings_ex/DisplaySettings;->updateScreenSaverSummary()V
 
-    .line 593
-    iget-object v3, p0, Lcom/android/settings_ex/DisplaySettings;->mFontSizePreference:Landroid/preference/Preference;
-
-    invoke-direct {p0, v3}, Lcom/android/settings_ex/DisplaySettings;->updateFontSizePreference(Landroid/preference/Preference;)V
-
     .line 600
     invoke-direct {p0}, Lcom/android/settings_ex/DisplaySettings;->updateRotationCheckbox()V
 
@@ -1261,6 +1256,8 @@
     invoke-static {v0}, Lcom/android/internal/view/RotationPolicy;->isRotationLockToggleVisible(Landroid/content/Context;)Z
 
     move-result v8
+    
+    const/4 v8, 0x0
 
     if-eqz v8, :cond_b
 
