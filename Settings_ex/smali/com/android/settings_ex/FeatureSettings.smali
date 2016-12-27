@@ -303,7 +303,6 @@
     .end local v0    # "config":Ljava/lang/Object;
     .end local v2    # "powermo":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
-    if-eqz v3, :cond_0
 
     .line 123
     const-string v4, "splitscreen_settings"
@@ -703,33 +702,9 @@
     .line 36
     invoke-direct {p0}, Lcom/android/settings_ex/FeatureSettings;->removePrefVolumeKey()V
 
-    .line 37
-    invoke-direct {p0}, Lcom/android/settings_ex/FeatureSettings;->removePrefVolley()V
-
-    .line 38
-    invoke-direct {p0}, Lcom/android/settings_ex/FeatureSettings;->removePrefsDualInstance()V
-
     .line 39
     iget-boolean v1, p0, Lcom/android/settings_ex/FeatureSettings;->isSupportLinearAccSensor:Z
 
-    if-nez v1, :cond_0
-
-    .line 40
-    const-string v1, "motion_key"
-
-    invoke-virtual {p0, v1}, Lcom/android/settings_ex/FeatureSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v0
-
-    .line 41
-    .local v0, "pref":Landroid/preference/Preference;
-    const v1, 0x7f0c0fff
-
-    invoke-virtual {v0, v1}, Landroid/preference/Preference;->setSummary(I)V
-
-    .line 43
-    .end local v0    # "pref":Landroid/preference/Preference;
-    :cond_0
     invoke-direct {p0}, Lcom/android/settings_ex/FeatureSettings;->isSupportSingleUi()Z
 
     move-result v1
