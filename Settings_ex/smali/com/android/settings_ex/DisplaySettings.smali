@@ -2034,9 +2034,9 @@
     if-eqz v2, :cond_2
 
     .line 757
-    const-string v2, "com.android.settings"
+    const-string v2, "com.android.settings_ex"
 
-    const-string v3, "com.android.settings.ImageEnhanceSettings3"
+    const-string v3, "com.android.settings_ex.ImageEnhanceSettings3"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -2062,9 +2062,9 @@
     .line 759
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
-    const-string v2, "com.android.settings"
+    const-string v2, "com.android.settings_ex"
 
-    const-string v3, "com.android.settings.ImageEnhanceSettings2"
+    const-string v3, "com.android.settings_ex.ImageEnhanceSettings2"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

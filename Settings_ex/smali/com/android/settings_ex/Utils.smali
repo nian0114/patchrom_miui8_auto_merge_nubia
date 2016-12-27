@@ -2216,7 +2216,7 @@
 
     .line 882
     .local v5, "launchedFromPackage":Ljava/lang/String;
-    const-string v8, "com.android.settings"
+    const-string v8, "com.android.settings_ex"
 
     invoke-virtual {v8, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4764,7 +4764,7 @@
     if-eqz v5, :cond_2
 
     .line 264
-    const-string v11, "com.android.settings.icon"
+    const-string v11, "com.android.settings_ex.icon"
 
     invoke-virtual {v5, v11}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -4773,7 +4773,7 @@
     if-eqz v11, :cond_0
 
     .line 265
-    const-string v11, "com.android.settings.icon"
+    const-string v11, "com.android.settings_ex.icon"
 
     invoke-virtual {v5, v11}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -4781,7 +4781,7 @@
 
     .line 267
     :cond_0
-    const-string v11, "com.android.settings.title"
+    const-string v11, "com.android.settings_ex.title"
 
     invoke-virtual {v5, v11}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -4790,7 +4790,7 @@
     if-eqz v11, :cond_1
 
     .line 268
-    const-string v11, "com.android.settings.title"
+    const-string v11, "com.android.settings_ex.title"
 
     invoke-virtual {v5, v11}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -4802,7 +4802,7 @@
 
     .line 270
     :cond_1
-    const-string v11, "com.android.settings.summary"
+    const-string v11, "com.android.settings_ex.summary"
 
     invoke-virtual {v5, v11}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -4811,7 +4811,7 @@
     if-eqz v11, :cond_2
 
     .line 271
-    const-string v11, "com.android.settings.summary"
+    const-string v11, "com.android.settings_ex.summary"
 
     invoke-virtual {v5, v11}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 

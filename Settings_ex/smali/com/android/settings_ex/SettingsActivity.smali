@@ -1181,7 +1181,7 @@
     .local v8, "pm":Landroid/content/pm/PackageManager;
     new-instance v5, Landroid/content/Intent;
 
-    const-string v12, "com.android.settings.action.EXTRA_SETTINGS"
+    const-string v12, "com.android.settings_ex.action.EXTRA_SETTINGS"
 
     invoke-direct {v5, v12}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
@@ -1235,7 +1235,7 @@
     .local v7, "metaData":Landroid/os/Bundle;
     if-eqz v7, :cond_1
 
-    const-string v12, "com.android.settings.category"
+    const-string v12, "com.android.settings_ex.category"
 
     invoke-virtual {v7, v12}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -1271,7 +1271,7 @@
 
     move-result-object v12
 
-    const-string v14, "com.android.settings.action.EXTRA_SETTINGS"
+    const-string v14, "com.android.settings_ex.action.EXTRA_SETTINGS"
 
     invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1301,13 +1301,13 @@
     goto :goto_0
 
     :cond_2
-    const-string v12, "com.android.settings.category"
+    const-string v12, "com.android.settings_ex.category"
 
     goto :goto_1
 
     .line 1439
     :cond_3
-    const-string v12, "com.android.settings.category"
+    const-string v12, "com.android.settings_ex.category"
 
     invoke-virtual {v7, v12}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1626,7 +1626,7 @@
     :cond_1
     iget-object v2, v0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    const-string v3, "com.android.settings.FRAGMENT_CLASS"
+    const-string v3, "com.android.settings_ex.FRAGMENT_CLASS"
 
     invoke-virtual {v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1727,7 +1727,7 @@
 
     .line 975
     :cond_2
-    const-string v1, "com.android.settings.ManageApplications"
+    const-string v1, "com.android.settings_ex.ManageApplications"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1735,7 +1735,7 @@
 
     if-nez v1, :cond_3
 
-    const-string v1, "com.android.settings.RunningServices"
+    const-string v1, "com.android.settings_ex.RunningServices"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1743,7 +1743,7 @@
 
     if-nez v1, :cond_3
 
-    const-string v1, "com.android.settings.applications.StorageUse"
+    const-string v1, "com.android.settings_ex.applications.StorageUse"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1871,7 +1871,7 @@
     .local v0, "categories":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-eqz v0, :cond_0
 
-    const-string v1, "com.android.settings.SHORTCUT"
+    const-string v1, "com.android.settings_ex.SHORTCUT"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 

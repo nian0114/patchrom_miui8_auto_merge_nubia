@@ -1343,7 +1343,7 @@
     .line 87
     iget-object v1, p0, Lcom/android/settings_ex/notificationcenter/ui/NotificationCenterManagementActivity$PrefsFragment;->mContext:Landroid/content/Context;
 
-    const-string v2, "com.android.settings.notificationcenter.ui.NotificationCenterSettingsActivity"
+    const-string v2, "com.android.settings_ex.notificationcenter.ui.NotificationCenterSettingsActivity"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
 
