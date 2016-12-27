@@ -408,5 +408,17 @@
 
     invoke-virtual {p0, v7}, Lcom/android/settings_ex/edge/ShowEdgesFragment;->removePreference(Ljava/lang/String;)V
 
+    const-string v7, "edge_flide_inward"
+
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/edge/ShowEdgesFragment;->removePreference(Ljava/lang/String;)V
+
+    const-string v7, "edge_flide_single_move_switch"
+
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/edge/ShowEdgesFragment;->removePreference(Ljava/lang/String;)V
+
+    const-string v7, "edge_flide_repeat"
+
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/edge/ShowEdgesFragment;->removePreference(Ljava/lang/String;)V
+
     goto :goto_0
 .end method
