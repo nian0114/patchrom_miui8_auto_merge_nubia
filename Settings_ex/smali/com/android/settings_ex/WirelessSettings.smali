@@ -3055,6 +3055,8 @@
 
     move-result v21
 
+    const/16 v21, 0x0
+
     if-gtz v21, :cond_14
 
     const-string v21, "sms_application"

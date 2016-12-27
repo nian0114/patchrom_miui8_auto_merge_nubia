@@ -2,13 +2,20 @@
 <PreferenceScreen android:title="@string/wireless_networks_settings_title"
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
+
+  <PreferenceCategory
+    android:key="sms_application">
     <android.preference.nubia.CheckBoxPreference android:persistent="false" android:title="@string/airplane_mode" android:key="toggle_airplane" android:disableDependentsState="true" />
-    <Preference android:persistent="false" android:title="@string/wifi_ant" android:key="wifi_1x1_available" android:summary="@string/single_ant" />
-    <Preference android:persistent="false" android:title="@string/sms_application_title" android:key="sms_application" android:summary="%s" settings:keywords="@string/keywords_more_default_sms_app">
+    <Preference android:persistent="false" android:title="@string/sms_application_title" android:key="sms1_application" android:summary="%s" settings:keywords="@string/keywords_more_default_sms_app">
         <intent android:targetPackage="com.android.settings_ex" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings_ex.SmsApplicationActivity" />
     </Preference>
     <PreferenceScreen android:title="@string/tether_settings_title_all" android:key="tether_settings" android:fragment="com.android.settings_ex.TetherSettings" />
     <PreferenceScreen android:title="@string/vpn_settings_title" android:key="vpn_settings" android:summary="@string/vpn_settings_summary" android:fragment="com.android.settings_ex.vpn2.VpnSettings" />
+
+  </PreferenceCategory>
+
+    <Preference android:persistent="false" android:title="@string/wifi_ant" android:key="wifi_1x1_available" android:summary="@string/single_ant" />
+
     <com.android.settings_ex.PreferenceDivider android:title="@string/header_category_wireless_transport" android:key="category_wireless_transport" />
     <com.android.settings_ex.nfc.AndroidBeamCheckBoxPreference android:persistent="false" android:title="@string/nfc_quick_toggle_title" android:key="toggle_nfc" android:summary="@string/nfc_quick_toggle_summary" />
     <PreferenceScreen android:title="@string/android_beam_settings_title" android:key="android_beam_settings" android:fragment="com.android.settings_ex.nfc.AndroidBeam" />
