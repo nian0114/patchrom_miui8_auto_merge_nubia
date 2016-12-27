@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/switch_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="2.0" android:layout_marginStart="?android:listPreferredItemPaddingStart" />
+        <com.android.settings_ex.widget.ToggleSwitch android:theme="@style/ThemeOverlay.SwitchBar" android:layout_gravity="center_vertical" android:id="@id/switch_widget" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="?android:listPreferredItemPaddingEnd" />
+    </LinearLayout>
+    <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/listdivider_height" android:layout_alignParentBottom="true" />
+</RelativeLayout>

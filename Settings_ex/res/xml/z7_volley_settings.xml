@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/development_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings_ex.gesturez7.Z7SwitchPreference android:title="@string/slide_screen_title" android:key="slide_screen" android:summary="@string/slide_screen_summary" android:fragment="com.android.settings_ex.gesturez7.Z7VolleyAppSelector" />
+    <com.android.settings_ex.gesturez7.Z7SwitchPreference android:title="@string/volley_gesture_backforward_title" android:key="back_forward_screen" android:summary="@string/volley_gesture_backforward_summary" android:fragment="com.android.settings_ex.gesturez7.Z7VolleyBackAndForward" />
+</PreferenceScreen>

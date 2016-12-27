@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/listdivider_height" />
+    <LinearLayout android:background="@color/preference_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/nubia_preference_item_padding_inner" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/nubia_preference_category_height">
+        <TextView android:textSize="@dimen/bt_search_progress_category_title_size" android:textColor="@color/nubia_secondary_text_default_material_light" android:id="@android:id/title" android:paddingTop="@dimen/nubia_preference_item_padding_inner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/nubia_preference_category_height" android:layout_weight="1.0" android:paddingStart="@dimen/nubia_preference_item_padding_side" android:paddingEnd="@dimen/nubia_preference_item_padding_side" style="?android:attr/listSeparatorTextViewStyle" />
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/scanning_progress" android:paddingTop="@dimen/nubia_preference_item_padding_inner" android:paddingRight="@dimen/preference_item_padding_side" android:paddingBottom="@dimen/progress_preference_margin_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/progress_scanning" android:layout_marginStart="16.0dip" style="?android:attr/progressBarStyleSmallTitle" />
+    </LinearLayout>
+    <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/listdivider_height" />
+</LinearLayout>

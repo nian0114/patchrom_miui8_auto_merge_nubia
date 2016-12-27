@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" style="@style/MsimSetting_Oper_Item">
+        <TextView android:id="@id/operandnum_cardname" android:text="@string/wifi_ssid" style="@style/MsimSettingText" />
+        <View android:layout_width="@dimen/msim_settings_line_size" android:layout_height="@dimen/msim_setting_line_height" style="@style/MsimSetting_Oper_LineView" />
+        <EditText android:id="@id/operandnum_cardnameedit" style="@style/MsimSettingEdit" />
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/msim_settings_line_size" style="@style/MsimSetting_Oper_LineView" />
+    <LinearLayout android:orientation="horizontal" style="@style/MsimSetting_Oper_Item">
+        <TextView android:id="@id/operandnum_cardnum" android:text="@string/wifi_ssid" style="@style/MsimSettingText" />
+        <View android:layout_width="@dimen/msim_settings_line_size" android:layout_height="@dimen/msim_setting_line_height" style="@style/MsimSetting_Oper_LineView" />
+        <EditText android:id="@id/operandnum_cardnumedit" style="@style/MsimSettingEdit" />
+    </LinearLayout>
+</LinearLayout>

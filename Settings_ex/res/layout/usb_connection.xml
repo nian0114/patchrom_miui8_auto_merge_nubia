@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/mtp_option" android:background="?android:selectableItemBackground" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+        <TextView android:textAppearance="?android:textAppearanceListItem" android:textColor="#e6000000" android:ellipsize="marquee" android:gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:text="@string/mtp_option" android:singleLine="true" android:layout_weight="1.0" />
+        <RadioButton android:gravity="center_vertical" android:id="@id/radio" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ptp_option" android:background="?android:selectableItemBackground" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+        <TextView android:textAppearance="?android:textAppearanceListItem" android:textColor="#e6000000" android:ellipsize="marquee" android:gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:text="@string/ptp_option" android:singleLine="true" android:layout_weight="1.0" />
+        <RadioButton android:gravity="center_vertical" android:id="@id/radio" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/default_option" android:background="?android:selectableItemBackground" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+        <TextView android:textAppearance="?android:textAppearanceListItem" android:textColor="#e6000000" android:ellipsize="marquee" android:gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:text="@string/default_option" android:singleLine="true" android:layout_weight="1.0" />
+        <RadioButton android:gravity="center_vertical" android:id="@id/radio" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

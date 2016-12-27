@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/launcher_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
+    <PreferenceScreen android:title="@string/wallpaper_settings_title" android:key="wallpaper" android:fragment="com.android.settings_ex.WallpaperTypeSettings" settings:keywords="@string/keywords_display_wallpaper" />
+    <PreferenceScreen android:title="@string/desk_layout_summay" android:key="desk_layout">
+        <intent android:targetPackage="com.android.settings_ex" android:targetClass="com.android.settings_ex.ChangeDeskLayActivity" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/launcher_mode" android:key="launcher_mode" android:fragment="com.android.settings_ex.LauncherModeFragment" />
+</PreferenceScreen>

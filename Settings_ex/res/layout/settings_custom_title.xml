@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="?android:listPreferredItemPaddingStart" android:paddingEnd="?android:listPreferredItemPaddingEnd"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="16.0dip" android:id="@id/settings_custom_title_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_label" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="right" android:id="@id/actionbar_settings_right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="62.0dip" android:layout_alignParentRight="true" android:paddingEnd="?android:listPreferredItemPaddingEnd">
+        <ImageView android:layout_gravity="center|right" android:id="@id/actionbar_settings_right_icon" android:background="@drawable/dashboard_tile_background" android:layout_width="@dimen/settings_actionbar_more_size" android:layout_height="@dimen/settings_actionbar_more_size" android:src="@drawable/settings_actionbar_more" android:scaleType="center" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/applications_notification" android:key="applications_notification" />
+    <PreferenceCategory android:title="@string/notificationstatusbar_settings" android:key="notificationstatusbar_settings">
+        <Preference android:title="@string/qstile_switch" android:key="qstile_switch" />
+        <android.preference.nubia.CheckBoxPreference android:title="@string/allow_lockscreenstatusbar_dropdown" android:key="allow_lockscreenstatusbar_dropdown" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/statusbar_settins" android:key="statusbat_settins">
+        <android.preference.nubia.CheckBoxPreference android:title="@string/show_notification_icon" android:key="show_notification_icon" />
+        <android.preference.nubia.CheckBoxPreference android:title="@string/show_netspeed" android:key="show_netspeed" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/lockscreen_settings" android:key="lockscreen_settings" />
+    <android.preference.nubia.CheckBoxPreference android:title="@string/show_lockscreen_notification" android:key="show_lockscreen_notification" />
+    <android.preference.nubia.CheckBoxPreference android:title="@string/brightscreen_after_notification" android:key="brightscreen_after_notification" />
+</PreferenceScreen>

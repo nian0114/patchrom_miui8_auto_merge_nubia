@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dashboard-categories
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <dashboard-category android:id="@id/wireless_section" android:title="@string/header_category_wireless_networks" android:key="@string/category_key_wireless">
+        <dashboard-tile android:icon="@drawable/settings_header_wifi_normal" android:id="@id/wifi_settings" android:title="@string/wifi_settings_title" android:fragment="com.android.settings_ex.wifi.WifiSettings" />
+        <dashboard-tile android:icon="@drawable/settings_header_bluetooth_normal" android:id="@id/bluetooth_settings" android:title="@string/bluetooth_settings_title" android:fragment="com.android.settings_ex.bluetooth.BluetoothSettings" />
+        <dashboard-tile android:icon="@drawable/settings_header_simc_normal" android:id="@id/msim_settings" android:title="@string/msim_settings" android:fragment="com.android.settings_ex.msim.NBMsimSettings" />
+        <dashboard-tile android:id="@id/operator_settings" android:fragment="com.android.settings_ex.WirelessSettings">
+            <intent android:action="com.android.settings_ex.OPERATOR_APPLICATION_SETTING" />
+        </dashboard-tile>
+        <dashboard-tile android:icon="@drawable/settings_header_more_wireless_normal" android:id="@id/wireless_settings" android:title="@string/more_wireless_title" android:fragment="com.android.settings_ex.WirelessSettings" />
+    </dashboard-category>
+    <dashboard-category android:id="@id/device_section" android:title="@string/header_category_device" android:key="@string/category_key_device">
+        <dashboard-tile android:icon="@drawable/ic_settings_home" android:id="@id/home_settings" android:title="@string/home_settings" android:fragment="com.android.settings_ex.HomeSettings" />
+        <dashboard-tile android:icon="@drawable/settings_header_display_normal" android:id="@id/display_settings" android:title="@string/display_settings" android:fragment="com.android.settings_ex.DisplaySettings" />
+        <dashboard-tile android:icon="@drawable/settings_header_notification_center_normal" android:id="@id/notification_center_settings" android:title="@string/notification_panel_title" android:fragment="com.android.settings_ex.notificationcenter.ui.NotificationCenterFragment" />
+        <dashboard-tile android:icon="@drawable/settings_header_sound_normal" android:id="@id/notification_settings" android:title="@string/sound_settings" android:fragment="com.android.settings_ex.notification.NotificationSettings" />
+        <dashboard-tile android:icon="@drawable/ic_settings_nfc_payment" android:id="@id/nfc_payment_settings" android:title="@string/nfc_payment_settings_title" android:fragment="com.android.settings_ex.nfc.PaymentSettings" />
+        <dashboard-tile android:id="@id/manufacturer_settings" android:fragment="com.android.settings_ex.WirelessSettings">
+            <intent android:action="com.android.settings_ex.MANUFACTURER_APPLICATION_SETTING" />
+        </dashboard-tile>
+        <dashboard-tile android:icon="@drawable/settings_header_gesture_normal" android:id="@id/edge_settings" android:title="@string/edge_flide_title" android:fragment="com.android.settings_ex.edge.ShowEdgesFragment" />
+        <dashboard-tile android:icon="@drawable/settings_header_feature_normal" android:id="@id/feature_settings" android:title="@string/feature_settings" android:fragment="com.android.settings_ex.FeatureSettings" />
+        <dashboard-tile android:icon="@drawable/settings_header_lockscreen_normal" android:id="@id/lockscreen_settings" android:title="@string/lockscreen_settings" android:fragment="com.android.settings_ex.KeyGuardSettings" />
+        <dashboard-tile android:icon="@drawable/settings_header_fingerprints_normal" android:id="@id/fingerprints_settings" android:title="@string/fingerprints_settings">
+            <intent android:action="android.settings.FINGERPRINT_SETUP" />
+        </dashboard-tile>
+        <dashboard-tile android:icon="@drawable/settings_header_eyeprints_normal" android:id="@id/eyeprints_settings" android:title="@string/eyerprints_settings" android:fragment="com.android.settings_ex.eyeverify.EyePrintsManagerFragment" />
+        <dashboard-tile android:icon="@drawable/settings_header_security_normal" android:id="@id/security_settings" android:title="@string/security_and_privacy_settings_title" android:fragment="com.android.settings_ex.SecuritySettings" />
+        <dashboard-tile android:icon="@drawable/settings_header_account_normal" android:id="@id/account_settings" android:title="@string/account_settings_title" android:fragment="com.android.settings_ex.accounts.NubiaAccountStartFragment" />
+        <dashboard-tile android:icon="@drawable/settings_header_application_normal" android:id="@id/application_settings" android:title="@string/applications_settings" android:fragment="com.android.settings_ex.applications.ManageApplications" />
+    </dashboard-category>
+    <dashboard-category android:id="@id/system_section" android:title="@string/header_category_system" android:key="@string/category_key_system">
+        <dashboard-tile android:icon="@drawable/settings_header_other_normal" android:id="@id/more_settings" android:title="@string/more_settings" android:fragment="com.android.settings_ex.MoreSettings" />
+        <dashboard-tile android:icon="@drawable/settings_header_system_update" android:id="@id/system_update" android:title="@string/system_update" />
+        <dashboard-tile android:icon="@drawable/settings_header_about_normal" android:id="@id/about_settings" android:title="@string/about_settings" android:fragment="com.android.settings_ex.DeviceInfoSettings" />
+    </dashboard-category>
+</dashboard-categories>

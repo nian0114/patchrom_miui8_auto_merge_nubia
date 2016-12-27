@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/display_settings" settings:keywords="@string/keywords_display"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
+    <com.android.settings_ex.FontSizePreference android:persistent="false" android:title="@string/font_size_small" android:key="font_size_small" android:summary="@string/font_size_summary" settings:radioTitleTextSize="14.0dip" settings:radioSummaryTextSize="12.0dip" />
+    <com.android.settings_ex.FontSizePreference android:persistent="false" android:title="@string/font_size_normal" android:key="font_size_normal" android:summary="@string/font_size_summary" settings:radioTitleTextSize="16.0dip" settings:radioSummaryTextSize="14.0dip" />
+    <com.android.settings_ex.FontSizePreference android:persistent="false" android:title="@string/font_size_big" android:key="font_size_big" android:summary="@string/font_size_summary" settings:radioTitleTextSize="18.0dip" settings:radioSummaryTextSize="16.0dip" />
+    <com.android.settings_ex.FontSizePreference android:persistent="false" android:title="@string/font_size_extral_big" android:key="font_size_extral_big" android:summary="@string/font_size_summary" settings:radioTitleTextSize="22.0dip" settings:radioSummaryTextSize="20.0dip" />
+</PreferenceScreen>

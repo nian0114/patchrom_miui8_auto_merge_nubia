@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:persistent="false" android:title="@string/led_light_title" android:key="led_light_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.preference.nubia.CheckBoxPreference android:persistent="false" android:title="@string/led_charge_title" android:key="led_charge" android:summary="@string/led_charge_summary" />
+    <android.preference.nubia.CheckBoxPreference android:persistent="false" android:title="@string/led_touch_switch_title" android:key="led_touch_switch" android:summary="@string/led_touch_switch_summary" />
+    <android.preference.nubia.CheckBoxPreference android:persistent="false" android:title="@string/led_no_disturb_switch_title" android:key="led_no_disturb_switch" android:summary="@string/led_no_disturb_summary" />
+    <android.preference.nubia.CheckBoxPreference android:title="@string/automatic_brightness" android:key="led_automatic_brightness_switch" />
+    <com.android.settings_ex.LedLightBrightnessPreference android:title="@string/led_brightness" android:key="led_brightness" />
+</PreferenceScreen>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:id="@id/bottom_panel" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_bar_height" android:layout_alignParentBottom="true" android:paddingStart="?android:listPreferredItemPaddingStart" android:paddingEnd="?android:listPreferredItemPaddingEnd"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/button_next" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_restore" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/splitscreen_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/split_screen" android:contentDescription="@null" />
+            <RelativeLayout android:gravity="center_vertical" android:id="@id/split_screen_mode_view" android:background="?android:selectableItemBackground" android:paddingLeft="@dimen/preference_item_padding_side" android:paddingRight="@dimen/preference_item_padding_side" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:minHeight="?android:listPreferredItemHeightSmall">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/split_screen_settings" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <com.android.settings_ex.widget.ToggleSwitch android:id="@id/split_screen_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <TextView android:gravity="left" android:id="@id/desc_split_screen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="11.699982dip" android:layout_marginRight="16.0dip" android:text="@string/desc_split_screen_record" />
+        </LinearLayout>
+    </ScrollView>
+    <ImageView android:id="@id/btn_splitscreen_back" android:background="@drawable/backgroud_button_go_back" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="25.0dip" android:src="@drawable/nubia_ic_ab_back_material" android:scaleType="center" android:contentDescription="@null" />
+</FrameLayout>

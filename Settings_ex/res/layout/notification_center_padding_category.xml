@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="14.0sp" android:id="@android:id/title" android:background="@null" android:paddingBottom="0.0dip" android:minHeight="32.0dip" android:layout_weight="1.0" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" style="?android:attr/listSeparatorTextViewStyle" />
+    <ImageView style="@style/image_segment" />
+</LinearLayout>

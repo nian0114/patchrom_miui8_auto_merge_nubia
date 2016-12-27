@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_weight="1.0" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+        <cn.nubia.commonui.widget.HorizontalPagedView android:id="@id/nubia_resolver_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <cn.nubia.commonui.widget.HorizontalPageIndicator android:layout_gravity="center" android:orientation="horizontal" android:id="@id/nubia_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="16.0dip" />
+    <View android:id="@id/nubia_divider" android:background="?android:dividerHorizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/nubia_button_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/nubia_alert_dialog_button_layout_height">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:measureWithLargestChild="true" android:layout_marginStart="@dimen/nubia_alert_dialog_button_distance" android:layout_marginEnd="@dimen/nubia_alert_dialog_button_distance">
+            <Button android:enabled="false" android:layout_gravity="start" android:id="@id/nubia_button_always" android:background="?buttonLeftBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nubia_activity_resolver_use_always" android:maxLines="1" android:layout_weight="1.0" android:onClick="onButtonClick" />
+            <Button android:enabled="false" android:layout_gravity="end" android:id="@id/nubia_button_once" android:background="?buttonRightBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nubia_activity_resolver_use_once" android:maxLines="1" android:layout_weight="1.0" android:onClick="onButtonClick" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:enabled="true" android:textSize="14.0sp" android:layout_gravity="center" android:id="@id/nubia_button_cancel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/nubia_alert_dialog_button_bar_height" android:text="@android:string/cancel" android:maxLines="2" android:onClick="onButtonClick" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+</LinearLayout>

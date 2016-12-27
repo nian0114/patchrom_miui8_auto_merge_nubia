@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:id="@id/nubia_dialog_activity_panel" android:background="@drawable/nubia_dialog_activity_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="?android:actionModeBackground" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+            <TextView android:textSize="@dimen/nubia_text_size_medium_no_change" android:textColor="@color/nubia_secondary_text_default_material_light" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/nubia_dialog_activity_cancel" android:background="?actionModeTextButtonBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:maxWidth="@dimen/nubia_action_mode_close_button_max_width" android:text="@android:string/cancel" android:maxLines="1" android:layout_alignParentLeft="true" />
+            <TextView android:textSize="@dimen/nubia_text_size_medium_no_change" android:textColor="@color/nubia_selector_color_dialog_activity_ok" android:ellipsize="marquee" android:gravity="center" android:id="@id/nubia_dialog_activity_ok" android:background="?actionModeTextButtonBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="6.0dip" android:maxWidth="@dimen/nubia_action_mode_close_button_max_width" android:text="@android:string/ok" android:maxLines="1" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/nubia_text_size_medium_no_change" android:textColor="@color/nubia_primary_text_default_material_light" android:ellipsize="end" android:gravity="center" android:id="@id/nubia_dialog_activity_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:layout_toLeftOf="@id/nubia_dialog_activity_ok" android:layout_toRightOf="@id/nubia_dialog_activity_cancel" />
+        </RelativeLayout>
+        <FrameLayout android:id="@id/nubia_dialog_activity_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

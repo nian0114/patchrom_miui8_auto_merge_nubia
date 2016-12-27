@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/nb_split_screen_welcome_page_1" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+    <TextView android:textSize="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/split_screen_tutorial_tip1" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+</RelativeLayout>

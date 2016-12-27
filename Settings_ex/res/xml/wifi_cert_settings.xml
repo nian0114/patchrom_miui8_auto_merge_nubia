@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wifi_cert_mamg_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:persistent="false" android:title="@string/wifi_install_credentials" android:key="802.11_cert_install" />
+    <PreferenceCategory android:title="@string/wifi_wapi_cert_mgmt_titlebar" />
+    <Preference android:persistent="false" android:title="@string/wifi_wapi_cert_install" android:key="wapi_cert_install" />
+    <Preference android:persistent="false" android:title="@string/wifi_wapi_cert_uninstall" android:key="wapi_cert_uninstall" />
+</PreferenceScreen>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/schpwronoff" android:key="schpwronoff"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.preference.nubia.SwitchPreference android:persistent="false" android:title="@string/schedule_power_on" android:key="shedule_power_on" />
+    <com.android.settings_ex.schpwronoff.TimePickerPreference android:layout="@layout/preference_for_number_summary" android:title="@string/power_on_time" android:key="power_on_time" android:summary="@string/power_on_time" />
+    <cn.nubia.commonui.preference.ListPreference android:entries="@array/schedule_power_on_off_timing_repeat_entries" android:layout="@layout/preference_for_number_summary" android:title="@string/power_on_off_repeat" android:key="power_on_repeat_days" android:summary="@string/power_on_time" android:entryValues="@array/schedule_power_on_off__timing_repeat_entries_values" />
+    <android.preference.nubia.SwitchPreference android:persistent="false" android:title="@string/schedule_power_off" android:key="shedule_power_off" />
+    <com.android.settings_ex.schpwronoff.TimePickerPreference android:layout="@layout/preference_for_number_summary" android:title="@string/power_off_time" android:key="power_off_time" />
+    <cn.nubia.commonui.preference.ListPreference android:entries="@array/schedule_power_on_off_timing_repeat_entries" android:layout="@layout/preference_for_number_summary" android:title="@string/timing_repeat_title" android:key="power_off_repeat_days" android:entryValues="@array/schedule_power_on_off__timing_repeat_entries_values" />
+</PreferenceScreen>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/image_enhance_title" android:layout_width="fill_parent" android:layout_height="397.0dip">
+        <ImageView android:id="@id/preview_image" android:background="@drawable/image_enhance_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+        <include layout="@layout/saturation_hue_tab_title" />
+        <include layout="@layout/saturation_hue_tab_title_background" />
+    </FrameLayout>
+    <android.support.v4.view.ViewPager android:id="@id/image_enhance_content_viewpager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</LinearLayout>

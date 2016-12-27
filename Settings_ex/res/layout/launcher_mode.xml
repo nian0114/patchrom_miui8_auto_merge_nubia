@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/standard_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_alignParentTop="true">
+        <TextView android:textSize="14.0sp" android:gravity="center" android:id="@id/text_standard_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/standard_mode" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:alpha="0.57" />
+        <ImageView android:id="@id/image_standard_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:src="@drawable/laucher_screenshot" android:layout_below="@id/text_standard_mode" />
+        <CheckBox android:gravity="center" android:id="@id/check_standard" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_below="@id/image_standard_mode" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/simple_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="40.0dip" android:layout_toRightOf="@id/standard_mode">
+        <TextView android:textSize="14.0sp" android:gravity="center" android:id="@id/text_simple_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/simple_mode" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:alpha="0.57" />
+        <ImageView android:id="@id/image_simple_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:src="@drawable/big_laucher_screenshot" android:layout_below="@id/text_simple_mode" />
+        <CheckBox android:gravity="center" android:id="@id/check_simple" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_below="@id/image_simple_mode" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

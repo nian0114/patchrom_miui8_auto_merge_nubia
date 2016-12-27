@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/development_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings_ex.gesturez7.Z7SwitchPreference android:title="@string/double_click_title" android:key="wake_screen" android:fragment="com.android.settings_ex.gesturez7.Z7DetailFragment" />
+    <com.android.settings_ex.gesturez7.Z7SwitchPreference android:title="@string/palm_lock_screen_title" android:key="palm_screen" android:summary="@string/palm_lock_screen_summary" android:fragment="com.android.settings_ex.gesturez7.Z7DetailFragment" />
+    <com.android.settings_ex.gesturez7.Z7SwitchPreference android:title="@string/three_finger_capture_title" android:key="three_capture_screen" android:summary="@string/three_finger_capture_summary" android:fragment="com.android.settings_ex.gesturez7.Z7DetailFragment" />
+    <com.android.settings_ex.gesturez7.Z7SwitchPreference android:title="@string/three_finger_change_app_title" android:key="three_finger_app" android:summary="@string/three_finger_change_app_summary" android:fragment="com.android.settings_ex.gesturez7.Z7DetailFragment" />
+</PreferenceScreen>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.android.settings_ex.widget.SettingsNubiaPagerTab android:orientation="horizontal" android:id="@id/pager_header" android:layout_width="wrap_content" android:layout_height="50.0dip" tabTextSize="16sp"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:nubia="http://schemas.android.com/apk/res/nubia" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="48.0dip" layout="@layout/tab_host_header" />
+    <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

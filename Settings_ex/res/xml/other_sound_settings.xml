@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/other_sound_settings" android:key="other_sound_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
+    <android.preference.nubia.CheckBoxPreference android:persistent="false" android:title="@string/dial_pad_tones_title" android:key="dial_pad_tones" android:switchTextOn="" android:switchTextOff="" />
+    <android.preference.nubia.CheckBoxPreference android:persistent="false" android:title="@string/lock_sounds_enable_title" android:key="screen_locking_sounds" android:switchTextOn="" android:switchTextOff="" />
+    <android.preference.nubia.CheckBoxPreference android:persistent="false" android:title="@string/docking_sounds_title" android:key="docking_sounds" android:switchTextOn="" android:switchTextOff="" />
+    <android.preference.nubia.CheckBoxPreference android:persistent="false" android:title="@string/touch_sounds_title" android:key="touch_sounds" android:switchTextOn="" android:switchTextOff="" />
+    <android.preference.nubia.CheckBoxPreference android:persistent="false" android:title="@string/power_on_off_sound_title" android:key="power_on_off_sound" />
+    <com.android.settings_ex.DropDownPreference android:persistent="false" android:title="@string/dock_audio_media_title" android:key="dock_audio_media" />
+</PreferenceScreen>

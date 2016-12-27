@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.preference.nubia.CheckBoxPreference android:title="@string/powersave_title_summary" android:key="power_save_mode" android:summary="@string/powersave_title_sub_summary" />
+    <android.preference.nubia.CheckBoxPreference android:title="@string/power_low_battery_mode" android:key="low_battery_mode" android:summary="@string/power_low_battery_mode_summary" />
+</PreferenceScreen>

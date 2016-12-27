@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_delete" android:id="@id/del_list" android:title="@string/dialog_del_title" android:showAsAction="always|withText" />
+    <item android:id="@id/action_select_all" android:showAsAction="always|withText" />
+</menu>

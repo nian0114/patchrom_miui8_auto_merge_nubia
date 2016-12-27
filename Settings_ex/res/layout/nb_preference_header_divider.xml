@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/header_divider" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/listdivider_height" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/title" android:background="@color/preference_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/preference_divider_height" android:paddingStart="@dimen/preference_item_padding_side" android:paddingEnd="@dimen/preference_item_padding_side" style="?android:attr/listSeparatorTextViewStyle" />
+</LinearLayout>

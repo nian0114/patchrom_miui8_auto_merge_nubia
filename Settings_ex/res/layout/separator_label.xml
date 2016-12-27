@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/title" android:paddingBottom="@dimen/category_margin_form_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/preference_category_first_height" android:paddingStart="?android:listPreferredItemPaddingLeft" style="?android:attr/listSeparatorTextViewStyle" />
+    <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/listdivider_height" />
+</LinearLayout>

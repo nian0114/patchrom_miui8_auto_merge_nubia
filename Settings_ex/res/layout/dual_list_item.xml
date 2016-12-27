@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="?listPreferredItemHeightSmallSecondary" android:paddingStart="?android:listPreferredItemPaddingStart" android:paddingEnd="?android:listPreferredItemPaddingEnd"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/dual_app_icon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+    <TextView android:textSize="12.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/has_dual_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="@string/dual_list_has_dualed" android:layout_toLeftOf="@id/image_header_icon" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:alpha="0.54" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center" android:id="@id/dual_app_pkgname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_toRightOf="@id/dual_app_icon" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/image_header_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/dual_instance_appitem" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+</RelativeLayout>

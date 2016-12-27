@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/power_usage_summary_title" android:key="app_list" settings:keywords="@string/keywords_battery"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
+    <android.preference.nubia.CheckBoxPreference android:title="@string/power_show_as_percentage" android:key="power_show_as_percentage" />
+    <Preference android:persistent="false" android:title="@string/powersave_title" android:key="power_profile" />
+    <Preference android:persistent="false" android:title="@string/power_control_title" android:key="power_control" />
+    <PreferenceScreen android:title="@string/power_speed_up_mode" android:key="speed_up_mode" android:summary="@string/power_speed_up_summary" />
+</PreferenceScreen>

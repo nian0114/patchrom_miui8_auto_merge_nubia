@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/image_enhance_content_ly" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/hue_radio_group_new" android:layout_width="fill_parent" android:layout_height="99.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="?android:textColorPrimary" android:gravity="left" android:paddingTop="17.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hue_info" android:paddingStart="?android:listPreferredItemPaddingStart" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" layout="@layout/hue_adjust_seekbar_layout" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+        <View android:background="@color/preference_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/margin_between_text_and_divider" />
+        <TextView android:textSize="14.0sp" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/saturation_info" android:paddingStart="?android:listPreferredItemPaddingStart" />
+        <TextView android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/listdivider_height" />
+        <RadioGroup android:orientation="vertical" android:id="@id/satur_radio_group_new" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorPrimary" android:id="@id/btn_radio_improve" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/image_enhance_improve" android:drawableRight="?android:listChoiceIndicatorSingle" style="@style/Image_Enhance_Radio_Item" />
+            <TextView android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/listdivider_height" />
+            <RadioButton android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorPrimary" android:id="@id/btn_radio_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/image_enhance_normal" android:drawableRight="?android:listChoiceIndicatorSingle" style="@style/Image_Enhance_Radio_Item" />
+            <TextView android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/listdivider_height" />
+            <RadioButton android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorPrimary" android:id="@id/btn_radio_weaken" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/image_enhance_weak" android:drawableRight="?android:listChoiceIndicatorSingle" style="@style/Image_Enhance_Radio_Item" />
+            <TextView android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/listdivider_height" android:layout_marginBottom="8.0dip" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

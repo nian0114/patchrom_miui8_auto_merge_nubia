@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:persistent="false" android:layout="@layout/edge_gesture" android:selectable="false" android:key="edge_gesture" />
+    <PreferenceScreen android:title="@string/edge_flide_inward" android:key="edge_flide_inward" android:summary="@string/edge_flide_inward_desc" />
+    <PreferenceScreen android:title="@string/edge_flide_single_move_switch" android:key="edge_flide_single_move_switch" android:summary="@string/edge_flide_single_move_switch_desc" />
+    <PreferenceScreen android:title="@string/edge_flide_repeat" android:key="edge_flide_repeat" android:summary="@string/edge_flide_repeat_desc" />
+    <PreferenceScreen android:title="@string/edge_flide_bilateral" android:key="edge_flide_double_sided" android:summary="@string/edge_flide_double_sided_desc" />
+    <PreferenceScreen android:title="@string/edge_click_title" android:key="edge_click" android:summary="@string/edge_click_desc" />
+    <PreferenceScreen android:title="@string/edge_single_hold" android:key="edge_single_hold" android:summary="@string/edge_single_hold_desc_all" />
+    <PreferenceScreen android:title="@string/edge_two_hands" android:key="edge_two_hands" android:summary="@string/edge_two_hands_desc" />
+</PreferenceScreen>

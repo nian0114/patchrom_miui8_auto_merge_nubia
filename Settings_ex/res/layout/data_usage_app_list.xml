@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?android:listDivider" android:layout_above="@id/devicepicker_bottom" android:layout_alignParentLeft="true" android:showDividers="middle">
+        <ListView android:scrollbarStyle="@android:integer/leanback_setup_base_animation_duration" android:id="@android:id/list" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:smoothScrollbar="false" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:gravity="center" android:id="@id/data_usage_details_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_data_usage_record" style="@style/Widget.Nubia.NubiaEmptyView" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/devicepicker_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/bottom_bar_height" android:layout_alignParentBottom="true">
+        <TextView android:id="@id/data_usage_refresh" android:text="@string/data_usage_menu_refresh" android:drawableTop="@drawable/ic_menu_refresh" style="?attr/menuItemBottomStyle" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="bottom|center" android:orientation="vertical" android:id="@id/turshow" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.nubia.settings.turboshow.WifiLetView android:id="@id/WifiLetOnAndIngView" android:layout_width="360.0dip" android:layout_height="270.0dip" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/average_speed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="52.0dip" android:text="@string/average_speed" android:alpha="137.7" />
+        <RelativeLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="112.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/mobile_data_usage_tips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/data_usage_tips" android:alpha="73.95" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/mobile_data_usage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/default_data_usage_tips" android:layout_toRightOf="@id/mobile_data_usage_tips" android:alpha="221.85" />
+        </RelativeLayout>
+    </FrameLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="270.0dip">
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:background="@drawable/nubia_list_divider_material" android:layout_width="fill_parent" android:layout_height="0.100000024dip" android:layout_below="@android:id/list" />
+    </RelativeLayout>
+</FrameLayout>

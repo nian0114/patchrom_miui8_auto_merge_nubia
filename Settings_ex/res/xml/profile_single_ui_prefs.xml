@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
+    <com.android.settings_ex.profile.SlideImagePreference />
+    <android.preference.nubia.CheckBoxPreference android:title="@string/turn_on_single_title" android:key="single_mode" />
+    <Preference android:title="@string/su_black_app" android:key="key_su_app_picker" android:summary="@string/su_black_app_summary" android:fragment="com.android.settings_ex.profile.SUAppPickerFragment" />
+</PreferenceScreen>

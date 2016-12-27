@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingTop="@dimen/deskmode_item_paddingtop_bottom" android:paddingBottom="@dimen/deskmode_item_paddingtop_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/modeId" android:paddingLeft="@dimen/preference_item_padding_side" android:paddingRight="@dimen/preference_item_padding_side" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/mode_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+        <RadioButton android:id="@id/mode_selected" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/mode_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/preference_item_padding_side" android:layout_marginRight="@dimen/preference_item_padding_side" android:layout_toRightOf="@id/mode_icon" android:layout_centerInParent="true">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/mode_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/mode_summary" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/deskmode_item_paddingtop_bottom" android:singleLine="false" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

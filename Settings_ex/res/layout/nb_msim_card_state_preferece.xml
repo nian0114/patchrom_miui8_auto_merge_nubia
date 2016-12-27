@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/card_preference" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="@dimen/msim_setting_card_preference_hight" android:paddingEnd="@dimen/msim_setting_card_state_preference_padding_end"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/card_framelayout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/msim_setting_card_state_preference_card_margin_left">
+        <ImageView android:id="@id/card_status_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/msim_setting_card_state_preference_hight" android:layout_centerInParent="true" />
+        <TextView android:textSize="@dimen/msim_setting_card_state_preference_card_id_size" android:textColor="?android:textColorSecondary" android:id="@id/card_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/msim_setting_card_state_preference_card_text_margin_left" android:layout_marginTop="@dimen/msim_setting_card_state_preference_card_text_margin_top" />
+        <TextView android:textSize="@dimen/msim_setting_card_state_preference_card_nettype_size" android:textColor="?android:textColorSecondary" android:id="@id/card_nettype" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/msim_setting_card_state_preference_card_text_margin_left" android:layout_marginBottom="@dimen/msim_setting_card_state_preference_card_text_margin_bottom" android:layout_below="@id/card_id" />
+    </RelativeLayout>
+    <TextView android:textColor="?android:textColorSecondary" android:id="@id/card_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/msim_setting_card_state_preference_text_margin_left" android:layout_toRightOf="@id/card_framelayout" android:layout_centerInParent="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <cn.nubia.commonui.widget.NubiaSwitch android:layout_gravity="center" android:id="@id/checkbox" android:focusable="false" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </LinearLayout>
+</RelativeLayout>

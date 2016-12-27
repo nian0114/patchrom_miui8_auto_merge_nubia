@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/display_settings" settings:keywords="@string/keywords_display"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
+    <PreferenceScreen android:title="@string/wallpaper_settings_title" android:key="wallpaper" android:fragment="com.android.settings_ex.WallpaperTypeSettings" settings:keywords="@string/keywords_display_wallpaper" />
+    <PreferenceScreen android:title="@string/desk_layout_summay" android:key="desk_layout">
+        <intent android:targetPackage="com.android.settings_ex" android:targetClass="com.android.settings_ex.ChangeDeskLayActivity" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/lock_screen_style" android:key="lock_screen_style" />
+    <PreferenceScreen android:title="@string/ui_style_title" android:key="ui_style">
+        <intent android:targetPackage="cn.nubia.thememanager" android:action="android.intent.action.MAIN" android:targetClass="cn.nubia.thememanager.activity.ThemeSelectActivity" />
+    </PreferenceScreen>
+    <Preference android:title="@string/screen_timeout" android:key="screen_timeout_v5" android:summary="@string/screen_timeout_summary" android:fragment="com.android.settings_ex.ScreenTimeOutSettings" />
+    <Preference android:title="@string/brightness_v5" android:key="brightness_v5" android:fragment="com.android.settings_ex.BrightnessV5Settings" />
+    <Preference android:title="@string/led_light_title" android:key="led_light" android:fragment="com.android.settings_ex.LedLightSettings" />
+    <PreferenceScreen android:title="@string/display_preferences_title" android:key="image_enhance" />
+    <Preference android:title="@string/display_preferences_title" android:key="image_enhance_hue" android:fragment="com.android.settings_ex.ImageEnhanceSettings">
+        <extra android:name=":android:no_headers" android:value="true" />
+    </Preference>
+    <PreferenceScreen android:title="@string/screensaver_settings_title" android:key="screensaver" android:fragment="com.android.settings_ex.DreamSettings" />
+    <android.preference.nubia.CheckBoxPreference android:persistent="false" android:title="@string/lift_to_wake_title" android:key="lift_to_wake" />
+    <Preference android:title="@string/title_font_size" android:key="font_size_v5" android:fragment="com.android.settings_ex.FontSizeSettings" />
+    <android.preference.nubia.CheckBoxPreference android:title="@string/accelerometer_title" android:key="auto_rotate" />
+    <com.android.settings_ex.PreferenceDivider android:key="preference_divider" />
+    <android.preference.nubia.CheckBoxPreference android:title="@string/pocket_title" android:key="pocket_mode" android:summary="@string/avoid_mistouch_summary" />
+    <android.preference.nubia.CheckBoxPreference android:persistent="false" android:title="@string/tap_to_wake" android:key="tap_to_wake" android:summary="@string/tap_to_wake_summary" />
+</PreferenceScreen>

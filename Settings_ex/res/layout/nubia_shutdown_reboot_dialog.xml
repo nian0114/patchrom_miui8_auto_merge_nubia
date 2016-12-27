@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/fuzzy_layer_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:alpha="0.0" />
+    <ImageView android:id="@id/darken_layer_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="#ff000000" android:alpha="0.0" />
+    <RelativeLayout android:id="@id/all_bg_id" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.android.settings_ex.schpwronoff.NubiaSplitEventView android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/no_use_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_centerInParent="true" />
+        <TextView android:textSize="16.0sp" android:textColor="#dfffffff" android:id="@id/count_down_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="104.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <com.android.settings_ex.schpwronoff.NubiaSlideView android:id="@id/view_shutdown" android:layout_width="267.0dip" android:layout_height="61.0dip" android:layout_marginTop="35.0dip" android:layout_below="@id/count_down_text" android:layout_centerHorizontal="true" />
+        <com.android.settings_ex.schpwronoff.NubiaSlideView android:id="@id/view_reboot" android:visibility="gone" android:layout_width="267.0dip" android:layout_height="61.0dip" android:layout_marginTop="161.0dip" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/cancle_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="37.0dip" android:text="@string/cancel_tip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:alpha="0.0" />
+        <ImageView android:id="@id/cancle_image_view" android:background="@drawable/dismiss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="9.0dip" android:layout_above="@id/cancle_text_view" android:layout_centerHorizontal="true" android:alpha="0.0" />
+    </RelativeLayout>
+</FrameLayout>
