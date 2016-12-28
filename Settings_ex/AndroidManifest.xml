@@ -80,7 +80,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:configChanges="mcc|mnc" android:name=".SubSettings" android:parentActivityName="Settings" android:screenOrientation="@nubia:integer/nubia_screen_orientation" android:taskAffinity="com.android.settings_ex"/>
@@ -1611,32 +1610,6 @@
         <activity android:label="@string/applications_notification" android:name="com.android.settings_ex.notificationcenter.ui.NotificationCenterManagementActivity" android:screenOrientation="@nubia:integer/nubia_screen_orientation"/>
         <activity android:label="@string/qstile_switch" android:name="com.android.settings_ex.notificationcenter.ui.QSTileSwitchActivity" android:screenOrientation="@nubia:integer/nubia_screen_orientation" android:theme="@style/Theme.Settings"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/default_app_setting" android:name="com.android.settings_ex.applications.AppTypeListActivity" android:screenOrientation="@nubia:integer/nubia_screen_orientation"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/default_app_setting" android:name="com.android.settings_ex.applications.DefaultAppSelectionActivity" android:screenOrientation="@nubia:integer/nubia_screen_orientation" android:theme="@style/Theme.Settings">
-            <intent-filter android:priority="1">
-                <action android:name="android.settings.HOME_SETTINGS"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <receiver android:name=".applications.PackageMonitor">
-            <intent-filter android:priority="800">
-                <action android:name="android.intent.action.PACKAGE_ADDED"/>
-                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
-                <data android:scheme="package"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name=".applications.DefaultAppBootUpReceiver">
-            <intent-filter android:priority="800">
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-            </intent-filter>
-        </receiver>
-        <provider android:authorities="com.android.settings_ex.schpwronoff" android:name="com.android.settings_ex.schpwronoff.AlarmProvider"/>
-        <receiver android:name="com.android.settings_ex.schpwronoff.SchPwrOnReceiver">
-            <intent-filter>
-                <action android:name="com.android.settings_ex.schpwronoff.PWR_ON_ALERT"/>
-            </intent-filter>
-        </receiver>
         <receiver android:name="com.android.settings_ex.schpwronoff.SchPwrOffReceiver">
             <intent-filter>
                 <action android:name="com.android.settings_ex.schpwronoff.PWR_OFF_ALERT"/>
