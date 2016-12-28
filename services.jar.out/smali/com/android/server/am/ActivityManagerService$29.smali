@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 21025
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$29;->val$uss:Lcom/android/server/am/UserState;
@@ -60,14 +59,12 @@
     .param p7, "sendingUser"    # I
 
     .prologue
-    .line 21030
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v2
 
-    .line 21031
     :try_start_0
     move-object/from16 v0, p0
 
@@ -79,14 +76,11 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 21033
     monitor-exit v2
 
-    .line 21044
     :goto_0
     return-void
 
-    .line 21035
     :cond_0
     move-object/from16 v0, p0
 
@@ -96,12 +90,10 @@
 
     iput v3, v1, Lcom/android/server/am/UserState;->mState:I
 
-    .line 21036
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21037
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -124,7 +116,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/android/server/am/BatteryStatsService;->noteEvent(ILjava/lang/String;I)V
 
-    .line 21040
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -137,7 +128,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/SystemServiceManager;->stopUser(I)V
 
-    .line 21041
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -187,7 +177,6 @@
 
     goto :goto_0
 
-    .line 21036
     :catchall_0
     move-exception v1
 

@@ -27,16 +27,12 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 66
     iput-object p1, p0, Lcom/android/server/am/SingleUIBlackAppHelper$SettingsObserver;->this$0:Lcom/android/server/am/SingleUIBlackAppHelper;
 
-    .line 67
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 68
     iput-object p3, p0, Lcom/android/server/am/SingleUIBlackAppHelper$SettingsObserver;->context:Landroid/content/Context;
 
-    .line 69
     return-void
 .end method
 
@@ -48,14 +44,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 72
     iget-object v1, p0, Lcom/android/server/am/SingleUIBlackAppHelper$SettingsObserver;->context:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 73
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "single_ui_mode"
 
@@ -65,7 +59,6 @@
 
     invoke-virtual {v0, v1, v3, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 76
     const-string v1, "single_ui_black_list"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -76,7 +69,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 79
     iget-object v1, p0, Lcom/android/server/am/SingleUIBlackAppHelper$SettingsObserver;->this$0:Lcom/android/server/am/SingleUIBlackAppHelper;
 
     iget-object v2, p0, Lcom/android/server/am/SingleUIBlackAppHelper$SettingsObserver;->context:Landroid/content/Context;
@@ -84,7 +76,6 @@
     # invokes: Lcom/android/server/am/SingleUIBlackAppHelper;->updateSettings(Landroid/content/Context;)V
     invoke-static {v1, v2}, Lcom/android/server/am/SingleUIBlackAppHelper;->access$100(Lcom/android/server/am/SingleUIBlackAppHelper;Landroid/content/Context;)V
 
-    .line 80
     return-void
 .end method
 
@@ -93,7 +84,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/android/server/am/SingleUIBlackAppHelper$SettingsObserver;->this$0:Lcom/android/server/am/SingleUIBlackAppHelper;
 
     iget-object v1, p0, Lcom/android/server/am/SingleUIBlackAppHelper$SettingsObserver;->context:Landroid/content/Context;
@@ -101,6 +91,5 @@
     # invokes: Lcom/android/server/am/SingleUIBlackAppHelper;->updateSettings(Landroid/content/Context;)V
     invoke-static {v0, v1}, Lcom/android/server/am/SingleUIBlackAppHelper;->access$100(Lcom/android/server/am/SingleUIBlackAppHelper;Landroid/content/Context;)V
 
-    .line 85
     return-void
 .end method

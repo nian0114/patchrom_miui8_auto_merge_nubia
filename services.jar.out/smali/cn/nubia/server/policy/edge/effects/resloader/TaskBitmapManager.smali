@@ -99,58 +99,48 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     const-string v0, "wallpaper"
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->WALLPAPER_PACKAGE_NAME:Ljava/lang/String;
 
-    .line 38
     const/4 v0, 0x0
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mCallbackNum:I
 
-    .line 49
     const/4 v0, -0x1
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
 
-    .line 50
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mhasCallback:Ljava/util/HashMap;
 
-    .line 56
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
-    .line 57
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
-    .line 58
     new-instance v0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-direct {v0, p1}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
-    .line 59
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v0, p0}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->setCallback(Lcn/nubia/server/policy/edge/effects/resloader/IScreenCallback;)V
 
-    .line 60
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -163,7 +153,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenHight:I
 
-    .line 61
     return-void
 .end method
 
@@ -172,7 +161,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     return-object v0
@@ -183,7 +171,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mTextureManagement:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;
 
     return-object v0
@@ -194,7 +181,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     return-object v0
@@ -205,7 +191,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;
 
     .prologue
-    .line 27
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->judgeCallbackHasMeet()V
 
     return-void
@@ -217,29 +202,24 @@
     .param p2, "isUp"    # Z
 
     .prologue
-    .line 393
     const/4 v1, -0x1
 
     if-ne p1, v1, :cond_1
 
-    .line 394
     if-eqz p2, :cond_0
 
     const-string v0, "invalide_up_package"
 
-    .line 403
     .local v0, "packageName":Ljava/lang/String;
     :goto_0
     return-object v0
 
-    .line 394
     .end local v0    # "packageName":Ljava/lang/String;
     :cond_0
     const-string v0, "invalide_down_package"
 
     goto :goto_0
 
-    .line 401
     :cond_1
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mRecentAppSwitchList:Ljava/util/List;
 
@@ -268,7 +248,6 @@
     .param p1, "hashcode"    # I
 
     .prologue
-    .line 548
     const-string v0, "wallpaper_up"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -301,10 +280,8 @@
     .locals 9
 
     .prologue
-    .line 594
     const/4 v0, 0x1
 
-    .line 595
     .local v0, "flag":Z
     const-string v6, "FitAnim"
 
@@ -386,14 +363,12 @@
 
     invoke-static {v6, v7}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 597
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-direct {p0, v6}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->validateListSize(Ljava/util/List;)I
 
     move-result v5
 
-    .line 598
     .local v5, "valideHashSize":I
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
@@ -433,12 +408,10 @@
 
     if-eqz v6, :cond_1
 
-    .line 616
     :cond_0
     :goto_0
     return-void
 
-    .line 602
     :cond_1
     const/4 v1, 0x0
 
@@ -448,7 +421,6 @@
 
     if-ge v1, v6, :cond_2
 
-    .line 603
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-interface {v6, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -461,7 +433,6 @@
 
     move-result v3
 
-    .line 604
     .local v3, "key":I
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
@@ -479,25 +450,20 @@
 
     move-result v2
 
-    .line 605
     .local v2, "isFinish":Z
     if-nez v2, :cond_3
 
-    .line 606
     const/4 v0, 0x0
 
-    .line 610
     .end local v2    # "isFinish":Z
     .end local v3    # "key":I
     :cond_2
     if-eqz v0, :cond_0
 
-    .line 611
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 612
     .local v4, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
@@ -511,14 +477,12 @@
 
     invoke-interface {v4, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 613
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mGestureCallback:Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
     iget-object v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStartAppPackageName:Ljava/lang/String;
 
     invoke-interface {v6, v4, v7}, Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;->onTextureUploaded(Ljava/util/List;Ljava/lang/String;)V
 
-    .line 614
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mhasCallback:Ljava/util/HashMap;
 
     iget v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
@@ -537,7 +501,6 @@
 
     goto :goto_0
 
-    .line 602
     .end local v4    # "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .restart local v2    # "isFinish":Z
     .restart local v3    # "key":I
@@ -558,20 +521,16 @@
 
     const/4 v7, 0x0
 
-    .line 453
     const/4 v4, 0x0
 
-    .line 454
     .local v4, "upPackageName":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 455
     .local v1, "downPackageName":Ljava/lang/String;
     if-eqz p1, :cond_4
 
     move v3, v5
 
-    .line 456
     .local v3, "upOrDown":I
     :goto_0
     iget-object v8, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
@@ -584,11 +543,9 @@
 
     move-result-object v0
 
-    .line 457
     .local v0, "currentAppName":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 458
     .local v2, "nextAppName":Ljava/lang/String;
     iget-object v8, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
@@ -598,7 +555,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 459
     iget-object v8, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v8, v7, v5}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getNextStartComponentName(II)Landroid/content/ComponentName;
@@ -609,7 +565,6 @@
 
     move-result-object v4
 
-    .line 461
     :cond_0
     iget-object v5, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
@@ -619,7 +574,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 462
     iget-object v5, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v5, v7, v6}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getNextStartComponentName(II)Landroid/content/ComponentName;
@@ -630,7 +584,6 @@
 
     move-result-object v1
 
-    .line 464
     :cond_1
     iget-object v5, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
@@ -640,7 +593,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 465
     iget-object v5, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v5, v7, v3}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getNextStartComponentName(II)Landroid/content/ComponentName;
@@ -651,7 +603,6 @@
 
     move-result-object v2
 
-    .line 467
     :cond_2
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -683,7 +634,6 @@
     :cond_4
     move v3, v6
 
-    .line 455
     goto :goto_0
 
     .restart local v0    # "currentAppName":Ljava/lang/String;
@@ -692,7 +642,6 @@
     :cond_5
     move v5, v7
 
-    .line 467
     goto :goto_1
 .end method
 
@@ -703,12 +652,10 @@
     .param p3, "funcs"    # I
 
     .prologue
-    .line 494
     if-eqz p2, :cond_2
 
     const-string v1, "wallpaper_up"
 
-    .line 495
     .local v1, "packageName":Ljava/lang/String;
     :goto_0
     const/16 v2, 0x2711
@@ -717,10 +664,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 496
     const-string v1, "wallpaperstart"
 
-    .line 498
     :cond_0
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mTextureManagement:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;
 
@@ -732,7 +677,6 @@
 
     move-result v0
 
-    .line 499
     .local v0, "hasBitmap":Z
     const-string v2, "FitAnim"
 
@@ -756,7 +700,6 @@
 
     invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 500
     const-string v2, "Timer"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -807,10 +750,8 @@
 
     invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 501
     if-nez v0, :cond_3
 
-    .line 502
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v2}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->isWallpaperLoaderRun()Z
@@ -819,12 +760,10 @@
 
     if-nez v2, :cond_1
 
-    .line 503
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v2, v1, p1, p2, p3}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->loadBlurWallpaperInBackgroud(Ljava/lang/String;ZZI)V
 
-    .line 505
     :cond_1
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
@@ -844,7 +783,6 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 509
     :goto_1
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
@@ -858,10 +796,8 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 510
     return-void
 
-    .line 494
     .end local v0    # "hasBitmap":Z
     .end local v1    # "packageName":Ljava/lang/String;
     :cond_2
@@ -869,7 +805,6 @@
 
     goto/16 :goto_0
 
-    .line 507
     .restart local v0    # "hasBitmap":Z
     .restart local v1    # "packageName":Ljava/lang/String;
     :cond_3
@@ -903,7 +838,6 @@
 
     const/4 v7, 0x0
 
-    .line 409
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v4}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getRecentTaskList()Ljava/util/List;
@@ -912,7 +846,6 @@
 
     iput-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mRecentAppSwitchList:Ljava/util/List;
 
-    .line 410
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v4, p1}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getNextAppIndex(Z)I
@@ -921,20 +854,17 @@
 
     iput v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mNextIndex:I
 
-    .line 411
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v4, v7}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getSingleSlideFuns(I)I
 
     move-result v1
 
-    .line 413
     .local v1, "funs":I
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 414
     .local v3, "tempAppSwitchList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
@@ -944,38 +874,31 @@
 
     iput v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mNextIndex:I
 
-    .line 415
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v4}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getCurrentAppIndex()I
 
     move-result v0
 
-    .line 416
     .local v0, "currentIndex":I
     const/4 v4, -0x1
 
     if-ne v0, v4, :cond_3
 
-    .line 417
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mRecentAppSwitchList:Ljava/util/List;
 
     invoke-interface {v3, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 418
     if-nez p1, :cond_0
 
-    .line 419
     invoke-static {v3}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
-    .line 434
     :cond_0
     :goto_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 435
     .local v2, "subList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -983,12 +906,10 @@
 
     if-le v4, v8, :cond_6
 
-    .line 436
     invoke-interface {v3, v7, v8}, Ljava/util/List;->subList(II)Ljava/util/List;
 
     move-result-object v2
 
-    .line 440
     :goto_1
     const-string v4, "FitAnim"
 
@@ -1050,15 +971,12 @@
 
     invoke-static {v4, v5}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 441
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v4, v2}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->loadThumbnailsInBackgroud(Ljava/util/List;)V
 
-    .line 442
     invoke-direct {p0, v2}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->updateHashCodeList(Ljava/util/List;)V
 
-    .line 443
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v4
@@ -1086,17 +1004,14 @@
 
     if-eqz v4, :cond_7
 
-    .line 445
     :cond_2
     const/4 v4, 0x1
 
     invoke-direct {p0, v4, p1, v1}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadBlurWallpaper(ZZI)V
 
-    .line 450
     :goto_2
     return-void
 
-    .line 422
     .end local v2    # "subList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     :cond_3
     add-int/lit8 v4, v0, 0x1
@@ -1109,7 +1024,6 @@
 
     if-ge v4, v5, :cond_4
 
-    .line 423
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mRecentAppSwitchList:Ljava/util/List;
 
     add-int/lit8 v5, v0, 0x1
@@ -1126,11 +1040,9 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 425
     :cond_4
     if-lez v0, :cond_5
 
-    .line 426
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mRecentAppSwitchList:Ljava/util/List;
 
     invoke-interface {v4, v7, v0}, Ljava/util/List;->subList(II)Ljava/util/List;
@@ -1139,23 +1051,19 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 429
     :cond_5
     if-eqz p1, :cond_0
 
-    .line 430
     invoke-static {v3}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
     goto/16 :goto_0
 
-    .line 438
     .restart local v2    # "subList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     :cond_6
     invoke-interface {v2, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     goto/16 :goto_1
 
-    .line 447
     :cond_7
     invoke-direct {p0, v7, p1, v1}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadBlurWallpaper(ZZI)V
 
@@ -1166,10 +1074,8 @@
     .locals 6
 
     .prologue
-    .line 208
     const-string v0, "currentscreen"
 
-    .line 209
     .local v0, "currentAppName":Ljava/lang/String;
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
@@ -1183,7 +1089,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 210
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mTextureManagement:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -1194,7 +1099,6 @@
 
     move-result v1
 
-    .line 211
     .local v1, "hasBitmap":Z
     const-string v2, "Timer"
 
@@ -1246,15 +1150,12 @@
 
     invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     if-nez v1, :cond_0
 
-    .line 213
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v2, p0}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getCurrentScreenBitmap(Lcn/nubia/server/policy/edge/effects/resloader/TakeCurrentScreenCallback;)V
 
-    .line 214
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -1273,11 +1174,9 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 219
     :goto_0
     return-void
 
-    .line 216
     :cond_0
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
@@ -1308,25 +1207,20 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 306
     iget-object v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v7}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->isSingleGestureOpen()Z
 
     move-result v3
 
-    .line 307
     .local v3, "isSingleSlideOpen":Z
     if-nez v3, :cond_0
 
-    .line 308
     const-string v6, "invalide_up_package"
 
-    .line 309
     .local v6, "upPackageName":Ljava/lang/String;
     const-string v0, "invalide_down_package"
 
-    .line 310
     .local v0, "downPackageName":Ljava/lang/String;
     iget-object v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
@@ -1340,7 +1234,6 @@
 
     invoke-interface {v7, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 311
     iget-object v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -1353,7 +1246,6 @@
 
     invoke-interface {v7, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 312
     iget-object v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
@@ -1370,7 +1262,6 @@
 
     invoke-virtual {v7, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 313
     iget-object v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -1387,11 +1278,9 @@
 
     invoke-virtual {v7, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 344
     :goto_0
     return-void
 
-    .line 316
     .end local v0    # "downPackageName":Ljava/lang/String;
     .end local v6    # "upPackageName":Ljava/lang/String;
     :cond_0
@@ -1407,7 +1296,6 @@
 
     move-result-object v6
 
-    .line 317
     .restart local v6    # "upPackageName":Ljava/lang/String;
     iget-object v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
@@ -1421,19 +1309,16 @@
 
     move-result-object v0
 
-    .line 318
     .restart local v0    # "downPackageName":Ljava/lang/String;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 319
     .local v4, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 320
     .local v1, "hashList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     iget v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenHight:I
 
@@ -1445,18 +1330,14 @@
 
     if-gez v7, :cond_2
 
-    .line 321
     const-string v6, "invalide_up_package"
 
-    .line 325
     :cond_1
     :goto_1
     invoke-interface {v4, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 326
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 327
     const-string v7, "invalide_up_package"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1465,7 +1346,6 @@
 
     if-nez v7, :cond_3
 
-    .line 328
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1490,7 +1370,6 @@
 
     move-result-object v5
 
-    .line 329
     .local v5, "swichPackageName":Ljava/lang/String;
     invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
 
@@ -1502,7 +1381,6 @@
 
     invoke-interface {v1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 333
     .end local v5    # "swichPackageName":Ljava/lang/String;
     :goto_2
     const-string v7, "invalide_down_package"
@@ -1513,7 +1391,6 @@
 
     if-nez v7, :cond_4
 
-    .line 334
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1538,7 +1415,6 @@
 
     move-result-object v5
 
-    .line 335
     .restart local v5    # "swichPackageName":Ljava/lang/String;
     invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
 
@@ -1550,7 +1426,6 @@
 
     invoke-interface {v1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 339
     .end local v5    # "swichPackageName":Ljava/lang/String;
     :goto_3
     const-string v7, "Timer"
@@ -1589,24 +1464,20 @@
 
     invoke-static {v7, v8}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     iget-object v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-interface {v7, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 341
     const/16 v7, 0x4e22
 
     if-ne p1, v7, :cond_5
 
-    .line 342
     .local v2, "isRight":Z
     :goto_4
     iget-object v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v7, v4, v1, v2}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->notifyLoadGuideIcon(Ljava/util/List;Ljava/util/List;Z)V
 
-    .line 343
     const-string v7, "FitAnim"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1641,7 +1512,6 @@
 
     goto/16 :goto_0
 
-    .line 322
     .end local v2    # "isRight":Z
     :cond_2
     iget v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenHight:I
@@ -1656,12 +1526,10 @@
 
     if-lez v7, :cond_1
 
-    .line 323
     const-string v0, "invalide_down_package"
 
     goto/16 :goto_1
 
-    .line 331
     :cond_3
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
 
@@ -1675,7 +1543,6 @@
 
     goto/16 :goto_2
 
-    .line 337
     :cond_4
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -1689,7 +1556,6 @@
 
     goto :goto_3
 
-    .line 341
     :cond_5
     const/4 v2, 0x0
 
@@ -1702,25 +1568,20 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 348
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v9}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->isSingleGestureOpen()Z
 
     move-result v4
 
-    .line 349
     .local v4, "isSingleSlideOpen":Z
     if-nez v4, :cond_0
 
-    .line 350
     const-string v8, "invalide_up_package"
 
-    .line 351
     .local v8, "upPackageName":Ljava/lang/String;
     const-string v1, "invalide_down_package"
 
-    .line 352
     .local v1, "downPackageName":Ljava/lang/String;
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
@@ -1734,7 +1595,6 @@
 
     invoke-interface {v9, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 353
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -1747,7 +1607,6 @@
 
     invoke-interface {v9, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 354
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v8}, Ljava/lang/String;->hashCode()I
@@ -1766,7 +1625,6 @@
 
     invoke-virtual {v9, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 355
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -1785,11 +1643,9 @@
 
     invoke-virtual {v9, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 389
     :goto_0
     return-void
 
-    .line 358
     .end local v1    # "downPackageName":Ljava/lang/String;
     .end local v8    # "upPackageName":Ljava/lang/String;
     :cond_0
@@ -1797,13 +1653,11 @@
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 359
     .local v5, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 360
     .local v2, "hashList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
@@ -1813,7 +1667,6 @@
 
     iput-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mRecentAppSwitchList:Ljava/util/List;
 
-    .line 361
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     const/4 v10, 0x1
@@ -1822,7 +1675,6 @@
 
     move-result v7
 
-    .line 362
     .local v7, "upIndex":I
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
@@ -1832,7 +1684,6 @@
 
     move-result v0
 
-    .line 363
     .local v0, "downIndex":I
     const/4 v9, 0x1
 
@@ -1840,7 +1691,6 @@
 
     move-result-object v8
 
-    .line 364
     .restart local v8    # "upPackageName":Ljava/lang/String;
     const/4 v9, 0x0
 
@@ -1848,7 +1698,6 @@
 
     move-result-object v1
 
-    .line 365
     .restart local v1    # "downPackageName":Ljava/lang/String;
     iget v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenHight:I
 
@@ -1860,18 +1709,14 @@
 
     if-gez v9, :cond_2
 
-    .line 366
     const-string v8, "invalide_up_package"
 
-    .line 370
     :cond_1
     :goto_1
     invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 371
     invoke-interface {v5, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 372
     const-string v9, "invalide_up_package"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1880,7 +1725,6 @@
 
     if-nez v9, :cond_3
 
-    .line 373
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1905,7 +1749,6 @@
 
     move-result-object v6
 
-    .line 374
     .local v6, "swichPackageName":Ljava/lang/String;
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
 
@@ -1917,7 +1760,6 @@
 
     invoke-interface {v2, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 378
     .end local v6    # "swichPackageName":Ljava/lang/String;
     :goto_2
     const-string v9, "invalide_down_package"
@@ -1928,7 +1770,6 @@
 
     if-nez v9, :cond_4
 
-    .line 379
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1953,7 +1794,6 @@
 
     move-result-object v6
 
-    .line 380
     .restart local v6    # "swichPackageName":Ljava/lang/String;
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
 
@@ -1965,7 +1805,6 @@
 
     invoke-interface {v2, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 384
     .end local v6    # "swichPackageName":Ljava/lang/String;
     :goto_3
     const-string v9, "Timer"
@@ -2004,26 +1843,22 @@
 
     invoke-static {v9, v10}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-interface {v9, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 386
     const/16 v9, 0x4e22
 
     if-ne p1, v9, :cond_5
 
     const/4 v3, 0x1
 
-    .line 387
     .local v3, "isRight":Z
     :goto_4
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v9, v5, v2, v3}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->notifyLoadGuideIcon(Ljava/util/List;Ljava/util/List;Z)V
 
-    .line 388
     const-string v9, "FitAnim"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2058,7 +1893,6 @@
 
     goto/16 :goto_0
 
-    .line 367
     .end local v3    # "isRight":Z
     :cond_2
     iget v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenHight:I
@@ -2073,12 +1907,10 @@
 
     if-lez v9, :cond_1
 
-    .line 368
     const-string v1, "invalide_down_package"
 
     goto/16 :goto_1
 
-    .line 376
     :cond_3
     invoke-virtual {v8}, Ljava/lang/String;->hashCode()I
 
@@ -2092,7 +1924,6 @@
 
     goto/16 :goto_2
 
-    .line 382
     :cond_4
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
@@ -2106,7 +1937,6 @@
 
     goto :goto_3
 
-    .line 386
     :cond_5
     const/4 v3, 0x0
 
@@ -2119,21 +1949,17 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 473
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v3}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->isInnerGestureOpen()Z
 
     move-result v1
 
-    .line 474
     .local v1, "isInnerOpen":Z
     if-nez v1, :cond_0
 
-    .line 475
     const-string v2, "invalide_split_package"
 
-    .line 476
     .local v2, "packageName":Ljava/lang/String;
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
@@ -2147,7 +1973,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 477
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -2164,16 +1989,13 @@
 
     invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 491
     :goto_0
     return-void
 
-    .line 480
     .end local v2    # "packageName":Ljava/lang/String;
     :cond_0
     const-string v2, "valide_split_package"
 
-    .line 481
     .restart local v2    # "packageName":Ljava/lang/String;
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mTextureManagement:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;
 
@@ -2185,11 +2007,9 @@
 
     move-result v0
 
-    .line 482
     .local v0, "hasBitmap":Z
     if-nez v0, :cond_2
 
-    .line 483
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v3}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->isSplitWallpaperLoaderRun()Z
@@ -2198,12 +2018,10 @@
 
     if-nez v3, :cond_1
 
-    .line 484
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v3, v2}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->loadSplitWallpaperInBackgroud(Ljava/lang/String;)V
 
-    .line 486
     :cond_1
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
@@ -2223,7 +2041,6 @@
 
     invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 490
     :goto_1
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
@@ -2239,7 +2056,6 @@
 
     goto :goto_0
 
-    .line 488
     :cond_2
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
@@ -2270,7 +2086,6 @@
 
     const/4 v8, 0x0
 
-    .line 223
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v9, p1, p2}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getNextStartComponentName(II)Landroid/content/ComponentName;
@@ -2281,7 +2096,6 @@
 
     move-result-object v6
 
-    .line 224
     .local v6, "packageName":Ljava/lang/String;
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
@@ -2293,13 +2107,11 @@
 
     move-result-object v0
 
-    .line 225
     .local v0, "currentAppName":Ljava/lang/String;
     invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    .line 226
     .local v1, "flag":Z
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
@@ -2307,22 +2119,18 @@
 
     move-result v4
 
-    .line 228
     .local v4, "isSingleSlideOpen":Z
     if-nez v1, :cond_0
 
     if-nez v4, :cond_2
 
-    .line 229
     :cond_0
     const-string v9, "wallpaperstart"
 
     iput-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStartAppPackageName:Ljava/lang/String;
 
-    .line 230
     iget-object v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStartAppPackageName:Ljava/lang/String;
 
-    .line 236
     .local v7, "switchName":Ljava/lang/String;
     :goto_0
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
@@ -2337,7 +2145,6 @@
 
     invoke-interface {v9, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 237
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mTextureManagement:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;
 
     invoke-virtual {v7}, Ljava/lang/String;->hashCode()I
@@ -2348,7 +2155,6 @@
 
     move-result v2
 
-    .line 238
     .local v2, "hasBitmap":Z
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -2382,15 +2188,12 @@
 
     invoke-static {v9}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;)I
 
-    .line 239
     if-nez v2, :cond_6
 
-    .line 240
     if-nez v1, :cond_1
 
     if-nez v4, :cond_5
 
-    .line 241
     :cond_1
     const/16 v9, 0x4e23
 
@@ -2398,12 +2201,10 @@
 
     move v5, v3
 
-    .line 242
     .local v5, "isUP":Z
     :goto_1
     if-eqz v4, :cond_4
 
-    .line 243
     .local v3, "hasTip":Z
     :goto_2
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
@@ -2412,7 +2213,6 @@
 
     invoke-virtual {v9, v7, v3, v5, v10}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->loadBlurWallpaperInBackgroud(Ljava/lang/String;ZZI)V
 
-    .line 247
     .end local v3    # "hasTip":Z
     .end local v5    # "isUP":Z
     :goto_3
@@ -2432,17 +2232,14 @@
 
     invoke-virtual {v9, v10, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 251
     :goto_4
     return-void
 
-    .line 232
     .end local v2    # "hasBitmap":Z
     .end local v7    # "switchName":Ljava/lang/String;
     :cond_2
     iput-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStartAppPackageName:Ljava/lang/String;
 
-    .line 233
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -2468,17 +2265,14 @@
     :cond_3
     move v5, v8
 
-    .line 241
     goto :goto_1
 
     .restart local v5    # "isUP":Z
     :cond_4
     move v3, v8
 
-    .line 242
     goto :goto_2
 
-    .line 245
     .end local v5    # "isUP":Z
     :cond_5
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
@@ -2487,7 +2281,6 @@
 
     goto :goto_3
 
-    .line 249
     :cond_6
     iget-object v8, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
@@ -2519,7 +2312,6 @@
 
     const/4 v8, 0x0
 
-    .line 254
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v6}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getRecentTaskList()Ljava/util/List;
@@ -2528,14 +2320,12 @@
 
     iput-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mRecentAppSwitchList:Ljava/util/List;
 
-    .line 255
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v6}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->isSingleGestureOpen()Z
 
     move-result v2
 
-    .line 256
     .local v2, "isSingleSlideOpen":Z
     const/16 v6, 0x4e23
 
@@ -2543,7 +2333,6 @@
 
     move v3, v7
 
-    .line 257
     .local v3, "isUp":Z
     :goto_0
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
@@ -2554,10 +2343,8 @@
 
     iput v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mNextIndex:I
 
-    .line 258
     const/4 v4, 0x0
 
-    .line 259
     .local v4, "packageName":Ljava/lang/String;
     iget v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mNextIndex:I
 
@@ -2565,17 +2352,14 @@
 
     if-nez v2, :cond_3
 
-    .line 260
     :cond_0
     if-eqz v3, :cond_2
 
     const-string v4, "wallpaper_up"
 
-    .line 270
     :goto_1
     iput-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStartAppPackageName:Ljava/lang/String;
 
-    .line 271
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
@@ -2588,7 +2372,6 @@
 
     invoke-interface {v6, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 272
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mTextureManagement:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;
 
     invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
@@ -2599,7 +2382,6 @@
 
     move-result v0
 
-    .line 273
     .local v0, "hasBitmap":Z
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -2633,7 +2415,6 @@
 
     invoke-static {v6}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;)I
 
-    .line 274
     const-string v6, "Timer"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2684,22 +2465,18 @@
 
     invoke-static {v6, v9}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     if-nez v0, :cond_7
 
-    .line 276
     iget v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mNextIndex:I
 
     if-eq v6, v12, :cond_5
 
     if-eqz v2, :cond_5
 
-    .line 277
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 278
     .local v5, "tempAppSwitchList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mRecentAppSwitchList:Ljava/util/List;
 
@@ -2711,12 +2488,10 @@
 
     invoke-interface {v5, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 279
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v6, v5}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->loadThumbnailsInBackgroud(Ljava/util/List;)V
 
-    .line 284
     .end local v5    # "tempAppSwitchList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     :goto_2
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
@@ -2735,7 +2510,6 @@
 
     invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 289
     :goto_3
     return-void
 
@@ -2745,10 +2519,8 @@
     :cond_1
     move v3, v8
 
-    .line 256
     goto/16 :goto_0
 
-    .line 260
     .restart local v3    # "isUp":Z
     .restart local v4    # "packageName":Ljava/lang/String;
     :cond_2
@@ -2756,7 +2528,6 @@
 
     goto/16 :goto_1
 
-    .line 262
     :cond_3
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -2808,7 +2579,6 @@
 
     invoke-static {v6}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;)I
 
-    .line 264
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mRecentAppSwitchList:Ljava/util/List;
 
     iget v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mNextIndex:I
@@ -2823,7 +2593,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 265
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mRecentAppSwitchList:Ljava/util/List;
 
     iget v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mNextIndex:I
@@ -2842,7 +2611,6 @@
 
     goto/16 :goto_1
 
-    .line 267
     :cond_4
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mRecentAppSwitchList:Ljava/util/List;
 
@@ -2866,14 +2634,12 @@
 
     goto/16 :goto_1
 
-    .line 281
     .restart local v0    # "hasBitmap":Z
     :cond_5
     if-eqz v2, :cond_6
 
     move v1, v7
 
-    .line 282
     .local v1, "hasTip":Z
     :goto_4
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
@@ -2888,10 +2654,8 @@
     :cond_6
     move v1, v8
 
-    .line 281
     goto :goto_4
 
-    .line 286
     :cond_7
     iget-object v6, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
@@ -2919,43 +2683,34 @@
     .param p3, "callback"    # Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
     .prologue
-    .line 112
     const-string v0, "FitAnim"
 
     const-string v1, "prepareSingleSlideStartTexture()"
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     const/4 v0, 0x2
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mCallbackNum:I
 
-    .line 114
     iput-object p3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mGestureCallback:Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
-    .line 115
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 116
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 117
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStartAppPackageName:Ljava/lang/String;
 
-    .line 118
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadCurrentScreen()V
 
-    .line 119
     invoke-direct {p0, p1, p2}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadNextStartScreen(II)V
 
-    .line 120
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -2966,10 +2721,8 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
-    .line 121
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->judgeCallbackHasMeet()V
 
-    .line 123
     return-void
 .end method
 
@@ -2981,41 +2734,32 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 95
     const-string v0, "FitAnim"
 
     const-string v1, "prepareSingleSlideSwitchTexture()"
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     iput v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mCallbackNum:I
 
-    .line 97
     iput-object p2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mGestureCallback:Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
-    .line 98
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 99
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 100
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStartAppPackageName:Ljava/lang/String;
 
-    .line 101
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadCurrentScreen()V
 
-    .line 102
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadNextSwitchScreen(I)V
 
-    .line 103
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -3026,7 +2770,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
-    .line 104
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -3035,7 +2778,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 105
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "TaskBitmapManager prepareSingleSlideSwitchTexture mhashcode error!"
@@ -3044,11 +2786,9 @@
 
     throw v0
 
-    .line 108
     :cond_0
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->judgeCallbackHasMeet()V
 
-    .line 109
     return-void
 .end method
 
@@ -3070,19 +2810,16 @@
     .end annotation
 
     .prologue
-    .line 527
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
-    .line 528
     .local v3, "set":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 529
     .local v2, "newList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const-string v5, "wallpaper"
 
@@ -3090,7 +2827,6 @@
 
     move-result v4
 
-    .line 530
     .local v4, "wallpaperHashCode":I
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3105,7 +2841,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 531
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
@@ -3116,11 +2851,9 @@
 
     move-result v0
 
-    .line 532
     .local v0, "element":I
     if-eqz p2, :cond_2
 
-    .line 533
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -3137,7 +2870,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 534
     :cond_1
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -3147,7 +2879,6 @@
 
     goto :goto_0
 
-    .line 537
     :cond_2
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -3173,7 +2904,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 538
     :cond_3
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -3183,7 +2913,6 @@
 
     goto :goto_0
 
-    .line 543
     .end local v0    # "element":I
     :cond_4
     const-string v5, "FitAnim"
@@ -3208,7 +2937,6 @@
 
     invoke-static {v5, v6}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 544
     return-object v2
 .end method
 
@@ -3225,7 +2953,6 @@
     .end annotation
 
     .prologue
-    .line 514
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     const/4 v0, 0x0
 
@@ -3237,10 +2964,8 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 515
     const/4 v1, 0x0
 
-    .line 516
     .local v1, "packageName":Ljava/lang/String;
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3252,7 +2977,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 517
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -3265,7 +2989,6 @@
 
     move-result-object v1
 
-    .line 521
     :goto_1
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
@@ -3279,7 +3002,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 522
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -3298,12 +3020,10 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 514
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 519
     :cond_0
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3323,7 +3043,6 @@
 
     goto :goto_1
 
-    .line 524
     .end local v1    # "packageName":Ljava/lang/String;
     :cond_1
     return-void
@@ -3342,19 +3061,16 @@
     .end annotation
 
     .prologue
-    .line 554
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
-    .line 555
     .local v3, "set":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 556
     .local v2, "newList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3369,7 +3085,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 557
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
@@ -3380,7 +3095,6 @@
 
     move-result v0
 
-    .line 558
     .local v0, "element":I
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -3392,7 +3106,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 559
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -3401,7 +3114,6 @@
 
     goto :goto_0
 
-    .line 562
     .end local v0    # "element":I
     :cond_1
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -3417,27 +3129,22 @@
     .locals 1
 
     .prologue
-    .line 619
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 620
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 621
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mhasCallback:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 622
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->clearAsyncTask()V
 
-    .line 623
     return-void
 .end method
 
@@ -3447,7 +3154,6 @@
     .param p2, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 586
     const-string v0, "Timer"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3484,12 +3190,10 @@
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 587
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mTextureManagement:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;
 
     invoke-virtual {v0, p1, p2}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;->addItem(ILandroid/graphics/Bitmap;)V
 
-    .line 588
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3504,7 +3208,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 589
     const-string v0, "FitAnim"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3527,10 +3230,8 @@
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 590
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->judgeCallbackHasMeet()V
 
-    .line 591
     return-void
 .end method
 
@@ -3539,7 +3240,6 @@
     .param p1, "y"    # F
 
     .prologue
-    .line 295
     iget v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenHight:I
 
     div-int/lit8 v1, v1, 0x2
@@ -3550,15 +3250,12 @@
 
     if-lez v1, :cond_0
 
-    .line 296
     const/16 v0, 0x4e23
 
-    .line 300
     .local v0, "upOrDown":I
     :goto_0
     return v0
 
-    .line 298
     .end local v0    # "upOrDown":I
     :cond_0
     const/16 v0, 0x4e24
@@ -3572,7 +3269,6 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 568
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHander:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mSafeGuarder:Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;
@@ -3587,7 +3283,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 581
     return-void
 .end method
 
@@ -3600,59 +3295,47 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 175
     const-string v3, "FitAnim"
 
     const-string v4, "prepareGuideSlideStartTexture"
 
     invoke-static {v3, v4}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     iput-object p3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mGestureCallback:Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
-    .line 177
     const/4 v3, 0x5
 
     iput v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mCallbackNum:I
 
-    .line 178
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->clear()V
 
-    .line 179
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->clear()V
 
-    .line 180
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadCurrentScreen()V
 
-    .line 181
     invoke-virtual {p0, p2}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->judgeUpOrDown(F)I
 
     move-result v1
 
-    .line 182
     .local v1, "upOrDown":I
     invoke-direct {p0, p1, v1}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadNextStartScreen(II)V
 
-    .line 183
     const/16 v3, 0x4e23
 
     if-ne v1, v3, :cond_0
 
     move v0, v2
 
-    .line 184
     .local v0, "isUp":Z
     :goto_0
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadInnerSplitWallpaper()V
 
-    .line 185
     invoke-direct {p0, p1, p2}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadGuideStartIcon(IF)V
 
-    .line 186
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-direct {p0, v3, v2}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->removeDuplicate(Ljava/util/List;Z)Ljava/util/List;
@@ -3661,10 +3344,8 @@
 
     iput-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
-    .line 188
     return-void
 
-    .line 183
     .end local v0    # "isUp":Z
     :cond_0
     const/4 v0, 0x0
@@ -3681,59 +3362,47 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 191
     const-string v3, "FitAnim"
 
     const-string v4, "prepareGuideSlideSwitchTexture"
 
     invoke-static {v3, v4}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     iput-object p3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mGestureCallback:Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
-    .line 193
     const/4 v3, 0x5
 
     iput v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mCallbackNum:I
 
-    .line 194
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->clear()V
 
-    .line 195
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->clear()V
 
-    .line 196
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadCurrentScreen()V
 
-    .line 197
     invoke-virtual {p0, p2}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->judgeUpOrDown(F)I
 
     move-result v1
 
-    .line 198
     .local v1, "upOrDown":I
     invoke-direct {p0, v1}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadNextSwitchScreen(I)V
 
-    .line 199
     const/16 v3, 0x4e23
 
     if-ne v1, v3, :cond_0
 
     move v0, v2
 
-    .line 200
     .local v0, "isUp":Z
     :goto_0
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadInnerSplitWallpaper()V
 
-    .line 201
     invoke-direct {p0, p1, p2}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadGuideSwitchIcon(IF)V
 
-    .line 202
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-direct {p0, v3, v2}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->removeDuplicate(Ljava/util/List;Z)Ljava/util/List;
@@ -3742,10 +3411,8 @@
 
     iput-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
-    .line 204
     return-void
 
-    .line 199
     .end local v0    # "isUp":Z
     :cond_0
     const/4 v0, 0x0
@@ -3760,12 +3427,10 @@
     .param p3, "callback"    # Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
     .prologue
-    .line 159
     const/4 v1, 0x4
 
     iput v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
 
-    .line 160
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mhasCallback:Ljava/util/HashMap;
 
     iget v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
@@ -3782,27 +3447,22 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 161
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v1, p1}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getSingleSlideFuns(I)I
 
     move-result v0
 
-    .line 162
     .local v0, "fuctions":I
     const/16 v1, 0x2711
 
     if-ne v0, v1, :cond_0
 
-    .line 163
     invoke-virtual {p0, p1, p2, p3}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->prepareGuideSlideStartTexture(IFLcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;)V
 
-    .line 167
     :goto_0
     return-void
 
-    .line 165
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->prepareGuideSlideSwitchTexture(IFLcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;)V
 
@@ -3819,17 +3479,14 @@
 
     const/4 v1, 0x0
 
-    .line 137
     const-string v2, "FitAnim"
 
     const-string v3, "prepareSingleMultiSlideTexture"
 
     invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     iput v5, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
 
-    .line 139
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mhasCallback:Ljava/util/HashMap;
 
     iget v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
@@ -3844,31 +3501,24 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 140
     iput v5, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mCallbackNum:I
 
-    .line 141
     iput-object p2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mGestureCallback:Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
-    .line 142
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->judgeCallbackHasMeet()V
 
-    .line 143
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadCurrentScreen()V
 
-    .line 144
     const/16 v2, 0x4e23
 
     if-ne p1, v2, :cond_0
 
     const/4 v0, 0x1
 
-    .line 145
     .local v0, "isUp":Z
     :goto_0
     invoke-direct {p0, v0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->loadClearScreen(Z)V
 
-    .line 146
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-direct {p0, v2, v1}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->removeDuplicate(Ljava/util/List;Z)Ljava/util/List;
@@ -3877,14 +3527,12 @@
 
     iput-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
-    .line 148
     return-void
 
     .end local v0    # "isUp":Z
     :cond_0
     move v0, v1
 
-    .line 144
     goto :goto_0
 .end method
 
@@ -3897,18 +3545,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 82
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     invoke-interface {v1, p1}, Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;->getSingleSlideFuns(I)I
 
     move-result v0
 
-    .line 83
     .local v0, "fuctions":I
     iput v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
 
-    .line 84
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mhasCallback:Ljava/util/HashMap;
 
     iget v2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
@@ -3923,24 +3568,19 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v1}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->canclePreGuideLoaderRun()V
 
-    .line 86
     const/16 v1, 0x2711
 
     if-ne v0, v1, :cond_0
 
-    .line 87
     invoke-direct {p0, p1, p2, p3}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->prepareSingleSlideStartTexture(IILcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;)V
 
-    .line 92
     :goto_0
     return-void
 
-    .line 89
     :cond_0
     invoke-direct {p0, p2, p3}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->prepareSingleSlideSwitchTexture(ILcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;)V
 
@@ -3952,15 +3592,12 @@
     .param p1, "safeGuarder"    # Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;
 
     .prologue
-    .line 73
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mSafeGuarder:Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;
 
-    .line 74
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->setmSafeGuarder(Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;)V
 
-    .line 75
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mSafeGuarder:Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;
 
     new-instance v1, Landroid/os/Handler;
@@ -3973,14 +3610,12 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHander:Landroid/os/Handler;
 
-    .line 76
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHander:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->setHandler(Landroid/os/Handler;)V
 
-    .line 78
     return-void
 .end method
 
@@ -3989,10 +3624,8 @@
     .param p1, "service"    # Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
     .prologue
-    .line 69
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mService:Lcn/nubia/server/policy/edge/effectsutil/SystemGestureService;
 
-    .line 70
     return-void
 .end method
 
@@ -4001,10 +3634,8 @@
     .param p1, "tm"    # Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;
 
     .prologue
-    .line 65
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mTextureManagement:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;
 
-    .line 66
     return-void
 .end method
 
@@ -4013,12 +3644,10 @@
     .param p1, "callback"    # Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
     .prologue
-    .line 170
     const/4 v0, 0x5
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
 
-    .line 171
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mhasCallback:Ljava/util/HashMap;
 
     iget v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
@@ -4035,7 +3664,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 172
     return-void
 .end method
 
@@ -4044,12 +3672,10 @@
     .param p1, "callback"    # Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
     .prologue
-    .line 151
     const/4 v0, 0x3
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
 
-    .line 152
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mhasCallback:Ljava/util/HashMap;
 
     iget v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
@@ -4066,10 +3692,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 153
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mGestureCallback:Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
-    .line 154
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mHashCode:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -4078,10 +3702,8 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mCallbackNum:I
 
-    .line 155
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->judgeCallbackHasMeet()V
 
-    .line 156
     return-void
 .end method
 
@@ -4090,12 +3712,10 @@
     .param p1, "callback"    # Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
     .prologue
-    .line 126
     const/4 v0, 0x1
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
 
-    .line 127
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mhasCallback:Ljava/util/HashMap;
 
     iget v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mStatus:I
@@ -4112,17 +3732,13 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mGestureCallback:Lcn/nubia/server/policy/edge/effects/resloader/SingleSlideResCallback;
 
-    .line 129
     const/4 v0, 0x2
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mCallbackNum:I
 
-    .line 130
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->judgeCallbackHasMeet()V
 
-    .line 131
     return-void
 .end method

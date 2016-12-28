@@ -32,12 +32,10 @@
     .locals 2
 
     .prologue
-    .line 21
     iput-object p1, p0, Lcom/android/server/am/SingleUIBlackAppHelper$1;->this$0:Lcom/android/server/am/SingleUIBlackAppHelper;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 23
     # getter for: Lcom/android/server/am/SingleUIBlackAppHelper;->DEFAULT_SU_BLACK_LIST:[Ljava/lang/String;
     invoke-static {}, Lcom/android/server/am/SingleUIBlackAppHelper;->access$000()[Ljava/lang/String;
 
@@ -49,6 +47,5 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/am/SingleUIBlackAppHelper$1;->add(Ljava/lang/Object;)Z
 
-    .line 24
     return-void
 .end method

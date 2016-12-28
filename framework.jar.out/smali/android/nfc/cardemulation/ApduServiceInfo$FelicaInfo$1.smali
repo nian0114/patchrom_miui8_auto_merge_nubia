@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1151
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +44,15 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1155
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1156
     .local v0, "felicaID":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1157
     .local v1, "optParam":Ljava/lang/String;
     new-instance v2, Landroid/nfc/cardemulation/ApduServiceInfo$FelicaInfo;
 
@@ -69,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 1151
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/ApduServiceInfo$FelicaInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/cardemulation/ApduServiceInfo$FelicaInfo;
 
     move-result-object v0
@@ -82,7 +77,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1162
     new-array v0, p1, [Landroid/nfc/cardemulation/ApduServiceInfo$FelicaInfo;
 
     return-object v0
@@ -92,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 1151
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/ApduServiceInfo$FelicaInfo$1;->newArray(I)[Landroid/nfc/cardemulation/ApduServiceInfo$FelicaInfo;
 
     move-result-object v0

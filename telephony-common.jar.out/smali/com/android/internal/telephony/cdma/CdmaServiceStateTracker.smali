@@ -11150,14 +11150,12 @@
 
     const/4 v4, 0x0
 
-    .line 593
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->mSS:Landroid/telephony/ServiceState;
 
     invoke-virtual {v0}, Landroid/telephony/ServiceState;->getOperatorAlphaLong()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 594
     .local v3, "plmn":Ljava/lang/String;
     invoke-static {p0}, Lcom/android/internal/telephony/ServiceStateTrackerInjector;->getPlmn(Lcom/android/internal/telephony/ServiceStateTracker;)Ljava/lang/String;
 
@@ -11165,11 +11163,9 @@
 
     const/4 v2, 0x0
 
-    .line 596
     .local v2, "showPlmn":Z
     const/4 v8, -0x1
 
-    .line 597
     .local v8, "subId":I
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
@@ -11299,7 +11295,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 622
     new-instance v7, Landroid/content/Intent;
 
     invoke-static {p0}, Lcom/android/internal/telephony/ServiceStateTrackerInjector;->getSpnUpdateActionName(Lcom/android/internal/telephony/ServiceStateTracker;)Ljava/lang/String;
@@ -11308,7 +11303,6 @@
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 627
     .local v7, "intent":Landroid/content/Intent;
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 

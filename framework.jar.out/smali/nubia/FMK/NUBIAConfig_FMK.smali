@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final NUBIA_J_FMK_THEME:Z = true
+.field public static final NUBIA_J_FMK_THEME:Z = false
 
 .field public static final NUBIA_J_MMS_AND_FMK_AND_PROVIDERS_MANAGE_ICCCARD_MESSAGE:Z = true
 
@@ -17,7 +17,6 @@
     .locals 0
 
     .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

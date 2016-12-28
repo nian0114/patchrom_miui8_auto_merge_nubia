@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 368
     iput-object p1, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/widget/ActionBarContainer$1;
 
     .prologue
-    .line 368
     invoke-direct {p0, p1}, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;-><init>(Lcom/android/internal/widget/ActionBarContainer;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 371
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     # getter for: Lcom/android/internal/widget/ActionBarContainer;->mIsSplit:Z
@@ -60,7 +57,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 372
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     # getter for: Lcom/android/internal/widget/ActionBarContainer;->mSplitBackground:Landroid/graphics/drawable/Drawable;
@@ -70,7 +66,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 373
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     # getter for: Lcom/android/internal/widget/ActionBarContainer;->mSplitBackground:Landroid/graphics/drawable/Drawable;
@@ -80,12 +75,10 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 383
     :cond_0
     :goto_0
     return-void
 
-    .line 376
     :cond_1
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
@@ -96,7 +89,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 377
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     # getter for: Lcom/android/internal/widget/ActionBarContainer;->mBackground:Landroid/graphics/drawable/Drawable;
@@ -106,7 +98,6 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 379
     :cond_2
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
@@ -126,7 +117,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 380
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     # getter for: Lcom/android/internal/widget/ActionBarContainer;->mStackedBackground:Landroid/graphics/drawable/Drawable;
@@ -147,7 +137,6 @@
 
     const/4 v0, -0x1
 
-    .line 409
     iget-object v2, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     # getter for: Lcom/android/internal/widget/ActionBarContainer;->mIsSplit:Z
@@ -157,7 +146,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 410
     iget-object v2, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     # getter for: Lcom/android/internal/widget/ActionBarContainer;->mSplitBackground:Landroid/graphics/drawable/Drawable;
@@ -180,12 +168,10 @@
 
     if-ne v2, v0, :cond_4
 
-    .line 425
     :cond_0
     :goto_0
     return v0
 
-    .line 415
     :cond_1
     iget-object v2, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
@@ -221,10 +207,8 @@
     :cond_2
     move v0, v1
 
-    .line 417
     goto :goto_0
 
-    .line 419
     :cond_3
     iget-object v2, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
@@ -265,7 +249,6 @@
     :cond_4
     move v0, v1
 
-    .line 425
     goto :goto_0
 .end method
 
@@ -274,7 +257,6 @@
     .param p1, "outline"    # Landroid/graphics/Outline;
 
     .prologue
-    .line 387
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     # getter for: Lcom/android/internal/widget/ActionBarContainer;->mIsSplit:Z
@@ -284,7 +266,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 388
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     # getter for: Lcom/android/internal/widget/ActionBarContainer;->mSplitBackground:Landroid/graphics/drawable/Drawable;
@@ -294,7 +275,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 389
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     # getter for: Lcom/android/internal/widget/ActionBarContainer;->mSplitBackground:Landroid/graphics/drawable/Drawable;
@@ -304,12 +284,10 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getOutline(Landroid/graphics/Outline;)V
 
-    .line 397
     :cond_0
     :goto_0
     return-void
 
-    .line 393
     :cond_1
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
@@ -320,7 +298,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 394
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer$ActionBarBackgroundDrawable;->this$0:Lcom/android/internal/widget/ActionBarContainer;
 
     # getter for: Lcom/android/internal/widget/ActionBarContainer;->mBackground:Landroid/graphics/drawable/Drawable;
@@ -338,7 +315,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 401
     return-void
 .end method
 
@@ -347,6 +323,5 @@
     .param p1, "colorFilter"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 405
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1099
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +44,15 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1103
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 1104
     .local v1, "seId":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 1105
     .local v0, "powerState":I
     new-instance v2, Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo;
 
@@ -69,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 1099
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo;
 
     move-result-object v0
@@ -82,7 +77,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1110
     new-array v0, p1, [Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo;
 
     return-object v0
@@ -92,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 1099
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo$1;->newArray(I)[Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo;
 
     move-result-object v0

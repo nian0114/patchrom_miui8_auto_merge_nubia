@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="center_vertical" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall" android:paddingEnd="0.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="?android:listPreferredItemPaddingStart">
-        <TextView android:textAppearance="@android:style/TextAppearance.Material.Subhead" android:textColor="?android:textColorPrimary" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
-        <TextView android:textAppearance="@android:style/TextAppearance.Material.Body1" android:textColor="?android:textColorSecondary" android:id="@id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="10" android:layout_below="@id/title" android:textAlignment="viewStart" android:layout_alignStart="@id/title" />
-    </RelativeLayout>
-    <ImageView style="@style/settings_list_divider" />
-</RelativeLayout>

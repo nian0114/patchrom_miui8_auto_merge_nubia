@@ -13,17 +13,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
     new-instance v0, Lcn/nubia/server/policy/edge/effects/state/LauncherNotifier;
 
     invoke-direct {v0, p1}, Lcn/nubia/server/policy/edge/effects/state/LauncherNotifier;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/state/StateContext;->mLauncherNotifier:Lcn/nubia/server/policy/edge/effects/state/LauncherNotifier;
 
-    .line 10
     return-void
 .end method
 
@@ -33,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 13
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/state/StateContext;->mLauncherNotifier:Lcn/nubia/server/policy/edge/effects/state/LauncherNotifier;
 
     return-object v0

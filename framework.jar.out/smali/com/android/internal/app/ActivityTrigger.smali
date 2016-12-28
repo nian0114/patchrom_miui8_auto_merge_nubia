@@ -16,10 +16,8 @@
     .locals 0
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     return-void
 .end method
 
@@ -44,20 +42,16 @@
     .param p3, "appInfo"    # Landroid/content/pm/ApplicationInfo;
 
     .prologue
-    .line 83
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 84
     .local v1, "cn":Landroid/content/ComponentName;
     const/4 v0, 0x0
 
-    .line 86
     .local v0, "activity":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 87
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,11 +80,9 @@
 
     move-result-object v0
 
-    .line 88
     :cond_0
     invoke-direct {p0, v0}, Lcom/android/internal/app/ActivityTrigger;->native_at_resumeActivity(Ljava/lang/String;)V
 
-    .line 89
     return-void
 .end method
 
@@ -100,10 +92,8 @@
     .param p2, "pid"    # I
 
     .prologue
-    .line 59
     invoke-direct {p0, p1, p2}, Lcom/android/internal/app/ActivityTrigger;->native_at_startProcessActivity(Ljava/lang/String;I)V
 
-    .line 60
     return-void
 .end method
 
@@ -114,24 +104,19 @@
     .param p3, "appInfo"    # Landroid/content/pm/ApplicationInfo;
 
     .prologue
-    .line 64
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 65
     .local v1, "cn":Landroid/content/ComponentName;
     const/4 v2, 0x0
 
-    .line 66
     .local v2, "overrideFlags":I
     const/4 v0, 0x0
 
-    .line 68
     .local v0, "activity":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 69
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,36 +145,30 @@
 
     move-result-object v0
 
-    .line 71
     :cond_0
     invoke-direct {p0, v0, v2}, Lcom/android/internal/app/ActivityTrigger;->native_at_startActivity(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 73
     and-int/lit16 v3, v2, 0x200
 
     if-eqz v3, :cond_1
 
-    .line 74
     iget v3, p2, Landroid/content/pm/ActivityInfo;->flags:I
 
     or-int/lit16 v3, v3, 0x200
 
     iput v3, p2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 76
     :cond_1
     and-int/lit8 v3, v2, 0x1
 
     if-eqz v3, :cond_2
 
-    .line 77
     const/4 v3, 0x1
 
     invoke-virtual {p3, v3}, Landroid/content/pm/ApplicationInfo;->setOverrideRes(I)V
 
-    .line 79
     :cond_2
     return-void
 .end method
@@ -198,9 +177,7 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct {p0}, Lcom/android/internal/app/ActivityTrigger;->native_at_deinit()V
 
-    .line 55
     return-void
 .end method

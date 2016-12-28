@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 804
     iput-object p1, p0, Landroid/widget/RemoteViews$SetOnClickPendingIntentList$1;->this$1:Landroid/widget/RemoteViews$SetOnClickPendingIntentList;
 
     iput-object p2, p0, Landroid/widget/RemoteViews$SetOnClickPendingIntentList$1;->val$handler:Landroid/widget/RemoteViews$OnClickHandler;
@@ -45,7 +44,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 806
     iget-object v4, p0, Landroid/widget/RemoteViews$SetOnClickPendingIntentList$1;->this$1:Landroid/widget/RemoteViews$SetOnClickPendingIntentList;
 
     iget-object v4, v4, Landroid/widget/RemoteViews$SetOnClickPendingIntentList;->pendingIntentList:Ljava/util/ArrayList;
@@ -69,34 +67,28 @@
 
     check-cast v2, Landroid/app/PendingIntent;
 
-    .line 807
     .local v2, "pendingIntent":Landroid/app/PendingIntent;
     if-eqz v2, :cond_0
 
-    .line 808
     # invokes: Landroid/widget/RemoteViews;->getSourceBounds(Landroid/view/View;)Landroid/graphics/Rect;
     invoke-static {p1}, Landroid/widget/RemoteViews;->access$200(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v3
 
-    .line 809
     .local v3, "rect":Landroid/graphics/Rect;
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 810
     .local v1, "intent":Landroid/content/Intent;
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setSourceBounds(Landroid/graphics/Rect;)V
 
-    .line 811
     iget-object v4, p0, Landroid/widget/RemoteViews$SetOnClickPendingIntentList$1;->val$handler:Landroid/widget/RemoteViews$OnClickHandler;
 
     invoke-virtual {v4, p1, v2, v1}, Landroid/widget/RemoteViews$OnClickHandler;->onClickHandler(Landroid/view/View;Landroid/app/PendingIntent;Landroid/content/Intent;)Z
 
     goto :goto_0
 
-    .line 814
     .end local v1    # "intent":Landroid/content/Intent;
     .end local v2    # "pendingIntent":Landroid/app/PendingIntent;
     .end local v3    # "rect":Landroid/graphics/Rect;

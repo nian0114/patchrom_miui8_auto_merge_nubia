@@ -33,13 +33,10 @@
     .param p2, "file"    # Ljava/io/File;
 
     .prologue
-    .line 1037
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
-    .line 1038
     invoke-direct {p0, p2}, Lcn/nubia/server/appmgmt/XmlOperator;-><init>(Ljava/io/File;)V
 
-    .line 1039
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .locals 7
 
     .prologue
-    .line 1109
     new-instance v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
@@ -81,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 1036
     invoke-virtual {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;->createObject()Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
 
     move-result-object v0
@@ -99,12 +94,10 @@
     .end annotation
 
     .prologue
-    .line 1069
     invoke-virtual/range {p0 .. p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;->createObject()Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
 
     move-result-object v25
 
-    .line 1071
     .local v25, "temp":Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
     :cond_0
     :goto_0
@@ -119,7 +112,6 @@
 
     if-eq v0, v3, :cond_3
 
-    .line 1072
     const/4 v3, 0x3
 
     move/from16 v0, v26
@@ -132,12 +124,10 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 1075
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v24
 
-    .line 1076
     .local v24, "tag":Ljava/lang/String;
     const-string v3, "delay_mills"
 
@@ -149,7 +139,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 1077
     const/4 v3, 0x0
 
     const-string v4, "delay_mills"
@@ -160,11 +149,9 @@
 
     move-result-object v15
 
-    .line 1078
     .local v15, "defAttr":Ljava/lang/String;
     if-eqz v15, :cond_1
 
-    .line 1079
     invoke-static {v15}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v4
@@ -174,7 +161,6 @@
     # setter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->defaultDelay:J
     invoke-static {v0, v4, v5}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->access$202(Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;J)J
 
-    .line 1081
     :cond_1
     const/4 v3, 0x0
 
@@ -186,11 +172,9 @@
 
     move-result-object v22
 
-    .line 1082
     .local v22, "screenDelay":Ljava/lang/String;
     if-eqz v22, :cond_0
 
-    .line 1083
     invoke-static/range {v22 .. v22}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v4
@@ -202,7 +186,6 @@
 
     goto :goto_0
 
-    .line 1085
     .end local v15    # "defAttr":Ljava/lang/String;
     .end local v22    # "screenDelay":Ljava/lang/String;
     :cond_2
@@ -216,7 +199,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1086
     const/4 v3, 0x0
 
     const-string v4, "app"
@@ -227,7 +209,6 @@
 
     move-result-object v17
 
-    .line 1087
     .local v17, "pkg":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -239,7 +220,6 @@
 
     move-result-object v2
 
-    .line 1088
     .local v2, "bMobile":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -251,7 +231,6 @@
 
     move-result-object v14
 
-    .line 1089
     .local v14, "bWifi":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -263,7 +242,6 @@
 
     move-result-object v20
 
-    .line 1090
     .local v20, "sMobile":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -275,7 +253,6 @@
 
     move-result-object v21
 
-    .line 1091
     .local v21, "sWifi":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -287,7 +264,6 @@
 
     move-result-object v19
 
-    .line 1092
     .local v19, "s2g":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -299,7 +275,6 @@
 
     move-result-object v18
 
-    .line 1093
     .local v18, "rnn":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -311,7 +286,6 @@
 
     move-result-object v23
 
-    .line 1094
     .local v23, "sdelay":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -323,7 +297,6 @@
 
     move-result-object v16
 
-    .line 1095
     .local v16, "interval":Ljava/lang/String;
     if-eqz v17, :cond_0
 
@@ -343,7 +316,6 @@
 
     if-eqz v16, :cond_0
 
-    .line 1097
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->array:Ljava/util/HashMap;
     invoke-static/range {v25 .. v25}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->access$400(Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;)Ljava/util/HashMap;
 
@@ -393,7 +365,6 @@
 
     goto/16 :goto_0
 
-    .line 1104
     .end local v2    # "bMobile":Ljava/lang/String;
     .end local v14    # "bWifi":Ljava/lang/String;
     .end local v16    # "interval":Ljava/lang/String;
@@ -417,7 +388,6 @@
     .end annotation
 
     .prologue
-    .line 1036
     invoke-virtual {p0, p1}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;->readDataXml(Lorg/xmlpull/v1/XmlPullParser;)Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
 
     move-result-object v0
@@ -439,12 +409,10 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 1045
     const-string v4, "delay_mills"
 
     invoke-interface {p2, v8, v4}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1046
     const-string v4, "delay_mills"
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->defaultDelay:J
@@ -458,7 +426,6 @@
 
     invoke-interface {p2, v8, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1047
     const-string v4, "screen_off_delay_mills"
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->screenDelay:J
@@ -472,12 +439,10 @@
 
     invoke-interface {p2, v8, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1048
     const-string v4, "delay_mills"
 
     invoke-interface {p2, v8, v4}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1050
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->array:Ljava/util/HashMap;
     invoke-static {p3}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->access$400(Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;)Ljava/util/HashMap;
 
@@ -505,7 +470,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 1051
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -513,7 +477,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1052
     .local v0, "app":Ljava/lang/String;
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -521,18 +484,15 @@
 
     check-cast v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
 
-    .line 1053
     .local v1, "config":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     const-string v4, "app_settings"
 
     invoke-interface {p2, v8, v4}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1054
     const-string v4, "app"
 
     invoke-interface {p2, v8, v4, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1055
     const-string v4, "mobile_background"
 
     iget-boolean v5, v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableMobile:Z
@@ -543,7 +503,6 @@
 
     invoke-interface {p2, v8, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1056
     const-string v4, "wifi_background"
 
     iget-boolean v5, v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableWifi:Z
@@ -554,7 +513,6 @@
 
     invoke-interface {p2, v8, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1057
     const-string v4, "mobile_screen_off"
 
     iget-boolean v5, v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableMobileInScreenOff:Z
@@ -565,7 +523,6 @@
 
     invoke-interface {p2, v8, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1058
     const-string v4, "wifi_screen_off"
 
     iget-boolean v5, v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableWifiInScreenOff:Z
@@ -576,7 +533,6 @@
 
     invoke-interface {p2, v8, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1059
     const-string v4, "g_in_screen_off"
 
     iget-boolean v5, v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->allowDisconnectIn2GAndScreenOff:Z
@@ -587,7 +543,6 @@
 
     invoke-interface {p2, v8, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1060
     const-string v4, "return_no_network"
 
     iget-boolean v5, v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->returnNoNetworkWhenDisabled:Z
@@ -598,7 +553,6 @@
 
     invoke-interface {p2, v8, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1061
     const-string v4, "delay_control_mills"
 
     iget-wide v6, v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->delayedControlMillis:J
@@ -609,7 +563,6 @@
 
     invoke-interface {p2, v8, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1062
     const-string v4, "restore_time_interval"
 
     iget-wide v6, v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->restore_network_interval:J
@@ -620,14 +573,12 @@
 
     invoke-interface {p2, v8, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1063
     const-string v4, "app_settings"
 
     invoke-interface {p2, v8, v4}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_0
 
-    .line 1065
     .end local v0    # "app":Ljava/lang/String;
     .end local v1    # "config":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
@@ -644,7 +595,6 @@
     .end annotation
 
     .prologue
-    .line 1036
     check-cast p3, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
 
     invoke-virtual {p0, p1, p2, p3}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;->writeDataXml(Ljava/io/BufferedOutputStream;Lorg/xmlpull/v1/XmlSerializer;Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;)V

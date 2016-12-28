@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 653
     iput-object p1, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
-    .line 654
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 655
     return-void
 .end method
 
@@ -45,16 +42,13 @@
 
     const/4 v5, 0x0
 
-    .line 659
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 707
     :goto_0
     return-void
 
-    .line 661
     :pswitch_0
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
@@ -62,11 +56,9 @@
 
     goto :goto_0
 
-    .line 664
     :pswitch_1
     invoke-static {}, Lcom/android/server/EventLogTags;->writeDeviceIdleOnStart()V
 
-    .line 665
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
     # getter for: Lcom/android/server/DeviceIdleController;->mLocalPowerManager:Landroid/os/PowerManagerInternal;
@@ -76,7 +68,6 @@
 
     invoke-virtual {v4, v2}, Landroid/os/PowerManagerInternal;->setDeviceIdleMode(Z)V
 
-    .line 667
     :try_start_0
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
@@ -89,7 +80,6 @@
 
     invoke-interface {v4, v5}, Landroid/net/INetworkPolicyManager;->setDeviceIdleMode(Z)V
 
-    .line 668
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
     # getter for: Lcom/android/server/DeviceIdleController;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
@@ -109,7 +99,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 671
     :goto_1
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
@@ -128,18 +117,15 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 672
     invoke-static {}, Lcom/android/server/EventLogTags;->writeDeviceIdleOnComplete()V
 
     goto :goto_0
 
-    .line 675
     :pswitch_2
     const-string v4, "unknown"
 
     invoke-static {v4}, Lcom/android/server/EventLogTags;->writeDeviceIdleOffStart(Ljava/lang/String;)V
 
-    .line 676
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
     # getter for: Lcom/android/server/DeviceIdleController;->mLocalPowerManager:Landroid/os/PowerManagerInternal;
@@ -149,7 +135,6 @@
 
     invoke-virtual {v4, v5}, Landroid/os/PowerManagerInternal;->setDeviceIdleMode(Z)V
 
-    .line 678
     :try_start_1
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
@@ -162,7 +147,6 @@
 
     invoke-interface {v4, v5}, Landroid/net/INetworkPolicyManager;->setDeviceIdleMode(Z)V
 
-    .line 679
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
     # getter for: Lcom/android/server/DeviceIdleController;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
@@ -182,7 +166,6 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 682
     :goto_2
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
@@ -201,28 +184,23 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 683
     invoke-static {}, Lcom/android/server/EventLogTags;->writeDeviceIdleOffComplete()V
 
     goto :goto_0
 
-    .line 686
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 687
     .local v0, "activeReason":Ljava/lang/String;
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 688
     .local v1, "activeUid":I
     iget v4, p1, Landroid/os/Message;->arg2:I
 
     if-eqz v4, :cond_1
 
-    .line 689
     .local v2, "needBroadcast":Z
     :goto_3
     if-eqz v0, :cond_2
@@ -232,7 +210,6 @@
     :goto_4
     invoke-static {v4}, Lcom/android/server/EventLogTags;->writeDeviceIdleOffStart(Ljava/lang/String;)V
 
-    .line 691
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
     # getter for: Lcom/android/server/DeviceIdleController;->mLocalPowerManager:Landroid/os/PowerManagerInternal;
@@ -242,7 +219,6 @@
 
     invoke-virtual {v4, v5}, Landroid/os/PowerManagerInternal;->setDeviceIdleMode(Z)V
 
-    .line 693
     :try_start_2
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
@@ -255,7 +231,6 @@
 
     invoke-interface {v4, v5}, Landroid/net/INetworkPolicyManager;->setDeviceIdleMode(Z)V
 
-    .line 694
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
     # getter for: Lcom/android/server/DeviceIdleController;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
@@ -269,11 +244,9 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 697
     :goto_5
     if-eqz v2, :cond_0
 
-    .line 698
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-virtual {v4}, Lcom/android/server/DeviceIdleController;->getContext()Landroid/content/Context;
@@ -291,7 +264,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 700
     :cond_0
     invoke-static {}, Lcom/android/server/EventLogTags;->writeDeviceIdleOffComplete()V
 
@@ -301,24 +273,20 @@
     :cond_1
     move v2, v5
 
-    .line 688
     goto :goto_3
 
-    .line 689
     .restart local v2    # "needBroadcast":Z
     :cond_2
     const-string v4, "unknown"
 
     goto :goto_4
 
-    .line 703
     .end local v0    # "activeReason":Ljava/lang/String;
     .end local v1    # "activeUid":I
     .end local v2    # "needBroadcast":Z
     :pswitch_4
     iget v3, p1, Landroid/os/Message;->arg1:I
 
-    .line 704
     .local v3, "uid":I
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$MyHandler;->this$0:Lcom/android/server/DeviceIdleController;
 
@@ -326,7 +294,6 @@
 
     goto/16 :goto_0
 
-    .line 695
     .end local v3    # "uid":I
     .restart local v0    # "activeReason":Ljava/lang/String;
     .restart local v1    # "activeUid":I
@@ -336,7 +303,6 @@
 
     goto :goto_5
 
-    .line 680
     .end local v0    # "activeReason":Ljava/lang/String;
     .end local v1    # "activeUid":I
     .end local v2    # "needBroadcast":Z
@@ -345,13 +311,11 @@
 
     goto :goto_2
 
-    .line 669
     :catch_2
     move-exception v4
 
     goto/16 :goto_1
 
-    .line 659
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -12,7 +12,6 @@
 
     const/4 v1, 0x0
 
-    .line 8
     move-object v0, p0
 
     move v2, v1
@@ -23,7 +22,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcn/nubia/edgegesture/EdgeGesture;-><init>(IIIFF)V
 
-    .line 9
     return-void
 .end method
 
@@ -36,10 +34,8 @@
     .param p5, "y"    # F
 
     .prologue
-    .line 12
     invoke-direct/range {p0 .. p5}, Lcn/nubia/edgegesture/EdgeGesture;-><init>(IIIFF)V
 
-    .line 13
     return-void
 .end method
 
@@ -48,44 +44,36 @@
     .param p0, "gesture"    # Lcn/nubia/edgegesture/EdgeGesture;
 
     .prologue
-    .line 16
     new-instance v1, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;
 
     invoke-direct {v1}, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;-><init>()V
 
-    .line 17
     .local v1, "localGesture":Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;
     iget v3, p0, Lcn/nubia/edgegesture/EdgeGesture;->mType:I
 
     iput v3, v1, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;->mType:I
 
-    .line 18
     iget v3, p0, Lcn/nubia/edgegesture/EdgeGesture;->mAction:I
 
     iput v3, v1, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;->mAction:I
 
-    .line 19
     iget v3, p0, Lcn/nubia/edgegesture/EdgeGesture;->mPointerCount:I
 
     iput v3, v1, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;->mPointerCount:I
 
-    .line 20
     iget v2, p0, Lcn/nubia/edgegesture/EdgeGesture;->mPointerCount:I
 
-    .line 21
     .local v2, "pointCount":I
     new-array v3, v2, [Lcn/nubia/edgegesture/EdgeGesture$Pointer;
 
     iput-object v3, v1, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;->mPointers:[Lcn/nubia/edgegesture/EdgeGesture$Pointer;
 
-    .line 22
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 23
     iget-object v3, v1, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;->mPointers:[Lcn/nubia/edgegesture/EdgeGesture$Pointer;
 
     new-instance v4, Lcn/nubia/edgegesture/EdgeGesture$Pointer;
@@ -112,12 +100,10 @@
 
     aput-object v4, v3, v0
 
-    .line 22
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 28
     :cond_0
     return-object v1
 .end method
@@ -128,7 +114,6 @@
     .locals 3
 
     .prologue
-    .line 46
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -197,7 +182,6 @@
 
     move-result-object v0
 
-    .line 49
     .local v0, "str":Ljava/lang/String;
     return-object v0
 .end method

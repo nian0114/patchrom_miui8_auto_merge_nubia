@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight" android:paddingStart="?android:listPreferredItemPaddingStart" android:paddingEnd="?android:listPreferredItemPaddingEnd"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/icon_volley" android:layout_width="@dimen/preference_icon_size" android:layout_height="@dimen/preference_icon_size" android:scaleType="fitCenter" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@null" />
-    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/volley_app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/preference_item_padding_side" android:singleLine="true" android:layout_toRightOf="@id/icon_volley" android:layout_centerInParent="true" />
-    <CheckBox android:id="@id/cb_volley" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
-</RelativeLayout>

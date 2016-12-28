@@ -83,7 +83,7 @@
 
 .field public static final activity_chooser_view_see_all:I = 0x10404b8
 
-.field public static final activity_resolver_virtual_box_support:I = 0x10405ac
+.field public static final activity_resolver_virtual_box_support:I = 0x1040742
 
 .field public static final activity_resolver_work_profiles_support:I = 0x10404c1
 
@@ -309,9 +309,9 @@
 
 .field public static final chooser_wallpaper:I = 0x1040440
 
-.field public static final clone_label_badge:I = 0x10405ab
+.field public static final clone_label_badge:I = 0x1040741
 
-.field public static final clone_label_fmt:I = 0x10405ad
+.field public static final clone_label_fmt:I = 0x1040743
 
 .field public static final common_last_name_prefixes:I = 0x1040065
 
@@ -755,7 +755,7 @@
 
 .field public static final force_close:I = 0x1040372
 
-.field public static final forward_intent_to_clone:I = 0x10405aa
+.field public static final forward_intent_to_clone:I = 0x1040740
 
 .field public static final forward_intent_to_owner:I = 0x104043a
 
@@ -1951,7 +1951,6 @@
     .locals 0
 
     .prologue
-    .line 17805
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

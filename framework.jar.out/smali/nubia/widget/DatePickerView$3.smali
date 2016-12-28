@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 126
     iput-object p1, p0, Lnubia/widget/DatePickerView$3;->this$0:Lnubia/widget/DatePickerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,17 +42,14 @@
     .param p3, "newVal"    # I
 
     .prologue
-    .line 131
     iget-object v0, p0, Lnubia/widget/DatePickerView$3;->this$0:Lnubia/widget/DatePickerView;
 
     # setter for: Lnubia/widget/DatePickerView;->mDay:I
     invoke-static {v0, p3}, Lnubia/widget/DatePickerView;->access$202(Lnubia/widget/DatePickerView;I)I
 
-    .line 132
     iget-object v0, p0, Lnubia/widget/DatePickerView$3;->this$0:Lnubia/widget/DatePickerView;
 
     invoke-virtual {v0}, Lnubia/widget/DatePickerView;->notifyDateChanged()V
 
-    .line 133
     return-void
 .end method

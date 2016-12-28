@@ -34,15 +34,12 @@
     .locals 1
 
     .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     const/4 v0, 0x0
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->mAnimState:I
 
-    .line 19
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 61
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->mAnimState:I
 
     const/4 v1, 0x1
@@ -61,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 62
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -88,7 +83,6 @@
 
     throw v0
 
-    .line 64
     :cond_0
     return-void
 .end method
@@ -97,12 +91,10 @@
     .locals 3
 
     .prologue
-    .line 55
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->mAnimState:I
 
     if-eqz v0, :cond_0
 
-    .line 56
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -129,7 +121,6 @@
 
     throw v0
 
-    .line 58
     :cond_0
     return-void
 .end method
@@ -139,7 +130,6 @@
     .param p1, "animState"    # I
 
     .prologue
-    .line 79
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->mAnimState:I
 
     if-eqz v0, :cond_0
@@ -156,7 +146,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 81
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -193,7 +182,6 @@
 
     throw v0
 
-    .line 84
     :cond_0
     return-void
 .end method
@@ -202,7 +190,6 @@
     .locals 3
 
     .prologue
-    .line 67
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->mAnimState:I
 
     if-eqz v0, :cond_0
@@ -213,7 +200,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 68
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -240,7 +226,6 @@
 
     throw v0
 
-    .line 70
     :cond_0
     return-void
 .end method
@@ -249,7 +234,6 @@
     .locals 3
 
     .prologue
-    .line 73
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->mAnimState:I
 
     const/4 v1, 0x3
@@ -262,7 +246,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 74
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -289,7 +272,6 @@
 
     throw v0
 
-    .line 76
     :cond_0
     return-void
 .end method
@@ -299,44 +281,36 @@
     .param p1, "animState"    # I
 
     .prologue
-    .line 27
     packed-switch p1, :pswitch_data_0
 
-    .line 52
     :goto_0
     return-void
 
-    .line 29
     :pswitch_0
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->checkGuideStartStateTransition()V
 
     goto :goto_0
 
-    .line 33
     :pswitch_1
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->checkGuideCancelStateTransition()V
 
     goto :goto_0
 
-    .line 37
     :pswitch_2
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->checkSingleStartStateTransition()V
 
     goto :goto_0
 
-    .line 41
     :pswitch_3
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->checkSingleUpdateStateTransition()V
 
     goto :goto_0
 
-    .line 49
     :pswitch_4
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->checkOtherStateTransition(I)V
 
     goto :goto_0
 
-    .line 27
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -358,10 +332,8 @@
     .param p1, "animState"    # I
 
     .prologue
-    .line 87
     iput p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimStateChecker;->mAnimState:I
 
-    .line 88
     return-void
 .end method
 
@@ -370,6 +342,5 @@
     .param p1, "animState"    # I
 
     .prologue
-    .line 24
     return-void
 .end method

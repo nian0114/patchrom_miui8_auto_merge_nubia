@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .param p1, "src"    # [Ljava/lang/String;
 
     .prologue
-    .line 90
     if-eqz p1, :cond_0
 
     array-length v4, p1
@@ -51,7 +49,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 91
     :cond_0
     const-string v4, "Soter.Util"
 
@@ -59,16 +56,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v5, "param error"
+    const-string v5, "param error"
 
     invoke-direct {v4, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v4
 
-    .line 94
     :cond_1
     move-object v0, p1
 
@@ -84,7 +79,6 @@
 
     aget-object v2, v0, v1
 
-    .line 95
     .local v2, "item":Ljava/lang/String;
     invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -92,22 +86,18 @@
 
     if-eqz v4, :cond_2
 
-    .line 96
     const/4 v4, 0x1
 
-    .line 99
     .end local v2    # "item":Ljava/lang/String;
     :goto_1
     return v4
 
-    .line 94
     .restart local v2    # "item":Ljava/lang/String;
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 99
     .end local v2    # "item":Ljava/lang/String;
     :cond_3
     const/4 v4, 0x0
@@ -121,7 +111,6 @@
     .param p1, "src"    # [Ljava/lang/String;
 
     .prologue
-    .line 109
     if-eqz p1, :cond_0
 
     array-length v4, p1
@@ -134,7 +123,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 110
     :cond_0
     const-string v4, "Soter.Util"
 
@@ -142,16 +130,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v5, "param error"
+    const-string v5, "param error"
 
     invoke-direct {v4, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v4
 
-    .line 113
     :cond_1
     move-object v0, p1
 
@@ -167,7 +153,6 @@
 
     aget-object v2, v0, v1
 
-    .line 114
     .local v2, "item":Ljava/lang/String;
     invoke-static {v2}, Landroid/security/keystore/SoterUtil;->isNullOrNil(Ljava/lang/String;)Z
 
@@ -181,19 +166,16 @@
 
     if-eqz v4, :cond_2
 
-    .line 118
     .end local v2    # "item":Ljava/lang/String;
     :goto_1
     return-object v2
 
-    .line 113
     .restart local v2    # "item":Ljava/lang/String;
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 118
     .end local v2    # "item":Ljava/lang/String;
     :cond_3
     const/4 v2, 0x0
@@ -208,25 +190,21 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 25
     invoke-static {p0}, Landroid/security/keystore/SoterUtil;->isNullOrNil(Ljava/lang/String;)Z
 
     move-result v11
 
     if-eqz v11, :cond_0
 
-    .line 26
     const-string v11, "Soter.Util"
 
     const-string v12, "hy: null or nil when convert key name to parameter"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     :goto_0
     return-object v0
 
-    .line 29
     :cond_0
     const-string v11, "\\."
 
@@ -234,7 +212,6 @@
 
     move-result-object v10
 
-    .line 30
     .local v10, "splits":[Ljava/lang/String;
     if-eqz v10, :cond_1
 
@@ -244,7 +221,6 @@
 
     if-gt v11, v12, :cond_2
 
-    .line 31
     :cond_1
     const-string v11, "Soter.Util"
 
@@ -254,35 +230,27 @@
 
     goto :goto_0
 
-    .line 34
     :cond_2
     const/4 v1, 0x1
 
-    .line 35
     .local v1, "isForSoter":Z
     const/4 v2, 0x0
 
-    .line 36
     .local v2, "isAutoSignedWithAttkWhenGetPublicKey":Z
     const/4 v3, 0x0
 
-    .line 37
     .local v3, "isAutoSignedWithCommonkWhenGetPublicKey":Z
     const-string v4, ""
 
-    .line 38
     .local v4, "mAutoSignedKeyNameWhenGetPublicKey":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 39
     .local v5, "isSecmsgFidCounterSignedWhenSign":Z
     const/4 v6, 0x0
 
-    .line 40
     .local v6, "isAutoAddCounterWhenGetPublicKey":Z
     const/4 v7, 0x0
 
-    .line 42
     .local v7, "isNeedNextAttk":Z
     const-string v11, "auto_signed_when_get_pubkey_attk"
 
@@ -292,13 +260,11 @@
 
     if-eqz v11, :cond_6
 
-    .line 43
     const/4 v2, 0x1
 
-    .line 56
     :cond_3
     :goto_1
-    const-string/jumbo v11, "secmsg_and_counter_signed_when_sign"
+    const-string v11, "secmsg_and_counter_signed_when_sign"
 
     invoke-static {v11, v10}, Landroid/security/keystore/SoterUtil;->contains(Ljava/lang/String;[Ljava/lang/String;)Z
 
@@ -306,10 +272,8 @@
 
     if-eqz v11, :cond_4
 
-    .line 57
     const/4 v5, 0x1
 
-    .line 59
     :cond_4
     const-string v11, "addcounter"
 
@@ -319,11 +283,9 @@
 
     if-eqz v11, :cond_5
 
-    .line 60
     const/4 v6, 0x1
 
-    .line 62
-    const-string/jumbo v11, "next_attk"
+    const-string v11, "next_attk"
 
     invoke-static {v11, v10}, Landroid/security/keystore/SoterUtil;->contains(Ljava/lang/String;[Ljava/lang/String;)Z
 
@@ -331,16 +293,13 @@
 
     if-eqz v11, :cond_5
 
-    .line 63
     const/4 v7, 0x1
 
-    .line 65
     :cond_5
     new-instance v0, Landroid/security/keystore/SoterRSAKeyGenParameterSpec;
 
     invoke-direct/range {v0 .. v7}, Landroid/security/keystore/SoterRSAKeyGenParameterSpec;-><init>(ZZZLjava/lang/String;ZZZ)V
 
-    .line 69
     .local v0, "spec":Landroid/security/keystore/SoterRSAKeyGenParameterSpec;
     const-string v11, "Soter.Util"
 
@@ -370,7 +329,6 @@
 
     goto :goto_0
 
-    .line 46
     .end local v0    # "spec":Landroid/security/keystore/SoterRSAKeyGenParameterSpec;
     :cond_6
     const-string v11, "auto_signed_when_get_pubkey"
@@ -379,7 +337,6 @@
 
     move-result-object v9
 
-    .line 47
     .local v9, "entireCommonKeyExpr":Ljava/lang/String;
     invoke-static {v9}, Landroid/security/keystore/SoterUtil;->isNullOrNil(Ljava/lang/String;)Z
 
@@ -387,12 +344,10 @@
 
     if-nez v11, :cond_3
 
-    .line 48
     invoke-static {v9}, Landroid/security/keystore/SoterUtil;->retrieveKeyNameFromExpr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 49
     .local v8, "commonKeyName":Ljava/lang/String;
     invoke-static {v8}, Landroid/security/keystore/SoterUtil;->isNullOrNil(Ljava/lang/String;)Z
 
@@ -400,10 +355,8 @@
 
     if-nez v11, :cond_3
 
-    .line 50
     const/4 v3, 0x1
 
-    .line 51
     move-object v4, v8
 
     goto :goto_1
@@ -422,30 +375,25 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 144
     invoke-static {p1}, Landroid/security/keystore/SoterUtil;->isNullOrNil(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 145
     const-string v4, "Soter"
 
     const-string v5, "hy: json keyname error"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     :cond_0
     :goto_0
     return-object v1
 
-    .line 148
     :cond_1
     if-nez p0, :cond_2
 
-    .line 149
     const-string v4, "Soter"
 
     const-string v5, "hy: json origin null"
@@ -454,13 +402,11 @@
 
     goto :goto_0
 
-    .line 152
     :cond_2
     invoke-static {p0}, Landroid/security/keystore/SoterUtil;->retriveJsonFromExportedData([B)Lorg/json/JSONObject;
 
     move-result-object v2
 
-    .line 153
     .local v2, "jsonObj":Lorg/json/JSONObject;
     if-eqz v2, :cond_0
 
@@ -470,12 +416,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 154
     invoke-virtual {v2, p1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 155
     .local v0, "base64pubkey":Ljava/lang/String;
     const-string v4, "Soter"
 
@@ -499,7 +443,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     const-string v4, "-----BEGIN PUBLIC KEY-----"
 
     const-string v5, ""
@@ -524,7 +467,6 @@
 
     move-result-object v3
 
-    .line 158
     .local v3, "pureBase64pubkey":Ljava/lang/String;
     const-string v4, "Soter"
 
@@ -532,7 +474,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "pure base64 encoded public key: "
+    const-string v6, "pure base64 encoded public key: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -548,14 +490,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     const/4 v4, 0x0
 
     invoke-static {v3, v4}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object v1
 
-    .line 160
     .local v1, "decoded":[B
     goto :goto_0
 .end method
@@ -565,7 +505,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 122
     const-string v1, "Soter.Util"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -588,30 +527,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     invoke-static {p0}, Landroid/security/keystore/SoterUtil;->isNullOrNil(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 124
     const-string v1, "Soter.Util"
 
     const-string v2, "hy: null or nil when get pure key alias"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     const/4 p0, 0x0
 
-    .line 132
     .end local p0    # "name":Ljava/lang/String;
     .local v0, "splits":[Ljava/lang/String;
     :goto_0
     return-object p0
 
-    .line 127
     .end local v0    # "splits":[Ljava/lang/String;
     .restart local p0    # "name":Ljava/lang/String;
     :cond_0
@@ -621,7 +555,6 @@
 
     move-result-object v0
 
-    .line 128
     .restart local v0    # "splits":[Ljava/lang/String;
     if-eqz v0, :cond_1
 
@@ -631,7 +564,6 @@
 
     if-gt v1, v2, :cond_2
 
-    .line 129
     :cond_1
     const-string v1, "Soter.Util"
 
@@ -641,7 +573,6 @@
 
     goto :goto_0
 
-    .line 132
     :cond_2
     const/4 v1, 0x0
 
@@ -655,7 +586,6 @@
     .param p0, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 136
     if-eqz p0, :cond_0
 
     const-string v0, ""
@@ -685,21 +615,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 74
     invoke-static {p0}, Landroid/security/keystore/SoterUtil;->isNullOrNil(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 75
     const-string v3, "("
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 76
     .local v1, "startPos":I
     const-string v3, ")"
 
@@ -707,26 +634,22 @@
 
     move-result v0
 
-    .line 77
     .local v0, "endPos":I
     if-ltz v1, :cond_0
 
     if-le v0, v1, :cond_0
 
-    .line 78
     add-int/lit8 v2, v1, 0x1
 
     invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 85
     .end local v0    # "endPos":I
     .end local v1    # "startPos":I
     :goto_0
     return-object v2
 
-    .line 80
     .restart local v0    # "endPos":I
     .restart local v1    # "startPos":I
     :cond_0
@@ -738,7 +661,6 @@
 
     goto :goto_0
 
-    .line 84
     .end local v0    # "endPos":I
     .end local v1    # "startPos":I
     :cond_1
@@ -762,47 +684,38 @@
 
     const/4 v9, 0x4
 
-    .line 167
     if-nez p0, :cond_0
 
-    .line 168
     const-string v6, "Soter"
 
-    const-string/jumbo v7, "raw data is null"
+    const-string v7, "raw data is null"
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :goto_0
     return-object v5
 
-    .line 172
     :cond_0
     array-length v6, p0
 
     if-ge v6, v9, :cond_1
 
-    .line 173
     const-string v6, "Soter"
 
-    const-string/jumbo v7, "raw data length smaller than 4"
+    const-string v7, "raw data length smaller than 4"
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     :cond_1
     new-array v2, v9, [B
 
-    .line 182
     .local v2, "lengthBytes":[B
     invoke-static {p0, v10, v2, v10, v9}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 183
     invoke-static {v2}, Landroid/security/keystore/SoterUtil;->toInt([B)I
 
     move-result v4
 
-    .line 184
     .local v4, "rawLength":I
     const-string v6, "Soter"
 
@@ -810,7 +723,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "parsed raw length: "
+    const-string v8, "parsed raw length: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -826,10 +739,8 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     new-array v3, v4, [B
 
-    .line 188
     .local v3, "rawJsonBytes":[B
     array-length v6, p0
 
@@ -837,25 +748,21 @@
 
     if-gt v6, v7, :cond_2
 
-    .line 189
     const-string v6, "Soter"
 
-    const-string/jumbo v7, "length not correct 2"
+    const-string v7, "length not correct 2"
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 192
     :cond_2
     invoke-static {p0, v9, v3, v10, v4}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 193
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v3}, Ljava/lang/String;-><init>([B)V
 
-    .line 194
     .local v1, "jsonStr":Ljava/lang/String;
     const-string v6, "Soter"
 
@@ -863,7 +770,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "to convert json: "
+    const-string v8, "to convert json: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -879,7 +786,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     :try_start_0
     new-instance v6, Lorg/json/JSONObject;
 
@@ -891,11 +797,9 @@
 
     goto :goto_0
 
-    .line 197
     :catch_0
     move-exception v0
 
-    .line 198
     .local v0, "e":Lorg/json/JSONException;
     const-string v6, "Soter"
 
@@ -911,10 +815,8 @@
     .param p0, "bRefArr"    # [B
 
     .prologue
-    .line 205
     const/4 v2, 0x0
 
-    .line 208
     .local v2, "iOutcome":I
     const/4 v1, 0x0
 
@@ -924,10 +826,8 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 209
     aget-byte v0, p0, v1
 
-    .line 210
     .local v0, "bLoop":B
     and-int/lit16 v3, v0, 0xff
 
@@ -937,12 +837,10 @@
 
     add-int/2addr v2, v3
 
-    .line 208
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 212
     .end local v0    # "bLoop":B
     :cond_0
     return v2

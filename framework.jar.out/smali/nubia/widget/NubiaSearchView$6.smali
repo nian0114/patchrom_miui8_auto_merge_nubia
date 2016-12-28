@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 769
     iput-object p1, p0, Lnubia/widget/NubiaSearchView$6;->this$0:Lnubia/widget/NubiaSearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 781
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 773
     return-void
 .end method
 
@@ -65,12 +62,10 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 777
     iget-object v0, p0, Lnubia/widget/NubiaSearchView$6;->this$0:Lnubia/widget/NubiaSearchView;
 
     # invokes: Lnubia/widget/NubiaSearchView;->onTextChanged(Ljava/lang/CharSequence;)V
     invoke-static {v0, p1}, Lnubia/widget/NubiaSearchView;->access$800(Lnubia/widget/NubiaSearchView;Ljava/lang/CharSequence;)V
 
-    .line 778
     return-void
 .end method

@@ -36,20 +36,16 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2263
     invoke-direct {p0}, Landroid/content/pm/IPackageMoveObserver$Stub;-><init>()V
 
-    .line 2264
     iput-object p1, p0, Landroid/app/ApplicationPackageManager$MoveCallbackDelegate;->mCallback:Landroid/content/pm/PackageManager$MoveCallback;
 
-    .line 2265
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, p2, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
     iput-object v0, p0, Landroid/app/ApplicationPackageManager$MoveCallbackDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 2266
     return-void
 .end method
 
@@ -62,24 +58,20 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 2270
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 2284
     const/4 v1, 0x0
 
     :goto_0
     return v1
 
-    .line 2272
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 2273
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iget-object v3, p0, Landroid/app/ApplicationPackageManager$MoveCallbackDelegate;->mCallback:Landroid/content/pm/PackageManager$MoveCallback;
 
@@ -91,22 +83,18 @@
 
     invoke-virtual {v3, v4, v1}, Landroid/content/pm/PackageManager$MoveCallback;->onCreated(ILandroid/os/Bundle;)V
 
-    .line 2274
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     move v1, v2
 
-    .line 2275
     goto :goto_0
 
-    .line 2278
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 2279
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     iget-object v3, p0, Landroid/app/ApplicationPackageManager$MoveCallbackDelegate;->mCallback:Landroid/content/pm/PackageManager$MoveCallback;
 
@@ -124,15 +112,12 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/content/pm/PackageManager$MoveCallback;->onStatusChanged(IIJ)V
 
-    .line 2280
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     move v1, v2
 
-    .line 2281
     goto :goto_0
 
-    .line 2270
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -146,19 +131,15 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 2289
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 2290
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput p1, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 2291
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 2292
     iget-object v1, p0, Landroid/app/ApplicationPackageManager$MoveCallbackDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x1
@@ -169,7 +150,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2293
     return-void
 .end method
 
@@ -180,26 +160,21 @@
     .param p3, "estMillis"    # J
 
     .prologue
-    .line 2297
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 2298
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput p1, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 2299
     iput p2, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 2300
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
-    .line 2301
     iget-object v1, p0, Landroid/app/ApplicationPackageManager$MoveCallbackDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x2
@@ -210,6 +185,5 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2302
     return-void
 .end method

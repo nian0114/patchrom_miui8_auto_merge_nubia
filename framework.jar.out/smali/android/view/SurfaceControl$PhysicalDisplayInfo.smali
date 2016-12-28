@@ -41,10 +41,8 @@
     .locals 0
 
     .prologue
-    .line 508
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 509
     return-void
 .end method
 
@@ -53,13 +51,10 @@
     .param p1, "other"    # Landroid/view/SurfaceControl$PhysicalDisplayInfo;
 
     .prologue
-    .line 511
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 512
     invoke-virtual {p0, p1}, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->copyFrom(Landroid/view/SurfaceControl$PhysicalDisplayInfo;)V
 
-    .line 513
     return-void
 .end method
 
@@ -70,57 +65,46 @@
     .param p1, "other"    # Landroid/view/SurfaceControl$PhysicalDisplayInfo;
 
     .prologue
-    .line 540
     iget v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->width:I
 
     iput v0, p0, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->width:I
 
-    .line 541
     iget v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->height:I
 
     iput v0, p0, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->height:I
 
-    .line 542
     iget v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->refreshRate:F
 
     iput v0, p0, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->refreshRate:F
 
-    .line 543
     iget v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->density:F
 
     iput v0, p0, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->density:F
 
-    .line 544
     iget v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->xDpi:F
 
     iput v0, p0, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->xDpi:F
 
-    .line 545
     iget v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->yDpi:F
 
     iput v0, p0, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->yDpi:F
 
-    .line 546
     iget-boolean v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->secure:Z
 
     iput-boolean v0, p0, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->secure:Z
 
-    .line 547
     iget-wide v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->appVsyncOffsetNanos:J
 
     iput-wide v0, p0, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->appVsyncOffsetNanos:J
 
-    .line 548
     iget-wide v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->presentationDeadlineNanos:J
 
     iput-wide v0, p0, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->presentationDeadlineNanos:J
 
-    .line 549
     iget v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->colorTransform:I
 
     iput v0, p0, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->colorTransform:I
 
-    .line 550
     return-void
 .end method
 
@@ -129,7 +113,6 @@
     .param p1, "other"    # Landroid/view/SurfaceControl$PhysicalDisplayInfo;
 
     .prologue
-    .line 521
     if-eqz p1, :cond_0
 
     iget v0, p0, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->width:I
@@ -220,7 +203,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 517
     instance-of v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;
 
     if-eqz v0, :cond_0
@@ -249,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 536
     const/4 v0, 0x0
 
     return v0
@@ -259,7 +240,6 @@
     .locals 4
 
     .prologue
-    .line 555
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

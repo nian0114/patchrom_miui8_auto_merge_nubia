@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/answer_call_title"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
-    <com.android.settings_ex.gesturez7.Z7VolleyBackForwardPreference android:title="@string/volley_gesture_backforward_preference" android:key="back_forward" />
-</PreferenceScreen>

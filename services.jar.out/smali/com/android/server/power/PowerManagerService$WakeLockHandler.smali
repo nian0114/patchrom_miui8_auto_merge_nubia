@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 3908
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$WakeLockHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
-    .line 3909
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 3910
     return-void
 .end method
 
@@ -45,16 +42,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 3913
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 3918
     :goto_0
     return-void
 
-    .line 3915
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$WakeLockHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -63,7 +57,6 @@
 
     goto :goto_0
 
-    .line 3913
     :pswitch_data_0
     .packed-switch 0x5
         :pswitch_0

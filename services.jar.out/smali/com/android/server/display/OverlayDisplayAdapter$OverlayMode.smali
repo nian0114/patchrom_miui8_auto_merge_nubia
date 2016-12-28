@@ -30,19 +30,14 @@
     .param p3, "densityDpi"    # I
 
     .prologue
-    .line 551
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 552
     iput p1, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;->mWidth:I
 
-    .line 553
     iput p2, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;->mHeight:I
 
-    .line 554
     iput p3, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;->mDensityDpi:I
 
-    .line 555
     return-void
 .end method
 
@@ -52,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 559
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "{"

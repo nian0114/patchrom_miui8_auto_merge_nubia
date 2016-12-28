@@ -30,14 +30,12 @@
     .locals 1
 
     .prologue
-    .line 29
     new-instance v0, Landroid/view/AbsSavedState$1;
 
     invoke-direct {v0}, Landroid/view/AbsSavedState$1;-><init>()V
 
     sput-object v0, Landroid/view/AbsSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
 
-    .line 88
     new-instance v0, Landroid/view/AbsSavedState$2;
 
     invoke-direct {v0}, Landroid/view/AbsSavedState$2;-><init>()V
@@ -51,15 +49,12 @@
     .locals 1
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/view/AbsSavedState;->mSuperState:Landroid/os/Parcelable;
 
-    .line 38
     return-void
 .end method
 
@@ -68,13 +63,10 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     const/4 v1, 0x0
 
-    .line 67
     .local v1, "superState":Landroid/os/Parcelable;
     const/4 v2, 0x0
 
@@ -86,7 +78,6 @@
 
     move-result-object v1
 
-    .line 71
     if-eqz v1, :cond_0
 
     move-object v2, v1
@@ -94,21 +85,17 @@
     :goto_0
     iput-object v2, p0, Landroid/view/AbsSavedState;->mSuperState:Landroid/os/Parcelable;
 
-    .line 74
     :goto_1
     return-void
 
-    .line 71
     :cond_0
     sget-object v2, Landroid/view/AbsSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
 
     goto :goto_0
 
-    .line 68
     :catch_0
     move-exception v0
 
-    .line 69
     .local v0, "e":Landroid/os/BadParcelableException;
     :try_start_1
     const-string v2, "Nubia"
@@ -119,7 +106,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 71
     if-eqz v1, :cond_1
 
     move-object v2, v1
@@ -158,22 +144,18 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     if-nez p1, :cond_0
 
-    .line 47
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "superState must not be null"
+    const-string v1, "superState must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 49
     :cond_0
     sget-object v0, Landroid/view/AbsSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
 
@@ -183,10 +165,8 @@
     :goto_0
     iput-object p1, p0, Landroid/view/AbsSavedState;->mSuperState:Landroid/os/Parcelable;
 
-    .line 50
     return-void
 
-    .line 49
     .restart local p1    # "superState":Landroid/os/Parcelable;
     :cond_1
     const/4 p1, 0x0
@@ -199,7 +179,6 @@
     .param p1, "x0"    # Landroid/view/AbsSavedState$1;
 
     .prologue
-    .line 28
     invoke-direct {p0}, Landroid/view/AbsSavedState;-><init>()V
 
     return-void
@@ -211,7 +190,6 @@
     .locals 1
 
     .prologue
-    .line 81
     const/4 v0, 0x0
 
     return v0
@@ -221,7 +199,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget-object v0, p0, Landroid/view/AbsSavedState;->mSuperState:Landroid/os/Parcelable;
 
     return-object v0
@@ -233,11 +210,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 85
     iget-object v0, p0, Landroid/view/AbsSavedState;->mSuperState:Landroid/os/Parcelable;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 86
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 770
     iput-object p1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$2;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 776
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$2;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mListener:Lcom/android/server/display/NubiaOverlayDisplayWindow$Listener;
@@ -67,7 +65,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/server/display/NubiaOverlayDisplayWindow$Listener;->onWindowSizeChanged(II)V
 
-    .line 777
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$2;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mListener:Lcom/android/server/display/NubiaOverlayDisplayWindow$Listener;
@@ -86,7 +83,6 @@
 
     invoke-interface {v0, p1, v1}, Lcom/android/server/display/NubiaOverlayDisplayWindow$Listener;->onWindowCreated(Landroid/graphics/SurfaceTexture;I)V
 
-    .line 779
     return-void
 .end method
 
@@ -95,7 +91,6 @@
     .param p1, "surfaceTexture"    # Landroid/graphics/SurfaceTexture;
 
     .prologue
-    .line 784
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$2;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mListener:Lcom/android/server/display/NubiaOverlayDisplayWindow$Listener;
@@ -105,7 +100,6 @@
 
     invoke-interface {v0}, Lcom/android/server/display/NubiaOverlayDisplayWindow$Listener;->onWindowDestroyed()V
 
-    .line 785
     const/4 v0, 0x1
 
     return v0
@@ -118,7 +112,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 791
     return-void
 .end method
 
@@ -127,6 +120,5 @@
     .param p1, "surfaceTexture"    # Landroid/graphics/SurfaceTexture;
 
     .prologue
-    .line 795
     return-void
 .end method

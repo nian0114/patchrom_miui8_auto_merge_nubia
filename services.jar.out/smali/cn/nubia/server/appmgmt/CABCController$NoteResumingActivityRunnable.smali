@@ -35,21 +35,16 @@
     .param p4, "isHomeActivity"    # Z
 
     .prologue
-    .line 445
     iput-object p1, p0, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 446
     iput p2, p0, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;->mStackId:I
 
-    .line 447
     iput-object p3, p0, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;->mResumingPackage:Ljava/lang/String;
 
-    .line 448
     iput-boolean p4, p0, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;->mResumingHomeActivity:Z
 
-    .line 449
     return-void
 .end method
 
@@ -59,7 +54,6 @@
     .locals 4
 
     .prologue
-    .line 453
     iget-boolean v1, p0, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;->mResumingHomeActivity:Z
 
     if-eqz v1, :cond_0
@@ -79,7 +73,6 @@
 
     if-nez v1, :cond_0
 
-    .line 454
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     # getter for: Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
@@ -97,7 +90,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 456
     :cond_0
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
@@ -118,7 +110,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 457
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     # getter for: Lcn/nubia/server/appmgmt/CABCController;->mResumedPackages:Ljava/util/HashMap;
@@ -138,7 +129,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 458
     .local v0, "resumedPackage":Ljava/lang/String;
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;->mResumingPackage:Ljava/lang/String;
 
@@ -148,12 +138,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 462
     .end local v0    # "resumedPackage":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 461
     :cond_1
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 

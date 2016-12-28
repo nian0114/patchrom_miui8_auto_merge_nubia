@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 3291
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3295
     :try_start_0
     invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
     :try_end_0
@@ -53,16 +51,13 @@
 
     const/4 v1, 0x1
 
-    .line 3297
     :cond_0
     :goto_0
     return v1
 
-    .line 3296
     :catch_0
     move-exception v0
 
-    .line 3297
     .local v0, "e":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method

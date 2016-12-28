@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/security_settings_title"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
-    <PreferenceScreen android:persistent="false" android:title="@string/unlock_quick_application_title" android:key="lock_quick_pattern" />
-</PreferenceScreen>

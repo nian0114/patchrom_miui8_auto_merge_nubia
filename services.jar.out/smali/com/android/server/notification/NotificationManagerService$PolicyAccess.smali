@@ -29,12 +29,10 @@
     .locals 3
 
     .prologue
-    .line 3692
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$PolicyAccess;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3694
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -56,7 +54,6 @@
     .param p2, "x1"    # Lcom/android/server/notification/NotificationManagerService$1;
 
     .prologue
-    .line 3692
     invoke-direct {p0, p1}, Lcom/android/server/notification/NotificationManagerService$PolicyAccess;-><init>(Lcom/android/server/notification/NotificationManagerService;)V
 
     return-void
@@ -77,18 +74,15 @@
     .end annotation
 
     .prologue
-    .line 3725
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
 
-    .line 3727
     .local v1, "pkgs":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 3729
     .local v2, "identity":J
     :try_start_0
     iget-object v7, p0, Lcom/android/server/notification/NotificationManagerService$PolicyAccess;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -111,18 +105,15 @@
 
     move-result-object v4
 
-    .line 3733
     .local v4, "setting":Ljava/lang/String;
     if-eqz v4, :cond_2
 
-    .line 3734
     const-string v7, ":"
 
     invoke-virtual {v4, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 3735
     .local v6, "tokens":[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -132,17 +123,13 @@
 
     if-ge v0, v7, :cond_2
 
-    .line 3736
     aget-object v5, v6, v0
 
-    .line 3737
     .local v5, "token":Ljava/lang/String;
     if-eqz v5, :cond_0
 
-    .line 3738
     invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    .line 3740
     :cond_0
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -150,13 +137,11 @@
 
     if-eqz v7, :cond_1
 
-    .line 3735
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 3743
     :cond_1
     invoke-virtual {v1, v5}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -164,7 +149,6 @@
 
     goto :goto_1
 
-    .line 3747
     .end local v0    # "i":I
     .end local v4    # "setting":Ljava/lang/String;
     .end local v5    # "token":Ljava/lang/String;
@@ -180,7 +164,6 @@
     :cond_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3749
     return-object v1
 .end method
 
@@ -195,7 +178,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 3753
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v5
@@ -210,13 +192,11 @@
 
     move-result-object v2
 
-    .line 3756
     .local v2, "list":Landroid/content/pm/ParceledListSlice;
     invoke-virtual {v2}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
     move-result-object v3
 
-    .line 3757
     .local v3, "pkgs":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     if-eqz v3, :cond_0
 
@@ -229,21 +209,17 @@
     :cond_0
     new-array v4, v8, [Ljava/lang/String;
 
-    .line 3763
     :cond_1
     return-object v4
 
-    .line 3758
     :cond_2
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 3759
     .local v0, "N":I
     new-array v4, v0, [Ljava/lang/String;
 
-    .line 3760
     .local v4, "rt":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -251,7 +227,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 3761
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -262,7 +237,6 @@
 
     aput-object v5, v4, v1
 
-    .line 3760
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -273,7 +247,6 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 3699
     if-eqz p1, :cond_0
 
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationManagerService$PolicyAccess;->getGrantedPackages()Landroid/util/ArraySet;
@@ -303,48 +276,39 @@
     .param p2, "granted"    # Z
 
     .prologue
-    .line 3703
     if-nez p1, :cond_1
 
-    .line 3722
     :cond_0
     :goto_0
     return-void
 
-    .line 3704
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationManagerService$PolicyAccess;->getGrantedPackages()Landroid/util/ArraySet;
 
     move-result-object v2
 
-    .line 3706
     .local v2, "pkgs":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     if-eqz p2, :cond_2
 
-    .line 3707
     invoke-virtual {v2, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 3711
     .local v0, "changed":Z
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 3712
     const-string v4, ":"
 
     invoke-static {v4, v2}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 3713
     .local v3, "setting":Ljava/lang/String;
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
 
-    .line 3714
     .local v1, "currentUser":I
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$PolicyAccess;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -360,7 +324,6 @@
 
     invoke-static {v4, v5, v3, v1}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 3718
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$PolicyAccess;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v4}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -393,7 +356,6 @@
 
     goto :goto_0
 
-    .line 3709
     .end local v0    # "changed":Z
     .end local v1    # "currentUser":I
     .end local v3    # "setting":Ljava/lang/String;

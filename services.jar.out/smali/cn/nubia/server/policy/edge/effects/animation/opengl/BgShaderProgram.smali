@@ -9,10 +9,8 @@
     .param p1, "program"    # I
 
     .prologue
-    .line 8
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;-><init>(I)V
 
-    .line 9
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/BgShaderProgram;->mId:I
 
     const-string v1, "uBgDim"
@@ -23,6 +21,5 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/BgShaderProgram;->mBgDimHandle:I
 
-    .line 10
     return-void
 .end method

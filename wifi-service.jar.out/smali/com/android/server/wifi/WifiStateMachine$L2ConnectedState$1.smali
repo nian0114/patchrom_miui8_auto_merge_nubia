@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 8637
+    .line 8640
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$L2ConnectedState$1;->this$1:Lcom/android/server/wifi/WifiStateMachine$L2ConnectedState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .param p2, "logMsg"    # Ljava/lang/String;
 
     .prologue
-    .line 8640
+    .line 8643
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$L2ConnectedState$1;->this$1:Lcom/android/server/wifi/WifiStateMachine$L2ConnectedState;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$L2ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -51,6 +51,6 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(ILjava/lang/Object;)V
 
-    .line 8641
+    .line 8644
     return-void
 .end method

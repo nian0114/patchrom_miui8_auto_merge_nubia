@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 198
     iput-boolean p1, p0, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils$4;->val$enable:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 201
     iget-boolean v0, p0, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils$4;->val$enable:Z
 
     invoke-static {v0}, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;->enableGloveTouch(Z)V
 
-    .line 202
     return-void
 .end method

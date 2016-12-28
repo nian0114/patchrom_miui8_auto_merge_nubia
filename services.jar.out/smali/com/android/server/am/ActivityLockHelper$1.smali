@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 123
     iput-object p1, p0, Lcom/android/server/am/ActivityLockHelper$1;->this$0:Lcom/android/server/am/ActivityLockHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 126
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 127
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.action.SCREEN_OFF"
 
@@ -54,7 +51,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 128
     iget-object v3, p0, Lcom/android/server/am/ActivityLockHelper$1;->this$0:Lcom/android/server/am/ActivityLockHelper;
 
     # getter for: Lcom/android/server/am/ActivityLockHelper;->mLockedApps:Ljava/util/HashSet;
@@ -80,7 +76,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 129
     .local v2, "s":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/am/ActivityLockHelper$1;->this$0:Lcom/android/server/am/ActivityLockHelper;
 
@@ -99,21 +94,18 @@
 
     goto :goto_0
 
-    .line 131
     .end local v2    # "s":Ljava/lang/String;
     :cond_0
     sget-boolean v3, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 132
     const-string v3, "AppLocker"
 
     const-string v4, "screen off,lock all app."
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_1
     return-void

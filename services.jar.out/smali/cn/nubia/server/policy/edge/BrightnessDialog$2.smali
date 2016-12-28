@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 105
     iput-object p1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog$2;->this$0:Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 108
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog$2;->this$0:Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     # getter for: Lcn/nubia/server/policy/edge/BrightnessDialog;->mUiHandler:Landroid/os/Handler;
@@ -51,7 +49,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 109
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog$2;->this$0:Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     # getter for: Lcn/nubia/server/policy/edge/BrightnessDialog;->mUiHandler:Landroid/os/Handler;
@@ -61,6 +58,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 110
     return-void
 .end method

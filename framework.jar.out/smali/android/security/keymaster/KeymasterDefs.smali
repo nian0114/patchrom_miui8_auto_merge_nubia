@@ -326,14 +326,12 @@
     .locals 3
 
     .prologue
-    .line 218
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
-    .line 220
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, 0x0
@@ -346,7 +344,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 221
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x2
@@ -359,7 +356,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 222
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x3
@@ -372,7 +368,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 223
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x4
@@ -385,7 +380,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 224
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x5
@@ -398,7 +392,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 225
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x6
@@ -411,7 +404,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 226
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x7
@@ -424,7 +416,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 227
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x8
@@ -437,7 +428,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 228
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x9
@@ -450,7 +440,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 230
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xa
@@ -463,7 +452,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 231
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xb
@@ -476,7 +464,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 232
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xc
@@ -489,7 +476,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 233
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xd
@@ -502,7 +488,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xe
@@ -515,7 +500,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 235
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xf
@@ -528,7 +512,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x10
@@ -541,7 +524,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x11
@@ -554,7 +536,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 239
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x12
@@ -567,7 +548,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 240
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x15
@@ -580,7 +560,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 241
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x18
@@ -593,7 +572,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x19
@@ -606,7 +584,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 243
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x1a
@@ -619,7 +596,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 244
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x1c
@@ -632,7 +608,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 245
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x1e
@@ -645,7 +620,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 246
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x1f
@@ -658,7 +632,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 247
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x21
@@ -671,7 +644,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 248
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x26
@@ -684,7 +656,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 249
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x27
@@ -697,7 +668,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 250
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x28
@@ -710,7 +680,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 251
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x29
@@ -723,7 +692,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 252
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x32
@@ -736,7 +704,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 253
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x33
@@ -749,7 +716,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 254
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x34
@@ -762,7 +728,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 255
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x37
@@ -775,7 +740,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 257
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x39
@@ -788,7 +752,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x64
@@ -801,7 +764,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 260
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x3e8
@@ -814,7 +776,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 261
     return-void
 .end method
 
@@ -822,7 +783,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -833,7 +793,6 @@
     .param p0, "errorCode"    # I
 
     .prologue
-    .line 268
     sget-object v1, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -846,11 +805,9 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 269
     .local v0, "result":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 272
     .end local v0    # "result":Ljava/lang/String;
     :goto_0
     return-object v0
@@ -869,7 +826,6 @@
     .param p0, "tag"    # I
 
     .prologue
-    .line 264
     const/high16 v0, -0x10000000
 
     and-int/2addr v0, p0

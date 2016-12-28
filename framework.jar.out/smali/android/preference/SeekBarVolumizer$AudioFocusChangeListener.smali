@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 472
     iput-object p1, p0, Landroid/preference/SeekBarVolumizer$AudioFocusChangeListener;->this$0:Landroid/preference/SeekBarVolumizer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Landroid/preference/SeekBarVolumizer$1;
 
     .prologue
-    .line 472
     invoke-direct {p0, p1}, Landroid/preference/SeekBarVolumizer$AudioFocusChangeListener;-><init>(Landroid/preference/SeekBarVolumizer;)V
 
     return-void
@@ -53,14 +51,11 @@
     .param p1, "focusChange"    # I
 
     .prologue
-    .line 475
     packed-switch p1, :pswitch_data_0
 
-    .line 485
     :goto_0
     return-void
 
-    .line 479
     :pswitch_0
     iget-object v0, p0, Landroid/preference/SeekBarVolumizer$AudioFocusChangeListener;->this$0:Landroid/preference/SeekBarVolumizer;
 
@@ -71,13 +66,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 480
     iget-object v0, p0, Landroid/preference/SeekBarVolumizer$AudioFocusChangeListener;->this$0:Landroid/preference/SeekBarVolumizer;
 
     # invokes: Landroid/preference/SeekBarVolumizer;->postStopSample()V
     invoke-static {v0}, Landroid/preference/SeekBarVolumizer;->access$2200(Landroid/preference/SeekBarVolumizer;)V
 
-    .line 482
     :cond_0
     iget-object v0, p0, Landroid/preference/SeekBarVolumizer$AudioFocusChangeListener;->this$0:Landroid/preference/SeekBarVolumizer;
 
@@ -86,7 +79,6 @@
 
     goto :goto_0
 
-    .line 475
     nop
 
     :pswitch_data_0

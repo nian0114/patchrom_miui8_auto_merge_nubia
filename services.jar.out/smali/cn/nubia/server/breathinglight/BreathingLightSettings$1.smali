@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 48
     iput-object p1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$1;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,7 +39,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 51
     const-string v0, "led_light_brightness_mode"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -53,18 +51,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 53
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$1;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     # invokes: Lcn/nubia/server/breathinglight/BreathingLightSettings;->brightnessModeChange()V
     invoke-static {v0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->access$000(Lcn/nubia/server/breathinglight/BreathingLightSettings;)V
 
-    .line 66
     :cond_0
     :goto_0
     return-void
 
-    .line 54
     :cond_1
     const-string v0, "led_light_brightness"
 
@@ -78,7 +73,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 56
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$1;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     # invokes: Lcn/nubia/server/breathinglight/BreathingLightSettings;->manualBrightnessChange()V
@@ -86,7 +80,6 @@
 
     goto :goto_0
 
-    .line 57
     :cond_2
     const-string v0, "notificationsettings"
 
@@ -100,7 +93,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 59
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$1;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     # invokes: Lcn/nubia/server/breathinglight/BreathingLightSettings;->notificationSettingsChange()V
@@ -108,7 +100,6 @@
 
     goto :goto_0
 
-    .line 60
     :cond_3
     const-string v0, "single_ui_mode"
 
@@ -122,7 +113,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 61
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$1;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     # invokes: Lcn/nubia/server/breathinglight/BreathingLightSettings;->singleUiModeChange()V
@@ -130,7 +120,6 @@
 
     goto :goto_0
 
-    .line 62
     :cond_4
     const-string v0, "led_no_disturb_enable"
 
@@ -144,7 +133,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 64
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$1;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     # invokes: Lcn/nubia/server/breathinglight/BreathingLightSettings;->noDisturbModeChange()V

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 530
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "x0"    # Lnubia/util/FrameworkDataStatisticsManager$1;
 
     .prologue
-    .line 530
     invoke-direct {p0}, Lnubia/util/FrameworkDataStatisticsManager$OnPause;-><init>()V
 
     return-void
@@ -51,9 +49,7 @@
     .end annotation
 
     .prologue
-    .line 534
     invoke-interface {p1}, Lnubia/util/IFrameworkDataStatisticsService;->onPause()V
 
-    .line 535
     return-void
 .end method

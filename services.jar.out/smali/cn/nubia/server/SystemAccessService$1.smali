@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 50
     iput-object p1, p0, Lcn/nubia/server/SystemAccessService$1;->this$0:Lcn/nubia/server/SystemAccessService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,23 +39,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 53
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 59
     :goto_0
     return-void
 
-    .line 55
     :pswitch_0
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$1;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # setter for: Lcn/nubia/server/SystemAccessService;->Flag_EndCall:Z
     invoke-static {v0, v1}, Lcn/nubia/server/SystemAccessService;->access$002(Lcn/nubia/server/SystemAccessService;Z)Z
 
-    .line 56
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$1;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # setter for: Lcn/nubia/server/SystemAccessService;->Flag_Home:Z
@@ -64,7 +59,6 @@
 
     goto :goto_0
 
-    .line 53
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_0

@@ -32,11 +32,9 @@
     .param p1, "file"    # Ljava/io/File;
 
     .prologue
-    .line 25
     .local p0, "this":Lcn/nubia/server/appmgmt/XmlOperator;, "Lcn/nubia/server/appmgmt/XmlOperator<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -63,17 +61,14 @@
     :goto_0
     iput-boolean v0, p0, Lcn/nubia/server/appmgmt/XmlOperator;->mDumpDebugLog:Z
 
-    .line 26
     new-instance v0, Landroid/util/AtomicFile;
 
     invoke-direct {v0, p1}, Landroid/util/AtomicFile;-><init>(Ljava/io/File;)V
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/XmlOperator;->mFile:Landroid/util/AtomicFile;
 
-    .line 27
     return-void
 
-    .line 20
     :cond_1
     const/4 v0, 0x0
 
@@ -102,16 +97,13 @@
     .local p0, "this":Lcn/nubia/server/appmgmt/XmlOperator;, "Lcn/nubia/server/appmgmt/XmlOperator<TT;>;"
     const/4 v9, 0x2
 
-    .line 54
     const/4 v3, 0x0
 
-    .line 55
     .local v3, "temp":Ljava/lang/Object;, "TT;"
     iget-object v8, p0, Lcn/nubia/server/appmgmt/XmlOperator;->mFile:Landroid/util/AtomicFile;
 
     monitor-enter v8
 
-    .line 56
     :try_start_0
     iget-object v6, p0, Lcn/nubia/server/appmgmt/XmlOperator;->mFile:Landroid/util/AtomicFile;
 
@@ -125,13 +117,11 @@
     .local v1, "fis":Ljava/io/FileInputStream;
     const/4 v7, 0x0
 
-    .line 57
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v2
 
-    .line 58
     .local v2, "parser":Lorg/xmlpull/v1/XmlPullParser;
     sget-object v6, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -141,7 +131,6 @@
 
     invoke-interface {v2, v1, v6}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 61
     :cond_0
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -154,11 +143,9 @@
 
     if-ne v4, v6, :cond_0
 
-    .line 64
     :cond_1
     if-eq v4, v9, :cond_5
 
-    .line 65
     const-string v6, "XmlOperator"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -194,7 +181,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 74
     if-eqz v1, :cond_2
 
     if-eqz v7, :cond_4
@@ -213,7 +199,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 78
     .end local v1    # "fis":Ljava/io/FileInputStream;
     .end local v2    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v3    # "temp":Ljava/lang/Object;, "TT;"
@@ -221,7 +206,6 @@
     :goto_1
     return-object v3
 
-    .line 74
     .restart local v1    # "fis":Ljava/io/FileInputStream;
     .restart local v2    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .restart local v3    # "temp":Ljava/lang/Object;, "TT;"
@@ -246,12 +230,10 @@
     :catch_1
     move-exception v0
 
-    .line 75
     .local v0, "e":Ljava/lang/Exception;
     :try_start_5
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 76
     const-string v6, "XmlOperator"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -284,7 +266,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_3
     :goto_2
@@ -292,7 +273,6 @@
 
     goto :goto_1
 
-    .line 79
     :catchall_0
     move-exception v6
 
@@ -302,7 +282,6 @@
 
     throw v6
 
-    .line 74
     .restart local v1    # "fis":Ljava/io/FileInputStream;
     .restart local v2    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .restart local v3    # "temp":Ljava/lang/Object;, "TT;"
@@ -316,7 +295,6 @@
 
     goto :goto_0
 
-    .line 68
     :cond_5
     :try_start_7
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -331,7 +309,6 @@
 
     if-nez v6, :cond_8
 
-    .line 69
     const-string v6, "XmlOperator"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -367,7 +344,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_4
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 74
     if-eqz v1, :cond_6
 
     if-eqz v7, :cond_7
@@ -406,7 +382,6 @@
 
     goto :goto_3
 
-    .line 72
     :cond_8
     :try_start_b
     invoke-virtual {p0, v2}, Lcn/nubia/server/appmgmt/XmlOperator;->readDataXml(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/Object;
@@ -416,7 +391,6 @@
 
     move-result-object v3
 
-    .line 74
     if-eqz v1, :cond_3
 
     if-eqz v7, :cond_9
@@ -448,7 +422,6 @@
 
     goto :goto_2
 
-    .line 56
     .end local v2    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v4    # "type":I
     :catch_4
@@ -459,7 +432,6 @@
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_1
 
-    .line 74
     :catchall_1
     move-exception v7
 
@@ -538,12 +510,10 @@
     .local p1, "data":Ljava/lang/Object;, "TT;"
     const/4 v7, 0x0
 
-    .line 30
     iget-object v8, p0, Lcn/nubia/server/appmgmt/XmlOperator;->mFile:Landroid/util/AtomicFile;
 
     monitor-enter v8
 
-    .line 31
     :try_start_0
     iget-object v5, p0, Lcn/nubia/server/appmgmt/XmlOperator;->mFile:Landroid/util/AtomicFile;
 
@@ -557,7 +527,6 @@
     .local v2, "fos":Ljava/io/FileOutputStream;
     const/4 v9, 0x0
 
-    .line 32
     :try_start_1
     new-instance v0, Ljava/io/BufferedOutputStream;
 
@@ -570,13 +539,11 @@
     .local v0, "bos":Ljava/io/BufferedOutputStream;
     const/4 v5, 0x0
 
-    .line 33
     :try_start_2
     new-instance v3, Lcom/android/internal/util/FastXmlSerializer;
 
     invoke-direct {v3}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 34
     .local v3, "serializer":Lorg/xmlpull/v1/XmlSerializer;
     sget-object v6, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -586,7 +553,6 @@
 
     invoke-interface {v3, v0, v6}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 35
     const/4 v6, 0x0
 
     const/4 v10, 0x1
@@ -597,29 +563,24 @@
 
     invoke-interface {v3, v6, v10}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 36
     const/4 v6, 0x0
 
     const-string v10, "XML"
 
     invoke-interface {v3, v6, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 37
     monitor-enter p1
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_5
 
-    .line 38
     :try_start_3
     invoke-virtual {p0, v0, v3, p1}, Lcn/nubia/server/appmgmt/XmlOperator;->writeDataXml(Ljava/io/BufferedOutputStream;Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/Object;)V
 
-    .line 39
     monitor-exit p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 40
     const/4 v6, 0x0
 
     :try_start_4
@@ -627,10 +588,8 @@
 
     invoke-interface {v3, v6, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 41
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 42
     iget-object v6, p0, Lcn/nubia/server/appmgmt/XmlOperator;->mFile:Landroid/util/AtomicFile;
 
     invoke-virtual {v6, v2}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
@@ -638,7 +597,6 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_5
 
-    .line 43
     if-eqz v0, :cond_0
 
     if-eqz v7, :cond_4
@@ -650,7 +608,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
-    .line 47
     .end local v0    # "bos":Ljava/io/BufferedOutputStream;
     .end local v3    # "serializer":Lorg/xmlpull/v1/XmlSerializer;
     :cond_0
@@ -666,7 +623,6 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 50
     .end local v2    # "fos":Ljava/io/FileOutputStream;
     :cond_1
     :goto_1
@@ -675,10 +631,8 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 51
     return-void
 
-    .line 39
     .restart local v0    # "bos":Ljava/io/BufferedOutputStream;
     .restart local v2    # "fos":Ljava/io/FileOutputStream;
     .restart local v3    # "serializer":Lorg/xmlpull/v1/XmlSerializer;
@@ -696,7 +650,6 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_0
     .catchall {:try_start_9 .. :try_end_9} :catchall_5
 
-    .line 32
     .end local v3    # "serializer":Lorg/xmlpull/v1/XmlSerializer;
     :catch_0
     move-exception v5
@@ -706,7 +659,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 43
     :catchall_1
     move-exception v6
 
@@ -741,14 +693,12 @@
     :catch_1
     move-exception v1
 
-    .line 44
     .local v1, "e":Ljava/lang/Exception;
     :try_start_d
     iget-object v5, p0, Lcn/nubia/server/appmgmt/XmlOperator;->mFile:Landroid/util/AtomicFile;
 
     invoke-virtual {v5, v2}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 45
     const-string v5, "XmlOperator"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -786,7 +736,6 @@
 
     goto :goto_0
 
-    .line 31
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v5
@@ -796,7 +745,6 @@
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_2
 
-    .line 47
     :catchall_2
     move-exception v6
 
@@ -828,7 +776,6 @@
     :catch_3
     move-exception v1
 
-    .line 48
     .restart local v1    # "e":Ljava/lang/Exception;
     :try_start_11
     const-string v5, "XmlOperator"
@@ -865,7 +812,6 @@
 
     goto :goto_1
 
-    .line 50
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_3
     move-exception v5
@@ -876,7 +822,6 @@
 
     throw v5
 
-    .line 43
     .restart local v0    # "bos":Ljava/io/BufferedOutputStream;
     .restart local v2    # "fos":Ljava/io/FileOutputStream;
     .restart local v3    # "serializer":Lorg/xmlpull/v1/XmlSerializer;
@@ -889,7 +834,6 @@
 
     goto :goto_0
 
-    .line 47
     .end local v0    # "bos":Ljava/io/BufferedOutputStream;
     .end local v3    # "serializer":Lorg/xmlpull/v1/XmlSerializer;
     .end local v4    # "x2":Ljava/lang/Throwable;
@@ -898,7 +842,6 @@
 
     goto :goto_4
 
-    .line 43
     .restart local v0    # "bos":Ljava/io/BufferedOutputStream;
     .restart local v3    # "serializer":Lorg/xmlpull/v1/XmlSerializer;
     :cond_4
@@ -925,7 +868,6 @@
 
     goto :goto_3
 
-    .line 47
     .end local v0    # "bos":Ljava/io/BufferedOutputStream;
     :catch_6
     move-exception v4
@@ -959,7 +901,6 @@
 
     goto :goto_5
 
-    .line 43
     .restart local v0    # "bos":Ljava/io/BufferedOutputStream;
     :catchall_5
     move-exception v5

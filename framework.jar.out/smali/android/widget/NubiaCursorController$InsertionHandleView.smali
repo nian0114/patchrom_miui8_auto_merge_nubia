@@ -33,13 +33,10 @@
     .param p3, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 455
     iput-object p1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->this$0:Landroid/widget/NubiaCursorController;
 
-    .line 456
     invoke-direct {p0, p1, p2, p3, p3}, Landroid/widget/NubiaCursorController$NubiaHandleView;-><init>(Landroid/widget/NubiaCursorController;Landroid/widget/Editor;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 457
     return-void
 .end method
 
@@ -47,19 +44,16 @@
     .locals 2
 
     .prologue
-    .line 460
     iget-object v0, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mHiderRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 461
     iget-object v0, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mTextView:Landroid/widget/TextView;
 
     iget-object v1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mHiderRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 462
     :cond_0
     return-void
 .end method
@@ -70,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 466
     iget-object v0, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getSelectionStart()I
@@ -85,7 +78,6 @@
     .param p1, "outLocation"    # [I
 
     .prologue
-    .line 471
     const/4 v0, 0x0
 
     iget v1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mContainerX:I
@@ -96,7 +88,6 @@
 
     aput v1, p1, v0
 
-    .line 472
     const/4 v0, 0x1
 
     iget v1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mContainerY:I
@@ -107,7 +98,6 @@
 
     aput v1, p1, v0
 
-    .line 473
     return-void
 .end method
 
@@ -117,7 +107,6 @@
     .param p2, "isRtlRun"    # Z
 
     .prologue
-    .line 477
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
@@ -140,22 +129,18 @@
     .param p1, "delay"    # I
 
     .prologue
-    .line 481
     invoke-direct {p0}, Landroid/widget/NubiaCursorController$InsertionHandleView;->removeHiderCallback()V
 
-    .line 482
     iget-object v0, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mHiderRunnable:Ljava/lang/Runnable;
 
     if-nez v0, :cond_0
 
-    .line 483
     new-instance v0, Landroid/widget/NubiaCursorController$InsertionHandleView$1;
 
     invoke-direct {v0, p0}, Landroid/widget/NubiaCursorController$InsertionHandleView$1;-><init>(Landroid/widget/NubiaCursorController$InsertionHandleView;)V
 
     iput-object v0, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mHiderRunnable:Ljava/lang/Runnable;
 
-    .line 489
     :cond_0
     iget-object v0, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mTextView:Landroid/widget/TextView;
 
@@ -165,7 +150,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/TextView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 490
     return-void
 .end method
 
@@ -173,13 +157,10 @@
     .locals 0
 
     .prologue
-    .line 493
     invoke-super {p0}, Landroid/widget/NubiaCursorController$NubiaHandleView;->onDetached()V
 
-    .line 494
     invoke-direct {p0}, Landroid/widget/NubiaCursorController$InsertionHandleView;->removeHiderCallback()V
 
-    .line 495
     return-void
 .end method
 
@@ -190,14 +171,12 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 498
     iget-object v4, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mDrawableMark:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v2
 
-    .line 499
     .local v2, "markWidth":I
     iget v4, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mRight:I
 
@@ -209,11 +188,9 @@
 
     div-int/lit8 v1, v4, 0x2
 
-    .line 500
     .local v1, "left":I
     add-int v3, v1, v2
 
-    .line 501
     .local v3, "right":I
     iget v4, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mBottom:I
 
@@ -235,18 +212,15 @@
 
     float-to-int v0, v4
 
-    .line 503
     .local v0, "bottom":I
     iget-object v4, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mDrawableMark:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, v1, v8, v3, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 504
     iget-object v4, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mDrawableMark:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 505
     iget-object v4, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v5, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mBottom:I
@@ -275,12 +249,10 @@
 
     invoke-virtual {v4, v8, v5, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 508
     iget-object v4, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 509
     return-void
 .end method
 
@@ -288,13 +260,10 @@
     .locals 0
 
     .prologue
-    .line 512
     invoke-super {p0}, Landroid/widget/NubiaCursorController$NubiaHandleView;->onHandleMoved()V
 
-    .line 513
     invoke-direct {p0}, Landroid/widget/NubiaCursorController$InsertionHandleView;->removeHiderCallback()V
 
-    .line 514
     return-void
 .end method
 
@@ -303,14 +272,12 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 517
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 528
     :goto_0
     :pswitch_0
     invoke-super {p0, p1}, Landroid/widget/NubiaCursorController$NubiaHandleView;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -319,7 +286,6 @@
 
     return v0
 
-    .line 523
     :pswitch_1
     const/16 v0, 0xbb8
 
@@ -327,7 +293,6 @@
 
     goto :goto_0
 
-    .line 517
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -341,10 +306,8 @@
     .locals 0
 
     .prologue
-    .line 532
     invoke-super {p0}, Landroid/widget/NubiaCursorController$NubiaHandleView;->show()V
 
-    .line 533
     return-void
 .end method
 
@@ -354,28 +317,23 @@
     .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 537
     iget-object v1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLineHeight()I
 
     move-result v0
 
-    .line 538
     .local v0, "lineheight":I
     iget v1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mLineHeight:I
 
     if-ne v1, v0, :cond_0
 
-    .line 551
     :goto_0
     return-void
 
-    .line 540
     :cond_0
     iput v0, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mLineHeight:I
 
-    .line 541
     iget v1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mMinHandleRatio:F
 
     iget v2, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mMarkHeightMatchHandleHeight:I
@@ -390,17 +348,14 @@
 
     iput v1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mRatio:F
 
-    .line 543
     iget v1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mRatio:F
 
     cmpl-float v1, v1, v3
 
     if-lez v1, :cond_1
 
-    .line 544
     iput v3, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mRatio:F
 
-    .line 545
     :cond_1
     iget-object v1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mContainer:Landroid/widget/PopupWindow;
 
@@ -420,7 +375,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/PopupWindow;->setWidth(I)V
 
-    .line 546
     iget-object v1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mContainer:Landroid/widget/PopupWindow;
 
     int-to-float v2, v0
@@ -443,10 +397,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/PopupWindow;->setHeight(I)V
 
-    .line 548
     iput v0, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mHandleTypeOffset:I
 
-    .line 549
     const v1, -0x41666666    # -0.3f
 
     int-to-float v2, v0
@@ -455,7 +407,6 @@
 
     iput v1, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mTouchOffsetY:F
 
-    .line 550
     const v1, 0x3f333333    # 0.7f
 
     int-to-float v2, v0
@@ -473,7 +424,6 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 555
     iget-object v0, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1, p2}, Landroid/widget/TextView;->getOffsetForPosition(FF)I
@@ -484,7 +434,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/widget/NubiaCursorController$InsertionHandleView;->positionAtCursorOffset(IZ)V
 
-    .line 556
     return-void
 .end method
 
@@ -500,20 +449,17 @@
 
     const/4 v8, 0x0
 
-    .line 560
     iget-object v6, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v6}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v0
 
-    .line 561
     .local v0, "layout":Landroid/text/Layout;
     invoke-virtual {v0, p1}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v1
 
-    .line 562
     .local v1, "line":I
     invoke-virtual {v0, p1}, Landroid/text/Layout;->getPrimaryHorizontal(I)F
 
@@ -533,14 +479,12 @@
 
     iput v6, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mPositionX:I
 
-    .line 563
     invoke-virtual {v0, v1}, Landroid/text/Layout;->getLineTop(I)I
 
     move-result v6
 
     iput v6, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mPositionY:I
 
-    .line 564
     iget v6, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mPositionX:I
 
     iget-object v7, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mTextView:Landroid/widget/TextView;
@@ -553,7 +497,6 @@
 
     iput v6, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mPositionX:I
 
-    .line 565
     iget v6, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mPositionY:I
 
     iget-object v7, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mTextView:Landroid/widget/TextView;
@@ -566,23 +509,18 @@
 
     iput v6, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mPositionY:I
 
-    .line 566
     if-eqz p2, :cond_2
 
-    .line 567
     new-array v2, v10, [I
 
-    .line 568
     .local v2, "location":[I
     iget-object v4, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mTextView:Landroid/widget/TextView;
 
-    .line 569
     .local v4, "view":Landroid/view/View;
     invoke-virtual {v4}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v5
 
-    .line 570
     .local v5, "viewParent":Landroid/view/ViewParent;
     :goto_0
     instance-of v6, v5, Landroid/view/View;
@@ -591,33 +529,26 @@
 
     move-object v4, v5
 
-    .line 571
     check-cast v4, Landroid/view/View;
 
-    .line 572
     invoke-virtual {v4}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v5
 
     goto :goto_0
 
-    .line 574
     :cond_0
     iget-object v6, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v6, v2}, Landroid/widget/TextView;->getLocationOnScreen([I)V
 
-    .line 576
     new-array v3, v10, [I
 
-    .line 577
     .local v3, "locationViewParent":[I
     invoke-virtual {v4, v3}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 579
     if-eqz v5, :cond_1
 
-    .line 580
     aget v6, v2, v8
 
     aget v7, v3, v8
@@ -626,7 +557,6 @@
 
     aput v6, v2, v8
 
-    .line 581
     aget v6, v2, v9
 
     aget v7, v3, v9
@@ -635,7 +565,6 @@
 
     aput v6, v2, v9
 
-    .line 584
     :cond_1
     aget v6, v2, v8
 
@@ -645,7 +574,6 @@
 
     iput v6, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mContainerX:I
 
-    .line 585
     aget v6, v2, v9
 
     iget v7, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mPositionY:I
@@ -654,7 +582,6 @@
 
     iput v6, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mContainerY:I
 
-    .line 587
     .end local v2    # "location":[I
     .end local v3    # "locationViewParent":[I
     .end local v4    # "view":Landroid/view/View;
@@ -668,11 +595,9 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 591
     iget-object v0, p0, Landroid/widget/NubiaCursorController$InsertionHandleView;->mEditor:Landroid/widget/Editor;
 
     invoke-virtual {v0, p1, p1}, Landroid/widget/Editor;->setTextSelectionWrap(II)V
 
-    .line 592
     return-void
 .end method

@@ -68,7 +68,3 @@ if [ $1 = "SecurityCenter" ];then
     applyPatch $1 $2
     isPatchrom $2
 fi
-
-if [ $1 = "Settings" ];then
-    changeID $2 XXHDPI
-fi

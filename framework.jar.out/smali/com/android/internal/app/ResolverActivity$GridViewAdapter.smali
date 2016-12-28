@@ -52,22 +52,17 @@
     .end annotation
 
     .prologue
-    .line 1015
     .local p3, "displayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;>;"
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 1016
     iput-object p2, p0, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->mContext:Landroid/content/Context;
 
-    .line 1017
     iput-object p3, p0, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->mDisplayList:Ljava/util/ArrayList;
 
-    .line 1018
     iput-object p4, p0, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 1019
     return-void
 .end method
 
@@ -77,14 +72,12 @@
     .param p2, "info"    # Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 1059
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/internal/app/ResolverActivity$ViewHolder;
 
-    .line 1060
     .local v0, "holder":Lcom/android/internal/app/ResolverActivity$ViewHolder;
     iget-object v1, v0, Lcom/android/internal/app/ResolverActivity$ViewHolder;->text:Landroid/widget/TextView;
 
@@ -94,7 +87,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1061
     instance-of v1, p2, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     if-eqz v1, :cond_0
@@ -105,7 +97,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1063
     new-instance v1, Lcom/android/internal/app/ResolverActivity$LoadAdapterIconTask;
 
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -118,7 +109,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/app/ResolverActivity$LoadAdapterIconTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 1066
     :cond_0
     iget-object v1, v0, Lcom/android/internal/app/ResolverActivity$ViewHolder;->icon:Landroid/widget/ImageView;
 
@@ -128,7 +118,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1067
     return-void
 .end method
 
@@ -138,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 1022
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->mDisplayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -153,7 +141,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1026
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->mDisplayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -168,7 +155,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1030
     int-to-long v0, p1
 
     return-wide v0
@@ -181,10 +167,8 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 1035
     if-nez p2, :cond_1
 
-    .line 1036
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v4, 0x3030024
@@ -195,24 +179,20 @@
 
     move-result-object v2
 
-    .line 1039
     .local v2, "view":Landroid/view/View;
     new-instance v0, Lcom/android/internal/app/ResolverActivity$ViewHolder;
 
     invoke-direct {v0, v2}, Lcom/android/internal/app/ResolverActivity$ViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 1040
     .local v0, "holder":Lcom/android/internal/app/ResolverActivity$ViewHolder;
     invoke-virtual {v2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 1043
     iget-object v3, v0, Lcom/android/internal/app/ResolverActivity$ViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {v3}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 1044
     .local v1, "lp":Landroid/view/ViewGroup$LayoutParams;
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -225,7 +205,6 @@
 
     iput v3, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 1048
     .end local v0    # "holder":Lcom/android/internal/app/ResolverActivity$ViewHolder;
     .end local v1    # "lp":Landroid/view/ViewGroup$LayoutParams;
     :goto_0
@@ -237,7 +216,6 @@
 
     if-nez v3, :cond_0
 
-    .line 1049
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->mDisplayList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -248,11 +226,9 @@
 
     invoke-direct {p0, v2, v3}, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->bindView(Landroid/view/View;Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;)V
 
-    .line 1051
     :cond_0
     return-object v2
 
-    .line 1046
     .end local v2    # "view":Landroid/view/View;
     :cond_1
     move-object v2, p2
@@ -266,7 +242,6 @@
     .param p1, "info"    # Lcom/android/internal/app/ResolverActivity$TargetInfo;
 
     .prologue
-    .line 1055
     invoke-interface {p1}, Lcom/android/internal/app/ResolverActivity$TargetInfo;->getDisplayLabel()Ljava/lang/CharSequence;
 
     move-result-object v0

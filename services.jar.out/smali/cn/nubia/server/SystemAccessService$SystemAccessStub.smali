@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 63
     iput-object p1, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     invoke-direct {p0}, Lnubia/os/ISystemAccess$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 103
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # getter for: Lcn/nubia/server/SystemAccessService;->mSnapshotBm:Landroid/graphics/Bitmap;
@@ -60,7 +58,6 @@
 
     if-nez v0, :cond_0
 
-    .line 104
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # getter for: Lcn/nubia/server/SystemAccessService;->mSnapshotBm:Landroid/graphics/Bitmap;
@@ -70,7 +67,6 @@
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 105
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     const/4 v1, 0x0
@@ -78,7 +74,6 @@
     # setter for: Lcn/nubia/server/SystemAccessService;->mSnapshotBm:Landroid/graphics/Bitmap;
     invoke-static {v0, v1}, Lcn/nubia/server/SystemAccessService;->access$302(Lcn/nubia/server/SystemAccessService;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 107
     :cond_0
     return-void
 .end method
@@ -88,7 +83,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 118
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # invokes: Lcn/nubia/server/SystemAccessService;->enablePalmDetect(Z)Z
@@ -104,7 +98,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # invokes: Lcn/nubia/server/SystemAccessService;->enableWake(Z)Z
@@ -125,12 +118,10 @@
     .end annotation
 
     .prologue
-    .line 83
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 84
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # getter for: Lcn/nubia/server/SystemAccessService;->Flag_EndCall:Z
@@ -138,7 +129,6 @@
 
     move-result v0
 
-    .line 86
     :goto_0
     return v0
 
@@ -157,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # getter for: Lcn/nubia/server/SystemAccessService;->mSnapshotBm:Landroid/graphics/Bitmap;
@@ -174,7 +163,6 @@
     .param p2, "h"    # I
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # getter for: Lcn/nubia/server/SystemAccessService;->mSnapshotBm:Landroid/graphics/Bitmap;
@@ -197,7 +185,6 @@
 
     if-nez v0, :cond_0
 
-    .line 94
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # getter for: Lcn/nubia/server/SystemAccessService;->mSnapshotBm:Landroid/graphics/Bitmap;
@@ -207,7 +194,6 @@
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 95
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
@@ -218,7 +204,6 @@
     # setter for: Lcn/nubia/server/SystemAccessService;->mSnapshotBm:Landroid/graphics/Bitmap;
     invoke-static {v0, v1}, Lcn/nubia/server/SystemAccessService;->access$302(Lcn/nubia/server/SystemAccessService;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 96
     return-void
 .end method
 
@@ -233,19 +218,16 @@
     .end annotation
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # setter for: Lcn/nubia/server/SystemAccessService;->Flag_EndCall:Z
     invoke-static {v0, p1}, Lcn/nubia/server/SystemAccessService;->access$002(Lcn/nubia/server/SystemAccessService;Z)Z
 
-    .line 78
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # setter for: Lcn/nubia/server/SystemAccessService;->Flag_Home:Z
     invoke-static {v0, p2}, Lcn/nubia/server/SystemAccessService;->access$102(Lcn/nubia/server/SystemAccessService;Z)Z
 
-    .line 79
     return-void
 .end method
 
@@ -261,19 +243,16 @@
     .end annotation
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # setter for: Lcn/nubia/server/SystemAccessService;->Flag_EndCall:Z
     invoke-static {v0, p1}, Lcn/nubia/server/SystemAccessService;->access$002(Lcn/nubia/server/SystemAccessService;Z)Z
 
-    .line 69
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # setter for: Lcn/nubia/server/SystemAccessService;->Flag_Home:Z
     invoke-static {v0, p2}, Lcn/nubia/server/SystemAccessService;->access$102(Lcn/nubia/server/SystemAccessService;Z)Z
 
-    .line 70
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;->this$0:Lcn/nubia/server/SystemAccessService;
 
     # getter for: Lcn/nubia/server/SystemAccessService;->mHandler:Landroid/os/Handler;
@@ -287,6 +266,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 72
     return-void
 .end method

@@ -84,7 +84,6 @@
     .prologue
     const/16 v3, 0x8
 
-    .line 73
     const/16 v0, 0x9
 
     new-array v0, v0, [[I
@@ -161,14 +160,12 @@
 
     sput-object v0, Lcn/nubia/server/display/NBAutoBrightnessController;->lightArrary:[[I
 
-    .line 83
     const/4 v0, -0x1
 
     sput v0, Lcn/nubia/server/display/NBAutoBrightnessController;->lcd_auto_brightness_level:I
 
     return-void
 
-    .line 73
     nop
 
     :array_0
@@ -286,20 +283,16 @@
     .param p2, "callback"    # Lcn/nubia/server/display/INBAutoBrightnessCallback;
 
     .prologue
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     const/4 v1, 0x1
 
     iput v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->MIN_NB_AUTO_BRIGHTNESS:I
 
-    .line 70
     const/16 v1, 0xff
 
     iput v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->MAX_NB_AUTO_BRIGHTNESS:I
 
-    .line 99
     new-instance v1, Lcn/nubia/server/display/NBAutoBrightnessController$1;
 
     new-instance v2, Landroid/os/Handler;
@@ -310,25 +303,20 @@
 
     iput-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mAdjustObserver:Landroid/database/ContentObserver;
 
-    .line 306
     new-instance v1, Lcn/nubia/server/display/NBAutoBrightnessController$2;
 
     invoke-direct {v1, p0}, Lcn/nubia/server/display/NBAutoBrightnessController$2;-><init>(Lcn/nubia/server/display/NBAutoBrightnessController;)V
 
     iput-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensorListener:Landroid/hardware/SensorEventListener;
 
-    .line 108
     iput-object p1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
-    .line 109
     iput-object p2, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mCallback:Lcn/nubia/server/display/INBAutoBrightnessCallback;
 
-    .line 111
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 112
     .local v0, "resources":Landroid/content/res/Resources;
     const v1, 0x3080003
 
@@ -338,7 +326,6 @@
 
     iput-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mAutoBrightnessLevels:[I
 
-    .line 114
     const v1, 0x3080004
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -347,7 +334,6 @@
 
     iput-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mLcdBacklightValues:[I
 
-    .line 117
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     const-string v2, "sensor"
@@ -360,12 +346,10 @@
 
     iput-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 119
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-eqz v1, :cond_0
 
-    .line 120
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/16 v2, 0x8
@@ -376,13 +360,11 @@
 
     iput-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensor:Landroid/hardware/Sensor;
 
-    .line 125
     :cond_0
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensor:Landroid/hardware/Sensor;
 
     if-eqz v1, :cond_1
 
-    .line 126
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensor:Landroid/hardware/Sensor;
 
     invoke-virtual {v1}, Landroid/hardware/Sensor;->getMaximumRange()F
@@ -397,11 +379,9 @@
 
     iput v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximityThreshold:F
 
-    .line 130
     :cond_1
     invoke-direct {p0}, Lcn/nubia/server/display/NBAutoBrightnessController;->registerAdjustObserver()V
 
-    .line 131
     return-void
 .end method
 
@@ -410,25 +390,21 @@
     .param p1, "lightValue"    # F
 
     .prologue
-    .line 264
     const/4 v1, -0x1
 
     sget v2, Lcn/nubia/server/display/NBAutoBrightnessController;->lcd_auto_brightness_level:I
 
     if-ne v1, v2, :cond_0
 
-    .line 265
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mLcdBacklightValues:[I
 
     invoke-direct {p0, p1, v1}, Lcn/nubia/server/display/NBAutoBrightnessController;->autoBrightnessValueInit(F[I)I
 
     move-result v1
 
-    .line 274
     :goto_0
     return v1
 
-    .line 268
     :cond_0
     const/4 v0, 0x0
 
@@ -440,7 +416,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 269
     sget-object v1, Lcn/nubia/server/display/NBAutoBrightnessController;->lightArrary:[[I
 
     sget v2, Lcn/nubia/server/display/NBAutoBrightnessController;->lcd_auto_brightness_level:I
@@ -455,11 +430,9 @@
 
     if-gtz v1, :cond_2
 
-    .line 273
     :cond_1
     sput v0, Lcn/nubia/server/display/NBAutoBrightnessController;->lcd_auto_brightness_level:I
 
-    .line 274
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mLcdBacklightValues:[I
 
     sget v2, Lcn/nubia/server/display/NBAutoBrightnessController;->lcd_auto_brightness_level:I
@@ -468,7 +441,6 @@
 
     goto :goto_0
 
-    .line 268
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -480,7 +452,6 @@
     .param p0, "x0"    # Lcn/nubia/server/display/NBAutoBrightnessController;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mCallback:Lcn/nubia/server/display/INBAutoBrightnessCallback;
 
     return-object v0
@@ -491,7 +462,6 @@
     .param p0, "x0"    # Lcn/nubia/server/display/NBAutoBrightnessController;
 
     .prologue
-    .line 36
     iget-boolean v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensorEnabled:Z
 
     return v0
@@ -503,7 +473,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 36
     iput-boolean p1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mPositive:Z
 
     return p1
@@ -514,7 +483,6 @@
     .param p0, "x0"    # Lcn/nubia/server/display/NBAutoBrightnessController;
 
     .prologue
-    .line 36
     iget v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximityThreshold:F
 
     return v0
@@ -526,7 +494,6 @@
     .param p2, "values"    # [I
 
     .prologue
-    .line 254
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -537,7 +504,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 255
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mAutoBrightnessLevels:[I
 
     aget v1, v1, v0
@@ -548,11 +514,9 @@
 
     if-gez v1, :cond_1
 
-    .line 259
     :cond_0
     sput v0, Lcn/nubia/server/display/NBAutoBrightnessController;->lcd_auto_brightness_level:I
 
-    .line 260
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mLcdBacklightValues:[I
 
     sget v2, Lcn/nubia/server/display/NBAutoBrightnessController;->lcd_auto_brightness_level:I
@@ -561,7 +525,6 @@
 
     return v1
 
-    .line 254
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
@@ -575,7 +538,6 @@
     .param p3, "base"    # I
 
     .prologue
-    .line 344
     sub-int v0, p2, p1
 
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
@@ -603,7 +565,6 @@
     .locals 2
 
     .prologue
-    .line 332
     const-string v0, "persist.sys.lcd.dec.rate.base"
 
     const/4 v1, 0x3
@@ -619,7 +580,6 @@
     .locals 2
 
     .prologue
-    .line 327
     const-string v0, "persist.sys.lcd.inc.rate.base"
 
     const/4 v1, 0x2
@@ -637,10 +597,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 217
     const/4 v1, 0x0
 
-    .line 218
     .local v1, "value":I
     iget-object v3, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
@@ -656,7 +614,6 @@
 
     move-result v2
 
-    .line 221
     .local v2, "zteAutoBrightnessAdjMode":I
     iget-object v3, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
@@ -670,10 +627,8 @@
 
     invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 224
     if-nez v2, :cond_1
 
-    .line 225
     iget-object v3, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -686,13 +641,11 @@
 
     move-result v0
 
-    .line 227
     .local v0, "adj":F
     cmpg-float v3, v0, v6
 
     if-gez v3, :cond_0
 
-    .line 228
     sget v3, Lcn/nubia/server/display/NBAutoBrightnessController;->lcd_auto_brightness_level:I
 
     invoke-direct {p0, v3}, Lcn/nubia/server/display/NBAutoBrightnessController;->getZteMinAutoBrightnessAdj(I)I
@@ -711,11 +664,9 @@
 
     double-to-int v1, v4
 
-    .line 249
     :goto_0
     return v1
 
-    .line 232
     :cond_0
     sget v3, Lcn/nubia/server/display/NBAutoBrightnessController;->lcd_auto_brightness_level:I
 
@@ -737,7 +688,6 @@
 
     goto :goto_0
 
-    .line 237
     .end local v0    # "adj":F
     :cond_1
     iget-object v3, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
@@ -756,13 +706,11 @@
 
     move-result v0
 
-    .line 239
     .restart local v0    # "adj":F
     cmpg-float v3, v0, v6
 
     if-gez v3, :cond_2
 
-    .line 240
     sget v3, Lcn/nubia/server/display/NBAutoBrightnessController;->lcd_auto_brightness_level:I
 
     invoke-direct {p0, v3}, Lcn/nubia/server/display/NBAutoBrightnessController;->getZteMinAutoBrightnessAdj(I)I
@@ -783,7 +731,6 @@
 
     goto :goto_0
 
-    .line 244
     :cond_2
     sget v3, Lcn/nubia/server/display/NBAutoBrightnessController;->lcd_auto_brightness_level:I
 
@@ -811,70 +758,58 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 192
     packed-switch p1, :pswitch_data_0
 
-    .line 212
     const-string v0, "zte_auto_brightness_adj_5"
 
     :goto_0
     return-object v0
 
-    .line 194
     :pswitch_0
     const-string v0, "zte_auto_brightness_adj_0"
 
     goto :goto_0
 
-    .line 196
     :pswitch_1
     const-string v0, "zte_auto_brightness_adj_1"
 
     goto :goto_0
 
-    .line 198
     :pswitch_2
     const-string v0, "zte_auto_brightness_adj_2"
 
     goto :goto_0
 
-    .line 200
     :pswitch_3
     const-string v0, "zte_auto_brightness_adj_3"
 
     goto :goto_0
 
-    .line 202
     :pswitch_4
     const-string v0, "zte_auto_brightness_adj_4"
 
     goto :goto_0
 
-    .line 204
     :pswitch_5
     const-string v0, "zte_auto_brightness_adj_5"
 
     goto :goto_0
 
-    .line 206
     :pswitch_6
     const-string v0, "zte_auto_brightness_adj_6"
 
     goto :goto_0
 
-    .line 208
     :pswitch_7
     const-string v0, "zte_auto_brightness_adj_7"
 
     goto :goto_0
 
-    .line 210
     :pswitch_8
     const-string v0, "zte_auto_brightness_adj_8"
 
     goto :goto_0
 
-    .line 192
     nop
 
     :pswitch_data_0
@@ -896,7 +831,6 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 183
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mLcdBacklightValues:[I
 
     array-length v1, v1
@@ -905,7 +839,6 @@
 
     if-ge p1, v1, :cond_0
 
-    .line 184
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mLcdBacklightValues:[I
 
     add-int/lit8 v2, p1, 0x1
@@ -918,12 +851,10 @@
 
     sub-int v0, v1, v2
 
-    .line 188
     .local v0, "max":I
     :goto_0
     return v0
 
-    .line 186
     .end local v0    # "max":I
     :cond_0
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mLcdBacklightValues:[I
@@ -941,10 +872,8 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 173
     if-lez p1, :cond_0
 
-    .line 174
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mLcdBacklightValues:[I
 
     aget v1, v1, p1
@@ -957,12 +886,10 @@
 
     sub-int v0, v1, v2
 
-    .line 178
     .local v0, "min":I
     :goto_0
     return v0
 
-    .line 176
     .end local v0    # "min":I
     :cond_0
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mLcdBacklightValues:[I
@@ -981,7 +908,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 139
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -998,7 +924,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 142
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1015,7 +940,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 145
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1032,7 +956,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 148
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1049,7 +972,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 151
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1066,7 +988,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 154
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1083,7 +1004,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 157
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1100,7 +1020,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 160
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1117,7 +1036,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 163
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1134,7 +1052,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 166
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1151,7 +1068,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 169
     return-void
 .end method
 
@@ -1161,14 +1077,12 @@
     .locals 3
 
     .prologue
-    .line 322
     iget-boolean v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensorEnabled:Z
 
     iget-boolean v2, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mPositive:Z
 
     and-int v0, v1, v2
 
-    .line 323
     .local v0, "proximity":Z
     if-nez v0, :cond_0
 
@@ -1188,18 +1102,15 @@
     .param p1, "ambientLux"    # F
 
     .prologue
-    .line 279
     invoke-direct {p0, p1}, Lcn/nubia/server/display/NBAutoBrightnessController;->GetAutoBrightnessValue(F)I
 
     move-result v1
 
-    .line 280
     .local v1, "value":I
     invoke-direct {p0}, Lcn/nubia/server/display/NBAutoBrightnessController;->getZteAutoBrightnessAdjValue()I
 
     move-result v0
 
-    .line 281
     .local v0, "adjustment":I
     add-int v2, v1, v0
 
@@ -1212,7 +1123,6 @@
     .param p2, "newBrightness"    # I
 
     .prologue
-    .line 338
     if-le p1, p2, :cond_0
 
     invoke-static {}, Lcn/nubia/server/display/NBAutoBrightnessController;->getDecRateBase()I
@@ -1239,7 +1149,6 @@
     .param p1, "brightness"    # I
 
     .prologue
-    .line 348
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1250,7 +1159,6 @@
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 350
     return-void
 .end method
 
@@ -1259,7 +1167,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1275,10 +1182,8 @@
     :goto_0
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 136
     return-void
 
-    .line 134
     :cond_0
     const/4 v0, 0x0
 
@@ -1290,30 +1195,24 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 285
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_0
 
-    .line 287
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensor:Landroid/hardware/Sensor;
 
     if-eqz v0, :cond_0
 
-    .line 288
     if-eqz p1, :cond_1
 
-    .line 289
     iget-boolean v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensorEnabled:Z
 
     if-nez v0, :cond_0
 
-    .line 290
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensorEnabled:Z
 
-    .line 291
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensorListener:Landroid/hardware/SensorEventListener;
@@ -1324,23 +1223,19 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 304
     :cond_0
     :goto_0
     return-void
 
-    .line 296
     :cond_1
     iget-boolean v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensorEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 297
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensorEnabled:Z
 
-    .line 298
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcn/nubia/server/display/NBAutoBrightnessController;->mProximitySensorListener:Landroid/hardware/SensorEventListener;

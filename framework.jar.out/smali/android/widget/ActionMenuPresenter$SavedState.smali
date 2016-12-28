@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 833
     new-instance v0, Landroid/widget/ActionMenuPresenter$SavedState$1;
 
     invoke-direct {v0}, Landroid/widget/ActionMenuPresenter$SavedState$1;-><init>()V
@@ -53,10 +52,8 @@
     .locals 0
 
     .prologue
-    .line 816
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 817
     return-void
 .end method
 
@@ -65,17 +62,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 819
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 820
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/ActionMenuPresenter$SavedState;->openSubMenuId:I
 
-    .line 821
     return-void
 .end method
 
@@ -85,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 825
     const/4 v0, 0x0
 
     return v0
@@ -97,11 +90,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 830
     iget v0, p0, Landroid/widget/ActionMenuPresenter$SavedState;->openSubMenuId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 831
     return-void
 .end method

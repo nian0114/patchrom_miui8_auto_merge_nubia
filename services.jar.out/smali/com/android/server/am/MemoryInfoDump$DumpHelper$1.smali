@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iput-object p1, p0, Lcom/android/server/am/MemoryInfoDump$DumpHelper$1;->this$0:Lcom/android/server/am/MemoryInfoDump$DumpHelper;
 
     iput-object p2, p0, Lcom/android/server/am/MemoryInfoDump$DumpHelper$1;->val$proces:Ljava/util/ArrayList;
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 71
     iget-object v0, p0, Lcom/android/server/am/MemoryInfoDump$DumpHelper$1;->val$proces:Ljava/util/ArrayList;
 
     iget-wide v2, p0, Lcom/android/server/am/MemoryInfoDump$DumpHelper$1;->val$currentTimeMillis:J
@@ -56,6 +54,5 @@
     # invokes: Lcom/android/server/am/MemoryInfoDump$DumpHelper;->dumpMeminfoTraces(Ljava/util/List;J)V
     invoke-static {v0, v2, v3}, Lcom/android/server/am/MemoryInfoDump$DumpHelper;->access$100(Ljava/util/List;J)V
 
-    .line 72
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 222
     iput-object p1, p0, Lnubia/widget/NubiaAnalogClockWithCity$2;->this$0:Lnubia/widget/NubiaAnalogClockWithCity;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,10 +38,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 226
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 227
     iget-object v0, p0, Lnubia/widget/NubiaAnalogClockWithCity$2;->this$0:Lnubia/widget/NubiaAnalogClockWithCity;
 
     iget-object v1, p0, Lnubia/widget/NubiaAnalogClockWithCity$2;->this$0:Lnubia/widget/NubiaAnalogClockWithCity;
@@ -58,12 +55,10 @@
     # setter for: Lnubia/widget/NubiaAnalogClockWithCity;->mIs24Hour:Z
     invoke-static {v0, v1}, Lnubia/widget/NubiaAnalogClockWithCity;->access$202(Lnubia/widget/NubiaAnalogClockWithCity;Z)Z
 
-    .line 228
     iget-object v0, p0, Lnubia/widget/NubiaAnalogClockWithCity$2;->this$0:Lnubia/widget/NubiaAnalogClockWithCity;
 
     # invokes: Lnubia/widget/NubiaAnalogClockWithCity;->updateTime()V
     invoke-static {v0}, Lnubia/widget/NubiaAnalogClockWithCity;->access$300(Lnubia/widget/NubiaAnalogClockWithCity;)V
 
-    .line 229
     return-void
 .end method

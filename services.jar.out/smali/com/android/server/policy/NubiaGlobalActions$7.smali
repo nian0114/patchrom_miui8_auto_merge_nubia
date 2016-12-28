@@ -28,7 +28,6 @@
     .param p6, "x4"    # I
 
     .prologue
-    .line 412
     iput-object p1, p0, Lcom/android/server/policy/NubiaGlobalActions$7;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     move-object v0, p0
@@ -55,7 +54,6 @@
     .param p1, "buttonOn"    # Z
 
     .prologue
-    .line 431
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$7;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mHasTelephony:Z
@@ -65,12 +63,10 @@
 
     if-nez v0, :cond_1
 
-    .line 440
     :cond_0
     :goto_0
     return-void
 
-    .line 435
     :cond_1
     const-string v0, "ril.cdma.inecmmode"
 
@@ -84,7 +80,6 @@
 
     if-nez v0, :cond_0
 
-    .line 437
     if-eqz p1, :cond_2
 
     sget-object v0, Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;->TurningOn:Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;
@@ -92,7 +87,6 @@
     :goto_1
     iput-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$7;->mState:Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;
 
-    .line 438
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$7;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$7;->mState:Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;
@@ -102,7 +96,6 @@
 
     goto :goto_0
 
-    .line 437
     :cond_2
     sget-object v0, Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;->TurningOff:Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;
 
@@ -114,7 +107,6 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 414
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$7;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mHasTelephony:Z
@@ -136,7 +128,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 417
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$7;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     const/4 v2, 0x1
@@ -144,7 +135,6 @@
     # setter for: Lcom/android/server/policy/NubiaGlobalActions;->mIsWaitingForEcmExit:Z
     invoke-static {v1, v2}, Lcom/android/server/policy/NubiaGlobalActions;->access$802(Lcom/android/server/policy/NubiaGlobalActions;Z)Z
 
-    .line 419
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.ACTION_SHOW_NOTICE_ECM_BLOCK_OTHERS"
@@ -153,13 +143,11 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 422
     .local v0, "ecmDialogIntent":Landroid/content/Intent;
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 423
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$7;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mContext:Landroid/content/Context;
@@ -169,12 +157,10 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 427
     .end local v0    # "ecmDialogIntent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 425
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$7;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
@@ -188,7 +174,6 @@
     .locals 1
 
     .prologue
-    .line 447
     const/4 v0, 0x0
 
     return v0
@@ -198,7 +183,6 @@
     .locals 1
 
     .prologue
-    .line 443
     const/4 v0, 0x1
 
     return v0

@@ -26,15 +26,12 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 330
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 331
     new-array v0, p1, [Ljava/lang/String;
 
     iput-object v0, p0, Landroid/os/Looper$MessageHistory;->array:[Ljava/lang/String;
 
-    .line 332
     return-void
 .end method
 
@@ -45,10 +42,8 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 335
     monitor-enter p0
 
-    .line 336
     :try_start_0
     iget-object v0, p0, Landroid/os/Looper$MessageHistory;->array:[Ljava/lang/String;
 
@@ -56,7 +51,6 @@
 
     aput-object p1, v0, v1
 
-    .line 337
     iget v0, p0, Landroid/os/Looper$MessageHistory;->index:I
 
     add-int/lit8 v0, v0, 0x1
@@ -69,13 +63,10 @@
 
     iput v0, p0, Landroid/os/Looper$MessageHistory;->index:I
 
-    .line 338
     monitor-exit p0
 
-    .line 339
     return-void
 
-    .line 338
     :catchall_0
     move-exception v0
 
@@ -92,13 +83,10 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 346
     monitor-enter p0
 
-    .line 347
     const/4 v1, 0x0
 
-    .line 348
     .local v1, "j":I
     const/4 v0, 0x0
 
@@ -111,7 +99,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 349
     iget v2, p0, Landroid/os/Looper$MessageHistory;->index:I
 
     add-int/2addr v2, v0
@@ -122,7 +109,6 @@
 
     rem-int v1, v2, v3
 
-    .line 350
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -161,19 +147,15 @@
 
     invoke-interface {p1, v2}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 348
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 352
     :cond_0
     monitor-exit p0
 
-    .line 353
     return-void
 
-    .line 352
     :catchall_0
     move-exception v2
 
@@ -188,7 +170,6 @@
     .locals 1
 
     .prologue
-    .line 342
     iget-object v0, p0, Landroid/os/Looper$MessageHistory;->array:[Ljava/lang/String;
 
     array-length v0, v0

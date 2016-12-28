@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 196
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationPowerController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationPowerController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 199
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPowerController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationPowerController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationPowerController;->mHandler:Landroid/os/Handler;
@@ -50,12 +48,10 @@
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 200
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPowerController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationPowerController;
 
     # invokes: Lcn/nubia/server/appmgmt/ApplicationPowerController;->loadManagedOtherApps()V
     invoke-static {v0}, Lcn/nubia/server/appmgmt/ApplicationPowerController;->access$300(Lcn/nubia/server/appmgmt/ApplicationPowerController;)V
 
-    .line 201
     return-void
 .end method

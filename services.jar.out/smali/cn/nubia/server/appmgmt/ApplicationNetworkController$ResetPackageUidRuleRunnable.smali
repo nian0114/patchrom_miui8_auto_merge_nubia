@@ -32,18 +32,14 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 789
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ResetPackageUidRuleRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 790
     iput p2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ResetPackageUidRuleRunnable;->mUid:I
 
-    .line 791
     iput-object p3, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ResetPackageUidRuleRunnable;->mPackage:Ljava/lang/String;
 
-    .line 792
     return-void
 .end method
 
@@ -55,7 +51,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 796
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ResetPackageUidRuleRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
@@ -71,7 +66,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 797
     const-string v0, "ApplicationNetworkController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -108,7 +102,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 798
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ResetPackageUidRuleRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     iget v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ResetPackageUidRuleRunnable;->mUid:I
@@ -118,7 +111,6 @@
     # invokes: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->setUidRule(ILjava/lang/String;ZZ)V
     invoke-static {v0, v1, v2, v3, v3}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->access$1000(Lcn/nubia/server/appmgmt/ApplicationNetworkController;ILjava/lang/String;ZZ)V
 
-    .line 800
     :cond_0
     return-void
 .end method

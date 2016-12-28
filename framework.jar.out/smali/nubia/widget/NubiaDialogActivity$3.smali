@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 150
     iput-object p1, p0, Lnubia/widget/NubiaDialogActivity$3;->this$0:Lnubia/widget/NubiaDialogActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 154
     iget-object v0, p0, Lnubia/widget/NubiaDialogActivity$3;->this$0:Lnubia/widget/NubiaDialogActivity;
 
     # getter for: Lnubia/widget/NubiaDialogActivity;->mListener:Lnubia/widget/NubiaDialogActivity$OnButtonClickListener;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 155
     iget-object v0, p0, Lnubia/widget/NubiaDialogActivity$3;->this$0:Lnubia/widget/NubiaDialogActivity;
 
     # getter for: Lnubia/widget/NubiaDialogActivity;->mListener:Lnubia/widget/NubiaDialogActivity$OnButtonClickListener;
@@ -61,7 +58,6 @@
 
     invoke-interface {v0}, Lnubia/widget/NubiaDialogActivity$OnButtonClickListener;->OnNegativeButtonClick()V
 
-    .line 157
     :cond_0
     return-void
 .end method

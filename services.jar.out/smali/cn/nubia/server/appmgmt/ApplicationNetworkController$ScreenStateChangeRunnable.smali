@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 837
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController$1;
 
     .prologue
-    .line 837
     invoke-direct {p0, p1}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 12
 
     .prologue
-    .line 840
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageProcessCounts:Ljava/util/HashMap;
@@ -82,7 +79,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 841
     .local v5, "pkg":Ljava/lang/String;
     const-string v8, "ApplicationNetworkController"
 
@@ -108,7 +104,6 @@
 
     goto :goto_0
 
-    .line 844
     .end local v5    # "pkg":Ljava/lang/String;
     :cond_0
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
@@ -139,7 +134,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 845
     .local v6, "rpkg":Ljava/lang/String;
     const-string v8, "ApplicationNetworkController"
 
@@ -165,7 +159,6 @@
 
     goto :goto_1
 
-    .line 848
     .end local v6    # "rpkg":Ljava/lang/String;
     :cond_1
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
@@ -197,7 +190,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 849
     .local v4, "packageName":Ljava/lang/String;
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -212,18 +204,14 @@
 
     check-cast v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
 
-    .line 850
     .local v0, "config":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     if-eqz v0, :cond_2
 
-    .line 853
     iget-boolean v1, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableMobile:Z
 
-    .line 854
     .local v1, "enableMobile":Z
     iget-boolean v2, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableWifi:Z
 
-    .line 856
     .local v2, "enableWifi":Z
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -234,7 +222,6 @@
 
     if-nez v8, :cond_7
 
-    .line 857
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mIs2GNetwork:Z
@@ -248,16 +235,13 @@
 
     if-eqz v8, :cond_6
 
-    .line 858
     const/4 v1, 0x0
 
-    .line 862
     :goto_3
     iget-boolean v8, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableWifiInScreenOff:Z
 
     and-int/2addr v2, v8
 
-    .line 876
     :cond_3
     :goto_4
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
@@ -269,13 +253,10 @@
 
     if-eqz v8, :cond_4
 
-    .line 877
     const/4 v1, 0x1
 
-    .line 878
     const/4 v2, 0x1
 
-    .line 881
     :cond_4
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -294,14 +275,12 @@
 
     move-result v7
 
-    .line 882
     .local v7, "uid":I
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # invokes: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->cancelPendingControlRunnable(I)V
     invoke-static {v8, v7}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->access$700(Lcn/nubia/server/appmgmt/ApplicationNetworkController;I)V
 
-    .line 884
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
@@ -311,7 +290,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 885
     const-string v8, "ApplicationNetworkController"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -388,7 +366,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 889
     :cond_5
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -397,7 +374,6 @@
 
     goto/16 :goto_2
 
-    .line 860
     .end local v7    # "uid":I
     :cond_6
     iget-boolean v8, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableMobileInScreenOff:Z
@@ -406,7 +382,6 @@
 
     goto :goto_3
 
-    .line 864
     :cond_7
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -425,15 +400,12 @@
 
     if-eqz v8, :cond_8
 
-    .line 865
     const/4 v1, 0x1
 
-    .line 866
     const/4 v2, 0x1
 
     goto/16 :goto_4
 
-    .line 867
     :cond_8
     iget-wide v8, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->restore_network_interval:J
 
@@ -485,13 +457,10 @@
 
     if-lez v8, :cond_3
 
-    .line 870
     const/4 v1, 0x1
 
-    .line 871
     const/4 v2, 0x1
 
-    .line 872
     iget-object v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDisconnectTimes:Ljava/util/HashMap;
@@ -503,7 +472,6 @@
 
     goto/16 :goto_4
 
-    .line 891
     .end local v0    # "config":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     .end local v1    # "enableMobile":Z
     .end local v2    # "enableWifi":Z

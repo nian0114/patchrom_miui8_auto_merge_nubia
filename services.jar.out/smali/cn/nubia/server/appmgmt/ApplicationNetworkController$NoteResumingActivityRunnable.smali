@@ -35,21 +35,16 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 491
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 492
     iput p2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->mStackId:I
 
-    .line 493
     iput p3, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->mUid:I
 
-    .line 494
     iput-object p4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->mResumingPackage:Ljava/lang/String;
 
-    .line 495
     return-void
 .end method
 
@@ -61,7 +56,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 499
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mResumedPackages:Ljava/util/HashMap;
@@ -79,7 +73,6 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 500
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mResumedPackageUids:Ljava/util/HashMap;
@@ -101,7 +94,6 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 502
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     iget v5, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->mUid:I
@@ -109,7 +101,6 @@
     # invokes: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->cancelPendingControlRunnable(I)V
     invoke-static {v4, v5}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->access$700(Lcn/nubia/server/appmgmt/ApplicationNetworkController;I)V
 
-    .line 504
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
@@ -125,12 +116,10 @@
 
     if-nez v4, :cond_1
 
-    .line 524
     :cond_0
     :goto_0
     return-void
 
-    .line 507
     :cond_1
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -165,13 +154,11 @@
 
     move-result v2
 
-    .line 508
     .local v2, "si":I
     iget v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->mStackId:I
 
     if-eq v2, v4, :cond_2
 
-    .line 511
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mResumedPackages:Ljava/util/HashMap;
@@ -189,7 +176,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 512
     .local v1, "n":Ljava/lang/String;
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -212,7 +198,6 @@
 
     move-result v3
 
-    .line 514
     .local v3, "u":I
     if-eqz v1, :cond_2
 
@@ -228,7 +213,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 515
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
@@ -238,7 +222,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 516
     const-string v4, "ApplicationNetworkController"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -271,7 +254,6 @@
 
     goto :goto_0
 
-    .line 523
     .end local v1    # "n":Ljava/lang/String;
     .end local v2    # "si":I
     .end local v3    # "u":I

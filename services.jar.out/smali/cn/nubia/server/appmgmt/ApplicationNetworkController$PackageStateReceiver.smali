@@ -23,28 +23,23 @@
     .locals 2
 
     .prologue
-    .line 804
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$PackageStateReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 805
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 806
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 807
     const-string v1, "package"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 808
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->access$1800(Lcn/nubia/server/appmgmt/ApplicationNetworkController;)Landroid/content/Context;
 
@@ -52,7 +47,6 @@
 
     invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 809
     return-void
 .end method
 
@@ -64,7 +58,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 813
     if-eqz p2, :cond_1
 
     const-string v4, "android.intent.action.PACKAGE_REMOVED"
@@ -79,7 +72,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 814
     const-string v4, "android.intent.extra.UID"
 
     const/4 v5, -0x1
@@ -88,26 +80,21 @@
 
     move-result v3
 
-    .line 815
     .local v3, "uid":I
     const/4 v1, 0x0
 
-    .line 817
     .local v1, "packageName":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 818
     .local v0, "data":Landroid/net/Uri;
     if-eqz v0, :cond_0
 
-    .line 819
     invoke-virtual {v0}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 821
     :cond_0
     const-string v4, "android.intent.extra.REPLACING"
 
@@ -117,13 +104,11 @@
 
     move-result v2
 
-    .line 822
     .local v2, "replacing":Z
     if-eqz v1, :cond_1
 
     if-eqz v2, :cond_2
 
-    .line 834
     .end local v0    # "data":Landroid/net/Uri;
     .end local v1    # "packageName":Ljava/lang/String;
     .end local v2    # "replacing":Z
@@ -132,7 +117,6 @@
     :goto_0
     return-void
 
-    .line 825
     .restart local v0    # "data":Landroid/net/Uri;
     .restart local v1    # "packageName":Ljava/lang/String;
     .restart local v2    # "replacing":Z
@@ -142,7 +126,6 @@
 
     if-ge v3, v4, :cond_3
 
-    .line 826
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$PackageStateReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
@@ -152,7 +135,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 827
     const-string v4, "ApplicationNetworkController"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -193,7 +175,6 @@
 
     goto :goto_0
 
-    .line 832
     :cond_3
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$PackageStateReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 

@@ -38,27 +38,20 @@
     .param p6, "startIntentInfo"    # Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;
 
     .prologue
-    .line 420
     iput-object p1, p0, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->this$0:Lcom/android/server/am/ActivityLockHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 421
     iput-boolean p2, p0, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mVerifyWithStart:Z
 
-    .line 422
     iput p3, p0, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mVerifyId:I
 
-    .line 423
     iput-object p4, p0, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mPackageName:Ljava/lang/String;
 
-    .line 424
     iput-object p5, p0, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mAttachActivity:Lcom/android/server/am/ActivityRecord;
 
-    .line 425
     iput-object p6, p0, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mStartIntentInfo:Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;
 
-    .line 426
     return-void
 .end method
 
@@ -68,7 +61,6 @@
     .locals 3
 
     .prologue
-    .line 431
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

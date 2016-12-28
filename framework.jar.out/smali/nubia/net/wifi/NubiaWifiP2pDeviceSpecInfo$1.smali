@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 92
     invoke-virtual {p0, p1}, Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo$1;->createFromParcel(Landroid/os/Parcel;)Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;
 
     move-result-object v0
@@ -57,12 +55,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 94
     new-instance v0, Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;
 
     invoke-direct {v0}, Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;-><init>()V
 
-    .line 95
     .local v0, "device":Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -70,7 +66,6 @@
 
     iput-object v1, v0, Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;->mInterfaceMac:Ljava/lang/String;
 
-    .line 96
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -79,7 +74,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 97
     sget-object v1, Landroid/net/wifi/p2p/WifiP2pDevice;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -90,7 +84,6 @@
 
     iput-object v1, v0, Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;->mWifiP2pDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 99
     :cond_0
     return-object v0
 .end method
@@ -99,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 92
     invoke-virtual {p0, p1}, Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo$1;->newArray(I)[Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;
 
     move-result-object v0
@@ -112,7 +104,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 103
     new-array v0, p1, [Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;
 
     return-object v0

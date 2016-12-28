@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 124
     iput-object p1, p0, Lcom/android/server/display/NubiaOverlayDisplayAdapter$1$1;->this$1:Lcom/android/server/display/NubiaOverlayDisplayAdapter$1;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 127
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayAdapter$1$1;->this$1:Lcom/android/server/display/NubiaOverlayDisplayAdapter$1;
 
     iget-object v0, v0, Lcom/android/server/display/NubiaOverlayDisplayAdapter$1;->this$0:Lcom/android/server/display/NubiaOverlayDisplayAdapter;
@@ -47,6 +45,5 @@
     # invokes: Lcom/android/server/display/NubiaOverlayDisplayAdapter;->updateOverlayDisplayDevices()V
     invoke-static {v0}, Lcom/android/server/display/NubiaOverlayDisplayAdapter;->access$000(Lcom/android/server/display/NubiaOverlayDisplayAdapter;)V
 
-    .line 128
     return-void
 .end method

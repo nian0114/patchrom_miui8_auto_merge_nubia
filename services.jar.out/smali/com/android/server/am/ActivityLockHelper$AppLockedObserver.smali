@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 517
     iput-object p1, p0, Lcom/android/server/am/ActivityLockHelper$AppLockedObserver;->this$0:Lcom/android/server/am/ActivityLockHelper;
 
-    .line 518
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 519
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 3
 
     .prologue
-    .line 522
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper$AppLockedObserver;->this$0:Lcom/android/server/am/ActivityLockHelper;
 
     # getter for: Lcom/android/server/am/ActivityLockHelper;->mContext:Landroid/content/Context;
@@ -52,7 +48,6 @@
 
     move-result-object v0
 
-    .line 523
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "content://cn.nubia.applockmanager/locked_app_packages"
 
@@ -64,7 +59,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 525
     return-void
 .end method
 
@@ -73,12 +67,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 529
     iget-object v0, p0, Lcom/android/server/am/ActivityLockHelper$AppLockedObserver;->this$0:Lcom/android/server/am/ActivityLockHelper;
 
     # invokes: Lcom/android/server/am/ActivityLockHelper;->updateAppList()V
     invoke-static {v0}, Lcom/android/server/am/ActivityLockHelper;->access$400(Lcom/android/server/am/ActivityLockHelper;)V
 
-    .line 530
     return-void
 .end method

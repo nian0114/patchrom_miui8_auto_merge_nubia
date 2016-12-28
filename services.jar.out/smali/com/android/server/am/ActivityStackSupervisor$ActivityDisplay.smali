@@ -42,26 +42,22 @@
     .locals 1
 
     .prologue
-    .line 4972
     iput-object p1, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4964
     new-instance v0, Landroid/view/DisplayInfo;
 
     invoke-direct {v0}, Landroid/view/DisplayInfo;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mDisplayInfo:Landroid/view/DisplayInfo;
 
-    .line 4968
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mStacks:Ljava/util/ArrayList;
 
-    .line 4973
     return-void
 .end method
 
@@ -70,41 +66,34 @@
     .param p2, "displayId"    # I
 
     .prologue
-    .line 4977
     iput-object p1, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4964
     new-instance v1, Landroid/view/DisplayInfo;
 
     invoke-direct {v1}, Landroid/view/DisplayInfo;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mDisplayInfo:Landroid/view/DisplayInfo;
 
-    .line 4968
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mStacks:Ljava/util/ArrayList;
 
-    .line 4978
     iget-object v1, p1, Lcom/android/server/am/ActivityStackSupervisor;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v1, p2}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object v0
 
-    .line 4979
     .local v0, "display":Landroid/view/Display;
     if-nez v0, :cond_0
 
-    .line 4983
     :goto_0
     return-void
 
-    .line 4982
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->init(Landroid/view/Display;)V
 
@@ -118,12 +107,10 @@
     .param p1, "stack"    # Lcom/android/server/am/ActivityStack;
 
     .prologue
-    .line 4994
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mStacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4995
     return-void
 .end method
 
@@ -132,12 +119,10 @@
     .param p1, "stack"    # Lcom/android/server/am/ActivityStack;
 
     .prologue
-    .line 5000
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mStacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 5001
     return-void
 .end method
 
@@ -146,28 +131,24 @@
     .param p1, "bounds"    # Landroid/graphics/Point;
 
     .prologue
-    .line 5004
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mDisplay:Landroid/view/Display;
 
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     invoke-virtual {v0, v1}, Landroid/view/Display;->getDisplayInfo(Landroid/view/DisplayInfo;)Z
 
-    .line 5005
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->appWidth:I
 
     iput v0, p1, Landroid/graphics/Point;->x:I
 
-    .line 5006
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     iget v0, v0, Landroid/view/DisplayInfo;->appHeight:I
 
     iput v0, p1, Landroid/graphics/Point;->y:I
 
-    .line 5007
     return-void
 .end method
 
@@ -175,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 5014
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mVisibleBehindActivity:Lcom/android/server/am/ActivityRecord;
 
     if-eqz v0, :cond_0
@@ -196,24 +176,20 @@
     .param p1, "display"    # Landroid/view/Display;
 
     .prologue
-    .line 4986
     iput-object p1, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mDisplay:Landroid/view/Display;
 
-    .line 4987
     invoke-virtual {p1}, Landroid/view/Display;->getDisplayId()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mDisplayId:I
 
-    .line 4988
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mDisplay:Landroid/view/Display;
 
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mDisplayInfo:Landroid/view/DisplayInfo;
 
     invoke-virtual {v0, v1}, Landroid/view/Display;->getDisplayInfo(Landroid/view/DisplayInfo;)Z
 
-    .line 4989
     return-void
 .end method
 
@@ -222,10 +198,8 @@
     .param p1, "r"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 5010
     iput-object p1, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;->mVisibleBehindActivity:Lcom/android/server/am/ActivityRecord;
 
-    .line 5011
     return-void
 .end method
 
@@ -233,7 +207,6 @@
     .locals 2
 
     .prologue
-    .line 5019
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

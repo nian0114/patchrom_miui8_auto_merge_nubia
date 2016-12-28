@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 64
     iput-object p1, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl$1;->this$0:Lcn/nubia/server/policy/AntiMisOperationCtrl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 66
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 67
     .local v0, "action":Ljava/lang/String;
     const-string v1, "com.android.internal.policy.impl.ACTION_SCREEN_SAVER_SHOW"
 
@@ -54,7 +51,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 68
     iget-object v1, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl$1;->this$0:Lcn/nubia/server/policy/AntiMisOperationCtrl;
 
     const-string v2, "showView"
@@ -68,7 +64,6 @@
     # setter for: Lcn/nubia/server/policy/AntiMisOperationCtrl;->isScreenSaverShow:Z
     invoke-static {v1, v2}, Lcn/nubia/server/policy/AntiMisOperationCtrl;->access$002(Lcn/nubia/server/policy/AntiMisOperationCtrl;Z)Z
 
-    .line 70
     :cond_0
     return-void
 .end method

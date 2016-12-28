@@ -29,7 +29,6 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 1242
     invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -42,7 +41,6 @@
     .param p1, "object"    # Lnubia/widget/NubiaSwitch;
 
     .prologue
-    .line 1245
     # getter for: Lnubia/widget/NubiaSwitch;->mThumbPosition:F
     invoke-static {p1}, Lnubia/widget/NubiaSwitch;->access$100(Lnubia/widget/NubiaSwitch;)F
 
@@ -59,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 1242
     check-cast p1, Lnubia/widget/NubiaSwitch;
 
     invoke-virtual {p0, p1}, Lnubia/widget/NubiaSwitch$2;->get(Lnubia/widget/NubiaSwitch;)Ljava/lang/Float;
@@ -73,7 +70,6 @@
     .locals 0
 
     .prologue
-    .line 1242
     check-cast p1, Lnubia/widget/NubiaSwitch;
 
     invoke-virtual {p0, p1, p2}, Lnubia/widget/NubiaSwitch$2;->setValue(Lnubia/widget/NubiaSwitch;F)V
@@ -87,10 +83,8 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 1250
     # invokes: Lnubia/widget/NubiaSwitch;->setThumbPosition(F)V
     invoke-static {p1, p2}, Lnubia/widget/NubiaSwitch;->access$200(Lnubia/widget/NubiaSwitch;F)V
 
-    .line 1251
     return-void
 .end method

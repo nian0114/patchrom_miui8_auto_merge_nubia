@@ -76,10 +76,8 @@
 
     const/4 v3, 0x1
 
-    .line 20
     sput-boolean v4, Lnubia/content/res/ThemeResources;->DBG:Z
 
-    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,14 +106,12 @@
 
     sput-object v0, Lnubia/content/res/ThemeResources;->sAppliedLockstyleConfigPath:Ljava/lang/String;
 
-    .line 54
     const/4 v0, 0x2
 
     new-array v0, v0, [Lnubia/content/res/ThemeResources$MetaData;
 
     sput-object v0, Lnubia/content/res/ThemeResources;->THEME_PATHS:[Lnubia/content/res/ThemeResources$MetaData;
 
-    .line 55
     sget-object v0, Lnubia/content/res/ThemeResources;->THEME_PATHS:[Lnubia/content/res/ThemeResources$MetaData;
 
     new-instance v1, Lnubia/content/res/ThemeResources$MetaData;
@@ -126,7 +122,6 @@
 
     aput-object v1, v0, v4
 
-    .line 56
     sget-object v0, Lnubia/content/res/ThemeResources;->THEME_PATHS:[Lnubia/content/res/ThemeResources$MetaData;
 
     new-instance v1, Lnubia/content/res/ThemeResources$MetaData;
@@ -137,7 +132,6 @@
 
     aput-object v1, v0, v3
 
-    .line 57
     return-void
 .end method
 
@@ -149,23 +143,18 @@
     .param p4, "metaData"    # Lnubia/content/res/ThemeResources$MetaData;
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     iput-object p1, p0, Lnubia/content/res/ThemeResources;->mWrapped:Lnubia/content/res/ThemeResources;
 
-    .line 72
     iput-object p2, p0, Lnubia/content/res/ThemeResources;->mResources:Landroid/content/res/Resources;
 
-    .line 73
     invoke-static {p4, p3, p2}, Lnubia/content/res/ThemeZipFile;->getThemeZipFile(Lnubia/content/res/ThemeResources$MetaData;Ljava/lang/String;Landroid/content/res/Resources;)Lnubia/content/res/ThemeZipFile;
 
     move-result-object v0
 
     iput-object v0, p0, Lnubia/content/res/ThemeResources;->mPackageZipFile:Lnubia/content/res/ThemeZipFile;
 
-    .line 76
     const-string v0, "icons"
 
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -179,13 +168,10 @@
     :goto_0
     iput-boolean v0, p0, Lnubia/content/res/ThemeResources;->mSupportWrapper:Z
 
-    .line 77
     invoke-virtual {p0}, Lnubia/content/res/ThemeResources;->checkUpdate()Z
 
-    .line 78
     return-void
 
-    .line 76
     :cond_0
     const/4 v0, 0x0
 
@@ -196,17 +182,14 @@
     .locals 2
 
     .prologue
-    .line 85
     const-wide/16 v0, 0x0
 
     sput-wide v0, Lnubia/content/res/ThemeResources;->sLockWallpaperModifiedTime:J
 
-    .line 86
     const/4 v0, 0x0
 
     sput-object v0, Lnubia/content/res/ThemeResources;->sLockWallpaperCache:Landroid/graphics/drawable/Drawable;
 
-    .line 87
     return-void
 .end method
 
@@ -215,10 +198,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 96
     const/4 v5, 0x0
 
-    .line 98
     .local v5, "result":Landroid/graphics/drawable/Drawable;
     sget-object v8, Lnubia/content/res/ThemeResources;->sSystem:Lnubia/content/res/ThemeResourcesSystem;
 
@@ -226,7 +207,6 @@
 
     move-result-object v2
 
-    .line 99
     .local v2, "file":Ljava/io/File;
     if-eqz v2, :cond_2
 
@@ -236,7 +216,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 100
     sget-wide v8, Lnubia/content/res/ThemeResources;->sLockWallpaperModifiedTime:J
 
     invoke-virtual {v2}, Ljava/io/File;->lastModified()J
@@ -247,19 +226,16 @@
 
     if-eqz v8, :cond_1
 
-    .line 102
     invoke-virtual {v2}, Ljava/io/File;->lastModified()J
 
     move-result-wide v8
 
     sput-wide v8, Lnubia/content/res/ThemeResources;->sLockWallpaperModifiedTime:J
 
-    .line 103
     const/4 v8, 0x0
 
     sput-object v8, Lnubia/content/res/ThemeResources;->sLockWallpaperCache:Landroid/graphics/drawable/Drawable;
 
-    .line 105
     :try_start_0
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -269,19 +245,15 @@
 
     move-result-object v4
 
-    .line 107
     .local v4, "metrics":Landroid/util/DisplayMetrics;
     iget v7, v4, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 108
     .local v7, "width":I
     iget v3, v4, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 109
     .local v3, "height":I
     if-le v7, v3, :cond_0
 
-    .line 110
     const-string v8, "LockWallpaper"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -314,17 +286,13 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     move v6, v7
 
-    .line 114
     .local v6, "temp":I
     move v7, v3
 
-    .line 115
     move v3, v6
 
-    .line 117
     .end local v6    # "temp":I
     :cond_0
     new-instance v8, Lnubia/util/InputStreamLoader;
@@ -339,7 +307,6 @@
 
     move-result-object v0
 
-    .line 119
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v8, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -354,7 +321,6 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 127
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     .end local v3    # "height":I
     .end local v4    # "metrics":Landroid/util/DisplayMetrics;
@@ -363,26 +329,21 @@
     :goto_0
     sget-object v5, Lnubia/content/res/ThemeResources;->sLockWallpaperCache:Landroid/graphics/drawable/Drawable;
 
-    .line 129
     :cond_2
     return-object v5
 
-    .line 121
     :catch_0
     move-exception v1
 
-    .line 122
     .local v1, "e":Ljava/lang/OutOfMemoryError;
     invoke-virtual {v1}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
 
     goto :goto_0
 
-    .line 123
     .end local v1    # "e":Ljava/lang/OutOfMemoryError;
     :catch_1
     move-exception v1
 
-    .line 124
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -394,19 +355,16 @@
     .param p0, "originalResources"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 139
     sget-object v0, Lnubia/content/res/ThemeResources;->sSystem:Lnubia/content/res/ThemeResourcesSystem;
 
     if-nez v0, :cond_0
 
-    .line 140
     invoke-static {p0}, Lnubia/content/res/ThemeResourcesSystem;->getTopLevelThemeResources(Landroid/content/res/Resources;)Lnubia/content/res/ThemeResourcesSystem;
 
     move-result-object v0
 
     sput-object v0, Lnubia/content/res/ThemeResources;->sSystem:Lnubia/content/res/ThemeResourcesSystem;
 
-    .line 142
     :cond_0
     sget-object v0, Lnubia/content/res/ThemeResources;->sSystem:Lnubia/content/res/ThemeResourcesSystem;
 
@@ -417,7 +375,6 @@
     .locals 1
 
     .prologue
-    .line 151
     sget-object v0, Lnubia/content/res/ThemeResources;->sSystem:Lnubia/content/res/ThemeResourcesSystem;
 
     return-object v0
@@ -429,14 +386,11 @@
     .param p1, "themeFileName"    # Ljava/lang/String;
 
     .prologue
-    .line 165
     const/4 v0, 0x0
 
-    .line 166
     .local v0, "finalThemeResources":Lnubia/content/res/ThemeResources;
     const/4 v2, 0x0
 
-    .line 167
     .local v2, "i":I
     :goto_0
     sget-object v3, Lnubia/content/res/ThemeResources;->THEME_PATHS:[Lnubia/content/res/ThemeResources$MetaData;
@@ -445,7 +399,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 168
     new-instance v1, Lnubia/content/res/ThemeResources;
 
     sget-object v3, Lnubia/content/res/ThemeResources;->THEME_PATHS:[Lnubia/content/res/ThemeResources$MetaData;
@@ -454,7 +407,6 @@
 
     invoke-direct {v1, v0, p0, p1, v3}, Lnubia/content/res/ThemeResources;-><init>(Lnubia/content/res/ThemeResources;Landroid/content/res/Resources;Ljava/lang/String;Lnubia/content/res/ThemeResources$MetaData;)V
 
-    .line 171
     .end local v0    # "finalThemeResources":Lnubia/content/res/ThemeResources;
     .local v1, "finalThemeResources":Lnubia/content/res/ThemeResources;
     add-int/lit8 v2, v2, 0x1
@@ -465,7 +417,6 @@
     .restart local v0    # "finalThemeResources":Lnubia/content/res/ThemeResources;
     goto :goto_0
 
-    .line 173
     :cond_0
     return-object v0
 .end method
@@ -476,14 +427,12 @@
     .locals 2
 
     .prologue
-    .line 182
     iget-object v1, p0, Lnubia/content/res/ThemeResources;->mPackageZipFile:Lnubia/content/res/ThemeZipFile;
 
     invoke-virtual {v1}, Lnubia/content/res/ThemeZipFile;->checkUpdate()Z
 
     move-result v0
 
-    .line 183
     .local v0, "result":Z
     iget-object v1, p0, Lnubia/content/res/ThemeResources;->mWrapped:Lnubia/content/res/ThemeResources;
 
@@ -507,12 +456,10 @@
     :goto_0
     iput-boolean v1, p0, Lnubia/content/res/ThemeResources;->mHasWrapped:Z
 
-    .line 185
     iget-boolean v1, p0, Lnubia/content/res/ThemeResources;->mHasWrapped:Z
 
     if-eqz v1, :cond_1
 
-    .line 186
     iget-object v1, p0, Lnubia/content/res/ThemeResources;->mWrapped:Lnubia/content/res/ThemeResources;
 
     invoke-virtual {v1}, Lnubia/content/res/ThemeResources;->checkUpdate()Z
@@ -521,7 +468,6 @@
 
     or-int/2addr v0, v1
 
-    .line 187
     :cond_1
     invoke-virtual {p0}, Lnubia/content/res/ThemeResources;->hasValuesInner()Z
 
@@ -529,10 +475,8 @@
 
     iput-boolean v1, p0, Lnubia/content/res/ThemeResources;->mHasValue:Z
 
-    .line 188
     return v0
 
-    .line 183
     :cond_2
     const/4 v1, 0x0
 
@@ -544,14 +488,12 @@
     .param p1, "resourceName"    # Ljava/lang/String;
 
     .prologue
-    .line 200
     iget-object v1, p0, Lnubia/content/res/ThemeResources;->mPackageZipFile:Lnubia/content/res/ThemeZipFile;
 
     invoke-virtual {v1, p1}, Lnubia/content/res/ThemeZipFile;->containsEntry(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 201
     .local v0, "contains":Z
     if-nez v0, :cond_0
 
@@ -567,14 +509,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 202
     iget-object v1, p0, Lnubia/content/res/ThemeResources;->mWrapped:Lnubia/content/res/ThemeResources;
 
     invoke-virtual {v1, p1}, Lnubia/content/res/ThemeResources;->containsEntry(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 203
     :cond_0
     return v0
 .end method
@@ -584,7 +524,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 214
     invoke-virtual {p0, p1}, Lnubia/content/res/ThemeResources;->getThemeCharSequenceInner(I)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -597,14 +536,12 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 226
     iget-object v1, p0, Lnubia/content/res/ThemeResources;->mPackageZipFile:Lnubia/content/res/ThemeZipFile;
 
     invoke-virtual {v1, p1}, Lnubia/content/res/ThemeZipFile;->getThemeCharSequence(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 227
     .local v0, "charSequence":Ljava/lang/CharSequence;
     if-nez v0, :cond_0
 
@@ -612,14 +549,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 228
     iget-object v1, p0, Lnubia/content/res/ThemeResources;->mWrapped:Lnubia/content/res/ThemeResources;
 
     invoke-virtual {v1, p1}, Lnubia/content/res/ThemeResources;->getThemeCharSequenceInner(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 229
     :cond_0
     return-object v0
 .end method
@@ -630,7 +565,6 @@
     .param p2, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 243
     invoke-virtual {p0, p2}, Lnubia/content/res/ThemeResources;->getThemeFileStream(Ljava/lang/String;)Lnubia/content/res/ThemeZipFile$ThemeFileInfo;
 
     move-result-object v0
@@ -643,7 +577,6 @@
     .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 254
     invoke-virtual {p0, p1}, Lnubia/content/res/ThemeResources;->getThemeFileStreamInner(Ljava/lang/String;)Lnubia/content/res/ThemeZipFile$ThemeFileInfo;
 
     move-result-object v0
@@ -656,14 +589,12 @@
     .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 266
     iget-object v1, p0, Lnubia/content/res/ThemeResources;->mPackageZipFile:Lnubia/content/res/ThemeZipFile;
 
     invoke-virtual {v1, p1}, Lnubia/content/res/ThemeZipFile;->getInputStream(Ljava/lang/String;)Lnubia/content/res/ThemeZipFile$ThemeFileInfo;
 
     move-result-object v0
 
-    .line 268
     .local v0, "fileInfo":Lnubia/content/res/ThemeZipFile$ThemeFileInfo;
     if-nez v0, :cond_0
 
@@ -671,14 +602,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 269
     iget-object v1, p0, Lnubia/content/res/ThemeResources;->mWrapped:Lnubia/content/res/ThemeResources;
 
     invoke-virtual {v1, p1}, Lnubia/content/res/ThemeResources;->getThemeFileStreamInner(Ljava/lang/String;)Lnubia/content/res/ThemeZipFile$ThemeFileInfo;
 
     move-result-object v0
 
-    .line 270
     :cond_0
     return-object v0
 .end method
@@ -688,7 +617,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 281
     invoke-virtual {p0, p1}, Lnubia/content/res/ThemeResources;->getThemeIntInner(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -701,14 +629,12 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 292
     iget-object v1, p0, Lnubia/content/res/ThemeResources;->mPackageZipFile:Lnubia/content/res/ThemeZipFile;
 
     invoke-virtual {v1, p1}, Lnubia/content/res/ThemeZipFile;->getThemeInt(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 293
     .local v0, "result":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
@@ -716,14 +642,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 294
     iget-object v1, p0, Lnubia/content/res/ThemeResources;->mWrapped:Lnubia/content/res/ThemeResources;
 
     invoke-virtual {v1, p1}, Lnubia/content/res/ThemeResources;->getThemeIntInner(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 295
     :cond_0
     return-object v0
 .end method
@@ -732,7 +656,6 @@
     .locals 1
 
     .prologue
-    .line 304
     iget-boolean v0, p0, Lnubia/content/res/ThemeResources;->mHasValue:Z
 
     return v0
@@ -742,7 +665,6 @@
     .locals 1
 
     .prologue
-    .line 313
     iget-object v0, p0, Lnubia/content/res/ThemeResources;->mPackageZipFile:Lnubia/content/res/ThemeZipFile;
 
     invoke-virtual {v0}, Lnubia/content/res/ThemeZipFile;->hasValues()Z

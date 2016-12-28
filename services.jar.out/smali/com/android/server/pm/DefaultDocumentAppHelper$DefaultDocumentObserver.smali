@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 140
     iput-object p1, p0, Lcom/android/server/pm/DefaultDocumentAppHelper$DefaultDocumentObserver;->this$0:Lcom/android/server/pm/DefaultDocumentAppHelper;
 
-    .line 141
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 142
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 3
 
     .prologue
-    .line 144
     iget-object v2, p0, Lcom/android/server/pm/DefaultDocumentAppHelper$DefaultDocumentObserver;->this$0:Lcom/android/server/pm/DefaultDocumentAppHelper;
 
     # getter for: Lcom/android/server/pm/DefaultDocumentAppHelper;->mContext:Landroid/content/Context;
@@ -52,7 +48,6 @@
 
     move-result-object v0
 
-    .line 145
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v2, "default_document"
 
@@ -60,13 +55,11 @@
 
     move-result-object v1
 
-    .line 146
     .local v1, "uri":Landroid/net/Uri;
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 147
     return-void
 .end method
 
@@ -75,15 +68,12 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 150
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/pm/DefaultDocumentAppHelper$DefaultDocumentObserver;->this$0:Lcom/android/server/pm/DefaultDocumentAppHelper;
 
     # invokes: Lcom/android/server/pm/DefaultDocumentAppHelper;->updateDefaultPackage()V
     invoke-static {v0}, Lcom/android/server/pm/DefaultDocumentAppHelper;->access$100(Lcom/android/server/pm/DefaultDocumentAppHelper;)V
 
-    .line 152
     return-void
 .end method

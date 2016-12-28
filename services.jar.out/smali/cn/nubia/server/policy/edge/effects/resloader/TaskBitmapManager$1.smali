@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 568
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager$1;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;
 
     iput-object p2, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager$1;->val$bitmap:Landroid/graphics/Bitmap;
@@ -44,7 +43,6 @@
     .locals 6
 
     .prologue
-    .line 572
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager$1;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mScreenShotsLoader:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
@@ -58,7 +56,6 @@
 
     move-result-object v0
 
-    .line 573
     .local v0, "newBitmap":Landroid/graphics/Bitmap;
     const-string v1, "Timer"
 
@@ -102,7 +99,6 @@
 
     invoke-static {v1, v2}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 574
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager$1;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mTextureManagement:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;
@@ -118,7 +114,6 @@
 
     invoke-virtual {v1, v2, v0}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;->addItem(ILandroid/graphics/Bitmap;)V
 
-    .line 575
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager$1;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->mBitmapLoad:Ljava/util/HashMap;
@@ -144,7 +139,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 576
     const-string v1, "FitAnim"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -173,12 +167,10 @@
 
     invoke-static {v1, v2}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 577
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager$1;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;
 
     # invokes: Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->judgeCallbackHasMeet()V
     invoke-static {v1}, Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;->access$300(Lcn/nubia/server/policy/edge/effects/resloader/TaskBitmapManager;)V
 
-    .line 578
     return-void
 .end method

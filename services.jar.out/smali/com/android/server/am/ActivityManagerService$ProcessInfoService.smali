@@ -24,13 +24,10 @@
     .param p1, "activityManagerService"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 7326
     invoke-direct {p0}, Landroid/os/IProcessInfoService$Stub;-><init>()V
 
-    .line 7327
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$ProcessInfoService;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 7328
     return-void
 .end method
 
@@ -42,11 +39,9 @@
     .param p2, "states"    # [I
 
     .prologue
-    .line 7332
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$ProcessInfoService;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/ActivityManagerService;->getProcessStatesForPIDs([I[I)V
 
-    .line 7333
     return-void
 .end method

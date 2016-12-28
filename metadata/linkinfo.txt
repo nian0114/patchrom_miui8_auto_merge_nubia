@@ -1,7 +1,6 @@
 system/app/Bluetooth/lib/arm/libbluetooth_jni.so|/system/lib/libbluetooth_jni.so
 system/app/BluetoothExt/lib/arm/libbluetooth_jni.so|/system/lib/libbluetooth_jni.so
 system/app/LatinIME/lib/arm64/libjni_latinime.so|/system/lib64/libjni_latinime.so
-system/app/NBGalleryLockScreen/lib/arm64/libupdate.so|/system/lib64/libupdate.so
 system/app/NfcNci/lib/arm64/libnfc_nci_jni_nxp.so|/system/lib64/libnfc_nci_jni_nxp.so
 system/app/PacProcessor/lib/arm64/libjni_pacprocessor.so|/system/lib64/libjni_pacprocessor.so
 system/app/PicoTts/lib/arm64/libttscompat.so|/system/lib64/libttscompat.so

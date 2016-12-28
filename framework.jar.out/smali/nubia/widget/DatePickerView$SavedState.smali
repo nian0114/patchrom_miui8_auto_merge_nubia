@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 265
     new-instance v0, Lnubia/widget/DatePickerView$SavedState$1;
 
     invoke-direct {v0}, Lnubia/widget/DatePickerView$SavedState$1;-><init>()V
@@ -55,31 +54,26 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 250
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 251
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lnubia/widget/DatePickerView$SavedState;->sYear:I
 
-    .line 252
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lnubia/widget/DatePickerView$SavedState;->sMonth:I
 
-    .line 253
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lnubia/widget/DatePickerView$SavedState;->sDay:I
 
-    .line 254
     return-void
 .end method
 
@@ -91,19 +85,14 @@
     .param p4, "day"    # I
 
     .prologue
-    .line 243
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 244
     iput p2, p0, Lnubia/widget/DatePickerView$SavedState;->sYear:I
 
-    .line 245
     iput p3, p0, Lnubia/widget/DatePickerView$SavedState;->sMonth:I
 
-    .line 246
     iput p4, p0, Lnubia/widget/DatePickerView$SavedState;->sDay:I
 
-    .line 247
     return-void
 .end method
 
@@ -115,24 +104,19 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 258
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 259
     iget v0, p0, Lnubia/widget/DatePickerView$SavedState;->sYear:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 260
     iget v0, p0, Lnubia/widget/DatePickerView$SavedState;->sMonth:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 261
     iget v0, p0, Lnubia/widget/DatePickerView$SavedState;->sDay:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 262
     return-void
 .end method

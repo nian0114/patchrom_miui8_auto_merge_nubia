@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 860
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam$1;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 863
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam$1;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;->mPageFlippingAnimSync:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingAnimSync;
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 864
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam$1;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;->mPageFlippingAnimSync:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingAnimSync;
@@ -60,7 +57,6 @@
 
     invoke-interface {v0}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingAnimSync;->onAnimationFinish()V
 
-    .line 866
     :cond_0
     return-void
 .end method

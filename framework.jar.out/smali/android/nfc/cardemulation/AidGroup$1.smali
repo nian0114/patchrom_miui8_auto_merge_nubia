@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 182
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,49 +44,40 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 186
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 187
     .local v3, "category":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 188
     .local v6, "listSize":I
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 189
     .local v2, "aidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-lez v6, :cond_0
 
-    .line 190
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
 
-    .line 196
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 197
     .local v4, "description":Ljava/lang/String;
     new-instance v7, Landroid/nfc/cardemulation/AidGroup;
 
     invoke-direct {v7, v3, v4}, Landroid/nfc/cardemulation/AidGroup;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 198
     .local v7, "mAidGroup":Landroid/nfc/cardemulation/AidGroup;
     invoke-virtual {v7}, Landroid/nfc/cardemulation/AidGroup;->getAids()Ljava/util/List;
 
     move-result-object v0
 
-    .line 199
     .local v0, "Aids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -107,13 +97,11 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 200
     .local v1, "aid":Ljava/lang/String;
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 202
     .end local v1    # "aid":Ljava/lang/String;
     :cond_1
     return-object v7
@@ -123,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 182
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/AidGroup$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/cardemulation/AidGroup;
 
     move-result-object v0
@@ -136,7 +123,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 208
     new-array v0, p1, [Landroid/nfc/cardemulation/AidGroup;
 
     return-object v0
@@ -146,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 182
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/AidGroup$1;->newArray(I)[Landroid/nfc/cardemulation/AidGroup;
 
     move-result-object v0

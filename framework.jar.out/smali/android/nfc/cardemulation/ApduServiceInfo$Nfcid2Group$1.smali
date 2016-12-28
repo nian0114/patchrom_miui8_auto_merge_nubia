@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1026
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,75 +44,60 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1030
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1031
     .local v4, "category":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1033
     .local v5, "description":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 1034
     .local v8, "syscodelistSize":I
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1035
     .local v2, "syscodeList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-lez v8, :cond_0
 
-    .line 1036
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
 
-    .line 1039
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 1040
     .local v7, "optparamlistSize":I
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1041
     .local v3, "optparamList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-lez v7, :cond_1
 
-    .line 1042
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
 
-    .line 1045
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 1046
     .local v6, "nfcid2listSize":I
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1047
     .local v1, "nfcid2List":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-lez v6, :cond_2
 
-    .line 1048
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
 
-    .line 1050
     :cond_2
     new-instance v0, Landroid/nfc/cardemulation/ApduServiceInfo$Nfcid2Group;
 
@@ -126,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 1026
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/ApduServiceInfo$Nfcid2Group$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/cardemulation/ApduServiceInfo$Nfcid2Group;
 
     move-result-object v0
@@ -139,7 +122,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1055
     new-array v0, p1, [Landroid/nfc/cardemulation/ApduServiceInfo$Nfcid2Group;
 
     return-object v0
@@ -149,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 1026
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/ApduServiceInfo$Nfcid2Group$1;->newArray(I)[Landroid/nfc/cardemulation/ApduServiceInfo$Nfcid2Group;
 
     move-result-object v0

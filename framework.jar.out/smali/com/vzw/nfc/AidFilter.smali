@@ -16,10 +16,8 @@
     .locals 1
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/vzw/nfc/AidFilter;->DEFAULT_ROUTE_LOCATION:I
@@ -35,52 +33,42 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 131
     const/4 v0, 0x0
 
-    .line 132
     .local v0, "aid":[B
     invoke-virtual {p2}, Lcom/vzw/nfc/dos/AidMaskDo;->getAidMask()[B
 
     move-result-object v1
 
-    .line 133
     .local v1, "barr_aid_mask":[B
     const/4 v2, 0x0
 
-    .line 135
     .local v2, "count":I
     :goto_0
     array-length v3, v1
 
     if-ge v2, v3, :cond_0
 
-    .line 136
     aget-byte v3, v1, v2
 
     const/4 v4, -0x1
 
     if-eq v3, v4, :cond_2
 
-    .line 142
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 143
     new-array v0, v2, [B
 
-    .line 144
     invoke-virtual {p1}, Lcom/vzw/nfc/dos/AidRangeDo;->getAidRange()[B
 
     move-result-object v3
 
     invoke-static {v3, v5, v0, v5, v2}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 146
     :cond_1
     return-object v0
 
-    .line 139
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
@@ -92,10 +80,8 @@
     .param p1, "filter_entry_do"    # Lcom/vzw/nfc/dos/FilterEntryDo;
 
     .prologue
-    .line 150
     const/4 v1, 0x0
 
-    .line 151
     .local v1, "powerState":I
     invoke-virtual {p1}, Lcom/vzw/nfc/dos/FilterEntryDo;->getRoutingModeDo()Lcom/vzw/nfc/dos/RoutingModeDo;
 
@@ -105,13 +91,11 @@
 
     move-result v2
 
-    .line 152
     .local v2, "routeInfo":I
     invoke-virtual {p1}, Lcom/vzw/nfc/dos/FilterEntryDo;->getFilterConditionTagDo()Lcom/vzw/nfc/dos/FilterConditionTagDo;
 
     move-result-object v0
 
-    .line 154
     .local v0, "conditionTagDo":Lcom/vzw/nfc/dos/FilterConditionTagDo;
     if-eqz v0, :cond_1
 
@@ -123,10 +107,8 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 159
     const/4 v1, 0x1
 
-    .line 167
     :cond_0
     :goto_0
     const-string v3, "AidFilter"
@@ -151,14 +133,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     return v1
 
-    .line 160
     :cond_1
     if-eqz v2, :cond_0
 
-    .line 165
     and-int/lit8 v3, v2, 0x1
 
     shl-int/lit8 v3, v3, 0x2
@@ -182,20 +161,16 @@
     .locals 5
 
     .prologue
-    .line 173
     sget-object v4, Lcom/vzw/nfc/AidFilter;->mVzwNfcAdapter:Lcom/nxp/nfc/INfcVzw;
 
     if-eqz v4, :cond_0
 
-    .line 174
     sget-object v4, Lcom/vzw/nfc/AidFilter;->mVzwNfcAdapter:Lcom/nxp/nfc/INfcVzw;
 
-    .line 189
     .local v0, "b":Landroid/os/IBinder;
     :goto_0
     return-object v4
 
-    .line 178
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     const-string v4, "nfc"
@@ -204,29 +179,24 @@
 
     move-result-object v0
 
-    .line 179
     .restart local v0    # "b":Landroid/os/IBinder;
     if-nez v0, :cond_1
 
-    .line 180
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 182
     :cond_1
     invoke-static {v0}, Landroid/nfc/INfcAdapter$Stub;->asInterface(Landroid/os/IBinder;)Landroid/nfc/INfcAdapter;
 
     move-result-object v2
 
-    .line 184
     .local v2, "nfcAdapterInterfaceService":Landroid/nfc/INfcAdapter;
     :try_start_0
     invoke-interface {v2}, Landroid/nfc/INfcAdapter;->getNxpNfcAdapterInterface()Lcom/nxp/nfc/INxpNfcAdapter;
 
     move-result-object v3
 
-    .line 185
     .local v3, "nxpNfcAdapter":Lcom/nxp/nfc/INxpNfcAdapter;
     invoke-interface {v3}, Lcom/nxp/nfc/INxpNfcAdapter;->getNfcVzwInterface()Lcom/nxp/nfc/INfcVzw;
 
@@ -236,17 +206,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 189
     sget-object v4, Lcom/vzw/nfc/AidFilter;->mVzwNfcAdapter:Lcom/nxp/nfc/INfcVzw;
 
     goto :goto_0
 
-    .line 186
     .end local v3    # "nxpNfcAdapter":Lcom/nxp/nfc/INxpNfcAdapter;
     :catch_0
     move-exception v1
 
-    .line 187
     .local v1, "e":Ljava/lang/Exception;
     new-instance v4, Ljava/lang/UnsupportedOperationException;
 
@@ -270,13 +237,11 @@
     .end annotation
 
     .prologue
-    .line 113
     .local p2, "entries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/vzw/nfc/RouteEntry;>;"
     invoke-virtual {p1}, Lcom/vzw/nfc/dos/ClfFilterDoList;->getClfFilterDos()Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 115
     .local v2, "clf_FILTER_DOs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/vzw/nfc/dos/ClfFilterDo;>;"
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -296,7 +261,6 @@
 
     check-cast v1, Lcom/vzw/nfc/dos/ClfFilterDo;
 
-    .line 117
     .local v1, "clf_FILTER_DO":Lcom/vzw/nfc/dos/ClfFilterDo;
     invoke-virtual {v1}, Lcom/vzw/nfc/dos/ClfFilterDo;->getFilterEntryDo()Lcom/vzw/nfc/dos/FilterEntryDo;
 
@@ -318,7 +282,6 @@
 
     move-result-object v0
 
-    .line 121
     .local v0, "aid":[B
     invoke-virtual {v1}, Lcom/vzw/nfc/dos/ClfFilterDo;->getFilterEntryDo()Lcom/vzw/nfc/dos/FilterEntryDo;
 
@@ -328,7 +291,6 @@
 
     move-result v5
 
-    .line 122
     .local v5, "powerState":I
     const-string v6, "AidFilter"
 
@@ -352,7 +314,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     new-instance v3, Lcom/vzw/nfc/RouteEntry;
 
     const/4 v6, 0x2
@@ -371,13 +332,11 @@
 
     invoke-direct {v3, v0, v5, v6, v7}, Lcom/vzw/nfc/RouteEntry;-><init>([BIIZ)V
 
-    .line 126
     .local v3, "entry":Lcom/vzw/nfc/RouteEntry;
     invoke-virtual {p2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 128
     .end local v0    # "aid":[B
     .end local v1    # "clf_FILTER_DO":Lcom/vzw/nfc/dos/ClfFilterDo;
     .end local v3    # "entry":Lcom/vzw/nfc/RouteEntry;
@@ -393,16 +352,13 @@
     .param p1, "filterConditionTag"    # B
 
     .prologue
-    .line 99
     const/4 v1, 0x1
 
-    .line 100
     .local v1, "status":Z
     const/16 v2, -0xf
 
     if-ne v2, p1, :cond_0
 
-    .line 102
     :try_start_0
     invoke-static {}, Lcom/vzw/nfc/AidFilter;->getServiceInterface()Lcom/nxp/nfc/INfcVzw;
 
@@ -414,16 +370,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 107
     :cond_0
     :goto_0
     return v1
 
-    .line 103
     :catch_0
     move-exception v0
 
-    .line 104
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -435,16 +388,13 @@
     .param p1, "filterConditionTag"    # B
 
     .prologue
-    .line 82
     const/4 v1, 0x1
 
-    .line 83
     .local v1, "status":Z
     const/16 v2, -0xf
 
     if-ne v2, p1, :cond_0
 
-    .line 85
     :try_start_0
     invoke-static {}, Lcom/vzw/nfc/AidFilter;->getServiceInterface()Lcom/nxp/nfc/INfcVzw;
 
@@ -456,16 +406,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 90
     :cond_0
     :goto_0
     return v1
 
-    .line 86
     :catch_0
     move-exception v0
 
-    .line 87
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -479,10 +426,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 53
     const/4 v3, 0x1
 
-    .line 54
     .local v3, "status":Z
     new-instance v0, Lcom/vzw/nfc/dos/ClfFilterDoList;
 
@@ -490,23 +435,19 @@
 
     invoke-direct {v0, p1, v4, v5}, Lcom/vzw/nfc/dos/ClfFilterDoList;-><init>([BII)V
 
-    .line 57
     .local v0, "all_CLF_FILTER_DO":Lcom/vzw/nfc/dos/ClfFilterDoList;
     :try_start_0
     invoke-virtual {v0}, Lcom/vzw/nfc/dos/ClfFilterDoList;->translate()V
     :try_end_0
     .catch Lcom/vzw/nfc/dos/DoParserException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 62
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 64
     .local v2, "entries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/vzw/nfc/RouteEntry;>;"
     invoke-direct {p0, v0, v2}, Lcom/vzw/nfc/AidFilter;->prepareRouteInfo(Lcom/vzw/nfc/dos/ClfFilterDoList;Ljava/util/ArrayList;)V
 
-    .line 67
     :try_start_1
     invoke-static {}, Lcom/vzw/nfc/AidFilter;->getServiceInterface()Lcom/nxp/nfc/INfcVzw;
 
@@ -533,28 +474,23 @@
     :goto_0
     move v4, v3
 
-    .line 73
     .end local v2    # "entries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/vzw/nfc/RouteEntry;>;"
     :goto_1
     return v4
 
-    .line 58
     :catch_0
     move-exception v1
 
-    .line 59
     .local v1, "e":Lcom/vzw/nfc/dos/DoParserException;
     invoke-virtual {v1}, Lcom/vzw/nfc/dos/DoParserException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 69
     .end local v1    # "e":Lcom/vzw/nfc/dos/DoParserException;
     .restart local v2    # "entries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/vzw/nfc/RouteEntry;>;"
     :catch_1
     move-exception v1
 
-    .line 70
     .local v1, "e":Landroid/os/RemoteException;
     const/4 v3, 0x0
 

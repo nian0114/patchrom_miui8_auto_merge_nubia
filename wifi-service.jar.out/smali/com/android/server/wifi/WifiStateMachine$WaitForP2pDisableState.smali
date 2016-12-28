@@ -25,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 6882
+    .line 6885
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,7 +39,7 @@
     .locals 2
 
     .prologue
-    .line 6886
+    .line 6889
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->getCurrentMessage()Landroid/os/Message;
@@ -51,7 +51,7 @@
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 6897
+    .line 6900
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mDriverStoppingState:Lcom/android/internal/util/State;
@@ -61,7 +61,7 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->mTransitionToState:Lcom/android/internal/util/State;
 
-    .line 6900
+    .line 6903
     :goto_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -74,10 +74,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 6901
+    .line 6904
     return-void
 
-    .line 6888
+    .line 6891
     :sswitch_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -90,7 +90,7 @@
 
     goto :goto_0
 
-    .line 6891
+    .line 6894
     :sswitch_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -103,12 +103,12 @@
 
     goto :goto_0
 
-    .line 6894
+    .line 6897
     :sswitch_2
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mSupplicantStoppingState:Lcom/android/internal/util/State;
-    invoke-static {v0}, Lcom/android/server/wifi/WifiStateMachine;->access$7700(Lcom/android/server/wifi/WifiStateMachine;)Lcom/android/internal/util/State;
+    invoke-static {v0}, Lcom/android/server/wifi/WifiStateMachine;->access$7800(Lcom/android/server/wifi/WifiStateMachine;)Lcom/android/internal/util/State;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
 
     goto :goto_0
 
-    .line 6886
+    .line 6889
     nop
 
     :sswitch_data_0
@@ -132,7 +132,7 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 6904
+    .line 6907
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -146,19 +146,19 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->logStateAndMessage(Landroid/os/Message;Ljava/lang/String;)V
     invoke-static {v0, p1, v1}, Lcom/android/server/wifi/WifiStateMachine;->access$1100(Lcom/android/server/wifi/WifiStateMachine;Landroid/os/Message;Ljava/lang/String;)V
 
-    .line 6906
+    .line 6909
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 6931
+    .line 6934
     const/4 v0, 0x0
 
-    .line 6933
+    .line 6936
     :goto_0
     return v0
 
-    .line 6908
+    .line 6911
     :sswitch_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -167,25 +167,25 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->access$13500(Lcom/android/server/wifi/WifiStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 6933
+    .line 6936
     :goto_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 6927
+    .line 6930
     :sswitch_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->MESSAGE_HANDLING_STATUS_DEFERRED:I
-    invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$6900()I
+    invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$7000()I
 
     move-result v1
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->messageHandlingStatus:I
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->access$1902(Lcom/android/server/wifi/WifiStateMachine;I)I
 
-    .line 6928
+    .line 6931
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$WaitForP2pDisableState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->deferMessage(Landroid/os/Message;)V
@@ -193,7 +193,7 @@
 
     goto :goto_1
 
-    .line 6906
+    .line 6909
     :sswitch_data_0
     .sparse-switch
         0x2000b -> :sswitch_1

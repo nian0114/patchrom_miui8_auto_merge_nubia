@@ -16,13 +16,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     iput-object p1, p0, Lnubia/widget/ProtoDialog;->mContext:Landroid/content/Context;
 
-    .line 14
     return-void
 .end method
 
@@ -35,7 +32,6 @@
     .param p3, "defaultId"    # I
 
     .prologue
-    .line 38
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
@@ -47,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 63
     const v0, 0x10202f6
 
     return v0
@@ -57,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 93
     const v0, 0x10202f8
 
     return v0
@@ -67,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 68
     const v0, 0x10202fb
 
     return v0
@@ -77,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 88
     const v0, 0x102002b
 
     return v0
@@ -87,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 83
     const v0, 0x10202fd
 
     return v0
@@ -97,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 78
     const v0, 0x102000b
 
     return v0
@@ -107,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 98
     const v0, 0x10202f3
 
     return v0
@@ -117,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 73
     const v0, 0x10202fc
 
     return v0
@@ -127,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 58
     const v0, 0x10202f5
 
     return v0
@@ -137,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 53
     const v0, 0x10202f4
 
     return v0
@@ -147,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 48
     const/4 v0, 0x0
 
     return v0
@@ -157,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 18
     const/4 v0, 0x0
 
     return v0
@@ -168,7 +152,6 @@
     .param p1, "window"    # Landroid/view/Window;
 
     .prologue
-    .line 24
     return-void
 .end method
 
@@ -176,7 +159,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const/4 v0, 0x0
 
     return v0
@@ -188,7 +170,6 @@
     .param p2, "flag"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 29
     return-void
 .end method
 
@@ -199,6 +180,5 @@
     .param p3, "exitAnim"    # I
 
     .prologue
-    .line 44
     return-void
 .end method

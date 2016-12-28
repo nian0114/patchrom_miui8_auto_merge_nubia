@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 205
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +48,6 @@
 
     const/4 v6, 0x1
 
-    .line 208
     new-instance v0, Landroid/bluetooth/BluetoothHeadsetClientCall;
 
     const/4 v1, 0x0
@@ -107,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 205
     invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothHeadsetClientCall$1;->createFromParcel(Landroid/os/Parcel;)Landroid/bluetooth/BluetoothHeadsetClientCall;
 
     move-result-object v0
@@ -120,7 +117,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 215
     new-array v0, p1, [Landroid/bluetooth/BluetoothHeadsetClientCall;
 
     return-object v0
@@ -130,7 +126,6 @@
     .locals 1
 
     .prologue
-    .line 205
     invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothHeadsetClientCall$1;->newArray(I)[Landroid/bluetooth/BluetoothHeadsetClientCall;
 
     move-result-object v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 20
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$1;->this$0:Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 24
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$1;->this$0:Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -48,6 +46,5 @@
     # invokes: Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->timeOut(Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;)V
     invoke-static {v1, v0}, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->access$000(Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;)V
 
-    .line 25
     return-void
 .end method

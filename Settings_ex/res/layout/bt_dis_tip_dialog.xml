@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="6.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/bt_tip" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="16.0dip" android:text="@string/bluetooth_visible_tip_message" />
-    <LinearLayout android:id="@id/bt_tip_toggle_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_below="@id/bt_tip">
-        <CheckBox android:textAppearance="?android:textAppearanceSmall" android:textColor="?android:textColorSecondary" android:id="@id/bt_tip_toggle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/checkbox_text" />
-    </LinearLayout>
-</RelativeLayout>

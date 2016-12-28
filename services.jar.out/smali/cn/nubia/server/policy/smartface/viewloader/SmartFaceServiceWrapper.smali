@@ -20,13 +20,10 @@
     .param p1, "service"    # Lnubia/os/ISmartFaceService;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;->mService:Lnubia/os/ISmartFaceService;
 
-    .line 17
     return-void
 .end method
 
@@ -36,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;->mService:Lnubia/os/ISmartFaceService;
 
     invoke-interface {v0}, Lnubia/os/ISmartFaceService;->asBinder()Landroid/os/IBinder;
@@ -50,7 +46,6 @@
     .locals 3
 
     .prologue
-    .line 58
     :try_start_0
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;->mService:Lnubia/os/ISmartFaceService;
 
@@ -58,15 +53,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 62
     :goto_0
     return-void
 
-    .line 59
     :catch_0
     move-exception v0
 
-    .line 60
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SmartFaceServiceWrapper"
 
@@ -81,7 +73,6 @@
     .locals 3
 
     .prologue
-    .line 49
     :try_start_0
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;->mService:Lnubia/os/ISmartFaceService;
 
@@ -89,15 +80,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 53
     :goto_0
     return-void
 
-    .line 50
     :catch_0
     move-exception v0
 
-    .line 51
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SmartFaceServiceWrapper"
 
@@ -113,7 +101,6 @@
     .param p1, "callback"    # Lnubia/os/ISmartFaceCallback;
 
     .prologue
-    .line 67
     :try_start_0
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;->mService:Lnubia/os/ISmartFaceService;
 
@@ -121,15 +108,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 71
     :goto_0
     return-void
 
-    .line 68
     :catch_0
     move-exception v0
 
-    .line 69
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SmartFaceServiceWrapper"
 
@@ -144,7 +128,6 @@
     .locals 3
 
     .prologue
-    .line 22
     :try_start_0
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;->mService:Lnubia/os/ISmartFaceService;
 
@@ -152,15 +135,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 26
     :goto_0
     return-void
 
-    .line 23
     :catch_0
     move-exception v0
 
-    .line 24
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SmartFaceServiceWrapper"
 
@@ -175,7 +155,6 @@
     .locals 3
 
     .prologue
-    .line 40
     :try_start_0
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;->mService:Lnubia/os/ISmartFaceService;
 
@@ -183,15 +162,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 44
     :goto_0
     return-void
 
-    .line 41
     :catch_0
     move-exception v0
 
-    .line 42
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SmartFaceServiceWrapper"
 
@@ -206,7 +182,6 @@
     .locals 3
 
     .prologue
-    .line 31
     :try_start_0
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;->mService:Lnubia/os/ISmartFaceService;
 
@@ -214,15 +189,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 35
     :goto_0
     return-void
 
-    .line 32
     :catch_0
     move-exception v0
 
-    .line 33
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SmartFaceServiceWrapper"
 

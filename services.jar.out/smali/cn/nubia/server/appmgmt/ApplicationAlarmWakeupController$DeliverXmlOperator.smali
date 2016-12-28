@@ -35,13 +35,10 @@
     .param p2, "file"    # Ljava/io/File;
 
     .prologue
-    .line 119
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController$DeliverXmlOperator;->this$0:Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController;
 
-    .line 120
     invoke-direct {p0, p2}, Lcn/nubia/server/appmgmt/XmlOperator;-><init>(Ljava/io/File;)V
 
-    .line 121
     return-void
 .end method
 
@@ -51,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 117
     invoke-virtual {p0}, Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController$DeliverXmlOperator;->createObject()Ljava/util/HashSet;
 
     move-result-object v0
@@ -72,7 +68,6 @@
     .end annotation
 
     .prologue
-    .line 154
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -89,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 117
     invoke-virtual {p0, p1}, Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController$DeliverXmlOperator;->readDataXml(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/HashSet;
 
     move-result-object v0
@@ -119,12 +113,10 @@
     .end annotation
 
     .prologue
-    .line 135
     invoke-virtual {p0}, Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController$DeliverXmlOperator;->createObject()Ljava/util/HashSet;
 
     move-result-object v2
 
-    .line 137
     .local v2, "temp":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :cond_0
     :goto_0
@@ -137,7 +129,6 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 138
     const/4 v4, 0x3
 
     if-eq v3, v4, :cond_0
@@ -146,12 +137,10 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 141
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 142
     .local v1, "tag":Ljava/lang/String;
     const-string v4, "allowed"
 
@@ -161,7 +150,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 143
     const/4 v4, 0x0
 
     const-string v5, "package"
@@ -170,16 +158,13 @@
 
     move-result-object v0
 
-    .line 144
     .local v0, "pkg":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 145
     invoke-virtual {v2, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 149
     .end local v0    # "pkg":Ljava/lang/String;
     .end local v1    # "tag":Ljava/lang/String;
     :cond_1
@@ -195,7 +180,6 @@
     .end annotation
 
     .prologue
-    .line 117
     check-cast p3, Ljava/util/HashSet;
 
     invoke-virtual {p0, p1, p2, p3}, Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController$DeliverXmlOperator;->writeDataXml(Ljava/io/BufferedOutputStream;Lorg/xmlpull/v1/XmlSerializer;Ljava/util/HashSet;)V
@@ -229,7 +213,6 @@
     .local p3, "data":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 126
     invoke-virtual {p3}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -248,25 +231,21 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 127
     .local v1, "pkg":Ljava/lang/String;
     const-string v2, "allowed"
 
     invoke-interface {p2, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 128
     const-string v2, "package"
 
     invoke-interface {p2, v3, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 129
     const-string v2, "allowed"
 
     invoke-interface {p2, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_0
 
-    .line 131
     .end local v1    # "pkg":Ljava/lang/String;
     :cond_0
     return-void

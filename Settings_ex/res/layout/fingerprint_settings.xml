@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="@android:integer/leanback_setup_base_animation_duration" android:id="@android:id/list" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:drawSelectorOnTop="false" android:cacheColorHint="@android:color/transparent" android:layout_weight="1.0" android:headerDividersEnabled="true" android:paddingStart="0.0dip" android:paddingEnd="0.0dip" />
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/actionbar_bottom" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/Widget.Nubia.ActionBar.Solid">
-        <Button android:id="@id/bt_add_finger" android:layout_width="224.0dip" android:layout_height="36.0dip" android:text="@string/fingerprint_add_title" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
-    </LinearLayout>
-</LinearLayout>

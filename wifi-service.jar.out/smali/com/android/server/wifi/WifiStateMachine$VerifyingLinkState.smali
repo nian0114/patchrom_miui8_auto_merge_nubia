@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 9133
+    .line 9139
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +37,7 @@
     .locals 3
 
     .prologue
-    .line 9136
+    .line 9142
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->log(Ljava/lang/String;)V
 
-    .line 9137
+    .line 9143
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     sget-object v1, Landroid/net/NetworkInfo$DetailedState;->VERIFYING_POOR_LINK:Landroid/net/NetworkInfo$DetailedState;
@@ -72,7 +72,7 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->setNetworkDetailedState(Landroid/net/NetworkInfo$DetailedState;)Z
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->access$11000(Lcom/android/server/wifi/WifiStateMachine;Landroid/net/NetworkInfo$DetailedState;)Z
 
-    .line 9138
+    .line 9144
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiConfigStore:Lcom/android/server/wifi/WifiConfigStore;
@@ -83,7 +83,7 @@
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mLastNetworkId:I
-    invoke-static {v1}, Lcom/android/server/wifi/WifiStateMachine;->access$5900(Lcom/android/server/wifi/WifiStateMachine;)I
+    invoke-static {v1}, Lcom/android/server/wifi/WifiStateMachine;->access$6000(Lcom/android/server/wifi/WifiStateMachine;)I
 
     move-result v1
 
@@ -91,20 +91,20 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/wifi/WifiConfigStore;->updateStatus(ILandroid/net/NetworkInfo$DetailedState;)V
 
-    .line 9139
+    .line 9145
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mLastBssid:Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/server/wifi/WifiStateMachine;->access$5800(Lcom/android/server/wifi/WifiStateMachine;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/server/wifi/WifiStateMachine;->access$5900(Lcom/android/server/wifi/WifiStateMachine;)Ljava/lang/String;
 
     move-result-object v1
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->sendNetworkStateChangeBroadcast(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->access$18800(Lcom/android/server/wifi/WifiStateMachine;Ljava/lang/String;)V
 
-    .line 9141
+    .line 9147
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const/4 v1, 0x0
@@ -112,7 +112,7 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mAutoRoaming:I
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->access$16002(Lcom/android/server/wifi/WifiStateMachine;I)I
 
-    .line 9142
+    .line 9148
     return-void
 .end method
 
@@ -121,7 +121,7 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 9145
+    .line 9151
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -135,12 +135,12 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->logStateAndMessage(Landroid/os/Message;Ljava/lang/String;)V
     invoke-static {v0, p1, v1}, Lcom/android/server/wifi/WifiStateMachine;->access$1100(Lcom/android/server/wifi/WifiStateMachine;Landroid/os/Message;Ljava/lang/String;)V
 
-    .line 9147
+    .line 9153
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 9158
+    .line 9164
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$300()Z
 
@@ -186,15 +186,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->log(Ljava/lang/String;)V
 
-    .line 9159
+    .line 9165
     :cond_0
     const/4 v0, 0x0
 
-    .line 9161
+    .line 9167
     :goto_0
     return v0
 
-    .line 9150
+    .line 9156
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -222,13 +222,13 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->log(Ljava/lang/String;)V
 
-    .line 9161
+    .line 9167
     :goto_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 9153
+    .line 9159
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -256,13 +256,13 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->log(Ljava/lang/String;)V
 
-    .line 9154
+    .line 9160
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->sendConnectedState()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiStateMachine;->access$20100(Lcom/android/server/wifi/WifiStateMachine;)V
 
-    .line 9155
+    .line 9161
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -277,7 +277,7 @@
 
     goto :goto_1
 
-    .line 9147
+    .line 9153
     nop
 
     :pswitch_data_0

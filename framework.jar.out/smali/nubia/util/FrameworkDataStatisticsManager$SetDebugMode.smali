@@ -27,18 +27,14 @@
     .param p1, "debug"    # Z
 
     .prologue
-    .line 238
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 236
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lnubia/util/FrameworkDataStatisticsManager$SetDebugMode;->mDebug:Z
 
-    .line 239
     iput-boolean p1, p0, Lnubia/util/FrameworkDataStatisticsManager$SetDebugMode;->mDebug:Z
 
-    .line 240
     return-void
 .end method
 
@@ -54,11 +50,9 @@
     .end annotation
 
     .prologue
-    .line 245
     iget-boolean v0, p0, Lnubia/util/FrameworkDataStatisticsManager$SetDebugMode;->mDebug:Z
 
     invoke-interface {p1, v0}, Lnubia/util/IFrameworkDataStatisticsService;->setDebugMode(Z)V
 
-    .line 246
     return-void
 .end method

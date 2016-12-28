@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 443
     iput-object p1, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$PreLoopUpState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,14 +36,12 @@
     .locals 2
 
     .prologue
-    .line 446
     const-string v0, "FitActionStateMachine"
 
     const-string v1, "enter PreLoopUpState"
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->sysi(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 447
     return-void
 .end method
 
@@ -55,12 +52,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 451
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcn/nubia/edgegesture/EdgeGesture;
 
-    .line 452
     .local v0, "gesture":Lcn/nubia/edgegesture/EdgeGesture;
     const-string v2, "FitActionStateMachine"
 
@@ -101,19 +96,16 @@
 
     invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/LogUtils;->sysd(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 454
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 464
     :pswitch_0
     const/4 v1, 0x0
 
     :goto_0
     return v1
 
-    .line 456
     :pswitch_1
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$PreLoopUpState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
@@ -122,7 +114,6 @@
 
     goto :goto_0
 
-    .line 459
     :pswitch_2
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$PreLoopUpState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
@@ -131,7 +122,6 @@
 
     goto :goto_0
 
-    .line 454
     :pswitch_data_0
     .packed-switch 0x3001
         :pswitch_1

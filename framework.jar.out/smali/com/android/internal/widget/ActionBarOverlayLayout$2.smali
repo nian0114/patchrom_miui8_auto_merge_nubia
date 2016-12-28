@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 115
     iput-object p1, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$2;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 124
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$2;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
 
     const/4 v1, 0x0
@@ -46,7 +44,6 @@
     # setter for: Lcom/android/internal/widget/ActionBarOverlayLayout;->mCurrentActionBarBottomAnimator:Landroid/view/ViewPropertyAnimator;
     invoke-static {v0, v1}, Lcom/android/internal/widget/ActionBarOverlayLayout;->access$202(Lcom/android/internal/widget/ActionBarOverlayLayout;Landroid/view/ViewPropertyAnimator;)Landroid/view/ViewPropertyAnimator;
 
-    .line 125
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$2;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
 
     const/4 v1, 0x0
@@ -54,7 +51,6 @@
     # setter for: Lcom/android/internal/widget/ActionBarOverlayLayout;->mAnimatingForFling:Z
     invoke-static {v0, v1}, Lcom/android/internal/widget/ActionBarOverlayLayout;->access$102(Lcom/android/internal/widget/ActionBarOverlayLayout;Z)Z
 
-    .line 126
     return-void
 .end method
 
@@ -63,7 +59,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 118
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$2;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
 
     const/4 v1, 0x0
@@ -71,7 +66,6 @@
     # setter for: Lcom/android/internal/widget/ActionBarOverlayLayout;->mCurrentActionBarBottomAnimator:Landroid/view/ViewPropertyAnimator;
     invoke-static {v0, v1}, Lcom/android/internal/widget/ActionBarOverlayLayout;->access$202(Lcom/android/internal/widget/ActionBarOverlayLayout;Landroid/view/ViewPropertyAnimator;)Landroid/view/ViewPropertyAnimator;
 
-    .line 119
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout$2;->this$0:Lcom/android/internal/widget/ActionBarOverlayLayout;
 
     const/4 v1, 0x0
@@ -79,6 +73,5 @@
     # setter for: Lcom/android/internal/widget/ActionBarOverlayLayout;->mAnimatingForFling:Z
     invoke-static {v0, v1}, Lcom/android/internal/widget/ActionBarOverlayLayout;->access$102(Lcom/android/internal/widget/ActionBarOverlayLayout;Z)Z
 
-    .line 120
     return-void
 .end method

@@ -48,45 +48,33 @@
     .param p7, "hideWindowFlag"    # I
 
     .prologue
-    .line 5130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5116
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->view:Landroid/view/View;
 
-    .line 5117
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->targetVisibility:I
 
-    .line 5118
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->present:Z
 
-    .line 5131
     iput p6, p0, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->id:I
 
-    .line 5132
     iput p1, p0, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->systemUiHideFlag:I
 
-    .line 5133
     iput p2, p0, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->translucentFlag:I
 
-    .line 5134
     iput p3, p0, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->verticalGravity:I
 
-    .line 5135
     iput p4, p0, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->horizontalGravity:I
 
-    .line 5136
     iput-object p5, p0, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->transitionName:Ljava/lang/String;
 
-    .line 5137
     iput p7, p0, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->hideWindowFlag:I
 
-    .line 5138
     return-void
 .end method

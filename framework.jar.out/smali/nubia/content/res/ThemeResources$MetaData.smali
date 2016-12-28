@@ -33,21 +33,15 @@
     .param p4, "supportFile"    # Z
 
     .prologue
-    .line 327
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 328
     iput-object p1, p0, Lnubia/content/res/ThemeResources$MetaData;->themePath:Ljava/lang/String;
 
-    .line 329
     iput-boolean p2, p0, Lnubia/content/res/ThemeResources$MetaData;->supportInt:Z
 
-    .line 330
     iput-boolean p3, p0, Lnubia/content/res/ThemeResources$MetaData;->supportCharSequence:Z
 
-    .line 331
     iput-boolean p4, p0, Lnubia/content/res/ThemeResources$MetaData;->supportFile:Z
 
-    .line 332
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 216
     iput-object p1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,12 +44,10 @@
 
     const/4 v3, 0x0
 
-    .line 220
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 221
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
@@ -60,18 +57,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 222
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     # invokes: Lcn/nubia/server/breathinglight/BreathingLightService;->bootCompleted()V
     invoke-static {v1}, Lcn/nubia/server/breathinglight/BreathingLightService;->access$100(Lcn/nubia/server/breathinglight/BreathingLightService;)V
 
-    .line 245
     :cond_0
     :goto_0
     return-void
 
-    .line 223
     :cond_1
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -81,12 +75,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 225
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v1, v4, v3, v3, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 227
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     # getter for: Lcn/nubia/server/breathinglight/BreathingLightService;->mStateMachine:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
@@ -98,7 +90,6 @@
 
     invoke-virtual {v1, v2}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->sendMessage(I)V
 
-    .line 229
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     # getter for: Lcn/nubia/server/breathinglight/BreathingLightService;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
@@ -108,7 +99,6 @@
 
     invoke-virtual {v1, v3}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->updateAutoBrightnessState(Z)V
 
-    .line 230
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     # getter for: Lcn/nubia/server/breathinglight/BreathingLightService;->mMainHandler:Landroid/os/Handler;
@@ -124,7 +114,6 @@
 
     goto :goto_0
 
-    .line 231
     :cond_2
     const-string v1, "android.intent.action.SCREEN_ON"
 
@@ -134,12 +123,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 233
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v1, v4, v3, v3, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 235
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     # getter for: Lcn/nubia/server/breathinglight/BreathingLightService;->mStateMachine:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
@@ -149,7 +136,6 @@
 
     invoke-virtual {v1, v2}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->sendMessage(I)V
 
-    .line 237
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     # getter for: Lcn/nubia/server/breathinglight/BreathingLightService;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
@@ -161,7 +147,6 @@
 
     goto :goto_0
 
-    .line 238
     :cond_3
     const-string v1, "android.intent.action.USER_PRESENT"
 
@@ -171,7 +156,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 239
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     # getter for: Lcn/nubia/server/breathinglight/BreathingLightService;->mStateMachine:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
@@ -183,7 +167,6 @@
 
     invoke-virtual {v1, v2}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->sendMessage(I)V
 
-    .line 241
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     # getter for: Lcn/nubia/server/breathinglight/BreathingLightService;->mMissEventObserver:Lcn/nubia/server/breathinglight/MissEventObserver;
@@ -195,7 +178,6 @@
 
     goto :goto_0
 
-    .line 242
     :cond_4
     const-string v1, "android.intent.action.BATTERY_CHANGED"
 
@@ -205,7 +187,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 243
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     # invokes: Lcn/nubia/server/breathinglight/BreathingLightService;->hadleBatteryChange(Landroid/content/Intent;)V

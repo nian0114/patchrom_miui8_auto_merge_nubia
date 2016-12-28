@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,15 +36,11 @@
     .param p2, "alarm"    # Z
 
     .prologue
-    .line 170
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 171
     iput-boolean p1, p0, Lcn/nubia/server/appmgmt/ApplicationPowerController$PowerController;->mWakelock:Z
 
-    .line 172
     iput-boolean p2, p0, Lcn/nubia/server/appmgmt/ApplicationPowerController$PowerController;->mAlarm:Z
 
-    .line 173
     return-void
 .end method

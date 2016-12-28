@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 140
     iput-object p1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog$5;->this$0:Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog$5;->this$0:Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     # invokes: Lcn/nubia/server/policy/edge/BrightnessDialog;->registerContentObserver()V
     invoke-static {v0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->access$600(Lcn/nubia/server/policy/edge/BrightnessDialog;)V
 
-    .line 144
     return-void
 .end method

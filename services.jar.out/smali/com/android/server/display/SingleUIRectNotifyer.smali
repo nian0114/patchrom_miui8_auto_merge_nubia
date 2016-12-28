@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,12 +18,10 @@
     .param p0, "capture"    # Z
 
     .prologue
-    .line 78
     const/4 v2, 0x1
 
     new-array v9, v2, [Landroid/view/MotionEvent$PointerCoords;
 
-    .line 79
     .local v9, "pointerCoords":[Landroid/view/MotionEvent$PointerCoords;
     const/4 v2, 0x0
 
@@ -34,12 +31,10 @@
 
     aput-object v3, v9, v2
 
-    .line 80
     const/4 v2, 0x1
 
     new-array v8, v2, [Landroid/view/MotionEvent$PointerProperties;
 
-    .line 81
     .local v8, "pointerProperties":[Landroid/view/MotionEvent$PointerProperties;
     const/4 v2, 0x0
 
@@ -49,12 +44,10 @@
 
     aput-object v3, v8, v2
 
-    .line 82
     if-eqz p0, :cond_1
 
     const/16 v16, -0x2
 
-    .line 83
     .local v16, "action":I
     :goto_0
     const-wide/16 v2, -0x1
@@ -83,7 +76,6 @@
 
     move-result-object v19
 
-    .line 101
     .local v19, "newEvent":Landroid/view/MotionEvent;
     :try_start_0
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
@@ -98,11 +90,9 @@
 
     move-result v20
 
-    .line 103
     .local v20, "result":Z
     if-nez v20, :cond_0
 
-    .line 104
     const-string v2, "wangshuai"
 
     const-string v3, "single ui inject event failed ! "
@@ -111,13 +101,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 110
     .end local v20    # "result":Z
     :cond_0
     :goto_1
     return-void
 
-    .line 82
     .end local v16    # "action":I
     .end local v19    # "newEvent":Landroid/view/MotionEvent;
     :cond_1
@@ -125,13 +113,11 @@
 
     goto :goto_0
 
-    .line 106
     .restart local v16    # "action":I
     .restart local v19    # "newEvent":Landroid/view/MotionEvent;
     :catch_0
     move-exception v18
 
-    .line 107
     .local v18, "e":Ljava/lang/Exception;
     invoke-virtual/range {v18 .. v18}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -145,14 +131,11 @@
     .param p2, "windowRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 16
     const/4 v7, 0x6
 
-    .line 17
     .local v7, "pointerCount":I
     new-array v9, v7, [Landroid/view/MotionEvent$PointerCoords;
 
-    .line 18
     .local v9, "pointerCoords":[Landroid/view/MotionEvent$PointerCoords;
     const/4 v2, 0x0
 
@@ -162,7 +145,6 @@
 
     aput-object v3, v9, v2
 
-    .line 19
     const/4 v2, 0x0
 
     aget-object v2, v9, v2
@@ -177,7 +159,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 20
     const/4 v2, 0x0
 
     aget-object v2, v9, v2
@@ -192,7 +173,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 21
     const/4 v2, 0x1
 
     new-instance v3, Landroid/view/MotionEvent$PointerCoords;
@@ -201,7 +181,6 @@
 
     aput-object v3, v9, v2
 
-    .line 22
     const/4 v2, 0x1
 
     aget-object v2, v9, v2
@@ -216,7 +195,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 23
     const/4 v2, 0x1
 
     aget-object v2, v9, v2
@@ -231,7 +209,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 24
     const/4 v2, 0x2
 
     new-instance v3, Landroid/view/MotionEvent$PointerCoords;
@@ -240,7 +217,6 @@
 
     aput-object v3, v9, v2
 
-    .line 25
     const/4 v2, 0x2
 
     aget-object v2, v9, v2
@@ -255,7 +231,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 26
     const/4 v2, 0x2
 
     aget-object v2, v9, v2
@@ -270,7 +245,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 27
     const/4 v2, 0x3
 
     new-instance v3, Landroid/view/MotionEvent$PointerCoords;
@@ -279,7 +253,6 @@
 
     aput-object v3, v9, v2
 
-    .line 28
     const/4 v2, 0x3
 
     aget-object v2, v9, v2
@@ -294,7 +267,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 29
     const/4 v2, 0x3
 
     aget-object v2, v9, v2
@@ -309,7 +281,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 30
     const/4 v2, 0x4
 
     new-instance v3, Landroid/view/MotionEvent$PointerCoords;
@@ -318,7 +289,6 @@
 
     aput-object v3, v9, v2
 
-    .line 31
     const/4 v2, 0x4
 
     aget-object v2, v9, v2
@@ -333,7 +303,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 32
     const/4 v2, 0x4
 
     aget-object v2, v9, v2
@@ -348,7 +317,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 33
     const/4 v2, 0x5
 
     new-instance v3, Landroid/view/MotionEvent$PointerCoords;
@@ -357,7 +325,6 @@
 
     aput-object v3, v9, v2
 
-    .line 34
     const/4 v2, 0x5
 
     aget-object v2, v9, v2
@@ -372,7 +339,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 35
     const/4 v2, 0x5
 
     aget-object v2, v9, v2
@@ -387,10 +353,8 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/MotionEvent$PointerCoords;->setAxisValue(IF)V
 
-    .line 36
     new-array v8, v7, [Landroid/view/MotionEvent$PointerProperties;
 
-    .line 37
     .local v8, "pointerProperties":[Landroid/view/MotionEvent$PointerProperties;
     const/4 v2, 0x0
 
@@ -400,7 +364,6 @@
 
     aput-object v3, v8, v2
 
-    .line 38
     const/4 v2, 0x1
 
     new-instance v3, Landroid/view/MotionEvent$PointerProperties;
@@ -409,7 +372,6 @@
 
     aput-object v3, v8, v2
 
-    .line 39
     const/4 v2, 0x2
 
     new-instance v3, Landroid/view/MotionEvent$PointerProperties;
@@ -418,7 +380,6 @@
 
     aput-object v3, v8, v2
 
-    .line 40
     const/4 v2, 0x3
 
     new-instance v3, Landroid/view/MotionEvent$PointerProperties;
@@ -427,7 +388,6 @@
 
     aput-object v3, v8, v2
 
-    .line 41
     const/4 v2, 0x4
 
     new-instance v3, Landroid/view/MotionEvent$PointerProperties;
@@ -436,7 +396,6 @@
 
     aput-object v3, v8, v2
 
-    .line 42
     const/4 v2, 0x5
 
     new-instance v3, Landroid/view/MotionEvent$PointerProperties;
@@ -445,7 +404,6 @@
 
     aput-object v3, v8, v2
 
-    .line 43
     const-wide/16 v2, -0x1
 
     const-wide/16 v4, -0x1
@@ -472,7 +430,6 @@
 
     move-result-object v19
 
-    .line 61
     .local v19, "newEvent":Landroid/view/MotionEvent;
     :try_start_0
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
@@ -487,11 +444,9 @@
 
     move-result v20
 
-    .line 63
     .local v20, "result":Z
     if-nez v20, :cond_0
 
-    .line 64
     const-string v2, "wangshuai"
 
     const-string v3, "single ui inject event failed ! "
@@ -500,17 +455,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 70
     .end local v20    # "result":Z
     :cond_0
     :goto_0
     return-void
 
-    .line 66
     :catch_0
     move-exception v18
 
-    .line 67
     .local v18, "e":Ljava/lang/Exception;
     invoke-virtual/range {v18 .. v18}, Ljava/lang/Exception;->printStackTrace()V
 

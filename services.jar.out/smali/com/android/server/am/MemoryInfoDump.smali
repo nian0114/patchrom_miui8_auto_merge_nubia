@@ -33,7 +33,6 @@
     .locals 2
 
     .prologue
-    .line 35
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     const/4 v1, 0x0
@@ -42,7 +41,6 @@
 
     sput-object v0, Lcom/android/server/am/MemoryInfoDump;->REENTRANT_LOCK:Ljava/util/concurrent/locks/ReentrantLock;
 
-    .line 36
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "_yyyy_MM_dd_HH_mm_ss"
@@ -51,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/am/MemoryInfoDump;->sdf:Ljava/text/SimpleDateFormat;
 
-    .line 38
     const-string v0, "ro.nubia.build.type"
 
     const-string v1, ""
@@ -87,10 +84,8 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 293
     return-void
 .end method
 
@@ -98,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 30
     sget-object v0, Lcom/android/server/am/MemoryInfoDump;->REENTRANT_LOCK:Ljava/util/concurrent/locks/ReentrantLock;
 
     return-object v0
@@ -108,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 30
     sget-object v0, Lcom/android/server/am/MemoryInfoDump;->sdf:Ljava/text/SimpleDateFormat;
 
     return-object v0
@@ -130,18 +123,15 @@
     .end annotation
 
     .prologue
-    .line 43
     .local p0, "lruProcesses":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/ProcessRecord;>;"
     sget-object v0, Lcom/android/server/am/MemoryInfoDump;->sDumpHelper:Lcom/android/server/am/MemoryInfoDump$DumpHelper;
 
     if-eqz v0, :cond_0
 
-    .line 44
     sget-object v0, Lcom/android/server/am/MemoryInfoDump;->sDumpHelper:Lcom/android/server/am/MemoryInfoDump$DumpHelper;
 
     invoke-virtual {v0, p0, p1}, Lcom/android/server/am/MemoryInfoDump$DumpHelper;->startDumpMemInfo(Ljava/util/ArrayList;Lcom/android/internal/os/ProcessCpuTracker;)V
 
-    .line 46
     :cond_0
     return-void
 .end method

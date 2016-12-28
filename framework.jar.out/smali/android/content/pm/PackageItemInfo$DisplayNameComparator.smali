@@ -39,20 +39,16 @@
     .param p1, "pm"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 394
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 406
     invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PackageItemInfo$DisplayNameComparator;->sCollator:Ljava/text/Collator;
 
-    .line 395
     iput-object p1, p0, Landroid/content/pm/PackageItemInfo$DisplayNameComparator;->mPM:Landroid/content/pm/PackageManager;
 
-    .line 396
     return-void
 .end method
 
@@ -64,20 +60,17 @@
     .param p2, "ab"    # Landroid/content/pm/PackageItemInfo;
 
     .prologue
-    .line 399
     iget-object v2, p0, Landroid/content/pm/PackageItemInfo$DisplayNameComparator;->mPM:Landroid/content/pm/PackageManager;
 
     invoke-virtual {p1, v2}, Landroid/content/pm/PackageItemInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 400
     .local v0, "sa":Ljava/lang/CharSequence;
     if-nez v0, :cond_0
 
     iget-object v0, p1, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
-    .line 401
     :cond_0
     iget-object v2, p0, Landroid/content/pm/PackageItemInfo$DisplayNameComparator;->mPM:Landroid/content/pm/PackageManager;
 
@@ -85,13 +78,11 @@
 
     move-result-object v1
 
-    .line 402
     .local v1, "sb":Ljava/lang/CharSequence;
     if-nez v1, :cond_1
 
     iget-object v1, p2, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
-    .line 403
     :cond_1
     iget-object v2, p0, Landroid/content/pm/PackageItemInfo$DisplayNameComparator;->sCollator:Ljava/text/Collator;
 
@@ -114,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 392
     check-cast p1, Landroid/content/pm/PackageItemInfo;
 
     check-cast p2, Landroid/content/pm/PackageItemInfo;

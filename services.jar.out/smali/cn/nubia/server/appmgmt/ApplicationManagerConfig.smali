@@ -14,7 +14,6 @@
     .locals 3
 
     .prologue
-    .line 10
     const-string v0, "1"
 
     const-string v1, "ro.nubia.app.manage.enable"
@@ -31,7 +30,6 @@
 
     sput-boolean v0, Lcn/nubia/server/appmgmt/ApplicationManagerConfig;->ENABLE:Z
 
-    .line 11
     const/4 v0, 0x0
 
     sput-boolean v0, Lcn/nubia/server/appmgmt/ApplicationManagerConfig;->DEBUG:Z
@@ -43,7 +41,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

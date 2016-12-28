@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 102
     iput-object p1, p0, Lnubia/widget/TimePickerView$3;->this$0:Lnubia/widget/TimePickerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p3, "newVal"    # I
 
     .prologue
-    .line 106
     iget-object v1, p0, Lnubia/widget/TimePickerView$3;->this$0:Lnubia/widget/TimePickerView;
 
     iget-object v0, p0, Lnubia/widget/TimePickerView$3;->this$0:Lnubia/widget/TimePickerView;
@@ -61,22 +59,18 @@
     # setter for: Lnubia/widget/TimePickerView;->mIsAm:Z
     invoke-static {v1, v0}, Lnubia/widget/TimePickerView;->access$102(Lnubia/widget/TimePickerView;Z)Z
 
-    .line 107
     iget-object v0, p0, Lnubia/widget/TimePickerView$3;->this$0:Lnubia/widget/TimePickerView;
 
     # invokes: Lnubia/widget/TimePickerView;->updateAmPmControl()V
     invoke-static {v0}, Lnubia/widget/TimePickerView;->access$200(Lnubia/widget/TimePickerView;)V
 
-    .line 108
     iget-object v0, p0, Lnubia/widget/TimePickerView$3;->this$0:Lnubia/widget/TimePickerView;
 
     # invokes: Lnubia/widget/TimePickerView;->onTimeChanged()V
     invoke-static {v0}, Lnubia/widget/TimePickerView;->access$000(Lnubia/widget/TimePickerView;)V
 
-    .line 109
     return-void
 
-    .line 106
     :cond_0
     const/4 v0, 0x0
 

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/development_settings_title"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.android.settings_ex.gesturez7.Z7SwitchPreference android:title="@string/turn_over_slient_or_pause_title" android:key="motion_turn" android:fragment="com.android.settings_ex.gesturez7.Z7DetailFragment" />
-    <com.android.settings_ex.gesturez7.Z7SwitchPreference android:title="@string/shake_clear_title" android:key="motion_clear" android:fragment="com.android.settings_ex.gesturez7.Z7DetailFragment" />
-</PreferenceScreen>

@@ -26,7 +26,6 @@
     .locals 2
 
     .prologue
-    .line 13
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -66,13 +65,10 @@
     .param p1, "service"    # Lnubia/os/IApplicationManager;
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     iput-object p1, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
-    .line 18
     return-void
 .end method
 
@@ -83,7 +79,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-static {p0, p1, p2}, Lnubia/os/ApplicationManager;->allowPartialWakelockImpl(Lnubia/os/IApplicationManager;ILjava/lang/String;)Z
 
     move-result v0
@@ -98,7 +93,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-static {p0, p1, p2}, Lnubia/os/ApplicationManager;->allowWakeupAlarmImpl(Lnubia/os/IApplicationManager;ILjava/lang/String;)Z
 
     move-result v0
@@ -115,7 +109,6 @@
     .param p4, "x4"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-static {p0, p1, p2, p3, p4}, Lnubia/os/ApplicationManager;->noteResumedAppDieImpl(Lnubia/os/IApplicationManager;IILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -127,7 +120,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 11
     invoke-static {p0, p1}, Lnubia/os/ApplicationManager;->noteAppTransitionAnimationImpl(Lnubia/os/IApplicationManager;Z)V
 
     return-void
@@ -139,7 +131,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 11
     invoke-static {p0, p1}, Lnubia/os/ApplicationManager;->noteStatusBarExpandingImpl(Lnubia/os/IApplicationManager;Z)V
 
     return-void
@@ -151,7 +142,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 11
     invoke-static {p0, p1}, Lnubia/os/ApplicationManager;->noteMagicBookAnimationImpl(Lnubia/os/IApplicationManager;Z)V
 
     return-void
@@ -162,7 +152,6 @@
     .param p0, "x0"    # Lnubia/os/IApplicationManager;
 
     .prologue
-    .line 11
     invoke-static {p0}, Lnubia/os/ApplicationManager;->allowBackgroundSyncToRunImpl(Lnubia/os/IApplicationManager;)Z
 
     move-result v0
@@ -177,7 +166,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 11
     invoke-static {p0, p1, p2}, Lnubia/os/ApplicationManager;->isNetworkBlockedImpl(Lnubia/os/IApplicationManager;II)Z
 
     move-result v0
@@ -192,7 +180,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-static {p0, p1, p2}, Lnubia/os/ApplicationManager;->isControlledByMotionDozeImpl(Lnubia/os/IApplicationManager;ILjava/lang/String;)Z
 
     move-result v0
@@ -207,7 +194,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-static {p0, p1, p2}, Lnubia/os/ApplicationManager;->allow3rdPartyPushImpl(Lnubia/os/IApplicationManager;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -221,7 +207,6 @@
     .param p1, "x1"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 11
     invoke-static {p0, p1}, Lnubia/os/ApplicationManager;->allowDeliverPendingNonWakeupAlarmInScreenOffImpl(Lnubia/os/IApplicationManager;Landroid/app/PendingIntent;)Z
 
     move-result v0
@@ -239,7 +224,6 @@
     .param p5, "x5"    # Z
 
     .prologue
-    .line 11
     invoke-static/range {p0 .. p5}, Lnubia/os/ApplicationManager;->noteResumingActivityImpl(Lnubia/os/IApplicationManager;IILjava/lang/String;Ljava/lang/String;Z)V
 
     return-void
@@ -254,7 +238,6 @@
     .param p4, "x4"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-static {p0, p1, p2, p3, p4}, Lnubia/os/ApplicationManager;->notePausingActivityImpl(Lnubia/os/IApplicationManager;IILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -269,7 +252,6 @@
     .param p4, "x4"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-static {p0, p1, p2, p3, p4}, Lnubia/os/ApplicationManager;->noteStoppingActivityImpl(Lnubia/os/IApplicationManager;IILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -284,7 +266,6 @@
     .param p4, "x4"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-static {p0, p1, p2, p3, p4}, Lnubia/os/ApplicationManager;->noteStartingProcessImpl(Lnubia/os/IApplicationManager;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -298,7 +279,6 @@
     .param p3, "x3"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-static {p0, p1, p2, p3}, Lnubia/os/ApplicationManager;->noteRemovingProcessImpl(Lnubia/os/IApplicationManager;ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -310,7 +290,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 11
     invoke-static {p0, p1}, Lnubia/os/ApplicationManager;->noteActivityStackRemovedImpl(Lnubia/os/IApplicationManager;I)V
 
     return-void
@@ -323,10 +302,8 @@
     .param p2, "serviceName"    # Ljava/lang/String;
 
     .prologue
-    .line 114
     if-eqz p0, :cond_0
 
-    .line 116
     :try_start_0
     invoke-interface {p0, p1, p2}, Lnubia/os/IApplicationManager;->allow3rdPartyPush(Ljava/lang/String;Ljava/lang/String;)Z
     :try_end_0
@@ -334,21 +311,17 @@
 
     move-result v1
 
-    .line 123
     :goto_0
     return v1
 
-    .line 117
     :catch_0
     move-exception v0
 
-    .line 118
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 119
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -357,7 +330,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 123
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x1
@@ -370,10 +342,8 @@
     .param p0, "service"    # Lnubia/os/IApplicationManager;
 
     .prologue
-    .line 260
     if-eqz p0, :cond_0
 
-    .line 262
     :try_start_0
     invoke-interface {p0}, Lnubia/os/IApplicationManager;->allowBackgroundSyncToRun()Z
     :try_end_0
@@ -381,21 +351,17 @@
 
     move-result v1
 
-    .line 269
     :goto_0
     return v1
 
-    .line 263
     :catch_0
     move-exception v0
 
-    .line 264
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 265
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -404,7 +370,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 269
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x1
@@ -418,10 +383,8 @@
     .param p1, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 128
     if-eqz p0, :cond_0
 
-    .line 130
     :try_start_0
     invoke-interface {p0, p1}, Lnubia/os/IApplicationManager;->allowDeliverPendingNonWakeupAlarmInScreenOff(Landroid/app/PendingIntent;)Z
     :try_end_0
@@ -429,21 +392,17 @@
 
     move-result v1
 
-    .line 137
     :goto_0
     return v1
 
-    .line 131
     :catch_0
     move-exception v0
 
-    .line 132
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 133
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -452,7 +411,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 137
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x1
@@ -467,10 +425,8 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 88
     if-eqz p0, :cond_0
 
-    .line 90
     :try_start_0
     invoke-interface {p0, p1, p2}, Lnubia/os/IApplicationManager;->allowPartialWakelock(ILjava/lang/String;)Z
     :try_end_0
@@ -478,21 +434,17 @@
 
     move-result v1
 
-    .line 97
     :goto_0
     return v1
 
-    .line 91
     :catch_0
     move-exception v0
 
-    .line 92
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 93
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -501,7 +453,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 97
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x1
@@ -516,10 +467,8 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 101
     if-eqz p0, :cond_0
 
-    .line 103
     :try_start_0
     invoke-interface {p0, p1, p2}, Lnubia/os/IApplicationManager;->allowWakeupAlarm(ILjava/lang/String;)Z
     :try_end_0
@@ -527,21 +476,17 @@
 
     move-result v1
 
-    .line 110
     :goto_0
     return v1
 
-    .line 104
     :catch_0
     move-exception v0
 
-    .line 105
     .local v0, "e":Ljava/lang/Exception;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 106
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -550,7 +495,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 110
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x1
@@ -565,10 +509,8 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 286
     if-eqz p0, :cond_0
 
-    .line 288
     :try_start_0
     invoke-interface {p0, p1, p2}, Lnubia/os/IApplicationManager;->isControlledByMotionDoze(ILjava/lang/String;)Z
     :try_end_0
@@ -576,21 +518,17 @@
 
     move-result v1
 
-    .line 295
     :goto_0
     return v1
 
-    .line 289
     :catch_0
     move-exception v0
 
-    .line 290
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 291
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -599,7 +537,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 295
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -614,10 +551,8 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 273
     if-eqz p0, :cond_0
 
-    .line 275
     :try_start_0
     invoke-interface {p0, p1, p2}, Lnubia/os/IApplicationManager;->isNetworkBlocked(II)Z
     :try_end_0
@@ -625,21 +560,17 @@
 
     move-result v1
 
-    .line 282
     :goto_0
     return v1
 
-    .line 276
     :catch_0
     move-exception v0
 
-    .line 277
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 278
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -648,7 +579,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 282
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x1
@@ -662,31 +592,25 @@
     .param p1, "stackId"    # I
 
     .prologue
-    .line 204
     if-eqz p0, :cond_0
 
-    .line 206
     :try_start_0
     invoke-interface {p0, p1}, Lnubia/os/IApplicationManager;->noteActivityStackRemoved(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 212
     :cond_0
     :goto_0
     return-void
 
-    .line 207
     :catch_0
     move-exception v0
 
-    .line 208
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 209
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -704,31 +628,25 @@
     .param p1, "execute"    # Z
 
     .prologue
-    .line 227
     if-eqz p0, :cond_0
 
-    .line 229
     :try_start_0
     invoke-interface {p0, p1}, Lnubia/os/IApplicationManager;->noteAppTransitionAnimation(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 235
     :cond_0
     :goto_0
     return-void
 
-    .line 230
     :catch_0
     move-exception v0
 
-    .line 231
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 232
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -746,31 +664,25 @@
     .param p1, "execute"    # Z
 
     .prologue
-    .line 249
     if-eqz p0, :cond_0
 
-    .line 251
     :try_start_0
     invoke-interface {p0, p1}, Lnubia/os/IApplicationManager;->noteMagicBookAnimation(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 257
     :cond_0
     :goto_0
     return-void
 
-    .line 252
     :catch_0
     move-exception v0
 
-    .line 253
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 254
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -791,31 +703,25 @@
     .param p4, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 155
     if-eqz p0, :cond_0
 
-    .line 157
     :try_start_0
     invoke-interface {p0, p1, p2, p3, p4}, Lnubia/os/IApplicationManager;->notePausingActivity(IILjava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 163
     :cond_0
     :goto_0
     return-void
 
-    .line 158
     :catch_0
     move-exception v0
 
-    .line 159
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 160
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -835,31 +741,25 @@
     .param p3, "processName"    # Ljava/lang/String;
 
     .prologue
-    .line 192
     if-eqz p0, :cond_0
 
-    .line 194
     :try_start_0
     invoke-interface {p0, p1, p2, p3}, Lnubia/os/IApplicationManager;->noteRemovingProcess(ILjava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 200
     :cond_0
     :goto_0
     return-void
 
-    .line 195
     :catch_0
     move-exception v0
 
-    .line 196
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 197
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -880,31 +780,25 @@
     .param p4, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 216
     if-eqz p0, :cond_0
 
-    .line 218
     :try_start_0
     invoke-interface {p0, p1, p2, p3, p4}, Lnubia/os/IApplicationManager;->noteResumedAppDie(IILjava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 224
     :cond_0
     :goto_0
     return-void
 
-    .line 219
     :catch_0
     move-exception v0
 
-    .line 220
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 221
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -926,31 +820,25 @@
     .param p5, "isHomeActivity"    # Z
 
     .prologue
-    .line 143
     if-eqz p0, :cond_0
 
-    .line 145
     :try_start_0
     invoke-interface/range {p0 .. p5}, Lnubia/os/IApplicationManager;->noteResumingActivity(IILjava/lang/String;Ljava/lang/String;Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 151
     :cond_0
     :goto_0
     return-void
 
-    .line 146
     :catch_0
     move-exception v0
 
-    .line 147
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 148
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -971,31 +859,25 @@
     .param p4, "hostingType"    # Ljava/lang/String;
 
     .prologue
-    .line 180
     if-eqz p0, :cond_0
 
-    .line 182
     :try_start_0
     invoke-interface {p0, p1, p2, p3, p4}, Lnubia/os/IApplicationManager;->noteStartingProcess(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 188
     :cond_0
     :goto_0
     return-void
 
-    .line 183
     :catch_0
     move-exception v0
 
-    .line 184
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 185
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -1013,31 +895,25 @@
     .param p1, "expanding"    # Z
 
     .prologue
-    .line 238
     if-eqz p0, :cond_0
 
-    .line 240
     :try_start_0
     invoke-interface {p0, p1}, Lnubia/os/IApplicationManager;->noteStatusBarExpanding(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 246
     :cond_0
     :goto_0
     return-void
 
-    .line 241
     :catch_0
     move-exception v0
 
-    .line 242
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 243
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -1058,31 +934,25 @@
     .param p4, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 167
     if-eqz p0, :cond_0
 
-    .line 169
     :try_start_0
     invoke-interface {p0, p1, p2, p3, p4}, Lnubia/os/IApplicationManager;->noteStoppingActivity(IILjava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 175
     :cond_0
     :goto_0
     return-void
 
-    .line 170
     :catch_0
     move-exception v0
 
-    .line 171
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Lnubia/os/ApplicationManager;->sDumpDebugLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 172
     const-string v1, "ApplicationManager"
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -1102,7 +972,6 @@
     .param p2, "serviceName"    # Ljava/lang/String;
 
     .prologue
-    .line 28
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1, p2}, Lnubia/os/ApplicationManager;->allow3rdPartyPushImpl(Lnubia/os/IApplicationManager;Ljava/lang/String;Ljava/lang/String;)Z
@@ -1116,7 +985,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0}, Lnubia/os/ApplicationManager;->allowBackgroundSyncToRunImpl(Lnubia/os/IApplicationManager;)Z
@@ -1131,7 +999,6 @@
     .param p1, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 32
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1}, Lnubia/os/ApplicationManager;->allowDeliverPendingNonWakeupAlarmInScreenOffImpl(Lnubia/os/IApplicationManager;Landroid/app/PendingIntent;)Z
@@ -1147,7 +1014,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1, p2}, Lnubia/os/ApplicationManager;->allowPartialWakelockImpl(Lnubia/os/IApplicationManager;ILjava/lang/String;)Z
@@ -1163,7 +1029,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1, p2}, Lnubia/os/ApplicationManager;->allowWakeupAlarmImpl(Lnubia/os/IApplicationManager;ILjava/lang/String;)Z
@@ -1179,7 +1044,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 84
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1, p2}, Lnubia/os/ApplicationManager;->isControlledByMotionDozeImpl(Lnubia/os/IApplicationManager;ILjava/lang/String;)Z
@@ -1195,7 +1059,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 80
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1, p2}, Lnubia/os/ApplicationManager;->isNetworkBlockedImpl(Lnubia/os/IApplicationManager;II)Z
@@ -1210,12 +1073,10 @@
     .param p1, "stackId"    # I
 
     .prologue
-    .line 56
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1}, Lnubia/os/ApplicationManager;->noteActivityStackRemovedImpl(Lnubia/os/IApplicationManager;I)V
 
-    .line 57
     return-void
 .end method
 
@@ -1224,12 +1085,10 @@
     .param p1, "execute"    # Z
 
     .prologue
-    .line 64
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1}, Lnubia/os/ApplicationManager;->noteAppTransitionAnimationImpl(Lnubia/os/IApplicationManager;Z)V
 
-    .line 65
     return-void
 .end method
 
@@ -1238,12 +1097,10 @@
     .param p1, "execute"    # Z
 
     .prologue
-    .line 72
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1}, Lnubia/os/ApplicationManager;->noteMagicBookAnimationImpl(Lnubia/os/IApplicationManager;Z)V
 
-    .line 73
     return-void
 .end method
 
@@ -1255,12 +1112,10 @@
     .param p4, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1, p2, p3, p4}, Lnubia/os/ApplicationManager;->notePausingActivityImpl(Lnubia/os/IApplicationManager;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 41
     return-void
 .end method
 
@@ -1271,12 +1126,10 @@
     .param p3, "processName"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1, p2, p3}, Lnubia/os/ApplicationManager;->noteRemovingProcessImpl(Lnubia/os/IApplicationManager;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 53
     return-void
 .end method
 
@@ -1288,12 +1141,10 @@
     .param p4, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1, p2, p3, p4}, Lnubia/os/ApplicationManager;->noteResumedAppDieImpl(Lnubia/os/IApplicationManager;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 61
     return-void
 .end method
 
@@ -1306,7 +1157,6 @@
     .param p5, "isHomeActivity"    # Z
 
     .prologue
-    .line 36
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     move v1, p1
@@ -1321,7 +1171,6 @@
 
     invoke-static/range {v0 .. v5}, Lnubia/os/ApplicationManager;->noteResumingActivityImpl(Lnubia/os/IApplicationManager;IILjava/lang/String;Ljava/lang/String;Z)V
 
-    .line 37
     return-void
 .end method
 
@@ -1333,12 +1182,10 @@
     .param p4, "hostingType"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1, p2, p3, p4}, Lnubia/os/ApplicationManager;->noteStartingProcessImpl(Lnubia/os/IApplicationManager;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 49
     return-void
 .end method
 
@@ -1347,12 +1194,10 @@
     .param p1, "expanding"    # Z
 
     .prologue
-    .line 68
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1}, Lnubia/os/ApplicationManager;->noteStatusBarExpandingImpl(Lnubia/os/IApplicationManager;Z)V
 
-    .line 69
     return-void
 .end method
 
@@ -1364,11 +1209,9 @@
     .param p4, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lnubia/os/ApplicationManager;->mService:Lnubia/os/IApplicationManager;
 
     invoke-static {v0, p1, p2, p3, p4}, Lnubia/os/ApplicationManager;->noteStoppingActivityImpl(Lnubia/os/IApplicationManager;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 45
     return-void
 .end method

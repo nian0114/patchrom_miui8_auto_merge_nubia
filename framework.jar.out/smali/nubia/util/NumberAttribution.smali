@@ -70,28 +70,24 @@
     .locals 1
 
     .prologue
-    .line 28
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Lnubia/util/NumberAttribution;->sCitiesWordBook:Landroid/util/SparseArray;
 
-    .line 29
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Lnubia/util/NumberAttribution;->sCorpWordBook:Landroid/util/SparseArray;
 
-    .line 38
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lnubia/util/NumberAttribution;->mInstanceObjectSync:Ljava/lang/Object;
 
-    .line 41
     const/4 v0, 0x0
 
     sput-object v0, Lnubia/util/NumberAttribution;->myInstance:Lnubia/util/NumberAttribution;
@@ -104,29 +100,22 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lnubia/util/NumberAttribution;->mIsDBReady:Z
 
-    .line 58
     invoke-direct {p0, p1}, Lnubia/util/NumberAttribution;->openDatabase(Landroid/content/Context;)V
 
-    .line 60
     iget-boolean v0, p0, Lnubia/util/NumberAttribution;->mIsDBReady:Z
 
     if-eqz v0, :cond_0
 
-    .line 61
     invoke-direct {p0}, Lnubia/util/NumberAttribution;->initCitiesWordBook()V
 
-    .line 62
     invoke-direct {p0}, Lnubia/util/NumberAttribution;->initCorpWordBook()V
 
-    .line 64
     :cond_0
     return-void
 .end method
@@ -135,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 241
     :try_start_0
     iget-object v0, p0, Lnubia/util/NumberAttribution;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -149,29 +137,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 242
     iget-object v0, p0, Lnubia/util/NumberAttribution;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 243
     const/4 v0, 0x0
 
     iput-object v0, p0, Lnubia/util/NumberAttribution;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 247
     :cond_0
     :goto_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lnubia/util/NumberAttribution;->mIsDBReady:Z
 
-    .line 248
     return-void
 
-    .line 245
     :catch_0
     move-exception v0
 
@@ -185,21 +168,17 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 213
     move-object v0, p1
 
-    .line 214
     .local v0, "formatedNumberArribution":Ljava/lang/String;
     if-eqz p1, :cond_0
 
-    .line 215
     const-string v2, " "
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 216
     .local v1, "provinceAndCity":[Ljava/lang/String;
     aget-object v2, v1, v4
 
@@ -213,7 +192,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 217
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -234,7 +212,6 @@
 
     move-result-object v0
 
-    .line 220
     .end local v1    # "provinceAndCity":[Ljava/lang/String;
     :cond_0
     return-object v0
@@ -246,10 +223,8 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 197
     const/4 v1, 0x0
 
-    .line 198
     .local v1, "countryIso":Ljava/lang/String;
     const-string v3, "country_detector"
 
@@ -259,35 +234,28 @@
 
     check-cast v2, Landroid/location/CountryDetector;
 
-    .line 200
     .local v2, "detector":Landroid/location/CountryDetector;
     if-eqz v2, :cond_0
 
-    .line 201
     invoke-virtual {v2}, Landroid/location/CountryDetector;->detectCountry()Landroid/location/Country;
 
     move-result-object v0
 
-    .line 202
     .local v0, "country":Landroid/location/Country;
     if-eqz v0, :cond_0
 
-    .line 203
     invoke-virtual {v0}, Landroid/location/Country;->getCountryIso()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 206
     .end local v0    # "country":Landroid/location/Country;
     :cond_0
     if-nez v1, :cond_1
 
-    .line 207
     invoke-virtual {p1}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 209
     :cond_1
     return-object v1
 .end method
@@ -299,18 +267,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 291
     const/4 v1, 0x0
 
-    .line 292
     .local v1, "structuredPhoneNumber":Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;
     const/4 v0, 0x0
 
-    .line 293
     .local v0, "nationalnumber":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 296
     .local v2, "tempnumber":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->getInstance()Lcom/android/i18n/phonenumbers/PhoneNumberUtil;
@@ -325,16 +289,13 @@
 
     move-result-object v1
 
-    .line 300
     :goto_0
     if-nez v1, :cond_1
 
-    .line 312
     :cond_0
     :goto_1
     return-object v3
 
-    .line 302
     :cond_1
     invoke-virtual {v1}, Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;->getCountryCode()I
 
@@ -356,14 +317,12 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 307
     invoke-virtual {v1}, Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;->hasNationalNumber()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 308
     invoke-virtual {v1}, Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;->getNationalNumber()J
 
     move-result-wide v4
@@ -372,13 +331,11 @@
 
     move-result-object v0
 
-    .line 311
     :cond_2
     if-eqz v0, :cond_3
 
     move-object v2, v0
 
-    .line 312
     :goto_2
     const/4 v3, 0x0
 
@@ -393,10 +350,8 @@
     :cond_3
     move-object v2, p1
 
-    .line 311
     goto :goto_2
 
-    .line 298
     :catch_0
     move-exception v4
 
@@ -409,45 +364,36 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 172
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 173
     const/4 v2, 0x0
 
-    .line 193
     :goto_0
     return-object v2
 
-    .line 175
     :cond_0
     invoke-static {}, Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->getInstance()Lcom/android/i18n/phonenumbers/PhoneNumberUtil;
 
     move-result-object v6
 
-    .line 176
     .local v6, "util":Lcom/android/i18n/phonenumbers/PhoneNumberUtil;
     invoke-static {}, Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;->getInstance()Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;
 
     move-result-object v3
 
-    .line 178
     .local v3, "geocoder":Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;
     sget-object v4, Ljava/util/Locale;->CHINESE:Ljava/util/Locale;
 
-    .line 179
     .local v4, "locale":Ljava/util/Locale;
     const-string v0, "CN"
 
-    .line 183
     .local v0, "countryIso":Ljava/lang/String;
     if-eqz p0, :cond_1
 
-    .line 184
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -459,18 +405,15 @@
 
     iget-object v4, v7, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 185
     invoke-static {p0, v4}, Lnubia/util/NumberAttribution;->getCurrentCountryIso(Landroid/content/Context;Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 187
     :cond_1
     invoke-virtual {v6, p1, v0}, Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->parse(Ljava/lang/String;Ljava/lang/String;)Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;
 
     move-result-object v5
 
-    .line 188
     .local v5, "pn":Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;
     invoke-virtual {v3, v5, v4}, Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;->getDescriptionForNumber(Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;Ljava/util/Locale;)Ljava/lang/String;
     :try_end_0
@@ -481,17 +424,14 @@
     .local v2, "geoInfo":Ljava/lang/String;
     goto :goto_0
 
-    .line 189
     .end local v2    # "geoInfo":Ljava/lang/String;
     .end local v5    # "pn":Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;
     :catch_0
     move-exception v1
 
-    .line 190
     .local v1, "e":Lcom/android/i18n/phonenumbers/NumberParseException;
     invoke-virtual {v1}, Lcom/android/i18n/phonenumbers/NumberParseException;->printStackTrace()V
 
-    .line 191
     const/4 v2, 0x0
 
     .restart local v2    # "geoInfo":Ljava/lang/String;
@@ -503,36 +443,30 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 116
     sget-object v1, Lnubia/util/NumberAttribution;->mInstanceObjectSync:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 117
     :try_start_0
     sget-object v0, Lnubia/util/NumberAttribution;->myInstance:Lnubia/util/NumberAttribution;
 
     if-nez v0, :cond_0
 
-    .line 118
     new-instance v0, Lnubia/util/NumberAttribution;
 
     invoke-direct {v0, p0}, Lnubia/util/NumberAttribution;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lnubia/util/NumberAttribution;->myInstance:Lnubia/util/NumberAttribution;
 
-    .line 120
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 121
     sget-object v0, Lnubia/util/NumberAttribution;->myInstance:Lnubia/util/NumberAttribution;
 
     return-object v0
 
-    .line 120
     :catchall_0
     move-exception v0
 
@@ -556,21 +490,17 @@
 
     const/4 v3, 0x0
 
-    .line 86
     new-instance v0, Landroid/database/sqlite/SQLiteQueryBuilder;
 
     invoke-direct {v0}, Landroid/database/sqlite/SQLiteQueryBuilder;-><init>()V
 
-    .line 87
     .local v0, "qb":Landroid/database/sqlite/SQLiteQueryBuilder;
     const-string v1, "Cities"
 
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteQueryBuilder;->setTables(Ljava/lang/String;)V
 
-    .line 88
     const/4 v8, 0x0
 
-    .line 89
     .local v8, "city":Ljava/lang/String;
     iget-object v1, p0, Lnubia/util/NumberAttribution;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -602,11 +532,9 @@
 
     move-result-object v9
 
-    .line 91
     .local v9, "cityCursor":Landroid/database/Cursor;
     if-eqz v9, :cond_1
 
-    .line 92
     :goto_0
     :try_start_0
     invoke-interface {v9}, Landroid/database/Cursor;->moveToNext()Z
@@ -615,7 +543,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 93
     sget-object v1, Lnubia/util/NumberAttribution;->sCitiesWordBook:Landroid/util/SparseArray;
 
     const/4 v2, 0x0
@@ -665,7 +592,6 @@
 
     goto :goto_0
 
-    .line 89
     :catch_0
     move-exception v1
 
@@ -674,7 +600,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 96
     :catchall_0
     move-exception v2
 
@@ -706,12 +631,10 @@
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 97
     :cond_2
     :goto_3
     return-void
 
-    .line 96
     :catch_1
     move-exception v10
 
@@ -756,21 +679,17 @@
 
     const/4 v3, 0x0
 
-    .line 100
     new-instance v0, Landroid/database/sqlite/SQLiteQueryBuilder;
 
     invoke-direct {v0}, Landroid/database/sqlite/SQLiteQueryBuilder;-><init>()V
 
-    .line 101
     .local v0, "qb":Landroid/database/sqlite/SQLiteQueryBuilder;
     const-string v1, "Corps"
 
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteQueryBuilder;->setTables(Ljava/lang/String;)V
 
-    .line 102
     const/4 v8, 0x0
 
-    .line 103
     .local v8, "corp":Ljava/lang/String;
     iget-object v1, p0, Lnubia/util/NumberAttribution;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -798,11 +717,9 @@
 
     move-result-object v9
 
-    .line 105
     .local v9, "corpCursor":Landroid/database/Cursor;
     if-eqz v9, :cond_1
 
-    .line 106
     :goto_0
     :try_start_0
     invoke-interface {v9}, Landroid/database/Cursor;->moveToNext()Z
@@ -811,7 +728,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 107
     sget-object v1, Lnubia/util/NumberAttribution;->sCorpWordBook:Landroid/util/SparseArray;
 
     const/4 v2, 0x0
@@ -833,7 +749,6 @@
 
     goto :goto_0
 
-    .line 103
     :catch_0
     move-exception v1
 
@@ -842,7 +757,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 111
     :catchall_0
     move-exception v2
 
@@ -874,12 +788,10 @@
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 112
     :cond_2
     :goto_3
     return-void
 
-    .line 111
     :catch_1
     move-exception v10
 
@@ -919,7 +831,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 226
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -933,7 +844,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 227
     const-string v1, "/system/etc/mobilenuminmainland.db"
 
     const/4 v2, 0x0
@@ -946,16 +856,13 @@
 
     iput-object v1, p0, Lnubia/util/NumberAttribution;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 229
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lnubia/util/NumberAttribution;->mIsDBReady:Z
 
-    .line 237
     :goto_0
     return-void
 
-    .line 231
     :cond_0
     invoke-direct {p0}, Lnubia/util/NumberAttribution;->closeDatabase()V
     :try_end_0
@@ -963,11 +870,9 @@
 
     goto :goto_0
 
-    .line 233
     :catch_0
     move-exception v0
 
-    .line 234
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "NumberAttribution"
 
@@ -975,7 +880,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     invoke-direct {p0}, Lnubia/util/NumberAttribution;->closeDatabase()V
 
     goto :goto_0
@@ -990,21 +894,17 @@
 
     const/4 v6, 0x0
 
-    .line 272
     const/4 v3, 0x2
 
     new-array v0, v3, [I
 
-    .line 273
     .local v0, "arryID":[I
     if-nez p1, :cond_1
 
-    .line 283
     :cond_0
     :goto_0
     return-object v0
 
-    .line 276
     :cond_1
     iget-object v3, p0, Lnubia/util/NumberAttribution;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -1021,7 +921,6 @@
     .local v1, "c":Landroid/database/Cursor;
     const/4 v4, 0x0
 
-    .line 278
     if-eqz v1, :cond_2
 
     :try_start_0
@@ -1031,7 +930,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 279
     const/4 v3, 0x0
 
     const/4 v5, 0x0
@@ -1042,7 +940,6 @@
 
     aput v5, v0, v3
 
-    .line 280
     const/4 v3, 0x1
 
     const/4 v5, 0x1
@@ -1056,7 +953,6 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 282
     :cond_2
     if-eqz v1, :cond_0
 
@@ -1083,7 +979,6 @@
 
     goto :goto_0
 
-    .line 276
     :catch_1
     move-exception v3
 
@@ -1092,7 +987,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 282
     :catchall_0
     move-exception v4
 
@@ -1142,7 +1036,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-boolean v0, p0, Lnubia/util/NumberAttribution;->mIsDBReady:Z
 
     return v0
@@ -1154,10 +1047,8 @@
     .param p2, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 148
     const-string v3, ""
 
-    .line 149
     .local v3, "numberArribution":Ljava/lang/String;
     iget-object v6, p0, Lnubia/util/NumberAttribution;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -1165,13 +1056,11 @@
 
     move-object v4, v3
 
-    .line 168
     .end local v3    # "numberArribution":Ljava/lang/String;
     .local v4, "numberArribution":Ljava/lang/String;
     :goto_0
     return-object v4
 
-    .line 152
     .end local v4    # "numberArribution":Ljava/lang/String;
     .restart local v3    # "numberArribution":Ljava/lang/String;
     :cond_0
@@ -1179,32 +1068,26 @@
 
     move-result-object v5
 
-    .line 153
     .local v5, "tmpnumber":Ljava/lang/String;
     invoke-direct {p0, v5}, Lnubia/util/NumberAttribution;->queryId(Ljava/lang/String;)[I
 
     move-result-object v0
 
-    .line 154
     .local v0, "arryID":[I
     if-eqz v0, :cond_2
 
-    .line 155
     const/4 v6, 0x0
 
     aget v1, v0, v6
 
-    .line 156
     .local v1, "cityID":I
     const/4 v6, 0x1
 
     aget v2, v0, v6
 
-    .line 157
     .local v2, "corpID":I
     if-lez v1, :cond_1
 
-    .line 158
     sget-object v6, Lnubia/util/NumberAttribution;->sCitiesWordBook:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1217,7 +1100,6 @@
 
     move-result-object v3
 
-    .line 160
     :cond_1
     if-lez v2, :cond_2
 
@@ -1225,7 +1107,6 @@
 
     if-ge v2, v6, :cond_2
 
-    .line 161
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1256,7 +1137,6 @@
 
     move-result-object v3
 
-    .line 165
     .end local v1    # "cityID":I
     .end local v2    # "corpID":I
     :cond_2
@@ -1266,7 +1146,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 166
     invoke-static {p1, p2}, Lnubia/util/NumberAttribution;->getGeoDescription(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -1274,7 +1153,6 @@
     :cond_3
     move-object v4, v3
 
-    .line 168
     .end local v3    # "numberArribution":Ljava/lang/String;
     .restart local v4    # "numberArribution":Ljava/lang/String;
     goto :goto_0
@@ -1285,7 +1163,6 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Lnubia/util/NumberAttribution;->queryAttributionByNumber(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;

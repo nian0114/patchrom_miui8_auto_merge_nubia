@@ -25,7 +25,6 @@
     .param p3, "x1"    # I
 
     .prologue
-    .line 455
     iput-object p1, p0, Lcom/android/server/policy/NubiaGlobalActions$8;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/policy/NubiaGlobalActions$SinglePressAction;-><init>(II)V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 463
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$8;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -51,7 +49,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->rebootSafeMode(Z)V
 
-    .line 464
     return v1
 .end method
 
@@ -59,7 +56,6 @@
     .locals 2
 
     .prologue
-    .line 459
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$8;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -71,7 +67,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->shutdown(Z)V
 
-    .line 460
     return-void
 .end method
 
@@ -79,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 472
     const/4 v0, 0x1
 
     return v0
@@ -89,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 468
     const/4 v0, 0x1
 
     return v0

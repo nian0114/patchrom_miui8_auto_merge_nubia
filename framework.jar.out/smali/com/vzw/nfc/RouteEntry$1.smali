@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 64
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
@@ -56,41 +54,34 @@
 
     if-ne v5, v2, :cond_0
 
-    .line 65
     .local v2, "allowed":Z
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 66
     .local v3, "location":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 67
     .local v4, "powerState":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 68
     .local v1, "aidLength":I
     new-array v0, v1, [B
 
-    .line 69
     .local v0, "aid":[B
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 71
     new-instance v5, Lcom/vzw/nfc/RouteEntry;
 
     invoke-direct {v5, v0, v4, v3, v2}, Lcom/vzw/nfc/RouteEntry;-><init>([BIIZ)V
 
     return-object v5
 
-    .line 64
     .end local v0    # "aid":[B
     .end local v1    # "aidLength":I
     .end local v2    # "allowed":Z
@@ -106,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 62
     invoke-virtual {p0, p1}, Lcom/vzw/nfc/RouteEntry$1;->createFromParcel(Landroid/os/Parcel;)Lcom/vzw/nfc/RouteEntry;
 
     move-result-object v0
@@ -119,7 +109,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 75
     new-array v0, p1, [Lcom/vzw/nfc/RouteEntry;
 
     return-object v0
@@ -129,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 62
     invoke-virtual {p0, p1}, Lcom/vzw/nfc/RouteEntry$1;->newArray(I)[Lcom/vzw/nfc/RouteEntry;
 
     move-result-object v0

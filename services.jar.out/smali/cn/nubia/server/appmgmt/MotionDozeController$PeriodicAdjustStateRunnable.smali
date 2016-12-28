@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 278
     iput-object p1, p0, Lcn/nubia/server/appmgmt/MotionDozeController$PeriodicAdjustStateRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcn/nubia/server/appmgmt/MotionDozeController$1;
 
     .prologue
-    .line 278
     invoke-direct {p0, p1}, Lcn/nubia/server/appmgmt/MotionDozeController$PeriodicAdjustStateRunnable;-><init>(Lcn/nubia/server/appmgmt/MotionDozeController;)V
 
     return-void
@@ -52,12 +50,10 @@
     .locals 1
 
     .prologue
-    .line 281
     iget-object v0, p0, Lcn/nubia/server/appmgmt/MotionDozeController$PeriodicAdjustStateRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     # invokes: Lcn/nubia/server/appmgmt/MotionDozeController;->adjustState()V
     invoke-static {v0}, Lcn/nubia/server/appmgmt/MotionDozeController;->access$700(Lcn/nubia/server/appmgmt/MotionDozeController;)V
 
-    .line 282
     return-void
 .end method

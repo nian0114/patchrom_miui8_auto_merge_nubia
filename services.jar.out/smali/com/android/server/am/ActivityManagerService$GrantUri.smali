@@ -30,19 +30,14 @@
     .param p3, "prefix"    # Z
 
     .prologue
-    .line 933
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 934
     iput p1, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->sourceUserId:I
 
-    .line 935
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->uri:Landroid/net/Uri;
 
-    .line 936
     iput-boolean p3, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->prefix:Z
 
-    .line 937
     return-void
 .end method
 
@@ -52,7 +47,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 972
     new-instance v0, Lcom/android/server/am/ActivityManagerService$GrantUri;
 
     invoke-static {p1, p0}, Landroid/content/ContentProvider;->getUserIdFromUri(Landroid/net/Uri;I)I
@@ -79,17 +73,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 950
     instance-of v2, p1, Lcom/android/server/am/ActivityManagerService$GrantUri;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 951
     check-cast v0, Lcom/android/server/am/ActivityManagerService$GrantUri;
 
-    .line 952
     .local v0, "other":Lcom/android/server/am/ActivityManagerService$GrantUri;
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->uri:Landroid/net/Uri;
 
@@ -115,7 +106,6 @@
 
     const/4 v1, 0x1
 
-    .line 955
     .end local v0    # "other":Lcom/android/server/am/ActivityManagerService$GrantUri;
     :cond_0
     return v1
@@ -125,16 +115,13 @@
     .locals 3
 
     .prologue
-    .line 941
     const/4 v0, 0x1
 
-    .line 942
     .local v0, "hashCode":I
     iget v1, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->sourceUserId:I
 
     add-int/lit8 v0, v1, 0x1f
 
-    .line 943
     mul-int/lit8 v1, v0, 0x1f
 
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->uri:Landroid/net/Uri;
@@ -145,7 +132,6 @@
 
     add-int v0, v1, v2
 
-    .line 944
     mul-int/lit8 v2, v0, 0x1f
 
     iget-boolean v1, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->prefix:Z
@@ -157,10 +143,8 @@
     :goto_0
     add-int v0, v2, v1
 
-    .line 945
     return v0
 
-    .line 944
     :cond_0
     const/16 v1, 0x4d5
 
@@ -171,7 +155,6 @@
     .locals 3
 
     .prologue
-    .line 966
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -206,7 +189,6 @@
 
     move-result-object v0
 
-    .line 967
     .local v0, "result":Ljava/lang/String;
     iget-boolean v1, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->prefix:Z
 
@@ -230,7 +212,6 @@
 
     move-result-object v0
 
-    .line 968
     :cond_0
     return-object v0
 .end method
@@ -239,7 +220,6 @@
     .locals 3
 
     .prologue
-    .line 960
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -274,7 +254,6 @@
 
     move-result-object v0
 
-    .line 961
     .local v0, "result":Ljava/lang/String;
     iget-boolean v1, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->prefix:Z
 
@@ -298,7 +277,6 @@
 
     move-result-object v0
 
-    .line 962
     :cond_0
     return-object v0
 .end method

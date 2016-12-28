@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 267
     iput-object p1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$ShutdownOrRebootListener;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/policy/NubiaShutdownRebootDialog$1;
 
     .prologue
-    .line 267
     invoke-direct {p0, p1}, Lcom/android/server/policy/NubiaShutdownRebootDialog$ShutdownOrRebootListener;-><init>(Lcom/android/server/policy/NubiaShutdownRebootDialog;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 270
     iget-object v0, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$ShutdownOrRebootListener;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mCallbackAction:Lcom/android/server/policy/NubiaShutdownRebootDialog$CallbackAction;
@@ -62,7 +59,6 @@
 
     invoke-interface {v0}, Lcom/android/server/policy/NubiaShutdownRebootDialog$CallbackAction;->rebooting()V
 
-    .line 271
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 274
     iget-object v0, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$ShutdownOrRebootListener;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mCallbackAction:Lcom/android/server/policy/NubiaShutdownRebootDialog$CallbackAction;
@@ -80,6 +75,5 @@
 
     invoke-interface {v0}, Lcom/android/server/policy/NubiaShutdownRebootDialog$CallbackAction;->shutdowning()V
 
-    .line 275
     return-void
 .end method

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <CheckBox android:textAppearance="?android:textAppearanceMedium" android:gravity="center_vertical" android:id="@id/checkbox" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="0.0dip" android:button="@null" android:drawableRight="?android:listChoiceIndicatorMultiple" android:layout_weight="1.0" android:paddingStart="?android:listPreferredItemPaddingStart" android:paddingEnd="?android:listPreferredItemPaddingEnd" />
-    <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/listdivider_height" />
-</LinearLayout>

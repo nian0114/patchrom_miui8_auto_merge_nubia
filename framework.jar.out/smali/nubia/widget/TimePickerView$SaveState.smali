@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 168
     new-instance v0, Lnubia/widget/TimePickerView$SaveState$1;
 
     invoke-direct {v0}, Lnubia/widget/TimePickerView$SaveState$1;-><init>()V
@@ -53,24 +52,20 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 150
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 151
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lnubia/widget/TimePickerView$SaveState;->mHour:I
 
-    .line 152
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lnubia/widget/TimePickerView$SaveState;->mMinute:I
 
-    .line 153
     return-void
 .end method
 
@@ -81,16 +76,12 @@
     .param p3, "minute"    # I
 
     .prologue
-    .line 156
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 157
     iput p2, p0, Lnubia/widget/TimePickerView$SaveState;->mHour:I
 
-    .line 158
     iput p3, p0, Lnubia/widget/TimePickerView$SaveState;->mMinute:I
 
-    .line 159
     return-void
 .end method
 
@@ -102,19 +93,15 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 163
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 164
     iget v0, p0, Lnubia/widget/TimePickerView$SaveState;->mHour:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 165
     iget v0, p0, Lnubia/widget/TimePickerView$SaveState;->mMinute:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 166
     return-void
 .end method

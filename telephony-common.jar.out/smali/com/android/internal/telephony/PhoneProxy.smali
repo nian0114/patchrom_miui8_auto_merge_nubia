@@ -318,17 +318,6 @@
     const/4 v1, 0x0
 
     .line 1798
-    iget-boolean v2, p0, Lcom/android/internal/telephony/PhoneProxy;->mCanSetPbsCmd:Z
-
-    if-nez v2, :cond_0
-
-    if-eqz p1, :cond_2
-
-    .line 1799
-    :cond_0
-    iput-boolean v1, p0, Lcom/android/internal/telephony/PhoneProxy;->mCanSetPbsCmd:Z
-
-    .line 1801
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -361,6 +350,17 @@
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/PhoneProxy;->logd(Ljava/lang/String;)V
 
+    .line 1799
+    iget-boolean v2, p0, Lcom/android/internal/telephony/PhoneProxy;->mCanSetPbsCmd:Z
+
+    if-nez v2, :cond_0
+
+    if-eqz p1, :cond_2
+
+    .line 1800
+    :cond_0
+    iput-boolean v1, p0, Lcom/android/internal/telephony/PhoneProxy;->mCanSetPbsCmd:Z
+
     .line 1802
     iget-object v2, p0, Lcom/android/internal/telephony/PhoneProxy;->mActivePhone:Lcom/android/internal/telephony/Phone;
 
@@ -382,6 +382,27 @@
 
     .line 1805
     .local v0, "curr":I
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "NeedToSendPBSCmd, curr: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/android/internal/telephony/PhoneProxy;->logd(Ljava/lang/String;)V
+
+    .line 1806
     sget v2, Lcom/android/internal/telephony/PhoneBase;->PBS_ENABLE:I
 
     if-ne v0, v2, :cond_1
@@ -391,7 +412,7 @@
     :cond_1
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/PhoneProxy;->setDetectPseudoBaseStationEnabled(Z)V
 
-    .line 1807
+    .line 1808
     .end local v0    # "curr":I
     :cond_2
     return-void
@@ -4611,7 +4632,7 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 1811
+    .line 1812
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4632,12 +4653,12 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneProxy;->logd(Ljava/lang/String;)V
 
-    .line 1812
+    .line 1813
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mActivePhone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v0, p1}, Lcom/android/internal/telephony/Phone;->setDetectPseudoBaseStationEnabled(Z)V
 
-    .line 1813
+    .line 1814
     return-void
 .end method
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 690
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController$1;
 
     .prologue
-    .line 690
     invoke-direct {p0, p1}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$SystemReadyRunnalbe;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;)V
 
     return-void
@@ -54,7 +52,6 @@
     .prologue
     const/4 v14, 0x0
 
-    .line 693
     iget-object v11, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mContext:Landroid/content/Context;
@@ -70,21 +67,17 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 694
     .local v0, "am":Landroid/app/ActivityManager;
     if-nez v0, :cond_1
 
-    .line 737
     :cond_0
     return-void
 
-    .line 697
     :cond_1
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v9
 
-    .line 698
     .local v9, "processes":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     if-eqz v9, :cond_0
 
@@ -94,7 +87,6 @@
 
     if-eqz v11, :cond_0
 
-    .line 701
     iget-object v11, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
@@ -104,14 +96,12 @@
 
     if-eqz v11, :cond_2
 
-    .line 702
     const-string v11, "ApplicationNetworkController"
 
     const-string v12, "system ready. try to set uid rule"
 
     invoke-static {v11, v12}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 705
     :cond_2
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -131,7 +121,6 @@
 
     check-cast v10, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 706
     .local v10, "rapi":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget-object v11, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -150,12 +139,10 @@
 
     if-eqz v11, :cond_3
 
-    .line 709
     iget-object v11, v10, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     if-eqz v11, :cond_3
 
-    .line 712
     iget-object v11, v10, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     array-length v11, v11
@@ -164,7 +151,6 @@
 
     if-le v11, v12, :cond_5
 
-    .line 713
     iget-object v11, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
@@ -174,7 +160,6 @@
 
     if-eqz v11, :cond_4
 
-    .line 714
     const-string v11, "ApplicationNetworkController"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -217,7 +202,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 718
     :cond_4
     iget-object v1, v10, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
@@ -233,7 +217,6 @@
 
     aget-object v8, v1, v6
 
-    .line 719
     .local v8, "p":Ljava/lang/String;
     iget-object v11, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -244,12 +227,10 @@
 
     invoke-virtual {v11, v8}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 718
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 724
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v6    # "i$":I
     .end local v7    # "len$":I
@@ -276,7 +257,6 @@
 
     if-nez v11, :cond_3
 
-    .line 727
     iget-object v11, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
@@ -294,15 +274,12 @@
 
     check-cast v2, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
 
-    .line 728
     .local v2, "config":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     iget-boolean v3, v2, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableMobile:Z
 
-    .line 729
     .local v3, "enableMobile":Z
     iget-boolean v4, v2, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableWifi:Z
 
-    .line 731
     .local v4, "enableWifi":Z
     iget-object v11, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -313,17 +290,14 @@
 
     if-nez v11, :cond_6
 
-    .line 732
     iget-boolean v11, v2, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableMobileInScreenOff:Z
 
     and-int/2addr v3, v11
 
-    .line 733
     iget-boolean v11, v2, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableWifiInScreenOff:Z
 
     and-int/2addr v4, v11
 
-    .line 735
     :cond_6
     iget-object v11, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 

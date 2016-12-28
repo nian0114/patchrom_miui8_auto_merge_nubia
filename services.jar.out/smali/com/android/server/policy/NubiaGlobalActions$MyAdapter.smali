@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 683
     iput-object p1, p0, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/policy/NubiaGlobalActions$1;
 
     .prologue
-    .line 683
     invoke-direct {p0, p1}, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;-><init>(Lcom/android/server/policy/NubiaGlobalActions;)V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 707
     const/4 v0, 0x0
 
     return v0
@@ -59,10 +56,8 @@
     .locals 4
 
     .prologue
-    .line 686
     const/4 v1, 0x0
 
-    .line 687
     .local v1, "count":I
     const/4 v2, 0x0
 
@@ -81,7 +76,6 @@
 
     if-ge v2, v3, :cond_3
 
-    .line 688
     iget-object v3, p0, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mItems:Ljava/util/ArrayList;
@@ -95,7 +89,6 @@
 
     check-cast v0, Lcom/android/server/policy/NubiaGlobalActions$Action;
 
-    .line 689
     .local v0, "action":Lcom/android/server/policy/NubiaGlobalActions$Action;
     iget-object v3, p0, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
@@ -112,14 +105,12 @@
 
     if-nez v3, :cond_1
 
-    .line 687
     :cond_0
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 692
     :cond_1
     iget-object v3, p0, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
@@ -136,13 +127,11 @@
 
     if-eqz v3, :cond_0
 
-    .line 695
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 697
     .end local v0    # "action":Lcom/android/server/policy/NubiaGlobalActions$Action;
     :cond_3
     return v1
@@ -153,10 +142,8 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 711
     const/4 v1, 0x0
 
-    .line 712
     .local v1, "filteredPos":I
     const/4 v2, 0x0
 
@@ -175,7 +162,6 @@
 
     if-ge v2, v3, :cond_4
 
-    .line 713
     iget-object v3, p0, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mItems:Ljava/util/ArrayList;
@@ -189,7 +175,6 @@
 
     check-cast v0, Lcom/android/server/policy/NubiaGlobalActions$Action;
 
-    .line 714
     .local v0, "action":Lcom/android/server/policy/NubiaGlobalActions$Action;
     iget-object v3, p0, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
@@ -206,14 +191,12 @@
 
     if-nez v3, :cond_1
 
-    .line 712
     :cond_0
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 717
     :cond_1
     iget-object v3, p0, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
@@ -230,20 +213,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 720
     :cond_2
     if-ne v1, p1, :cond_3
 
-    .line 721
     return-object v0
 
-    .line 723
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 725
     .end local v0    # "action":Lcom/android/server/policy/NubiaGlobalActions$Action;
     :cond_4
     new-instance v3, Ljava/lang/IllegalArgumentException;
@@ -329,7 +308,6 @@
     .locals 1
 
     .prologue
-    .line 683
     invoke-virtual {p0, p1}, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;->getItem(I)Lcom/android/server/policy/NubiaGlobalActions$Action;
 
     move-result-object v0
@@ -342,7 +320,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 732
     int-to-long v0, p1
 
     return-wide v0
@@ -355,12 +332,10 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 736
     invoke-virtual {p0, p1}, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;->getItem(I)Lcom/android/server/policy/NubiaGlobalActions$Action;
 
     move-result-object v0
 
-    .line 737
     .local v0, "action":Lcom/android/server/policy/NubiaGlobalActions$Action;
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
@@ -392,7 +367,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 702
     invoke-virtual {p0, p1}, Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;->getItem(I)Lcom/android/server/policy/NubiaGlobalActions$Action;
 
     move-result-object v0

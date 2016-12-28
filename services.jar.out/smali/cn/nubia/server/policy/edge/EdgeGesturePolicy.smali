@@ -38,21 +38,16 @@
     .param p2, "manager"    # Lcom/android/server/policy/PhoneWindowManager;
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object p1, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mContext:Landroid/content/Context;
 
-    .line 40
     iput-object p2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 42
     invoke-static {}, Lcn/nubia/server/policy/edge/EdgeUiThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
 
-    .line 43
     .local v1, "handler":Landroid/os/Handler;
     new-instance v2, Lcn/nubia/server/policy/edge/GestureSettings;
 
@@ -62,7 +57,6 @@
 
     iput-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mGestureSettings:Lcn/nubia/server/policy/edge/GestureSettings;
 
-    .line 44
     iget-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
@@ -75,14 +69,12 @@
 
     iput-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mCommunalService:Lcn/nubia/server/policy/edge/CommunalService;
 
-    .line 45
     new-instance v0, Lcn/nubia/server/policy/edge/ActionExecutor;
 
     iget-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v2, v1}, Lcn/nubia/server/policy/edge/ActionExecutor;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 46
     .local v0, "executor":Lcn/nubia/server/policy/edge/ActionExecutor;
     new-instance v2, Lcn/nubia/server/policy/edge/Animation;
 
@@ -96,7 +88,6 @@
 
     iput-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mAnimate:Lcn/nubia/server/policy/edge/Animation;
 
-    .line 47
     new-instance v2, Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     iget-object v3, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mContext:Landroid/content/Context;
@@ -109,12 +100,10 @@
 
     iput-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mActionStateMachine:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
-    .line 48
     iget-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mActionStateMachine:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     invoke-virtual {v2}, Lcn/nubia/server/policy/edge/ActionStateMachine;->start()V
 
-    .line 50
     new-instance v2, Lcn/nubia/edgegesture/EdgeGestureDetector;
 
     iget-object v3, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mContext:Landroid/content/Context;
@@ -123,7 +112,6 @@
 
     iput-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mEdgeGestureDetector:Lcn/nubia/edgegesture/EdgeGestureDetector;
 
-    .line 51
     iget-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mEdgeGestureDetector:Lcn/nubia/edgegesture/EdgeGestureDetector;
 
     const/4 v3, 0x6
@@ -192,24 +180,20 @@
 
     invoke-virtual {v2, v3, p0}, Lcn/nubia/edgegesture/EdgeGestureDetector;->detect([Ljava/lang/Integer;Lcn/nubia/edgegesture/OnEdgeGestureListener;)V
 
-    .line 59
     invoke-static {}, Lnubia/os/edge/EdgeTouchManager;->getInstance()Lnubia/os/edge/EdgeTouchManager;
 
     move-result-object v2
 
     iput-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mEdgeTouchManager:Lnubia/os/edge/EdgeTouchManager;
 
-    .line 60
     iget-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mEdgeTouchManager:Lnubia/os/edge/EdgeTouchManager;
 
     invoke-virtual {v2, p0}, Lnubia/os/edge/EdgeTouchManager;->registerEdgeTouchListener(Lnubia/os/edge/OnEdgeTouchListener;)V
 
-    .line 61
     iget-object v2, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mEdgeTouchManager:Lnubia/os/edge/EdgeTouchManager;
 
     invoke-virtual {v2, p0}, Lnubia/os/edge/EdgeTouchManager;->registerNormalTouchListener(Lnubia/os/edge/OnNormalTouchListener;)V
 
-    .line 62
     return-void
 .end method
 
@@ -218,7 +202,6 @@
     .param p1, "gesture"    # Lcn/nubia/edgegesture/EdgeGesture;
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mCommunalService:Lcn/nubia/server/policy/edge/CommunalService;
 
     invoke-virtual {p1}, Lcn/nubia/edgegesture/EdgeGesture;->getType()I
@@ -231,7 +214,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 74
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mActionStateMachine:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     invoke-virtual {p1}, Lcn/nubia/edgegesture/EdgeGesture;->getAction()I
@@ -240,12 +222,10 @@
 
     invoke-virtual {v0, v1, p1}, Lcn/nubia/server/policy/edge/ActionStateMachine;->sendMessage(ILjava/lang/Object;)V
 
-    .line 82
     :cond_0
     :goto_0
     return-void
 
-    .line 76
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mCommunalService:Lcn/nubia/server/policy/edge/CommunalService;
 
@@ -255,7 +235,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 77
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mActionStateMachine:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     iget-object v1, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mCommunalService:Lcn/nubia/server/policy/edge/CommunalService;
@@ -278,12 +257,10 @@
     .param p3, "policyFlags"    # I
 
     .prologue
-    .line 118
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mEdgeGestureDetector:Lcn/nubia/edgegesture/EdgeGestureDetector;
 
     invoke-virtual {v0, p2}, Lcn/nubia/edgegesture/EdgeGestureDetector;->onKeyEvent(Landroid/view/KeyEvent;)V
 
-    .line 119
     const-wide/high16 v0, -0x8000000000000000L
 
     return-wide v0
@@ -294,7 +271,6 @@
     .param p1, "gesture"    # Lcn/nubia/edgegesture/EdgeGesture;
 
     .prologue
-    .line 86
     const-string v0, "FitEdgeGesturePolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -317,14 +293,12 @@
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->sysi(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 87
     invoke-virtual {p1}, Lcn/nubia/edgegesture/EdgeGesture;->isValid()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 88
     invoke-virtual {p1}, Lcn/nubia/edgegesture/EdgeGesture;->getAction()I
 
     move-result v0
@@ -333,19 +307,16 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 89
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mCommunalService:Lcn/nubia/server/policy/edge/CommunalService;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/edge/CommunalService;->takeScreenShot(Z)V
 
-    .line 101
     :cond_0
     :goto_0
     return-void
 
-    .line 90
     :cond_1
     invoke-virtual {p1}, Lcn/nubia/edgegesture/EdgeGesture;->getAction()I
 
@@ -355,7 +326,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 91
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mCommunalService:Lcn/nubia/server/policy/edge/CommunalService;
 
     const/16 v1, 0x3000
@@ -366,23 +336,19 @@
 
     if-nez v0, :cond_0
 
-    .line 92
     const/16 v0, 0x1003
 
     invoke-virtual {p1, v0}, Lcn/nubia/edgegesture/EdgeGesture;->updateAction(I)V
 
-    .line 93
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->sendGestureToStateMachine(Lcn/nubia/edgegesture/EdgeGesture;)V
 
     goto :goto_0
 
-    .line 96
     :cond_2
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->sendGestureToStateMachine(Lcn/nubia/edgegesture/EdgeGesture;)V
 
     goto :goto_0
 
-    .line 99
     :cond_3
     const-string v0, "FitEdgeGesturePolicy"
 
@@ -414,17 +380,14 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 111
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mEdgeGestureDetector:Lcn/nubia/edgegesture/EdgeGestureDetector;
 
     invoke-virtual {v0, p1}, Lcn/nubia/edgegesture/EdgeGestureDetector;->onEdgeTouchEvent(Landroid/view/MotionEvent;)V
 
-    .line 112
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mAnimate:Lcn/nubia/server/policy/edge/Animation;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/policy/edge/Animation;->onEdgeTouch(Landroid/view/MotionEvent;)V
 
-    .line 113
     return-void
 .end method
 
@@ -433,17 +396,14 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mEdgeGestureDetector:Lcn/nubia/edgegesture/EdgeGestureDetector;
 
     invoke-virtual {v0, p1}, Lcn/nubia/edgegesture/EdgeGestureDetector;->onNormalTouchEvent(Landroid/view/MotionEvent;)V
 
-    .line 106
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mAnimate:Lcn/nubia/server/policy/edge/Animation;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/policy/edge/Animation;->onNormalTouch(Landroid/view/MotionEvent;)V
 
-    .line 107
     return-void
 .end method
 
@@ -451,12 +411,10 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mGestureSettings:Lcn/nubia/server/policy/edge/GestureSettings;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/edge/GestureSettings;->systemBooted()V
 
-    .line 66
     return-void
 .end method
 
@@ -466,11 +424,9 @@
     .param p2, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcn/nubia/server/policy/edge/EdgeGesturePolicy;->mEdgeTouchManager:Lnubia/os/edge/EdgeTouchManager;
 
     invoke-virtual {v0, p1, p2}, Lnubia/os/edge/EdgeTouchManager;->updatePackageChanged(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 70
     return-void
 .end method

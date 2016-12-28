@@ -23,28 +23,23 @@
     .locals 2
 
     .prologue
-    .line 83
     iput-object p1, p0, Lcn/nubia/server/appmgmt/SyncController$BatteryChangedReceiver;->this$0:Lcn/nubia/server/appmgmt/SyncController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 84
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 85
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.BATTERY_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 86
     const/16 v1, 0x3e8
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 87
     # getter for: Lcn/nubia/server/appmgmt/SyncController;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcn/nubia/server/appmgmt/SyncController;->access$000(Lcn/nubia/server/appmgmt/SyncController;)Landroid/content/Context;
 
@@ -52,7 +47,6 @@
 
     invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 88
     return-void
 .end method
 
@@ -66,7 +60,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 92
     const-string v2, "android.intent.action.BATTERY_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -79,11 +72,9 @@
 
     if-nez v2, :cond_0
 
-    .line 99
     :goto_0
     return-void
 
-    .line 96
     :cond_0
     const-string v2, "status"
 
@@ -91,7 +82,6 @@
 
     move-result v0
 
-    .line 98
     .local v0, "status":I
     iget-object v2, p0, Lcn/nubia/server/appmgmt/SyncController$BatteryChangedReceiver;->this$0:Lcn/nubia/server/appmgmt/SyncController;
 

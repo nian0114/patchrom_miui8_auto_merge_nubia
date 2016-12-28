@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 89
     iput-object p1, p0, Landroid/preference/SeekBarVolumizer$1;->this$0:Landroid/preference/SeekBarVolumizer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 93
     iget-object v0, p0, Landroid/preference/SeekBarVolumizer$1;->this$0:Landroid/preference/SeekBarVolumizer;
 
     # invokes: Landroid/preference/SeekBarVolumizer;->abandonAudioFocus()V
     invoke-static {v0}, Landroid/preference/SeekBarVolumizer;->access$200(Landroid/preference/SeekBarVolumizer;)V
 
-    .line 94
     return-void
 .end method

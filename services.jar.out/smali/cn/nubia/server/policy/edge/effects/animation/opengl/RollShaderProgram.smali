@@ -9,10 +9,8 @@
     .param p1, "program"    # I
 
     .prologue
-    .line 8
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;-><init>(I)V
 
-    .line 9
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mId:I
 
     const-string v1, "uRadius"
@@ -23,7 +21,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mRadiusHandle:I
 
-    .line 10
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mId:I
 
     const-string v1, "uColorScaleStart"
@@ -34,7 +31,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mColorScaleStartHandle:I
 
-    .line 11
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mId:I
 
     const-string v1, "uColorScaleEnd"
@@ -45,7 +41,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mColorScaleEndHandle:I
 
-    .line 12
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mId:I
 
     const-string v1, "uColorDeltaStart"
@@ -56,7 +51,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mColorDeltaStartHandle:I
 
-    .line 13
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mId:I
 
     const-string v1, "uColorDeltaEnd"
@@ -67,7 +61,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mColorDeltaEndHandle:I
 
-    .line 14
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mId:I
 
     const-string v1, "uFgDim"
@@ -78,6 +71,5 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/RollShaderProgram;->mFgDimHandle:I
 
-    .line 15
     return-void
 .end method

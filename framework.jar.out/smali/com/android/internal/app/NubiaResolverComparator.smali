@@ -42,10 +42,8 @@
     .param p3, "referrerPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -62,12 +60,10 @@
 
     iput-object v1, p0, Lcom/android/internal/app/NubiaResolverComparator;->mCollator:Ljava/text/Collator;
 
-    .line 44
     invoke-virtual {p2}, Landroid/content/Intent;->getScheme()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 45
     .local v0, "scheme":Ljava/lang/String;
     const-string v1, "http"
 
@@ -91,20 +87,16 @@
     :goto_0
     iput-boolean v1, p0, Lcom/android/internal/app/NubiaResolverComparator;->mHttp:Z
 
-    .line 46
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/internal/app/NubiaResolverComparator;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 47
     iput-object p3, p0, Lcom/android/internal/app/NubiaResolverComparator;->mReferrerPackage:Ljava/lang/String;
 
-    .line 48
     return-void
 
-    .line 45
     :cond_1
     const/4 v1, 0x0
 
@@ -118,7 +110,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 51
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
@@ -127,7 +118,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 52
     invoke-virtual {p0}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
     move-result-object v1
@@ -144,7 +134,6 @@
 
     const/4 v0, 0x1
 
-    .line 54
     :cond_0
     return v0
 .end method
@@ -157,18 +146,15 @@
     .param p2, "rdri"    # Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 59
     invoke-virtual/range {p1 .. p1}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
     move-result-object v3
 
-    .line 60
     .local v3, "lhs":Landroid/content/pm/ResolveInfo;
     invoke-virtual/range {p2 .. p2}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
     move-result-object v7
 
-    .line 64
     .local v7, "rhs":Landroid/content/pm/ResolveInfo;
     iget v13, v3, Landroid/content/pm/ResolveInfo;->targetUserId:I
 
@@ -176,14 +162,11 @@
 
     if-eq v13, v14, :cond_0
 
-    .line 65
     const/4 v13, 0x1
 
-    .line 110
     :goto_0
     return v13
 
-    .line 68
     :cond_0
     move-object/from16 v0, p0
 
@@ -191,14 +174,12 @@
 
     if-eqz v13, :cond_2
 
-    .line 72
     iget v13, v3, Landroid/content/pm/ResolveInfo;->match:I
 
     invoke-static {v13}, Lcom/android/internal/app/ResolverActivity;->isSpecificUriMatch(I)Z
 
     move-result v6
 
-    .line 74
     .local v6, "lhsSpecific":Z
     iget v13, v3, Landroid/content/pm/ResolveInfo;->match:I
 
@@ -206,11 +187,9 @@
 
     move-result v10
 
-    .line 76
     .local v10, "rhsSpecific":Z
     if-eq v6, v10, :cond_2
 
-    .line 77
     if-eqz v6, :cond_1
 
     const/4 v13, -0x1
@@ -222,7 +201,6 @@
 
     goto :goto_0
 
-    .line 81
     .end local v6    # "lhsSpecific":Z
     .end local v10    # "rhsSpecific":Z
     :cond_2
@@ -236,11 +214,9 @@
 
     sub-int v1, v13, v14
 
-    .line 82
     .local v1, "diff":I
     if-eqz v1, :cond_4
 
-    .line 83
     if-lez v1, :cond_3
 
     const/4 v13, 0x1
@@ -252,20 +228,17 @@
 
     goto :goto_0
 
-    .line 87
     :cond_4
     :try_start_0
     iget-object v13, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v5, v13, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 88
     .local v5, "lhsPkgName":Ljava/lang/String;
     iget-object v13, v7, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v9, v13, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 89
     .local v9, "rhsPkgName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -277,7 +250,6 @@
 
     move-result-object v4
 
-    .line 90
     .local v4, "lhsPackageInfo":Landroid/content/pm/PackageInfo;
     move-object/from16 v0, p0
 
@@ -289,7 +261,6 @@
 
     move-result-object v8
 
-    .line 91
     .local v8, "rhsPackageInfo":Landroid/content/pm/PackageInfo;
     iget-object v13, v4, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -307,12 +278,10 @@
 
     if-gtz v13, :cond_5
 
-    .line 93
     const/4 v13, -0x1
 
     goto :goto_0
 
-    .line 95
     :cond_5
     iget-object v13, v4, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -332,12 +301,10 @@
 
     if-lez v13, :cond_6
 
-    .line 97
     const/4 v13, 0x1
 
     goto :goto_0
 
-    .line 99
     .end local v4    # "lhsPackageInfo":Landroid/content/pm/PackageInfo;
     .end local v5    # "lhsPkgName":Ljava/lang/String;
     .end local v8    # "rhsPackageInfo":Landroid/content/pm/PackageInfo;
@@ -345,11 +312,9 @@
     :catch_0
     move-exception v2
 
-    .line 100
     .local v2, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v2}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    .line 103
     .end local v2    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_6
     move-object/from16 v0, p0
@@ -360,16 +325,13 @@
 
     move-result-object v11
 
-    .line 104
     .local v11, "sa":Ljava/lang/CharSequence;
     if-nez v11, :cond_7
 
-    .line 105
     iget-object v13, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v11, v13, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 106
     :cond_7
     move-object/from16 v0, p0
 
@@ -379,16 +341,13 @@
 
     move-result-object v12
 
-    .line 107
     .local v12, "sb":Ljava/lang/CharSequence;
     if-nez v12, :cond_8
 
-    .line 108
     iget-object v13, v7, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v12, v13, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 110
     :cond_8
     move-object/from16 v0, p0
 
@@ -421,7 +380,6 @@
     .locals 1
 
     .prologue
-    .line 30
     check-cast p1, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     check-cast p2, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;

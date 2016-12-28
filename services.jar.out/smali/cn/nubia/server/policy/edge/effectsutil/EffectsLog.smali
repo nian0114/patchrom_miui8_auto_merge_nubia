@@ -44,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,7 +54,6 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     const/4 v0, -0x1
 
     return v0
@@ -67,7 +65,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     const/4 v0, -0x1
 
     return v0
@@ -80,7 +77,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 53
     const/4 v0, -0x1
 
     return v0
@@ -91,7 +87,6 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 89
     const-string v0, ""
 
     invoke-static {v0}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->prefixed(Ljava/lang/String;)Ljava/lang/String;
@@ -111,7 +106,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 94
     invoke-static {p0}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->prefixed(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -130,7 +124,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 99
     invoke-static {p0}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->prefixed(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -147,7 +140,6 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     const-string v0, ""
 
     invoke-static {v0}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->prefixed(Ljava/lang/String;)Ljava/lang/String;
@@ -167,7 +159,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 64
     invoke-static {p0}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->prefixed(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -186,7 +177,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 69
     invoke-static {p0}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->prefixed(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -203,7 +193,6 @@
     .param p0, "in"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -230,7 +219,6 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 28
     const/4 v0, -0x1
 
     return v0
@@ -242,7 +230,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     const/4 v0, -0x1
 
     return v0
@@ -255,7 +242,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 38
     const/4 v0, -0x1
 
     return v0
@@ -266,7 +252,6 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     const-string v0, ""
 
     invoke-static {v0}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->prefixed(Ljava/lang/String;)Ljava/lang/String;
@@ -286,7 +271,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 79
     invoke-static {p0}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->prefixed(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -305,7 +289,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 84
     invoke-static {p0}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->prefixed(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

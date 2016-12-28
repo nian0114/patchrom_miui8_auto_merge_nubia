@@ -29,17 +29,13 @@
     .param p3, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 851
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 852
     iput p2, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;->hashCode:I
 
-    .line 853
     iput-object p3, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 854
     return-void
 .end method

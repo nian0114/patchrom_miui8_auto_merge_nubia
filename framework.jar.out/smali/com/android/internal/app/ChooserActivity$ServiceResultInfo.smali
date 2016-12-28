@@ -50,19 +50,14 @@
     .end annotation
 
     .prologue
-    .line 970
     .local p2, "rt":Ljava/util/List;, "Ljava/util/List<Landroid/service/chooser/ChooserTarget;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 971
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$ServiceResultInfo;->originalTarget:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
-    .line 972
     iput-object p2, p0, Lcom/android/internal/app/ChooserActivity$ServiceResultInfo;->resultTargets:Ljava/util/List;
 
-    .line 973
     iput-object p3, p0, Lcom/android/internal/app/ChooserActivity$ServiceResultInfo;->connection:Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;
 
-    .line 974
     return-void
 .end method

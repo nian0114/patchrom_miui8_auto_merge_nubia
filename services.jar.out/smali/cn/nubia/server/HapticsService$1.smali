@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 118
     iput-object p1, p0, Lcn/nubia/server/HapticsService$1;->this$0:Lcn/nubia/server/HapticsService;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "event"    # Landroid/os/UEventObserver$UEvent;
 
     .prologue
-    .line 121
     iget-object v0, p0, Lcn/nubia/server/HapticsService$1;->this$0:Lcn/nubia/server/HapticsService;
 
     const-string v1, "SWITCH_STATE"
@@ -54,7 +52,6 @@
     # setter for: Lcn/nubia/server/HapticsService;->mHapticsStatus:I
     invoke-static {v0, v1}, Lcn/nubia/server/HapticsService;->access$002(Lcn/nubia/server/HapticsService;I)I
 
-    .line 122
     iget-object v0, p0, Lcn/nubia/server/HapticsService$1;->this$0:Lcn/nubia/server/HapticsService;
 
     # getter for: Lcn/nubia/server/HapticsService;->mHapticsStatus:I
@@ -75,7 +72,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 123
     iget-object v0, p0, Lcn/nubia/server/HapticsService$1;->this$0:Lcn/nubia/server/HapticsService;
 
     # getter for: Lcn/nubia/server/HapticsService;->mHapticsMode:I
@@ -87,7 +83,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 124
     iget-object v0, p0, Lcn/nubia/server/HapticsService$1;->this$0:Lcn/nubia/server/HapticsService;
 
     # getter for: Lcn/nubia/server/HapticsService;->mSeq:[B
@@ -99,7 +94,6 @@
 
     invoke-static {v0, v1}, Lcn/nubia/server/HapticsService;->JNI_playEffectSequence([BI)V
 
-    .line 132
     :cond_0
     :goto_0
     iget-object v0, p0, Lcn/nubia/server/HapticsService$1;->this$0:Lcn/nubia/server/HapticsService;
@@ -114,10 +108,8 @@
     # setter for: Lcn/nubia/server/HapticsService;->mHapticsStatusPrev:I
     invoke-static {v0, v1}, Lcn/nubia/server/HapticsService;->access$102(Lcn/nubia/server/HapticsService;I)I
 
-    .line 133
     return-void
 
-    .line 125
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/HapticsService$1;->this$0:Lcn/nubia/server/HapticsService;
 
@@ -130,7 +122,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 126
     iget-object v0, p0, Lcn/nubia/server/HapticsService$1;->this$0:Lcn/nubia/server/HapticsService;
 
     const/4 v1, -0x3

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 74
     iput-object p1, p0, Lnubia/widget/TimePickerView$1;->this$0:Lnubia/widget/TimePickerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +42,10 @@
     .param p3, "newVal"    # I
 
     .prologue
-    .line 79
     iget-object v0, p0, Lnubia/widget/TimePickerView$1;->this$0:Lnubia/widget/TimePickerView;
 
     # invokes: Lnubia/widget/TimePickerView;->onTimeChanged()V
     invoke-static {v0}, Lnubia/widget/TimePickerView;->access$000(Lnubia/widget/TimePickerView;)V
 
-    .line 80
     return-void
 .end method

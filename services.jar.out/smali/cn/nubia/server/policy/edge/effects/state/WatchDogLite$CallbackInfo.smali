@@ -30,19 +30,14 @@
     .param p3, "calltraceOfCaller"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;->mCaller:Ljava/lang/String;
 
-    .line 66
     iput p2, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;->mTime:I
 
-    .line 67
     iput-object p3, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;->mCalltraceOfCaller:Ljava/lang/Throwable;
 
-    .line 68
     return-void
 .end method
 
@@ -52,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;->mCaller:Ljava/lang/String;
 
     return-object v0
@@ -62,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;->mCalltraceOfCaller:Ljava/lang/Throwable;
 
     return-object v0
@@ -72,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;->mTime:I
 
     return v0

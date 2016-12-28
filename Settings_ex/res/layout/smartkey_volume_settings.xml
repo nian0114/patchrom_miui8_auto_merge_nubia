@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/smartkey_volume_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" android:src="@drawable/smartkey_volume" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
-    <View android:id="@id/smartkey_divider" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="35.0dip" android:layout_below="@id/smartkey_volume_image" />
-    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:layout_below="@id/smartkey_divider" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_centerVertical="true">
-        <include layout="@layout/smartkey_volume_value_key" />
-    </RelativeLayout>
-</RelativeLayout>

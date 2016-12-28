@@ -23,10 +23,8 @@
     .locals 6
 
     .prologue
-    .line 958
     iput-object p1, p0, Lcom/android/server/policy/NubiaGlobalActions$SilentModeToggleAction;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
-    .line 959
     const v1, 0x1080301
 
     const v2, 0x1080300
@@ -41,7 +39,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/policy/NubiaGlobalActions$ToggleAction;-><init>(IIIII)V
 
-    .line 963
     return-void
 .end method
 
@@ -52,10 +49,8 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 966
     if-eqz p1, :cond_0
 
-    .line 967
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$SilentModeToggleAction;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mAudioManager:Landroid/media/AudioManager;
@@ -67,11 +62,9 @@
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->setRingerMode(I)V
 
-    .line 971
     :goto_0
     return-void
 
-    .line 969
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$SilentModeToggleAction;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
@@ -91,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 978
     const/4 v0, 0x0
 
     return v0
@@ -101,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 974
     const/4 v0, 0x1
 
     return v0

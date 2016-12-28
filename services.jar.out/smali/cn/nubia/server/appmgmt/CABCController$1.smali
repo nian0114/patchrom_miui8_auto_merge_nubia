@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 559
     iput-object p1, p0, Lcn/nubia/server/appmgmt/CABCController$1;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 562
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController$1;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     # getter for: Lcn/nubia/server/appmgmt/CABCController;->mHandler:Landroid/os/Handler;
@@ -50,12 +48,10 @@
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 563
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController$1;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     # invokes: Lcn/nubia/server/appmgmt/CABCController;->loadCABCFromNubiaDb()V
     invoke-static {v0}, Lcn/nubia/server/appmgmt/CABCController;->access$1100(Lcn/nubia/server/appmgmt/CABCController;)V
 
-    .line 564
     return-void
 .end method

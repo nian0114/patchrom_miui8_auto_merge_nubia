@@ -22,19 +22,14 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-boolean v0, p0, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->mWithoutMultiWindow:Z
 
-    .line 38
     iput-boolean v0, p0, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->mWithoutKeyFilter:Z
 
-    .line 41
     iput-object p1, p0, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->mImpl:Lcom/android/server/policy/IPolicySmartShowFuncs;
 
-    .line 42
     return-void
 .end method
 
@@ -45,17 +40,14 @@
     .param p1, "data"    # Ljava/lang/Object;
 
     .prologue
-    .line 53
     invoke-virtual {p0}, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 54
     const/4 v0, 0x1
 
-    .line 56
     :goto_0
     return v0
 
@@ -74,17 +66,14 @@
     .param p1, "win"    # Ljava/lang/Object;
 
     .prologue
-    .line 45
     invoke-virtual {p0}, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 46
     const/4 v0, 0x0
 
-    .line 48
     :goto_0
     return v0
 
@@ -102,17 +91,14 @@
     .locals 1
 
     .prologue
-    .line 77
     invoke-virtual {p0}, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 78
     const/4 v0, 0x0
 
-    .line 80
     :goto_0
     return v0
 
@@ -137,7 +123,6 @@
     .param p7, "landscapeRotation"    # I
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->mImpl:Lcom/android/server/policy/IPolicySmartShowFuncs;
 
     move v1, p1
@@ -156,7 +141,6 @@
 
     invoke-interface/range {v0 .. v7}, Lcom/android/server/policy/IPolicySmartShowFuncs;->initScreenSize(IIIIIII)V
 
-    .line 66
     return-void
 .end method
 
@@ -165,17 +149,14 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 69
     invoke-virtual {p0}, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->withoutKeyFilter()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 70
     const/4 v0, 0x0
 
-    .line 72
     :goto_0
     return v0
 
@@ -196,19 +177,16 @@
     .param p3, "curBottom"    # I
 
     .prologue
-    .line 85
     invoke-virtual {p0}, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->mImpl:Lcom/android/server/policy/IPolicySmartShowFuncs;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/android/server/policy/IPolicySmartShowFuncs;->offsetInputMethodWindowLw(Ljava/lang/Object;II)V
 
-    .line 88
     :cond_0
     return-void
 .end method
@@ -217,15 +195,12 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-boolean v0, p0, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->mWithoutKeyFilter:Z
 
     if-eqz v0, :cond_0
 
-    .line 99
     const/4 v0, 0x1
 
-    .line 101
     :goto_0
     return v0
 
@@ -243,15 +218,12 @@
     .locals 1
 
     .prologue
-    .line 91
     iget-boolean v0, p0, Lcom/android/server/policy/PolicySmartShowFuncsWrapper;->mWithoutMultiWindow:Z
 
     if-eqz v0, :cond_0
 
-    .line 92
     const/4 v0, 0x1
 
-    .line 94
     :goto_0
     return v0
 

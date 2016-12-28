@@ -18,7 +18,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const/4 v0, 0x0
 
     sput-object v0, Lcn/nubia/server/net/SwitchSimCautionUtils;->sInstance:Lcn/nubia/server/net/SwitchSimCautionUtils;
@@ -32,16 +31,12 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     iput v0, p0, Lcn/nubia/server/net/SwitchSimCautionUtils;->mAnotherSubscription:I
 
-    .line 31
     iput v0, p0, Lcn/nubia/server/net/SwitchSimCautionUtils;->mCurrentSubscription:I
 
-    .line 44
     return-void
 .end method
 
@@ -50,7 +45,6 @@
     .param p1, "time"    # Landroid/util/TrustedTime;
 
     .prologue
-    .line 81
     invoke-interface {p1}, Landroid/util/TrustedTime;->hasCache()Z
 
     move-result v0
@@ -76,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 85
     invoke-direct {p0}, Lcn/nubia/server/net/SwitchSimCautionUtils;->getCurrentSimCardSubscription()I
 
     move-result v0
@@ -88,12 +81,10 @@
     :goto_0
     iput v0, p0, Lcn/nubia/server/net/SwitchSimCautionUtils;->mAnotherSubscription:I
 
-    .line 86
     iget v0, p0, Lcn/nubia/server/net/SwitchSimCautionUtils;->mAnotherSubscription:I
 
     return v0
 
-    .line 85
     :cond_0
     const/4 v0, 0x0
 
@@ -104,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 90
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubId()I
 
     move-result v0
@@ -115,7 +105,6 @@
 
     iput v0, p0, Lcn/nubia/server/net/SwitchSimCautionUtils;->mCurrentSubscription:I
 
-    .line 91
     iget v0, p0, Lcn/nubia/server/net/SwitchSimCautionUtils;->mCurrentSubscription:I
 
     return v0
@@ -125,7 +114,6 @@
     .locals 2
 
     .prologue
-    .line 36
     const-class v1, Lcn/nubia/server/net/SwitchSimCautionUtils;
 
     monitor-enter v1
@@ -135,14 +123,12 @@
 
     if-nez v0, :cond_0
 
-    .line 37
     new-instance v0, Lcn/nubia/server/net/SwitchSimCautionUtils;
 
     invoke-direct {v0}, Lcn/nubia/server/net/SwitchSimCautionUtils;-><init>()V
 
     sput-object v0, Lcn/nubia/server/net/SwitchSimCautionUtils;->sInstance:Lcn/nubia/server/net/SwitchSimCautionUtils;
 
-    .line 39
     :cond_0
     sget-object v0, Lcn/nubia/server/net/SwitchSimCautionUtils;->sInstance:Lcn/nubia/server/net/SwitchSimCautionUtils;
     :try_end_0
@@ -152,7 +138,6 @@
 
     return-object v0
 
-    .line 36
     :catchall_0
     move-exception v0
 
@@ -169,7 +154,6 @@
     .param p6, "networkStats"    # Landroid/net/INetworkStatsService;
 
     .prologue
-    .line 124
     move-object v0, p6
 
     move-object v1, p1
@@ -185,15 +169,12 @@
 
     move-result-wide v0
 
-    .line 126
     :goto_0
     return-wide v0
 
-    .line 125
     :catch_0
     move-exception v6
 
-    .line 126
     .local v6, "e":Ljava/lang/Exception;
     const-wide/16 v0, 0x0
 
@@ -219,7 +200,6 @@
     .end annotation
 
     .prologue
-    .line 60
     .local p1, "networkPolicy":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Landroid/net/NetworkTemplate;Landroid/net/NetworkPolicy;>;"
     move-object/from16 v0, p0
 
@@ -229,7 +209,6 @@
 
     move-result-wide v10
 
-    .line 61
     .local v10, "currentTime":J
     invoke-direct/range {p0 .. p0}, Lcn/nubia/server/net/SwitchSimCautionUtils;->getAnotherSimCardSubscription()I
 
@@ -239,15 +218,12 @@
 
     move-result-object v14
 
-    .line 62
     .local v14, "subId":[I
     const-string v15, "0"
 
-    .line 63
     .local v15, "subscriberId":Ljava/lang/String;
     if-eqz v14, :cond_0
 
-    .line 64
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v2
@@ -260,7 +236,6 @@
 
     move-result-object v15
 
-    .line 66
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
@@ -284,7 +259,6 @@
 
     check-cast v13, Landroid/net/NetworkPolicy;
 
-    .line 67
     .local v13, "policy":Landroid/net/NetworkPolicy;
     iget-object v2, v13, Landroid/net/NetworkPolicy;->template:Landroid/net/NetworkTemplate;
 
@@ -296,27 +270,22 @@
 
     move-result v12
 
-    .line 69
     .local v12, "isAnthoerCard":Z
     if-eqz v12, :cond_1
 
-    .line 70
     invoke-virtual {v13}, Landroid/net/NetworkPolicy;->hasCycle()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 72
     invoke-static {v10, v11, v13}, Landroid/net/NetworkPolicyManager;->computeLastCycleBoundary(JLandroid/net/NetworkPolicy;)J
 
     move-result-wide v4
 
-    .line 73
     .local v4, "start":J
     move-wide v6, v10
 
-    .line 74
     .local v6, "end":J
     iget-object v3, v13, Landroid/net/NetworkPolicy;->template:Landroid/net/NetworkTemplate;
 
@@ -328,7 +297,6 @@
 
     move-result-wide v16
 
-    .line 75
     .local v16, "totalBytes":J
     move-wide/from16 v0, v16
 
@@ -346,7 +314,6 @@
 
     const/4 v2, 0x1
 
-    .line 77
     .end local v4    # "start":J
     .end local v6    # "end":J
     .end local v12    # "isAnthoerCard":Z
@@ -355,7 +322,6 @@
     :goto_0
     return v2
 
-    .line 75
     .restart local v4    # "start":J
     .restart local v6    # "end":J
     .restart local v12    # "isAnthoerCard":Z
@@ -366,7 +332,6 @@
 
     goto :goto_0
 
-    .line 77
     .end local v4    # "start":J
     .end local v6    # "end":J
     .end local v12    # "isAnthoerCard":Z
@@ -389,7 +354,6 @@
 
     const/4 v1, 0x0
 
-    .line 104
     invoke-static {v1}, Landroid/telephony/TelephonyManager;->getPhoneType(I)I
 
     move-result v2
@@ -420,7 +384,6 @@
 
     const/4 v1, 0x0
 
-    .line 109
     invoke-virtual {p1, v1}, Landroid/telephony/TelephonyManager;->hasIccCard(I)Z
 
     move-result v2
@@ -452,15 +415,12 @@
     .param p4, "body"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 115
     invoke-virtual {p2, p4}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 116
     invoke-virtual {p0, p3}, Lcn/nubia/server/net/SwitchSimCautionUtils;->buildNetworkOverWarningIntent(Landroid/net/NetworkTemplate;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 117
     .local v0, "intent":Landroid/content/Intent;
     const/4 v1, 0x0
 
@@ -472,7 +432,6 @@
 
     invoke-virtual {p2, v1}, Landroid/app/Notification$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
-    .line 119
     return-void
 .end method
 
@@ -481,12 +440,10 @@
     .param p1, "template"    # Landroid/net/NetworkTemplate;
 
     .prologue
-    .line 47
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 48
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -498,31 +455,26 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 50
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 51
     const-string v1, "android.net.NETWORK_TEMPLATE"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 52
     const-string v1, "currentSim"
 
     iget v2, p0, Lcn/nubia/server/net/SwitchSimCautionUtils;->mCurrentSubscription:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 53
     const-string v1, "anotherSim"
 
     iget v2, p0, Lcn/nubia/server/net/SwitchSimCautionUtils;->mAnotherSubscription:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 54
     return-object v0
 .end method
 
@@ -547,13 +499,11 @@
     .end annotation
 
     .prologue
-    .line 96
     .local p1, "networkPolicy":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Landroid/net/NetworkTemplate;Landroid/net/NetworkPolicy;>;"
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
-    .line 97
     .local v0, "manager":Landroid/telephony/TelephonyManager;
     if-eqz v0, :cond_0
 

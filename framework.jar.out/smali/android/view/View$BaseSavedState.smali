@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 21501
     new-instance v0, Landroid/view/View$BaseSavedState$1;
 
     invoke-direct {v0}, Landroid/view/View$BaseSavedState$1;-><init>()V
@@ -51,17 +50,14 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 21482
     invoke-direct {p0, p1}, Landroid/view/AbsSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 21483
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/view/View$BaseSavedState;->mStartActivityRequestWhoSaved:Ljava/lang/String;
 
-    .line 21484
     return-void
 .end method
 
@@ -70,10 +66,8 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 21492
     invoke-direct {p0, p1}, Landroid/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 21493
     return-void
 .end method
 
@@ -85,14 +79,11 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 21497
     invoke-super {p0, p1, p2}, Landroid/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 21498
     iget-object v0, p0, Landroid/view/View$BaseSavedState;->mStartActivityRequestWhoSaved:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 21499
     return-void
 .end method

@@ -47,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 3152
     new-instance v0, Landroid/app/ActivityManager$SmartShowRunningTaskInfo$1;
 
     invoke-direct {v0}, Landroid/app/ActivityManager$SmartShowRunningTaskInfo$1;-><init>()V
@@ -61,10 +60,8 @@
     .locals 0
 
     .prologue
-    .line 3127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3128
     return-void
 .end method
 
@@ -73,13 +70,10 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 3161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3162
     invoke-virtual {p0, p1}, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 3163
     return-void
 .end method
 
@@ -89,7 +83,6 @@
     .param p2, "x1"    # Landroid/app/ActivityManager$1;
 
     .prologue
-    .line 3099
     invoke-direct {p0, p1}, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -101,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 3132
     const/4 v0, 0x0
 
     return v0
@@ -112,42 +104,36 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 3145
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;->id:I
 
-    .line 3146
     invoke-static {p1}, Landroid/content/ComponentName;->readFromParcel(Landroid/os/Parcel;)Landroid/content/ComponentName;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
 
-    .line 3147
     invoke-static {p1}, Landroid/content/ComponentName;->readFromParcel(Landroid/os/Parcel;)Landroid/content/ComponentName;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
-    .line 3148
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;->activityFlags:I
 
-    .line 3149
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;->orientation:I
 
-    .line 3150
     return-void
 .end method
 
@@ -157,31 +143,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 3137
     iget v0, p0, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;->id:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3138
     iget-object v0, p0, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
 
     invoke-static {v0, p1}, Landroid/content/ComponentName;->writeToParcel(Landroid/content/ComponentName;Landroid/os/Parcel;)V
 
-    .line 3139
     iget-object v0, p0, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
     invoke-static {v0, p1}, Landroid/content/ComponentName;->writeToParcel(Landroid/content/ComponentName;Landroid/os/Parcel;)V
 
-    .line 3140
     iget v0, p0, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;->activityFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3141
     iget v0, p0, Landroid/app/ActivityManager$SmartShowRunningTaskInfo;->orientation:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3142
     return-void
 .end method

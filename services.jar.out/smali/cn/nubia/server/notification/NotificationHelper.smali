@@ -21,19 +21,14 @@
     .param p3, "conditionProviders"    # Lcom/android/server/notification/ConditionProviders;
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object p1, p0, Lcn/nubia/server/notification/NotificationHelper;->mContext:Landroid/content/Context;
 
-    .line 28
     iput-object p2, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
-    .line 29
     iput-object p3, p0, Lcn/nubia/server/notification/NotificationHelper;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
-    .line 30
     return-void
 .end method
 
@@ -45,7 +40,6 @@
 
     const/4 v2, 0x1
 
-    .line 92
     sget-boolean v0, Lcn/nubia/server/notification/NubiaZenMode;->priorityMode:Z
 
     if-eqz v0, :cond_0
@@ -66,18 +60,15 @@
 
     if-nez v0, :cond_0
 
-    .line 95
     iget-object v0, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
     const-string v1, "enterPriorityZenMode"
 
     invoke-virtual {v0, v2, v3, v1}, Lcom/android/server/notification/ZenModeHelper;->setManualZenMode(ILandroid/net/Uri;Ljava/lang/String;)V
 
-    .line 110
     :goto_0
     return-void
 
-    .line 98
     :cond_0
     sget-boolean v0, Lcn/nubia/server/notification/NubiaZenMode;->priorityMode:Z
 
@@ -121,7 +112,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 103
     iget-object v0, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
     const-string v1, "enterPriorityZenModeForever"
@@ -130,7 +120,6 @@
 
     goto :goto_0
 
-    .line 107
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
@@ -153,7 +142,6 @@
 
     const/4 v4, 0x2
 
-    .line 48
     sget-boolean v2, Lcn/nubia/server/notification/NubiaZenMode;->noneMode:Z
 
     if-eqz v2, :cond_0
@@ -174,18 +162,15 @@
 
     if-nez v2, :cond_0
 
-    .line 51
     iget-object v2, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
     const-string v3, "enterNoneZenMode"
 
     invoke-virtual {v2, v4, v5, v3}, Lcom/android/server/notification/ZenModeHelper;->setManualZenMode(ILandroid/net/Uri;Ljava/lang/String;)V
 
-    .line 72
     :goto_0
     return-void
 
-    .line 54
     :cond_0
     sget-boolean v2, Lcn/nubia/server/notification/NubiaZenMode;->noneMode:Z
 
@@ -217,7 +202,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 58
     iget-object v2, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
     invoke-virtual {v2}, Lcom/android/server/notification/ZenModeHelper;->getConfig()Landroid/service/notification/ZenModeConfig;
@@ -232,7 +216,6 @@
 
     move-result-wide v0
 
-    .line 60
     .local v0, "time":J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -242,7 +225,6 @@
 
     if-lez v2, :cond_1
 
-    .line 61
     iget-object v2, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
     const-string v3, "enterNoneZenModeForever"
@@ -251,7 +233,6 @@
 
     goto :goto_0
 
-    .line 65
     :cond_1
     iget-object v2, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
@@ -261,7 +242,6 @@
 
     goto :goto_0
 
-    .line 69
     .end local v0    # "time":J
     :cond_2
     iget-object v2, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
@@ -282,12 +262,10 @@
     .prologue
     const/4 v5, 0x2
 
-    .line 75
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 76
     .local v0, "identity":J
     const-string v2, "shijian"
 
@@ -311,7 +289,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     const-string v2, "shijian"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -340,7 +317,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     if-eqz p1, :cond_1
 
     iget-object v2, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
@@ -351,7 +327,6 @@
 
     if-eq v2, v5, :cond_1
 
-    .line 80
     iget-object v2, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
     const/4 v3, 0x0
@@ -360,7 +335,6 @@
 
     invoke-virtual {v2, v5, v3, v4}, Lcom/android/server/notification/ZenModeHelper;->setManualZenMode(ILandroid/net/Uri;Ljava/lang/String;)V
 
-    .line 87
     :cond_0
     :goto_0
     iget-object v2, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
@@ -371,13 +345,10 @@
 
     invoke-virtual {v2, p1}, Lcn/nubia/server/notification/NubiaZenModeHelper;->setFlagForSilentMode(Z)V
 
-    .line 88
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 89
     return-void
 
-    .line 83
     :cond_1
     if-nez p1, :cond_0
 
@@ -389,7 +360,6 @@
 
     if-ne v2, v5, :cond_0
 
-    .line 85
     invoke-direct {p0}, Lcn/nubia/server/notification/NotificationHelper;->exitNoneZenMode()V
 
     goto :goto_0
@@ -402,12 +372,10 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 33
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 34
     .local v0, "identity":J
     if-eqz p1, :cond_1
 
@@ -419,7 +387,6 @@
 
     if-eq v2, v5, :cond_1
 
-    .line 36
     iget-object v2, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
     const/4 v3, 0x0
@@ -428,7 +395,6 @@
 
     invoke-virtual {v2, v5, v3, v4}, Lcom/android/server/notification/ZenModeHelper;->setManualZenMode(ILandroid/net/Uri;Ljava/lang/String;)V
 
-    .line 43
     :cond_0
     :goto_0
     iget-object v2, p0, Lcn/nubia/server/notification/NotificationHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
@@ -439,13 +405,10 @@
 
     invoke-virtual {v2, p1}, Lcn/nubia/server/notification/NubiaZenModeHelper;->setFlagForPriorityMode(Z)V
 
-    .line 44
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 45
     return-void
 
-    .line 39
     :cond_1
     if-nez p1, :cond_0
 
@@ -457,7 +420,6 @@
 
     if-ne v2, v5, :cond_0
 
-    .line 41
     invoke-direct {p0}, Lcn/nubia/server/notification/NotificationHelper;->exitPriorityZenMode()V
 
     goto :goto_0

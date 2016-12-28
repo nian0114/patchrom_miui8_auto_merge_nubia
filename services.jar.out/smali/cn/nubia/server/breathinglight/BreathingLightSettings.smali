@@ -64,10 +64,8 @@
     .param p2, "service"    # Lcn/nubia/server/breathinglight/BreathingLightService;
 
     .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightSettings$1;
 
     new-instance v1, Landroid/os/Handler;
@@ -78,7 +76,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mSettingsObserver:Landroid/database/ContentObserver;
 
-    .line 221
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -87,7 +84,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mBreathLightBrightness:[I
 
-    .line 223
     const/16 v0, 0x8
 
     new-array v0, v0, [F
@@ -96,20 +92,16 @@
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mLightSensorLux:[F
 
-    .line 244
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightSettings$2;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/breathinglight/BreathingLightSettings$2;-><init>(Lcn/nubia/server/breathinglight/BreathingLightSettings;)V
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mLightSensorEventListener:Landroid/hardware/SensorEventListener;
 
-    .line 70
     iput-object p1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
-    .line 71
     iput-object p2, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
-    .line 73
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
     const-string v1, "sensor"
@@ -122,7 +114,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 75
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x5
@@ -133,13 +124,10 @@
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mLightSensor:Landroid/hardware/Sensor;
 
-    .line 77
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->registerSettingsObserver()V
 
-    .line 78
     return-void
 
-    .line 221
     nop
 
     :array_0
@@ -155,7 +143,6 @@
         0x32
     .end array-data
 
-    .line 223
     :array_1
     .array-data 4
         0x40a00000    # 5.0f
@@ -174,7 +161,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->brightnessModeChange()V
 
     return-void
@@ -185,7 +171,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->manualBrightnessChange()V
 
     return-void
@@ -196,7 +181,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->notificationSettingsChange()V
 
     return-void
@@ -207,7 +191,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->singleUiModeChange()V
 
     return-void
@@ -218,7 +201,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->noDisturbModeChange()V
 
     return-void
@@ -229,7 +211,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     .prologue
-    .line 15
     iget-wide v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mLastObservedLuxTime:J
 
     return-wide v0
@@ -241,7 +222,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 15
     iput-wide p1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mLastObservedLuxTime:J
 
     return-wide p1
@@ -252,7 +232,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->getCurrentBrightness()I
 
     move-result v0
@@ -266,7 +245,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 15
     invoke-direct {p0, p1}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->getBrightnessByLux(F)I
 
     move-result v0
@@ -280,7 +258,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 15
     invoke-direct {p0, p1}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->setBrightness(I)V
 
     return-void
@@ -292,14 +269,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 174
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 175
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "led_light_brightness_mode"
 
@@ -309,15 +284,12 @@
 
     iput v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mBrightnessMode:I
 
-    .line 177
     iget v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mBrightnessMode:I
 
     if-nez v1, :cond_0
 
-    .line 178
     invoke-direct {p0, v2}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->enableAutoBrightness(Z)V
 
-    .line 179
     const-string v1, "led_light_brightness"
 
     const/16 v2, 0xa
@@ -328,11 +300,9 @@
 
     invoke-direct {p0, v1}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->setBrightness(I)V
 
-    .line 184
     :goto_0
     return-void
 
-    .line 182
     :cond_0
     const/4 v1, 0x1
 
@@ -346,17 +316,14 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 202
     if-eqz p1, :cond_0
 
-    .line 203
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mLastObservedLuxTime:J
 
-    .line 204
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mLightSensorEventListener:Landroid/hardware/SensorEventListener;
@@ -367,11 +334,9 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 209
     :goto_0
     return-void
 
-    .line 207
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -387,10 +352,8 @@
     .param p1, "lux"    # F
 
     .prologue
-    .line 228
     const/16 v0, 0xa
 
-    .line 230
     .local v0, "brightness":I
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mLightSensorLux:[F
 
@@ -406,7 +369,6 @@
 
     if-lez v2, :cond_1
 
-    .line 231
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mBreathLightBrightness:[I
 
     iget-object v3, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mBreathLightBrightness:[I
@@ -417,12 +379,10 @@
 
     aget v0, v2, v3
 
-    .line 240
     :cond_0
     :goto_0
     return v0
 
-    .line 233
     :cond_1
     const/4 v1, 0x0
 
@@ -434,7 +394,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 234
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mLightSensorLux:[F
 
     aget v2, v2, v1
@@ -443,15 +402,12 @@
 
     if-gtz v2, :cond_2
 
-    .line 235
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mBreathLightBrightness:[I
 
     aget v0, v2, v1
 
-    .line 236
     goto :goto_0
 
-    .line 233
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
@@ -462,7 +418,6 @@
     .locals 1
 
     .prologue
-    .line 212
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightService;->getLightBrightness()I
@@ -480,14 +435,12 @@
 
     const/4 v4, 0x0
 
-    .line 109
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 111
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "led_light_brightness_mode"
 
@@ -497,12 +450,10 @@
 
     iput v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mBrightnessMode:I
 
-    .line 113
     iget v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mBrightnessMode:I
 
     if-nez v1, :cond_0
 
-    .line 114
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const-string v2, "led_light_brightness"
@@ -515,7 +466,6 @@
 
     invoke-virtual {v1, v2}, Lcn/nubia/server/breathinglight/BreathingLightService;->setLightBrightness(I)V
 
-    .line 120
     :goto_0
     const-string v1, "notificationsettings"
 
@@ -525,7 +475,6 @@
 
     iput v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mNotificationLightEnable:I
 
-    .line 122
     const-string v1, "single_ui_mode"
 
     invoke-static {v0, v1, v4}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
@@ -534,15 +483,12 @@
 
     iput v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mSingleUiModeEnable:I
 
-    .line 124
     iget v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mSingleUiModeEnable:I
 
     invoke-direct {p0, v1}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->processSingleUiMode(I)V
 
-    .line 125
     return-void
 
-    .line 117
     :cond_0
     invoke-direct {p0, v5}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->enableAutoBrightness(Z)V
 
@@ -553,12 +499,10 @@
     .locals 3
 
     .prologue
-    .line 195
     iget v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mBrightnessMode:I
 
     if-nez v0, :cond_0
 
-    .line 196
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -575,7 +519,6 @@
 
     invoke-direct {p0, v0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->setBrightness(I)V
 
-    .line 199
     :cond_0
     return-void
 .end method
@@ -584,12 +527,10 @@
     .locals 1
 
     .prologue
-    .line 158
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightService;->noDisturbModeChange()V
 
-    .line 159
     return-void
 .end method
 
@@ -597,7 +538,6 @@
     .locals 3
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -614,7 +554,6 @@
 
     iput v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mNotificationLightEnable:I
 
-    .line 145
     return-void
 .end method
 
@@ -623,21 +562,17 @@
     .param p1, "enable"    # I
 
     .prologue
-    .line 162
     if-eqz p1, :cond_0
 
-    .line 163
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x6f
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/breathinglight/BreathingLightService;->sendRequestToStateMachine(I)V
 
-    .line 167
     :goto_0
     return-void
 
-    .line 165
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
@@ -656,14 +591,12 @@
 
     const/4 v3, -0x1
 
-    .line 81
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 83
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "led_light_brightness_mode"
 
@@ -675,7 +608,6 @@
 
     invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 87
     const-string v1, "led_light_brightness"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -686,7 +618,6 @@
 
     invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 91
     const-string v1, "notificationsettings"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -697,7 +628,6 @@
 
     invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 95
     const-string v1, "single_ui_mode"
 
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -708,7 +638,6 @@
 
     invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 99
     const-string v1, "led_no_disturb_enable"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -719,7 +648,6 @@
 
     invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 102
     return-void
 .end method
 
@@ -728,19 +656,16 @@
     .param p1, "brightness"    # I
 
     .prologue
-    .line 216
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/breathinglight/BreathingLightService;->setLightBrightness(I)V
 
-    .line 217
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x6c
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/breathinglight/BreathingLightService;->sendRequestToStateMachine(I)V
 
-    .line 218
     return-void
 .end method
 
@@ -748,7 +673,6 @@
     .locals 3
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -765,12 +689,10 @@
 
     iput v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mSingleUiModeEnable:I
 
-    .line 154
     iget v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mSingleUiModeEnable:I
 
     invoke-direct {p0, v0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->processSingleUiMode(I)V
 
-    .line 155
     return-void
 .end method
 
@@ -780,10 +702,8 @@
     .locals 0
 
     .prologue
-    .line 105
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->initSettings()V
 
-    .line 106
     return-void
 .end method
 
@@ -793,7 +713,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 138
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -823,7 +742,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 128
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -855,7 +773,6 @@
 
     const/4 v1, 0x0
 
-    .line 133
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -885,7 +802,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 148
     iget v1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mNotificationLightEnable:I
 
     if-ne v1, v0, :cond_0
@@ -903,7 +819,6 @@
     .locals 1
 
     .prologue
-    .line 170
     iget v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mSingleUiModeEnable:I
 
     if-eqz v0, :cond_0
@@ -924,7 +839,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 187
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -941,17 +855,14 @@
 
     iput v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mBrightnessMode:I
 
-    .line 189
     iget v0, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings;->mBrightnessMode:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 190
     invoke-direct {p0, p1}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->enableAutoBrightness(Z)V
 
-    .line 192
     :cond_0
     return-void
 .end method

@@ -106,13 +106,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 59
     sput-boolean v0, Lnubia/content/res/ExtraConfiguration;->mUpdateThemeNotFirstTime:Z
 
-    .line 60
     sput-boolean v0, Lnubia/content/res/ExtraConfiguration;->mEmptyDefaultFonts:Z
 
-    .line 63
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -130,15 +127,12 @@
     .locals 2
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     const/4 v0, 0x0
 
     iput v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
-    .line 67
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
@@ -151,21 +145,18 @@
     .param p0, "themeFlag"    # J
 
     .prologue
-    .line 71
     invoke-static {p0, p1}, Lnubia/content/res/ExtraConfiguration;->needRestartLauncher(J)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 72
     sget-object v0, Lnubia/content/res/ExtraConfiguration;->needRestartActivitySet:Ljava/util/Set;
 
     const-string v1, "cn.nubia.launcher"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 74
     :cond_0
     invoke-static {p0, p1}, Lnubia/content/res/ExtraConfiguration;->needRestartSettings(J)Z
 
@@ -173,14 +164,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 75
     sget-object v0, Lnubia/content/res/ExtraConfiguration;->needRestartActivitySet:Ljava/util/Set;
 
     const-string v1, "com.android.settings"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 77
     :cond_1
     invoke-static {p0, p1}, Lnubia/content/res/ExtraConfiguration;->needRestartMms(J)Z
 
@@ -188,14 +177,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 78
     sget-object v0, Lnubia/content/res/ExtraConfiguration;->needRestartActivitySet:Ljava/util/Set;
 
     const-string v1, "cn.nubia.mms"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 80
     :cond_2
     invoke-static {p0, p1}, Lnubia/content/res/ExtraConfiguration;->needRestartContacts(J)Z
 
@@ -203,14 +190,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 81
     sget-object v0, Lnubia/content/res/ExtraConfiguration;->needRestartActivitySet:Ljava/util/Set;
 
     const-string v1, "com.android.contacts"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 83
     :cond_3
     invoke-static {p0, p1}, Lnubia/content/res/ExtraConfiguration;->needRestartStatusBar(J)Z
 
@@ -218,14 +203,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 84
     sget-object v0, Lnubia/content/res/ExtraConfiguration;->needRestartActivitySet:Ljava/util/Set;
 
     const-string v1, "com.android.systemui"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 86
     :cond_4
     invoke-static {p0, p1}, Lnubia/content/res/ExtraConfiguration;->needRestartThemeManager(J)Z
 
@@ -233,14 +216,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 87
     sget-object v0, Lnubia/content/res/ExtraConfiguration;->needRestartActivitySet:Ljava/util/Set;
 
     const-string v1, "cn.nubia.thememanager"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 89
     :cond_5
     return-void
 .end method
@@ -249,10 +230,8 @@
     .locals 3
 
     .prologue
-    .line 92
     const/4 v1, 0x1
 
-    .line 94
     .local v1, "scale":I
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -263,18 +242,15 @@
 
     move-result-object v0
 
-    .line 96
     .local v0, "cfg":Landroid/content/res/Configuration;
     if-eqz v0, :cond_0
 
-    .line 97
     iget v2, v0, Landroid/content/res/Configuration;->uiMode:I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     and-int/lit8 v1, v2, 0xf
 
-    .line 98
     const/16 v2, 0xc
 
     if-eq v1, v2, :cond_0
@@ -291,16 +267,13 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 102
     const/4 v1, 0x1
 
-    .line 108
     .end local v0    # "cfg":Landroid/content/res/Configuration;
     :cond_0
     :goto_0
     return v1
 
-    .line 105
     :catch_0
     move-exception v2
 
@@ -312,7 +285,6 @@
     .param p0, "configChanges"    # I
 
     .prologue
-    .line 112
     const/high16 v0, -0x80000000
 
     and-int/2addr v0, p0
@@ -335,7 +307,6 @@
     .param p0, "themeFlag"    # J
 
     .prologue
-    .line 123
     const-wide/32 v0, 0x10040011
 
     and-long/2addr v0, p0
@@ -363,7 +334,6 @@
     .param p1, "themeFlag"    # J
 
     .prologue
-    .line 129
     const-string v0, "cn.nubia.launcher"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -372,16 +342,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 130
     invoke-static {p1, p2}, Lnubia/content/res/ExtraConfiguration;->needRestartLauncher(J)Z
 
     move-result v0
 
-    .line 142
     :goto_0
     return v0
 
-    .line 131
     :cond_0
     const-string v0, "com.android.settings"
 
@@ -391,14 +358,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 132
     invoke-static {p1, p2}, Lnubia/content/res/ExtraConfiguration;->needRestartSettings(J)Z
 
     move-result v0
 
     goto :goto_0
 
-    .line 133
     :cond_1
     const-string v0, "cn.nubia.mms"
 
@@ -408,14 +373,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 134
     invoke-static {p1, p2}, Lnubia/content/res/ExtraConfiguration;->needRestartMms(J)Z
 
     move-result v0
 
     goto :goto_0
 
-    .line 135
     :cond_2
     const-string v0, "com.android.contacts"
 
@@ -425,14 +388,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 136
     invoke-static {p1, p2}, Lnubia/content/res/ExtraConfiguration;->needRestartContacts(J)Z
 
     move-result v0
 
     goto :goto_0
 
-    .line 137
     :cond_3
     const-string v0, "com.android.systemui"
 
@@ -442,14 +403,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 138
     invoke-static {p1, p2}, Lnubia/content/res/ExtraConfiguration;->needRestartStatusBar(J)Z
 
     move-result v0
 
     goto :goto_0
 
-    .line 139
     :cond_4
     const-string v0, "cn.nubia.thememanager"
 
@@ -459,14 +418,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 140
     invoke-static {p1, p2}, Lnubia/content/res/ExtraConfiguration;->needRestartThemeManager(J)Z
 
     move-result v0
 
     goto :goto_0
 
-    .line 142
     :cond_5
     invoke-static {p1, p2}, Lnubia/content/res/ExtraConfiguration;->needRestart3rdApp(J)Z
 
@@ -480,7 +437,6 @@
     .param p0, "themeFlag"    # J
 
     .prologue
-    .line 147
     const-wide/32 v0, 0x40811
 
     and-long/2addr v0, p0
@@ -507,7 +463,6 @@
     .param p0, "themeFlag"    # J
 
     .prologue
-    .line 153
     const-wide/32 v0, 0x44019
 
     and-long/2addr v0, p0
@@ -534,7 +489,6 @@
     .param p0, "themeFlag"    # J
 
     .prologue
-    .line 159
     const-wide/32 v0, 0x40091
 
     and-long/2addr v0, p0
@@ -561,7 +515,6 @@
     .param p0, "themeFlag"    # J
 
     .prologue
-    .line 164
     const-wide/32 v0, 0x40219
 
     and-long/2addr v0, p0
@@ -588,7 +541,6 @@
     .param p0, "themeFlag"    # J
 
     .prologue
-    .line 170
     const-wide/32 v0, 0x43019
 
     and-long/2addr v0, p0
@@ -615,7 +567,6 @@
     .param p0, "themeFlag"    # J
 
     .prologue
-    .line 176
     const-wide/32 v0, 0x60011
 
     and-long/2addr v0, p0
@@ -642,7 +593,6 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 182
     sget-object v0, Lnubia/content/res/ExtraConfiguration;->needRestartActivitySet:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
@@ -658,7 +608,6 @@
     .locals 1
 
     .prologue
-    .line 18
     check-cast p1, Lnubia/content/res/ExtraConfiguration;
 
     invoke-virtual {p0, p1}, Lnubia/content/res/ExtraConfiguration;->compareTo(Lnubia/content/res/ExtraConfiguration;)I
@@ -673,7 +622,6 @@
     .param p1, "that"    # Lnubia/content/res/ExtraConfiguration;
 
     .prologue
-    .line 186
     iget v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
     iget v1, p1, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
@@ -688,10 +636,8 @@
     .param p1, "delta"    # Lnubia/content/res/ExtraConfiguration;
 
     .prologue
-    .line 190
     const/4 v0, 0x0
 
-    .line 191
     .local v0, "changed":I
     iget v1, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
@@ -699,12 +645,10 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 192
     const/high16 v1, -0x80000000
 
     or-int/2addr v0, v1
 
-    .line 194
     :cond_0
     return v0
 .end method
@@ -713,7 +657,6 @@
     .locals 4
 
     .prologue
-    .line 198
     iget v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
     iget-wide v2, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
@@ -729,7 +672,6 @@
     .locals 4
 
     .prologue
-    .line 117
     const-wide/32 v0, 0x40010
 
     iget-wide v2, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
@@ -758,21 +700,18 @@
     .param p1, "paramParcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 202
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
-    .line 203
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
-    .line 204
     return-void
 .end method
 
@@ -781,17 +720,14 @@
     .param p1, "config"    # Lnubia/content/res/ExtraConfiguration;
 
     .prologue
-    .line 207
     iget v0, p1, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
     iput v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
-    .line 208
     iget-wide v0, p1, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
     iput-wide v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
-    .line 209
     return-void
 .end method
 
@@ -799,17 +735,14 @@
     .locals 2
 
     .prologue
-    .line 212
     const/4 v0, 0x0
 
     iput v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
-    .line 213
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
-    .line 214
     return-void
 .end method
 
@@ -817,33 +750,27 @@
     .locals 4
 
     .prologue
-    .line 217
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 218
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v1, " themeChanged="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 219
     iget v1, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 220
     const-string v1, " themeChangedFlags="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 221
     iget-wide v2, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
     invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 222
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -856,10 +783,8 @@
     .param p1, "delta"    # Lnubia/content/res/ExtraConfiguration;
 
     .prologue
-    .line 226
     const/4 v0, 0x0
 
-    .line 227
     .local v0, "changed":I
     iget v1, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
@@ -867,22 +792,18 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 228
     const/high16 v1, -0x80000000
 
     or-int/2addr v0, v1
 
-    .line 229
     iget v1, p1, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
     iput v1, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
-    .line 230
     iget-wide v2, p1, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
     iput-wide v2, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
-    .line 232
     :cond_0
     return v0
 .end method
@@ -894,31 +815,25 @@
     .prologue
     const-wide/32 v6, 0x40010
 
-    .line 257
     sget-boolean v2, Lnubia/content/res/ExtraConfiguration;->mEmptyDefaultFonts:Z
 
     if-eqz v2, :cond_1
 
-    .line 258
     iget v2, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
-    .line 259
     iput-wide p1, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
-    .line 269
     :cond_0
     :goto_0
     return-void
 
-    .line 261
     :cond_1
     iget-wide v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
-    .line 262
     .local v0, "savedThemeChangedFlag":J
     iget v2, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
@@ -926,10 +841,8 @@
 
     iput v2, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
-    .line 263
     iput-wide p1, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
-    .line 265
     and-long v2, v6, v0
 
     const-wide/16 v4, 0x0
@@ -938,7 +851,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 266
     iget-wide v2, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
     or-long/2addr v2, v6
@@ -955,21 +867,17 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 241
     sget-boolean v0, Lnubia/content/res/ExtraConfiguration;->mUpdateThemeNotFirstTime:Z
 
     if-eqz v0, :cond_1
 
-    .line 248
     :cond_0
     :goto_0
     return-void
 
-    .line 244
     :cond_1
     sput-boolean v4, Lnubia/content/res/ExtraConfiguration;->mUpdateThemeNotFirstTime:Z
 
-    .line 245
     const-wide/32 v0, 0x40010
 
     and-long/2addr v0, p1
@@ -980,7 +888,6 @@
 
     if-nez v0, :cond_0
 
-    .line 246
     sput-boolean v4, Lnubia/content/res/ExtraConfiguration;->mEmptyDefaultFonts:Z
 
     goto :goto_0
@@ -992,16 +899,13 @@
     .param p2, "paramInt"    # I
 
     .prologue
-    .line 272
     iget v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChanged:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 273
     iget-wide v0, p0, Lnubia/content/res/ExtraConfiguration;->themeChangedFlags:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 274
     return-void
 .end method

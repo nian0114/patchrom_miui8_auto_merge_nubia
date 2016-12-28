@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 66
     iput-object p1, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +40,8 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 68
     const/4 v0, 0x0
 
-    .line 69
     .local v0, "m":Landroid/os/Message;
     iget-object v1, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
@@ -64,7 +61,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 70
     iget-object v1, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
     # getter for: Landroid/app/ShutdownDialog;->mButtonPositiveMessage:Landroid/os/Message;
@@ -76,15 +72,12 @@
 
     move-result-object v0
 
-    .line 74
     :cond_0
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 75
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 79
     :cond_1
     iget-object v1, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
@@ -103,10 +96,8 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 81
     return-void
 
-    .line 71
     :cond_2
     iget-object v1, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
@@ -126,7 +117,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 72
     iget-object v1, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
     # getter for: Landroid/app/ShutdownDialog;->mButtonNegativeMessage:Landroid/os/Message;

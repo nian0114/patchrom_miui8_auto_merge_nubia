@@ -29,15 +29,12 @@
     .param p2, "horizontalPageIndicator"    # Lnubia/widget/HorizontalPageIndicator;
 
     .prologue
-    .line 1195
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$ResolvedOnPageChangeListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1196
     iput-object p2, p0, Lcom/android/internal/app/ResolverActivity$ResolvedOnPageChangeListener;->mHorizontalPageIndicator:Lnubia/widget/HorizontalPageIndicator;
 
-    .line 1197
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .param p1, "arg0"    # I
 
     .prologue
-    .line 1214
     return-void
 .end method
 
@@ -59,7 +55,6 @@
     .param p3, "arg2"    # I
 
     .prologue
-    .line 1209
     return-void
 .end method
 
@@ -68,17 +63,14 @@
     .param p1, "arg0"    # I
 
     .prologue
-    .line 1201
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$ResolvedOnPageChangeListener;->mHorizontalPageIndicator:Lnubia/widget/HorizontalPageIndicator;
 
     if-eqz v0, :cond_0
 
-    .line 1202
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$ResolvedOnPageChangeListener;->mHorizontalPageIndicator:Lnubia/widget/HorizontalPageIndicator;
 
     invoke-virtual {v0, p1}, Lnubia/widget/HorizontalPageIndicator;->setCurrentPage(I)V
 
-    .line 1204
     :cond_0
     return-void
 .end method

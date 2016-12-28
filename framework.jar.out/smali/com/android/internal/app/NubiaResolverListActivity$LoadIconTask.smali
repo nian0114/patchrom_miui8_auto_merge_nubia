@@ -39,22 +39,18 @@
     .param p2, "dri"    # Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 360
     iput-object p1, p0, Lcom/android/internal/app/NubiaResolverListActivity$LoadIconTask;->this$0:Lcom/android/internal/app/NubiaResolverListActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 361
     iput-object p2, p0, Lcom/android/internal/app/NubiaResolverListActivity$LoadIconTask;->mDisplayResolveInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
-    .line 362
     invoke-virtual {p2}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity$LoadIconTask;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
-    .line 363
     return-void
 .end method
 
@@ -65,7 +61,6 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 367
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity$LoadIconTask;->this$0:Lcom/android/internal/app/NubiaResolverListActivity;
 
     iget-object v0, v0, Lcom/android/internal/app/NubiaResolverListActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
@@ -83,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 356
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/app/NubiaResolverListActivity$LoadIconTask;->doInBackground([Ljava/lang/Void;)Landroid/graphics/drawable/Drawable;
@@ -98,12 +92,10 @@
     .param p1, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 373
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity$LoadIconTask;->mDisplayResolveInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->setDisplayIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 374
     return-void
 .end method
 
@@ -111,7 +103,6 @@
     .locals 0
 
     .prologue
-    .line 356
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/app/NubiaResolverListActivity$LoadIconTask;->onPostExecute(Landroid/graphics/drawable/Drawable;)V

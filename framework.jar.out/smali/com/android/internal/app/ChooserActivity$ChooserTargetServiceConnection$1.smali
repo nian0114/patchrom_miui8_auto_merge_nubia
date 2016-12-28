@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 911
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;
 
     invoke-direct {p0}, Landroid/service/chooser/IChooserTargetResult$Stub;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 915
     .local p1, "targets":Ljava/util/List;, "Ljava/util/List<Landroid/service/chooser/ChooserTarget;>;"
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;
 
@@ -75,18 +73,15 @@
 
     invoke-virtual {v1, v2, p1}, Lcom/android/internal/app/ChooserActivity;->filterServiceTargets(Ljava/lang/String;Ljava/util/List;)V
 
-    .line 918
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 919
     .local v0, "msg":Landroid/os/Message;
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 920
     new-instance v1, Lcom/android/internal/app/ChooserActivity$ServiceResultInfo;
 
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;
@@ -102,7 +97,6 @@
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 922
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;
 
     iget-object v1, v1, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->this$0:Lcom/android/internal/app/ChooserActivity;
@@ -114,6 +108,5 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 923
     return-void
 .end method

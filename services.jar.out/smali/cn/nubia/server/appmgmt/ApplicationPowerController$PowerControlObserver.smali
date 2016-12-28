@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 177
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationPowerController$PowerControlObserver;->this$0:Lcn/nubia/server/appmgmt/ApplicationPowerController;
 
-    .line 178
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 179
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 3
 
     .prologue
-    .line 182
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPowerController$PowerControlObserver;->this$0:Lcn/nubia/server/appmgmt/ApplicationPowerController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationPowerController;->mContext:Landroid/content/Context;
@@ -52,7 +48,6 @@
 
     move-result-object v0
 
-    .line 183
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "content://cn.nubia.security.power/App_power_manage_table"
 
@@ -64,7 +59,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 186
     return-void
 .end method
 
@@ -73,7 +67,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 190
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPowerController$PowerControlObserver;->this$0:Lcn/nubia/server/appmgmt/ApplicationPowerController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationPowerController;->mHandler:Landroid/os/Handler;
@@ -94,7 +87,6 @@
 
     if-nez v0, :cond_0
 
-    .line 191
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPowerController$PowerControlObserver;->this$0:Lcn/nubia/server/appmgmt/ApplicationPowerController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationPowerController;->mHandler:Landroid/os/Handler;
@@ -111,7 +103,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 193
     :cond_0
     return-void
 .end method

@@ -20,7 +20,6 @@ PhotoTable \
 PicoTts \
 PrintSpooler \
 QtiTelephonyService \
-SingleHandPageSet \
 SmartBar \
 Stk \
 SuperSnap \
@@ -31,8 +30,7 @@ ZLauncher5 \
 ZMiniLauncher5 \
 ZNubiaEdge \
 fastdormancy \
-nubia_IRControl3 \
-nubia_IRtest3 \
+cust_nubia_IRControl3 \
 shutdownlistener \
 SmartFace \
 telresources
@@ -49,8 +47,6 @@ InputDevices \
 MediaProvider \
 ProxyHandler \
 QtiTetherService \
-SelfRegister \
-SelfStartProvider \
 SettingsProvider \
 SharedStorageBackup \
 Shell \

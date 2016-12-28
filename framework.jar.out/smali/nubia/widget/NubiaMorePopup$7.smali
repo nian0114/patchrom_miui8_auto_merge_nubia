@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 525
     iput-object p1, p0, Lnubia/widget/NubiaMorePopup$7;->this$0:Lnubia/widget/NubiaMorePopup;
 
     iput-object p2, p0, Lnubia/widget/NubiaMorePopup$7;->val$popup:Landroid/widget/PopupWindow;
@@ -42,11 +41,9 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 528
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$7;->val$popup:Landroid/widget/PopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
 
-    .line 529
     return-void
 .end method

@@ -24,27 +24,22 @@
     .param p3, "callback"    # Lcn/nubia/server/policy/edge/AnimationCallback;
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     iput-object p3, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mCallback:Lcn/nubia/server/policy/edge/AnimationCallback;
 
-    .line 24
     new-instance v0, Lcn/nubia/server/policy/edge/effects/GestureActionFilter;
 
     invoke-direct {v0}, Lcn/nubia/server/policy/edge/effects/GestureActionFilter;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mFilter:Lcn/nubia/server/policy/edge/effects/GestureActionFilter;
 
-    .line 25
     new-instance v0, Lcn/nubia/server/policy/edge/effects/SystemGestureServiceImpl;
 
     invoke-direct {v0, p1}, Lcn/nubia/server/policy/edge/effects/SystemGestureServiceImpl;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mServiceImpl:Lcn/nubia/server/policy/edge/effects/SystemGestureServiceImpl;
 
-    .line 26
     new-instance v0, Lcn/nubia/server/policy/edge/effects/EffectsManager;
 
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mServiceImpl:Lcn/nubia/server/policy/edge/effects/SystemGestureServiceImpl;
@@ -53,7 +48,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mManager:Lcn/nubia/server/policy/edge/effects/EffectsManager;
 
-    .line 27
     return-void
 .end method
 
@@ -64,17 +58,14 @@
     .param p1, "gesture"    # Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mCallback:Lcn/nubia/server/policy/edge/AnimationCallback;
 
     if-eqz v0, :cond_0
 
-    .line 53
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mCallback:Lcn/nubia/server/policy/edge/AnimationCallback;
 
     invoke-interface {v0, p1}, Lcn/nubia/server/policy/edge/AnimationCallback;->onAnimationFinish(Lcn/nubia/edgegesture/EdgeGesture;)V
 
-    .line 55
     :cond_0
     return-void
 .end method
@@ -84,12 +75,10 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mManager:Lcn/nubia/server/policy/edge/effects/EffectsManager;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/policy/edge/effects/EffectsManager;->deliverTouchEvent(Landroid/view/MotionEvent;)V
 
-    .line 40
     return-void
 .end method
 
@@ -97,33 +86,27 @@
     .locals 2
 
     .prologue
-    .line 43
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mFilter:Lcn/nubia/server/policy/edge/effects/GestureActionFilter;
 
     invoke-virtual {v1}, Lcn/nubia/server/policy/edge/effects/GestureActionFilter;->resetFilter()V
 
-    .line 44
     new-instance v0, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;
 
     invoke-direct {v0}, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;-><init>()V
 
-    .line 45
     .local v0, "gesture":Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;
     const v1, 0x99000
 
     iput v1, v0, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;->mType:I
 
-    .line 46
     const v1, 0x99001
 
     iput v1, v0, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;->mAction:I
 
-    .line 47
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mManager:Lcn/nubia/server/policy/edge/effects/EffectsManager;
 
     invoke-virtual {v1, v0}, Lcn/nubia/server/policy/edge/effects/EffectsManager;->notifyGestureChanges(Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;)V
 
-    .line 48
     return-void
 .end method
 
@@ -132,12 +115,10 @@
     .param p1, "gesture"    # Lcn/nubia/edgegesture/EdgeGesture;
 
     .prologue
-    .line 30
     invoke-static {p1}, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;->convertFrom(Lcn/nubia/edgegesture/EdgeGesture;)Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;
 
     move-result-object v0
 
-    .line 31
     .local v0, "localGesture":Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mFilter:Lcn/nubia/server/policy/edge/effects/GestureActionFilter;
 
@@ -147,16 +128,13 @@
 
     if-nez v1, :cond_0
 
-    .line 32
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->mManager:Lcn/nubia/server/policy/edge/effects/EffectsManager;
 
     invoke-virtual {v1, v0}, Lcn/nubia/server/policy/edge/effects/EffectsManager;->notifyGestureChanges(Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;)V
 
-    .line 36
     :goto_0
     return-void
 
-    .line 34
     :cond_0
     const-string v1, "Adapter"
 

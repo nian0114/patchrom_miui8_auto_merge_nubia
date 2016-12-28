@@ -37,37 +37,30 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     const-string v0, "AntiMisoperation"
 
     iput-object v0, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->TAG:Ljava/lang/String;
 
-    .line 24
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->isScreenSaverShow:Z
 
-    .line 26
     const-string v0, "com.android.systemui"
 
     iput-object v0, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->PACKNAME:Ljava/lang/String;
 
-    .line 27
     const-string v0, "com.android.systemui.screensaver.ScreenSaverService"
 
     iput-object v0, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->SERVICE_NAME:Ljava/lang/String;
 
-    .line 64
     new-instance v0, Lcn/nubia/server/policy/AntiMisOperationCtrl$1;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/policy/AntiMisOperationCtrl$1;-><init>(Lcn/nubia/server/policy/AntiMisOperationCtrl;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mScreenSaverReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 111
     new-instance v0, Lcn/nubia/server/policy/AntiMisOperationCtrl$2;
 
     new-instance v1, Landroid/os/Handler;
@@ -78,7 +71,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mPocketModeObserver:Landroid/database/ContentObserver;
 
-    .line 129
     new-instance v0, Lcn/nubia/server/policy/AntiMisOperationCtrl$3;
 
     new-instance v1, Landroid/os/Handler;
@@ -89,16 +81,12 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mAvoidMistouchObserver:Landroid/database/ContentObserver;
 
-    .line 32
     iput-object p1, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 33
     iput-object p2, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mContext:Landroid/content/Context;
 
-    .line 34
     invoke-direct {p0}, Lcn/nubia/server/policy/AntiMisOperationCtrl;->initScreenSaver()V
 
-    .line 35
     return-void
 .end method
 
@@ -108,7 +96,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 20
     iput-boolean p1, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->isScreenSaverShow:Z
 
     return p1
@@ -119,7 +106,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/AntiMisOperationCtrl;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Lcn/nubia/server/policy/AntiMisOperationCtrl;->isPocketModeEnable()Z
 
     move-result v0
@@ -132,7 +118,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/AntiMisOperationCtrl;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Lcn/nubia/server/policy/AntiMisOperationCtrl;->stopScreenSaverService()V
 
     return-void
@@ -143,7 +128,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/AntiMisOperationCtrl;
 
     .prologue
-    .line 20
     iget-object v0, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -154,7 +138,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/AntiMisOperationCtrl;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Lcn/nubia/server/policy/AntiMisOperationCtrl;->startScreenSaverService()V
 
     return-void
@@ -166,7 +149,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 45
     iget-object v0, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -183,7 +165,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 49
     iget-object v0, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -200,7 +181,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 52
     return-void
 .end method
 
@@ -208,28 +188,23 @@
     .locals 3
 
     .prologue
-    .line 38
     invoke-direct {p0}, Lcn/nubia/server/policy/AntiMisOperationCtrl;->createDataBaseListener()V
 
-    .line 39
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 40
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "com.android.internal.policy.impl.ACTION_SCREEN_SAVER_SHOW"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 41
     iget-object v1, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mScreenSaverReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 42
     return-void
 .end method
 
@@ -239,18 +214,14 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 74
     const/4 v5, 0x0
 
-    .line 83
     .local v5, "pocketEnabled":Z
     const/4 v0, 0x0
 
-    .line 84
     .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v4, 0x0
 
-    .line 86
     .local v4, "helper":Ljava/lang/Object;
     :try_start_0
     const-string v6, "ztemt.profilehelper.ProfileHelper"
@@ -259,7 +230,6 @@
 
     move-result-object v0
 
-    .line 87
     const-string v6, "getInstance"
 
     const/4 v8, 0x1
@@ -276,7 +246,6 @@
 
     move-result-object v3
 
-    .line 88
     .local v3, "getInstance":Ljava/lang/reflect/Method;
     const/4 v6, 0x1
 
@@ -292,7 +261,6 @@
 
     move-result-object v4
 
-    .line 89
     const-string v6, "getPocketProfileEnable"
 
     const/4 v8, 0x0
@@ -301,13 +269,11 @@
 
     move-result-object v2
 
-    .line 90
     .local v2, "getEnable":Ljava/lang/reflect/Method;
     const/4 v6, 0x1
 
     invoke-virtual {v2, v6}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 91
     const/4 v6, 0x0
 
     invoke-virtual {v2, v4, v6}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -324,24 +290,20 @@
 
     move v6, v5
 
-    .line 96
     .end local v2    # "getEnable":Ljava/lang/reflect/Method;
     .end local v3    # "getInstance":Ljava/lang/reflect/Method;
     .end local v4    # "helper":Ljava/lang/Object;
     :goto_0
     return v6
 
-    .line 92
     :catch_0
     move-exception v1
 
-    .line 93
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     move v6, v7
 
-    .line 94
     goto :goto_0
 .end method
 
@@ -349,12 +311,10 @@
     .locals 4
 
     .prologue
-    .line 100
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 101
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -366,14 +326,12 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 102
     iget-object v1, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mContext:Landroid/content/Context;
 
     sget-object v2, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 103
     return-void
 .end method
 
@@ -381,12 +339,10 @@
     .locals 4
 
     .prologue
-    .line 106
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 107
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -398,14 +354,12 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 108
     iget-object v1, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mContext:Landroid/content/Context;
 
     sget-object v2, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->stopServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Z
 
-    .line 109
     return-void
 .end method
 
@@ -419,12 +373,10 @@
 
     const/4 v2, 0x0
 
-    .line 55
     invoke-direct {p0}, Lcn/nubia/server/policy/AntiMisOperationCtrl;->isPocketModeEnable()Z
 
     move-result v1
 
-    .line 56
     .local v1, "pocketEnabled":Z
     iget-object v3, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->mContext:Landroid/content/Context;
 
@@ -440,17 +392,14 @@
 
     if-ne v3, v0, :cond_1
 
-    .line 59
     .local v0, "avoidMistouchEnable":Z
     :goto_0
     if-eqz v1, :cond_0
 
     if-eqz v0, :cond_0
 
-    .line 60
     invoke-direct {p0}, Lcn/nubia/server/policy/AntiMisOperationCtrl;->startScreenSaverService()V
 
-    .line 62
     :cond_0
     return-void
 
@@ -458,7 +407,6 @@
     :cond_1
     move v0, v2
 
-    .line 56
     goto :goto_0
 .end method
 
@@ -469,7 +417,6 @@
     .param p3, "policyFlags"    # I
 
     .prologue
-    .line 150
     iget-boolean v0, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl;->isScreenSaverShow:Z
 
     if-eqz v0, :cond_0
@@ -482,10 +429,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 151
     const-wide/16 v0, 0x0
 
-    .line 153
     :goto_0
     return-wide v0
 

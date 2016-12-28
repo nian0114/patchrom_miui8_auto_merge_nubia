@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 100
     iput-object p1, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$4;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 4
 
     .prologue
-    .line 103
     iget-object v1, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$4;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     # invokes: Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->cancelPendingShowToast()V
     invoke-static {v1}, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->access$1000(Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;)V
 
-    .line 104
     iget-object v1, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$4;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     # getter for: Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->mContext:Landroid/content/Context;
@@ -77,7 +74,6 @@
 
     move-result-object v0
 
-    .line 105
     .local v0, "toast":Landroid/widget/Toast;
     invoke-virtual {v0}, Landroid/widget/Toast;->getWindowParams()Landroid/view/WindowManager$LayoutParams;
 
@@ -89,9 +85,7 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 107
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 108
     return-void
 .end method

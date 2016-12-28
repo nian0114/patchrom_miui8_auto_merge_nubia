@@ -35,10 +35,8 @@
     .locals 1
 
     .prologue
-    .line 290
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 291
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -53,7 +51,6 @@
     .param p1, "x0"    # Lcom/android/server/notification/ZenModeFiltering$1;
 
     .prologue
-    .line 290
     invoke-direct {p0}, Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;-><init>()V
 
     return-void
@@ -64,7 +61,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;
 
     .prologue
-    .line 290
     iget v0, p0, Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;->mThresholdMinutes:I
 
     return v0
@@ -75,7 +71,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;
 
     .prologue
-    .line 290
     iget-object v0, p0, Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;->mCalls:Landroid/util/ArrayMap;
 
     return-object v0
@@ -89,7 +84,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 295
     monitor-enter p0
 
     :try_start_0
@@ -97,7 +91,6 @@
 
     if-gtz v8, :cond_0
 
-    .line 296
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
@@ -110,7 +103,6 @@
 
     iput v8, p0, Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;->mThresholdMinutes:I
 
-    .line 299
     :cond_0
     iget v8, p0, Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;->mThresholdMinutes:I
     :try_end_0
@@ -120,30 +112,25 @@
 
     if-nez p2, :cond_2
 
-    .line 312
     :cond_1
     :goto_0
     monitor-exit p0
 
     return v2
 
-    .line 300
     :cond_2
     :try_start_1
     invoke-static {p2}, Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;->peopleString(Landroid/os/Bundle;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 301
     .local v3, "peopleString":Ljava/lang/String;
     if-eqz v3, :cond_1
 
-    .line 302
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 303
     .local v4, "now":J
     iget-object v8, p0, Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;->mCalls:Landroid/util/ArrayMap;
 
@@ -151,7 +138,6 @@
 
     move-result v0
 
-    .line 304
     .local v0, "N":I
     add-int/lit8 v1, v0, -0x1
 
@@ -159,7 +145,6 @@
     :goto_1
     if-ltz v1, :cond_5
 
-    .line 305
     iget-object v8, p0, Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;->mCalls:Landroid/util/ArrayMap;
 
     invoke-virtual {v8, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -172,7 +157,6 @@
 
     move-result-wide v6
 
-    .line 306
     .local v6, "time":J
     cmp-long v8, v6, v4
 
@@ -192,19 +176,16 @@
 
     if-lez v8, :cond_4
 
-    .line 307
     :cond_3
     iget-object v8, p0, Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;->mCalls:Landroid/util/ArrayMap;
 
     invoke-virtual {v8, v1}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
-    .line 304
     :cond_4
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_1
 
-    .line 310
     .end local v6    # "time":J
     :cond_5
     iget-object v8, p0, Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;->mCalls:Landroid/util/ArrayMap;
@@ -213,7 +194,6 @@
 
     move-result v2
 
-    .line 311
     .local v2, "isRepeat":Z
     iget-object v8, p0, Lcom/android/server/notification/ZenModeFiltering$RepeatCallers;->mCalls:Landroid/util/ArrayMap;
 
@@ -227,7 +207,6 @@
 
     goto :goto_0
 
-    .line 295
     .end local v0    # "N":I
     .end local v1    # "i":I
     .end local v2    # "isRepeat":Z
@@ -248,12 +227,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 316
     invoke-static {p0}, Lcom/android/server/notification/ValidateNotificationPeople;->getExtraPeople(Landroid/os/Bundle;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 317
     .local v0, "extraPeople":[Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -261,18 +238,15 @@
 
     if-nez v5, :cond_1
 
-    .line 329
     :cond_0
     :goto_0
     return-object v4
 
-    .line 318
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 319
     .local v3, "sb":Ljava/lang/StringBuilder;
     const/4 v2, 0x0
 
@@ -282,52 +256,43 @@
 
     if-ge v2, v5, :cond_5
 
-    .line 320
     aget-object v1, v0, v2
 
-    .line 321
     .local v1, "extraPerson":Ljava/lang/String;
     if-nez v1, :cond_3
 
-    .line 319
     :cond_2
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 322
     :cond_3
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 323
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v5
 
     if-nez v5, :cond_2
 
-    .line 324
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v5
 
     if-lez v5, :cond_4
 
-    .line 325
     const/16 v5, 0x7c
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 327
     :cond_4
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 329
     .end local v1    # "extraPerson":Ljava/lang/String;
     :cond_5
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I

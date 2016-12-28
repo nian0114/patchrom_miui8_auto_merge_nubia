@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 163
     iput-object p1, p0, Lcn/nubia/server/policy/edge/CommunalService$1$1;->this$1:Lcn/nubia/server/policy/edge/CommunalService$1;
 
     iput-object p2, p0, Lcn/nubia/server/policy/edge/CommunalService$1$1;->val$bm:Landroid/graphics/Bitmap;
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 167
     :try_start_0
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService$1$1;->this$1:Lcn/nubia/server/policy/edge/CommunalService$1;
 
@@ -57,15 +55,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 171
     :goto_0
     return-void
 
-    .line 168
     :catch_0
     move-exception v0
 
-    .line 169
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

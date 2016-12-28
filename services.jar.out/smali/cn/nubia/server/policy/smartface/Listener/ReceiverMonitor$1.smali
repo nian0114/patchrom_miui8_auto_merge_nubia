@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 39
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 42
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 45
     .local v0, "action":Ljava/lang/String;
     const-string v4, "android.intent.action.PHONE_STATE"
 
@@ -56,14 +53,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 46
     const-string v4, "state"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 48
     .local v3, "state":Ljava/lang/String;
     iget-object v4, p0, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
@@ -87,13 +82,11 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 64
     .end local v3    # "state":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 50
     :cond_1
     const-string v4, "com.nubia.smartface.state.changed"
 
@@ -103,14 +96,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 51
     const-string v4, "packageName"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 52
     .local v1, "pkgName":Ljava/lang/String;
     const-string v4, "display"
 
@@ -120,14 +111,12 @@
 
     move-result v2
 
-    .line 54
     .local v2, "show":Z
     iget-object v4, p0, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
     # invokes: Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;->putAppViewMap(Ljava/lang/String;Z)V
     invoke-static {v4, v1, v2}, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;->access$100(Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;Ljava/lang/String;Z)V
 
-    .line 55
     iget-object v4, p0, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;->mHandler:Landroid/os/Handler;
@@ -152,7 +141,6 @@
 
     goto :goto_0
 
-    .line 57
     .end local v1    # "pkgName":Ljava/lang/String;
     .end local v2    # "show":Z
     :cond_2
@@ -164,7 +152,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 59
     iget-object v4, p0, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;->mCallback:Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
@@ -174,7 +161,6 @@
 
     invoke-interface {v4}, Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;->notifyScreentOn()V
 
-    .line 60
     iget-object v4, p0, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;->mContext:Landroid/content/Context;
@@ -190,7 +176,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 61
     invoke-static {v6, v6}, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;->dealScreenSlideNodeForSmartFace(ZZ)V
 
     goto :goto_0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 85
     iput-object p1, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$1;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,17 +38,13 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 88
     invoke-super {p0, p1, p2}, Landroid/telephony/PhoneStateListener;->onCallStateChanged(ILjava/lang/String;)V
 
-    .line 89
     packed-switch p1, :pswitch_data_0
 
-    .line 94
     :goto_0
     return-void
 
-    .line 91
     :pswitch_0
     const-string v0, "FitActionStateMachine"
 
@@ -57,7 +52,6 @@
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 92
     iget-object v0, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$1;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     # invokes: Lcn/nubia/server/policy/edge/ActionStateMachine;->sendCancelMessageForInterrupt()V
@@ -65,7 +59,6 @@
 
     goto :goto_0
 
-    .line 89
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

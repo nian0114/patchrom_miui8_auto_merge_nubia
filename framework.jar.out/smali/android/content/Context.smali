@@ -215,10 +215,8 @@
     .locals 0
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3772
     return-void
 .end method
 
@@ -235,7 +233,6 @@
     .param p4, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 2396
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented. Must override in a subclass."
@@ -249,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 1463
     const/4 v0, 0x0
 
     return v0
@@ -385,7 +381,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 441
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -406,7 +401,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 475
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -439,7 +433,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 458
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -517,7 +510,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 409
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -535,7 +527,6 @@
     .param p2, "formatArgs"    # [Ljava/lang/Object;
 
     .prologue
-    .line 425
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -560,13 +551,11 @@
     .end annotation
 
     .prologue
-    .line 2671
     .local p1, "serviceClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemServiceName(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2672
     .local v0, "serviceName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -602,7 +591,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 396
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -624,7 +612,6 @@
     .locals 1
 
     .prologue
-    .line 491
     const/4 v0, 0x0
 
     return v0
@@ -655,7 +642,6 @@
     .locals 1
 
     .prologue
-    .line 3925
     const/4 v0, 0x0
 
     return v0
@@ -672,7 +658,6 @@
     .end annotation
 
     .prologue
-    .line 520
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
@@ -692,7 +677,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 532
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
@@ -712,7 +696,6 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 545
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
@@ -729,7 +712,6 @@
     .param p1, "attrs"    # [I
 
     .prologue
-    .line 508
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
@@ -773,14 +755,12 @@
     .param p1, "callback"    # Landroid/content/ComponentCallbacks;
 
     .prologue
-    .line 378
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
-    .line 379
     return-void
 .end method
 
@@ -909,7 +889,6 @@
     .param p3, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1532
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented. Must override in a subclass."
@@ -932,7 +911,6 @@
     .param p3, "userId"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1435
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented. Must override in a subclass."
@@ -948,7 +926,6 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1390
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented. Must override in a subclass."
@@ -966,7 +943,6 @@
     .param p4, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1453
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "This method is only implemented for Activity-based Contexts. Check canStartActivityForResult() before calling."
@@ -1015,14 +991,12 @@
     .param p1, "callback"    # Landroid/content/ComponentCallbacks;
 
     .prologue
-    .line 386
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->unregisterComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
-    .line 387
     return-void
 .end method
 

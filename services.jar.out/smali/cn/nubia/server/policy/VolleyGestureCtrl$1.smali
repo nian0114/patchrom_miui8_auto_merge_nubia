@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 79
     iput-object p1, p0, Lcn/nubia/server/policy/VolleyGestureCtrl$1;->this$0:Lcn/nubia/server/policy/VolleyGestureCtrl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 82
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -50,18 +48,15 @@
 
     if-nez v1, :cond_1
 
-    .line 90
     :cond_0
     :goto_0
     return-void
 
-    .line 84
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 85
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.SCREEN_ON"
 
@@ -71,7 +66,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 86
     iget-object v1, p0, Lcn/nubia/server/policy/VolleyGestureCtrl$1;->this$0:Lcn/nubia/server/policy/VolleyGestureCtrl;
 
     # invokes: Lcn/nubia/server/policy/VolleyGestureCtrl;->enableVolleyGesture()V
@@ -79,7 +73,6 @@
 
     goto :goto_0
 
-    .line 87
     :cond_2
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -89,7 +82,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 88
     iget-object v1, p0, Lcn/nubia/server/policy/VolleyGestureCtrl$1;->this$0:Lcn/nubia/server/policy/VolleyGestureCtrl;
 
     # invokes: Lcn/nubia/server/policy/VolleyGestureCtrl;->disableVolleyGesture()V

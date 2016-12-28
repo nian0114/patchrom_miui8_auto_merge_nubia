@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 244
     iput-object p1, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 262
     return-void
 .end method
 
@@ -51,12 +49,10 @@
     .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 247
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 248
     .local v4, "time":J
     iget-object v3, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -64,7 +60,6 @@
 
     aget v1, v3, v6
 
-    .line 250
     .local v1, "lux":F
     iget-object v3, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
@@ -81,7 +76,6 @@
 
     if-lez v3, :cond_1
 
-    .line 251
     iget-object v3, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     # invokes: Lcn/nubia/server/breathinglight/BreathingLightSettings;->getCurrentBrightness()I
@@ -89,7 +83,6 @@
 
     move-result v0
 
-    .line 252
     .local v0, "current":I
     iget-object v3, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
@@ -98,24 +91,20 @@
 
     move-result v2
 
-    .line 253
     .local v2, "target":I
     if-eq v0, v2, :cond_0
 
-    .line 254
     iget-object v3, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     # invokes: Lcn/nubia/server/breathinglight/BreathingLightSettings;->setBrightness(I)V
     invoke-static {v3, v2}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->access$800(Lcn/nubia/server/breathinglight/BreathingLightSettings;I)V
 
-    .line 256
     :cond_0
     iget-object v3, p0, Lcn/nubia/server/breathinglight/BreathingLightSettings$2;->this$0:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     # setter for: Lcn/nubia/server/breathinglight/BreathingLightSettings;->mLastObservedLuxTime:J
     invoke-static {v3, v4, v5}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->access$502(Lcn/nubia/server/breathinglight/BreathingLightSettings;J)J
 
-    .line 258
     .end local v0    # "current":I
     .end local v2    # "target":I
     :cond_1

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 50
     iput-object p1, p0, Lcn/nubia/server/policy/CameraCtrl$1;->this$0:Lcn/nubia/server/policy/CameraCtrl;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V

@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 12
     new-instance v0, Lnubia/os/ClipServiceManagerExtra;
 
     invoke-direct {v0}, Lnubia/os/ClipServiceManagerExtra;-><init>()V
@@ -34,20 +33,16 @@
     .locals 2
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     iget-object v0, p0, Lnubia/os/ClipServiceManagerExtra;->mService:Lnubia/os/IClipService;
 
     if-nez v0, :cond_1
 
-    .line 17
     const-class v1, Lnubia/os/ClipServiceManagerExtra;
 
     monitor-enter v1
 
-    .line 18
     :try_start_0
     iget-object v0, p0, Lnubia/os/ClipServiceManagerExtra;->mService:Lnubia/os/IClipService;
     :try_end_0
@@ -55,7 +50,6 @@
 
     if-nez v0, :cond_0
 
-    .line 20
     :try_start_1
     const-string v0, "nubia.clipserviceext"
 
@@ -72,17 +66,14 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 25
     :cond_0
     :goto_0
     :try_start_2
     monitor-exit v1
 
-    .line 27
     :cond_1
     return-void
 
-    .line 25
     :catchall_0
     move-exception v0
 
@@ -92,7 +83,6 @@
 
     throw v0
 
-    .line 22
     :catch_0
     move-exception v0
 
@@ -103,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 30
     sget-object v0, Lnubia/os/ClipServiceManagerExtra;->sInstance:Lnubia/os/ClipServiceManagerExtra;
 
     return-object v0
@@ -116,14 +105,12 @@
     .param p1, "charSequence"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lnubia/os/ClipServiceManagerExtra;->mService:Lnubia/os/IClipService;
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 36
     :try_start_0
     iget-object v0, p0, Lnubia/os/ClipServiceManagerExtra;->mService:Lnubia/os/IClipService;
 
@@ -135,12 +122,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 40
     :cond_0
     :goto_0
     return-void
 
-    .line 37
     :catch_0
     move-exception v0
 
@@ -161,17 +146,14 @@
     .end annotation
 
     .prologue
-    .line 43
     const/4 v0, 0x0
 
-    .line 45
     .local v0, "datas":Ljava/util/List;
     :try_start_0
     iget-object v1, p0, Lnubia/os/ClipServiceManagerExtra;->mService:Lnubia/os/IClipService;
 
     if-eqz v1, :cond_0
 
-    .line 46
     iget-object v1, p0, Lnubia/os/ClipServiceManagerExtra;->mService:Lnubia/os/IClipService;
 
     invoke-interface {v1, p1}, Lnubia/os/IClipService;->getData(I)Ljava/util/List;
@@ -180,7 +162,6 @@
 
     move-result-object v0
 
-    .line 50
     :cond_0
     :goto_0
     if-nez v0, :cond_1
@@ -195,7 +176,6 @@
     :cond_1
     return-object v0
 
-    .line 48
     .restart local v0    # "datas":Ljava/util/List;
     :catch_0
     move-exception v1

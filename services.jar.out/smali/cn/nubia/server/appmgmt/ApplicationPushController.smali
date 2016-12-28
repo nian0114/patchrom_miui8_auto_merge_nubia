@@ -81,10 +81,8 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -111,48 +109,40 @@
     :goto_0
     iput-boolean v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mDumpDebugLog:Z
 
-    .line 51
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixesLock:Ljava/lang/Object;
 
-    .line 52
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mAllowed3rdPartyPushLock:Ljava/lang/Object;
 
-    .line 54
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixes:Ljava/util/HashSet;
 
-    .line 55
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mAllowed3rdPartyPushApps:Ljava/util/HashSet;
 
-    .line 110
     new-instance v0, Lcn/nubia/server/appmgmt/ApplicationPushController$1;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/appmgmt/ApplicationPushController$1;-><init>(Lcn/nubia/server/appmgmt/ApplicationPushController;)V
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mQueryPushRunnable:Ljava/lang/Runnable;
 
-    .line 58
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mContext:Landroid/content/Context;
 
-    .line 59
     iput-object p2, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mHandler:Landroid/os/Handler;
 
-    .line 60
     const-string v0, "security_push_manager.xml"
 
     invoke-static {v0}, Lcn/nubia/server/appmgmt/ApplicationControllerUtils;->createFile(Ljava/lang/String;)Ljava/io/File;
@@ -161,7 +151,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mPushFile:Ljava/io/File;
 
-    .line 62
     new-instance v0, Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mPushFile:Ljava/io/File;
@@ -170,13 +159,10 @@
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mXmlOperator:Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;
 
-    .line 63
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationPushController;->initData()V
 
-    .line 64
     return-void
 
-    .line 43
     :cond_1
     const/4 v0, 0x0
 
@@ -188,7 +174,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationPushController;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -199,7 +184,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationPushController;
 
     .prologue
-    .line 27
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationPushController;->loadPushData()V
 
     return-void
@@ -209,7 +193,6 @@
     .locals 3
 
     .prologue
-    .line 130
     const-string v1, "security_push_manager.xml"
 
     invoke-static {v1}, Lcn/nubia/server/appmgmt/ApplicationControllerUtils;->isFileExist(Ljava/lang/String;)Z
@@ -218,7 +201,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 131
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mXmlOperator:Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;
 
     invoke-virtual {v1}, Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;->readDataFromFile()Ljava/lang/Object;
@@ -227,16 +209,13 @@
 
     check-cast v0, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
 
-    .line 132
     .local v0, "data":Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
     if-eqz v0, :cond_0
 
-    .line 133
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixesLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 134
     :try_start_0
     # getter for: Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->prefixs:Ljava/util/HashSet;
     invoke-static {v0}, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->access$200(Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;)Ljava/util/HashSet;
@@ -245,17 +224,14 @@
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixes:Ljava/util/HashSet;
 
-    .line 135
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 136
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mAllowed3rdPartyPushLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 137
     :try_start_1
     # getter for: Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->alloweds:Ljava/util/HashSet;
     invoke-static {v0}, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->access$300(Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;)Ljava/util/HashSet;
@@ -264,18 +240,15 @@
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mAllowed3rdPartyPushApps:Ljava/util/HashSet;
 
-    .line 138
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 143
     .end local v0    # "data":Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
     :cond_0
     :goto_0
     return-void
 
-    .line 135
     .restart local v0    # "data":Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
     :catchall_0
     move-exception v1
@@ -287,7 +260,6 @@
 
     throw v1
 
-    .line 138
     :catchall_1
     move-exception v1
 
@@ -298,7 +270,6 @@
 
     throw v1
 
-    .line 141
     .end local v0    # "data":Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
     :cond_1
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationPushController;->loadPushData()V
@@ -311,12 +282,10 @@
     .param p1, "className"    # Ljava/lang/String;
 
     .prologue
-    .line 119
     iget-object v3, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixesLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 120
     :try_start_0
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixes:Ljava/util/HashSet;
 
@@ -338,7 +307,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 121
     .local v1, "prefix":Ljava/lang/String;
     invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -346,26 +314,21 @@
 
     if-eqz v2, :cond_0
 
-    .line 122
     const/4 v2, 0x1
 
     monitor-exit v3
 
-    .line 126
     .end local v1    # "prefix":Ljava/lang/String;
     :goto_0
     return v2
 
-    .line 125
     :cond_1
     monitor-exit v3
 
-    .line 126
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 125
     .end local v0    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v2
@@ -382,7 +345,6 @@
     .param p1, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 221
     :try_start_0
     const-string v0, "content://cn.nubia.security.power/push_dependent_table"
 
@@ -409,10 +371,8 @@
     .local v7, "cursor":Landroid/database/Cursor;
     const/4 v1, 0x0
 
-    .line 222
     if-nez v7, :cond_2
 
-    .line 223
     :try_start_1
     const-string v0, "ApplicationPushController"
 
@@ -423,10 +383,8 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 224
     const/4 v0, 0x0
 
-    .line 236
     if-eqz v7, :cond_0
 
     if-eqz v1, :cond_1
@@ -437,13 +395,11 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 240
     .end local v7    # "cursor":Landroid/database/Cursor;
     :cond_0
     :goto_0
     return v0
 
-    .line 236
     .restart local v7    # "cursor":Landroid/database/Cursor;
     :catch_0
     move-exception v11
@@ -461,7 +417,6 @@
     :catch_1
     move-exception v8
 
-    .line 237
     .local v8, "e":Ljava/lang/Exception;
     const-string v0, "ApplicationPushController"
 
@@ -469,12 +424,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 236
     .end local v8    # "e":Ljava/lang/Exception;
     .restart local v7    # "cursor":Landroid/database/Cursor;
     :cond_1
@@ -485,7 +438,6 @@
 
     goto :goto_0
 
-    .line 226
     :cond_2
     :try_start_5
     const-string v0, "dependent_pkg"
@@ -494,19 +446,16 @@
 
     move-result v6
 
-    .line 227
     .local v6, "classnameIndex":I
     new-instance v10, Ljava/util/HashSet;
 
     invoke-direct {v10}, Ljava/util/HashSet;-><init>()V
 
-    .line 228
     .local v10, "temp":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     const/4 v0, -0x1
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 229
     :goto_1
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -514,12 +463,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 230
     invoke-interface {v7, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 231
     .local v9, "name":Ljava/lang/String;
     invoke-virtual {v10, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
     :try_end_5
@@ -528,7 +475,6 @@
 
     goto :goto_1
 
-    .line 221
     .end local v6    # "classnameIndex":I
     .end local v9    # "name":Ljava/lang/String;
     .end local v10    # "temp":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
@@ -540,7 +486,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 236
     :catchall_0
     move-exception v1
 
@@ -568,7 +513,6 @@
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_1
 
-    .line 233
     .restart local v6    # "classnameIndex":I
     .restart local v10    # "temp":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :cond_4
@@ -580,16 +524,13 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_2
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 234
     :try_start_a
     iput-object v10, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixes:Ljava/util/HashSet;
 
-    .line 235
     monitor-exit v2
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 236
     if-eqz v7, :cond_5
 
     if-eqz v1, :cond_6
@@ -600,14 +541,12 @@
     .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_3
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_1
 
-    .line 240
     :cond_5
     :goto_4
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 235
     :catchall_1
     move-exception v0
 
@@ -622,7 +561,6 @@
     .catch Ljava/lang/Throwable; {:try_start_d .. :try_end_d} :catch_2
     .catchall {:try_start_d .. :try_end_d} :catchall_2
 
-    .line 236
     .end local v6    # "classnameIndex":I
     .end local v10    # "temp":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :catchall_2
@@ -673,7 +611,6 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 250
     :try_start_0
     const-string v0, "content://cn.nubia.security.power/push_access_table"
 
@@ -700,10 +637,8 @@
     .local v7, "cursor":Landroid/database/Cursor;
     const/4 v0, 0x0
 
-    .line 251
     if-nez v7, :cond_2
 
-    .line 252
     :try_start_1
     const-string v1, "ApplicationPushController"
 
@@ -714,7 +649,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 265
     if-eqz v7, :cond_0
 
     if-eqz v12, :cond_1
@@ -725,13 +659,11 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 268
     .end local v7    # "cursor":Landroid/database/Cursor;
     :cond_0
     :goto_0
     return-void
 
-    .line 265
     .restart local v7    # "cursor":Landroid/database/Cursor;
     :catch_0
     move-exception v11
@@ -749,7 +681,6 @@
     :catch_1
     move-exception v8
 
-    .line 266
     .local v8, "e":Ljava/lang/Exception;
     const-string v0, "ApplicationPushController"
 
@@ -759,7 +690,6 @@
 
     goto :goto_0
 
-    .line 265
     .end local v8    # "e":Ljava/lang/Exception;
     .restart local v7    # "cursor":Landroid/database/Cursor;
     :cond_1
@@ -770,7 +700,6 @@
 
     goto :goto_0
 
-    .line 255
     :cond_2
     :try_start_5
     const-string v1, "app_pkg"
@@ -779,19 +708,16 @@
 
     move-result v6
 
-    .line 256
     .local v6, "appnameIndex":I
     new-instance v10, Ljava/util/HashSet;
 
     invoke-direct {v10}, Ljava/util/HashSet;-><init>()V
 
-    .line 257
     .local v10, "temp":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     const/4 v1, -0x1
 
     invoke-interface {v7, v1}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 258
     :goto_1
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -799,12 +725,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 259
     invoke-interface {v7, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 260
     .local v9, "name":Ljava/lang/String;
     invoke-virtual {v10, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
     :try_end_5
@@ -813,7 +737,6 @@
 
     goto :goto_1
 
-    .line 250
     .end local v6    # "appnameIndex":I
     .end local v9    # "name":Ljava/lang/String;
     .end local v10    # "temp":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
@@ -825,7 +748,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 265
     :catchall_0
     move-exception v1
 
@@ -853,7 +775,6 @@
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_1
 
-    .line 262
     .restart local v6    # "appnameIndex":I
     .restart local v10    # "temp":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :cond_4
@@ -865,16 +786,13 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_2
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 263
     :try_start_a
     iput-object v10, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mAllowed3rdPartyPushApps:Ljava/util/HashSet;
 
-    .line 264
     monitor-exit v1
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 265
     if-eqz v7, :cond_0
 
     if-eqz v12, :cond_5
@@ -898,7 +816,6 @@
 
     goto :goto_0
 
-    .line 264
     .end local v11    # "x2":Ljava/lang/Throwable;
     :catchall_1
     move-exception v0
@@ -914,7 +831,6 @@
     .catch Ljava/lang/Throwable; {:try_start_e .. :try_end_e} :catch_2
     .catchall {:try_start_e .. :try_end_e} :catchall_2
 
-    .line 265
     .end local v6    # "appnameIndex":I
     .end local v10    # "temp":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :catchall_2
@@ -955,12 +871,10 @@
     .locals 3
 
     .prologue
-    .line 244
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixesLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 245
     :try_start_0
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixes:Ljava/util/HashSet;
 
@@ -968,13 +882,10 @@
 
     invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 246
     monitor-exit v1
 
-    .line 247
     return-void
 
-    .line 246
     :catchall_0
     move-exception v0
 
@@ -989,14 +900,12 @@
     .locals 7
 
     .prologue
-    .line 206
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 207
     .local v0, "resolver":Landroid/content/ContentResolver;
     invoke-direct {p0, v0}, Lcn/nubia/server/appmgmt/ApplicationPushController;->load3rdPartyPushPrefixes(Landroid/content/ContentResolver;)Z
 
@@ -1004,23 +913,18 @@
 
     if-nez v1, :cond_0
 
-    .line 208
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationPushController;->loadDefaultPushPrefixesData()V
 
-    .line 218
     :goto_0
     return-void
 
-    .line 210
     :cond_0
     invoke-direct {p0, v0}, Lcn/nubia/server/appmgmt/ApplicationPushController;->loadAllowed3rdPartyPushApps(Landroid/content/ContentResolver;)V
 
-    .line 211
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixesLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 212
     :try_start_0
     iget-object v3, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mAllowed3rdPartyPushLock:Ljava/lang/Object;
 
@@ -1028,7 +932,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 213
     :try_start_1
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mXmlOperator:Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;
 
@@ -1042,12 +945,10 @@
 
     invoke-virtual {v1, v4}, Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;->writeDataToFile(Ljava/lang/Object;)V
 
-    .line 215
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 216
     :try_start_2
     monitor-exit v2
 
@@ -1062,7 +963,6 @@
 
     throw v1
 
-    .line 215
     :catchall_1
     move-exception v1
 
@@ -1087,7 +987,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 67
     invoke-static {}, Lcn/nubia/server/appmgmt/ApplicationControllerUtils;->getBuildType()I
 
     move-result v1
@@ -1096,23 +995,19 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 84
     :cond_0
     :goto_0
     return v0
 
-    .line 72
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 77
     invoke-static {p1}, Lcn/nubia/server/appmgmt/ApplicationControllerUtils;->isDefaultAllowed(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 81
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mAllowed3rdPartyPushApps:Ljava/util/HashSet;
 
     invoke-virtual {v1, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -1121,7 +1016,6 @@
 
     if-nez v1, :cond_0
 
-    .line 84
     invoke-direct {p0, p2}, Lcn/nubia/server/appmgmt/ApplicationPushController;->is3rdPartyPush(Ljava/lang/String;)Z
 
     move-result v1
@@ -1138,17 +1032,14 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 95
     const-string v3, "==========managed push services=========="
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 96
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixesLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 97
     :try_start_0
     iget-object v3, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->m3rdPartyPushPrefixes:Ljava/util/HashSet;
 
@@ -1170,13 +1061,11 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 98
     .local v2, "prefix":Ljava/lang/String;
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 100
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "prefix":Ljava/lang/String;
     :catchall_0
@@ -1195,15 +1084,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 101
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 102
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mAllowed3rdPartyPushLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 103
     :try_start_2
     iget-object v3, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mAllowed3rdPartyPushApps:Ljava/util/HashSet;
 
@@ -1224,13 +1110,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 104
     .local v0, "allowed":Ljava/lang/String;
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 106
     .end local v0    # "allowed":Ljava/lang/String;
     :catchall_1
     move-exception v3
@@ -1247,10 +1131,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 107
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 108
     return-void
 .end method
 
@@ -1258,7 +1140,6 @@
     .locals 2
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mQueryPushRunnable:Ljava/lang/Runnable;
@@ -1269,14 +1150,12 @@
 
     if-nez v0, :cond_0
 
-    .line 90
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController;->mQueryPushRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 92
     :cond_0
     return-void
 .end method

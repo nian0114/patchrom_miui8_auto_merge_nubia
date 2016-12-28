@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor$2;->this$0:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 70
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 78
     :goto_0
     return-void
 
-    .line 72
     :sswitch_0
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor$2;->this$0:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
@@ -59,7 +55,6 @@
 
     goto :goto_0
 
-    .line 75
     :sswitch_1
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor$2;->this$0:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
@@ -68,7 +63,6 @@
 
     goto :goto_0
 
-    .line 70
     :sswitch_data_0
     .sparse-switch
         0xa -> :sswitch_0

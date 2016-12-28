@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.android.settings_ex.LightSeekBar android:id="@id/hue_adjust_seekbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:maxHeight="2.0dip" android:progressDrawable="@drawable/light_seekbar_progress" android:minHeight="2.0dip" />
-    <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/hue_cool" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/hue_adjust_value_cool" android:singleLine="true" android:layout_below="@id/hue_adjust_seekbar" android:layout_alignParentLeft="true" />
-    <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/hue_natural" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hue_adjust_value_natual" android:singleLine="true" android:layout_below="@id/hue_adjust_seekbar" android:layout_centerHorizontal="true" />
-    <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/hue_warm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:text="@string/hue_adjust_value_warm" android:singleLine="true" android:layout_below="@id/hue_adjust_seekbar" android:layout_alignParentRight="true" />
-</RelativeLayout>

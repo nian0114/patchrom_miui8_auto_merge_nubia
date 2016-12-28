@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 137
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 141
     :try_start_0
     new-instance v1, Landroid/hardware/camera2/params/OutputConfiguration;
 
@@ -57,15 +55,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 145
     :goto_0
     return-object v1
 
-    .line 143
     :catch_0
     move-exception v0
 
-    .line 144
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "OutputConfiguration"
 
@@ -75,7 +70,6 @@
 
     move-object v1, v2
 
-    .line 145
     goto :goto_0
 .end method
 
@@ -83,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 137
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/params/OutputConfiguration$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/camera2/params/OutputConfiguration;
 
     move-result-object v0
@@ -96,7 +89,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 151
     new-array v0, p1, [Landroid/hardware/camera2/params/OutputConfiguration;
 
     return-object v0
@@ -106,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 137
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/params/OutputConfiguration$1;->newArray(I)[Landroid/hardware/camera2/params/OutputConfiguration;
 
     move-result-object v0

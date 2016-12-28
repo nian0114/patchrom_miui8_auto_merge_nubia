@@ -17,12 +17,12 @@ local-modified-apps := SettingsProvider
 local-modified-jars :=
 
 # All apks from MIUI
-local-miui-removed-apps := FM MiuiCamera Updater
+local-miui-removed-apps := FM MiuiCamera MiuiVideo MiuiSuperMarket SystemAdSolution SogouInput Browser
 
 local-miui-modified-apps := TeleService InCallUI MiuiHome
 
 local-miui-modified-apps-smali := DeskClock MiuiSystemUI TelephonyProvider SecurityCenter \
-SecurityCoreAdd MiuiKeyguard XiaomiServiceFramework Settings
+SecurityCoreAdd MiuiKeyguard XiaomiServiceFramework
 
 PORT_PRODUCT := nian_z11
 
@@ -54,23 +54,25 @@ include $(PORT_BUILD)/porting.mk
 #updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
-	cp -rf other/system $(ZIP_DIR)/
 	cp -rf ../other/system $(ZIP_DIR)/
+	cp -rf other/system $(ZIP_DIR)/
 	cp -rf other/boot.img $(ZIP_DIR)/boot.img
 	cp -rf stockrom/system/lib64/libavcodec.so $(ZIP_DIR)/system/lib64/libavcodec.so
 	cp -rf stockrom/system/lib64/libavformat.so $(ZIP_DIR)/system/lib64/libavformat.so
 	cp -rf stockrom/system/lib64/libavutil.so $(ZIP_DIR)/system/lib64/libavutil.so
+	rm -rf $(ZIP_DIR)/system/preset_apps
 	rm -rf $(ZIP_DIR)/system/vendor/ChinaMobile
 	rm -rf $(ZIP_DIR)/system/vendor/CmccPower
 	rm -rf $(ZIP_DIR)/system/vendor/CTA
 	rm -rf $(ZIP_DIR)/system/priv-app/CMSettings
+	rm -rf $(ZIP_DIR)/system/priv-app/MiUpdater
+	rm -rf $(ZIP_DIR)/system/priv-app/StockSettings
+	rm -rf $(ZIP_DIR)/system/framework/ifaa_fingerprint.jar
+	touch $(ZIP_DIR)/system/framework/ifaa_fingerprint.jar
 	rm -rf $(ZIP_DIR)/system/media/boot.wav
 	rm -rf $(ZIP_DIR)/system/media/shutdown.wav
 	echo "import /system/default.prop" >> $(ZIP_DIR)/system/build.prop
-	echo "ro.recovery.md5id=7cb2e8e90ff03a5590565cf116331927" >> $(ZIP_DIR)/system/build.prop
-	echo "persist.dbg.vt_avail_ovr=1" >> $(ZIP_DIR)/system/build.prop
-	echo "persist.dbg.volte_avail_ovr=1" >> $(ZIP_DIR)/system/build.prop
-	echo "ro.miui.type=hook" >> $(ZIP_DIR)/system/build.prop
+	echo "ro.recovery.md5id=23853a3ffccb062da558ced737fcdcfc" >> $(ZIP_DIR)/system/build.prop
 	rm -rf $(ZIP_DIR)/system/media/audio/ui/bootup.wav
 	touch $(ZIP_DIR)/system/media/audio/ui/bootup.wav
 	mv $(ZIP_DIR)/system/media/shutdownanimation.zip $(ZIP_DIR)/system/media/theme/shutdown/shutdownanimation.zip

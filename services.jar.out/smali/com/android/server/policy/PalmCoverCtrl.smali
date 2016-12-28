@@ -29,19 +29,14 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput v0, p0, Lcom/android/server/policy/PalmCoverCtrl;->mPalmCoverEnable:I
 
-    .line 28
     iput v0, p0, Lcom/android/server/policy/PalmCoverCtrl;->mKeyCode:I
 
-    .line 31
     iput-object p1, p0, Lcom/android/server/policy/PalmCoverCtrl;->mContext:Landroid/content/Context;
 
-    .line 32
     iget-object v0, p0, Lcom/android/server/policy/PalmCoverCtrl;->mContext:Landroid/content/Context;
 
     const-string v1, "power"
@@ -54,10 +49,8 @@
 
     iput-object v0, p0, Lcom/android/server/policy/PalmCoverCtrl;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 33
     invoke-direct {p0}, Lcom/android/server/policy/PalmCoverCtrl;->getKeyEvent()V
 
-    .line 34
     return-void
 .end method
 
@@ -66,7 +59,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 97
     :try_start_0
     const-string v2, "PalmCoverCtrl"
 
@@ -90,7 +82,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     iget-object v2, p0, Lcom/android/server/policy/PalmCoverCtrl;->mContext:Landroid/content/Context;
 
     const-string v3, "system_access"
@@ -101,22 +92,18 @@
 
     check-cast v1, Lnubia/os/SystemAccessManager;
 
-    .line 100
     .local v1, "systemAccessManager":Lnubia/os/SystemAccessManager;
     invoke-virtual {v1, p1}, Lnubia/os/SystemAccessManager;->enablePalmGesture(Z)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 104
     .end local v1    # "systemAccessManager":Lnubia/os/SystemAccessManager;
     :goto_0
     return-void
 
-    .line 101
     :catch_0
     move-exception v0
 
-    .line 102
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "PalmCoverCtrl"
 
@@ -131,14 +118,11 @@
     .locals 4
 
     .prologue
-    .line 37
     const/4 v0, 0x0
 
-    .line 38
     .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v2, 0x0
 
-    .line 40
     .local v2, "field":Ljava/lang/reflect/Field;
     :try_start_0
     const-string v3, "android.view.KeyEvent"
@@ -147,17 +131,14 @@
 
     move-result-object v0
 
-    .line 41
     const-string v3, "KEYCODE_PALM_LOCK"
 
     invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
 
-    .line 42
     if-eqz v2, :cond_0
 
-    .line 43
     invoke-virtual {v2, v0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result v3
@@ -166,16 +147,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 49
     :cond_0
     :goto_0
     return-void
 
-    .line 45
     :catch_0
     move-exception v1
 
-    .line 46
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -195,7 +173,6 @@
 
     const-wide/high16 v6, -0x8000000000000000L
 
-    .line 54
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v2
@@ -216,12 +193,10 @@
 
     if-nez p3, :cond_1
 
-    .line 72
     :cond_0
     :goto_0
     return-wide v6
 
-    .line 61
     :cond_1
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/PalmCoverCtrl;->mContext:Landroid/content/Context;
@@ -234,7 +209,6 @@
 
     check-cast v1, Landroid/telecom/TelecomManager;
 
-    .line 62
     .local v1, "telephonyManager":Landroid/telecom/TelecomManager;
     if-eqz v1, :cond_2
 
@@ -244,7 +218,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 63
     const-string v2, "PalmCoverCtrl"
 
     const-string v3, "palm error because phone"
@@ -255,12 +228,10 @@
 
     goto :goto_0
 
-    .line 66
     .end local v1    # "telephonyManager":Landroid/telecom/TelecomManager;
     :catch_0
     move-exception v0
 
-    .line 67
     .local v0, "ex":Ljava/lang/Exception;
     const-string v2, "PalmCoverCtrl"
 
@@ -268,7 +239,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 70
     .end local v0    # "ex":Ljava/lang/Exception;
     :cond_2
     const-string v2, "PalmCoverCtrl"
@@ -295,7 +265,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     iget-object v2, p0, Lcom/android/server/policy/PalmCoverCtrl;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -313,7 +282,6 @@
     .param p2, "observer"    # Landroid/database/ContentObserver;
 
     .prologue
-    .line 78
     const-string v0, "palm_cover"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -326,7 +294,6 @@
 
     invoke-virtual {p1, v0, v1, p2, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 81
     return-void
 .end method
 
@@ -338,7 +305,6 @@
 
     const/4 v2, 0x0
 
-    .line 85
     iget-object v3, p0, Lcom/android/server/policy/PalmCoverCtrl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -353,16 +319,13 @@
 
     move-result v0
 
-    .line 88
     .local v0, "palmCover":I
     iget v3, p0, Lcom/android/server/policy/PalmCoverCtrl;->mPalmCoverEnable:I
 
     if-eq v3, v0, :cond_0
 
-    .line 89
     iput v0, p0, Lcom/android/server/policy/PalmCoverCtrl;->mPalmCoverEnable:I
 
-    .line 90
     iget v3, p0, Lcom/android/server/policy/PalmCoverCtrl;->mPalmCoverEnable:I
 
     if-ne v3, v1, :cond_1
@@ -370,13 +333,11 @@
     :goto_0
     invoke-direct {p0, v1}, Lcom/android/server/policy/PalmCoverCtrl;->enablePalmGesture(Z)V
 
-    .line 92
     :cond_0
     return-void
 
     :cond_1
     move v1, v2
 
-    .line 90
     goto :goto_0
 .end method

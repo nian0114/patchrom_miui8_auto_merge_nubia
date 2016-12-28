@@ -35,21 +35,16 @@
     .param p4, "max"    # I
 
     .prologue
-    .line 6083
     iput-object p1, p0, Landroid/widget/Editor$PastePanelOnClickListener;->this$0:Landroid/widget/Editor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6084
     iput-object p2, p0, Landroid/widget/Editor$PastePanelOnClickListener;->mController:Landroid/widget/NubiaCursorController;
 
-    .line 6085
     iput p4, p0, Landroid/widget/Editor$PastePanelOnClickListener;->mMax:I
 
-    .line 6086
     iput p3, p0, Landroid/widget/Editor$PastePanelOnClickListener;->mMin:I
 
-    .line 6087
     return-void
 .end method
 
@@ -60,12 +55,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 6091
     move-object v0, p1
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 6092
     .local v0, "tv":Landroid/widget/TextView;
     iget-object v1, p0, Landroid/widget/Editor$PastePanelOnClickListener;->this$0:Landroid/widget/Editor;
 
@@ -84,16 +77,13 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/widget/TextView;->replaceText_internal(IILjava/lang/CharSequence;)V
 
-    .line 6093
     iget-object v1, p0, Landroid/widget/Editor$PastePanelOnClickListener;->this$0:Landroid/widget/Editor;
 
     invoke-virtual {v1}, Landroid/widget/Editor;->stopTextSelectionMode()V
 
-    .line 6094
     iget-object v1, p0, Landroid/widget/Editor$PastePanelOnClickListener;->mController:Landroid/widget/NubiaCursorController;
 
     invoke-virtual {v1}, Landroid/widget/NubiaCursorController;->onClipBoardPancelClick()V
 
-    .line 6095
     return-void
 .end method

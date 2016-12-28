@@ -12,22 +12,18 @@
     .locals 1
 
     .prologue
-    .line 20
     invoke-direct {p0}, Landroid/security/keystore/AndroidKeyStoreSpi;-><init>()V
 
-    .line 18
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/security/keystore/SoterKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
-    .line 21
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/security/keystore/SoterKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
-    .line 22
     return-void
 .end method
 
@@ -36,10 +32,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     if-nez p1, :cond_0
 
-    .line 56
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "alias == null"
@@ -48,7 +42,6 @@
 
     throw v0
 
-    .line 59
     :cond_0
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -82,10 +75,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 63
     if-nez p1, :cond_0
 
-    .line 64
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "alias == null"
@@ -94,7 +85,6 @@
 
     throw v0
 
-    .line 66
     :cond_0
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -130,10 +120,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 93
     if-nez p1, :cond_0
 
-    .line 95
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "alias == null"
@@ -142,7 +130,6 @@
 
     throw v0
 
-    .line 98
     :cond_0
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -218,18 +205,15 @@
     .end annotation
 
     .prologue
-    .line 78
     invoke-virtual {p0, p1}, Landroid/security/keystore/SoterKeyStoreSpi;->engineContainsAlias(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 88
     :cond_0
     return-void
 
-    .line 84
     :cond_1
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -283,7 +267,6 @@
 
     if-nez v0, :cond_0
 
-    .line 86
     new-instance v0, Ljava/security/KeyStoreException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -321,14 +304,12 @@
     .end annotation
 
     .prologue
-    .line 28
     invoke-direct {p0, p1}, Landroid/security/keystore/SoterKeyStoreSpi;->isPrivateKeyEntry(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 29
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -347,7 +328,6 @@
 
     move-result-object v0
 
-    .line 34
     .local v0, "privateKeyAlias":Ljava/lang/String;
     if-eqz p2, :cond_0
 
@@ -363,19 +343,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 36
     iget-object v2, p0, Landroid/security/keystore/SoterKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
     invoke-static {v2, v0}, Landroid/security/keystore/SoterKeyStoreProvider;->loadJsonPublicKeyFromKeystore(Landroid/security/KeyStore;Ljava/lang/String;)Landroid/security/keystore/AndroidKeyStorePublicKey;
 
     move-result-object v2
 
-    .line 50
     .end local v0    # "privateKeyAlias":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 41
     .restart local v0    # "privateKeyAlias":Ljava/lang/String;
     :cond_0
     iget-object v2, p0, Landroid/security/keystore/SoterKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
@@ -386,7 +363,6 @@
 
     goto :goto_0
 
-    .line 44
     .end local v0    # "privateKeyAlias":Ljava/lang/String;
     :cond_1
     invoke-direct {p0, p1}, Landroid/security/keystore/SoterKeyStoreSpi;->isSecretKeyEntry(Ljava/lang/String;)Z
@@ -395,7 +371,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 45
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -414,7 +389,6 @@
 
     move-result-object v1
 
-    .line 46
     .local v1, "secretKeyAlias":Ljava/lang/String;
     iget-object v2, p0, Landroid/security/keystore/SoterKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -424,7 +398,6 @@
 
     goto :goto_0
 
-    .line 50
     .end local v1    # "secretKeyAlias":Ljava/lang/String;
     :cond_2
     const/4 v2, 0x0

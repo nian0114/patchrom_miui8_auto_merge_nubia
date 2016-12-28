@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 5838
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$5;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "p2"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 5840
     iget v0, p1, Landroid/content/pm/PackageParser$Package;->mOverlayPriority:I
 
     iget v1, p2, Landroid/content/pm/PackageParser$Package;->mOverlayPriority:I
@@ -66,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 5838
     check-cast p1, Landroid/content/pm/PackageParser$Package;
 
     check-cast p2, Landroid/content/pm/PackageParser$Package;

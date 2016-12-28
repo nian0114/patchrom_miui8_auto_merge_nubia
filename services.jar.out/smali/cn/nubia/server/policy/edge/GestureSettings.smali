@@ -83,7 +83,6 @@
     .locals 3
 
     .prologue
-    .line 31
     const-string v0, "content://cn.nubia.edge/fit_manager"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -92,7 +91,6 @@
 
     sput-object v0, Lcn/nubia/server/policy/edge/GestureSettings;->EDGE_DATABASE_URI:Landroid/net/Uri;
 
-    .line 45
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -129,7 +127,6 @@
 
     sput-object v0, Lcn/nubia/server/policy/edge/GestureSettings;->ALL_EDGE_SWITCH:[Ljava/lang/String;
 
-    .line 55
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -144,25 +141,20 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     const/4 v1, -0x1
 
     iput v1, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mLastEdgeTpState:I
 
-    .line 59
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mSettingsMap:Ljava/util/Map;
 
-    .line 63
     iput-object p1, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mContext:Landroid/content/Context;
 
-    .line 64
     new-instance v1, Lcn/nubia/server/policy/edge/GestureSettings$EdgeSettingsObserver;
 
     new-instance v2, Landroid/os/Handler;
@@ -173,20 +165,17 @@
 
     iput-object v1, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mObserver:Lcn/nubia/server/policy/edge/GestureSettings$EdgeSettingsObserver;
 
-    .line 66
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.PACKAGE_DATA_CLEARED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 68
     .local v0, "packageFilter":Landroid/content/IntentFilter;
     const-string v1, "package"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 69
     iget-object v1, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mContext:Landroid/content/Context;
 
     new-instance v2, Lcn/nubia/server/policy/edge/GestureSettings$1;
@@ -195,7 +184,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 82
     return-void
 .end method
 
@@ -204,7 +192,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/GestureSettings;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/GestureSettings;->loadSettings()V
 
     return-void
@@ -215,7 +202,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/GestureSettings;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/GestureSettings;->getAllDatabase()V
 
     return-void
@@ -226,7 +212,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/GestureSettings;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/GestureSettings;->updateEdgeTpState()V
 
     return-void
@@ -237,7 +222,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/GestureSettings;
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -247,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 25
     sget-object v0, Lcn/nubia/server/policy/edge/GestureSettings;->EDGE_DATABASE_URI:Landroid/net/Uri;
 
     return-object v0
@@ -258,7 +241,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/GestureSettings;
 
     .prologue
-    .line 25
     iget v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mLastEdgeTpState:I
 
     return v0
@@ -270,7 +252,6 @@
     .param p1, "x1"    # Landroid/net/Uri;
 
     .prologue
-    .line 25
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/GestureSettings;->getValue(Landroid/net/Uri;)V
 
     return-void
@@ -281,7 +262,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/GestureSettings;
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mSettingsMap:Ljava/util/Map;
 
     return-object v0
@@ -291,10 +271,8 @@
     .locals 10
 
     .prologue
-    .line 158
     const/4 v6, 0x0
 
-    .line 160
     .local v6, "cursor":Landroid/database/Cursor;
     :try_start_0
     iget-object v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mContext:Landroid/content/Context;
@@ -317,10 +295,8 @@
 
     move-result-object v6
 
-    .line 163
     if-nez v6, :cond_1
 
-    .line 164
     const-string v0, "GestureSettings"
 
     const-string v1, "edge cursor is null!"
@@ -330,21 +306,16 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 185
     if-eqz v6, :cond_0
 
-    .line 186
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 187
     const/4 v6, 0x0
 
-    .line 190
     :cond_0
     :goto_0
     return-void
 
-    .line 167
     :cond_1
     :try_start_1
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
@@ -353,7 +324,6 @@
 
     if-gtz v0, :cond_2
 
-    .line 168
     const-string v0, "GestureSettings"
 
     const-string v1, "edge cursor\'s count is less than zero!"
@@ -363,23 +333,18 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 185
     if-eqz v6, :cond_0
 
-    .line 186
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 187
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 171
     :cond_2
     :try_start_2
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 173
     :cond_3
     const-string v0, "name"
 
@@ -391,7 +356,6 @@
 
     move-result-object v8
 
-    .line 174
     .local v8, "key":Ljava/lang/String;
     const-string v0, "value"
 
@@ -403,7 +367,6 @@
 
     move-result-object v9
 
-    .line 175
     .local v9, "value":Ljava/lang/String;
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -417,12 +380,10 @@
 
     if-nez v0, :cond_4
 
-    .line 176
     iget-object v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mSettingsMap:Ljava/util/Map;
 
     invoke-interface {v0, v8, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 179
     :cond_4
     const-string v0, "GestureSettings"
 
@@ -456,7 +417,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -466,52 +426,41 @@
 
     if-nez v0, :cond_3
 
-    .line 185
     if-eqz v6, :cond_0
 
-    .line 186
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 187
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 182
     .end local v8    # "key":Ljava/lang/String;
     .end local v9    # "value":Ljava/lang/String;
     :catch_0
     move-exception v7
 
-    .line 183
     .local v7, "e":Ljava/lang/Exception;
     :try_start_3
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 185
     if-eqz v6, :cond_0
 
-    .line 186
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 187
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 185
     .end local v7    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_5
 
-    .line 186
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 187
     const/4 v6, 0x0
 
     :cond_5
@@ -523,19 +472,15 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 231
     if-nez p1, :cond_1
 
-    .line 244
     :cond_0
     :goto_0
     return-void
 
-    .line 232
     :cond_1
     const/4 v6, 0x0
 
-    .line 234
     .local v6, "cursor":Landroid/database/Cursor;
     :try_start_0
     iget-object v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mContext:Landroid/content/Context;
@@ -558,7 +503,6 @@
 
     move-result-object v6
 
-    .line 235
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v0
@@ -568,50 +512,39 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 239
     if-eqz v6, :cond_0
 
-    .line 240
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 241
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 236
     :catch_0
     move-exception v7
 
-    .line 237
     .local v7, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 239
     if-eqz v6, :cond_0
 
-    .line 240
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 241
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 239
     .end local v7    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_2
 
-    .line 240
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 241
     const/4 v6, 0x0
 
     :cond_2
@@ -623,10 +556,8 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 247
     const/4 v6, 0x0
 
-    .line 249
     .local v6, "cursor":Landroid/database/Cursor;
     :try_start_0
     iget-object v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mContext:Landroid/content/Context;
@@ -655,59 +586,46 @@
 
     move-result-object v6
 
-    .line 250
     invoke-direct {p0, v6, p1}, Lcn/nubia/server/policy/edge/GestureSettings;->getValueForCursor(Landroid/database/Cursor;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 254
     if-eqz v6, :cond_0
 
-    .line 255
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 256
     const/4 v6, 0x0
 
-    .line 259
     :cond_0
     :goto_0
     return-void
 
-    .line 251
     :catch_0
     move-exception v7
 
-    .line 252
     .local v7, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 254
     if-eqz v6, :cond_0
 
-    .line 255
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 256
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 254
     .end local v7    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_1
 
-    .line 255
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 256
     const/4 v6, 0x0
 
     :cond_1
@@ -720,22 +638,18 @@
     .param p2, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 262
     if-nez p1, :cond_1
 
-    .line 263
     const-string v2, "GestureSettings"
 
     const-string v3, "edge cursor is null!"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 282
     :cond_0
     :goto_0
     return-void
 
-    .line 266
     :cond_1
     invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
@@ -743,7 +657,6 @@
 
     if-gtz v2, :cond_2
 
-    .line 267
     const-string v2, "GestureSettings"
 
     const-string v3, "edge cursor\'s count is less than zero!"
@@ -752,22 +665,18 @@
 
     goto :goto_0
 
-    .line 270
     :cond_2
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 271
     const-string v2, "value"
 
     invoke-interface {p1, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 272
     .local v0, "index":I
     if-gez v0, :cond_3
 
-    .line 273
     const-string v2, "GestureSettings"
 
     const-string v3, "edge database column named value not found!"
@@ -776,13 +685,11 @@
 
     goto :goto_0
 
-    .line 276
     :cond_3
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 277
     .local v1, "value":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -790,14 +697,12 @@
 
     if-nez v2, :cond_4
 
-    .line 278
     iget-object v2, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mSettingsMap:Ljava/util/Map;
 
     invoke-interface {v2, p2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 279
     :cond_4
     iget-object v2, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mSettingsMap:Ljava/util/Map;
 
@@ -807,7 +712,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 280
     iget-object v2, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mSettingsMap:Ljava/util/Map;
 
     invoke-interface {v2, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -823,14 +727,12 @@
 
     const/4 v1, 0x1
 
-    .line 303
     iget-object v3, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 305
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v3, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mContext:Landroid/content/Context;
 
@@ -846,12 +748,10 @@
 
     if-ne v3, v1, :cond_1
 
-    .line 315
     :cond_0
     :goto_0
     return v1
 
-    .line 310
     :cond_1
     const-string v3, "nubia_edge_single_move_switch"
 
@@ -895,7 +795,6 @@
 
     move v1, v2
 
-    .line 315
     goto :goto_0
 .end method
 
@@ -903,19 +802,16 @@
     .locals 2
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mLoadSettingsTask:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
 
-    .line 91
     iget-object v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mLoadSettingsTask:Landroid/os/AsyncTask;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 93
     :cond_0
     new-instance v0, Lcn/nubia/server/policy/edge/GestureSettings$2;
 
@@ -923,7 +819,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mLoadSettingsTask:Landroid/os/AsyncTask;
 
-    .line 104
     iget-object v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mLoadSettingsTask:Landroid/os/AsyncTask;
 
     const/4 v1, 0x0
@@ -932,7 +827,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 105
     return-void
 .end method
 
@@ -940,12 +834,10 @@
     .locals 2
 
     .prologue
-    .line 286
     invoke-static {}, Lnubia/os/edge/EdgeFeatureConfig;->isEdgeIncomplete()Z
 
     move-result v0
 
-    .line 287
     .local v0, "inComplete":Z
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/GestureSettings;->isNeedUserEdgeTP()Z
 
@@ -953,16 +845,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 288
     const/4 v1, 0x1
 
     invoke-direct {p0, v1, v0}, Lcn/nubia/server/policy/edge/GestureSettings;->writeEdgeTpState(IZ)V
 
-    .line 292
     :goto_0
     return-void
 
-    .line 290
     :cond_0
     const/4 v1, 0x0
 
@@ -977,20 +866,16 @@
     .param p2, "cZone"    # Z
 
     .prologue
-    .line 295
     iget v1, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mLastEdgeTpState:I
 
     if-eq v1, p1, :cond_0
 
-    .line 296
     iput p1, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mLastEdgeTpState:I
 
-    .line 297
     if-eqz p2, :cond_1
 
     const-string v0, "persist.sys.edgetp.czone"
 
-    .line 298
     .local v0, "zone":Ljava/lang/String;
     :goto_0
     iget v1, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mLastEdgeTpState:I
@@ -1001,12 +886,10 @@
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 300
     .end local v0    # "zone":Ljava/lang/String;
     :cond_0
     return-void
 
-    .line 297
     :cond_1
     const-string v0, "persist.sys.edgetp.tzone"
 
@@ -1019,7 +902,6 @@
     .locals 3
 
     .prologue
-    .line 120
     iget-object v1, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mSettingsMap:Ljava/util/Map;
 
     const-string v2, "nubia_edge_single_move_switch"
@@ -1030,7 +912,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 121
     .local v0, "value":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1038,7 +919,6 @@
 
     if-nez v1, :cond_1
 
-    .line 122
     const-string v1, "off"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1049,7 +929,6 @@
 
     const-string v0, "0"
 
-    .line 124
     .end local v0    # "value":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -1071,7 +950,6 @@
 
     const/4 v1, 0x0
 
-    .line 129
     const-string v3, "nubia_edge_single_move_switch"
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1080,7 +958,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 130
     iget-object v3, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mSettingsMap:Ljava/util/Map;
 
     invoke-interface {v3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1089,7 +966,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 131
     .local v0, "value":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1097,7 +973,6 @@
 
     if-nez v3, :cond_0
 
-    .line 132
     const-string v3, "off"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1106,7 +981,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 154
     .end local v0    # "value":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -1116,10 +990,8 @@
     :cond_1
     move v1, v2
 
-    .line 132
     goto :goto_0
 
-    .line 138
     .end local v0    # "value":Ljava/lang/String;
     :cond_2
     const-string v3, "nubia_edge_double_click"
@@ -1130,7 +1002,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 139
     iget-object v3, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mSettingsMap:Ljava/util/Map;
 
     invoke-interface {v3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1139,7 +1010,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 140
     .restart local v0    # "value":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1147,7 +1017,6 @@
 
     if-nez v3, :cond_0
 
-    .line 141
     const-string v3, "10"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1169,7 +1038,6 @@
 
     goto :goto_0
 
-    .line 147
     .end local v0    # "value":Ljava/lang/String;
     :cond_4
     const-string v3, "nubia_edge_double_side_move"
@@ -1196,7 +1064,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 149
     :cond_5
     iget-object v3, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mSettingsMap:Ljava/util/Map;
 
@@ -1206,7 +1073,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 150
     .restart local v0    # "value":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1237,14 +1103,11 @@
     .locals 1
 
     .prologue
-    .line 85
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/GestureSettings;->loadSettings()V
 
-    .line 86
     iget-object v0, p0, Lcn/nubia/server/policy/edge/GestureSettings;->mObserver:Lcn/nubia/server/policy/edge/GestureSettings$EdgeSettingsObserver;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/edge/GestureSettings$EdgeSettingsObserver;->observe()V
 
-    .line 87
     return-void
 .end method

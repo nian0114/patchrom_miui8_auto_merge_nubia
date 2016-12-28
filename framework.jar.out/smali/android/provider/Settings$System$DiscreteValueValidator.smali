@@ -27,13 +27,10 @@
     .param p1, "values"    # [Ljava/lang/String;
 
     .prologue
-    .line 2039
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2040
     iput-object p1, p0, Landroid/provider/Settings$System$DiscreteValueValidator;->mValues:[Ljava/lang/String;
 
-    .line 2041
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 2045
     iget-object v0, p0, Landroid/provider/Settings$System$DiscreteValueValidator;->mValues:[Ljava/lang/String;
 
     invoke-static {v0, p1}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z

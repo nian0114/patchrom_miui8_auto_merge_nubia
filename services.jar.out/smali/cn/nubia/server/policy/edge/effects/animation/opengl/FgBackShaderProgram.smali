@@ -9,10 +9,8 @@
     .param p1, "program"    # I
 
     .prologue
-    .line 8
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;-><init>(I)V
 
-    .line 9
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/FgBackShaderProgram;->mId:I
 
     const-string v1, "uColorScale"
@@ -23,7 +21,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/FgBackShaderProgram;->mColorScaleHandle:I
 
-    .line 10
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/FgBackShaderProgram;->mId:I
 
     const-string v1, "uColorDelta"
@@ -34,7 +31,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/FgBackShaderProgram;->mColorDeltaHandle:I
 
-    .line 11
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/FgBackShaderProgram;->mId:I
 
     const-string v1, "uFgDim"
@@ -45,6 +41,5 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/FgBackShaderProgram;->mFgDimHandle:I
 
-    .line 12
     return-void
 .end method

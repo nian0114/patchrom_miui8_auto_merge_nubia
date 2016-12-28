@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 278
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/LoopPageFlipping$LoopAnimUpdateListener$1;->this$1:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/LoopPageFlipping$LoopAnimUpdateListener;
 
     iput p2, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/LoopPageFlipping$LoopAnimUpdateListener$1;->val$time:F
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 282
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/LoopPageFlipping$LoopAnimUpdateListener$1;->this$1:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/LoopPageFlipping$LoopAnimUpdateListener;
 
     iget-object v0, v0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/LoopPageFlipping$LoopAnimUpdateListener;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/LoopPageFlipping;
@@ -56,6 +54,5 @@
     # invokes: Lcn/nubia/server/policy/edge/effects/animation/pageflipping/LoopPageFlipping;->onLoopAnimUpdate(I)V
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/LoopPageFlipping;->access$100(Lcn/nubia/server/policy/edge/effects/animation/pageflipping/LoopPageFlipping;I)V
 
-    .line 283
     return-void
 .end method

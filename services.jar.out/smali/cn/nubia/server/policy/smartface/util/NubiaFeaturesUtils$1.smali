@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 29
     iput-boolean p1, p0, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils$1;->val$enable:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 32
     iget-boolean v0, p0, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils$1;->val$enable:Z
 
     invoke-static {v0}, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;->disableScreenTouch(Z)V
 
-    .line 33
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1112
     iput-object p1, p0, Lcom/android/server/policy/NubiaGlobalActions$15;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,17 +37,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1114
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1128
     :cond_0
     :goto_0
     return-void
 
-    .line 1116
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$15;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
@@ -59,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1117
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$15;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mDialog:Lcom/android/server/policy/NubiaShutdownRebootDialog;
@@ -71,14 +66,12 @@
 
     goto :goto_0
 
-    .line 1121
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$15;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # invokes: Lcom/android/server/policy/NubiaGlobalActions;->refreshSilentMode()V
     invoke-static {v0}, Lcom/android/server/policy/NubiaGlobalActions;->access$1800(Lcom/android/server/policy/NubiaGlobalActions;)V
 
-    .line 1122
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$15;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mAdapter:Lcom/android/server/policy/NubiaGlobalActions$MyAdapter;
@@ -90,7 +83,6 @@
 
     goto :goto_0
 
-    .line 1125
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$15;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
@@ -99,7 +91,6 @@
 
     goto :goto_0
 
-    .line 1114
     nop
 
     :pswitch_data_0

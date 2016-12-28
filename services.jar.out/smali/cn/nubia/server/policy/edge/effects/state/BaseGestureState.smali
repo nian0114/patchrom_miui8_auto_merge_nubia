@@ -27,13 +27,10 @@
     .param p1, "stateName"    # I
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     iput p1, p0, Lcn/nubia/server/policy/edge/effects/state/BaseGestureState;->mStatusName:I
 
-    .line 23
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 17
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/state/BaseGestureState;->mLastState:I
 
     return v0
@@ -59,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 25
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/state/BaseGestureState;->mStatusName:I
 
     return v0
@@ -76,10 +71,8 @@
     .param p1, "callback"    # Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingAnimSync;
 
     .prologue
-    .line 35
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/state/BaseGestureState;->mAnimSyncCallback:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingAnimSync;
 
-    .line 36
     return-void
 .end method
 
@@ -88,10 +81,8 @@
     .param p1, "directionPool"    # Lcn/nubia/server/policy/edge/effects/state/UniqueDirectionPool;
 
     .prologue
-    .line 45
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/state/BaseGestureState;->mDirectionPool:Lcn/nubia/server/policy/edge/effects/state/UniqueDirectionPool;
 
-    .line 46
     return-void
 .end method
 
@@ -100,10 +91,8 @@
     .param p1, "eventPool"    # Lcn/nubia/server/policy/edge/effects/state/UniqueEventPool;
 
     .prologue
-    .line 40
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/state/BaseGestureState;->mEventPool:Lcn/nubia/server/policy/edge/effects/state/UniqueEventPool;
 
-    .line 41
     return-void
 .end method
 
@@ -112,10 +101,8 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 14
     iput p1, p0, Lcn/nubia/server/policy/edge/effects/state/BaseGestureState;->mLastState:I
 
-    .line 15
     return-void
 .end method
 
@@ -124,10 +111,8 @@
     .param p1, "notifier"    # Lcn/nubia/server/policy/edge/effects/state/StateMachineNotifier;
 
     .prologue
-    .line 30
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/state/BaseGestureState;->mMachineNotifier:Lcn/nubia/server/policy/edge/effects/state/StateMachineNotifier;
 
-    .line 31
     return-void
 .end method
 
@@ -136,10 +121,8 @@
     .param p1, "stateContext"    # Lcn/nubia/server/policy/edge/effects/state/StateContext;
 
     .prologue
-    .line 55
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/state/BaseGestureState;->mStateContext:Lcn/nubia/server/policy/edge/effects/state/StateContext;
 
-    .line 56
     return-void
 .end method
 
@@ -148,9 +131,7 @@
     .param p1, "watchDogLite"    # Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;
 
     .prologue
-    .line 50
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/state/BaseGestureState;->mWatchDogLite:Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;
 
-    .line 51
     return-void
 .end method

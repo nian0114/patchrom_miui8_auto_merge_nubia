@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,10 +26,8 @@
     .param p3, "policyFlags"    # I
 
     .prologue
-    .line 39
     const/4 v1, 0x0
 
-    .line 41
     .local v1, "isFactory":Z
     :try_start_0
     const-string v2, "system_access"
@@ -51,28 +48,22 @@
 
     move-result v1
 
-    .line 47
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 48
     const-wide/16 v2, 0x0
 
-    .line 50
     :goto_1
     return-wide v2
 
-    .line 44
     :catch_0
     move-exception v0
 
-    .line 45
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 50
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-wide/high16 v2, -0x8000000000000000L
@@ -87,10 +78,8 @@
     .param p3, "isScreenOn"    # Z
 
     .prologue
-    .line 20
     const/4 v1, 0x0
 
-    .line 21
     .local v1, "isFactory":Z
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -100,7 +89,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 23
     :try_start_0
     const-string v2, "system_access"
 
@@ -120,28 +108,22 @@
 
     move-result v1
 
-    .line 29
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 30
     const-wide/16 v2, 0x1
 
-    .line 33
     :goto_1
     return-wide v2
 
-    .line 26
     :catch_0
     move-exception v0
 
-    .line 27
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 33
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-wide/high16 v2, -0x8000000000000000L

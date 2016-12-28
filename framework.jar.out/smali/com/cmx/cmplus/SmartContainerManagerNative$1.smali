@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/util/Singleton;-><init>()V
 
     return-void
@@ -40,10 +39,8 @@
     .locals 5
 
     .prologue
-    .line 17
     const/4 v1, 0x0
 
-    .line 19
     .local v1, "i":Lcom/cmx/cmplus/ISmartContainerManager;
     :try_start_0
     # getter for: Lcom/cmx/cmplus/SmartContainerManagerNative;->SMART_CONTAINER_SERVICE:Ljava/lang/String;
@@ -61,15 +58,12 @@
 
     move-result-object v1
 
-    .line 27
     :goto_0
     return-object v1
 
-    .line 21
     :catch_0
     move-exception v0
 
-    .line 22
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "sys.boot_completed"
 
@@ -83,10 +77,8 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 23
     invoke-static {}, Lcom/cmx/cmplus/SmartContainerConfig;->turnOff()V
 
-    .line 25
     :cond_0
     # getter for: Lcom/cmx/cmplus/SmartContainerManagerNative;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/cmx/cmplus/SmartContainerManagerNative;->access$100()Ljava/lang/String;
@@ -125,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-virtual {p0}, Lcom/cmx/cmplus/SmartContainerManagerNative$1;->create()Lcom/cmx/cmplus/ISmartContainerManager;
 
     move-result-object v0

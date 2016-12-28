@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1249
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    .line 1250
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 1251
     return-void
 .end method
 
@@ -45,17 +42,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1255
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1271
     :cond_0
     :goto_0
     return-void
 
-    .line 1257
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;->this$0:Lcom/android/server/display/DisplayPowerController;
 
@@ -64,7 +58,6 @@
 
     goto :goto_0
 
-    .line 1261
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;->this$0:Lcom/android/server/display/DisplayPowerController;
 
@@ -73,7 +66,6 @@
 
     goto :goto_0
 
-    .line 1265
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;->this$0:Lcom/android/server/display/DisplayPowerController;
 
@@ -86,13 +78,11 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1266
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     # invokes: Lcom/android/server/display/DisplayPowerController;->unblockScreenOn()V
     invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$700(Lcom/android/server/display/DisplayPowerController;)V
 
-    .line 1267
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     # invokes: Lcom/android/server/display/DisplayPowerController;->updatePowerState()V
@@ -100,7 +90,6 @@
 
     goto :goto_0
 
-    .line 1255
     nop
 
     :pswitch_data_0

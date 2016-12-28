@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 847
     iput-object p1, p0, Lnubia/widget/NubiaSwitch$1;->this$0:Lnubia/widget/NubiaSwitch;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 850
     iget-object v0, p0, Lnubia/widget/NubiaSwitch$1;->this$0:Lnubia/widget/NubiaSwitch;
 
     iget-object v1, p0, Lnubia/widget/NubiaSwitch$1;->this$0:Lnubia/widget/NubiaSwitch;
@@ -50,6 +48,5 @@
 
     invoke-virtual {v0, v1}, Lnubia/widget/NubiaSwitch;->setThumbDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 851
     return-void
 .end method

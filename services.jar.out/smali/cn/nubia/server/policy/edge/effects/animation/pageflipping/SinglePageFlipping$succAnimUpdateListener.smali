@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 162
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping$succAnimUpdateListener;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping$1;
 
     .prologue
-    .line 162
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping$succAnimUpdateListener;-><init>(Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping;)V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 166
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -64,7 +61,6 @@
 
     move-result v0
 
-    .line 168
     .local v0, "value":F
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping$succAnimUpdateListener;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping;
 
@@ -79,10 +75,8 @@
 
     if-lez v1, :cond_0
 
-    .line 169
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 172
     :cond_0
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping$succAnimUpdateListener;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping;
 
@@ -97,6 +91,5 @@
 
     invoke-virtual {v1, v2}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;->postRunable(Ljava/lang/Runnable;)V
 
-    .line 179
     return-void
 .end method

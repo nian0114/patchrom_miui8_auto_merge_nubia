@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 106
     iput-object p1, p0, Lnubia/widget/NubiaDoubleCardView$1;->this$0:Lnubia/widget/NubiaDoubleCardView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 108
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 117
     :goto_0
     iget-object v0, p0, Lnubia/widget/NubiaDoubleCardView$1;->this$0:Lnubia/widget/NubiaDoubleCardView;
 
@@ -56,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 118
     iget-object v0, p0, Lnubia/widget/NubiaDoubleCardView$1;->this$0:Lnubia/widget/NubiaDoubleCardView;
 
     iget-object v0, v0, Lnubia/widget/NubiaDoubleCardView;->mOnCardClickListener:Lnubia/widget/NubiaDoubleCardView$OnCardClickListener;
@@ -70,11 +66,9 @@
 
     invoke-interface {v0, v1}, Lnubia/widget/NubiaDoubleCardView$OnCardClickListener;->onCardClick(I)V
 
-    .line 120
     :cond_0
     return-void
 
-    .line 110
     :pswitch_0
     iget-object v0, p0, Lnubia/widget/NubiaDoubleCardView$1;->this$0:Lnubia/widget/NubiaDoubleCardView;
 
@@ -84,7 +78,6 @@
 
     goto :goto_0
 
-    .line 114
     :pswitch_1
     iget-object v0, p0, Lnubia/widget/NubiaDoubleCardView$1;->this$0:Lnubia/widget/NubiaDoubleCardView;
 
@@ -94,7 +87,6 @@
 
     goto :goto_0
 
-    .line 108
     nop
 
     :pswitch_data_0

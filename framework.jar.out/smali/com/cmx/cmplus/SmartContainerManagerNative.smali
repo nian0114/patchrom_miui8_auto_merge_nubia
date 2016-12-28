@@ -25,17 +25,14 @@
     .locals 1
 
     .prologue
-    .line 12
     const-string v0, "SmartContainerManagerNative"
 
     sput-object v0, Lcom/cmx/cmplus/SmartContainerManagerNative;->TAG:Ljava/lang/String;
 
-    .line 13
     const-string v0, "smart_container"
 
     sput-object v0, Lcom/cmx/cmplus/SmartContainerManagerNative;->SMART_CONTAINER_SERVICE:Ljava/lang/String;
 
-    .line 15
     new-instance v0, Lcom/cmx/cmplus/SmartContainerManagerNative$1;
 
     invoke-direct {v0}, Lcom/cmx/cmplus/SmartContainerManagerNative$1;-><init>()V
@@ -49,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 11
     sget-object v0, Lcom/cmx/cmplus/SmartContainerManagerNative;->SMART_CONTAINER_SERVICE:Ljava/lang/String;
 
     return-object v0
@@ -69,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 11
     sget-object v0, Lcom/cmx/cmplus/SmartContainerManagerNative;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -79,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget-object v0, Lcom/cmx/cmplus/SmartContainerManagerNative;->gDefault:Landroid/util/Singleton;
 
     invoke-virtual {v0}, Landroid/util/Singleton;->get()Ljava/lang/Object;

@@ -264,10 +264,8 @@
 
     const/4 v2, 0x0
 
-    .line 141
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     const-string v1, "eng"
 
     sget-object v3, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -294,136 +292,112 @@
     :goto_0
     iput-boolean v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
 
-    .line 90
     iput-object v6, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mNMS:Landroid/os/INetworkManagementService;
 
-    .line 92
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mResumedPackages:Ljava/util/HashMap;
 
-    .line 93
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mResumedPackageUids:Ljava/util/HashMap;
 
-    .line 97
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppGlobalConfigs:Ljava/util/HashMap;
 
-    .line 102
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
-    .line 106
     const-wide/32 v4, 0xea60
 
     iput-wide v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDefaultDelayedControlMillis:J
 
-    .line 110
     const-wide/16 v4, 0x3e8
 
     iput-wide v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mScreenOffDelayedControlMillis:J
 
-    .line 112
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppCurrentConfigs:Ljava/util/HashMap;
 
-    .line 113
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mUidCurrentConfigs:Ljava/util/HashMap;
 
-    .line 115
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPendingControlRunnables:Ljava/util/HashMap;
 
-    .line 117
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageProcessCounts:Ljava/util/HashMap;
 
-    .line 118
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageProcessUids:Ljava/util/HashMap;
 
-    .line 120
     iput-object v6, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 125
     iput-boolean v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mScreenOn:Z
 
-    .line 127
     new-instance v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;
 
     invoke-direct {v1, p0, v6}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;Lcn/nubia/server/appmgmt/ApplicationNetworkController$1;)V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mScreenStateChangeRunnable:Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;
 
-    .line 129
     iput-boolean v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mIs2GNetwork:Z
 
-    .line 134
     iput-boolean v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mCharging:Z
 
-    .line 139
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDisconnectTimes:Ljava/util/HashMap;
 
-    .line 1138
     new-instance v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$1;
 
     invoke-direct {v1, p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$1;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;)V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mQueryTrafficRunnable:Ljava/lang/Runnable;
 
-    .line 1146
     new-instance v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$2;
 
     invoke-direct {v1, p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$2;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;)V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mQueryNetworkRunnable:Ljava/lang/Runnable;
 
-    .line 142
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mContext:Landroid/content/Context;
 
-    .line 143
     iput-object p2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
-    .line 145
     new-instance v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateReceiver;
 
     invoke-direct {v1, p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateReceiver;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;)V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mScreenStateReceiver:Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateReceiver;
 
-    .line 146
     const-string v1, "security_network_manager.xml"
 
     invoke-static {v1}, Lcn/nubia/server/appmgmt/ApplicationControllerUtils;->createFile(Ljava/lang/String;)Ljava/io/File;
@@ -432,7 +406,6 @@
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mNetworkFile:Ljava/io/File;
 
-    .line 148
     new-instance v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;
 
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mNetworkFile:Ljava/io/File;
@@ -441,42 +414,35 @@
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mXmlOperator:Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;
 
-    .line 150
     new-instance v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$PackageStateReceiver;
 
     invoke-direct {v1, p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$PackageStateReceiver;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;)V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageStateReceiver:Lcn/nubia/server/appmgmt/ApplicationNetworkController$PackageStateReceiver;
 
-    .line 151
     new-instance v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;
 
     invoke-direct {v1, p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;)V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mConnectivityStateChangeReceiver:Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;
 
-    .line 152
     new-instance v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$BatteryChangedReceiver;
 
     invoke-direct {v1, p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$BatteryChangedReceiver;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;)V
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mBatteryChangedReceiver:Lcn/nubia/server/appmgmt/ApplicationNetworkController$BatteryChangedReceiver;
 
-    .line 154
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->initData()V
 
-    .line 155
     new-instance v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$TrafficDbObserver;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
     invoke-direct {v0, p0, v1}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$TrafficDbObserver;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;Landroid/os/Handler;)V
 
-    .line 156
     .local v0, "trafficObserver":Lcn/nubia/server/appmgmt/ApplicationNetworkController$TrafficDbObserver;
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->ensureNetworkManagementService()V
 
-    .line 157
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
     new-instance v2, Lcn/nubia/server/appmgmt/ApplicationNetworkController$SystemReadyRunnalbe;
@@ -485,14 +451,12 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 158
     return-void
 
     .end local v0    # "trafficObserver":Lcn/nubia/server/appmgmt/ApplicationNetworkController$TrafficDbObserver;
     :cond_1
     move v1, v2
 
-    .line 46
     goto/16 :goto_0
 .end method
 
@@ -505,7 +469,6 @@
     .param p4, "x4"    # Z
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2, p3, p4}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->setUidRule(ILjava/lang/String;ZZ)V
 
     return-void
@@ -519,7 +482,6 @@
     .param p3, "x3"    # Z
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2, p3}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->setPendingControlRunnable(ILjava/lang/String;Z)V
 
     return-void
@@ -530,7 +492,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mScreenOn:Z
 
     return v0
@@ -542,7 +503,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 44
     iput-boolean p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mScreenOn:Z
 
     return p1
@@ -553,7 +513,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mIs2GNetwork:Z
 
     return v0
@@ -565,7 +524,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 44
     iput-boolean p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mIs2GNetwork:Z
 
     return p1
@@ -576,7 +534,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mCharging:Z
 
     return v0
@@ -588,7 +545,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 44
     iput-boolean p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mCharging:Z
 
     return p1
@@ -599,7 +555,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPendingControlRunnables:Ljava/util/HashMap;
 
     return-object v0
@@ -610,7 +565,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageProcessCounts:Ljava/util/HashMap;
 
     return-object v0
@@ -621,7 +575,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageProcessUids:Ljava/util/HashMap;
 
     return-object v0
@@ -632,7 +585,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -643,7 +595,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -654,7 +605,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDisconnectTimes:Ljava/util/HashMap;
 
     return-object v0
@@ -665,7 +615,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mScreenStateChangeRunnable:Lcn/nubia/server/appmgmt/ApplicationNetworkController$ScreenStateChangeRunnable;
 
     return-object v0
@@ -676,7 +625,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-wide v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mScreenOffDelayedControlMillis:J
 
     return-wide v0
@@ -687,7 +635,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-wide v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDefaultDelayedControlMillis:J
 
     return-wide v0
@@ -698,7 +645,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mQueryTrafficRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -709,7 +655,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->loadTrafficSettingsFromDb()V
 
     return-void
@@ -720,7 +665,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->loadSettingsFromNubiaDb()V
 
     return-void
@@ -731,7 +675,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mResumedPackages:Ljava/util/HashMap;
 
     return-object v0
@@ -742,7 +685,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mResumedPackageUids:Ljava/util/HashMap;
 
     return-object v0
@@ -754,7 +696,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->cancelPendingControlRunnable(I)V
 
     return-void
@@ -765,7 +706,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     return-object v0
@@ -776,7 +716,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     .prologue
-    .line 44
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
 
     return v0
@@ -787,7 +726,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 373
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPendingControlRunnables:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -800,16 +738,13 @@
 
     check-cast v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;
 
-    .line 374
     .local v0, "r":Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;
     if-eqz v0, :cond_0
 
-    .line 375
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 376
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPendingControlRunnables:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -818,7 +753,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 378
     :cond_0
     return-void
 .end method
@@ -827,12 +761,10 @@
     .locals 1
 
     .prologue
-    .line 366
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mNMS:Landroid/os/INetworkManagementService;
 
     if-nez v0, :cond_0
 
-    .line 367
     const-string v0, "network_management"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -845,7 +777,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mNMS:Landroid/os/INetworkManagementService;
 
-    .line 370
     :cond_0
     return-void
 .end method
@@ -854,10 +785,8 @@
     .locals 4
 
     .prologue
-    .line 162
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->loadTrafficSettingsFromDb()V
 
-    .line 164
     const-string v1, "security_network_manager.xml"
 
     invoke-static {v1}, Lcn/nubia/server/appmgmt/ApplicationControllerUtils;->isFileExist(Ljava/lang/String;)Z
@@ -866,7 +795,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 165
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mXmlOperator:Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;
 
     invoke-virtual {v1}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;->readDataFromFile()Ljava/lang/Object;
@@ -875,11 +803,9 @@
 
     check-cast v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
 
-    .line 166
     .local v0, "data":Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
     if-eqz v0, :cond_0
 
-    .line 167
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->defaultDelay:J
     invoke-static {v0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->access$200(Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;)J
 
@@ -887,7 +813,6 @@
 
     iput-wide v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDefaultDelayedControlMillis:J
 
-    .line 168
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->screenDelay:J
     invoke-static {v0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->access$300(Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;)J
 
@@ -895,7 +820,6 @@
 
     iput-wide v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mScreenOffDelayedControlMillis:J
 
-    .line 169
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->array:Ljava/util/HashMap;
     invoke-static {v0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->access$400(Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;)Ljava/util/HashMap;
 
@@ -903,13 +827,11 @@
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
-    .line 174
     .end local v0    # "data":Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
     :cond_0
     :goto_0
     return-void
 
-    .line 172
     :cond_1
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->loadSettingsFromNubiaDb()V
 
@@ -924,7 +846,6 @@
 
     const/4 v3, 0x0
 
-    .line 1004
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v2, "com.youku.phone"
@@ -935,7 +856,6 @@
 
     invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1005
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v2, "com.Qunar"
@@ -946,7 +866,6 @@
 
     invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1006
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v2, "com.achievo.vipshop"
@@ -957,7 +876,6 @@
 
     invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1008
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v2, "com.tmall.wireless"
@@ -968,7 +886,6 @@
 
     invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1009
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v2, "com.qiyi.video"
@@ -979,7 +896,6 @@
 
     invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1010
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v2, "com.letv.android.client"
@@ -990,7 +906,6 @@
 
     invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1011
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v2, "com.sohu.sohuvideo"
@@ -1001,7 +916,6 @@
 
     invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1012
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v2, "bubei.tingshu"
@@ -1012,7 +926,6 @@
 
     invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1014
     iget-object v6, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v7, "com.moji.mjweather"
@@ -1029,7 +942,6 @@
 
     invoke-virtual {v6, v7, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1015
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v8, "com.dianping.v1"
@@ -1048,7 +960,6 @@
 
     invoke-virtual {v0, v8, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1016
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v8, "com.thestore.main"
@@ -1067,7 +978,6 @@
 
     invoke-virtual {v0, v8, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1017
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v8, "com.jingdong.app.mall"
@@ -1086,7 +996,6 @@
 
     invoke-virtual {v0, v8, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1018
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v8, "com.tencent.game.rhythmmaster"
@@ -1105,7 +1014,6 @@
 
     invoke-virtual {v0, v8, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1020
     iget-object v6, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v7, "cn.nubia.weather"
@@ -1122,7 +1030,6 @@
 
     invoke-virtual {v6, v7, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1021
     iget-object v6, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     const-string v7, "cn.nubia.email"
@@ -1139,7 +1046,6 @@
 
     invoke-virtual {v6, v7, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1022
     return-void
 .end method
 
@@ -1149,14 +1055,12 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 219
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 220
     .local v0, "resolver":Landroid/content/ContentResolver;
     :try_start_0
     const-string v1, "content://cn.nubia.security.power/network_delay_table"
@@ -1182,10 +1086,8 @@
     .local v6, "c":Landroid/database/Cursor;
     const/4 v1, 0x0
 
-    .line 221
     if-nez v6, :cond_2
 
-    .line 230
     if-eqz v6, :cond_0
 
     if-eqz v11, :cond_1
@@ -1196,13 +1098,11 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 233
     .end local v6    # "c":Landroid/database/Cursor;
     :cond_0
     :goto_0
     return-void
 
-    .line 230
     .restart local v6    # "c":Landroid/database/Cursor;
     :catch_0
     move-exception v10
@@ -1220,7 +1120,6 @@
     :catch_1
     move-exception v8
 
-    .line 231
     .local v8, "e":Ljava/lang/Exception;
     const-string v1, "ApplicationNetworkController"
 
@@ -1230,7 +1129,6 @@
 
     goto :goto_0
 
-    .line 230
     .end local v8    # "e":Ljava/lang/Exception;
     .restart local v6    # "c":Landroid/database/Cursor;
     :cond_1
@@ -1241,7 +1139,6 @@
 
     goto :goto_0
 
-    .line 224
     :cond_2
     :try_start_4
     const-string v2, "default_delay"
@@ -1250,7 +1147,6 @@
 
     move-result v7
 
-    .line 225
     .local v7, "deDelayIndex":I
     const-string v2, "screen_off_delay"
 
@@ -1258,20 +1154,17 @@
 
     move-result v9
 
-    .line 227
     .local v9, "screenDelayIndex":I
     const/4 v2, 0x0
 
     invoke-interface {v6, v2}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 228
     invoke-interface {v6, v7}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDefaultDelayedControlMillis:J
 
-    .line 229
     invoke-interface {v6, v9}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v2
@@ -1281,7 +1174,6 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_3
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 230
     if-eqz v6, :cond_0
 
     if-eqz v11, :cond_3
@@ -1311,7 +1203,6 @@
 
     goto :goto_0
 
-    .line 220
     .end local v7    # "deDelayIndex":I
     .end local v9    # "screenDelayIndex":I
     :catch_3
@@ -1322,7 +1213,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 230
     :catchall_0
     move-exception v2
 
@@ -1376,7 +1266,6 @@
     .locals 29
 
     .prologue
-    .line 236
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mContext:Landroid/content/Context;
@@ -1385,7 +1274,6 @@
 
     move-result-object v2
 
-    .line 237
     .local v2, "resolver":Landroid/content/ContentResolver;
     :try_start_0
     const-string v3, "content://cn.nubia.security.power/network_manage_table"
@@ -1411,13 +1299,10 @@
     .local v14, "c":Landroid/database/Cursor;
     const/16 v27, 0x0
 
-    .line 238
     if-nez v14, :cond_2
 
-    .line 239
     const/4 v3, 0x0
 
-    .line 266
     if-eqz v14, :cond_0
 
     if-eqz v27, :cond_1
@@ -1428,13 +1313,11 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 270
     .end local v14    # "c":Landroid/database/Cursor;
     :cond_0
     :goto_0
     return v3
 
-    .line 266
     .restart local v14    # "c":Landroid/database/Cursor;
     :catch_0
     move-exception v26
@@ -1456,7 +1339,6 @@
     :catch_1
     move-exception v17
 
-    .line 267
     .local v17, "e":Ljava/lang/Exception;
     const-string v3, "ApplicationNetworkController"
 
@@ -1464,12 +1346,10 @@
 
     invoke-static {v3, v10}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 266
     .end local v17    # "e":Ljava/lang/Exception;
     .restart local v14    # "c":Landroid/database/Cursor;
     :cond_1
@@ -1480,7 +1360,6 @@
 
     goto :goto_0
 
-    .line 241
     :cond_2
     :try_start_4
     const-string v3, "network_control_pkg"
@@ -1489,7 +1368,6 @@
 
     move-result v22
 
-    .line 242
     .local v22, "pkgIndex":I
     const-string v3, "restrict_mobile_background"
 
@@ -1497,7 +1375,6 @@
 
     move-result v18
 
-    .line 243
     .local v18, "mobileIndex":I
     const-string v3, "restrict_wifi_background"
 
@@ -1505,7 +1382,6 @@
 
     move-result v24
 
-    .line 244
     .local v24, "wifiIndex":I
     const-string v3, "restrict_mobile_screen"
 
@@ -1513,7 +1389,6 @@
 
     move-result v19
 
-    .line 245
     .local v19, "mobileScIndex":I
     const-string v3, "restrict_wifi_screen"
 
@@ -1521,7 +1396,6 @@
 
     move-result v25
 
-    .line 246
     .local v25, "wifiScIndex":I
     const-string v3, "restrict_2g_screen"
 
@@ -1529,7 +1403,6 @@
 
     move-result v20
 
-    .line 247
     .local v20, "n2gIndex":I
     const-string v3, "delay"
 
@@ -1537,7 +1410,6 @@
 
     move-result v16
 
-    .line 248
     .local v16, "delayIndex":I
     const-string v3, "restore_interval"
 
@@ -1545,18 +1417,15 @@
 
     move-result v23
 
-    .line 250
     .local v23, "timeIntervalIndex":I
     const/4 v3, -0x1
 
     invoke-interface {v14, v3}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 251
     new-instance v15, Ljava/util/HashMap;
 
     invoke-direct {v15}, Ljava/util/HashMap;-><init>()V
 
-    .line 252
     .local v15, "caches":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
     :goto_1
     invoke-interface {v14}, Landroid/database/Cursor;->moveToNext()Z
@@ -1565,14 +1434,12 @@
 
     if-eqz v3, :cond_9
 
-    .line 253
     move/from16 v0, v22
 
     invoke-interface {v14, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v21
 
-    .line 254
     .local v21, "pkg":Ljava/lang/String;
     move/from16 v0, v18
 
@@ -1584,7 +1451,6 @@
 
     const/4 v4, 0x0
 
-    .line 255
     .local v4, "mobile":Z
     :goto_2
     move/from16 v0, v24
@@ -1597,7 +1463,6 @@
 
     const/4 v5, 0x0
 
-    .line 256
     .local v5, "wifi":Z
     :goto_3
     move/from16 v0, v19
@@ -1610,7 +1475,6 @@
 
     const/4 v8, 0x0
 
-    .line 257
     .local v8, "mobileSc":Z
     :goto_4
     move/from16 v0, v25
@@ -1623,7 +1487,6 @@
 
     const/4 v9, 0x0
 
-    .line 258
     .local v9, "wifiSc":Z
     :goto_5
     move/from16 v0, v20
@@ -1636,7 +1499,6 @@
 
     const/4 v11, 0x0
 
-    .line 259
     .local v11, "n2g":Z
     :goto_6
     move/from16 v0, v16
@@ -1645,7 +1507,6 @@
 
     move-result-wide v6
 
-    .line 260
     .local v6, "delay":J
     move/from16 v0, v23
 
@@ -1653,7 +1514,6 @@
 
     move-result-wide v12
 
-    .line 262
     .local v12, "interval":J
     new-instance v3, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
 
@@ -1670,7 +1530,6 @@
 
     goto :goto_1
 
-    .line 237
     .end local v4    # "mobile":Z
     .end local v5    # "wifi":Z
     .end local v6    # "delay":J
@@ -1696,7 +1555,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 266
     :catchall_0
     move-exception v10
 
@@ -1724,7 +1582,6 @@
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
 
-    .line 254
     .restart local v15    # "caches":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
     .restart local v16    # "delayIndex":I
     .restart local v18    # "mobileIndex":I
@@ -1740,35 +1597,30 @@
 
     goto :goto_2
 
-    .line 255
     .restart local v4    # "mobile":Z
     :cond_5
     const/4 v5, 0x1
 
     goto :goto_3
 
-    .line 256
     .restart local v5    # "wifi":Z
     :cond_6
     const/4 v8, 0x1
 
     goto :goto_4
 
-    .line 257
     .restart local v8    # "mobileSc":Z
     :cond_7
     const/4 v9, 0x1
 
     goto :goto_5
 
-    .line 258
     .restart local v9    # "wifiSc":Z
     :cond_8
     const/4 v11, 0x1
 
     goto :goto_6
 
-    .line 265
     .end local v4    # "mobile":Z
     .end local v5    # "wifi":Z
     .end local v8    # "mobileSc":Z
@@ -1783,7 +1635,6 @@
     .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_2
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 266
     if-eqz v14, :cond_a
 
     if-eqz v27, :cond_b
@@ -1794,14 +1645,12 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_3
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
 
-    .line 270
     :cond_a
     :goto_9
     const/4 v3, 0x1
 
     goto/16 :goto_0
 
-    .line 266
     :catch_3
     move-exception v26
 
@@ -1860,17 +1709,14 @@
     .locals 8
 
     .prologue
-    .line 177
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->loadNetworkDelays()V
 
-    .line 178
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->loadNetworkSettings()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 179
     iget-object v7, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mXmlOperator:Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;
 
     new-instance v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
@@ -1887,11 +1733,9 @@
 
     invoke-virtual {v7, v0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NetworkXmlOperator;->writeDataToFile(Ljava/lang/Object;)V
 
-    .line 185
     :goto_0
     return-void
 
-    .line 183
     :cond_0
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->loadDefaultSettings()V
 
@@ -1902,7 +1746,6 @@
     .locals 17
 
     .prologue
-    .line 188
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mContext:Landroid/content/Context;
@@ -1911,7 +1754,6 @@
 
     move-result-object v1
 
-    .line 189
     .local v1, "resolver":Landroid/content/ContentResolver;
     :try_start_0
     const-string v2, "content://cn.nubia.security.firewall/mobile"
@@ -1937,7 +1779,6 @@
     .local v7, "c1":Landroid/database/Cursor;
     const/4 v15, 0x0
 
-    .line 190
     :try_start_1
     const-string v2, "content://cn.nubia.security.firewall/wlan"
 
@@ -1960,16 +1801,13 @@
 
     move-result-object v8
 
-    .line 189
     .local v8, "c2":Landroid/database/Cursor;
     const/4 v3, 0x0
 
-    .line 191
     if-nez v7, :cond_5
 
     if-nez v8, :cond_5
 
-    .line 212
     if-eqz v8, :cond_0
 
     if-eqz v3, :cond_3
@@ -1992,14 +1830,12 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 216
     .end local v7    # "c1":Landroid/database/Cursor;
     .end local v8    # "c2":Landroid/database/Cursor;
     :cond_1
     :goto_1
     return-void
 
-    .line 212
     .restart local v7    # "c1":Landroid/database/Cursor;
     .restart local v8    # "c2":Landroid/database/Cursor;
     :catch_0
@@ -2014,7 +1850,6 @@
 
     goto :goto_0
 
-    .line 189
     .end local v8    # "c2":Landroid/database/Cursor;
     .end local v14    # "x2":Ljava/lang/Throwable;
     :catch_1
@@ -2025,7 +1860,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 212
     :catchall_0
     move-exception v3
 
@@ -2057,11 +1891,9 @@
     :catch_2
     move-exception v10
 
-    .line 213
     .local v10, "e":Ljava/lang/Exception;
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 214
     const-string v2, "ApplicationNetworkController"
 
     const-string v3, "unable load data from traffic database"
@@ -2070,7 +1902,6 @@
 
     goto :goto_1
 
-    .line 212
     .end local v10    # "e":Ljava/lang/Exception;
     .restart local v7    # "c1":Landroid/database/Cursor;
     .restart local v8    # "c2":Landroid/database/Cursor;
@@ -2109,7 +1940,6 @@
 
     goto :goto_1
 
-    .line 194
     :cond_5
     :try_start_a
     const-string v2, "uid"
@@ -2118,19 +1948,16 @@
 
     move-result v12
 
-    .line 195
     .local v12, "uidIndex":I
     new-instance v9, Ljava/util/HashMap;
 
     invoke-direct {v9}, Ljava/util/HashMap;-><init>()V
 
-    .line 196
     .local v9, "caches":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
     const/4 v2, -0x1
 
     invoke-interface {v7, v2}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 197
     :goto_4
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -2138,12 +1965,10 @@
 
     if-eqz v2, :cond_7
 
-    .line 198
     invoke-interface {v7, v12}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v11
 
-    .line 199
     .local v11, "mUid":I
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2164,7 +1989,6 @@
 
     goto :goto_4
 
-    .line 189
     .end local v9    # "caches":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
     .end local v11    # "mUid":I
     .end local v12    # "uidIndex":I
@@ -2176,7 +2000,6 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_2
 
-    .line 212
     :catchall_2
     move-exception v3
 
@@ -2205,7 +2028,6 @@
     .catch Ljava/lang/Throwable; {:try_start_d .. :try_end_d} :catch_1
     .catchall {:try_start_d .. :try_end_d} :catchall_1
 
-    .line 201
     .restart local v9    # "caches":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
     .restart local v12    # "uidIndex":I
     :cond_7
@@ -2216,12 +2038,10 @@
 
     move-result v12
 
-    .line 202
     const/4 v2, -0x1
 
     invoke-interface {v8, v2}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 203
     :goto_7
     invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -2229,12 +2049,10 @@
 
     if-eqz v2, :cond_9
 
-    .line 204
     invoke-interface {v8, v12}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v13
 
-    .line 205
     .local v13, "wUid":I
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2246,7 +2064,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 206
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -2263,7 +2080,6 @@
 
     goto :goto_7
 
-    .line 212
     .end local v9    # "caches":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
     .end local v12    # "uidIndex":I
     .end local v13    # "wUid":I
@@ -2272,7 +2088,6 @@
 
     goto :goto_5
 
-    .line 208
     .restart local v9    # "caches":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
     .restart local v12    # "uidIndex":I
     .restart local v13    # "wUid":I
@@ -2293,7 +2108,6 @@
 
     goto :goto_7
 
-    .line 211
     .end local v13    # "wUid":I
     :cond_9
     move-object/from16 v0, p0
@@ -2303,7 +2117,6 @@
     .catch Ljava/lang/Throwable; {:try_start_e .. :try_end_e} :catch_4
     .catchall {:try_start_e .. :try_end_e} :catchall_3
 
-    .line 212
     if-eqz v8, :cond_a
 
     if-eqz v3, :cond_b
@@ -2410,7 +2223,6 @@
     .param p4, "enableWifi"    # Z
 
     .prologue
-    .line 399
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppCurrentConfigs:Ljava/util/HashMap;
 
     invoke-virtual {v4, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2419,11 +2231,9 @@
 
     check-cast v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
 
-    .line 400
     .local v1, "current":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     if-eqz v1, :cond_1
 
-    .line 401
     iget-boolean v4, v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableMobile:Z
 
     if-ne v4, p3, :cond_1
@@ -2432,29 +2242,24 @@
 
     if-ne v4, p4, :cond_1
 
-    .line 439
     :cond_0
     :goto_0
     return-void
 
-    .line 406
     :cond_1
     new-instance v3, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
 
     invoke-direct {v3, p3, p4}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;-><init>(ZZ)V
 
-    .line 407
     .local v3, "newCurrent":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppCurrentConfigs:Ljava/util/HashMap;
 
     invoke-virtual {v4, p2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 408
     iget-object v5, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mUidCurrentConfigs:Ljava/util/HashMap;
 
     monitor-enter v5
 
-    .line 409
     :try_start_0
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mUidCurrentConfigs:Ljava/util/HashMap;
 
@@ -2464,17 +2269,14 @@
 
     invoke-virtual {v4, v6, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 410
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 413
     iget-boolean v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
 
     if-eqz v4, :cond_2
 
-    .line 414
     const-string v4, "ApplicationNetworkController"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2517,7 +2319,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 418
     :cond_2
     :try_start_1
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mNMS:Landroid/os/INetworkManagementService;
@@ -2526,7 +2327,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 426
     :cond_3
     :goto_1
     :try_start_2
@@ -2536,14 +2336,12 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 433
     :cond_4
     :goto_2
     if-nez p3, :cond_0
 
     if-nez p4, :cond_0
 
-    .line 434
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     invoke-virtual {v4, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2552,7 +2350,6 @@
 
     check-cast v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
 
-    .line 435
     .local v0, "config":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     if-eqz v0, :cond_0
 
@@ -2564,7 +2361,6 @@
 
     if-lez v4, :cond_0
 
-    .line 436
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDisconnectTimes:Ljava/util/HashMap;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -2579,7 +2375,6 @@
 
     goto :goto_0
 
-    .line 410
     .end local v0    # "config":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     :catchall_0
     move-exception v4
@@ -2591,11 +2386,9 @@
 
     throw v4
 
-    .line 419
     :catch_0
     move-exception v2
 
-    .line 420
     .local v2, "e":Ljava/lang/Exception;
     iget-boolean v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
 
@@ -2603,12 +2396,10 @@
 
     goto :goto_1
 
-    .line 427
     .end local v2    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v2
 
-    .line 428
     .restart local v2    # "e":Ljava/lang/Exception;
     iget-boolean v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
 
@@ -2624,24 +2415,19 @@
     .param p3, "executeImmediately"    # Z
 
     .prologue
-    .line 381
     new-instance v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;
 
     invoke-direct {v0, p0, p1, p2}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;ILjava/lang/String;)V
 
-    .line 384
     .local v0, "canibr":Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;
     if-eqz p3, :cond_1
 
-    .line 385
     invoke-virtual {v0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->run()V
 
-    .line 396
     :cond_0
     :goto_0
     return-void
 
-    .line 387
     :cond_1
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
@@ -2651,11 +2437,9 @@
 
     check-cast v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
 
-    .line 388
     .local v1, "config":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     if-eqz v1, :cond_0
 
-    .line 391
     iget-wide v4, v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->delayedControlMillis:J
 
     const-wide/16 v6, -0x1
@@ -2666,14 +2450,12 @@
 
     iget-wide v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDefaultDelayedControlMillis:J
 
-    .line 393
     .local v2, "delayedControlMillis":J
     :goto_1
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v4, v0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 394
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPendingControlRunnables:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2684,7 +2466,6 @@
 
     goto :goto_0
 
-    .line 391
     .end local v2    # "delayedControlMillis":J
     :cond_2
     iget-wide v2, v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->delayedControlMillis:J
@@ -2704,15 +2485,12 @@
 
     const/4 v5, 0x0
 
-    .line 442
     if-ge p1, v6, :cond_1
 
-    .line 443
     iget-boolean v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
 
     if-eqz v2, :cond_0
 
-    .line 444
     const-string v2, "ApplicationNetworkController"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2755,18 +2533,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 484
     :cond_0
     :goto_0
     return-void
 
-    .line 450
     :cond_1
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageManager:Landroid/content/pm/PackageManager;
 
     if-nez v2, :cond_2
 
-    .line 451
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -2775,31 +2550,26 @@
 
     iput-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 454
     :cond_2
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageManager:Landroid/content/pm/PackageManager;
 
     if-eqz v2, :cond_5
 
-    .line 455
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v2, p1}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 456
     .local v1, "packages":[Ljava/lang/String;
     if-eqz v1, :cond_4
 
-    .line 457
     array-length v2, v1
 
     const/4 v3, 0x1
 
     if-le v2, v3, :cond_3
 
-    .line 458
     const-string v2, "ApplicationNetworkController"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2832,14 +2602,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     invoke-virtual {v2, p2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 464
     :cond_3
     aget-object v2, v1, v5
 
@@ -2849,7 +2617,6 @@
 
     if-nez v2, :cond_5
 
-    .line 465
     const-string v2, "ApplicationNetworkController"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2894,14 +2661,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 467
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     invoke-virtual {v2, p2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 471
     :cond_4
     const-string v2, "ApplicationNetworkController"
 
@@ -2931,14 +2696,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 472
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
 
     invoke-virtual {v2, p2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_0
 
-    .line 477
     .end local v1    # "packages":[Ljava/lang/String;
     :cond_5
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppGlobalConfigs:Ljava/util/HashMap;
@@ -2953,21 +2716,17 @@
 
     check-cast v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
 
-    .line 478
     .local v0, "globalConfig":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     if-eqz v0, :cond_6
 
-    .line 479
     iget-boolean v2, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableMobile:Z
 
     and-int/2addr p3, v2
 
-    .line 480
     iget-boolean v2, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableWifi:Z
 
     and-int/2addr p4, v2
 
-    .line 483
     :cond_6
     invoke-direct {p0, p1, p2, p3, p4}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->realSetUidRule(ILjava/lang/String;ZZ)V
 
@@ -2981,12 +2740,10 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1164
     const-string v2, "==========traffic uids============="
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1165
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppGlobalConfigs:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -3011,7 +2768,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 1166
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3075,17 +2831,14 @@
 
     goto :goto_0
 
-    .line 1169
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
     :cond_0
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1171
     const-string v2, "==========delay======================"
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1172
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3108,7 +2861,6 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1173
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3131,15 +2883,12 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1174
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1176
     const-string v2, "==========managed network apps============="
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1177
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3172,10 +2921,8 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1178
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1179
     return-void
 .end method
 
@@ -3185,12 +2932,10 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 354
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mUidCurrentConfigs:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 355
     :try_start_0
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mUidCurrentConfigs:Ljava/util/HashMap;
 
@@ -3204,33 +2949,27 @@
 
     check-cast v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
 
-    .line 356
     .local v0, "current":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     if-nez p1, :cond_0
 
-    .line 357
     iget-boolean v1, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableMobile:Z
 
     monitor-exit v2
 
-    .line 362
     :goto_0
     return v1
 
-    .line 358
     :cond_0
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_1
 
-    .line 359
     iget-boolean v1, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableWifi:Z
 
     monitor-exit v2
 
     goto :goto_0
 
-    .line 360
     .end local v0    # "current":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     :catchall_0
     move-exception v1
@@ -3248,7 +2987,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 362
     const/4 v1, 0x0
 
     goto :goto_0
@@ -3259,7 +2997,6 @@
     .param p1, "stackId"    # I
 
     .prologue
-    .line 342
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcn/nubia/server/appmgmt/ApplicationNetworkController$RemoveStackRunnable;
@@ -3268,7 +3005,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 343
     return-void
 .end method
 
@@ -3280,29 +3016,23 @@
     .param p4, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 294
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->ensureNetworkManagementService()V
 
-    .line 295
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mNMS:Landroid/os/INetworkManagementService;
 
     if-nez v1, :cond_1
 
-    .line 306
     :cond_0
     :goto_0
     return-void
 
-    .line 297
     :cond_1
     if-eqz p3, :cond_0
 
-    .line 300
     iget-boolean v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
 
     if-eqz v1, :cond_2
 
-    .line 301
     const-string v1, "ApplicationNetworkController"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3335,13 +3065,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
     :cond_2
     new-instance v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;
 
     invoke-direct {v0, p0, p2, p1, p3}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;IILjava/lang/String;)V
 
-    .line 305
     .local v0, "npar":Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
@@ -3357,23 +3085,19 @@
     .param p3, "processName"    # Ljava/lang/String;
 
     .prologue
-    .line 334
     if-eqz p2, :cond_0
 
     if-nez p3, :cond_1
 
-    .line 339
     :cond_0
     :goto_0
     return-void
 
-    .line 337
     :cond_1
     new-instance v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteRemovingProcessRunnable;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteRemovingProcessRunnable;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 338
     .local v0, "nrpr":Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteRemovingProcessRunnable;
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
@@ -3390,12 +3114,10 @@
     .param p4, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 346
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 347
     const-string v0, "ApplicationNetworkController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3428,7 +3150,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 350
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
@@ -3438,7 +3159,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 351
     return-void
 .end method
 
@@ -3451,29 +3171,23 @@
     .param p5, "isHomeActivity"    # Z
 
     .prologue
-    .line 279
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->ensureNetworkManagementService()V
 
-    .line 280
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mNMS:Landroid/os/INetworkManagementService;
 
     if-nez v1, :cond_1
 
-    .line 291
     :cond_0
     :goto_0
     return-void
 
-    .line 282
     :cond_1
     if-eqz p3, :cond_0
 
-    .line 285
     iget-boolean v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
 
     if-eqz v1, :cond_2
 
-    .line 286
     const-string v1, "ApplicationNetworkController"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3506,13 +3220,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
     :cond_2
     new-instance v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;
 
     invoke-direct {v0, p0, p2, p1, p3}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;IILjava/lang/String;)V
 
-    .line 290
     .local v0, "nrar":Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteResumingActivityRunnable;
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
@@ -3529,26 +3241,21 @@
     .param p4, "hostingType"    # Ljava/lang/String;
 
     .prologue
-    .line 321
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->ensureNetworkManagementService()V
 
-    .line 322
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mNMS:Landroid/os/INetworkManagementService;
 
     if-nez v1, :cond_1
 
-    .line 331
     :cond_0
     :goto_0
     return-void
 
-    .line 325
     :cond_1
     if-eqz p2, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 328
     new-instance v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;
 
     move-object v1, p0
@@ -3563,7 +3270,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;-><init>(Lcn/nubia/server/appmgmt/ApplicationNetworkController;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 330
     .local v0, "nspr":Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
@@ -3580,29 +3286,23 @@
     .param p4, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 309
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->ensureNetworkManagementService()V
 
-    .line 310
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mNMS:Landroid/os/INetworkManagementService;
 
     if-nez v0, :cond_1
 
-    .line 318
     :cond_0
     :goto_0
     return-void
 
-    .line 312
     :cond_1
     if-eqz p3, :cond_0
 
-    .line 315
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 316
     const-string v0, "ApplicationNetworkController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3643,10 +3343,8 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 274
     iput-boolean p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
 
-    .line 275
     return-void
 .end method
 
@@ -3654,7 +3352,6 @@
     .locals 2
 
     .prologue
-    .line 1155
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mQueryTrafficRunnable:Ljava/lang/Runnable;
@@ -3665,14 +3362,12 @@
 
     if-nez v0, :cond_0
 
-    .line 1156
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mQueryTrafficRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1158
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
@@ -3684,14 +3379,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1159
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mQueryNetworkRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1161
     :cond_1
     return-void
 .end method

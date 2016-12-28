@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 214
     iput-object p1, p0, Lnubia/os/edge/EdgeTouchManager$IEdgePointerEventListenerWrapper;->this$0:Lnubia/os/edge/EdgeTouchManager;
 
     invoke-direct {p0}, Lnubia/os/edge/IEdgePointerEventListener$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lnubia/os/edge/EdgeTouchManager$1;
 
     .prologue
-    .line 214
     invoke-direct {p0, p1}, Lnubia/os/edge/EdgeTouchManager$IEdgePointerEventListenerWrapper;-><init>(Lnubia/os/edge/EdgeTouchManager;)V
 
     return-void
@@ -50,12 +48,10 @@
     .param p1, "motionEvent"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 218
     iget-object v0, p0, Lnubia/os/edge/EdgeTouchManager$IEdgePointerEventListenerWrapper;->this$0:Lnubia/os/edge/EdgeTouchManager;
 
     # invokes: Lnubia/os/edge/EdgeTouchManager;->dispatchEdgeTouchEvent(Landroid/view/MotionEvent;)V
     invoke-static {v0, p1}, Lnubia/os/edge/EdgeTouchManager;->access$200(Lnubia/os/edge/EdgeTouchManager;Landroid/view/MotionEvent;)V
 
-    .line 219
     return-void
 .end method

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 23
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -40,7 +38,6 @@
     .param p0, "flag"    # I
 
     .prologue
-    .line 28
     and-int/lit16 v0, p0, 0x400
 
     if-eqz v0, :cond_0
@@ -61,7 +58,6 @@
     .param p0, "flag"    # I
 
     .prologue
-    .line 32
     const/high16 v0, 0x4000000
 
     and-int/2addr v0, p0
@@ -99,7 +95,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 15
     const/4 v2, 0x1
 
     new-array v2, v2, [I
@@ -112,16 +107,13 @@
 
     move-result-object v0
 
-    .line 17
     .local v0, "b":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v4, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
-    .line 18
     .local v1, "isNubiaStyle":Z
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 19
     return v1
 .end method

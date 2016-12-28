@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 271
     iput-object p1, p0, Lcn/nubia/server/breathinglight/MissEventObserver$InitAsyncTask;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -48,7 +47,6 @@
     .param p2, "x1"    # Lcn/nubia/server/breathinglight/MissEventObserver$1;
 
     .prologue
-    .line 271
     invoke-direct {p0, p1}, Lcn/nubia/server/breathinglight/MissEventObserver$InitAsyncTask;-><init>(Lcn/nubia/server/breathinglight/MissEventObserver;)V
 
     return-void
@@ -60,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 271
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/breathinglight/MissEventObserver$InitAsyncTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -75,13 +72,11 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 275
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver$InitAsyncTask;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     # invokes: Lcn/nubia/server/breathinglight/MissEventObserver;->getWhiteAppList()V
     invoke-static {v0}, Lcn/nubia/server/breathinglight/MissEventObserver;->access$300(Lcn/nubia/server/breathinglight/MissEventObserver;)V
 
-    .line 276
     const/4 v0, 0x0
 
     return-object v0

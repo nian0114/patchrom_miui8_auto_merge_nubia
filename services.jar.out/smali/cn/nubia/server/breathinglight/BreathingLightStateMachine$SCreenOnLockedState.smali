@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 145
     iput-object p1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnLockedState;->this$0:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -40,18 +39,15 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 147
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 161
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 149
     :sswitch_0
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnLockedState;->this$0:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
@@ -60,7 +56,6 @@
 
     goto :goto_0
 
-    .line 153
     :sswitch_1
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnLockedState;->this$0:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
@@ -69,7 +64,6 @@
 
     goto :goto_0
 
-    .line 157
     :sswitch_2
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnLockedState;->this$0:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
@@ -78,7 +72,6 @@
 
     goto :goto_0
 
-    .line 147
     :sswitch_data_0
     .sparse-switch
         0x3 -> :sswitch_0

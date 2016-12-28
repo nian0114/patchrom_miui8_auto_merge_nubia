@@ -72,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 436
     new-instance v0, Landroid/content/pm/ResolveInfo$1;
 
     invoke-direct {v0}, Landroid/content/pm/ResolveInfo$1;-><init>()V
@@ -86,20 +85,16 @@
     .locals 1
 
     .prologue
-    .line 349
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->specificIndex:I
 
-    .line 350
     const/4 v0, -0x2
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->targetUserId:I
 
-    .line 351
     return-void
 .end method
 
@@ -108,100 +103,80 @@
     .param p1, "orig"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 353
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->specificIndex:I
 
-    .line 354
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iput-object v0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 355
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iput-object v0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    .line 356
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
 
     iput-object v0, p0, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
 
-    .line 357
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->filter:Landroid/content/IntentFilter;
 
     iput-object v0, p0, Landroid/content/pm/ResolveInfo;->filter:Landroid/content/IntentFilter;
 
-    .line 358
     iget v0, p1, Landroid/content/pm/ResolveInfo;->priority:I
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 359
     iget v0, p1, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
-    .line 360
     iget v0, p1, Landroid/content/pm/ResolveInfo;->match:I
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->match:I
 
-    .line 361
     iget v0, p1, Landroid/content/pm/ResolveInfo;->specificIndex:I
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->specificIndex:I
 
-    .line 362
     iget v0, p1, Landroid/content/pm/ResolveInfo;->labelRes:I
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->labelRes:I
 
-    .line 363
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
     iput-object v0, p0, Landroid/content/pm/ResolveInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 364
     iget v0, p1, Landroid/content/pm/ResolveInfo;->icon:I
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->icon:I
 
-    .line 365
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
 
-    .line 366
     iget-boolean v0, p1, Landroid/content/pm/ResolveInfo;->noResourceId:Z
 
     iput-boolean v0, p0, Landroid/content/pm/ResolveInfo;->noResourceId:Z
 
-    .line 367
     iget v0, p1, Landroid/content/pm/ResolveInfo;->iconResourceId:I
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->iconResourceId:I
 
-    .line 368
     iget-boolean v0, p1, Landroid/content/pm/ResolveInfo;->system:Z
 
     iput-boolean v0, p0, Landroid/content/pm/ResolveInfo;->system:Z
 
-    .line 369
     iget v0, p1, Landroid/content/pm/ResolveInfo;->targetUserId:I
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->targetUserId:I
 
-    .line 370
     iget-boolean v0, p1, Landroid/content/pm/ResolveInfo;->handleAllWebDataURI:Z
 
     iput-boolean v0, p0, Landroid/content/pm/ResolveInfo;->handleAllWebDataURI:Z
 
-    .line 371
     return-void
 .end method
 
@@ -216,38 +191,30 @@
 
     const/4 v2, 0x0
 
-    .line 446
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->specificIndex:I
 
-    .line 447
     iput-object v3, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 448
     iput-object v3, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    .line 449
     iput-object v3, p0, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
 
-    .line 450
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 461
     const-string v0, "ResolveInfo"
 
     const-string v3, "Missing ComponentInfo!"
 
     invoke-static {v0, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 464
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -255,7 +222,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 465
     sget-object v0, Landroid/content/IntentFilter;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -266,7 +232,6 @@
 
     iput-object v0, p0, Landroid/content/pm/ResolveInfo;->filter:Landroid/content/IntentFilter;
 
-    .line 467
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -274,35 +239,30 @@
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 468
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
-    .line 469
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->match:I
 
-    .line 470
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->specificIndex:I
 
-    .line 471
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->labelRes:I
 
-    .line 472
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -313,28 +273,24 @@
 
     iput-object v0, p0, Landroid/content/pm/ResolveInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 474
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->icon:I
 
-    .line 475
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
 
-    .line 476
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->targetUserId:I
 
-    .line 477
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -346,7 +302,6 @@
     :goto_1
     iput-boolean v0, p0, Landroid/content/pm/ResolveInfo;->system:Z
 
-    .line 478
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -358,14 +313,12 @@
     :goto_2
     iput-boolean v0, p0, Landroid/content/pm/ResolveInfo;->noResourceId:Z
 
-    .line 479
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/ResolveInfo;->iconResourceId:I
 
-    .line 480
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -375,10 +328,8 @@
     :goto_3
     iput-boolean v1, p0, Landroid/content/pm/ResolveInfo;->handleAllWebDataURI:Z
 
-    .line 481
     return-void
 
-    .line 452
     :pswitch_0
     sget-object v0, Landroid/content/pm/ActivityInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -392,7 +343,6 @@
 
     goto :goto_0
 
-    .line 455
     :pswitch_1
     sget-object v0, Landroid/content/pm/ServiceInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -406,7 +356,6 @@
 
     goto :goto_0
 
-    .line 458
     :pswitch_2
     sget-object v0, Landroid/content/pm/ProviderInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -423,22 +372,18 @@
     :cond_1
     move v0, v2
 
-    .line 477
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 478
     goto :goto_2
 
     :cond_3
     move v1, v2
 
-    .line 480
     goto :goto_3
 
-    .line 450
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -453,7 +398,6 @@
     .param p2, "x1"    # Landroid/content/pm/ResolveInfo$1;
 
     .prologue
-    .line 47
     invoke-direct {p0, p1}, Landroid/content/pm/ResolveInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -463,18 +407,15 @@
     .locals 2
 
     .prologue
-    .line 172
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 174
     :goto_0
     return-object v0
 
-    .line 173
     :cond_0
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
@@ -484,7 +425,6 @@
 
     goto :goto_0
 
-    .line 174
     :cond_1
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
 
@@ -494,7 +434,6 @@
 
     goto :goto_0
 
-    .line 175
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -512,14 +451,12 @@
     .param p3, "ai"    # Landroid/content/pm/ApplicationInfo;
 
     .prologue
-    .line 513
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v0, :cond_0
 
     iget-object v4, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 514
     .local v4, "ci":Landroid/content/pm/ComponentInfo;
     :goto_0
     iget v2, p0, Landroid/content/pm/ResolveInfo;->icon:I
@@ -542,7 +479,6 @@
 
     return-object v0
 
-    .line 513
     .end local v4    # "ci":Landroid/content/pm/ComponentInfo;
     :cond_0
     iget-object v4, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -557,20 +493,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 215
     iget-object v4, p0, Landroid/content/pm/ResolveInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
     if-eqz v4, :cond_1
 
-    .line 216
     iget-object v3, p0, Landroid/content/pm/ResolveInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 233
     :cond_0
     :goto_0
     return-object v3
 
-    .line 219
     :cond_1
     iget-object v4, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
 
@@ -580,7 +512,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 220
     iget-object v4, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
 
     iget v5, p0, Landroid/content/pm/ResolveInfo;->labelRes:I
@@ -589,11 +520,9 @@
 
     move-result-object v2
 
-    .line 221
     .local v2, "label":Ljava/lang/CharSequence;
     if-eqz v2, :cond_2
 
-    .line 222
     invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -604,24 +533,20 @@
 
     goto :goto_0
 
-    .line 225
     .end local v2    # "label":Ljava/lang/CharSequence;
     :cond_2
     invoke-direct {p0}, Landroid/content/pm/ResolveInfo;->getComponentInfo()Landroid/content/pm/ComponentInfo;
 
     move-result-object v1
 
-    .line 226
     .local v1, "ci":Landroid/content/pm/ComponentInfo;
     iget-object v0, v1, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 227
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     iget v4, p0, Landroid/content/pm/ResolveInfo;->labelRes:I
 
     if-eqz v4, :cond_0
 
-    .line 228
     iget-object v4, v1, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
     iget v5, p0, Landroid/content/pm/ResolveInfo;->labelRes:I
@@ -630,11 +555,9 @@
 
     move-result-object v2
 
-    .line 229
     .restart local v2    # "label":Ljava/lang/CharSequence;
     if-eqz v2, :cond_0
 
-    .line 230
     invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -652,7 +575,6 @@
     .locals 1
 
     .prologue
-    .line 399
     const/4 v0, 0x0
 
     return v0
@@ -664,12 +586,10 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 320
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->filter:Landroid/content/IntentFilter;
 
     if-eqz v0, :cond_0
 
-    .line 321
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -690,7 +610,6 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 322
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->filter:Landroid/content/IntentFilter;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -713,7 +632,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/content/IntentFilter;->dump(Landroid/util/Printer;Ljava/lang/String;)V
 
-    .line 324
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -723,7 +641,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "priority="
+    const-string v1, "priority="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -793,12 +711,10 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 329
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 330
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -807,7 +723,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "resolvePackageName="
+    const-string v1, "resolvePackageName="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -825,7 +741,6 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 332
     :cond_1
     iget v0, p0, Landroid/content/pm/ResolveInfo;->labelRes:I
 
@@ -839,7 +754,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 333
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -849,7 +763,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "labelRes=0x"
+    const-string v1, "labelRes=0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -899,13 +813,11 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 337
     :cond_3
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v0, :cond_5
 
-    .line 338
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -926,7 +838,6 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 339
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -949,18 +860,15 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/content/pm/ActivityInfo;->dump(Landroid/util/Printer;Ljava/lang/String;)V
 
-    .line 347
     :cond_4
     :goto_0
     return-void
 
-    .line 340
     :cond_5
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     if-eqz v0, :cond_6
 
-    .line 341
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -981,7 +889,6 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 342
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1006,13 +913,11 @@
 
     goto :goto_0
 
-    .line 343
     :cond_6
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
 
     if-eqz v0, :cond_4
 
-    .line 344
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1033,7 +938,6 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 345
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1063,14 +967,12 @@
     .locals 1
 
     .prologue
-    .line 315
     iget-boolean v0, p0, Landroid/content/pm/ResolveInfo;->noResourceId:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 316
     :goto_0
     return v0
 
@@ -1086,35 +988,29 @@
     .locals 2
 
     .prologue
-    .line 299
     iget v1, p0, Landroid/content/pm/ResolveInfo;->iconResourceId:I
 
     if-eqz v1, :cond_0
 
     iget v1, p0, Landroid/content/pm/ResolveInfo;->iconResourceId:I
 
-    .line 304
     :goto_0
     return v1
 
-    .line 300
     :cond_0
     invoke-direct {p0}, Landroid/content/pm/ResolveInfo;->getComponentInfo()Landroid/content/pm/ComponentInfo;
 
     move-result-object v0
 
-    .line 301
     .local v0, "ci":Landroid/content/pm/ComponentInfo;
     if-eqz v0, :cond_1
 
-    .line 302
     invoke-virtual {v0}, Landroid/content/pm/ComponentInfo;->getIconResource()I
 
     move-result v1
 
     goto :goto_0
 
-    .line 304
     :cond_1
     const/4 v1, 0x0
 
@@ -1122,14 +1018,12 @@
 .end method
 
 .method public loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
-    .locals 6
+    .locals 7
     .param p1, "pm"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 249
     const/4 v2, 0x0
 
-    .line 250
     .local v2, "dr":Landroid/graphics/drawable/Drawable;
     iget-object v4, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
 
@@ -1139,22 +1033,21 @@
 
     if-eqz v4, :cond_0
 
-    .line 256
     iget-object v4, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
 
-    const/4 v5, 0x0
+    iget v5, p0, Landroid/content/pm/ResolveInfo;->iconResourceId:I
 
-    invoke-direct {p0, p1, v4, v5}, Landroid/content/pm/ResolveInfo;->loadDrawableFromTheme(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
+    const/4 v6, 0x0
+
+    invoke-virtual {p1, v4, v5, v6}, Landroid/content/pm/PackageManager;->getDrawable(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 262
     :cond_0
     invoke-direct {p0}, Landroid/content/pm/ResolveInfo;->getComponentInfo()Landroid/content/pm/ComponentInfo;
 
     move-result-object v1
 
-    .line 263
     .local v1, "ci":Landroid/content/pm/ComponentInfo;
     if-nez v2, :cond_1
 
@@ -1162,31 +1055,27 @@
 
     if-eqz v4, :cond_1
 
-    .line 264
     iget-object v0, v1, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 270
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     iget-object v4, v1, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
-    invoke-direct {p0, p1, v4, v0}, Landroid/content/pm/ResolveInfo;->loadDrawableFromTheme(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
+    iget v5, p0, Landroid/content/pm/ResolveInfo;->iconResourceId:I
+
+    invoke-virtual {p1, v4, v5, v0}, Landroid/content/pm/PackageManager;->getDrawable(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 276
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     :cond_1
     if-eqz v2, :cond_3
 
-    .line 278
     sget-boolean v4, Lcom/cmx/cmplus/SmartContainerConfig;->WITH_OUT_VIRTUAL_BOX:Z
 
     if-nez v4, :cond_2
 
-    .line 279
     iget-object v0, v1, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 280
     .restart local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     iget v4, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
@@ -1194,7 +1083,6 @@
 
     move-result v3
 
-    .line 281
     .local v3, "targetUserId":I
     new-instance v4, Landroid/os/UserHandle;
 
@@ -1204,13 +1092,11 @@
 
     move-result-object v4
 
-    .line 287
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     .end local v3    # "targetUserId":I
     :goto_0
     return-object v4
 
-    .line 283
     :cond_2
     new-instance v4, Landroid/os/UserHandle;
 
@@ -1226,7 +1112,6 @@
 
     goto :goto_0
 
-    .line 287
     :cond_3
     invoke-virtual {v1, p1}, Landroid/content/pm/ComponentInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
@@ -1240,37 +1125,30 @@
     .param p1, "pm"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 191
     invoke-direct {p0, p1}, Landroid/content/pm/ResolveInfo;->loadLabelImpl(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    .line 192
     .local v3, "label":Ljava/lang/CharSequence;
     invoke-direct {p0}, Landroid/content/pm/ResolveInfo;->getComponentInfo()Landroid/content/pm/ComponentInfo;
 
     move-result-object v0
 
-    .line 194
     .local v0, "ci":Landroid/content/pm/ComponentInfo;
     if-eqz v3, :cond_2
 
-    .line 195
     sget-boolean v5, Lcom/cmx/cmplus/SmartContainerConfig;->WITH_OUT_VIRTUAL_BOX:Z
 
     if-nez v5, :cond_0
 
-    .line 197
     :try_start_0
     invoke-static {}, Lcom/cmx/cmplus/SmartContainerManagerNative;->get()Lcom/cmx/cmplus/ISmartContainerManager;
 
     move-result-object v4
 
-    .line 199
     .local v4, "manager":Lcom/cmx/cmplus/ISmartContainerManager;
     if-eqz v4, :cond_0
 
-    .line 200
     iget-object v5, v0, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0}, Landroid/content/pm/ComponentInfo;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -1288,29 +1166,24 @@
     :goto_0
     move-object v1, v3
 
-    .line 211
     :cond_1
     :goto_1
     return-object v1
 
-    .line 201
     :catch_0
     move-exception v2
 
-    .line 202
     .local v2, "e":Landroid/os/RemoteException;
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 208
     .end local v2    # "e":Landroid/os/RemoteException;
     :cond_2
     invoke-virtual {v0, p1}, Landroid/content/pm/ComponentInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 210
     .local v1, "data":Ljava/lang/CharSequence;
     if-eqz v1, :cond_1
 
@@ -1329,12 +1202,10 @@
     .locals 4
 
     .prologue
-    .line 374
     invoke-direct {p0}, Landroid/content/pm/ResolveInfo;->getComponentInfo()Landroid/content/pm/ComponentInfo;
 
     move-result-object v0
 
-    .line 375
     .local v0, "ci":Landroid/content/pm/ComponentInfo;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1342,13 +1213,11 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 376
     .local v1, "sb":Ljava/lang/StringBuilder;
     const-string v2, "ResolveInfo{"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 377
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v2
@@ -1359,56 +1228,46 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 378
     const/16 v2, 0x20
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 379
     iget-object v2, v0, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
     iget-object v3, v0, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
 
     invoke-static {v1, v2, v3}, Landroid/content/ComponentName;->appendShortString(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 380
     iget v2, p0, Landroid/content/pm/ResolveInfo;->priority:I
 
     if-eqz v2, :cond_0
 
-    .line 381
     const-string v2, " p="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 382
     iget v2, p0, Landroid/content/pm/ResolveInfo;->priority:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 384
     :cond_0
     iget v2, p0, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
     if-eqz v2, :cond_1
 
-    .line 385
     const-string v2, " o="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 386
     iget v2, p0, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 388
     :cond_1
     const-string v2, " m=0x"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 389
     iget v2, p0, Landroid/content/pm/ResolveInfo;->match:I
 
     invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -1417,30 +1276,25 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 390
     iget v2, p0, Landroid/content/pm/ResolveInfo;->targetUserId:I
 
     const/4 v3, -0x2
 
     if-eq v2, v3, :cond_2
 
-    .line 391
     const-string v2, " targetUserId="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 392
     iget v2, p0, Landroid/content/pm/ResolveInfo;->targetUserId:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 394
     :cond_2
     const/16 v2, 0x7d
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 395
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -1458,80 +1312,64 @@
 
     const/4 v2, 0x0
 
-    .line 403
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v0, :cond_0
 
-    .line 404
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 405
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/pm/ActivityInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 415
     :goto_0
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->filter:Landroid/content/IntentFilter;
 
     if-eqz v0, :cond_3
 
-    .line 416
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 417
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->filter:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/IntentFilter;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 421
     :goto_1
     iget v0, p0, Landroid/content/pm/ResolveInfo;->priority:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 422
     iget v0, p0, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 423
     iget v0, p0, Landroid/content/pm/ResolveInfo;->match:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 424
     iget v0, p0, Landroid/content/pm/ResolveInfo;->specificIndex:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 425
     iget v0, p0, Landroid/content/pm/ResolveInfo;->labelRes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 426
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 427
     iget v0, p0, Landroid/content/pm/ResolveInfo;->icon:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 428
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 429
     iget v0, p0, Landroid/content/pm/ResolveInfo;->targetUserId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 430
     iget-boolean v0, p0, Landroid/content/pm/ResolveInfo;->system:Z
 
     if-eqz v0, :cond_4
@@ -1541,7 +1379,6 @@
     :goto_2
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 431
     iget-boolean v0, p0, Landroid/content/pm/ResolveInfo;->noResourceId:Z
 
     if-eqz v0, :cond_5
@@ -1551,12 +1388,10 @@
     :goto_3
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 432
     iget v0, p0, Landroid/content/pm/ResolveInfo;->iconResourceId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 433
     iget-boolean v0, p0, Landroid/content/pm/ResolveInfo;->handleAllWebDataURI:Z
 
     if-eqz v0, :cond_6
@@ -1564,52 +1399,43 @@
     :goto_4
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 434
     return-void
 
-    .line 406
     :cond_0
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     if-eqz v0, :cond_1
 
-    .line 407
     const/4 v0, 0x2
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 408
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/pm/ServiceInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 409
     :cond_1
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
 
     if-eqz v0, :cond_2
 
-    .line 410
     const/4 v0, 0x3
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 411
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/pm/ProviderInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 413
     :cond_2
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 419
     :cond_3
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -1618,18 +1444,15 @@
     :cond_4
     move v0, v2
 
-    .line 430
     goto :goto_2
 
     :cond_5
     move v0, v2
 
-    .line 431
     goto :goto_3
 
     :cond_6
     move v1, v2
 
-    .line 433
     goto :goto_4
 .end method

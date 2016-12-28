@@ -28,13 +28,10 @@
     .param p3, "callback"    # Lcn/nubia/server/policy/edge/AnimationCallback;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     iput-object p1, p0, Lcn/nubia/server/policy/edge/Animation;->mContext:Landroid/content/Context;
 
-    .line 22
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {p2}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -45,17 +42,14 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/Animation;->mHandler:Landroid/os/Handler;
 
-    .line 23
     iput-object p3, p0, Lcn/nubia/server/policy/edge/Animation;->mCallback:Lcn/nubia/server/policy/edge/AnimationCallback;
 
-    .line 24
     new-instance v0, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;
 
     invoke-direct {v0, p1, p2, p3}, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;-><init>(Landroid/content/Context;Landroid/os/HandlerThread;Lcn/nubia/server/policy/edge/AnimationCallback;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/Animation;->mAdapter:Lcn/nubia/server/policy/edge/effects/EffectsAdapter;
 
-    .line 25
     return-void
 .end method
 
@@ -64,7 +58,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/Animation;
 
     .prologue
-    .line 12
     iget-object v0, p0, Lcn/nubia/server/policy/edge/Animation;->mAdapter:Lcn/nubia/server/policy/edge/effects/EffectsAdapter;
 
     return-object v0
@@ -77,12 +70,10 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 53
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 54
     .local v0, "savedEvent":Landroid/view/MotionEvent;
     iget-object v1, p0, Lcn/nubia/server/policy/edge/Animation;->mHandler:Landroid/os/Handler;
 
@@ -92,7 +83,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 62
     return-void
 .end method
 
@@ -100,19 +90,16 @@
     .locals 2
 
     .prologue
-    .line 66
     const-string v0, "Adapter"
 
     const-string v1, "onEnterIdleState"
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     iget-object v0, p0, Lcn/nubia/server/policy/edge/Animation;->mAdapter:Lcn/nubia/server/policy/edge/effects/EffectsAdapter;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->onEnterIdleState()V
 
-    .line 69
     return-void
 .end method
 
@@ -121,14 +108,12 @@
     .param p1, "gesture"    # Lcn/nubia/edgegesture/EdgeGesture;
 
     .prologue
-    .line 30
     invoke-virtual {p1}, Lcn/nubia/edgegesture/EdgeGesture;->getAction()I
 
     move-result v0
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 44
     const-string v0, "Adapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -151,16 +136,13 @@
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     iget-object v0, p0, Lcn/nubia/server/policy/edge/Animation;->mAdapter:Lcn/nubia/server/policy/edge/effects/EffectsAdapter;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->onGestureAction(Lcn/nubia/edgegesture/EdgeGesture;)V
 
-    .line 46
     :goto_0
     return-void
 
-    .line 40
     :sswitch_0
     iget-object v0, p0, Lcn/nubia/server/policy/edge/Animation;->mCallback:Lcn/nubia/server/policy/edge/AnimationCallback;
 
@@ -168,7 +150,6 @@
 
     goto :goto_0
 
-    .line 30
     nop
 
     :sswitch_data_0
@@ -184,6 +165,5 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 50
     return-void
 .end method

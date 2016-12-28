@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 534
     iput-object p1, p0, Lcn/nubia/server/appmgmt/CABCController$AdjustCABCRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcn/nubia/server/appmgmt/CABCController$1;
 
     .prologue
-    .line 534
     invoke-direct {p0, p1}, Lcn/nubia/server/appmgmt/CABCController$AdjustCABCRunnable;-><init>(Lcn/nubia/server/appmgmt/CABCController;)V
 
     return-void
@@ -52,12 +50,10 @@
     .locals 1
 
     .prologue
-    .line 537
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController$AdjustCABCRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     # invokes: Lcn/nubia/server/appmgmt/CABCController;->adjustCABCMode()V
     invoke-static {v0}, Lcn/nubia/server/appmgmt/CABCController;->access$600(Lcn/nubia/server/appmgmt/CABCController;)V
 
-    .line 538
     return-void
 .end method

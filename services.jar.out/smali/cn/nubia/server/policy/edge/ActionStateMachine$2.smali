@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 100
     iput-object p1, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$2;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 103
     const-string v1, "reason"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 104
     .local v0, "extra":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -62,20 +59,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 105
     const-string v1, "FitActionStateMachine"
 
     const-string v2, "receive broadcast containing extra of globalactions"
 
     invoke-static {v1, v2}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
     iget-object v1, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$2;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     # invokes: Lcn/nubia/server/policy/edge/ActionStateMachine;->sendCancelMessageForInterrupt()V
     invoke-static {v1}, Lcn/nubia/server/policy/edge/ActionStateMachine;->access$000(Lcn/nubia/server/policy/edge/ActionStateMachine;)V
 
-    .line 108
     :cond_0
     return-void
 .end method

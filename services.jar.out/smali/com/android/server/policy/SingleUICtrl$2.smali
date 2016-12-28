@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 412
     iput-object p1, p0, Lcom/android/server/policy/SingleUICtrl$2;->this$0:Lcom/android/server/policy/SingleUICtrl;
 
     iput p2, p0, Lcom/android/server/policy/SingleUICtrl$2;->val$toBeShowed:I
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 415
     iget-object v0, p0, Lcom/android/server/policy/SingleUICtrl$2;->this$0:Lcom/android/server/policy/SingleUICtrl;
 
     # getter for: Lcom/android/server/policy/SingleUICtrl;->mContext:Landroid/content/Context;
@@ -62,6 +60,5 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 416
     return-void
 .end method

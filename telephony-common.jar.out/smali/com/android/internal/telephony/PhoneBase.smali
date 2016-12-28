@@ -1578,117 +1578,154 @@
 .end method
 
 .method private handleDeactivateDetectPBS(Landroid/os/Message;)V
-    .locals 6
+    .locals 8
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    .line 3079
-    const/4 v2, 0x0
+    .line 3083
+    const/4 v3, 0x0
 
-    .line 3081
-    .local v2, "success":Z
+    .line 3085
+    .local v3, "success":Z
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 3082
+    .line 3086
     .local v0, "ar":Landroid/os/AsyncResult;
-    iget-object v3, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
+    iget-object v4, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    if-nez v3, :cond_0
-
-    .line 3083
-    iget-object v3, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
-
-    check-cast v3, [I
-
-    move-object v1, v3
-
-    check-cast v1, [I
-
-    .line 3084
-    .local v1, "responseArray":[I
-    aget v3, v1, v4
-
-    sget v5, Lcom/android/internal/telephony/PhoneBase;->SEND_PBS_CMD_SUCCESS:I
-
-    if-ne v3, v5, :cond_1
-
-    const/4 v2, 0x1
+    if-nez v4, :cond_0
 
     .line 3087
-    .end local v1    # "responseArray":[I
-    :cond_0
-    :goto_0
-    if-eqz v2, :cond_2
+    iget-object v4, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
+
+    check-cast v4, [I
+
+    move-object v2, v4
+
+    check-cast v2, [I
 
     .line 3088
-    const-string v3, "PhoneBase"
+    .local v2, "responseArray":[I
+    aget v4, v2, v5
 
-    const-string v4, "DeactivateDetectPBS success"
+    sget v6, Lcom/android/internal/telephony/PhoneBase;->SEND_PBS_CMD_SUCCESS:I
 
-    invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-ne v4, v6, :cond_1
 
-    .line 3089
-    iget-object v3, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v3
-
-    sget-object v4, Lcom/android/internal/telephony/PhoneBase;->PBS_STATE_CONTENT_KEY:Ljava/lang/String;
-
-    sget v5, Lcom/android/internal/telephony/PhoneBase;->PBS_DISABLE:I
-
-    invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
-    .line 3095
-    :goto_1
-    const/16 v3, 0x2f
-
-    invoke-virtual {p0, v3}, Lcom/android/internal/telephony/PhoneBase;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v3
-
-    sget v4, Lcom/android/internal/telephony/PhoneBase;->DELAY_TIME:I
-
-    int-to-long v4, v4
-
-    invoke-virtual {p0, v3, v4, v5}, Lcom/android/internal/telephony/PhoneBase;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    .line 3096
-    return-void
-
-    .restart local v1    # "responseArray":[I
-    :cond_1
-    move v2, v4
-
-    .line 3084
-    goto :goto_0
+    const/4 v3, 0x1
 
     .line 3091
-    .end local v1    # "responseArray":[I
-    :cond_2
-    const-string v3, "PhoneBase"
-
-    const-string v4, "Fail to deactivate PBS enable, reset switch to enable"
-
-    invoke-static {v3, v4}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    .end local v2    # "responseArray":[I
+    :cond_0
+    :goto_0
+    if-eqz v3, :cond_2
 
     .line 3092
-    iget-object v3, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
+    const-string v4, "PhoneBase"
 
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    const-string v5, "DeactivateDetectPBS success"
 
-    move-result-object v3
+    invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    sget-object v4, Lcom/android/internal/telephony/PhoneBase;->PBS_STATE_CONTENT_KEY:Ljava/lang/String;
+    .line 3093
+    iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
 
-    sget v5, Lcom/android/internal/telephony/PhoneBase;->PBS_ENABLE:I
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    move-result-object v4
+
+    sget-object v5, Lcom/android/internal/telephony/PhoneBase;->PBS_STATE_CONTENT_KEY:Ljava/lang/String;
+
+    sget v6, Lcom/android/internal/telephony/PhoneBase;->PBS_DISABLE:I
+
+    invoke-static {v4, v5, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    .line 3103
+    :goto_1
+    const/16 v4, 0x2f
+
+    invoke-virtual {p0, v4}, Lcom/android/internal/telephony/PhoneBase;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v4
+
+    sget v5, Lcom/android/internal/telephony/PhoneBase;->DELAY_TIME:I
+
+    int-to-long v6, v5
+
+    invoke-virtual {p0, v4, v6, v7}, Lcom/android/internal/telephony/PhoneBase;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    .line 3104
+    return-void
+
+    .restart local v2    # "responseArray":[I
+    :cond_1
+    move v3, v5
+
+    .line 3088
+    goto :goto_0
+
+    .line 3095
+    .end local v2    # "responseArray":[I
+    :cond_2
+    const-string v4, "PhoneBase"
+
+    const-string v5, "Fail to deactivate PBS enable"
+
+    invoke-static {v4, v5}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3096
+    iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v4
+
+    sget-object v5, Lcom/android/internal/telephony/PhoneBase;->PBS_STATE_CONTENT_KEY:Ljava/lang/String;
+
+    sget v6, Lcom/android/internal/telephony/PhoneBase;->PBS_ENABLE:I
+
+    invoke-static {v4, v5, v6}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    .line 3099
+    .local v1, "curr":I
+    const-string v4, "PhoneBase"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Fail to deactivate PBS enable, set to = "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3100
+    iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v4
+
+    sget-object v5, Lcom/android/internal/telephony/PhoneBase;->PBS_STATE_CONTENT_KEY:Ljava/lang/String;
+
+    invoke-static {v4, v5, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     goto :goto_1
 .end method
@@ -1747,117 +1784,154 @@
 .end method
 
 .method private handleSetupDetectPBS(Landroid/os/Message;)V
-    .locals 6
+    .locals 8
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     .line 3059
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     .line 3061
-    .local v2, "success":Z
+    .local v3, "success":Z
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
     .line 3062
     .local v0, "ar":Landroid/os/AsyncResult;
-    iget-object v3, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
+    iget-object v4, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    if-nez v3, :cond_0
+    if-nez v4, :cond_0
 
     .line 3063
-    iget-object v3, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
+    iget-object v4, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
-    check-cast v3, [I
+    check-cast v4, [I
 
-    move-object v1, v3
+    move-object v2, v4
 
-    check-cast v1, [I
+    check-cast v2, [I
 
     .line 3064
-    .local v1, "responseArray":[I
-    aget v3, v1, v4
+    .local v2, "responseArray":[I
+    aget v4, v2, v5
 
-    sget v5, Lcom/android/internal/telephony/PhoneBase;->SEND_PBS_CMD_SUCCESS:I
+    sget v6, Lcom/android/internal/telephony/PhoneBase;->SEND_PBS_CMD_SUCCESS:I
 
-    if-ne v3, v5, :cond_1
+    if-ne v4, v6, :cond_1
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     .line 3067
-    .end local v1    # "responseArray":[I
+    .end local v2    # "responseArray":[I
     :cond_0
     :goto_0
-    if-eqz v2, :cond_2
+    if-eqz v3, :cond_2
 
     .line 3068
-    const-string v3, "PhoneBase"
+    const-string v4, "PhoneBase"
 
-    const-string v4, "SetupDetectPBS success"
+    const-string v5, "SetupDetectPBS success"
 
-    invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 3069
-    iget-object v3, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v3
+    move-result-object v4
 
-    sget-object v4, Lcom/android/internal/telephony/PhoneBase;->PBS_STATE_CONTENT_KEY:Ljava/lang/String;
+    sget-object v5, Lcom/android/internal/telephony/PhoneBase;->PBS_STATE_CONTENT_KEY:Ljava/lang/String;
 
-    sget v5, Lcom/android/internal/telephony/PhoneBase;->PBS_ENABLE:I
+    sget v6, Lcom/android/internal/telephony/PhoneBase;->PBS_ENABLE:I
 
-    invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    invoke-static {v4, v5, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3075
+    .line 3079
     :goto_1
-    const/16 v3, 0x2f
+    const/16 v4, 0x2f
 
-    invoke-virtual {p0, v3}, Lcom/android/internal/telephony/PhoneBase;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v4}, Lcom/android/internal/telephony/PhoneBase;->obtainMessage(I)Landroid/os/Message;
 
-    move-result-object v3
+    move-result-object v4
 
-    sget v4, Lcom/android/internal/telephony/PhoneBase;->DELAY_TIME:I
+    sget v5, Lcom/android/internal/telephony/PhoneBase;->DELAY_TIME:I
 
-    int-to-long v4, v4
+    int-to-long v6, v5
 
-    invoke-virtual {p0, v3, v4, v5}, Lcom/android/internal/telephony/PhoneBase;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {p0, v4, v6, v7}, Lcom/android/internal/telephony/PhoneBase;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3076
+    .line 3080
     return-void
 
-    .restart local v1    # "responseArray":[I
+    .restart local v2    # "responseArray":[I
     :cond_1
-    move v2, v4
+    move v3, v5
 
     .line 3064
     goto :goto_0
 
     .line 3071
-    .end local v1    # "responseArray":[I
+    .end local v2    # "responseArray":[I
     :cond_2
-    const-string v3, "PhoneBase"
+    const-string v4, "PhoneBase"
 
-    const-string v4, "Fail to setup PBS enable, reset switch to disable"
+    const-string v5, "Fail to setup PBS enable"
 
-    invoke-static {v3, v4}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v5}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 3072
-    iget-object v3, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v3
+    move-result-object v4
 
-    sget-object v4, Lcom/android/internal/telephony/PhoneBase;->PBS_STATE_CONTENT_KEY:Ljava/lang/String;
+    sget-object v5, Lcom/android/internal/telephony/PhoneBase;->PBS_STATE_CONTENT_KEY:Ljava/lang/String;
 
-    sget v5, Lcom/android/internal/telephony/PhoneBase;->PBS_DISABLE:I
+    sget v6, Lcom/android/internal/telephony/PhoneBase;->PBS_ENABLE:I
 
-    invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    invoke-static {v4, v5, v6}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    .line 3075
+    .local v1, "curr":I
+    const-string v4, "PhoneBase"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Fail to setup PBS enable, set to = "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3076
+    iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v4
+
+    sget-object v5, Lcom/android/internal/telephony/PhoneBase;->PBS_STATE_CONTENT_KEY:Ljava/lang/String;
+
+    invoke-static {v4, v5, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     goto :goto_1
 .end method
@@ -2725,14 +2799,14 @@
     .locals 3
 
     .prologue
-    .line 3099
+    .line 3107
     const-string v0, "PhoneBase"
 
     const-string v1, "setPBSDone"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3100
+    .line 3108
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2745,7 +2819,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3101
+    .line 3109
     return-void
 .end method
 

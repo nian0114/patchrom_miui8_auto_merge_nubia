@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="44.0dip" android:layout_marginBottom="36.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.v4.view.ViewPager android:layout_gravity="center" android:id="@id/myviewpager" android:layout_width="fill_parent" android:layout_height="467.0dip" />
-    <TextView android:id="@id/no_dual_tile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
-    <LinearLayout android:orientation="horizontal" android:id="@id/viewpoints" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/myviewpager" />
-</RelativeLayout>

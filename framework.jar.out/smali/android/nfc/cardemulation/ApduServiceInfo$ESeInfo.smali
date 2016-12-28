@@ -41,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 1098
     new-instance v0, Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo$1;
 
     invoke-direct {v0}, Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo$1;-><init>()V
@@ -57,16 +56,12 @@
     .param p2, "powerState"    # I
 
     .prologue
-    .line 1064
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1065
     iput p1, p0, Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo;->seId:I
 
-    .line 1066
     iput p2, p0, Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo;->powerState:I
 
-    .line 1067
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 1089
     const/4 v0, 0x0
 
     return v0
@@ -86,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 1074
     iget v0, p0, Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo;->powerState:I
 
     return v0
@@ -96,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 1070
     iget v0, p0, Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo;->seId:I
 
     return v0
@@ -110,14 +102,13 @@
 
     const/4 v3, 0x0
 
-    .line 1079
     new-instance v0, Ljava/lang/StringBuilder;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "seId: "
+    const-string v4, "seId: "
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -196,7 +187,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1084
     .local v0, "out":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -208,7 +198,6 @@
     :cond_0
     move v1, v3
 
-    .line 1079
     goto :goto_0
 
     :cond_1
@@ -228,16 +217,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1094
     iget v0, p0, Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo;->seId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1095
     iget v0, p0, Landroid/nfc/cardemulation/ApduServiceInfo$ESeInfo;->powerState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1096
     return-void
 .end method

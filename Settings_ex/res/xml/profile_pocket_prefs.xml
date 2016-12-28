@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/pocket_title"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
-    <com.android.settings_ex.ZSettingsCheckBoxPreference android:title="@string/avoid_mistouch_title" android:key="avoid_mistouch" android:summary="@string/avoid_mistouch_summary" android:widgetLayout="@layout/preference_widget_v5switch" />
-    <com.android.settings_ex.ZSettingsCheckBoxPreference android:title="@string/maxring_vibrate_title" android:key="maxring_vibrate" android:summary="@string/maxring_vibrate_summary" android:widgetLayout="@layout/preference_widget_v5switch" />
-</PreferenceScreen>

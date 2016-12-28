@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 90
     iput-object p1, p0, Lnubia/fancydrawable/DateDrawable$1;->this$0:Lnubia/fancydrawable/DateDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 92
     iget-object v0, p0, Lnubia/fancydrawable/DateDrawable$1;->this$0:Lnubia/fancydrawable/DateDrawable;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -54,11 +52,9 @@
     # setter for: Lnubia/fancydrawable/DateDrawable;->mStartTime:J
     invoke-static {v0, v2, v3}, Lnubia/fancydrawable/DateDrawable;->access$002(Lnubia/fancydrawable/DateDrawable;J)J
 
-    .line 93
     iget-object v0, p0, Lnubia/fancydrawable/DateDrawable$1;->this$0:Lnubia/fancydrawable/DateDrawable;
 
     invoke-virtual {v0}, Lnubia/fancydrawable/DateDrawable;->invalidateSelf()V
 
-    .line 94
     return-void
 .end method

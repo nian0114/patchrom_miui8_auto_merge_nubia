@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 497
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/GuidePageFlipping$EndAnimatorListener;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/GuidePageFlipping;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcn/nubia/server/policy/edge/effects/animation/pageflipping/GuidePageFlipping$1;
 
     .prologue
-    .line 497
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/GuidePageFlipping$EndAnimatorListener;-><init>(Lcn/nubia/server/policy/edge/effects/animation/pageflipping/GuidePageFlipping;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 501
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/GuidePageFlipping$EndAnimatorListener;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/GuidePageFlipping;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/animation/pageflipping/GuidePageFlipping;->mAnimParam:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;
@@ -64,6 +61,5 @@
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;->postRunable(Ljava/lang/Runnable;)V
 
-    .line 510
     return-void
 .end method

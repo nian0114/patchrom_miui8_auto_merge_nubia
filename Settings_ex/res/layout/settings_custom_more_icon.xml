@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/actionbar_more_settings_layout" android:layout_width="wrap_content" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center|right" android:id="@id/actionbar_more_settings_icon" android:background="@drawable/action_bar_right_img_bg" android:layout_width="@dimen/settings_actionbar_more_size" android:layout_height="@dimen/settings_actionbar_more_size" android:src="@drawable/settings_actionbar_more" android:scaleType="center" android:layout_marginEnd="16.0dip" />
-    <TextView android:textSize="16.0dip" android:textColor="#ff07a723" android:gravity="center" android:layout_gravity="center|right" android:id="@id/actionbar_more_settings_text" android:background="@drawable/action_bar_right_img_bg" android:visibility="gone" android:layout_width="46.0dip" android:layout_height="46.0dip" android:text="@string/tethering_help_button_text" android:layout_marginEnd="16.0dip" />
-</RelativeLayout>

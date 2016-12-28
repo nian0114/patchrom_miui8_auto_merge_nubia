@@ -191,7 +191,6 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 641
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -200,14 +199,12 @@
 
     sput-object v0, Lnubia/R$styleable;->ClockWidgetAnalogClock:[I
 
-    .line 722
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lnubia/R$styleable;->ClockWidgetAnalogClockWithCity:[I
 
-    .line 811
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -216,14 +213,12 @@
 
     sput-object v0, Lnubia/R$styleable;->ClockWidgetDigitalClockWithCity:[I
 
-    .line 955
     new-array v0, v1, [I
 
     fill-array-data v0, :array_3
 
     sput-object v0, Lnubia/R$styleable;->NubiaPagerTab:[I
 
-    .line 1040
     const/16 v0, 0xc
 
     new-array v0, v0, [I
@@ -232,7 +227,6 @@
 
     sput-object v0, Lnubia/R$styleable;->NubiaSearchView:[I
 
-    .line 1219
     const/16 v0, 0xb
 
     new-array v0, v0, [I
@@ -241,7 +235,6 @@
 
     sput-object v0, Lnubia/R$styleable;->NubiaSwitch:[I
 
-    .line 1448
     const/16 v0, 0x24
 
     new-array v0, v0, [I
@@ -252,7 +245,6 @@
 
     return-void
 
-    .line 641
     :array_0
     .array-data 4
         0x3010011
@@ -262,7 +254,6 @@
         0x3010015
     .end array-data
 
-    .line 722
     :array_1
     .array-data 4
         0x3010016
@@ -271,7 +262,6 @@
         0x3010019
     .end array-data
 
-    .line 811
     :array_2
     .array-data 4
         0x301001a
@@ -284,7 +274,6 @@
         0x3010021
     .end array-data
 
-    .line 955
     :array_3
     .array-data 4
         0x301002e
@@ -293,7 +282,6 @@
         0x3010049
     .end array-data
 
-    .line 1040
     :array_4
     .array-data 4
         0x3010022
@@ -310,7 +298,6 @@
         0x301002d
     .end array-data
 
-    .line 1219
     :array_5
     .array-data 4
         0x3010034
@@ -326,7 +313,6 @@
         0x3010043    # 3.7909993E-37f
     .end array-data
 
-    .line 1448
     :array_6
     .array-data 4
         0x3010000
@@ -372,7 +358,6 @@
     .locals 0
 
     .prologue
-    .line 622
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

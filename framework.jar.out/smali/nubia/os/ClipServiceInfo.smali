@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Landroid/app/ServiceProxyInfo;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .end annotation
 
     .prologue
-    .line 19
     const-class v0, Lnubia/os/ClipServiceManagerExtra;
 
     return-object v0
@@ -50,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 15
     const-string v0, "nubia.clipserviceext"
 
     return-object v0
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 11
     invoke-virtual {p0}, Lnubia/os/ClipServiceInfo;->getServiceProxy()Lnubia/os/ClipServiceManagerExtra;
 
     move-result-object v0
@@ -72,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 24
     invoke-static {}, Lnubia/os/ClipServiceManagerExtra;->getInstance()Lnubia/os/ClipServiceManagerExtra;
 
     move-result-object v0

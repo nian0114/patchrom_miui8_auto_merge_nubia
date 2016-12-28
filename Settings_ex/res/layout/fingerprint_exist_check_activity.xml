@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/tv_fingerprint_identify" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="@string/tutorial_activity_main_title" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
-    <TextView android:textSize="@dimen/sub_title_size" android:gravity="center" android:id="@id/tv_fingerprint_enroll_method_hint" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/tutorial_activity_sub_title" android:layout_below="@id/tv_fingerprint_identify" android:layout_centerHorizontal="true" />
-    <ImageView android:id="@id/icon_fingerprint_enroll_method" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:layout_below="@id/tv_fingerprint_enroll_method_hint" android:layout_centerHorizontal="true" />
-</RelativeLayout>

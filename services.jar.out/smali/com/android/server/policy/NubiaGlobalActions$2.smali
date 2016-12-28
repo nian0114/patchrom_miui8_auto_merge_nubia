@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 300
     iput-object p1, p0, Lcom/android/server/policy/NubiaGlobalActions$2;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +40,8 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 304
     const/4 v1, 0x0
 
-    .line 306
     .local v1, "instance":Ljava/lang/Object;
     :try_start_0
     const-string v4, "com.android.server.power.ShutdownThread"
@@ -53,7 +50,6 @@
 
     move-result-object v3
 
-    .line 308
     .local v3, "wpMgr":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v4, "reboot"
 
@@ -83,7 +79,6 @@
 
     move-result-object v2
 
-    .line 310
     .local v2, "method":Ljava/lang/reflect/Method;
     const/4 v4, 0x0
 
@@ -122,17 +117,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 314
     .end local v2    # "method":Ljava/lang/reflect/Method;
     .end local v3    # "wpMgr":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     return-void
 
-    .line 311
     :catch_0
     move-exception v0
 
-    .line 312
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

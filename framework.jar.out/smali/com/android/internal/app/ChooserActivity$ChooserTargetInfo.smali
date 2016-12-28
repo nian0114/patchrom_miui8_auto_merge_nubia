@@ -47,58 +47,46 @@
     .param p4, "flags"    # I
 
     .prologue
-    .line 586
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->this$0:Lcom/android/internal/app/ChooserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 545
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBadgeIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 587
     iget-object v0, p2, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
-    .line 588
     iget-object v0, p2, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBackupResolveInfo:Landroid/content/pm/ResolveInfo;
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBackupResolveInfo:Landroid/content/pm/ResolveInfo;
 
-    .line 589
     iget-object v0, p2, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mChooserTarget:Landroid/service/chooser/ChooserTarget;
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mChooserTarget:Landroid/service/chooser/ChooserTarget;
 
-    .line 590
     iget-object v0, p2, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBadgeIcon:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBadgeIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 591
     iget-object v0, p2, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBadgeContentDescription:Ljava/lang/CharSequence;
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBadgeContentDescription:Ljava/lang/CharSequence;
 
-    .line 592
     iget-object v0, p2, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mDisplayIcon:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mDisplayIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 593
     iput-object p3, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mFillInIntent:Landroid/content/Intent;
 
-    .line 594
     iput p4, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mFillInFlags:I
 
-    .line 595
     iget v0, p2, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mModifiedScore:F
 
     iput v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mModifiedScore:F
 
-    .line 596
     return-void
 .end method
 
@@ -113,39 +101,29 @@
 
     const/4 v5, 0x0
 
-    .line 553
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->this$0:Lcom/android/internal/app/ChooserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 545
     iput-object v5, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBadgeIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 554
     iput-object p2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
-    .line 555
     iput-object p3, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mChooserTarget:Landroid/service/chooser/ChooserTarget;
 
-    .line 556
     iput p4, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mModifiedScore:F
 
-    .line 557
     if-eqz p2, :cond_0
 
-    .line 558
     invoke-virtual {p2}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
     move-result-object v3
 
-    .line 559
     .local v3, "ri":Landroid/content/pm/ResolveInfo;
     if-eqz v3, :cond_0
 
-    .line 560
     iget-object v0, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 561
     .local v0, "ai":Landroid/content/pm/ActivityInfo;
     if-eqz v0, :cond_0
 
@@ -153,12 +131,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 562
     invoke-virtual {p1}, Lcom/android/internal/app/ChooserActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 563
     .local v2, "pm":Landroid/content/pm/PackageManager;
     iget-object v4, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -168,7 +144,6 @@
 
     iput-object v4, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBadgeIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 564
     iget-object v4, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v2, v4}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
@@ -177,7 +152,6 @@
 
     iput-object v4, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBadgeContentDescription:Ljava/lang/CharSequence;
 
-    .line 569
     .end local v0    # "ai":Landroid/content/pm/ActivityInfo;
     .end local v2    # "pm":Landroid/content/pm/PackageManager;
     .end local v3    # "ri":Landroid/content/pm/ResolveInfo;
@@ -186,7 +160,6 @@
 
     move-result-object v1
 
-    .line 571
     .local v1, "icon":Landroid/graphics/drawable/Icon;
     if-eqz v1, :cond_1
 
@@ -197,29 +170,22 @@
     :goto_0
     iput-object v4, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mDisplayIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 574
     if-eqz p2, :cond_2
 
-    .line 575
     iput-object v5, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBackupResolveInfo:Landroid/content/pm/ResolveInfo;
 
-    .line 581
     :goto_1
     iput-object v5, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mFillInIntent:Landroid/content/Intent;
 
-    .line 582
     iput v7, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mFillInFlags:I
 
-    .line 583
     return-void
 
     :cond_1
     move-object v4, v5
 
-    .line 571
     goto :goto_0
 
-    .line 577
     :cond_2
     invoke-virtual {p1}, Lcom/android/internal/app/ChooserActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -242,7 +208,6 @@
     .locals 4
 
     .prologue
-    .line 623
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     if-eqz v2, :cond_0
@@ -253,24 +218,20 @@
 
     move-result-object v0
 
-    .line 625
     .local v0, "result":Landroid/content/Intent;
     :goto_0
     if-nez v0, :cond_1
 
-    .line 626
     const-string v2, "ChooserActivity"
 
     const-string v3, "ChooserTargetInfo: no base intent available to send"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 635
     .end local v0    # "result":Landroid/content/Intent;
     :goto_1
     return-object v0
 
-    .line 623
     :cond_0
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->this$0:Lcom/android/internal/app/ChooserActivity;
 
@@ -280,28 +241,24 @@
 
     goto :goto_0
 
-    .line 629
     .restart local v0    # "result":Landroid/content/Intent;
     :cond_1
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, v0}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 630
     .end local v0    # "result":Landroid/content/Intent;
     .local v1, "result":Landroid/content/Intent;
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mFillInIntent:Landroid/content/Intent;
 
     if-eqz v2, :cond_2
 
-    .line 631
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mFillInIntent:Landroid/content/Intent;
 
     iget v3, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mFillInFlags:I
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->fillIn(Landroid/content/Intent;I)I
 
-    .line 633
     :cond_2
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->this$0:Lcom/android/internal/app/ChooserActivity;
 
@@ -328,7 +285,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 697
     new-instance v0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;
 
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->this$0:Lcom/android/internal/app/ChooserActivity;
@@ -351,18 +307,15 @@
     .end annotation
 
     .prologue
-    .line 702
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 703
     .local v0, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     if-eqz v1, :cond_0
 
-    .line 706
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     invoke-virtual {v1}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getAllSourceIntents()Ljava/util/List;
@@ -377,7 +330,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 708
     :cond_0
     return-object v0
 .end method
@@ -386,7 +338,6 @@
     .locals 1
 
     .prologue
-    .line 692
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBadgeContentDescription:Ljava/lang/CharSequence;
 
     return-object v0
@@ -396,7 +347,6 @@
     .locals 1
 
     .prologue
-    .line 687
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBadgeIcon:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -406,7 +356,6 @@
     .locals 1
 
     .prologue
-    .line 682
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mDisplayIcon:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -416,7 +365,6 @@
     .locals 1
 
     .prologue
-    .line 672
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mChooserTarget:Landroid/service/chooser/ChooserTarget;
 
     invoke-virtual {v0}, Landroid/service/chooser/ChooserTarget;->getTitle()Ljava/lang/CharSequence;
@@ -430,7 +378,6 @@
     .locals 1
 
     .prologue
-    .line 677
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     if-eqz v0, :cond_0
@@ -454,7 +401,6 @@
     .locals 1
 
     .prologue
-    .line 599
     iget v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mModifiedScore:F
 
     return v0
@@ -464,7 +410,6 @@
     .locals 1
 
     .prologue
-    .line 666
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     if-eqz v0, :cond_0
@@ -488,29 +433,24 @@
     .locals 3
 
     .prologue
-    .line 612
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     if-eqz v0, :cond_0
 
-    .line 613
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getResolvedComponentName()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 619
     :goto_0
     return-object v0
 
-    .line 614
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBackupResolveInfo:Landroid/content/pm/ResolveInfo;
 
     if-eqz v0, :cond_1
 
-    .line 615
     new-instance v0, Landroid/content/ComponentName;
 
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mBackupResolveInfo:Landroid/content/pm/ResolveInfo;
@@ -529,7 +469,6 @@
 
     goto :goto_0
 
-    .line 619
     :cond_1
     const/4 v0, 0x0
 
@@ -540,19 +479,16 @@
     .locals 1
 
     .prologue
-    .line 604
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     if-eqz v0, :cond_0
 
-    .line 605
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mSourceInfo:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getResolvedIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 607
     :goto_0
     return-object v0
 
@@ -572,7 +508,6 @@
     .param p2, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 640
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "ChooserTargets should be started as caller."
@@ -591,23 +526,18 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 647
     invoke-direct {p0}, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->getBaseIntentToSend()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 648
     .local v0, "intent":Landroid/content/Intent;
     if-nez v0, :cond_0
 
-    .line 649
     const/4 v1, 0x0
 
-    .line 654
     :goto_0
     return v1
 
-    .line 651
     :cond_0
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mChooserTarget:Landroid/service/chooser/ChooserTarget;
 
@@ -617,7 +547,6 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 652
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetInfo;->mChooserTarget:Landroid/service/chooser/ChooserTarget;
 
     invoke-virtual {v2}, Landroid/service/chooser/ChooserTarget;->getIntentExtras()Landroid/os/Bundle;
@@ -626,7 +555,6 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 653
     invoke-virtual {p1, v0, p2, v1, p3}, Landroid/app/Activity;->startActivityAsCaller(Landroid/content/Intent;Landroid/os/Bundle;ZI)V
 
     goto :goto_0
@@ -639,7 +567,6 @@
     .param p3, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 660
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "ChooserTargets should be started as caller."

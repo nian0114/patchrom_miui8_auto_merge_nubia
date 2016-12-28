@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
     .locals 3
 
     .prologue
-    .line 15
     const-string v1, "ro.nubia.edge.enable"
 
     const-string v2, "0"
@@ -27,7 +25,6 @@
 
     move-result-object v0
 
-    .line 16
     .local v0, "enable":Ljava/lang/String;
     const-string v1, "1"
 
@@ -42,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 26
     const-string v1, "ro.nubia.edge.incomplete"
 
     const-string v2, "0"
@@ -51,7 +47,6 @@
 
     move-result-object v0
 
-    .line 27
     .local v0, "enable":Ljava/lang/String;
     const-string v1, "1"
 
@@ -66,6 +61,5 @@
     .locals 0
 
     .prologue
-    .line 23
     return-void
 .end method

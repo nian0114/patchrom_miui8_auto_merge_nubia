@@ -38,24 +38,18 @@
     .param p5, "hostingType"    # Ljava/lang/String;
 
     .prologue
-    .line 635
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 636
     iput p2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->mUid:I
 
-    .line 637
     iput-object p3, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->mPackage:Ljava/lang/String;
 
-    .line 638
     iput-object p4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->mProcess:Ljava/lang/String;
 
-    .line 639
     iput-object p5, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->mHostingType:Ljava/lang/String;
 
-    .line 640
     return-void
 .end method
 
@@ -67,10 +61,8 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 644
     const/4 v0, 0x1
 
-    .line 645
     .local v0, "count":I
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -87,7 +79,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 646
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageProcessCounts:Ljava/util/HashMap;
@@ -107,11 +98,9 @@
 
     move-result v1
 
-    .line 647
     .local v1, "oldCount":I
     add-int/2addr v0, v1
 
-    .line 649
     .end local v1    # "oldCount":I
     :cond_0
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
@@ -129,7 +118,6 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 650
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mPackageProcessUids:Ljava/util/HashMap;
@@ -147,7 +135,6 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 652
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->mHostingType:Ljava/lang/String;
 
     const-string v3, "activity"
@@ -160,12 +147,10 @@
 
     if-le v0, v5, :cond_2
 
-    .line 657
     :cond_1
     :goto_0
     return-void
 
-    .line 655
     :cond_2
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -174,7 +159,6 @@
     # invokes: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->cancelPendingControlRunnable(I)V
     invoke-static {v2, v3}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->access$700(Lcn/nubia/server/appmgmt/ApplicationNetworkController;I)V
 
-    .line 656
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     iget v3, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NoteStartingProcessRunnable;->mUid:I

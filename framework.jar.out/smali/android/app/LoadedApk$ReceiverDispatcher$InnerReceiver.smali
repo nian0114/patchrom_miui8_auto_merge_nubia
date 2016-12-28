@@ -36,27 +36,22 @@
     .param p2, "strong"    # Z
 
     .prologue
-    .line 817
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
 
-    .line 818
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/app/LoadedApk$ReceiverDispatcher$InnerReceiver;->mDispatcher:Ljava/lang/ref/WeakReference;
 
-    .line 819
     if-eqz p2, :cond_0
 
     .end local p1    # "rd":Landroid/app/LoadedApk$ReceiverDispatcher;
     :goto_0
     iput-object p1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$InnerReceiver;->mStrongRef:Landroid/app/LoadedApk$ReceiverDispatcher;
 
-    .line 820
     return-void
 
-    .line 819
     .restart local p1    # "rd":Landroid/app/LoadedApk$ReceiverDispatcher;
     :cond_0
     const/4 p1, 0x0
@@ -77,7 +72,6 @@
     .param p7, "sendingUser"    # I
 
     .prologue
-    .line 823
     iget-object v2, p0, Landroid/app/LoadedApk$ReceiverDispatcher$InnerReceiver;->mDispatcher:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -86,7 +80,6 @@
 
     check-cast v0, Landroid/app/LoadedApk$ReceiverDispatcher;
 
-    .line 829
     .local v0, "rd":Landroid/app/LoadedApk$ReceiverDispatcher;
     if-eqz v0, :cond_0
 
@@ -104,30 +97,24 @@
 
     move/from16 v7, p7
 
-    .line 830
     invoke-virtual/range {v0 .. v7}, Landroid/app/LoadedApk$ReceiverDispatcher;->performReceive(Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZI)V
 
-    .line 849
     :goto_0
     return-void
 
-    .line 839
     :cond_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v1
 
-    .line 841
     .local v1, "mgr":Landroid/app/IActivityManager;
     if-eqz p4, :cond_1
 
-    .line 842
     const/4 v2, 0x0
 
     :try_start_0
     invoke-virtual {p4, v2}, Landroid/os/Bundle;->setAllowFds(Z)Z
 
-    .line 844
     :cond_1
     const/4 v6, 0x0
 
@@ -149,11 +136,9 @@
 
     goto :goto_0
 
-    .line 845
     :catch_0
     move-exception v8
 
-    .line 846
     .local v8, "e":Landroid/os/RemoteException;
     const-string v2, "ActivityThread"
 

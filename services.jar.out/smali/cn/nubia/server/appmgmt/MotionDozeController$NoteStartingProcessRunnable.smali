@@ -38,24 +38,18 @@
     .param p5, "hostingType"    # Ljava/lang/String;
 
     .prologue
-    .line 294
     iput-object p1, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 295
     iput p2, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->mUid:I
 
-    .line 296
     iput-object p3, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->mPackage:Ljava/lang/String;
 
-    .line 297
     iput-object p4, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->mProcess:Ljava/lang/String;
 
-    .line 298
     iput-object p5, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->mHostingType:Ljava/lang/String;
 
-    .line 299
     return-void
 .end method
 
@@ -67,10 +61,8 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 303
     const/4 v0, 0x1
 
-    .line 304
     .local v0, "count":I
     iget-object v2, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
@@ -87,7 +79,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 305
     iget-object v2, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     # getter for: Lcn/nubia/server/appmgmt/MotionDozeController;->mPackageProcessCounts:Ljava/util/HashMap;
@@ -107,11 +98,9 @@
 
     move-result v1
 
-    .line 306
     .local v1, "oldCount":I
     add-int/2addr v0, v1
 
-    .line 308
     .end local v1    # "oldCount":I
     :cond_0
     iget-object v2, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
@@ -129,7 +118,6 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 309
     iget-object v2, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     # getter for: Lcn/nubia/server/appmgmt/MotionDozeController;->mPackageProcessUids:Ljava/util/HashMap;
@@ -147,14 +135,11 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 311
     if-le v0, v5, :cond_1
 
-    .line 323
     :goto_0
     return-void
 
-    .line 315
     :cond_1
     iget-object v2, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
@@ -165,7 +150,6 @@
 
     monitor-enter v3
 
-    .line 316
     :try_start_0
     iget-object v2, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
@@ -182,7 +166,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 317
     iget-object v2, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     const/4 v4, 0x1
@@ -190,7 +173,6 @@
     # setter for: Lcn/nubia/server/appmgmt/MotionDozeController;->mRunningMotionApp:Z
     invoke-static {v2, v4}, Lcn/nubia/server/appmgmt/MotionDozeController;->access$1402(Lcn/nubia/server/appmgmt/MotionDozeController;Z)Z
 
-    .line 318
     iget-object v2, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     # getter for: Lcn/nubia/server/appmgmt/MotionDozeController;->mRunningMotionApps:Ljava/util/HashSet;
@@ -202,14 +184,12 @@
 
     invoke-virtual {v2, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 319
     const-string v2, "MotionDozeController"
 
     const-string v4, "mRunningMotionApp = true"
 
     invoke-static {v2, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 320
     iget-object v2, p0, Lcn/nubia/server/appmgmt/MotionDozeController$NoteStartingProcessRunnable;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     # getter for: Lcn/nubia/server/appmgmt/MotionDozeController;->mHandler:Landroid/os/Handler;
@@ -226,7 +206,6 @@
 
     invoke-virtual {v2, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 322
     :cond_2
     monitor-exit v3
 

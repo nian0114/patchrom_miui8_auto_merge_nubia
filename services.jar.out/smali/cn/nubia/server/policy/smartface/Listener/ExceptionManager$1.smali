@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 23
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/Listener/ExceptionManager$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 26
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/ExceptionManager$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;->isVoiceUpKeyDown:Z
@@ -57,14 +55,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 28
     const-string v0, "ExceptionManager"
 
     const-string v1, "close smartface function when hall exception "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/ExceptionManager$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;->mContext:Landroid/content/Context;
@@ -74,13 +70,11 @@
 
     invoke-static {v0}, Lcn/nubia/server/policy/smartface/util/SysPropUtils;->disableSmartFaceFunc(Landroid/content/Context;)V
 
-    .line 30
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/ExceptionManager$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;
 
     # invokes: Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;->resetStates()V
     invoke-static {v0}, Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;->access$300(Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;)V
 
-    .line 32
     :cond_0
     return-void
 .end method

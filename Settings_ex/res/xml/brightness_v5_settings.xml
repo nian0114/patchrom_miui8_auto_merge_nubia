@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/display_settings" settings:keywords="@string/keywords_display"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
-    <com.android.settings_ex.BrightnessPreference2 android:title="@string/automatic_brightness" android:key="brightness_v5" />
-</PreferenceScreen>

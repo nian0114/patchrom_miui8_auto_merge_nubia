@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <LinearLayout android:orientation="vertical" android:id="@id/preference_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:listDivider" android:showDividers="end|middle" />
-    </FrameLayout>
-    <ListView android:scrollbarStyle="@android:integer/leanback_setup_base_animation_duration" android:id="@android:id/list" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:smoothScrollbar="false" style="@style/PreferenceFragmentListSinglePane" />
-    <View android:id="@id/listDivider1" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="0.30000007dip" />
-</LinearLayout>

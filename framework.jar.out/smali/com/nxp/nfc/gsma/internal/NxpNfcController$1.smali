@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 104
     iput-object p1, p0, Lcom/nxp/nfc/gsma/internal/NxpNfcController$1;->this$0:Lcom/nxp/nfc/gsma/internal/NxpNfcController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v5, 0x1
 
-    .line 107
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 108
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.nfc.extra.ADAPTER_STATE"
 
@@ -56,7 +53,6 @@
 
     move-result v1
 
-    .line 109
     .local v1, "state":I
     const-string v2, "NxpNfcController"
 
@@ -97,7 +93,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
     const/4 v2, 0x3
 
     if-ne v1, v2, :cond_0
@@ -120,13 +115,11 @@
 
     if-ne v2, v5, :cond_0
 
-    .line 111
     iget-object v2, p0, Lcom/nxp/nfc/gsma/internal/NxpNfcController$1;->this$0:Lcom/nxp/nfc/gsma/internal/NxpNfcController;
 
     # setter for: Lcom/nxp/nfc/gsma/internal/NxpNfcController;->mEnable:Z
     invoke-static {v2, v5}, Lcom/nxp/nfc/gsma/internal/NxpNfcController;->access$202(Lcom/nxp/nfc/gsma/internal/NxpNfcController;Z)Z
 
-    .line 112
     iget-object v2, p0, Lcom/nxp/nfc/gsma/internal/NxpNfcController$1;->this$0:Lcom/nxp/nfc/gsma/internal/NxpNfcController;
 
     # getter for: Lcom/nxp/nfc/gsma/internal/NxpNfcController;->mCallBack:Lcom/nxp/nfc/gsma/internal/NxpNfcController$NxpCallbacks;
@@ -136,19 +129,16 @@
 
     invoke-interface {v2, v5}, Lcom/nxp/nfc/gsma/internal/NxpNfcController$NxpCallbacks;->onNxpEnableNfcController(Z)V
 
-    .line 113
     iget-object v2, p0, Lcom/nxp/nfc/gsma/internal/NxpNfcController$1;->this$0:Lcom/nxp/nfc/gsma/internal/NxpNfcController;
 
     # setter for: Lcom/nxp/nfc/gsma/internal/NxpNfcController;->mDialogBoxFlag:Z
     invoke-static {v2, v6}, Lcom/nxp/nfc/gsma/internal/NxpNfcController;->access$102(Lcom/nxp/nfc/gsma/internal/NxpNfcController;Z)Z
 
-    .line 114
     iget-object v2, p0, Lcom/nxp/nfc/gsma/internal/NxpNfcController$1;->this$0:Lcom/nxp/nfc/gsma/internal/NxpNfcController;
 
     # setter for: Lcom/nxp/nfc/gsma/internal/NxpNfcController;->mState:Z
     invoke-static {v2, v6}, Lcom/nxp/nfc/gsma/internal/NxpNfcController;->access$002(Lcom/nxp/nfc/gsma/internal/NxpNfcController;Z)Z
 
-    .line 115
     iget-object v2, p0, Lcom/nxp/nfc/gsma/internal/NxpNfcController$1;->this$0:Lcom/nxp/nfc/gsma/internal/NxpNfcController;
 
     # getter for: Lcom/nxp/nfc/gsma/internal/NxpNfcController;->mContext:Landroid/content/Context;
@@ -165,7 +155,6 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 116
     iget-object v2, p0, Lcom/nxp/nfc/gsma/internal/NxpNfcController$1;->this$0:Lcom/nxp/nfc/gsma/internal/NxpNfcController;
 
     # getter for: Lcom/nxp/nfc/gsma/internal/NxpNfcController;->mContext:Landroid/content/Context;
@@ -182,7 +171,6 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 118
     :cond_0
     return-void
 .end method

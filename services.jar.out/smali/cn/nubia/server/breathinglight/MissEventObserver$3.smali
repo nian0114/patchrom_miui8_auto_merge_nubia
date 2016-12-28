@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 338
     iput-object p1, p0, Lcn/nubia/server/breathinglight/MissEventObserver$3;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     invoke-direct {p0}, Landroid/service/notification/INotificationListener$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "interruptionFilter"    # I
 
     .prologue
-    .line 392
     return-void
 .end method
 
@@ -47,7 +45,6 @@
     .param p1, "update"    # Landroid/service/notification/NotificationRankingUpdate;
 
     .prologue
-    .line 343
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .param p1, "hints"    # I
 
     .prologue
-    .line 387
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .param p2, "update"    # Landroid/service/notification/NotificationRankingUpdate;
 
     .prologue
-    .line 351
     :try_start_0
     invoke-interface {p1}, Landroid/service/notification/IStatusBarNotificationHolder;->get()Landroid/service/notification/StatusBarNotification;
     :try_end_0
@@ -74,23 +69,19 @@
 
     move-result-object v1
 
-    .line 359
     .local v1, "sbn":Landroid/service/notification/StatusBarNotification;
     iget-object v2, p0, Lcn/nubia/server/breathinglight/MissEventObserver$3;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     # invokes: Lcn/nubia/server/breathinglight/MissEventObserver;->handleNotificationPosted(Landroid/service/notification/StatusBarNotification;)V
     invoke-static {v2, v1}, Lcn/nubia/server/breathinglight/MissEventObserver;->access$600(Lcn/nubia/server/breathinglight/MissEventObserver;Landroid/service/notification/StatusBarNotification;)V
 
-    .line 360
     .end local v1    # "sbn":Landroid/service/notification/StatusBarNotification;
     :goto_0
     return-void
 
-    .line 352
     :catch_0
     move-exception v0
 
-    .line 353
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "MissEventObserver"
 
@@ -106,7 +97,6 @@
     .param p1, "update"    # Landroid/service/notification/NotificationRankingUpdate;
 
     .prologue
-    .line 382
     return-void
 .end method
 
@@ -116,7 +106,6 @@
     .param p2, "update"    # Landroid/service/notification/NotificationRankingUpdate;
 
     .prologue
-    .line 368
     :try_start_0
     invoke-interface {p1}, Landroid/service/notification/IStatusBarNotificationHolder;->get()Landroid/service/notification/StatusBarNotification;
     :try_end_0
@@ -124,23 +113,19 @@
 
     move-result-object v1
 
-    .line 376
     .local v1, "sbn":Landroid/service/notification/StatusBarNotification;
     iget-object v2, p0, Lcn/nubia/server/breathinglight/MissEventObserver$3;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     # invokes: Lcn/nubia/server/breathinglight/MissEventObserver;->handleNotificationRemoved(Landroid/service/notification/StatusBarNotification;)V
     invoke-static {v2, v1}, Lcn/nubia/server/breathinglight/MissEventObserver;->access$700(Lcn/nubia/server/breathinglight/MissEventObserver;Landroid/service/notification/StatusBarNotification;)V
 
-    .line 377
     .end local v1    # "sbn":Landroid/service/notification/StatusBarNotification;
     :goto_0
     return-void
 
-    .line 369
     :catch_0
     move-exception v0
 
-    .line 370
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "MissEventObserver"
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 101
     iput-object p1, p0, Lnubia/widget/TimePickerDialog$TimePickerOnTimeChangeListener;->this$0:Lnubia/widget/TimePickerDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lnubia/widget/TimePickerDialog$1;
 
     .prologue
-    .line 101
     invoke-direct {p0, p1}, Lnubia/widget/TimePickerDialog$TimePickerOnTimeChangeListener;-><init>(Lnubia/widget/TimePickerDialog;)V
 
     return-void
@@ -55,6 +53,5 @@
     .param p3, "minute"    # I
 
     .prologue
-    .line 107
     return-void
 .end method

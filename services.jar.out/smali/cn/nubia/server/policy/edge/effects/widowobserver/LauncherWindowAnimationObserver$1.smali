@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 33
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$1;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,20 +37,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 37
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 43
     :cond_0
     :goto_0
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 44
     return-void
 
-    .line 39
     :pswitch_0
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$1;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;
 
@@ -62,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 40
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$1;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;->mListener:Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$LauncherWindowAnimationListener;
@@ -74,7 +68,6 @@
 
     goto :goto_0
 
-    .line 37
     nop
 
     :pswitch_data_0

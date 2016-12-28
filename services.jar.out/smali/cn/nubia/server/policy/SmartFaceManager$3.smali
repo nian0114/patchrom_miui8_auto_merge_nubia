@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcn/nubia/server/policy/SmartFaceManager$3;->this$0:Lcn/nubia/server/policy/SmartFaceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager$3;->this$0:Lcn/nubia/server/policy/SmartFaceManager;
 
     # invokes: Lcn/nubia/server/policy/SmartFaceManager;->onStop()V
     invoke-static {v0}, Lcn/nubia/server/policy/SmartFaceManager;->access$1000(Lcn/nubia/server/policy/SmartFaceManager;)V
 
-    .line 139
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .locals 2
 
     .prologue
-    .line 118
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager$3;->this$0:Lcn/nubia/server/policy/SmartFaceManager;
 
     # getter for: Lcn/nubia/server/policy/SmartFaceManager;->mHandler:Landroid/os/Handler;
@@ -66,7 +62,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 119
     return-void
 .end method
 
@@ -74,7 +69,6 @@
     .locals 2
 
     .prologue
-    .line 133
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager$3;->this$0:Lcn/nubia/server/policy/SmartFaceManager;
 
     # getter for: Lcn/nubia/server/policy/SmartFaceManager;->mHandler:Landroid/os/Handler;
@@ -86,7 +80,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 134
     return-void
 .end method
 
@@ -94,13 +87,11 @@
     .locals 1
 
     .prologue
-    .line 113
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager$3;->this$0:Lcn/nubia/server/policy/SmartFaceManager;
 
     # invokes: Lcn/nubia/server/policy/SmartFaceManager;->handleSetFlag()V
     invoke-static {v0}, Lcn/nubia/server/policy/SmartFaceManager;->access$800(Lcn/nubia/server/policy/SmartFaceManager;)V
 
-    .line 114
     return-void
 .end method
 
@@ -109,13 +100,11 @@
     .param p1, "isNeed"    # Z
 
     .prologue
-    .line 123
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager$3;->this$0:Lcn/nubia/server/policy/SmartFaceManager;
 
     # invokes: Lcn/nubia/server/policy/SmartFaceManager;->setNeedTurnOffScreen(Z)V
     invoke-static {v0, p1}, Lcn/nubia/server/policy/SmartFaceManager;->access$900(Lcn/nubia/server/policy/SmartFaceManager;Z)V
 
-    .line 124
     return-void
 .end method
 
@@ -123,7 +112,6 @@
     .locals 2
 
     .prologue
-    .line 108
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager$3;->this$0:Lcn/nubia/server/policy/SmartFaceManager;
 
     # getter for: Lcn/nubia/server/policy/SmartFaceManager;->mHandler:Landroid/os/Handler;
@@ -135,7 +123,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 109
     return-void
 .end method
 
@@ -143,7 +130,6 @@
     .locals 2
 
     .prologue
-    .line 103
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager$3;->this$0:Lcn/nubia/server/policy/SmartFaceManager;
 
     # getter for: Lcn/nubia/server/policy/SmartFaceManager;->mHandler:Landroid/os/Handler;
@@ -155,7 +141,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 104
     return-void
 .end method
 
@@ -164,7 +149,6 @@
     .param p1, "oriention"    # Z
 
     .prologue
-    .line 128
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager$3;->this$0:Lcn/nubia/server/policy/SmartFaceManager;
 
     # getter for: Lcn/nubia/server/policy/SmartFaceManager;->mHandler:Landroid/os/Handler;
@@ -176,6 +160,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 129
     return-void
 .end method

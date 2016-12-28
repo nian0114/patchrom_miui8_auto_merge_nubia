@@ -24,36 +24,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/vzw/nfc/dos/VzwTlv;->mRawData:[B
 
-    .line 26
     iput v1, p0, Lcom/vzw/nfc/dos/VzwTlv;->mTag:I
 
-    .line 28
     iput v1, p0, Lcom/vzw/nfc/dos/VzwTlv;->mValueIndex:I
 
-    .line 29
     iput v1, p0, Lcom/vzw/nfc/dos/VzwTlv;->mValueLength:I
 
-    .line 32
     iput-object p1, p0, Lcom/vzw/nfc/dos/VzwTlv;->mRawData:[B
 
-    .line 33
     iput p2, p0, Lcom/vzw/nfc/dos/VzwTlv;->mTag:I
 
-    .line 34
     iput p3, p0, Lcom/vzw/nfc/dos/VzwTlv;->mValueIndex:I
 
-    .line 35
     iput p4, p0, Lcom/vzw/nfc/dos/VzwTlv;->mValueLength:I
 
-    .line 36
     return-void
 .end method
 
@@ -63,12 +53,10 @@
     .param p1, "stream"    # Ljava/io/ByteArrayOutputStream;
 
     .prologue
-    .line 100
     and-int/lit16 v0, p0, 0xff
 
     invoke-virtual {p1, v0}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 101
     return-void
 .end method
 
@@ -83,14 +71,12 @@
     .end annotation
 
     .prologue
-    .line 41
     if-eqz p0, :cond_0
 
     array-length v4, p0
 
     if-nez v4, :cond_1
 
-    .line 42
     :cond_0
     new-instance v4, Lcom/vzw/nfc/dos/DoParserException;
 
@@ -100,21 +86,17 @@
 
     throw v4
 
-    .line 45
     :cond_1
     move v0, p1
 
-    .line 46
     .local v0, "curIndex":I
     const/4 v3, 0x0
 
-    .line 49
     .local v3, "tag":I
     array-length v4, p0
 
     if-ge v0, v4, :cond_2
 
-    .line 50
     add-int/lit8 v1, v0, 0x1
 
     .end local v0    # "curIndex":I
@@ -123,12 +105,10 @@
 
     and-int/lit16 v3, v4, 0xff
 
-    .line 57
     array-length v4, p0
 
     if-ge v1, v4, :cond_3
 
-    .line 58
     add-int/lit8 v0, v1, 0x1
 
     .end local v1    # "curIndex":I
@@ -137,7 +117,6 @@
 
     and-int/lit16 v2, v4, 0xff
 
-    .line 64
     .local v2, "length":I
     new-instance v4, Lcom/vzw/nfc/dos/VzwTlv;
 
@@ -145,7 +124,6 @@
 
     return-object v4
 
-    .line 52
     .end local v2    # "length":I
     :cond_2
     new-instance v4, Lcom/vzw/nfc/dos/DoParserException;
@@ -156,7 +134,6 @@
 
     throw v4
 
-    .line 60
     .end local v0    # "curIndex":I
     .restart local v1    # "curIndex":I
     :cond_3
@@ -204,10 +181,8 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 105
     const/4 v1, 0x0
 
-    .line 107
     .local v1, "equals":Z
     instance-of v4, p1, Lcom/vzw/nfc/dos/VzwTlv;
 
@@ -215,10 +190,8 @@
 
     move-object v0, p1
 
-    .line 108
     check-cast v0, Lcom/vzw/nfc/dos/VzwTlv;
 
-    .line 110
     .local v0, "berTlv":Lcom/vzw/nfc/dos/VzwTlv;
     iget v4, p0, Lcom/vzw/nfc/dos/VzwTlv;->mTag:I
 
@@ -228,33 +201,27 @@
 
     const/4 v1, 0x1
 
-    .line 112
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 113
     invoke-virtual {p0}, Lcom/vzw/nfc/dos/VzwTlv;->getValue()[B
 
     move-result-object v2
 
-    .line 114
     .local v2, "test1":[B
     invoke-virtual {v0}, Lcom/vzw/nfc/dos/VzwTlv;->getValue()[B
 
     move-result-object v3
 
-    .line 116
     .local v3, "test2":[B
     if-eqz v2, :cond_2
 
-    .line 118
     invoke-static {v2, v3}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v4
 
     and-int/2addr v1, v4
 
-    .line 124
     .end local v0    # "berTlv":Lcom/vzw/nfc/dos/VzwTlv;
     .end local v2    # "test1":[B
     .end local v3    # "test2":[B
@@ -262,14 +229,12 @@
     :goto_1
     return v1
 
-    .line 110
     .restart local v0    # "berTlv":Lcom/vzw/nfc/dos/VzwTlv;
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 119
     .restart local v2    # "test1":[B
     .restart local v3    # "test2":[B
     :cond_2
@@ -277,7 +242,6 @@
 
     if-nez v3, :cond_0
 
-    .line 120
     and-int/lit8 v1, v1, 0x1
 
     goto :goto_1
@@ -287,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget-object v0, p0, Lcom/vzw/nfc/dos/VzwTlv;->mRawData:[B
 
     return-object v0
@@ -297,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget v0, p0, Lcom/vzw/nfc/dos/VzwTlv;->mTag:I
 
     return v0
@@ -307,7 +269,6 @@
     .locals 5
 
     .prologue
-    .line 80
     iget-object v1, p0, Lcom/vzw/nfc/dos/VzwTlv;->mRawData:[B
 
     if-eqz v1, :cond_0
@@ -340,21 +301,17 @@
 
     if-le v1, v2, :cond_1
 
-    .line 83
     :cond_0
     const/4 v0, 0x0
 
-    .line 88
     :goto_0
     return-object v0
 
-    .line 85
     :cond_1
     iget v1, p0, Lcom/vzw/nfc/dos/VzwTlv;->mValueLength:I
 
     new-array v0, v1, [B
 
-    .line 87
     .local v0, "data":[B
     iget-object v1, p0, Lcom/vzw/nfc/dos/VzwTlv;->mRawData:[B
 
@@ -373,7 +330,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget v0, p0, Lcom/vzw/nfc/dos/VzwTlv;->mValueIndex:I
 
     return v0
@@ -383,7 +339,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget v0, p0, Lcom/vzw/nfc/dos/VzwTlv;->mValueLength:I
 
     return v0
@@ -398,6 +353,5 @@
     .end annotation
 
     .prologue
-    .line 69
     return-void
 .end method

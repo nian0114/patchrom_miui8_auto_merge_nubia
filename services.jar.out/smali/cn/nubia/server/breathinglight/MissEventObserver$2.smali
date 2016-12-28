@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 290
     iput-object p1, p0, Lcn/nubia/server/breathinglight/MissEventObserver$2;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,7 +39,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 294
     # getter for: Lcn/nubia/server/breathinglight/MissEventObserver;->NOTIFUCATION_CENTER_URI:Landroid/net/Uri;
     invoke-static {}, Lcn/nubia/server/breathinglight/MissEventObserver;->access$400()Landroid/net/Uri;
 
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 295
     new-instance v0, Lcn/nubia/server/breathinglight/MissEventObserver$WhiteAppAsyncQueryTask;
 
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver$2;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
@@ -67,7 +64,6 @@
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/breathinglight/MissEventObserver$WhiteAppAsyncQueryTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 297
     :cond_0
     return-void
 .end method

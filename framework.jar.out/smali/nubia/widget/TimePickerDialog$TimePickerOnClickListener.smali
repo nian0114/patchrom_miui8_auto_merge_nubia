@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 110
     iput-object p1, p0, Lnubia/widget/TimePickerDialog$TimePickerOnClickListener;->this$0:Lnubia/widget/TimePickerDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lnubia/widget/TimePickerDialog$1;
 
     .prologue
-    .line 110
     invoke-direct {p0, p1}, Lnubia/widget/TimePickerDialog$TimePickerOnClickListener;-><init>(Lnubia/widget/TimePickerDialog;)V
 
     return-void
@@ -54,29 +52,24 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 114
     const/4 v0, -0x1
 
     if-ne p2, v0, :cond_1
 
-    .line 115
     iget-object v0, p0, Lnubia/widget/TimePickerDialog$TimePickerOnClickListener;->this$0:Lnubia/widget/TimePickerDialog;
 
     # invokes: Lnubia/widget/TimePickerDialog;->tryNotifyTimeSet()V
     invoke-static {v0}, Lnubia/widget/TimePickerDialog;->access$200(Lnubia/widget/TimePickerDialog;)V
 
-    .line 119
     :cond_0
     :goto_0
     return-void
 
-    .line 116
     :cond_1
     const/4 v0, -0x2
 
     if-ne p2, v0, :cond_0
 
-    .line 117
     invoke-interface {p1}, Landroid/content/DialogInterface;->cancel()V
 
     goto :goto_0

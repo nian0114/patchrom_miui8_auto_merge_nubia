@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 64
     iput-object p1, p0, Lcn/nubia/server/policy/edge/ActionExecutor$GestureHandler;->this$0:Lcn/nubia/server/policy/edge/ActionExecutor;
 
-    .line 65
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 66
     return-void
 .end method
 
@@ -39,28 +36,23 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 78
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 79
     .local v0, "action":I
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcn/nubia/edgegesture/EdgeGesture;
 
-    .line 80
     .local v1, "gesture":Lcn/nubia/edgegesture/EdgeGesture;
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 107
     :cond_0
     :goto_0
     :sswitch_0
     return-void
 
-    .line 82
     :sswitch_1
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionExecutor$GestureHandler;->this$0:Lcn/nubia/server/policy/edge/ActionExecutor;
 
@@ -77,7 +69,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 85
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionExecutor$GestureHandler;->this$0:Lcn/nubia/server/policy/edge/ActionExecutor;
 
     # invokes: Lcn/nubia/server/policy/edge/ActionExecutor;->doSingleSlideFunction(ILcn/nubia/edgegesture/EdgeGesture;)V
@@ -85,7 +76,6 @@
 
     goto :goto_0
 
-    .line 88
     :sswitch_2
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionExecutor$GestureHandler;->this$0:Lcn/nubia/server/policy/edge/ActionExecutor;
 
@@ -94,7 +84,6 @@
 
     goto :goto_0
 
-    .line 91
     :sswitch_3
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionExecutor$GestureHandler;->this$0:Lcn/nubia/server/policy/edge/ActionExecutor;
 
@@ -111,7 +100,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 94
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionExecutor$GestureHandler;->this$0:Lcn/nubia/server/policy/edge/ActionExecutor;
 
     # invokes: Lcn/nubia/server/policy/edge/ActionExecutor;->doLoopSlideFunction(I)V
@@ -119,7 +107,6 @@
 
     goto :goto_0
 
-    .line 99
     :sswitch_4
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionExecutor$GestureHandler;->this$0:Lcn/nubia/server/policy/edge/ActionExecutor;
 
@@ -128,7 +115,6 @@
 
     goto :goto_0
 
-    .line 102
     :sswitch_5
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionExecutor$GestureHandler;->this$0:Lcn/nubia/server/policy/edge/ActionExecutor;
 
@@ -137,7 +123,6 @@
 
     goto :goto_0
 
-    .line 80
     :sswitch_data_0
     .sparse-switch
         0x1000 -> :sswitch_1
@@ -156,21 +141,17 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 71
     :try_start_0
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/ActionExecutor$GestureHandler;->handleMessageInner(Landroid/os/Message;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 75
     :goto_0
     return-void
 
-    .line 72
     :catch_0
     move-exception v0
 
-    .line 73
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="6.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/nubia_text_size_medium_no_change" android:textColor="?actionModeCloseTextColor" android:ellipsize="marquee" android:gravity="center" android:id="@id/action_mode_close_button" android:background="?actionModeTextButtonBackground" android:layout_width="wrap_content" android:layout_height="@dimen/nubia_action_bar_default_height" android:maxWidth="@dimen/nubia_action_mode_close_button_max_width" android:text="@android:string/cancel" android:maxLines="1" />
-</LinearLayout>

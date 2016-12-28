@@ -49,55 +49,40 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object v1, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mDescription:Ljava/lang/String;
 
-    .line 33
     iput-object v1, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mSEName:Ljava/lang/String;
 
-    .line 35
     iput-object v1, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mPackageName:Ljava/lang/String;
 
-    .line 36
     iput-object v1, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mServiceName:Ljava/lang/String;
 
-    .line 37
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mModifiable:Z
 
-    .line 38
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mAidGroupList:Ljava/util/List;
 
-    .line 41
     iput-object v1, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mContext:Landroid/content/Context;
 
-    .line 44
     iput p1, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mUserId:I
 
-    .line 45
     iput-object p2, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mDescription:Ljava/lang/String;
 
-    .line 46
     iput-object p3, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mSEName:Ljava/lang/String;
 
-    .line 47
     iput-object p4, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mPackageName:Ljava/lang/String;
 
-    .line 48
     iput-object p5, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mServiceName:Ljava/lang/String;
 
-    .line 49
     iput-boolean p6, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mModifiable:Z
 
-    .line 50
     return-void
 .end method
 
@@ -107,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mBanner:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -117,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget v0, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mBannerId:I
 
     return v0
@@ -127,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 119
     iget-object v0, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -137,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mDescription:Ljava/lang/String;
 
     return-object v0
@@ -147,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mSEName:Ljava/lang/String;
 
     return-object v0
@@ -157,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-boolean v0, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mModifiable:Z
 
     return v0
@@ -167,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mServiceName:Ljava/lang/String;
 
     return-object v0
@@ -178,10 +156,8 @@
     .param p1, "banner"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 81
     iput-object p1, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mBanner:Landroid/graphics/drawable/Drawable;
 
-    .line 82
     return-void
 .end method
 
@@ -190,10 +166,8 @@
     .param p1, "bannerid"    # I
 
     .prologue
-    .line 90
     iput p1, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mBannerId:I
 
-    .line 91
     return-void
 .end method
 
@@ -202,10 +176,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 114
     iput-object p1, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mContext:Landroid/content/Context;
 
-    .line 115
     return-void
 .end method
 
@@ -214,9 +186,7 @@
     .param p1, "nxpNfcController"    # Lcom/nxp/nfc/gsma/internal/NxpNfcController;
 
     .prologue
-    .line 123
     iput-object p1, p0, Lcom/nxp/nfc/gsma/internal/NxpOffHostService;->mNxpNfcController:Lcom/nxp/nfc/gsma/internal/NxpNfcController;
 
-    .line 124
     return-void
 .end method

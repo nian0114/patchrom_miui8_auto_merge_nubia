@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 75
     iput-object p1, p0, Lcn/nubia/server/breathinglight/MissEventObserver$1;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 79
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 80
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.TIME_SET"
 
@@ -62,19 +59,16 @@
 
     if-eqz v1, :cond_2
 
-    .line 82
     :cond_0
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver$1;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     # invokes: Lcn/nubia/server/breathinglight/MissEventObserver;->scheduleAlarm()V
     invoke-static {v1}, Lcn/nubia/server/breathinglight/MissEventObserver;->access$000(Lcn/nubia/server/breathinglight/MissEventObserver;)V
 
-    .line 94
     :cond_1
     :goto_0
     return-void
 
-    .line 83
     :cond_2
     const-string v1, "cn.nubia.intent.action.breathinglight.event_no_disturb_morning"
 
@@ -84,12 +78,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 84
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver$1;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     invoke-virtual {v1}, Lcn/nubia/server/breathinglight/MissEventObserver;->requestBreathingLight()V
 
-    .line 85
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver$1;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     const-string v2, "cn.nubia.intent.action.breathinglight.event_no_disturb_morning"
@@ -103,7 +95,6 @@
 
     goto :goto_0
 
-    .line 88
     :cond_3
     const-string v1, "cn.nubia.intent.action.breathinglight.event_no_disturb_evening"
 
@@ -113,12 +104,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 89
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver$1;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     invoke-virtual {v1}, Lcn/nubia/server/breathinglight/MissEventObserver;->closeBreathingLight()V
 
-    .line 90
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver$1;->this$0:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     const-string v2, "cn.nubia.intent.action.breathinglight.event_no_disturb_evening"

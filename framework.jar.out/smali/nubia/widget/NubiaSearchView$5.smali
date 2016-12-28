@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 601
     iput-object p1, p0, Lnubia/widget/NubiaSearchView$5;->this$0:Lnubia/widget/NubiaSearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,13 +42,11 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 607
     iget-object v0, p0, Lnubia/widget/NubiaSearchView$5;->this$0:Lnubia/widget/NubiaSearchView;
 
     # invokes: Lnubia/widget/NubiaSearchView;->onSubmitQuery()V
     invoke-static {v0}, Lnubia/widget/NubiaSearchView;->access$500(Lnubia/widget/NubiaSearchView;)V
 
-    .line 608
     const/4 v0, 0x1
 
     return v0

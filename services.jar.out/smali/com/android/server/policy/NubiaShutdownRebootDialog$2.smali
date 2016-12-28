@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 66
     iput-object p1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -48,17 +47,14 @@
 
     const/4 v3, 0x1
 
-    .line 69
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 115
     :cond_0
     :goto_0
     return-void
 
-    .line 71
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
@@ -69,13 +65,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 72
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # setter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mRebootFlag:Z
     invoke-static {v1, v2}, Lcom/android/server/policy/NubiaShutdownRebootDialog;->access$302(Lcom/android/server/policy/NubiaShutdownRebootDialog;Z)Z
 
-    .line 73
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mRebootView:Lcom/android/server/policy/NubiaSlideView;
@@ -89,7 +83,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/policy/NubiaSlideView;->setAllowInterrupt(Ljava/lang/Boolean;)V
 
-    .line 74
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mRebootView:Lcom/android/server/policy/NubiaSlideView;
@@ -110,7 +103,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/policy/NubiaSlideView;->setThisViewAlpha(F)V
 
-    .line 75
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mShutDownView:Lcom/android/server/policy/NubiaSlideView;
@@ -141,7 +133,6 @@
 
     add-float v0, v5, v1
 
-    .line 79
     .local v0, "alpha":F
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
@@ -152,7 +143,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 80
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mDarkenLayerImageView:Landroid/widget/ImageView;
@@ -162,7 +152,6 @@
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->postInvalidate()V
 
-    .line 81
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mCancelTextView:Landroid/widget/TextView;
@@ -172,7 +161,6 @@
 
     invoke-virtual {v1}, Landroid/widget/TextView;->postInvalidate()V
 
-    .line 82
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mRebootView:Lcom/android/server/policy/NubiaSlideView;
@@ -182,7 +170,6 @@
 
     invoke-virtual {v1}, Lcom/android/server/policy/NubiaSlideView;->postInvalidate()V
 
-    .line 83
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     iget-object v2, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
@@ -212,7 +199,6 @@
 
     goto/16 :goto_0
 
-    .line 87
     .end local v0    # "alpha":F
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
@@ -224,13 +210,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 88
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # setter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mShutdownFlag:Z
     invoke-static {v1, v2}, Lcom/android/server/policy/NubiaShutdownRebootDialog;->access$202(Lcom/android/server/policy/NubiaShutdownRebootDialog;Z)Z
 
-    .line 89
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mShutDownView:Lcom/android/server/policy/NubiaSlideView;
@@ -244,7 +228,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/policy/NubiaSlideView;->setAllowInterrupt(Ljava/lang/Boolean;)V
 
-    .line 90
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mShutDownView:Lcom/android/server/policy/NubiaSlideView;
@@ -265,7 +248,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/policy/NubiaSlideView;->setThisViewAlpha(F)V
 
-    .line 92
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mRebootView:Lcom/android/server/policy/NubiaSlideView;
@@ -296,7 +278,6 @@
 
     add-float v0, v5, v1
 
-    .line 96
     .restart local v0    # "alpha":F
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
@@ -307,7 +288,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 97
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mDarkenLayerImageView:Landroid/widget/ImageView;
@@ -317,7 +297,6 @@
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->postInvalidate()V
 
-    .line 98
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     iget-object v2, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
@@ -345,7 +324,6 @@
     # invokes: Lcom/android/server/policy/NubiaShutdownRebootDialog;->setCancelAlpha(FF)V
     invoke-static {v1, v2, v3}, Lcom/android/server/policy/NubiaShutdownRebootDialog;->access$800(Lcom/android/server/policy/NubiaShutdownRebootDialog;FF)V
 
-    .line 99
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mShutDownView:Lcom/android/server/policy/NubiaSlideView;
@@ -357,7 +335,6 @@
 
     goto/16 :goto_0
 
-    .line 103
     .end local v0    # "alpha":F
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
@@ -365,7 +342,6 @@
     # setter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mRebootFlag:Z
     invoke-static {v1, v3}, Lcom/android/server/policy/NubiaShutdownRebootDialog;->access$302(Lcom/android/server/policy/NubiaShutdownRebootDialog;Z)Z
 
-    .line 104
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mRebootView:Lcom/android/server/policy/NubiaSlideView;
@@ -379,7 +355,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/policy/NubiaSlideView;->setAllowInterrupt(Ljava/lang/Boolean;)V
 
-    .line 105
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mShutDownView:Lcom/android/server/policy/NubiaSlideView;
@@ -395,14 +370,12 @@
 
     goto/16 :goto_0
 
-    .line 108
     :pswitch_3
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # setter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mShutdownFlag:Z
     invoke-static {v1, v3}, Lcom/android/server/policy/NubiaShutdownRebootDialog;->access$202(Lcom/android/server/policy/NubiaShutdownRebootDialog;Z)Z
 
-    .line 109
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mShutDownView:Lcom/android/server/policy/NubiaSlideView;
@@ -416,7 +389,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/policy/NubiaSlideView;->setAllowInterrupt(Ljava/lang/Boolean;)V
 
-    .line 110
     iget-object v1, p0, Lcom/android/server/policy/NubiaShutdownRebootDialog$2;->this$0:Lcom/android/server/policy/NubiaShutdownRebootDialog;
 
     # getter for: Lcom/android/server/policy/NubiaShutdownRebootDialog;->mRebootView:Lcom/android/server/policy/NubiaSlideView;
@@ -432,7 +404,6 @@
 
     goto/16 :goto_0
 
-    .line 69
     nop
 
     :pswitch_data_0

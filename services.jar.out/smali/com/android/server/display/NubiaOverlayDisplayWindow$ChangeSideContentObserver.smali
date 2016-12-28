@@ -26,18 +26,14 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 858
     iput-object p1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
-    .line 859
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 856
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;->mLastMode:I
 
-    .line 860
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 863
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mContext:Landroid/content/Context;
@@ -61,7 +56,6 @@
 
     move-result-object v0
 
-    .line 864
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "single_ui_mode"
 
@@ -71,7 +65,6 @@
 
     invoke-virtual {v0, v1, v3, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 868
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mContext:Landroid/content/Context;
@@ -91,7 +84,6 @@
 
     iput v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;->mLastMode:I
 
-    .line 870
     return-void
 .end method
 
@@ -100,7 +92,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 879
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mContext:Landroid/content/Context;
@@ -120,7 +111,6 @@
 
     move-result v0
 
-    .line 883
     .local v0, "currentMode":I
     iget v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;->mLastMode:I
 
@@ -132,19 +122,16 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 889
     :cond_0
     :goto_0
     return-void
 
-    .line 886
     :cond_1
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # invokes: Lcom/android/server/display/NubiaOverlayDisplayWindow;->changeSide()V
     invoke-static {v1}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->access$800(Lcom/android/server/display/NubiaOverlayDisplayWindow;)V
 
-    .line 887
     iput v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;->mLastMode:I
 
     goto :goto_0
@@ -154,7 +141,6 @@
     .locals 2
 
     .prologue
-    .line 873
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mContext:Landroid/content/Context;
@@ -166,10 +152,8 @@
 
     move-result-object v0
 
-    .line 874
     .local v0, "resolver":Landroid/content/ContentResolver;
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 875
     return-void
 .end method

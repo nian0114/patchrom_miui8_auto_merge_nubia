@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 16818
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$27;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$27;->val$installedLatch:Ljava/util/concurrent/CountDownLatch;
@@ -59,7 +58,6 @@
     .prologue
     const-wide/16 v4, 0x50
 
-    .line 16823
     :goto_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$27;->val$installedLatch:Ljava/util/concurrent/CountDownLatch;
@@ -76,14 +74,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 16834
     return-void
 
-    .line 16826
     :catch_0
     move-exception v0
 
-    .line 16829
     :cond_0
     iget-wide v0, p0, Lcom/android/server/pm/PackageManagerService$27;->val$startFreeBytes:J
 
@@ -95,7 +90,6 @@
 
     sub-long v6, v0, v2
 
-    .line 16830
     .local v6, "deltaFreeBytes":J
     mul-long v0, v6, v4
 
@@ -113,7 +107,6 @@
 
     add-int/lit8 v8, v0, 0xa
 
-    .line 16832
     .local v8, "progress":I
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$27;->this$0:Lcom/android/server/pm/PackageManagerService;
 

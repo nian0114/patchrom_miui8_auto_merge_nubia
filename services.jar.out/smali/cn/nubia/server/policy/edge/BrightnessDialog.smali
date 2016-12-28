@@ -57,20 +57,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     iput-object p1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mContext:Landroid/content/Context;
 
-    .line 89
     new-instance v1, Lcn/nubia/server/policy/edge/BrightnessDialog$UIHandler;
 
     invoke-direct {v1, p0}, Lcn/nubia/server/policy/edge/BrightnessDialog$UIHandler;-><init>(Lcn/nubia/server/policy/edge/BrightnessDialog;)V
 
     iput-object v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mUiHandler:Landroid/os/Handler;
 
-    .line 90
     const-string v1, "power"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -79,7 +75,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 92
     .local v0, "pm":Landroid/os/PowerManager;
     invoke-virtual {v0}, Landroid/os/PowerManager;->getMinimumScreenBrightnessSetting()I
 
@@ -87,14 +82,12 @@
 
     iput v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mMinimumBacklight:I
 
-    .line 93
     invoke-virtual {v0}, Landroid/os/PowerManager;->getMaximumScreenBrightnessSetting()I
 
     move-result v1
 
     iput v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mMaximumBacklight:I
 
-    .line 94
     new-instance v1, Lcn/nubia/server/policy/edge/BrightnessDialog$1;
 
     iget-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mUiHandler:Landroid/os/Handler;
@@ -103,17 +96,14 @@
 
     iput-object v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mObserver:Landroid/database/ContentObserver;
 
-    .line 100
     iget-object v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mUiHandler:Landroid/os/Handler;
 
     const/4 v2, 0x3
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 101
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->registerReceiver()V
 
-    .line 102
     return-void
 .end method
 
@@ -122,7 +112,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->buildDialog()Landroid/app/Dialog;
 
     move-result-object v0
@@ -135,7 +124,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->showDialog()V
 
     return-void
@@ -146,7 +134,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->dismissDialogWithAnim()V
 
     return-void
@@ -157,7 +144,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->updateView()V
 
     return-void
@@ -168,7 +154,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mUiHandler:Landroid/os/Handler;
 
     return-object v0
@@ -179,7 +164,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->unregisterContentObserver()V
 
     return-void
@@ -190,7 +174,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->registerContentObserver()V
 
     return-void
@@ -201,7 +184,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->dismiss()Z
 
     move-result v0
@@ -215,7 +197,6 @@
     .param p1, "x1"    # Landroid/animation/ObjectAnimator;
 
     .prologue
-    .line 39
     iput-object p1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mExitAnimator:Landroid/animation/ObjectAnimator;
 
     return-object p1
@@ -229,7 +210,6 @@
 
     const/4 v4, 0x0
 
-    .line 118
     new-instance v2, Lcn/nubia/server/policy/edge/BrightnessDialog$3;
 
     iget-object v3, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mContext:Landroid/content/Context;
@@ -238,25 +218,21 @@
 
     iput-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
-    .line 129
     iget-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     invoke-virtual {v2}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
-    .line 130
     .local v1, "window":Landroid/view/Window;
     invoke-virtual {v1, v5}, Landroid/view/Window;->requestFeature(I)Z
 
-    .line 131
     iget-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     const-string v3, "FitBrightnessDialog"
 
     invoke-virtual {v2, v3}, Landroid/app/Dialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 132
     iget-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->initContentView()Landroid/view/View;
@@ -265,12 +241,10 @@
 
     invoke-virtual {v2, v3}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
 
-    .line 133
     iget-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     invoke-virtual {v2, v5}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 134
     iget-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     new-instance v3, Lcn/nubia/server/policy/edge/BrightnessDialog$4;
@@ -279,7 +253,6 @@
 
     invoke-virtual {v2, v3}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 140
     iget-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     new-instance v3, Lcn/nubia/server/policy/edge/BrightnessDialog$5;
@@ -288,10 +261,8 @@
 
     invoke-virtual {v2, v3}, Landroid/app/Dialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
 
-    .line 146
     invoke-virtual {v1, v4}, Landroid/view/Window;->setWindowAnimations(I)V
 
-    .line 147
     const v2, 0x1020002
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
@@ -300,53 +271,43 @@
 
     iput-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mContentView:Landroid/view/View;
 
-    .line 149
     invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    .line 150
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     const/4 v2, 0x0
 
     iput-object v2, v0, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
-    .line 151
     const/16 v2, 0x7e4
 
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 152
     const/4 v2, -0x3
 
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->format:I
 
-    .line 153
     const-string v2, "FitBrightnessDialog"
 
     invoke-virtual {v0, v2}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 154
     invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 155
     new-instance v2, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v2, v4}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 156
     const/4 v2, 0x2
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->clearFlags(I)V
 
-    .line 157
     const v2, 0x40028
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->addFlags(I)V
 
-    .line 160
     iget-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     return-object v2
@@ -356,7 +317,6 @@
     .locals 1
 
     .prologue
-    .line 244
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     if-eqz v0, :cond_0
@@ -369,15 +329,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 245
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 246
     const/4 v0, 0x1
 
-    .line 248
     :goto_0
     return v0
 
@@ -391,19 +348,16 @@
     .locals 4
 
     .prologue
-    .line 252
     const-string v0, "FitBrightnessDialog"
 
     const-string v1, "dismissDialogWithAnim"
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 253
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mExitAnimator:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_2
 
-    .line 254
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mExitAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->isRunning()Z
@@ -412,12 +366,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 277
     :cond_0
     :goto_0
     return-void
 
-    .line 257
     :cond_1
     const-string v0, "FitBrightnessDialog"
 
@@ -425,17 +377,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mExitAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 259
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mExitAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 262
     :cond_2
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
@@ -449,7 +398,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 263
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mContentView:Landroid/view/View;
 
     const-string v1, "alpha"
@@ -466,14 +414,12 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mExitAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 265
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mExitAnimator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v2, 0x96
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 266
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mExitAnimator:Landroid/animation/ObjectAnimator;
 
     new-instance v1, Lcn/nubia/server/policy/edge/BrightnessDialog$6;
@@ -482,14 +428,12 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 275
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mExitAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
     goto :goto_0
 
-    .line 263
     :array_0
     .array-data 4
         0x3f800000    # 1.0f
@@ -501,14 +445,12 @@
     .locals 4
 
     .prologue
-    .line 164
     iget-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    .line 165
     .local v1, "inflater":Landroid/view/LayoutInflater;
     const v2, 0x3030004
 
@@ -518,7 +460,6 @@
 
     move-result-object v0
 
-    .line 167
     .local v0, "contentView":Landroid/view/View;
     const v2, 0x30d0015
 
@@ -530,7 +471,6 @@
 
     iput-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mBrightnessView:Lcn/nubia/server/policy/edge/BrightnessView;
 
-    .line 169
     return-object v0
 .end method
 
@@ -538,7 +478,6 @@
     .locals 3
 
     .prologue
-    .line 183
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -555,10 +494,8 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mCurrentMode:I
 
-    .line 186
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->updateView()V
 
-    .line 187
     return-void
 .end method
 
@@ -568,27 +505,22 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 190
     iget-boolean v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mRegisterObserver:Z
 
     if-eqz v1, :cond_0
 
-    .line 199
     :goto_0
     return-void
 
-    .line 191
     :cond_0
     iput-boolean v3, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mRegisterObserver:Z
 
-    .line 192
     iget-object v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 193
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "screen_brightness"
 
@@ -600,7 +532,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 196
     const-string v1, "screen_brightness_mode"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -618,12 +549,10 @@
     .locals 3
 
     .prologue
-    .line 105
     new-instance v1, Lcn/nubia/server/policy/edge/BrightnessDialog$2;
 
     invoke-direct {v1, p0}, Lcn/nubia/server/policy/edge/BrightnessDialog$2;-><init>(Lcn/nubia/server/policy/edge/BrightnessDialog;)V
 
-    .line 112
     .local v1, "receiver":Landroid/content/BroadcastReceiver;
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -631,18 +560,15 @@
 
     invoke-direct {v0, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 113
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v2, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 114
     iget-object v2, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 115
     return-void
 .end method
 
@@ -652,19 +578,16 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 239
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mUiHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 240
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mUiHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x3e8
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 241
     return-void
 .end method
 
@@ -672,7 +595,6 @@
     .locals 3
 
     .prologue
-    .line 214
     const-string v0, "FitBrightnessDialog"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -697,34 +619,28 @@
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 215
     iget-boolean v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mSetShow:Z
 
     if-eqz v0, :cond_0
 
-    .line 228
     :goto_0
     return-void
 
-    .line 216
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mSetShow:Z
 
-    .line 217
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     if-nez v0, :cond_1
 
-    .line 218
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->buildDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
-    .line 220
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
@@ -734,29 +650,23 @@
 
     if-nez v0, :cond_2
 
-    .line 221
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->updateParams()V
 
-    .line 222
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->reInitView()V
 
-    .line 223
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mContentView:Landroid/view/View;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 224
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
-    .line 226
     :cond_2
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->resetTimeout()V
 
-    .line 227
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mSetShow:Z
@@ -768,22 +678,18 @@
     .locals 2
 
     .prologue
-    .line 202
     iget-boolean v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mRegisterObserver:Z
 
     if-nez v0, :cond_0
 
-    .line 205
     :goto_0
     return-void
 
-    .line 203
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mRegisterObserver:Z
 
-    .line 204
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -801,12 +707,10 @@
     .locals 2
 
     .prologue
-    .line 231
     iget-object v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     if-eqz v1, :cond_0
 
-    .line 232
     iget-object v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     invoke-virtual {v1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -817,13 +721,11 @@
 
     move-result-object v0
 
-    .line 233
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     const/16 v1, 0x11
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 234
     iget-object v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     invoke-virtual {v1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -832,7 +734,6 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 236
     .end local v0    # "lp":Landroid/view/WindowManager$LayoutParams;
     :cond_0
     return-void
@@ -842,23 +743,19 @@
     .locals 5
 
     .prologue
-    .line 173
     iget-object v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mDialog:Landroid/app/Dialog;
 
     if-nez v1, :cond_1
 
-    .line 180
     :cond_0
     :goto_0
     return-void
 
-    .line 174
     :cond_1
     iget v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mCurrentMode:I
 
     if-nez v1, :cond_0
 
-    .line 175
     iget-object v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -873,7 +770,6 @@
 
     move-result v0
 
-    .line 177
     .local v0, "value":I
     iget-object v1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mBrightnessView:Lcn/nubia/server/policy/edge/BrightnessView;
 
@@ -889,7 +785,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcn/nubia/server/policy/edge/BrightnessView;->refreshBrightness(II)V
 
-    .line 178
     const-string v1, "FitBrightnessDialog"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -923,14 +818,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 208
     const-string v0, "FitBrightnessDialog"
 
     const-string v1, "show() "
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 209
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mUiHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->hasMessages(I)Z
@@ -939,11 +832,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 211
     :goto_0
     return-void
 
-    .line 210
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog;->mUiHandler:Landroid/os/Handler;
 

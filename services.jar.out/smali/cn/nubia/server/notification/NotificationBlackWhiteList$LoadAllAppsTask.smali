@@ -37,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 166
     iput-object p1, p0, Lcn/nubia/server/notification/NotificationBlackWhiteList$LoadAllAppsTask;->this$0:Lcn/nubia/server/notification/NotificationBlackWhiteList;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 166
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/notification/NotificationBlackWhiteList$LoadAllAppsTask;->doInBackground([Ljava/lang/Void;)Ljava/util/Map;
@@ -78,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 170
     iget-object v0, p0, Lcn/nubia/server/notification/NotificationBlackWhiteList$LoadAllAppsTask;->this$0:Lcn/nubia/server/notification/NotificationBlackWhiteList;
 
     # invokes: Lcn/nubia/server/notification/NotificationBlackWhiteList;->getAllAppsFlag()Ljava/util/Map;
@@ -93,7 +90,6 @@
     .locals 0
 
     .prologue
-    .line 166
     check-cast p1, Ljava/util/Map;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/notification/NotificationBlackWhiteList$LoadAllAppsTask;->onPostExecute(Ljava/util/Map;)V
@@ -115,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 175
     .local p1, "flags":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     if-eqz p1, :cond_0
 
@@ -125,7 +120,6 @@
 
     if-nez v0, :cond_0
 
-    .line 176
     iget-object v0, p0, Lcn/nubia/server/notification/NotificationBlackWhiteList$LoadAllAppsTask;->this$0:Lcn/nubia/server/notification/NotificationBlackWhiteList;
 
     # getter for: Lcn/nubia/server/notification/NotificationBlackWhiteList;->mFlags:Ljava/util/Map;
@@ -135,7 +129,6 @@
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 177
     iget-object v0, p0, Lcn/nubia/server/notification/NotificationBlackWhiteList$LoadAllAppsTask;->this$0:Lcn/nubia/server/notification/NotificationBlackWhiteList;
 
     # getter for: Lcn/nubia/server/notification/NotificationBlackWhiteList;->mFlags:Ljava/util/Map;
@@ -145,7 +138,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 179
     :cond_0
     return-void
 .end method

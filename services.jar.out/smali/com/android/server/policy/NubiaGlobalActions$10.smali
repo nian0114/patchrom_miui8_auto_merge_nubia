@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 555
     iput-object p1, p0, Lcom/android/server/policy/NubiaGlobalActions$10;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 559
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$10;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 

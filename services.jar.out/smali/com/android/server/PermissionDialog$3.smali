@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 192
     iput-object p1, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -35,10 +34,8 @@
     .locals 7
 
     .prologue
-    .line 310
     const/4 v3, 0x0
 
-    .line 311
     .local v3, "result":Z
     iget-object v4, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -51,11 +48,9 @@
 
     move-result-object v2
 
-    .line 312
     .local v2, "pm":Landroid/content/pm/PackageManager;
     const/4 v1, 0x0
 
-    .line 314
     .local v1, "packageInfo":Landroid/content/pm/PackageInfo;
     :try_start_0
     iget-object v4, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
@@ -73,11 +68,9 @@
 
     move-result-object v1
 
-    .line 321
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 322
     iget-object v4, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v4, v4, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
@@ -88,16 +81,13 @@
 
     const/4 v3, 0x1
 
-    .line 324
     :cond_0
     :goto_1
     return v3
 
-    .line 317
     :catch_0
     move-exception v0
 
-    .line 318
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v4, "PermissionDialog"
 
@@ -130,7 +120,6 @@
 
     goto :goto_0
 
-    .line 322
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_1
     const/4 v3, 0x0
@@ -143,7 +132,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 370
     :try_start_0
     iget-object v2, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -156,7 +144,6 @@
 
     move-result-object v1
 
-    .line 371
     .local v1, "pm":Landroid/content/pm/PackageManager;
     const/16 v2, 0x1000
 
@@ -168,20 +155,16 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 376
     .end local v1    # "pm":Landroid/content/pm/PackageManager;
     :goto_0
     return-object v2
 
-    .line 373
     :catch_0
     move-exception v0
 
-    .line 374
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    .line 376
     const/4 v2, 0x0
 
     goto :goto_0
@@ -193,7 +176,6 @@
     .param p2, "requestedPermissions"    # [Ljava/lang/String;
 
     .prologue
-    .line 301
     move-object v0, p2
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -208,7 +190,6 @@
 
     aget-object v3, v0, v1
 
-    .line 302
     .local v3, "requestedPermission":Ljava/lang/String;
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -216,22 +197,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 303
     const/4 v4, 0x1
 
-    .line 306
     .end local v3    # "requestedPermission":Ljava/lang/String;
     :goto_1
     return v4
 
-    .line 301
     .restart local v3    # "requestedPermission":Ljava/lang/String;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 306
     .end local v3    # "requestedPermission":Ljava/lang/String;
     :cond_1
     const/4 v4, 0x0
@@ -243,10 +220,8 @@
     .locals 7
 
     .prologue
-    .line 328
     const/4 v3, 0x0
 
-    .line 329
     .local v3, "result":Z
     iget-object v4, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -259,11 +234,9 @@
 
     move-result-object v2
 
-    .line 330
     .local v2, "pm":Landroid/content/pm/PackageManager;
     const/4 v1, 0x0
 
-    .line 332
     .local v1, "packageInfo":Landroid/content/pm/PackageInfo;
     :try_start_0
     iget-object v4, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
@@ -281,11 +254,9 @@
 
     move-result-object v1
 
-    .line 339
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 340
     iget-object v4, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v4, v4, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -305,16 +276,13 @@
     :cond_0
     const/4 v3, 0x1
 
-    .line 343
     :cond_1
     :goto_1
     return v3
 
-    .line 335
     :catch_0
     move-exception v0
 
-    .line 336
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v4, "PermissionDialog"
 
@@ -347,7 +315,6 @@
 
     goto :goto_0
 
-    .line 340
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_2
     const/4 v3, 0x0
@@ -361,14 +328,11 @@
     .param p2, "mode"    # I
 
     .prologue
-    .line 272
     const/4 v7, 0x1
 
-    .line 273
     .local v7, "isSetIgnored":Z
     const/4 v6, 0x1
 
-    .line 274
     .local v6, "isSetAsked":Z
     move-object/from16 v0, p1
 
@@ -376,7 +340,6 @@
 
     new-array v10, v15, [I
 
-    .line 275
     .local v10, "ops":[I
     const/4 v3, 0x0
 
@@ -388,7 +351,6 @@
 
     if-ge v3, v15, :cond_0
 
-    .line 276
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
@@ -404,12 +366,10 @@
 
     aput v15, v10, v3
 
-    .line 275
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 278
     :cond_0
     move-object/from16 v0, p0
 
@@ -450,7 +410,6 @@
 
     move-result-object v12
 
-    .line 280
     .local v12, "packageOps":Ljava/util/List;, "Ljava/util/List<Landroid/app/AppOpsManager$PackageOps;>;"
     invoke-interface {v12}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -469,7 +428,6 @@
 
     check-cast v11, Landroid/app/AppOpsManager$PackageOps;
 
-    .line 281
     .local v11, "packageOp":Landroid/app/AppOpsManager$PackageOps;
     invoke-virtual {v11}, Landroid/app/AppOpsManager$PackageOps;->getOps()Ljava/util/List;
 
@@ -493,7 +451,6 @@
 
     check-cast v9, Landroid/app/AppOpsManager$OpEntry;
 
-    .line 282
     .local v9, "opEntry":Landroid/app/AppOpsManager$OpEntry;
     invoke-virtual {v9}, Landroid/app/AppOpsManager$OpEntry;->getMode()I
 
@@ -510,7 +467,6 @@
     :goto_2
     and-int/2addr v7, v15
 
-    .line 283
     invoke-virtual {v9}, Landroid/app/AppOpsManager$OpEntry;->getMode()I
 
     move-result v15
@@ -535,22 +491,18 @@
     :goto_3
     and-int/2addr v6, v15
 
-    .line 284
     goto :goto_1
 
-    .line 282
     :cond_2
     const/4 v15, 0x0
 
     goto :goto_2
 
-    .line 283
     :cond_3
     const/4 v15, 0x0
 
     goto :goto_3
 
-    .line 286
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v9    # "opEntry":Landroid/app/AppOpsManager$OpEntry;
     .end local v11    # "packageOp":Landroid/app/AppOpsManager$PackageOps;
@@ -570,7 +522,6 @@
 
     move-result-object v14
 
-    .line 287
     .local v14, "requestedPermissions":[Ljava/lang/String;
     move-object/from16 v2, p1
 
@@ -586,7 +537,6 @@
 
     aget-object v13, v2, v4
 
-    .line 288
     .local v13, "permission":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -596,19 +546,16 @@
 
     if-nez v15, :cond_6
 
-    .line 297
     .end local v13    # "permission":Ljava/lang/String;
     :cond_5
     return-void
 
-    .line 291
     .restart local v13    # "permission":Ljava/lang/String;
     :cond_6
     if-nez v7, :cond_7
 
     if-eqz v6, :cond_8
 
-    .line 292
     :cond_7
     move-object/from16 v0, p0
 
@@ -616,13 +563,11 @@
 
     invoke-direct {v0, v1, v13}, Lcom/android/server/PermissionDialog$3;->setGreatPermissionModeIgnoreFixed(ILjava/lang/String;)V
 
-    .line 287
     :goto_5
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_4
 
-    .line 294
     :cond_8
     move-object/from16 v0, p0
 
@@ -637,7 +582,6 @@
     .param p2, "remember"    # Z
 
     .prologue
-    .line 240
     :try_start_0
     const-string v3, "com.android.server.AppOpsService"
 
@@ -645,7 +589,6 @@
 
     move-result-object v0
 
-    .line 242
     .local v0, "AppOpsService":Ljava/lang/Class;
     const-string v3, "notifyOperation"
 
@@ -687,7 +630,6 @@
 
     move-result-object v2
 
-    .line 245
     .local v2, "notifyOperation":Ljava/lang/reflect/Method;
     iget-object v3, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -761,17 +703,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 250
     .end local v0    # "AppOpsService":Ljava/lang/Class;
     .end local v2    # "notifyOperation":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
-    .line 247
     :catch_0
     move-exception v1
 
-    .line 248
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -783,7 +722,6 @@
     .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 359
     iget-object v1, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mContext:Landroid/content/Context;
@@ -795,7 +733,6 @@
 
     move-result-object v0
 
-    .line 361
     .local v0, "pm":Landroid/content/pm/PackageManager;
     iget-object v1, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -813,10 +750,8 @@
 
     invoke-virtual {v0, v1, p1, v2}, Landroid/content/pm/PackageManager;->grantRuntimePermission(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 362
     const/4 v3, 0x3
 
-    .line 364
     .local v3, "flagMask":I
     iget-object v1, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -838,7 +773,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/pm/PackageManager;->updatePermissionFlags(Ljava/lang/String;Ljava/lang/String;IILandroid/os/UserHandle;)V
 
-    .line 366
     return-void
 .end method
 
@@ -850,10 +784,8 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 347
     if-ne p1, v3, :cond_0
 
-    .line 348
     iget-object v1, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mContext:Landroid/content/Context;
@@ -865,7 +797,6 @@
 
     move-result-object v0
 
-    .line 349
     .local v0, "pm":Landroid/content/pm/PackageManager;
     iget-object v1, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -883,7 +814,6 @@
 
     invoke-virtual {v0, v1, p2, v2}, Landroid/content/pm/PackageManager;->revokeRuntimePermission(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 351
     iget-object v1, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mPackageName:Ljava/lang/String;
@@ -904,7 +834,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/pm/PackageManager;->updatePermissionFlags(Ljava/lang/String;Ljava/lang/String;IILandroid/os/UserHandle;)V
 
-    .line 356
     .end local v0    # "pm":Landroid/content/pm/PackageManager;
     :cond_0
     return-void
@@ -918,19 +847,15 @@
     .prologue
     const/16 v3, 0x8
 
-    .line 380
     if-nez p2, :cond_1
 
-    .line 394
     :cond_0
     :goto_0
     return-void
 
-    .line 383
     :cond_1
     if-nez p1, :cond_2
 
-    .line 384
     iget-object v0, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mPM:Landroid/content/pm/PackageManager;
@@ -958,13 +883,11 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/pm/PackageManager;->updatePermissionFlags(Ljava/lang/String;Ljava/lang/String;IILandroid/os/UserHandle;)V
 
-    .line 388
     :cond_2
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 389
     iget-object v0, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mPM:Landroid/content/pm/PackageManager;
@@ -1000,19 +923,16 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 253
     invoke-direct {p0}, Lcom/android/server/PermissionDialog$3;->isSystemApp()Z
 
     move-result v8
 
     if-eqz v8, :cond_1
 
-    .line 269
     :cond_0
     :goto_0
     return-void
 
-    .line 256
     :cond_1
     invoke-direct {p0}, Lcom/android/server/PermissionDialog$3;->appSupportsRuntimePermissions()Z
 
@@ -1020,7 +940,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 257
     sget-object v0, Lcom/android/server/PermissionDialog;->PERMISSION_HAS_CHILDREN:[[Ljava/lang/String;
 
     .local v0, "arr$":[[Ljava/lang/String;
@@ -1041,7 +960,6 @@
 
     aget-object v7, v0, v3
 
-    .line 258
     .local v7, "permissions":[Ljava/lang/String;
     move-object v1, v7
 
@@ -1058,7 +976,6 @@
 
     aget-object v6, v1, v2
 
-    .line 259
     .local v6, "permission":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -1082,16 +999,13 @@
 
     if-eqz v8, :cond_2
 
-    .line 261
     invoke-direct {p0, v7, p1}, Lcom/android/server/PermissionDialog$3;->linkingGreatPermission([Ljava/lang/String;I)V
 
-    .line 258
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 257
     .end local v6    # "permission":Ljava/lang/String;
     :cond_3
     add-int/lit8 v2, v3, 0x1
@@ -1102,7 +1016,6 @@
     .restart local v3    # "i$":I
     goto :goto_1
 
-    .line 266
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v3    # "i$":I
     .end local v5    # "len$":I
@@ -1142,7 +1055,6 @@
 
     const/16 v8, 0x8
 
-    .line 195
     iget-object v3, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mChoice:Landroid/widget/CheckBox;
@@ -1154,28 +1066,22 @@
 
     move-result v2
 
-    .line 196
     .local v2, "remember":Z
     const/4 v0, 0x0
 
-    .line 197
     .local v0, "isTimeDown":Z
     iget v3, p1, Landroid/os/Message;->what:I
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 224
     const/4 v1, 0x1
 
-    .line 225
     .local v1, "mode":I
     const/4 v2, 0x0
 
-    .line 227
     :goto_0
     if-nez v0, :cond_0
 
-    .line 228
     iget-object v3, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mHandler:Landroid/os/Handler;
@@ -1185,7 +1091,6 @@
 
     invoke-virtual {v3, v9}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 229
     iget-object v3, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mHandler:Landroid/os/Handler;
@@ -1195,58 +1100,45 @@
 
     invoke-virtual {v3, v8}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 230
     invoke-direct {p0, v1, v2}, Lcom/android/server/PermissionDialog$3;->notifyOperation(IZ)V
 
-    .line 231
     iget-object v3, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     invoke-virtual {v3}, Lcom/android/server/PermissionDialog;->dismiss()V
 
-    .line 232
     if-eqz v2, :cond_0
 
-    .line 233
     invoke-direct {p0, v1}, Lcom/android/server/PermissionDialog$3;->tryToLinkingGreatPermission(I)V
 
-    .line 236
     :cond_0
     return-void
 
-    .line 199
     .end local v1    # "mode":I
     :sswitch_0
     const/4 v1, 0x0
 
-    .line 200
     .restart local v1    # "mode":I
     goto :goto_0
 
-    .line 202
     .end local v1    # "mode":I
     :sswitch_1
     const/4 v1, 0x1
 
-    .line 203
     .restart local v1    # "mode":I
     goto :goto_0
 
-    .line 205
     .end local v1    # "mode":I
     :sswitch_2
     const/4 v1, 0x1
 
-    .line 206
     .restart local v1    # "mode":I
     const/4 v0, 0x1
 
-    .line 207
     iget-object v3, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     # operator-- for: Lcom/android/server/PermissionDialog;->mCountDown:I
     invoke-static {v3}, Lcom/android/server/PermissionDialog;->access$210(Lcom/android/server/PermissionDialog;)I
 
-    .line 208
     iget-object v3, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mCountDown:I
@@ -1256,7 +1148,6 @@
 
     if-lez v3, :cond_1
 
-    .line 209
     iget-object v3, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mHandler:Landroid/os/Handler;
@@ -1277,7 +1168,6 @@
 
     invoke-virtual {v3, v4, v6, v7}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 216
     :goto_1
     iget-object v3, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -1330,7 +1220,6 @@
 
     goto :goto_0
 
-    .line 212
     :cond_1
     iget-object v3, p0, Lcom/android/server/PermissionDialog$3;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -1354,19 +1243,15 @@
 
     goto :goto_1
 
-    .line 220
     .end local v1    # "mode":I
     :sswitch_3
     const/4 v1, 0x1
 
-    .line 221
     .restart local v1    # "mode":I
     const/4 v2, 0x0
 
-    .line 222
     goto/16 :goto_0
 
-    .line 197
     nop
 
     :sswitch_data_0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 205
     iput-object p1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$1;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 207
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 213
     :goto_0
     return-void
 
-    .line 209
     :pswitch_0
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService$1;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
@@ -58,14 +54,12 @@
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/MissEventObserver;->requestBreathingLight()V
 
-    .line 210
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService$1;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightService;->checkBatteryState()V
 
     goto :goto_0
 
-    .line 207
     nop
 
     :pswitch_data_0

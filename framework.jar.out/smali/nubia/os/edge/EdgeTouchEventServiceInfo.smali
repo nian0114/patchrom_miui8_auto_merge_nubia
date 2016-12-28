@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Landroid/app/ServiceProxyInfo;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 20
     const-class v0, Lnubia/os/edge/EdgeTouchManager;
 
     return-object v0
@@ -54,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 15
     const-string v0, "nubia.edge.touch"
 
     return-object v0
@@ -64,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 9
     invoke-virtual {p0}, Lnubia/os/edge/EdgeTouchEventServiceInfo;->getServiceProxy()Lnubia/os/edge/EdgeTouchManager;
 
     move-result-object v0
@@ -76,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 25
     invoke-static {}, Lnubia/os/edge/EdgeTouchManager;->getInstance()Lnubia/os/edge/EdgeTouchManager;
 
     move-result-object v0

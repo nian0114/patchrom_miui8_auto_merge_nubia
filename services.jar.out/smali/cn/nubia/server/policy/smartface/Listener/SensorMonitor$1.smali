@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 44
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "arg1"    # I
 
     .prologue
-    .line 84
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 49
     :try_start_0
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
@@ -66,12 +63,10 @@
 
     if-nez v2, :cond_1
 
-    .line 79
     :cond_0
     :goto_0
     return-void
 
-    .line 51
     :cond_1
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
@@ -82,7 +77,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 52
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     new-instance v3, Lcn/nubia/server/policy/smartface/Listener/NoHallNearCtrl;
@@ -99,7 +93,6 @@
     # setter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
     invoke-static {v2, v3}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->access$202(Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;)Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
-    .line 65
     :goto_1
     const-string v2, "SmartFaceSensorManager"
 
@@ -145,7 +138,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
@@ -155,7 +147,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 69
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
@@ -167,7 +158,6 @@
 
     move-result v1
 
-    .line 70
     .local v1, "sensorState":I
     const/4 v2, -0x1
 
@@ -186,7 +176,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 72
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     int-to-float v3, v1
@@ -194,7 +183,6 @@
     # setter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->pendingSensorState:F
     invoke-static {v2, v3}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->access$702(Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;F)F
 
-    .line 73
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
@@ -225,7 +213,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;->registerCallback(Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;Landroid/os/Handler;Lcom/android/server/policy/PhoneWindowManagerWapper;)V
 
-    .line 74
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mContext:Landroid/content/Context;
@@ -235,7 +222,6 @@
 
     invoke-static {v2, v1}, Lcn/nubia/server/policy/smartface/util/SysPropUtils;->setSmartFaceDisplayFlag(Landroid/content/Context;I)V
 
-    .line 75
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
@@ -249,18 +235,15 @@
 
     goto/16 :goto_0
 
-    .line 76
     .end local v1    # "sensorState":I
     :catch_0
     move-exception v0
 
-    .line 77
     .local v0, "exception":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 53
     .end local v0    # "exception":Ljava/lang/Exception;
     :cond_2
     :try_start_1
@@ -273,7 +256,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 54
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     new-instance v3, Lcn/nubia/server/policy/smartface/Listener/LatticeHallNearCtrl;
@@ -290,7 +272,6 @@
     # setter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
     invoke-static {v2, v3}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->access$202(Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;)Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
-    .line 55
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mCallback:Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
@@ -302,7 +283,6 @@
 
     goto/16 :goto_1
 
-    .line 56
     :cond_3
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
@@ -313,7 +293,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 57
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     new-instance v3, Lcn/nubia/server/policy/smartface/Listener/FlipHallNearCtrl;
@@ -330,7 +309,6 @@
     # setter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
     invoke-static {v2, v3}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->access$202(Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;)Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
-    .line 58
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mCallback:Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
@@ -342,7 +320,6 @@
 
     goto/16 :goto_1
 
-    .line 59
     :cond_4
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
@@ -353,7 +330,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 60
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     new-instance v3, Lcn/nubia/server/policy/smartface/Listener/WindowHallNearCtrl;
@@ -370,7 +346,6 @@
     # setter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
     invoke-static {v2, v3}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->access$202(Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;)Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
-    .line 61
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     # getter for: Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mCallback:Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
@@ -382,7 +357,6 @@
 
     goto/16 :goto_1
 
-    .line 63
     :cond_5
     iget-object v2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 

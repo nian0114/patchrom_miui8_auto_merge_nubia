@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:key="split_screen_slide_up_category" style="@style/Preference.Nubia.FirstCategory" />
-    <android.preference.nubia.CheckBoxPreference android:title="@string/split_screen_mode_title" android:key="start_split_screen" android:summaryOn="@string/split_screen_mode_summary" android:summaryOff="@string/split_screen_mode_summary" />
-    <Preference android:title="@string/split_screen_slide_up_titile" android:key="split_screen_slide_up" />
-</PreferenceScreen>

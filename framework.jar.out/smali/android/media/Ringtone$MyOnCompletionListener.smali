@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 491
     iput-object p1, p0, Landroid/media/Ringtone$MyOnCompletionListener;->this$0:Landroid/media/Ringtone;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 494
     # getter for: Landroid/media/Ringtone;->sActiveRingtones:Ljava/util/ArrayList;
     invoke-static {}, Landroid/media/Ringtone;->access$000()Ljava/util/ArrayList;
 
@@ -49,7 +47,6 @@
 
     monitor-enter v1
 
-    .line 495
     :try_start_0
     # getter for: Landroid/media/Ringtone;->sActiveRingtones:Ljava/util/ArrayList;
     invoke-static {}, Landroid/media/Ringtone;->access$000()Ljava/util/ArrayList;
@@ -60,7 +57,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 497
     iget-object v0, p0, Landroid/media/Ringtone$MyOnCompletionListener;->this$0:Landroid/media/Ringtone;
 
     # getter for: Landroid/media/Ringtone;->mAudioFocusChangeListener:Landroid/media/MediaPlayer$OnCompletionListener;
@@ -70,7 +66,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 498
     iget-object v0, p0, Landroid/media/Ringtone$MyOnCompletionListener;->this$0:Landroid/media/Ringtone;
 
     # getter for: Landroid/media/Ringtone;->mAudioFocusChangeListener:Landroid/media/MediaPlayer$OnCompletionListener;
@@ -87,14 +82,11 @@
 
     invoke-interface {v0, v2}, Landroid/media/MediaPlayer$OnCompletionListener;->onCompletion(Landroid/media/MediaPlayer;)V
 
-    .line 501
     :cond_0
     monitor-exit v1
 
-    .line 502
     return-void
 
-    .line 501
     :catchall_0
     move-exception v0
 

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/powersave_actionbar_title"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
-    <android.preference.nubia.CheckBoxPreference android:title="@string/restrict_cpu_title" android:key="restrict_cpu" android:summary="@string/restrict_cpu_summary" />
-    <android.preference.nubia.CheckBoxPreference android:title="@string/screen_save_title" android:key="screen_save" android:summary="@string/screen_save_summary" android:defaultValue="true" />
-    <android.preference.nubia.CheckBoxPreference android:title="@string/turnoff_all_connection_title" android:key="turnoff_all_connection" android:summary="@string/turnoff_all_connection_summary" />
-    <android.preference.nubia.CheckBoxPreference android:title="@string/turnoff_haptic_feedback_title" android:key="turnoff_haptic_feedback" android:summary="@string/turnoff_haptic_feedback_summary" android:defaultValue="true" />
-</PreferenceScreen>

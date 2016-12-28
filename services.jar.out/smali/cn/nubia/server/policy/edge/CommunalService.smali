@@ -67,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 55
     const/4 v0, 0x0
 
     sput-object v0, Lcn/nubia/server/policy/edge/CommunalService;->instance:Lcn/nubia/server/policy/edge/CommunalService;
@@ -83,29 +82,22 @@
     .param p4, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 196
     new-instance v0, Lcn/nubia/server/policy/edge/CommunalService$2;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/policy/edge/CommunalService$2;-><init>(Lcn/nubia/server/policy/edge/CommunalService;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRunnale:Ljava/lang/Runnable;
 
-    .line 71
     iput-object p1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
 
-    .line 72
     iput-object p2, p0, Lcn/nubia/server/policy/edge/CommunalService;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 73
     iput-object p3, p0, Lcn/nubia/server/policy/edge/CommunalService;->mGestureSettings:Lcn/nubia/server/policy/edge/GestureSettings;
 
-    .line 74
     iput-object p4, p0, Lcn/nubia/server/policy/edge/CommunalService;->mHandler:Landroid/os/Handler;
 
-    .line 75
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
 
     const-string v1, "activity"
@@ -118,14 +110,12 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mActivityManager:Landroid/app/ActivityManager;
 
-    .line 76
     new-instance v0, Lcn/nubia/server/policy/edge/RecentTasks;
 
     invoke-direct {v0, p1}, Lcn/nubia/server/policy/edge/RecentTasks;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRecentTasks:Lcn/nubia/server/policy/edge/RecentTasks;
 
-    .line 77
     return-void
 .end method
 
@@ -134,7 +124,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/CommunalService;
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -146,7 +135,6 @@
     .param p1, "x1"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 41
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/CommunalService;->finishScreenShot(Landroid/graphics/Bitmap;)V
 
     return-void
@@ -157,7 +145,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/CommunalService;
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -169,7 +156,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 41
     iput-boolean p1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mIsSingleSlide:Z
 
     return p1
@@ -180,7 +166,6 @@
     .param p1, "singleSlide"    # Z
 
     .prologue
-    .line 205
     iget-boolean v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mIsSingleSlide:Z
 
     if-eqz v0, :cond_0
@@ -191,25 +176,20 @@
 
     if-nez p1, :cond_0
 
-    .line 206
     const/4 v0, 0x0
 
-    .line 211
     :goto_0
     return v0
 
-    .line 208
     :cond_0
     iput-boolean p1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mIsSingleSlide:Z
 
-    .line 209
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRunnale:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 210
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRunnale:Ljava/lang/Runnable;
@@ -218,122 +198,123 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 211
     const/4 v0, 0x1
 
     goto :goto_0
 .end method
 
 .method private finishScreenShot(Landroid/graphics/Bitmap;)V
-    .locals 5
+    .locals 6
     .param p1, "bm"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 179
-    iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcn/nubia/server/policy/edge/CommunalService;->mHandler:Landroid/os/Handler;
 
-    iget-object v2, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRunnale:Ljava/lang/Runnable;
+    iget-object v3, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRunnale:Ljava/lang/Runnable;
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 180
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    iput-boolean v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mIsScreenshotTakeFinished:Z
+    iput-boolean v2, p0, Lcn/nubia/server/policy/edge/CommunalService;->mIsScreenshotTakeFinished:Z
 
-    .line 181
-    iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotBitmap:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
-    .line 182
-    iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotBitmap:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 183
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotBitmap:Landroid/graphics/Bitmap;
+    iput-object v2, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotBitmap:Landroid/graphics/Bitmap;
 
-    .line 185
     :cond_0
     iput-object p1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotBitmap:Landroid/graphics/Bitmap;
 
-    .line 186
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/CommunalService;->onScreenshotTake()V
 
-    .line 187
-    new-instance v0, Landroid/os/Bundle;
+    new-instance v1, Landroid/os/Bundle;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 188
-    .local v0, "extras":Landroid/os/Bundle;
-    const-string v1, "bitmap"
+    .local v1, "extras":Landroid/os/Bundle;
+    const-string v2, "bitmap"
 
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 189
-    const-string v1, "FitCommunalService"
+    const-string v2, "FitCommunalService"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "takeScreenShot finish, bitmap: "
+    const-string v4, "takeScreenShot finish, bitmap: "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    iget-object v3, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotBitmap:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v1, v2}, Lcn/nubia/server/policy/edge/LogUtils;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/LogUtils;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 190
-    iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
+    :try_start_0
+    iget-object v2, p0, Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    const-string v2, "content://cn.nubia.launcher.settings"
-
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string v3, "launcherFit"
+    const-string v3, "content://cn.nubia.launcher.settings"
 
-    const-string v4, "initBitmap"
+    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    move-result-object v3
 
-    .line 193
-    const-string v1, "FitCommunalService"
+    const-string v4, "launcherFit"
 
-    const-string v2, "takeScreenShot initMagicBook"
+    const-string v5, "initBitmap"
 
-    invoke-static {v1, v2}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v3, v4, v5, v1}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 194
+    :goto_0
+    const-string v2, "FitCommunalService"
+
+    const-string v3, "takeScreenShot initMagicBook"
+
+    invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
+
+    :catch_0
+    move-exception v0
+
+    .local v0, "e":Ljava/lang/IllegalArgumentException;
+    const-string v2, "FitCommunalService"
+
+    const-string v3, "Exception happened "
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
 .end method
 
 .method public static getDefault()Lcn/nubia/server/policy/edge/CommunalService;
     .locals 1
 
     .prologue
-    .line 91
     sget-object v0, Lcn/nubia/server/policy/edge/CommunalService;->instance:Lcn/nubia/server/policy/edge/CommunalService;
 
     return-object v0
@@ -343,7 +324,6 @@
     .locals 1
 
     .prologue
-    .line 397
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->getFocusedWindow()Landroid/view/WindowManagerPolicy$WindowState;
@@ -361,42 +341,35 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 80
     sget-object v0, Lcn/nubia/server/policy/edge/CommunalService;->instance:Lcn/nubia/server/policy/edge/CommunalService;
 
     if-nez v0, :cond_1
 
-    .line 81
     const-class v1, Lcn/nubia/server/policy/edge/CommunalService;
 
     monitor-enter v1
 
-    .line 82
     :try_start_0
     sget-object v0, Lcn/nubia/server/policy/edge/CommunalService;->instance:Lcn/nubia/server/policy/edge/CommunalService;
 
     if-nez v0, :cond_0
 
-    .line 83
     new-instance v0, Lcn/nubia/server/policy/edge/CommunalService;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcn/nubia/server/policy/edge/CommunalService;-><init>(Landroid/content/Context;Lcom/android/server/policy/PhoneWindowManager;Lcn/nubia/server/policy/edge/GestureSettings;Landroid/os/Handler;)V
 
     sput-object v0, Lcn/nubia/server/policy/edge/CommunalService;->instance:Lcn/nubia/server/policy/edge/CommunalService;
 
-    .line 85
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 87
     :cond_1
     sget-object v0, Lcn/nubia/server/policy/edge/CommunalService;->instance:Lcn/nubia/server/policy/edge/CommunalService;
 
     return-object v0
 
-    .line 85
     :catchall_0
     move-exception v0
 
@@ -412,29 +385,23 @@
     .locals 5
 
     .prologue
-    .line 371
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/CommunalService;->getFocusedWindow()Landroid/view/WindowManagerPolicy$WindowState;
 
     move-result-object v1
 
-    .line 372
     .local v1, "focusWindow":Landroid/view/WindowManagerPolicy$WindowState;
     if-nez v1, :cond_0
 
-    .line 373
     const/4 v2, 0x0
 
-    .line 375
     :goto_0
     return v2
 
-    .line 374
     :cond_0
     invoke-interface {v1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    .line 375
     .local v0, "arrts":Landroid/view/WindowManager$LayoutParams;
     const-string v2, "GlobalActions"
 
@@ -453,7 +420,6 @@
     .locals 1
 
     .prologue
-    .line 294
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardLocked()Z
@@ -467,7 +433,6 @@
     .locals 2
 
     .prologue
-    .line 298
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -503,10 +468,8 @@
     .param p4, "type"    # I
 
     .prologue
-    .line 381
     const/4 v0, 0x1
 
-    .line 382
     .local v0, "matched":Z
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -514,7 +477,6 @@
 
     if-nez v1, :cond_0
 
-    .line 383
     invoke-virtual {p1}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -523,7 +485,6 @@
 
     move-result v0
 
-    .line 385
     :cond_0
     if-eqz v0, :cond_1
 
@@ -533,27 +494,23 @@
 
     if-nez v1, :cond_1
 
-    .line 386
     iget-object v1, p1, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
 
     invoke-virtual {p3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 388
     :cond_1
     if-eqz v0, :cond_2
 
     if-lez p4, :cond_2
 
-    .line 389
     iget v1, p1, Landroid/view/WindowManager$LayoutParams;->type:I
 
     if-lt p4, v1, :cond_3
 
     const/4 v0, 0x1
 
-    .line 391
     :cond_2
     :goto_0
     const-string v1, "FitCommunalService"
@@ -606,10 +563,8 @@
 
     invoke-static {v1, v2}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 393
     return v0
 
-    .line 389
     :cond_3
     const/4 v0, 0x0
 
@@ -622,7 +577,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 286
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -652,18 +606,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 315
     if-nez p1, :cond_0
 
-    .line 323
     :goto_0
     return v1
 
-    .line 316
     :cond_0
     const/4 v0, 0x0
 
-    .line 317
     .local v0, "same":Z
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -671,7 +621,6 @@
 
     if-nez v2, :cond_1
 
-    .line 318
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -680,7 +629,6 @@
 
     move-result v0
 
-    .line 320
     :cond_1
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -688,7 +636,6 @@
 
     if-nez v2, :cond_2
 
-    .line 321
     if-eqz v0, :cond_3
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
@@ -707,13 +654,11 @@
     :goto_1
     move v1, v0
 
-    .line 323
     goto :goto_0
 
     :cond_3
     move v0, v1
 
-    .line 321
     goto :goto_1
 .end method
 
@@ -724,27 +669,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 352
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/CommunalService;->getFocusedWindow()Landroid/view/WindowManagerPolicy$WindowState;
 
     move-result-object v1
 
-    .line 353
     .local v1, "focusWindow":Landroid/view/WindowManagerPolicy$WindowState;
     if-nez v1, :cond_1
 
-    .line 359
     :cond_0
     :goto_0
     return v2
 
-    .line 355
     :cond_1
     invoke-interface {v1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    .line 356
     .local v0, "arrts":Landroid/view/WindowManager$LayoutParams;
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -752,7 +692,6 @@
 
     if-nez v3, :cond_0
 
-    .line 357
     iget-object v2, v0, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -768,7 +707,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 306
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -783,17 +721,14 @@
 
     if-nez v1, :cond_0
 
-    .line 307
     const-string v0, "FitCommunalService"
 
     const-string v1, "setup wizard hasn\'t finished."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     const/4 v0, 0x1
 
-    .line 310
     :cond_0
     return v0
 .end method
@@ -804,7 +739,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 290
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -829,7 +763,6 @@
     .locals 1
 
     .prologue
-    .line 302
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->isTopIsFullscreen()Z
@@ -843,29 +776,23 @@
     .locals 5
 
     .prologue
-    .line 363
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/CommunalService;->getFocusedWindow()Landroid/view/WindowManagerPolicy$WindowState;
 
     move-result-object v1
 
-    .line 364
     .local v1, "focusWindow":Landroid/view/WindowManagerPolicy$WindowState;
     if-nez v1, :cond_0
 
-    .line 365
     const/4 v2, 0x0
 
-    .line 367
     :goto_0
     return v2
 
-    .line 366
     :cond_0
     invoke-interface {v1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    .line 367
     .local v0, "arrts":Landroid/view/WindowManager$LayoutParams;
     const-string v2, ""
 
@@ -884,20 +811,17 @@
     .locals 6
 
     .prologue
-    .line 327
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.MAIN"
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 328
     .local v1, "intent":Landroid/content/Intent;
     const-string v3, "android.intent.category.HOME"
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 329
     iget-object v3, p0, Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -908,13 +832,11 @@
 
     move-result-object v2
 
-    .line 331
     .local v2, "launcherComponent":Landroid/content/ComponentName;
     invoke-virtual {p0}, Lcn/nubia/server/policy/edge/CommunalService;->getCurrentRunAppComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 332
     .local v0, "currentComponent":Landroid/content/ComponentName;
     const-string v3, "cn.nubia.launcher"
 
@@ -926,14 +848,11 @@
 
     if-eqz v3, :cond_0
 
-    .line 333
     const/4 v3, 0x0
 
-    .line 340
     :goto_0
     return v3
 
-    .line 335
     :cond_0
     const-string v3, "cn.nubia.launcher"
 
@@ -945,7 +864,6 @@
 
     if-nez v3, :cond_1
 
-    .line 337
     const-string v3, "FitCommunalService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -968,12 +886,10 @@
 
     invoke-static {v3, v4}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 338
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 340
     :cond_1
     iget-object v3, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRecentTasks:Lcn/nubia/server/policy/edge/RecentTasks;
 
@@ -988,20 +904,17 @@
     .locals 4
 
     .prologue
-    .line 344
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.MAIN"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 345
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "android.intent.category.HOME"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 346
     iget-object v2, p0, Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1012,7 +925,6 @@
 
     move-result-object v1
 
-    .line 348
     .local v1, "launcherComponent":Landroid/content/ComponentName;
     const-string v2, "cn.nubia.zbiglauncher.preset"
 
@@ -1034,25 +946,21 @@
 
     const/4 v4, 0x0
 
-    .line 455
     invoke-virtual {p0, v4}, Lcn/nubia/server/policy/edge/CommunalService;->getSingleSlideFuns(I)I
 
     move-result v1
 
-    .line 456
     .local v1, "funs":I
     const/16 v5, 0x2712
 
     if-ne v5, v1, :cond_2
 
-    .line 457
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/CommunalService;->getNextAppIndex(Z)I
 
     move-result v5
 
     if-gez v5, :cond_1
 
-    .line 472
     :cond_0
     :goto_0
     return v3
@@ -1060,10 +968,8 @@
     :cond_1
     move v3, v4
 
-    .line 457
     goto :goto_0
 
-    .line 459
     :cond_2
     if-eqz p1, :cond_3
 
@@ -1074,11 +980,9 @@
 
     move-result-object v2
 
-    .line 461
     .local v2, "startComponent":Landroid/content/ComponentName;
     if-nez v2, :cond_4
 
-    .line 462
     const-string v4, "FitCommunalService"
 
     const-string v5, "single slide for next component is null !"
@@ -1087,21 +991,18 @@
 
     goto :goto_0
 
-    .line 459
     .end local v2    # "startComponent":Landroid/content/ComponentName;
     :cond_3
     const/16 v5, 0x4e24
 
     goto :goto_1
 
-    .line 465
     .restart local v2    # "startComponent":Landroid/content/ComponentName;
     :cond_4
     invoke-virtual {p0}, Lcn/nubia/server/policy/edge/CommunalService;->getCurrentRunAppComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 467
     .local v0, "currentComponent":Landroid/content/ComponentName;
     if-eqz v0, :cond_5
 
@@ -1122,7 +1023,6 @@
     :cond_5
     move v3, v4
 
-    .line 472
     goto :goto_0
 .end method
 
@@ -1130,7 +1030,6 @@
     .locals 3
 
     .prologue
-    .line 107
     iget-boolean v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mIsScreenshotTakeFinished:Z
 
     if-eqz v0, :cond_0
@@ -1139,7 +1038,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 108
     const-string v1, "FitCommunalService"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1169,23 +1067,19 @@
 
     invoke-static {v1, v0}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 109
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenShotCallback:Lcn/nubia/server/policy/edge/effects/resloader/TakeCurrentScreenCallback;
 
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotBitmap:Landroid/graphics/Bitmap;
 
     invoke-interface {v0, v1}, Lcn/nubia/server/policy/edge/effects/resloader/TakeCurrentScreenCallback;->onScreenUploaded(Landroid/graphics/Bitmap;)V
 
-    .line 110
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenShotCallback:Lcn/nubia/server/policy/edge/effects/resloader/TakeCurrentScreenCallback;
 
-    .line 112
     :cond_0
     return-void
 
-    .line 108
     :cond_1
     const/4 v0, 0x0
 
@@ -1199,22 +1093,17 @@
     .param p1, "gesture"    # Lcn/nubia/edgegesture/EdgeGesture;
 
     .prologue
-    .line 420
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/CommunalService;->getCancelGestureAction(Lcn/nubia/edgegesture/EdgeGesture;)I
 
     move-result v0
 
-    .line 421
     .local v0, "cancelAction":I
     if-eqz v0, :cond_0
 
-    .line 422
     invoke-virtual {p1, v0}, Lcn/nubia/edgegesture/EdgeGesture;->updateAction(I)V
 
-    .line 423
     const/4 v1, 0x1
 
-    .line 425
     :goto_0
     return v1
 
@@ -1229,46 +1118,38 @@
     .param p1, "gesture"    # Lcn/nubia/edgegesture/EdgeGesture;
 
     .prologue
-    .line 429
     invoke-virtual {p1}, Lcn/nubia/edgegesture/EdgeGesture;->getAction()I
 
     move-result v0
 
-    .line 430
     .local v0, "action":I
     sparse-switch v0, :sswitch_data_0
 
-    .line 451
     const/4 v1, 0x0
 
     :goto_0
     return v1
 
-    .line 434
     :sswitch_0
     const/16 v1, 0x1003
 
     goto :goto_0
 
-    .line 437
     :sswitch_1
     const/16 v1, 0x3003
 
     goto :goto_0
 
-    .line 443
     :sswitch_2
     const/16 v1, 0x4003
 
     goto :goto_0
 
-    .line 447
     :sswitch_3
     const/16 v1, 0x2003
 
     goto :goto_0
 
-    .line 430
     nop
 
     :sswitch_data_0
@@ -1293,20 +1174,17 @@
     .locals 3
 
     .prologue
-    .line 493
     iget-object v2, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRecentTasks:Lcn/nubia/server/policy/edge/RecentTasks;
 
     invoke-virtual {v2}, Lcn/nubia/server/policy/edge/RecentTasks;->getTargetAppIndex()I
 
     move-result v1
 
-    .line 494
     .local v1, "index":I
     invoke-virtual {p0}, Lcn/nubia/server/policy/edge/CommunalService;->getCurrentRunAppComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 495
     .local v0, "component":Landroid/content/ComponentName;
     iget-object v2, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRecentTasks:Lcn/nubia/server/policy/edge/RecentTasks;
 
@@ -1324,11 +1202,9 @@
 
     if-eqz v2, :cond_1
 
-    .line 496
     :cond_0
     const/4 v1, -0x1
 
-    .line 497
     :cond_1
     return v1
 .end method
@@ -1337,7 +1213,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRecentTasks:Lcn/nubia/server/policy/edge/RecentTasks;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/edge/RecentTasks;->getCurrentRunAppComponent()Landroid/content/ComponentName;
@@ -1351,21 +1226,17 @@
     .locals 2
 
     .prologue
-    .line 99
     invoke-virtual {p0}, Lcn/nubia/server/policy/edge/CommunalService;->getCurrentRunAppComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 100
     .local v0, "component":Landroid/content/ComponentName;
     if-eqz v0, :cond_0
 
-    .line 101
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 102
     :goto_0
     return-object v1
 
@@ -1382,7 +1253,6 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 501
     const/4 v6, 0x0
 
     invoke-virtual {p0, v6}, Lcn/nubia/server/policy/edge/CommunalService;->getRecentTaskList(Z)Ljava/util/List;
@@ -1393,7 +1263,6 @@
 
     move-result v4
 
-    .line 502
     .local v4, "recentTaskNum":I
     iget-object v6, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRecentTasks:Lcn/nubia/server/policy/edge/RecentTasks;
 
@@ -1401,17 +1270,14 @@
 
     move-result v2
 
-    .line 503
     .local v2, "maxNum":I
     invoke-static {v4, v2}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
-    .line 505
     .local v1, "length":I
     if-gtz v1, :cond_1
 
-    .line 506
     const-string v6, "FitCommunalService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1436,22 +1302,18 @@
 
     move v3, v5
 
-    .line 532
     :cond_0
     :goto_0
     return v3
 
-    .line 509
     :cond_1
     invoke-virtual {p0}, Lcn/nubia/server/policy/edge/CommunalService;->getCurrentAppIndex()I
 
     move-result v0
 
-    .line 510
     .local v0, "index":I
     move v3, v0
 
-    .line 511
     .local v3, "nextIndex":I
     const-string v6, "FitCommunalService"
 
@@ -1485,18 +1347,14 @@
 
     invoke-static {v6, v7}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 512
     if-eqz p1, :cond_3
 
-    .line 513
     add-int/lit8 v6, v1, -0x1
 
     if-ne v3, v6, :cond_2
 
-    .line 514
     const/4 v3, 0x0
 
-    .line 527
     :goto_1
     const-string v6, "FitCommunalService"
 
@@ -1530,10 +1388,8 @@
 
     invoke-static {v6, v7}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 528
     if-ne v3, v0, :cond_0
 
-    .line 529
     const-string v6, "FitCommunalService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1568,20 +1424,16 @@
 
     move v3, v5
 
-    .line 530
     goto :goto_0
 
-    .line 516
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 519
     :cond_3
     if-gez v3, :cond_4
 
-    .line 520
     const/4 v6, 0x1
 
     add-int/lit8 v7, v1, -0x1
@@ -1592,16 +1444,13 @@
 
     goto :goto_1
 
-    .line 521
     :cond_4
     if-nez v3, :cond_5
 
-    .line 522
     add-int/lit8 v3, v1, -0x1
 
     goto :goto_1
 
-    .line 524
     :cond_5
     add-int/lit8 v3, v3, -0x1
 
@@ -1622,14 +1471,12 @@
 
     const/4 v4, 0x0
 
-    .line 551
     iget-object v5, p0, Lcn/nubia/server/policy/edge/CommunalService;->mGestureSettings:Lcn/nubia/server/policy/edge/GestureSettings;
 
     invoke-virtual {v5}, Lcn/nubia/server/policy/edge/GestureSettings;->getSingleSlideStartAppInfo()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 552
     .local v3, "value":Ljava/lang/String;
     const-string v5, "0"
 
@@ -1647,7 +1494,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 555
     :cond_0
     const-string v5, "FitCommunalService"
 
@@ -1655,11 +1501,9 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     :goto_0
     return-object v4
 
-    .line 559
     :cond_1
     const-string v5, ";"
 
@@ -1667,7 +1511,6 @@
 
     move-result-object v1
 
-    .line 560
     .local v1, "apps":[Ljava/lang/String;
     if-eqz v1, :cond_2
 
@@ -1675,7 +1518,6 @@
 
     if-eq v5, v8, :cond_3
 
-    .line 561
     :cond_2
     const-string v5, "FitCommunalService"
 
@@ -1685,7 +1527,6 @@
 
     goto :goto_0
 
-    .line 565
     :cond_3
     const/16 v5, 0x4e23
 
@@ -1693,7 +1534,6 @@
 
     aget-object v0, v1, v6
 
-    .line 566
     .local v0, "app":Ljava/lang/String;
     :goto_1
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1702,7 +1542,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 567
     const-string v5, "FitCommunalService"
 
     const-string v6, "app is empty"
@@ -1711,14 +1550,12 @@
 
     goto :goto_0
 
-    .line 565
     .end local v0    # "app":Ljava/lang/String;
     :cond_4
     aget-object v0, v1, v7
 
     goto :goto_1
 
-    .line 571
     .restart local v0    # "app":Ljava/lang/String;
     :cond_5
     const-string v5, ","
@@ -1727,7 +1564,6 @@
 
     move-result-object v2
 
-    .line 572
     .local v2, "component":[Ljava/lang/String;
     if-eqz v2, :cond_6
 
@@ -1735,7 +1571,6 @@
 
     if-eq v5, v8, :cond_7
 
-    .line 573
     :cond_6
     const-string v5, "FitCommunalService"
 
@@ -1745,7 +1580,6 @@
 
     goto :goto_0
 
-    .line 577
     :cond_7
     aget-object v5, v2, v6
 
@@ -1763,7 +1597,6 @@
 
     if-eqz v5, :cond_9
 
-    .line 578
     :cond_8
     const-string v5, "FitCommunalService"
 
@@ -1773,7 +1606,6 @@
 
     goto :goto_0
 
-    .line 582
     :cond_9
     new-instance v4, Landroid/content/ComponentName;
 
@@ -1799,7 +1631,6 @@
     .end annotation
 
     .prologue
-    .line 489
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcn/nubia/server/policy/edge/CommunalService;->getRecentTaskList(Z)Ljava/util/List;
@@ -1823,7 +1654,6 @@
     .end annotation
 
     .prologue
-    .line 230
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRecentTasks:Lcn/nubia/server/policy/edge/RecentTasks;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/policy/edge/RecentTasks;->getRecentTaskList(Z)Ljava/util/List;
@@ -1838,7 +1668,6 @@
     .param p1, "callback"    # Lcn/nubia/server/policy/edge/effects/resloader/TakeCurrentScreenCallback;
 
     .prologue
-    .line 115
     const-string v1, "FitCommunalService"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1868,16 +1697,12 @@
 
     invoke-static {v1, v0}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
     iput-object p1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenShotCallback:Lcn/nubia/server/policy/edge/effects/resloader/TakeCurrentScreenCallback;
 
-    .line 117
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/CommunalService;->onScreenshotTake()V
 
-    .line 118
     return-void
 
-    .line 115
     :cond_0
     const/4 v0, 0x0
 
@@ -1889,14 +1714,12 @@
     .param p1, "leftOrRight"    # I
 
     .prologue
-    .line 541
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mGestureSettings:Lcn/nubia/server/policy/edge/GestureSettings;
 
     invoke-virtual {v1}, Lcn/nubia/server/policy/edge/GestureSettings;->getSingleSlideStartAppInfo()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 542
     .local v0, "value":Ljava/lang/String;
     const-string v1, "0"
 
@@ -1914,11 +1737,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 545
     :cond_0
     const/16 v1, 0x2712
 
-    .line 547
     :goto_0
     return v1
 
@@ -1933,12 +1754,10 @@
     .param p1, "isUp"    # Z
 
     .prologue
-    .line 220
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/CommunalService;->getNextAppIndex(Z)I
 
     move-result v0
 
-    .line 221
     .local v0, "index":I
     const-string v1, "FitCommunalService"
 
@@ -1972,14 +1791,11 @@
 
     invoke-static {v1, v2}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 222
     if-gez v0, :cond_0
 
-    .line 226
     :goto_0
     return v0
 
-    .line 225
     :cond_0
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRecentTasks:Lcn/nubia/server/policy/edge/RecentTasks;
 
@@ -1993,7 +1809,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 586
     const/16 v0, 0x4000
 
     if-eq v0, p1, :cond_0
@@ -2002,7 +1817,6 @@
 
     if-ne v0, p1, :cond_1
 
-    .line 588
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mGestureSettings:Lcn/nubia/server/policy/edge/GestureSettings;
 
@@ -2012,17 +1826,14 @@
 
     move-result v0
 
-    .line 603
     :goto_0
     return v0
 
-    .line 590
     :cond_1
     const/16 v0, 0x1000
 
     if-ne v0, p1, :cond_2
 
-    .line 591
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mGestureSettings:Lcn/nubia/server/policy/edge/GestureSettings;
 
     const-string v1, "nubia_edge_single_move_switch"
@@ -2033,13 +1844,11 @@
 
     goto :goto_0
 
-    .line 593
     :cond_2
     const/16 v0, 0x6000
 
     if-ne v0, p1, :cond_3
 
-    .line 594
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mGestureSettings:Lcn/nubia/server/policy/edge/GestureSettings;
 
     const-string v1, "nubia_edge_double_click"
@@ -2050,13 +1859,11 @@
 
     goto :goto_0
 
-    .line 596
     :cond_3
     const/16 v0, 0x2000
 
     if-ne v0, p1, :cond_4
 
-    .line 597
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mGestureSettings:Lcn/nubia/server/policy/edge/GestureSettings;
 
     const-string v1, "nubia_edge_double_side_move"
@@ -2067,13 +1874,11 @@
 
     goto :goto_0
 
-    .line 599
     :cond_4
     const/16 v0, 0x3000
 
     if-ne v0, p1, :cond_5
 
-    .line 600
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mGestureSettings:Lcn/nubia/server/policy/edge/GestureSettings;
 
     const-string v1, "nubia_edge_move_loop"
@@ -2084,7 +1889,6 @@
 
     goto :goto_0
 
-    .line 603
     :cond_5
     const/4 v0, 0x1
 
@@ -2095,12 +1899,10 @@
     .locals 2
 
     .prologue
-    .line 536
     invoke-virtual {p0}, Lcn/nubia/server/policy/edge/CommunalService;->getCurrentRunAppComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 537
     .local v0, "component":Landroid/content/ComponentName;
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRecentTasks:Lcn/nubia/server/policy/edge/RecentTasks;
 
@@ -2115,12 +1917,10 @@
     .locals 3
 
     .prologue
-    .line 476
     invoke-virtual {p0}, Lcn/nubia/server/policy/edge/CommunalService;->getCurrentRunAppComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 477
     .local v0, "component":Landroid/content/ComponentName;
     const-string v1, "cn.nubia.launcher"
 
@@ -2132,7 +1932,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 478
     const-string v1, "cn.nubia.launcher"
 
     const-string v2, "com.android.launcher3.Launcher"
@@ -2143,24 +1942,20 @@
 
     if-eqz v1, :cond_0
 
-    .line 480
     const-string v1, "cn.nubia.launcher"
 
     invoke-direct {p0, v1}, Lcn/nubia/server/policy/edge/CommunalService;->isSameFocusWindow(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 484
     :goto_0
     return v1
 
-    .line 482
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 484
     :cond_1
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRecentTasks:Lcn/nubia/server/policy/edge/RecentTasks;
 
@@ -2182,12 +1977,10 @@
 
     const/4 v2, 0x0
 
-    .line 234
     invoke-virtual {p0}, Lcn/nubia/server/policy/edge/CommunalService;->getCurrentRunAppComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 235
     .local v0, "component":Landroid/content/ComponentName;
     const-string v3, "cn.nubia.edge"
 
@@ -2224,23 +2017,19 @@
     :cond_0
     move v1, v2
 
-    .line 282
     :cond_1
     :goto_0
     return v1
 
-    .line 243
     :cond_2
     const/16 v3, 0x2000
 
     if-eq v3, p1, :cond_1
 
-    .line 247
     const/16 v3, 0x6000
 
     if-ne v3, p1, :cond_3
 
-    .line 248
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/CommunalService;->isLandscape()Z
 
     move-result v3
@@ -2249,10 +2038,8 @@
 
     move v1, v2
 
-    .line 249
     goto :goto_0
 
-    .line 255
     :cond_3
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/CommunalService;->isKeyguardLocked()Z
 
@@ -2307,10 +2094,8 @@
     :cond_4
     move v1, v2
 
-    .line 262
     goto :goto_0
 
-    .line 265
     :cond_5
     const/16 v3, 0x4000
 
@@ -2318,11 +2103,9 @@
 
     if-ne v5, p1, :cond_1
 
-    .line 267
     :cond_6
     if-ne v5, p1, :cond_7
 
-    .line 268
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/CommunalService;->isThirdPartyLauncher()Z
 
     move-result v3
@@ -2331,10 +2114,8 @@
 
     move v1, v2
 
-    .line 269
     goto :goto_0
 
-    .line 271
     :cond_7
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/CommunalService;->isLandscape()Z
 
@@ -2344,10 +2125,8 @@
 
     move v1, v2
 
-    .line 272
     goto :goto_0
 
-    .line 274
     :cond_8
     const-string v3, "cn.nubia.gallery3d"
 
@@ -2369,7 +2148,6 @@
 
     if-nez v3, :cond_1
 
-    .line 279
     invoke-direct {p0}, Lcn/nubia/server/policy/edge/CommunalService;->isStateBarHide()Z
 
     move-result v3
@@ -2385,19 +2163,16 @@
     .locals 2
 
     .prologue
-    .line 121
     const-string v0, "FitCommunalService"
 
     const-string v1, "removeScreenShotCallback"
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 122
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenShotCallback:Lcn/nubia/server/policy/edge/effects/resloader/TakeCurrentScreenCallback;
 
-    .line 123
     return-void
 .end method
 
@@ -2408,18 +2183,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 126
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/CommunalService;->canCancelPreScreenShot(Z)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 176
     :goto_0
     return-void
 
-    .line 127
     :cond_0
     const-string v0, "FitCommunalService"
 
@@ -2443,22 +2215,18 @@
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 128
     iput-boolean v3, p0, Lcn/nubia/server/policy/edge/CommunalService;->mIsScreenshotTakeFinished:Z
 
-    .line 129
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_1
 
-    .line 130
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotLoader:Landroid/os/AsyncTask;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 132
     :cond_1
     new-instance v0, Lcn/nubia/server/policy/edge/CommunalService$1;
 
@@ -2466,7 +2234,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotLoader:Landroid/os/AsyncTask;
 
-    .line 175
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mScreenshotLoader:Landroid/os/AsyncTask;
 
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
@@ -2491,12 +2258,10 @@
 
     const/4 v2, 0x0
 
-    .line 401
     invoke-virtual {p1}, Lcn/nubia/edgegesture/EdgeGesture;->getAction()I
 
     move-result v0
 
-    .line 402
     .local v0, "action":I
     if-eq v0, v4, :cond_0
 
@@ -2504,11 +2269,9 @@
 
     if-ne v0, v3, :cond_4
 
-    .line 404
     :cond_0
     if-ne v0, v4, :cond_2
 
-    .line 405
     .local v1, "isUp":Z
     :goto_0
     invoke-direct {p0, v1}, Lcn/nubia/server/policy/edge/CommunalService;->needCancelSingleSlideGesture(Z)Z
@@ -2517,7 +2280,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 406
     if-eqz v1, :cond_3
 
     const v2, 0x10001
@@ -2525,7 +2287,6 @@
     :goto_1
     invoke-virtual {p1, v2}, Lcn/nubia/edgegesture/EdgeGesture;->updateAction(I)V
 
-    .line 417
     .end local v1    # "isUp":Z
     :cond_1
     :goto_2
@@ -2534,17 +2295,14 @@
     :cond_2
     move v1, v2
 
-    .line 404
     goto :goto_0
 
-    .line 406
     .restart local v1    # "isUp":Z
     :cond_3
     const v2, 0x10002
 
     goto :goto_1
 
-    .line 409
     .end local v1    # "isUp":Z
     :cond_4
     if-eq v0, v5, :cond_5
@@ -2553,11 +2311,9 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 411
     :cond_5
     if-ne v0, v5, :cond_6
 
-    .line 412
     .restart local v1    # "isUp":Z
     :goto_3
     invoke-direct {p0, v1}, Lcn/nubia/server/policy/edge/CommunalService;->needCancelSingleSlideGesture(Z)Z
@@ -2566,7 +2322,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 413
     if-eqz v1, :cond_7
 
     const v2, 0x40001
@@ -2580,10 +2335,8 @@
     :cond_6
     move v1, v2
 
-    .line 411
     goto :goto_3
 
-    .line 413
     .restart local v1    # "isUp":Z
     :cond_7
     const v2, 0x40002
@@ -2596,11 +2349,9 @@
     .param p1, "changeBySwitch"    # Z
 
     .prologue
-    .line 216
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService;->mRecentTasks:Lcn/nubia/server/policy/edge/RecentTasks;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/policy/edge/RecentTasks;->updateRecentTasksFlag(Z)V
 
-    .line 217
     return-void
 .end method

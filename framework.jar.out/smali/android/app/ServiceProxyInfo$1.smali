@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 17
     .local p0, "this":Landroid/app/ServiceProxyInfo$1;, "Landroid/app/ServiceProxyInfo.1;"
     iput-object p1, p0, Landroid/app/ServiceProxyInfo$1;->this$0:Landroid/app/ServiceProxyInfo;
 
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 20
     .local p0, "this":Landroid/app/ServiceProxyInfo$1;, "Landroid/app/ServiceProxyInfo.1;"
     iget-object v0, p0, Landroid/app/ServiceProxyInfo$1;->this$0:Landroid/app/ServiceProxyInfo;
 

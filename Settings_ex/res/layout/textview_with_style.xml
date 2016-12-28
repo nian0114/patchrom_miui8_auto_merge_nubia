@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall" android:paddingStart="?android:listPreferredItemPaddingLeft" android:paddingEnd="?android:listPreferredItemPaddingRight"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/new_plus_icon" android:paddingEnd="@dimen/nubia_preference_item_padding_inner" android:layout_marginEnd="?android:listPreferredItemPaddingEnd" />
-    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_new" android:drawableRight="?preferenceRightArrow" />
-    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/summary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</LinearLayout>

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 69
     iput-object p1, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$1;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 2
 
     .prologue
-    .line 72
     const-string v0, "supersnapshot"
 
     const-string v1, "about to enter fast snapshot"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$1;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     # getter for: Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->mContext:Landroid/content/Context;
@@ -63,7 +60,6 @@
 
     invoke-virtual {v0, v1}, Lnubia/util/FrameworkDataStatisticsManager;->onEventWithStartOnce(Ljava/lang/String;)V
 
-    .line 75
     iget-object v0, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$1;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     # getter for: Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
@@ -73,6 +69,5 @@
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->takeScreenshotProxy()V
 
-    .line 76
     return-void
 .end method

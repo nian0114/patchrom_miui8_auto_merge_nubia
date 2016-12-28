@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 855
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$6;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 859
     iget-object v0, p0, Lcom/android/server/net/NetworkStatsService$6;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # getter for: Lcom/android/server/net/NetworkStatsService;->mStatsLock:Ljava/lang/Object;
@@ -49,20 +47,16 @@
 
     monitor-enter v1
 
-    .line 860
     :try_start_0
     iget-object v0, p0, Lcom/android/server/net/NetworkStatsService$6;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # invokes: Lcom/android/server/net/NetworkStatsService;->shutdownLocked()V
     invoke-static {v0}, Lcom/android/server/net/NetworkStatsService;->access$1400(Lcom/android/server/net/NetworkStatsService;)V
 
-    .line 861
     monitor-exit v1
 
-    .line 862
     return-void
 
-    .line 861
     :catchall_0
     move-exception v0
 

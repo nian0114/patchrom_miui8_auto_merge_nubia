@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 370
     iput-object p1, p0, Lcom/android/server/policy/NubiaGlobalActions$5;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 373
     iget-object v3, p0, Lcom/android/server/policy/NubiaGlobalActions$5;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mContext:Landroid/content/Context;
@@ -67,7 +65,6 @@
 
     move v0, v1
 
-    .line 376
     .local v0, "airplaneModeOn":Z
     :goto_0
     iget-object v4, p0, Lcom/android/server/policy/NubiaGlobalActions$5;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
@@ -80,7 +77,6 @@
     # invokes: Lcom/android/server/policy/NubiaGlobalActions;->changeAirplaneModeSystemSetting(Z)V
     invoke-static {v4, v3}, Lcom/android/server/policy/NubiaGlobalActions;->access$500(Lcom/android/server/policy/NubiaGlobalActions;Z)V
 
-    .line 377
     iget-object v3, p0, Lcom/android/server/policy/NubiaGlobalActions$5;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     if-nez v0, :cond_2
@@ -89,7 +85,6 @@
     # invokes: Lcom/android/server/policy/NubiaGlobalActions;->setAirplaneView(Z)V
     invoke-static {v3, v1}, Lcom/android/server/policy/NubiaGlobalActions;->access$600(Lcom/android/server/policy/NubiaGlobalActions;Z)V
 
-    .line 378
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$5;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mDialog:Lcom/android/server/policy/NubiaShutdownRebootDialog;
@@ -99,26 +94,22 @@
 
     invoke-virtual {v1}, Lcom/android/server/policy/NubiaShutdownRebootDialog;->dismiss()V
 
-    .line 379
     return-void
 
     .end local v0    # "airplaneModeOn":Z
     :cond_0
     move v0, v2
 
-    .line 373
     goto :goto_0
 
     .restart local v0    # "airplaneModeOn":Z
     :cond_1
     move v3, v2
 
-    .line 376
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 377
     goto :goto_2
 .end method
