@@ -76,36 +76,14 @@
     <uses-permission android:name="android.permission.PEERS_MAC_ADDRESS"/>
     <application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_settings" android:label="@string/settings_label" android:requiredForAllUsers="true" android:supportsRtl="true" android:taskAffinity="" android:theme="@style/Theme.Settings" android:usesCleartextTraffic="true">
         <uses-library android:name="nubia-tab" android:required="false"/>
-        <uses-library android:name="cn.nubia.umeng" android:required="false"/>
-        <meta-data android:name="UMENG_APPKEY" android:value="553a10b867e58ef212000313"/>
-        <meta-data android:name="UMENG_CHANNEL" android:value="nubia"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/settings_label_launcher" android:launchMode="singleTask" android:name="Settings" android:screenOrientation="@nubia:integer/nubia_screen_orientation" android:taskAffinity="com.android.settings_ex" android:theme="@style/Theme.SettingsMain">
-            <intent-filter android:priority="1">
-                <action android:name="android.settings.SETTINGS"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-            <meta-data android:name="com.android.settings_ex.PRIMARY_PROFILE_CONTROLLED" android:value="true"/>
-        </activity>
-        <activity-alias android:label="@string/settings_label_launcher" android:launchMode="singleTask" android:name="Settings" android:targetActivity="Settings" android:taskAffinity="com.android.settings_ex">
+        <activity android:label="@string/settings_label_launcher" android:launchMode="singleTask" android:name="Settings" android:targetActivity="Settings" android:taskAffinity="com.android.settings_ex">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity-alias>
-        <receiver android:name="ManagedProfileSetup">
-            <intent-filter>
-                <action android:name="android.intent.action.USER_INITIALIZE"/>
-                <action android:name="android.intent.action.PRE_BOOT_COMPLETED"/>
-            </intent-filter>
-        </receiver>
-        <activity android:configChanges="mcc|mnc" android:name=".SubSettings" android:parentActivityName="Settings" android:screenOrientation="@nubia:integer/nubia_screen_orientation" android:taskAffinity="com.android.settings_ex"/>
-        <activity android:label="@string/settings_shortcut" android:name="CreateShortcut" android:screenOrientation="@nubia:integer/nubia_screen_orientation" android:theme="@style/Theme.SubSettingsDialogWhenLarge">
-            <intent-filter>
-                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
         </activity>
+        <activity android:configChanges="mcc|mnc" android:name=".SubSettings" android:parentActivityName="Settings" android:screenOrientation="@nubia:integer/nubia_screen_orientation" android:taskAffinity="com.android.settings_ex"/>
         <activity android:label="@string/wireless_networks_settings_title" android:name="Settings$WirelessSettingsActivity" android:parentActivityName="Settings" android:screenOrientation="@nubia:integer/nubia_screen_orientation" android:taskAffinity="com.android.settings_ex">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.WIRELESS_SETTINGS"/>
