@@ -76,6 +76,9 @@
     <uses-permission android:name="android.permission.PEERS_MAC_ADDRESS"/>
     <application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_settings" android:label="@string/settings_label" android:requiredForAllUsers="true" android:supportsRtl="true" android:taskAffinity="" android:theme="@style/Theme.Settings" android:usesCleartextTraffic="true">
         <uses-library android:name="nubia-tab" android:required="false"/>
+        <uses-library android:name="cn.nubia.umeng" android:required="false"/>
+        <meta-data android:name="UMENG_APPKEY" android:value="553a10b867e58ef212000313"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="nubia"/>
         <activity android:label="@string/settings_label_launcher" android:launchMode="singleTask" android:name="Settings" android:targetActivity="Settings" android:taskAffinity="com.android.settings_ex">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
