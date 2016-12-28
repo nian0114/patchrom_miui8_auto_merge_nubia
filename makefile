@@ -64,8 +64,6 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/vendor/CmccPower
 	rm -rf $(ZIP_DIR)/system/vendor/CTA
 	rm -rf $(ZIP_DIR)/system/priv-app/CMSettings
-	rm -rf $(ZIP_DIR)/system/framework/ifaa_fingerprint.jar
-	touch $(ZIP_DIR)/system/framework/ifaa_fingerprint.jar
 	rm -rf $(ZIP_DIR)/system/media/boot.wav
 	rm -rf $(ZIP_DIR)/system/media/shutdown.wav
 	echo "import /system/default.prop" >> $(ZIP_DIR)/system/build.prop
