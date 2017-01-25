@@ -402,15 +402,4 @@ import /system/vendor/vendor.prop
 
 import /system/vendor/power.prop
 
-
 import /system/default.prop
-ro.recovery.md5id=7cb2e8e90ff03a5590565cf116331927
-persist.dbg.vt_avail_ovr=1
-persist.dbg.volte_avail_ovr=1
-ro.miui.type=hook
-ro.miui.ui.version.code=6
-ro.miui.ui.version.name=V8
-ro.config.sms_received_sound=FadeIn.ogg
-ro.config.sms_delivered_sound=MessageComplete.ogg
-persist.sys.strictmode.disable=true
-ro.product.mod_device=nian_z11
