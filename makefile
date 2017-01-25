@@ -67,7 +67,7 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/media/boot.wav
 	rm -rf $(ZIP_DIR)/system/media/shutdown.wav
 	echo "import /system/default.prop" >> $(ZIP_DIR)/system/build.prop
-	echo "ro.recovery.md5id=7cb2e8e90ff03a5590565cf116331927" >> $(ZIP_DIR)/system/build.prop
+	echo "ro.recovery.md5id=25f9aca693a25e2caec9b56806a1d945" >> $(ZIP_DIR)/system/build.prop
 	echo "persist.dbg.vt_avail_ovr=1" >> $(ZIP_DIR)/system/build.prop
 	echo "persist.dbg.volte_avail_ovr=1" >> $(ZIP_DIR)/system/build.prop
 	echo "ro.miui.type=hook" >> $(ZIP_DIR)/system/build.prop
