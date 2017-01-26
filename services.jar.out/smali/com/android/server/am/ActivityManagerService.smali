@@ -6579,6 +6579,10 @@
     .line 16984
     .end local p3    # "intent":Landroid/content/Intent;
     .local v15, "intent":Landroid/content/Intent;
+    move-object/from16 v0, p2
+
+    invoke-virtual {v15, v0}, Landroid/content/Intent;->setSender(Ljava/lang/String;)V
+
     const/16 v4, 0x10
 
     invoke-virtual {v15, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
@@ -23769,9 +23773,9 @@
     move-wide/from16 v1, v40
 
     invoke-direct {v0, v1, v2, v5}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
-    
+
     if-nez v6, :cond_miui_c
-    
+
     invoke-static/range {p5 .. p5}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserId(I)Z
 
     move-result v5
@@ -23779,9 +23783,9 @@
     if-eqz v5, :cond_miui_c
 
     const/16 p5, 0x0
-    
+
     move/from16 v1, p5
-    
+
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v5
@@ -23789,11 +23793,11 @@
     const/16 v10, 0xc00
 
     move-object/from16 v0, p2
-    
+
     invoke-interface {v5, v0, v10, v1}, Landroid/content/pm/IPackageManager;->resolveContentProvider(Ljava/lang/String;II)Landroid/content/pm/ProviderInfo;
-   
+
     move-result-object v6
-    
+
     :cond_miui_c
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_5
