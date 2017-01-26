@@ -212,8 +212,6 @@
 
 .field private static final POWER_OFF_ALARM:Ljava/lang/String; = "powerOffAlarm"
 
-.field private static final PROCESS_STATE_STATS_FORMAT:[I
-
 .field static final PROC_START_TIMEOUT:I = 0x2710
 
 .field static final PROC_START_TIMEOUT_MSG:I = 0x14
@@ -2346,40 +2344,6 @@
     invoke-direct {v0, p0}, Lcom/android/server/am/ActivityManagerService$UiHandler;-><init>(Lcom/android/server/am/ActivityManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mUiHandler:Lcom/android/server/am/ActivityManagerService$UiHandler;
-
-    sget-object v0, Lcom/android/server/am/ActivityManagerService;->sKillHandler:Lcom/android/server/am/ActivityManagerService$KillHandler;
-
-    if-nez v0, :cond_dd0
-
-    new-instance v0, Lcom/android/server/ServiceThread;
-
-    const-string v1, "ActivityManager:kill"
-
-    const/16 v2, 0xa
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
-
-    sput-object v0, Lcom/android/server/am/ActivityManagerService;->sKillThread:Lcom/android/server/ServiceThread;
-
-    sget-object v0, Lcom/android/server/am/ActivityManagerService;->sKillThread:Lcom/android/server/ServiceThread;
-
-    invoke-virtual {v0}, Lcom/android/server/ServiceThread;->start()V
-
-    new-instance v0, Lcom/android/server/am/ActivityManagerService$KillHandler;
-
-    sget-object v1, Lcom/android/server/am/ActivityManagerService;->sKillThread:Lcom/android/server/ServiceThread;
-
-    invoke-virtual {v1}, Lcom/android/server/ServiceThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lcom/android/server/am/ActivityManagerService$KillHandler;-><init>(Lcom/android/server/am/ActivityManagerService;Landroid/os/Looper;)V
-
-    sput-object v0, Lcom/android/server/am/ActivityManagerService;->sKillHandler:Lcom/android/server/am/ActivityManagerService$KillHandler;
-
-    :cond_dd0
 
     .line 2440
     new-instance v0, Lcom/android/server/am/BroadcastQueue;
@@ -27042,45 +27006,27 @@
     goto :goto_3
 .end method
 
-.method static killProcessGroup(II)V
-    .locals 3
+.method private static killProcessGroup(II)V
+    .locals 4
     .param p0, "uid"    # I
     .param p1, "pid"    # I
 
     .prologue
-    sget-object v0, Lcom/android/server/am/ActivityManagerService;->sKillHandler:Lcom/android/server/am/ActivityManagerService$KillHandler;
-
-    if-eqz v0, :cond_0
+    const-wide/16 v2, 0x40
 
     .line 2935
-    sget-object v0, Lcom/android/server/am/ActivityManagerService;->sKillHandler:Lcom/android/server/am/ActivityManagerService$KillHandler;
+    const-string v0, "killProcessGroup"
 
-    sget-object v1, Lcom/android/server/am/ActivityManagerService;->sKillHandler:Lcom/android/server/am/ActivityManagerService$KillHandler;
+    invoke-static {v2, v3, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
     .line 2936
-    const/16 v2, 0xfa0
-
-    invoke-virtual {v1, v2, p0, p1}, Lcom/android/server/am/ActivityManagerService$KillHandler;->obtainMessage(III)Landroid/os/Message;
-
-    move-result-object v1
-
-    .line 2937
-    invoke-virtual {v0, v1}, Lcom/android/server/am/ActivityManagerService$KillHandler;->sendMessage(Landroid/os/Message;)Z
-
-    :goto_0
-    .line 2938
-    return-void
-
-    :cond_0
-    const-string v0, "ActivityManager"
-
-    const-string v1, "Asked to kill process group before system bringup!"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
     invoke-static {p0, p1}, Landroid/os/Process;->killProcessGroup(II)I
 
-    goto :goto_0
+    .line 2937
+    invoke-static {v2, v3}, Landroid/os/Trace;->traceEnd(J)V
+
+    .line 2938
+    return-void
 .end method
 
 .method private killProcessesBelowAdj(ILjava/lang/String;)Z
