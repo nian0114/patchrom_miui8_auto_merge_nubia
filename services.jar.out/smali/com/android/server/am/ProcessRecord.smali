@@ -2866,7 +2866,7 @@
 
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->pid:I
 
-    invoke-static {v0, v1}, Landroid/os/Process;->killProcessGroup(II)I
+    invoke-static {v0, v1}, Lcom/android/server/am/ActivityManagerService;->killProcessGroup(II)V
 
     .line 651
     iget-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->persistent:Z
