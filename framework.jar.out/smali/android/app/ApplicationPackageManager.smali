@@ -237,14 +237,23 @@
 
     if-eqz v1, :cond_0
 
-    .line 2239
-    const v1, 0x1080335
+    const v1, 0x1080340
 
-    .line 2241
     :goto_0
     return v1
 
     :cond_0
+    invoke-static {v0}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUser(Landroid/content/pm/UserInfo;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const v1, 0x11020056
+
+    goto :goto_0
+
+    :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
@@ -4921,6 +4930,10 @@
 
     move-result-object v9
 
+    iget-object v0, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-static {v9, v0}, Landroid/miui/ResourcesManager;->initMiuiResource(Landroid/content/res/Resources;Ljava/lang/String;)V
+
     .line 1118
     if-nez v9, :cond_0
 
@@ -5595,7 +5608,7 @@
 
     move-result-object v2
 
-    const v3, 0x1080333
+    const v3, 0x1080338
 
     invoke-virtual {v2, v3, p2}, Landroid/content/res/Resources;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
 

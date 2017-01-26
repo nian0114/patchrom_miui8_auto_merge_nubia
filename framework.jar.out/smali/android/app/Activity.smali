@@ -1343,34 +1343,28 @@
     .param p15, "voiceInteractor"    # Lcom/android/internal/app/IVoiceInteractor;
 
     .prologue
-    .line 6238
     invoke-virtual {p0, p1}, Landroid/app/Activity;->attachBaseContext(Landroid/content/Context;)V
 
-    .line 6240
     iget-object v1, p0, Landroid/app/Activity;->mFragments:Landroid/app/FragmentController;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/app/FragmentController;->attachHost(Landroid/app/Fragment;)V
 
-    .line 6242
-    new-instance v1, Lcom/android/internal/policy/PhoneWindow;
+    new-instance v1, Lcom/android/internal/policy/MiuiPhoneWindow;
 
-    invoke-direct {v1, p0}, Lcom/android/internal/policy/PhoneWindow;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, Lcom/android/internal/policy/MiuiPhoneWindow;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Landroid/app/Activity;->mWindow:Landroid/view/Window;
 
-    .line 6243
     iget-object v1, p0, Landroid/app/Activity;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v1, p0}, Landroid/view/Window;->setCallback(Landroid/view/Window$Callback;)V
 
-    .line 6244
     iget-object v1, p0, Landroid/app/Activity;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v1, p0}, Landroid/view/Window;->setOnWindowDismissedCallback(Landroid/view/Window$OnWindowDismissedCallback;)V
 
-    .line 6245
     iget-object v1, p0, Landroid/app/Activity;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v1}, Landroid/view/Window;->getLayoutInflater()Landroid/view/LayoutInflater;
@@ -6533,24 +6527,28 @@
     .locals 1
 
     .prologue
-    .line 1226
+    invoke-static {}, Lcom/miui/whetstone/app/WhetstoneAppManager;->getInstance()Lcom/miui/whetstone/app/WhetstoneAppManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/miui/whetstone/app/WhetstoneAppManager;->onResume(Landroid/app/Activity;)V
+
     invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/app/Application;->dispatchActivityResumed(Landroid/app/Activity;)V
 
-    .line 1227
     iget-object v0, p0, Landroid/app/Activity;->mActivityTransitionState:Landroid/app/ActivityTransitionState;
 
     invoke-virtual {v0}, Landroid/app/ActivityTransitionState;->onResume()V
 
-    .line 1228
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Activity;->mCalled:Z
 
-    .line 1229
+    invoke-static {p0}, Landroid/app/ActivityInjector;->checkAccessControl(Landroid/app/Activity;)V
+
     return-void
 .end method
 

@@ -235,9 +235,9 @@
 
     .line 351
     :pswitch_2
-    iget v0, p2, Landroid/util/DisplayMetrics;->scaledDensity:F
+    invoke-static {p1, p2}, Landroid/util/TypedValueInjector;->miuiScale(FLandroid/util/DisplayMetrics;)F
 
-    mul-float/2addr p1, v0
+    move-result p1
 
     goto :goto_0
 

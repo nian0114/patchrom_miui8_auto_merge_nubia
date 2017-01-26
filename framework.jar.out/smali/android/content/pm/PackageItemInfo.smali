@@ -557,27 +557,28 @@
     .param p1, "pm"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 187
-    const/4 v0, 0x0
-
-    .line 188
-    .local v0, "dr":Landroid/graphics/drawable/Drawable;
     iget-object v1, p0, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
-    if-eqz v1, :cond_0
+    iget-object v2, p0, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
-    .line 189
-    iget-object v1, p0, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
-
-    iget v2, p0, Landroid/content/pm/PackageItemInfo;->icon:I
+    iget v3, p0, Landroid/content/pm/PackageItemInfo;->icon:I
 
     invoke-virtual {p0}, Landroid/content/pm/PackageItemInfo;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    move-result-object v3
+    move-result-object v4
 
-    iget-object v4, p0, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
+    invoke-static {p1, v1, v2, v3, v4}, Landroid/app/MiuiThemeHelper;->getDrawable(Landroid/content/pm/PackageManager;Ljava/lang/String;Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 
-    invoke-static {p1, v1, v2, v3, v4}, Landroid/app/NubiaThemeHelper;->getDrawable(Landroid/content/pm/PackageManager;Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    move-result-object v0
+
+    .local v0, "dr":Landroid/graphics/drawable/Drawable;
+    if-nez v0, :cond_0
+
+    iget-object v1, p0, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0, p1}, Landroid/content/pm/PackageItemInfo;->loadDefaultIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 

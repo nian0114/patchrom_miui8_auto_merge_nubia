@@ -5715,14 +5715,14 @@
     .param p1, "data"    # Landroid/app/ActivityThread$AppBindData;
 
     .prologue
-    .line 4597
+    invoke-static {}, Landroid/app/ActivityThreadInjector;->raiseThreadPriority()V
+
     move-object/from16 v0, p1
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Landroid/app/ActivityThread;->mBoundApplication:Landroid/app/ActivityThread$AppBindData;
 
-    .line 4598
     new-instance v2, Landroid/content/res/Configuration;
 
     move-object/from16 v0, p1
@@ -5856,6 +5856,8 @@
 
     .line 4623
     :cond_1
+    invoke-static {}, Lcom/miui/whetstone/app/WhetstoneAppManager;->setHardwareRendererIfNeeded()V
+
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/ActivityThread;->mProfiler:Landroid/app/ActivityThread$Profiler;
@@ -6792,6 +6794,20 @@
     iget-object v2, v0, Landroid/app/ActivityThread$AppBindData;->appInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-static {v2}, Lcom/miui/whetstone/app/WhetstoneAppManager;->trimHeapSizeIfNeeded(Landroid/content/pm/ApplicationInfo;)V
+
+    move-object/from16 v0, p1
+
+    iget-object v2, v0, Landroid/app/ActivityThread$AppBindData;->appInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v2, v2, Landroid/content/pm/ApplicationInfo;->nextActivityTheme:I
+
+    move-object/from16 v0, p1
+
+    iget-object v4, v0, Landroid/app/ActivityThread$AppBindData;->info:Landroid/app/LoadedApk;
+
+    move-object/from16 v0, p0
+
+    invoke-static {v0, v2, v4}, Landroid/app/ActivityThreadInjector;->preloadSubActivity(Landroid/app/ActivityThread;ILandroid/app/LoadedApk;)V
 
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskWrites()Landroid/os/StrictMode$ThreadPolicy;
 
@@ -13025,43 +13041,37 @@
 
     check-cast v1, Landroid/content/ISmartShowContext;
 
-    .line 5590
     .local v1, "context":Landroid/content/ISmartShowContext;
     invoke-static {v1}, Landroid/content/SmartShowContext;->attach(Landroid/content/ISmartShowContext;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5596
     .end local v1    # "context":Landroid/content/ISmartShowContext;
     :cond_0
     new-instance v3, Landroid/app/ActivityThread;
 
     invoke-direct {v3}, Landroid/app/ActivityThread;-><init>()V
 
-    .line 5597
     .local v3, "thread":Landroid/app/ActivityThread;
+    invoke-static {}, Lcom/miui/whetstone/app/WhetstoneAppManager;->getInstance()Lcom/miui/whetstone/app/WhetstoneAppManager;
+
     invoke-direct {v3, v6}, Landroid/app/ActivityThread;->attach(Z)V
 
-    .line 5599
     sget-object v4, Landroid/app/ActivityThread;->sMainThreadHandler:Landroid/os/Handler;
 
     if-nez v4, :cond_1
 
-    .line 5600
     invoke-virtual {v3}, Landroid/app/ActivityThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v4
 
     sput-object v4, Landroid/app/ActivityThread;->sMainThreadHandler:Landroid/os/Handler;
 
-    .line 5609
     :cond_1
     invoke-static {v8, v9}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 5610
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 5612
     new-instance v4, Ljava/lang/RuntimeException;
 
     const-string v5, "Main thread loop unexpectedly exited"
@@ -19014,7 +19024,16 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 4554
+    invoke-static {p1}, Lcom/miui/whetstone/app/WhetstoneAppManager;->handleTrimMemory(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_miui_0
+
+    :goto_miui_0
+    return-void
+
+    :cond_miui_0
     const/4 v3, 0x1
 
     const/4 v4, 0x0
@@ -19059,8 +19078,7 @@
 
     invoke-virtual {v3, p1}, Landroid/view/WindowManagerGlobal;->trimMemory(I)V
 
-    .line 4562
-    return-void
+    goto :goto_miui_0
 .end method
 
 .method final handleUnstableProviderDied(Landroid/os/IBinder;Z)V
@@ -19069,22 +19087,18 @@
     .param p2, "fromClient"    # Z
 
     .prologue
-    .line 5207
     iget-object v1, p0, Landroid/app/ActivityThread;->mProviderMap:Landroid/util/ArrayMap;
 
     monitor-enter v1
 
-    .line 5208
     :try_start_0
     invoke-virtual {p0, p1, p2}, Landroid/app/ActivityThread;->handleUnstableProviderDiedLocked(Landroid/os/IBinder;Z)V
 
-    .line 5209
     monitor-exit v1
 
-    .line 5210
+    .line 4562
     return-void
 
-    .line 5209
     :catchall_0
     move-exception v0
 
