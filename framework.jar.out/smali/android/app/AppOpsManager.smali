@@ -225,7 +225,7 @@
 
 .field public static final OP_WRITE_WALLPAPER:I = 0x30
 
-.field public static final _NUM_OP:I = 0x42
+.field public static _NUM_OP:I
 
 .field private static sOpAllowSystemRestrictionBypass:[Z
 
@@ -304,6 +304,8 @@
     const/4 v4, 0x0
 
     .line 371
+    sput v5, Landroid/app/AppOpsManager;->_NUM_OP:I
+
     new-array v1, v5, [I
 
     fill-array-data v1, :array_0
@@ -1730,7 +1732,9 @@
 
     array-length v1, v1
 
-    if-eq v1, v5, :cond_0
+    sget v2, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    if-eq v1, v2, :cond_0
 
     .line 1014
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -1759,7 +1763,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v3, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1777,7 +1783,9 @@
 
     array-length v1, v1
 
-    if-eq v1, v5, :cond_1
+    sget v2, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    if-eq v1, v2, :cond_1
 
     .line 1018
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -1806,7 +1814,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v3, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1824,7 +1834,9 @@
 
     array-length v1, v1
 
-    if-eq v1, v5, :cond_2
+    sget v2, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    if-eq v1, v2, :cond_2
 
     .line 1022
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -1853,7 +1865,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v3, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1871,7 +1885,9 @@
 
     array-length v1, v1
 
-    if-eq v1, v5, :cond_3
+    sget v2, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    if-eq v1, v2, :cond_3
 
     .line 1026
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -1900,7 +1916,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v3, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1918,7 +1936,9 @@
 
     array-length v1, v1
 
-    if-eq v1, v5, :cond_4
+    sget v2, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    if-eq v1, v2, :cond_4
 
     .line 1030
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -1947,7 +1967,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v3, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1965,7 +1987,9 @@
 
     array-length v1, v1
 
-    if-eq v1, v5, :cond_5
+    sget v2, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    if-eq v1, v2, :cond_5
 
     .line 1034
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -1994,7 +2018,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v3, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -2012,7 +2038,9 @@
 
     array-length v1, v1
 
-    if-eq v1, v5, :cond_6
+    sget v2, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    if-eq v1, v2, :cond_6
 
     .line 1038
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -2041,7 +2069,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v3, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -2059,7 +2089,9 @@
 
     array-length v1, v1
 
-    if-eq v1, v5, :cond_7
+    sget v2, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    if-eq v1, v2, :cond_7
 
     .line 1042
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -2088,7 +2120,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v3, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -2106,7 +2140,9 @@
 
     .local v0, "i":I
     :goto_0
-    if-ge v0, v5, :cond_9
+    sget v1, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    if-ge v0, v1, :cond_9
 
     .line 1046
     sget-object v1, Landroid/app/AppOpsManager;->sOpToString:[Ljava/lang/String;
@@ -2139,7 +2175,9 @@
     const/4 v0, 0x0
 
     :goto_1
-    if-ge v0, v5, :cond_b
+    sget v1, Landroid/app/AppOpsManager;->_NUM_OP:I
+
+    if-ge v0, v1, :cond_b
 
     .line 1051
     sget-object v1, Landroid/app/AppOpsManager;->sOpPerms:[Ljava/lang/String;
