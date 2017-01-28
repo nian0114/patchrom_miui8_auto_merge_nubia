@@ -1,0 +1,4 @@
+.field private static final PROCESS_STATE_STATS_FORMAT:[I
+.field static sKillHandler:Lcom/android/server/am/ActivityManagerService$KillHandler;
+.field static sKillThread:Lcom/android/server/ServiceThread;
+.field private final mProcessStateStatsLongs:[J
