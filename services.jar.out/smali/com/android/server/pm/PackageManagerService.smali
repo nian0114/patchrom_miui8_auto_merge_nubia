@@ -15424,6 +15424,27 @@
 
     if-nez v26, :cond_b
 
+    if-nez v16, :cond_nian_0
+
+    iget-object v0, v7, Lcom/android/server/pm/BasePermission;->sourcePackage:Ljava/lang/String;
+
+    move-object/from16 v26, v0
+
+    if-eqz v26, :cond_nian_0
+
+    iget-object v0, v7, Lcom/android/server/pm/BasePermission;->sourcePackage:Ljava/lang/String;
+
+    move-object/from16 v26, v0
+
+    const-string v27, "com.google.android."
+
+    invoke-virtual/range {v26 .. v27}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v26
+
+    if-nez v26, :cond_b
+
+    :cond_nian_0
     const/4 v12, 0x1
 
     :cond_b
@@ -15602,8 +15623,23 @@
 
     move-result v5
 
-    if-eqz v5, :cond_a
+    if-nez v5, :cond_nian_1
 
+    move-object/from16 v0, p1
+
+    iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
+
+    move-object/from16 v26, v0
+
+    const-string v27, "com.android.vending"
+
+    invoke-virtual/range {v26 .. v27}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v26
+
+    if-eqz v26, :cond_a
+
+    :cond_nian_1
     const/4 v12, 0x2
 
     goto/16 :goto_3
