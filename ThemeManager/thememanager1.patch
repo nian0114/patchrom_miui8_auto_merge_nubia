@@ -1,7 +1,7 @@
-From 25ad26bcb3596bad04a594da199abd296a05ae3a Mon Sep 17 00:00:00 2001
+From 6ed5469e68d4c805c954fe3dab43425f45eb054d Mon Sep 17 00:00:00 2001
 From: nian0114 <268078545@qq.com>
-Date: Sat, 28 Jan 2017 21:33:40 +0800
-Subject: [PATCH] hack theme manager(1/2)
+Date: Sun, 29 Jan 2017 01:17:04 +0800
+Subject: [PATCH] Hack Theme
 
 ---
  .../thememanager/util/ThemeOperationHandler.smali  | 74 ++--------------------
@@ -9,20 +9,20 @@ Subject: [PATCH] hack theme manager(1/2)
 
 --- a/ThemeManager/smali/com/android/thememanager/util/ThemeOperationHandler.smali
 +++ b/ThemeManager/smali/com/android/thememanager/util/ThemeOperationHandler.smali
-@@ -1317,11 +1317,8 @@
+@@ -1317,11 +1317,7 @@
      .locals 1
  
      .prologue
 -    iget-object v0, p0, Lcom/android/thememanager/util/ThemeOperationHandler;->mResource:Lcom/android/thememanager/model/Resource;
 -
 -    invoke-virtual {v0}, Lcom/android/thememanager/model/Resource;->isProductBought()Z
- 
+-
 -    move-result v0
 +    const/4 v0, 0x1
  
      return v0
  .end method
-@@ -1476,7 +1473,7 @@
+@@ -1476,7 +1472,7 @@
      .locals 1
  
      .prologue
@@ -31,7 +31,7 @@ Subject: [PATCH] hack theme manager(1/2)
  
      return v0
  .end method
-@@ -1532,70 +1529,9 @@
+@@ -1532,70 +1528,9 @@
      .locals 2
  
      .prologue
@@ -63,7 +63,7 @@ Subject: [PATCH] hack theme manager(1/2)
 -    move-result v1
 -
 -    if-eqz v1, :cond_0
- 
+-
 -    invoke-virtual {v0}, Ljava/io/File;->exists()Z
 -
 -    move-result v1
@@ -97,10 +97,10 @@ Subject: [PATCH] hack theme manager(1/2)
 -
 -    :cond_2
 -    const/4 v1, 0x0
--
++    const/4 v0, 0x1
+ 
 -    goto :goto_0
 +    return v0
-+    
  .end method
  
  .method public isPicker()Z
