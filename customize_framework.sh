@@ -53,6 +53,7 @@ if [ $2 = "$BUILD_OUT/services" ]
 then
     applyPatch "overlay/services"
     appendSmaliPart "services"
+    cp -rf services/smali/com/android/server/am/*.smali $2/smali/com/android/server/am
 	sed -i 's/user_setup_complete/xbt_setup_complete/g' `grep -lnr "user_setup_complete" $2/smali`
 fi
 
