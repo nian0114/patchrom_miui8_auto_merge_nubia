@@ -26,13 +26,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 784
     iput-object p1, p0, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
-    .line 785
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 782
     const-string v0, "zen_mode"
 
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -41,7 +38,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->ZEN_MODE:Landroid/net/Uri;
 
-    .line 786
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 789
     iget-object v1, p0, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
     # getter for: Lcom/android/server/notification/ZenModeHelper;->mContext:Landroid/content/Context;
@@ -63,7 +58,6 @@
 
     move-result-object v0
 
-    .line 790
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v1, p0, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->ZEN_MODE:Landroid/net/Uri;
 
@@ -71,12 +65,10 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 791
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 792
     return-void
 .end method
 
@@ -86,10 +78,8 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 796
     invoke-virtual {p0, p2}, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 797
     return-void
 .end method
 
@@ -98,7 +88,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 800
     iget-object v1, p0, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->ZEN_MODE:Landroid/net/Uri;
 
     invoke-virtual {v1, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -107,7 +96,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 801
     iget-object v1, p0, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
     # getter for: Lcom/android/server/notification/ZenModeHelper;->mZenMode:I
@@ -124,7 +112,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 802
     sget-boolean v1, Lcom/android/server/notification/ZenModeHelper;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -135,7 +122,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 803
     :cond_0
     iget-object v1, p0, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
@@ -149,7 +135,6 @@
     # invokes: Lcom/android/server/notification/ZenModeHelper;->setZenModeSetting(I)V
     invoke-static {v1, v2}, Lcom/android/server/notification/ZenModeHelper;->access$1300(Lcom/android/server/notification/ZenModeHelper;I)V
 
-    .line 806
     :cond_1
     iget-object v1, p0, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
@@ -160,18 +145,15 @@
 
     invoke-virtual {v1}, Lcn/nubia/server/notification/NubiaZenModeHelper;->saveLastZenMode()Z
 
-    .line 807
     iget-object v1, p0, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
     invoke-virtual {v1}, Lcom/android/server/notification/ZenModeHelper;->getZenMode()I
 
     move-result v0
 
-    .line 808
     .local v0, "mode":I
     if-nez v0, :cond_2
 
-    .line 810
     iget-object v1, p0, Lcom/android/server/notification/ZenModeHelper$SettingsObserver;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
     # getter for: Lcom/android/server/notification/ZenModeHelper;->mNubiaZenModeHelper:Lcn/nubia/server/notification/NubiaZenModeHelper;
@@ -183,7 +165,6 @@
 
     invoke-virtual {v1, v2}, Lcn/nubia/server/notification/NubiaZenModeHelper;->updateZenModeConditions(Landroid/service/notification/Condition;)V
 
-    .line 814
     .end local v0    # "mode":I
     :cond_2
     return-void

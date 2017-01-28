@@ -41,25 +41,20 @@
     .param p3, "m"    # Landroid/os/Messenger;
 
     .prologue
-    .line 166
     iput-object p1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 163
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->mRequests:Ljava/util/HashMap;
 
-    .line 167
     iput-object p2, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->mChannel:Lcom/android/internal/util/AsyncChannel;
 
-    .line 168
     iput-object p3, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->mMessenger:Landroid/os/Messenger;
 
-    .line 169
     return-void
 .end method
 
@@ -71,21 +66,16 @@
     .param p2, "parcelableParams"    # Landroid/net/wifi/RttManager$ParcelableRttParams;
 
     .prologue
-    .line 172
     if-nez p2, :cond_0
 
-    .line 173
     const/4 v2, 0x0
 
-    .line 184
     :goto_0
     return v2
 
-    .line 176
     :cond_0
     iget-object v0, p2, Landroid/net/wifi/RttManager$ParcelableRttParams;->mParams:[Landroid/net/wifi/RttManager$RttParams;
 
-    .line 178
     .local v0, "params":[Landroid/net/wifi/RttManager$RttParams;
     new-instance v1, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;
 
@@ -95,7 +85,6 @@
 
     invoke-direct {v1, v2, v3}, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;-><init>(Lcom/android/server/wifi/RttService$RttServiceImpl;Lcom/android/server/wifi/RttService$1;)V
 
-    .line 179
     .local v1, "request":Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -103,13 +92,10 @@
 
     iput-object v2, v1, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;->key:Ljava/lang/Integer;
 
-    .line 180
     iput-object p0, v1, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;->ci:Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;
 
-    .line 181
     iput-object v0, v1, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;->params:[Landroid/net/wifi/RttManager$RttParams;
 
-    .line 182
     iget-object v2, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->mRequests:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -118,7 +104,6 @@
 
     invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 183
     iget-object v2, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
     # getter for: Lcom/android/server/wifi/RttService$RttServiceImpl;->mRequestQueue:Ljava/util/Queue;
@@ -128,7 +113,6 @@
 
     invoke-interface {v2, v1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    .line 184
     const/4 v2, 0x1
 
     goto :goto_0
@@ -138,12 +122,10 @@
     .locals 1
 
     .prologue
-    .line 218
     iget-object v0, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->mRequests:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 219
     iget-object v0, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
     # getter for: Lcom/android/server/wifi/RttService$RttServiceImpl;->mRequestQueue:Ljava/util/Queue;
@@ -153,7 +135,6 @@
 
     invoke-interface {v0}, Ljava/util/Queue;->clear()V
 
-    .line 220
     return-void
 .end method
 
@@ -162,7 +143,6 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 188
     iget-object v0, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->mRequests:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -171,7 +151,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 189
     return-void
 .end method
 
@@ -180,7 +159,6 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 212
     iget-object v0, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->mChannel:Lcom/android/internal/util/AsyncChannel;
 
     const v1, 0x27204
@@ -189,10 +167,8 @@
 
     invoke-virtual {v0, v1, v2, p1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 214
     invoke-virtual {p0}, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->cleanup()V
 
-    .line 215
     return-void
 .end method
 
@@ -203,25 +179,21 @@
     .param p3, "description"    # Ljava/lang/String;
 
     .prologue
-    .line 205
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 206
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "android.net.wifi.RttManager.Description"
 
     invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 207
     iget-object v1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->mChannel:Lcom/android/internal/util/AsyncChannel;
 
     const v2, 0x27202
 
     invoke-virtual {v1, v2, p1, p2, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 208
     iget-object v1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->mRequests:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -230,7 +202,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
     return-void
 .end method
 
@@ -241,7 +212,6 @@
     .param p3, "description"    # Ljava/lang/String;
 
     .prologue
-    .line 201
     iget-object v0, p1, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;->key:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -250,7 +220,6 @@
 
     invoke-virtual {p0, v0, p2, p3}, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->reportFailed(IILjava/lang/String;)V
 
-    .line 202
     return-void
 .end method
 
@@ -260,12 +229,10 @@
     .param p2, "results"    # [Landroid/net/wifi/RttManager$RttResult;
 
     .prologue
-    .line 192
     new-instance v0, Landroid/net/wifi/RttManager$ParcelableRttResults;
 
     invoke-direct {v0, p2}, Landroid/net/wifi/RttManager$ParcelableRttResults;-><init>([Landroid/net/wifi/RttManager$RttResult;)V
 
-    .line 195
     .local v0, "parcelableResults":Landroid/net/wifi/RttManager$ParcelableRttResults;
     iget-object v1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->mChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -281,13 +248,11 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 197
     iget-object v1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$ClientInfo;->mRequests:Ljava/util/HashMap;
 
     iget-object v2, p1, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;->key:Ljava/lang/Integer;
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
     return-void
 .end method

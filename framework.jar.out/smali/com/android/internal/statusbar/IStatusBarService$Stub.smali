@@ -104,15 +104,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "com.android.internal.statusbar.IStatusBarService"
 
     invoke-virtual {p0, p0, v0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -121,17 +118,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "com.android.internal.statusbar.IStatusBarService"
 
@@ -139,7 +132,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -147,12 +139,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Lcom/android/internal/statusbar/IStatusBarService;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Lcom/android/internal/statusbar/IStatusBarService$Stub$Proxy;
 
@@ -168,7 +158,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -185,10 +174,8 @@
     .end annotation
 
     .prologue
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 453
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -196,7 +183,6 @@
     :goto_0
     return v2
 
-    .line 43
     :sswitch_0
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -204,12 +190,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 44
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -217,18 +201,14 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->expandNotificationsPanel()V
 
-    .line 50
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 51
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 55
     :sswitch_2
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -236,18 +216,14 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 56
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->collapsePanels()V
 
-    .line 57
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 58
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 62
     :sswitch_3
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -255,38 +231,31 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 64
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 66
     .local v3, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
 
-    .line 68
     .local v4, "_arg1":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 69
     .local v5, "_arg2":Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->disable(ILandroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 70
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 71
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 75
     .end local v3    # "_arg0":I
     .end local v4    # "_arg1":Landroid/os/IBinder;
     .end local v5    # "_arg2":Ljava/lang/String;
@@ -297,44 +266,36 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 77
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 79
     .restart local v3    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
 
-    .line 81
     .restart local v4    # "_arg1":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 83
     .restart local v5    # "_arg2":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 84
     .local v6, "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->disableForUser(ILandroid/os/IBinder;Ljava/lang/String;I)V
 
-    .line 85
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 86
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 90
     .end local v3    # "_arg0":I
     .end local v4    # "_arg1":Landroid/os/IBinder;
     .end local v5    # "_arg2":Ljava/lang/String;
@@ -346,38 +307,31 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 92
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 94
     .restart local v3    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
 
-    .line 96
     .restart local v4    # "_arg1":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 97
     .restart local v5    # "_arg2":Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->disable2(ILandroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 98
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 99
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 103
     .end local v3    # "_arg0":I
     .end local v4    # "_arg1":Landroid/os/IBinder;
     .end local v5    # "_arg2":Ljava/lang/String;
@@ -388,44 +342,36 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 105
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 107
     .restart local v3    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
 
-    .line 109
     .restart local v4    # "_arg1":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 111
     .restart local v5    # "_arg2":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 112
     .restart local v6    # "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->disable2ForUser(ILandroid/os/IBinder;Ljava/lang/String;I)V
 
-    .line 113
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 114
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 118
     .end local v3    # "_arg0":I
     .end local v4    # "_arg1":Landroid/os/IBinder;
     .end local v5    # "_arg2":Ljava/lang/String;
@@ -437,30 +383,25 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 120
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 122
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 124
     .local v4, "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 126
     .local v5, "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 128
     .restart local v6    # "_arg3":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -469,18 +410,14 @@
     .local v7, "_arg4":Ljava/lang/String;
     move-object/from16 v2, p0
 
-    .line 129
     invoke-virtual/range {v2 .. v7}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->setIcon(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 130
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 131
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 135
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":I
@@ -493,12 +430,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 137
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 139
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -508,29 +443,24 @@
 
     const/4 v4, 0x1
 
-    .line 140
     .local v4, "_arg1":Z
     :goto_1
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 141
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 142
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 139
     .end local v4    # "_arg1":Z
     :cond_0
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 146
     .end local v3    # "_arg0":Ljava/lang/String;
     :sswitch_9
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
@@ -539,26 +469,21 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 148
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 149
     .restart local v3    # "_arg0":Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->removeIcon(Ljava/lang/String;)V
 
-    .line 150
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 151
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 155
     .end local v3    # "_arg0":Ljava/lang/String;
     :sswitch_a
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
@@ -567,7 +492,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 157
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -576,29 +500,24 @@
 
     const/4 v3, 0x1
 
-    .line 158
     .local v3, "_arg0":Z
     :goto_2
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->topAppWindowChanged(Z)V
 
-    .line 159
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 160
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 157
     .end local v3    # "_arg0":Z
     :cond_1
     const/4 v3, 0x0
 
     goto :goto_2
 
-    .line 164
     :sswitch_b
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -606,24 +525,20 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 166
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 168
     .local v3, "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 170
     .local v4, "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 172
     .restart local v5    # "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -633,29 +548,24 @@
 
     const/4 v6, 0x1
 
-    .line 173
     .local v6, "_arg3":Z
     :goto_3
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->setImeWindowStatus(Landroid/os/IBinder;IIZ)V
 
-    .line 174
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 175
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 172
     .end local v6    # "_arg3":Z
     :cond_2
     const/4 v6, 0x0
 
     goto :goto_3
 
-    .line 179
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":I
     .end local v5    # "_arg2":I
@@ -666,18 +576,14 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 180
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->expandSettingsPanel()V
 
-    .line 181
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 182
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 186
     :sswitch_d
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -685,26 +591,21 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 188
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 189
     .local v3, "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->setCurrentUser(I)V
 
-    .line 190
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 191
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 195
     .end local v3    # "_arg0":I
     :sswitch_e
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
@@ -713,7 +614,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 197
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -722,75 +622,61 @@
 
     move-result-object v3
 
-    .line 199
     .local v3, "_arg0":Lcom/android/internal/statusbar/IStatusBar;
     new-instance v4, Lcom/android/internal/statusbar/StatusBarIconList;
 
     invoke-direct {v4}, Lcom/android/internal/statusbar/StatusBarIconList;-><init>()V
 
-    .line 201
     .local v4, "_arg1":Lcom/android/internal/statusbar/StatusBarIconList;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v14
 
-    .line 202
     .local v14, "_arg2_length":I
     if-gez v14, :cond_3
 
-    .line 203
     const/4 v5, 0x0
 
-    .line 209
     .local v5, "_arg2":[I
     :goto_4
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 210
     .local v15, "_arg3":Ljava/util/List;, "Ljava/util/List<Landroid/os/IBinder;>;"
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v15}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->registerStatusBar(Lcom/android/internal/statusbar/IStatusBar;Lcom/android/internal/statusbar/StatusBarIconList;[ILjava/util/List;)V
 
-    .line 211
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 212
     if-eqz v4, :cond_4
 
-    .line 213
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 214
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v4, v0, v2}, Lcom/android/internal/statusbar/StatusBarIconList;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 219
     :goto_5
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v5}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 220
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v15}, Landroid/os/Parcel;->writeBinderList(Ljava/util/List;)V
 
-    .line 221
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 206
     .end local v5    # "_arg2":[I
     .end local v15    # "_arg3":Ljava/util/List;, "Ljava/util/List<Landroid/os/IBinder;>;"
     :cond_3
@@ -799,7 +685,6 @@
     .restart local v5    # "_arg2":[I
     goto :goto_4
 
-    .line 217
     .restart local v15    # "_arg3":Ljava/util/List;, "Ljava/util/List<Landroid/os/IBinder;>;"
     :cond_4
     const/4 v2, 0x0
@@ -810,7 +695,6 @@
 
     goto :goto_5
 
-    .line 225
     .end local v3    # "_arg0":Lcom/android/internal/statusbar/IStatusBar;
     .end local v4    # "_arg1":Lcom/android/internal/statusbar/StatusBarIconList;
     .end local v5    # "_arg2":[I
@@ -823,7 +707,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 227
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -832,28 +715,23 @@
 
     const/4 v3, 0x1
 
-    .line 229
     .local v3, "_arg0":Z
     :goto_6
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 230
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->onPanelRevealed(ZI)V
 
-    .line 231
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 232
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 227
     .end local v3    # "_arg0":Z
     .end local v4    # "_arg1":I
     :cond_5
@@ -861,7 +739,6 @@
 
     goto :goto_6
 
-    .line 236
     :sswitch_10
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -869,18 +746,14 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 237
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->onPanelHidden()V
 
-    .line 238
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 239
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 243
     :sswitch_11
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -888,18 +761,14 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 244
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->clearNotificationEffects()V
 
-    .line 245
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 246
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 250
     :sswitch_12
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -907,26 +776,21 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 252
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 253
     .local v3, "_arg0":Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->onNotificationClick(Ljava/lang/String;)V
 
-    .line 254
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 255
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 259
     .end local v3    # "_arg0":Ljava/lang/String;
     :sswitch_13
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
@@ -935,32 +799,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 261
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 263
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 264
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->onNotificationActionClick(Ljava/lang/String;I)V
 
-    .line 265
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 266
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 270
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     :sswitch_14
@@ -970,42 +828,35 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 272
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 274
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 276
     .local v4, "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 278
     .local v5, "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 280
     .local v6, "_arg3":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 282
     .local v7, "_arg4":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 284
     .local v8, "_arg5":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1014,18 +865,14 @@
     .local v9, "_arg6":I
     move-object/from16 v2, p0
 
-    .line 285
     invoke-virtual/range {v2 .. v9}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->onNotificationError(Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;I)V
 
-    .line 286
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 287
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 291
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":I
@@ -1040,26 +887,21 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 293
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 294
     .local v3, "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->onClearAllNotifications(I)V
 
-    .line 295
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 296
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 300
     .end local v3    # "_arg0":I
     :sswitch_16
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
@@ -1068,44 +910,36 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 302
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 304
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 306
     .restart local v4    # "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 308
     .restart local v5    # "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 309
     .restart local v6    # "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->onNotificationClear(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 310
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 311
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 315
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":I
@@ -1117,7 +951,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 317
     sget-object v2, Lcom/android/internal/statusbar/NotificationVisibility;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1128,7 +961,6 @@
 
     check-cast v3, [Lcom/android/internal/statusbar/NotificationVisibility;
 
-    .line 319
     .local v3, "_arg0":[Lcom/android/internal/statusbar/NotificationVisibility;
     sget-object v2, Lcom/android/internal/statusbar/NotificationVisibility;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -1140,21 +972,17 @@
 
     check-cast v4, [Lcom/android/internal/statusbar/NotificationVisibility;
 
-    .line 320
     .local v4, "_arg1":[Lcom/android/internal/statusbar/NotificationVisibility;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->onNotificationVisibilityChanged([Lcom/android/internal/statusbar/NotificationVisibility;[Lcom/android/internal/statusbar/NotificationVisibility;)V
 
-    .line 321
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 322
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 326
     .end local v3    # "_arg0":[Lcom/android/internal/statusbar/NotificationVisibility;
     .end local v4    # "_arg1":[Lcom/android/internal/statusbar/NotificationVisibility;
     :sswitch_18
@@ -1164,12 +992,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 328
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 330
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1179,7 +1005,6 @@
 
     const/4 v4, 0x1
 
-    .line 332
     .local v4, "_arg1":Z
     :goto_7
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1190,22 +1015,18 @@
 
     const/4 v5, 0x1
 
-    .line 333
     .local v5, "_arg2":Z
     :goto_8
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->onNotificationExpansionChanged(Ljava/lang/String;ZZ)V
 
-    .line 334
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 335
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 330
     .end local v4    # "_arg1":Z
     .end local v5    # "_arg2":Z
     :cond_6
@@ -1213,14 +1034,12 @@
 
     goto :goto_7
 
-    .line 332
     .restart local v4    # "_arg1":Z
     :cond_7
     const/4 v5, 0x0
 
     goto :goto_8
 
-    .line 339
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Z
     :sswitch_19
@@ -1230,38 +1049,31 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 341
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 343
     .local v3, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 345
     .local v4, "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 346
     .local v5, "_arg2":Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->setSystemUiVisibility(IILjava/lang/String;)V
 
-    .line 347
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 348
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 352
     .end local v3    # "_arg0":I
     .end local v4    # "_arg1":I
     .end local v5    # "_arg2":Ljava/lang/String;
@@ -1272,32 +1084,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 354
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 356
     .restart local v3    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 357
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->setWindowState(II)V
 
-    .line 358
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 359
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 363
     .end local v3    # "_arg0":I
     .end local v4    # "_arg1":I
     :sswitch_1b
@@ -1307,7 +1113,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 365
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -1316,29 +1121,24 @@
 
     const/4 v3, 0x1
 
-    .line 366
     .local v3, "_arg0":Z
     :goto_9
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->showRecentApps(Z)V
 
-    .line 367
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 368
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 365
     .end local v3    # "_arg0":Z
     :cond_8
     const/4 v3, 0x0
 
     goto :goto_9
 
-    .line 372
     :sswitch_1c
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -1346,7 +1146,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 374
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -1355,7 +1154,6 @@
 
     const/4 v3, 0x1
 
-    .line 376
     .restart local v3    # "_arg0":Z
     :goto_a
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1366,22 +1164,18 @@
 
     const/4 v4, 0x1
 
-    .line 377
     .local v4, "_arg1":Z
     :goto_b
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->hideRecentApps(ZZ)V
 
-    .line 378
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 379
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 374
     .end local v3    # "_arg0":Z
     .end local v4    # "_arg1":Z
     :cond_9
@@ -1389,14 +1183,12 @@
 
     goto :goto_a
 
-    .line 376
     .restart local v3    # "_arg0":Z
     :cond_a
     const/4 v4, 0x0
 
     goto :goto_b
 
-    .line 383
     .end local v3    # "_arg0":Z
     :sswitch_1d
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
@@ -1405,18 +1197,14 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 384
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->toggleRecentApps()V
 
-    .line 385
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 386
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 390
     :sswitch_1e
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -1424,18 +1212,14 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 391
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->preloadRecentApps()V
 
-    .line 392
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 393
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 397
     :sswitch_1f
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -1443,18 +1227,14 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 398
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->cancelPreloadRecentApps()V
 
-    .line 399
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 400
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 404
     :sswitch_20
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -1462,18 +1242,14 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 405
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->appTransitionPending()V
 
-    .line 406
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 407
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 411
     :sswitch_21
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -1481,18 +1257,14 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 412
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->appTransitionCancelled()V
 
-    .line 413
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 414
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 418
     :sswitch_22
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
 
@@ -1500,32 +1272,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 420
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v10
 
-    .line 422
     .local v10, "_arg0":J
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v12
 
-    .line 423
     .local v12, "_arg1":J
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v10, v11, v12, v13}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->appTransitionStarting(JJ)V
 
-    .line 424
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 425
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 429
     .end local v10    # "_arg0":J
     .end local v12    # "_arg1":J
     :sswitch_23
@@ -1535,14 +1301,12 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 431
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_b
 
-    .line 432
     sget-object v2, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1553,22 +1317,18 @@
 
     check-cast v3, Landroid/os/Bundle;
 
-    .line 437
     .local v3, "_arg0":Landroid/os/Bundle;
     :goto_c
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->startAssist(Landroid/os/Bundle;)V
 
-    .line 438
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 439
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 435
     .end local v3    # "_arg0":Landroid/os/Bundle;
     :cond_b
     const/4 v3, 0x0
@@ -1576,7 +1336,6 @@
     .restart local v3    # "_arg0":Landroid/os/Bundle;
     goto :goto_c
 
-    .line 443
     .end local v3    # "_arg0":Landroid/os/Bundle;
     :sswitch_24
     const-string v2, "com.android.internal.statusbar.IStatusBarService"
@@ -1585,32 +1344,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 445
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 447
     .local v3, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 448
     .local v4, "_arg1":Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->setStatusBarIconsColor(ILjava/lang/String;)V
 
-    .line 449
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 450
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 39
     nop
 
     :sswitch_data_0

@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 41
     const-string v0, "QtiImsInterfaceUtils"
 
     sput-object v0, Lorg/codeaurora/ims/qtiims/QtiImsInterfaceUtils;->LOG_TAG:Ljava/lang/String;
@@ -42,10 +41,8 @@
     .locals 0
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     return-void
 .end method
 
@@ -54,14 +51,12 @@
     .param p0, "contentResolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 83
     const-string v1, "ims_call_deflect_number"
 
     invoke-static {p0, v1}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 87
     .local v0, "deflectcall":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -71,10 +66,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 88
     const/4 v0, 0x0
 
-    .line 91
     :cond_0
     return-object v0
 .end method
@@ -84,12 +77,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 111
     new-instance v0, Lcom/android/internal/telephony/ConfigResourceUtil;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/ConfigResourceUtil;-><init>()V
 
-    .line 112
     .local v0, "mConfigResUtil":Lcom/android/internal/telephony/ConfigResourceUtil;
     const-string v1, "config_enable_calltransfer_over_ims"
 
@@ -106,10 +97,8 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 96
     move-object v0, p1
 
-    .line 98
     .local v0, "deflectNum":Ljava/lang/String;
     if-eqz p1, :cond_0
 
@@ -119,16 +108,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 99
     :cond_0
     const-string v0, ""
 
-    .line 102
     :cond_1
     const-string v1, "ims_call_deflect_number"
 
     invoke-static {p0, v1, v0}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 104
     return-void
 .end method

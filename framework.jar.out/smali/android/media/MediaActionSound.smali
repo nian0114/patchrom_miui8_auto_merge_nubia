@@ -60,7 +60,6 @@
     .locals 3
 
     .prologue
-    .line 83
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
@@ -118,20 +117,16 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 214
     new-instance v1, Landroid/media/MediaActionSound$1;
 
     invoke-direct {v1, p0}, Landroid/media/MediaActionSound$1;-><init>(Landroid/media/MediaActionSound;)V
 
     iput-object v1, p0, Landroid/media/MediaActionSound;->mLoadCompleteListener:Landroid/media/SoundPool$OnLoadCompleteListener;
 
-    .line 136
     invoke-direct {p0}, Landroid/media/MediaActionSound;->initSoundFiles()V
 
-    .line 138
     new-instance v1, Landroid/media/SoundPool;
 
     const/4 v2, 0x1
@@ -144,14 +139,12 @@
 
     iput-object v1, p0, Landroid/media/MediaActionSound;->mSoundPool:Landroid/media/SoundPool;
 
-    .line 140
     iget-object v1, p0, Landroid/media/MediaActionSound;->mSoundPool:Landroid/media/SoundPool;
 
     iget-object v2, p0, Landroid/media/MediaActionSound;->mLoadCompleteListener:Landroid/media/SoundPool$OnLoadCompleteListener;
 
     invoke-virtual {v1, v2}, Landroid/media/SoundPool;->setOnLoadCompleteListener(Landroid/media/SoundPool$OnLoadCompleteListener;)V
 
-    .line 141
     sget-object v1, Landroid/media/MediaActionSound;->SOUND_FILES:[Ljava/lang/String;
 
     array-length v1, v1
@@ -160,7 +153,6 @@
 
     iput-object v1, p0, Landroid/media/MediaActionSound;->mSoundIds:[I
 
-    .line 142
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -171,21 +163,17 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 143
     iget-object v1, p0, Landroid/media/MediaActionSound;->mSoundIds:[I
 
     aput v5, v1, v0
 
-    .line 142
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 145
     :cond_0
     iput v5, p0, Landroid/media/MediaActionSound;->mSoundIdToPlay:I
 
-    .line 146
     return-void
 .end method
 
@@ -194,7 +182,6 @@
     .param p0, "x0"    # Landroid/media/MediaActionSound;
 
     .prologue
-    .line 48
     iget v0, p0, Landroid/media/MediaActionSound;->mSoundIdToPlay:I
 
     return v0
@@ -206,7 +193,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 48
     iput p1, p0, Landroid/media/MediaActionSound;->mSoundIdToPlay:I
 
     return p1
@@ -218,14 +204,12 @@
     .prologue
     const/4 v4, 0x5
 
-    .line 247
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/theme/current/audioeffect/camera_click.ogg"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 248
     .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -233,7 +217,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 249
     sget-object v1, Landroid/media/MediaActionSound;->SOUND_FILES:[Ljava/lang/String;
 
     const/4 v2, 0x0
@@ -242,7 +225,6 @@
 
     aput-object v3, v1, v2
 
-    .line 252
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -251,7 +233,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 253
     .restart local v0    # "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -259,7 +240,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 254
     sget-object v1, Landroid/media/MediaActionSound;->SOUND_FILES:[Ljava/lang/String;
 
     const/4 v2, 0x1
@@ -268,7 +248,6 @@
 
     aput-object v3, v1, v2
 
-    .line 257
     :cond_1
     new-instance v0, Ljava/io/File;
 
@@ -277,7 +256,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 258
     .restart local v0    # "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -285,7 +263,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 259
     sget-object v1, Landroid/media/MediaActionSound;->SOUND_FILES:[Ljava/lang/String;
 
     const/4 v2, 0x2
@@ -294,7 +271,6 @@
 
     aput-object v3, v1, v2
 
-    .line 260
     sget-object v1, Landroid/media/MediaActionSound;->SOUND_FILES:[Ljava/lang/String;
 
     const/4 v2, 0x3
@@ -303,7 +279,6 @@
 
     aput-object v3, v1, v2
 
-    .line 263
     :cond_2
     new-instance v0, Ljava/io/File;
 
@@ -312,7 +287,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 264
     .restart local v0    # "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -320,7 +294,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 265
     sget-object v1, Landroid/media/MediaActionSound;->SOUND_FILES:[Ljava/lang/String;
 
     const/4 v2, 0x4
@@ -329,7 +302,6 @@
 
     aput-object v3, v1, v2
 
-    .line 268
     :cond_3
     new-instance v0, Ljava/io/File;
 
@@ -338,7 +310,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 269
     .restart local v0    # "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -346,14 +317,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 270
     sget-object v1, Landroid/media/MediaActionSound;->SOUND_FILES:[Ljava/lang/String;
 
     const-string v2, "/data/system/theme/current/audioeffect/cameraCountdownSlow.ogg"
 
     aput-object v2, v1, v4
 
-    .line 273
     :cond_4
     new-instance v0, Ljava/io/File;
 
@@ -362,7 +331,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 274
     .restart local v0    # "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -370,14 +338,12 @@
 
     if-eqz v1, :cond_5
 
-    .line 275
     sget-object v1, Landroid/media/MediaActionSound;->SOUND_FILES:[Ljava/lang/String;
 
     const-string v2, "/data/system/theme/current/audioeffect/cameraCountdownFast.ogg"
 
     aput-object v2, v1, v4
 
-    .line 277
     :cond_5
     return-void
 .end method
@@ -389,7 +355,6 @@
     .param p1, "soundName"    # I
 
     .prologue
-    .line 161
     monitor-enter p0
 
     if-ltz p1, :cond_0
@@ -401,7 +366,6 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 162
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -429,7 +393,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 161
     :catchall_0
     move-exception v0
 
@@ -437,7 +400,6 @@
 
     throw v0
 
-    .line 164
     :cond_1
     :try_start_1
     iget-object v0, p0, Landroid/media/MediaActionSound;->mSoundIds:[I
@@ -448,7 +410,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 165
     iget-object v0, p0, Landroid/media/MediaActionSound;->mSoundIds:[I
 
     iget-object v1, p0, Landroid/media/MediaActionSound;->mSoundPool:Landroid/media/SoundPool;
@@ -467,7 +428,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 168
     :cond_2
     monitor-exit p0
 
@@ -479,7 +439,6 @@
     .param p1, "soundName"    # I
 
     .prologue
-    .line 202
     monitor-enter p0
 
     if-ltz p1, :cond_0
@@ -491,7 +450,6 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 203
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -519,7 +477,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 202
     :catchall_0
     move-exception v0
 
@@ -527,7 +484,6 @@
 
     throw v0
 
-    .line 205
     :cond_1
     :try_start_1
     iget-object v0, p0, Landroid/media/MediaActionSound;->mSoundIds:[I
@@ -538,7 +494,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 206
     iget-object v0, p0, Landroid/media/MediaActionSound;->mSoundPool:Landroid/media/SoundPool;
 
     sget-object v1, Landroid/media/MediaActionSound;->SOUND_FILES:[Ljava/lang/String;
@@ -553,7 +508,6 @@
 
     iput v0, p0, Landroid/media/MediaActionSound;->mSoundIdToPlay:I
 
-    .line 208
     iget-object v0, p0, Landroid/media/MediaActionSound;->mSoundIds:[I
 
     iget v1, p0, Landroid/media/MediaActionSound;->mSoundIdToPlay:I
@@ -562,13 +516,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 212
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 210
     :cond_2
     :try_start_2
     iget-object v0, p0, Landroid/media/MediaActionSound;->mSoundPool:Landroid/media/SoundPool;
@@ -598,22 +550,18 @@
     .locals 1
 
     .prologue
-    .line 236
     iget-object v0, p0, Landroid/media/MediaActionSound;->mSoundPool:Landroid/media/SoundPool;
 
     if-eqz v0, :cond_0
 
-    .line 237
     iget-object v0, p0, Landroid/media/MediaActionSound;->mSoundPool:Landroid/media/SoundPool;
 
     invoke-virtual {v0}, Landroid/media/SoundPool;->release()V
 
-    .line 238
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/MediaActionSound;->mSoundPool:Landroid/media/SoundPool;
 
-    .line 240
     :cond_0
     return-void
 .end method

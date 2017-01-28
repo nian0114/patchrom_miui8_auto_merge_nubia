@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 682
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     const/4 v0, 0x0
@@ -42,7 +41,6 @@
     .param p2, "x1"    # Landroid/support/v4/media/session/MediaSessionCompat$1;
 
     .prologue
-    .line 682
     invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
 
     return-void
@@ -56,11 +54,9 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 686
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlayFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
 
-    .line 687
     return-void
 .end method

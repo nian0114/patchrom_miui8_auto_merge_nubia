@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 376
     iput-object p1, p0, Lcn/nubia/server/appmgmt/MotionDozeController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcn/nubia/server/appmgmt/MotionDozeController$1;
 
     .prologue
-    .line 376
     invoke-direct {p0, p1}, Lcn/nubia/server/appmgmt/MotionDozeController$SystemReadyRunnalbe;-><init>(Lcn/nubia/server/appmgmt/MotionDozeController;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 11
 
     .prologue
-    .line 379
     iget-object v9, p0, Lcn/nubia/server/appmgmt/MotionDozeController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     # getter for: Lcn/nubia/server/appmgmt/MotionDozeController;->mContext:Landroid/content/Context;
@@ -68,22 +65,18 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 380
     .local v0, "am":Landroid/app/ActivityManager;
     if-nez v0, :cond_1
 
-    .line 413
     :cond_0
     :goto_0
     return-void
 
-    .line 383
     :cond_1
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v7
 
-    .line 384
     .local v7, "processes":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     if-eqz v7, :cond_0
 
@@ -93,7 +86,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 387
     iget-object v9, p0, Lcn/nubia/server/appmgmt/MotionDozeController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     # getter for: Lcn/nubia/server/appmgmt/MotionDozeController;->mDumpDebugLog:Z
@@ -103,18 +95,15 @@
 
     if-eqz v9, :cond_2
 
-    .line 388
     const-string v9, "MotionDozeController"
 
     const-string v10, "system ready. check motion apps"
 
     invoke-static {v9, v10}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 391
     :cond_2
     const/4 v2, 0x0
 
-    .line 392
     .local v2, "hasMotionApp":Z
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -133,13 +122,11 @@
 
     check-cast v8, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 393
     .local v8, "rapi":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget-object v9, v8, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     if-eqz v9, :cond_3
 
-    .line 397
     iget-object v1, v8, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -154,7 +141,6 @@
 
     aget-object v6, v1, v4
 
-    .line 398
     .local v6, "packageName":Ljava/lang/String;
     iget-object v9, p0, Lcn/nubia/server/appmgmt/MotionDozeController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
@@ -165,7 +151,6 @@
 
     monitor-enter v10
 
-    .line 399
     :try_start_0
     iget-object v9, p0, Lcn/nubia/server/appmgmt/MotionDozeController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
@@ -180,20 +165,16 @@
 
     if-eqz v9, :cond_6
 
-    .line 400
     const/4 v2, 0x1
 
-    .line 401
     monitor-exit v10
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 406
     .end local v6    # "packageName":Ljava/lang/String;
     :cond_4
     if-eqz v2, :cond_3
 
-    .line 411
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v4    # "i$":I
     .end local v5    # "len$":I
@@ -204,7 +185,6 @@
     # setter for: Lcn/nubia/server/appmgmt/MotionDozeController;->mRunningMotionApp:Z
     invoke-static {v9, v2}, Lcn/nubia/server/appmgmt/MotionDozeController;->access$1402(Lcn/nubia/server/appmgmt/MotionDozeController;Z)Z
 
-    .line 412
     iget-object v9, p0, Lcn/nubia/server/appmgmt/MotionDozeController$SystemReadyRunnalbe;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     # getter for: Lcn/nubia/server/appmgmt/MotionDozeController;->mHandler:Landroid/os/Handler;
@@ -223,7 +203,6 @@
 
     goto :goto_0
 
-    .line 403
     .restart local v1    # "arr$":[Ljava/lang/String;
     .restart local v4    # "i$":I
     .restart local v5    # "len$":I
@@ -233,12 +212,10 @@
     :try_start_1
     monitor-exit v10
 
-    .line 397
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 403
     :catchall_0
     move-exception v9
 

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +18,5 @@
     .param p0, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 28
     return-object p0
 .end method

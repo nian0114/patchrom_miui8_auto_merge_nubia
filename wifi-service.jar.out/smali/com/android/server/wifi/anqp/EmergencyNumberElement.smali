@@ -28,17 +28,14 @@
     .end annotation
 
     .prologue
-    .line 17
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 19
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/anqp/EmergencyNumberElement;->mNumbers:Ljava/util/List;
 
-    .line 21
     :goto_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -46,7 +43,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 22
     iget-object v0, p0, Lcom/android/server/wifi/anqp/EmergencyNumberElement;->mNumbers:Ljava/util/List;
 
     const/4 v1, 0x1
@@ -61,7 +57,6 @@
 
     goto :goto_0
 
-    .line 24
     :cond_0
     return-void
 .end method
@@ -81,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 27
     iget-object v0, p0, Lcom/android/server/wifi/anqp/EmergencyNumberElement;->mNumbers:Ljava/util/List;
 
     return-object v0
@@ -91,7 +85,6 @@
     .locals 2
 
     .prologue
-    .line 32
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -42,10 +42,8 @@
     .locals 1
 
     .prologue
-    .line 188
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 192
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -60,7 +58,6 @@
     .param p1, "x0"    # Lcom/android/server/wifi/WifiLogger$1;
 
     .prologue
-    .line 188
     invoke-direct {p0}, Lcom/android/server/wifi/WifiLogger$BugReport;-><init>()V
 
     return-void
@@ -72,18 +69,15 @@
     .locals 18
 
     .prologue
-    .line 197
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 199
     .local v4, "builder":Ljava/lang/StringBuilder;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v5
 
-    .line 200
     .local v5, "c":Ljava/util/Calendar;
     move-object/from16 v0, p0
 
@@ -91,7 +85,6 @@
 
     invoke-virtual {v5, v14, v15}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 201
     const-string v14, "system time = "
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -144,7 +137,6 @@
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 204
     move-object/from16 v0, p0
 
     iget-wide v14, v0, Lcom/android/server/wifi/WifiLogger$BugReport;->kernelTimeNanos:J
@@ -153,7 +145,6 @@
 
     div-long v10, v14, v16
 
-    .line 205
     .local v10, "kernelTimeMs":J
     const-string v14, "kernel time = "
 
@@ -191,14 +182,12 @@
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 208
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiLogger$BugReport;->alertData:[B
 
     if-nez v14, :cond_0
 
-    .line 209
     const-string v14, "reason = "
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -217,7 +206,6 @@
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 216
     :goto_0
     move-object/from16 v0, p0
 
@@ -245,7 +233,6 @@
 
     check-cast v6, Ljava/util/Map$Entry;
 
-    .line 217
     .local v6, "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[[B>;"
     invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -253,7 +240,6 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 218
     .local v12, "ringName":Ljava/lang/String;
     invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -261,7 +247,6 @@
 
     check-cast v3, [[B
 
-    .line 219
     .local v3, "buffers":[[B
     const-string v14, "ring-buffer = "
 
@@ -277,10 +262,8 @@
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 221
     const/4 v13, 0x0
 
-    .line 222
     .local v13, "size":I
     const/4 v7, 0x0
 
@@ -290,19 +273,16 @@
 
     if-ge v7, v14, :cond_1
 
-    .line 223
     aget-object v14, v3, v7
 
     array-length v14, v14
 
     add-int/2addr v13, v14
 
-    .line 222
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 211
     .end local v3    # "buffers":[[B
     .end local v6    # "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[[B>;"
     .end local v7    # "i":I
@@ -322,12 +302,10 @@
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 212
     const-string v14, "data \n"
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 213
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiLogger$BugReport;->alertData:[B
@@ -347,7 +325,6 @@
 
     goto :goto_0
 
-    .line 226
     .restart local v3    # "buffers":[[B
     .restart local v6    # "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[[B>;"
     .restart local v7    # "i":I
@@ -357,11 +334,9 @@
     :cond_1
     new-array v2, v13, [B
 
-    .line 227
     .local v2, "buffer":[B
     const/4 v9, 0x0
 
-    .line 228
     .local v9, "index":I
     const/4 v7, 0x0
 
@@ -370,7 +345,6 @@
 
     if-ge v7, v14, :cond_2
 
-    .line 229
     aget-object v14, v3, v7
 
     const/4 v15, 0x0
@@ -387,19 +361,16 @@
 
     invoke-static {v14, v15, v2, v9, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 230
     aget-object v14, v3, v7
 
     array-length v14, v14
 
     add-int/2addr v9, v14
 
-    .line 228
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_3
 
-    .line 233
     :cond_2
     # invokes: Lcom/android/server/wifi/WifiLogger;->compressToBase64([B)Ljava/lang/String;
     invoke-static {v2}, Lcom/android/server/wifi/WifiLogger;->access$000([B)Ljava/lang/String;
@@ -408,14 +379,12 @@
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 234
     const-string v14, "\n"
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 237
     .end local v2    # "buffer":[B
     .end local v3    # "buffers":[[B
     .end local v6    # "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[[B>;"
@@ -430,12 +399,10 @@
 
     if-eqz v14, :cond_4
 
-    .line 238
     const-string v14, "FW Memory dump \n"
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 239
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiLogger$BugReport;->fwMemoryDump:[B
@@ -447,7 +414,6 @@
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 242
     :cond_4
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,12 +32,10 @@
     .end annotation
 
     .prologue
-    .line 36
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 37
     .local v0, "text":Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -48,14 +45,12 @@
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 47
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1}, Ljava/lang/RuntimeException;-><init>()V
 
     throw v1
 
-    .line 41
     :sswitch_0
     new-instance v1, Ljava/lang/Integer;
 
@@ -67,13 +62,11 @@
 
     move-object v0, v1
 
-    .line 45
     .end local v0    # "text":Ljava/lang/String;
     :goto_0
     :sswitch_1
     return-object v0
 
-    .line 43
     .restart local v0    # "text":Ljava/lang/String;
     :sswitch_2
     new-instance v1, Ljava/lang/Long;
@@ -88,7 +81,6 @@
 
     goto :goto_0
 
-    .line 45
     :sswitch_3
     new-instance v1, Ljava/lang/Boolean;
 
@@ -102,7 +94,6 @@
 
     goto :goto_0
 
-    .line 37
     nop
 
     :sswitch_data_0
@@ -119,7 +110,6 @@
     .param p1, "cm"    # Lorg/ksoap2/serialization/SoapSerializationEnvelope;
 
     .prologue
-    .line 73
     iget-object v0, p1, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->xsd:Ljava/lang/String;
 
     const-string v1, "int"
@@ -128,7 +118,6 @@
 
     invoke-virtual {p1, v0, v1, v2, p0}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addMapping(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lorg/ksoap2/serialization/Marshal;)V
 
-    .line 74
     iget-object v0, p1, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->xsd:Ljava/lang/String;
 
     const-string v1, "long"
@@ -137,7 +126,6 @@
 
     invoke-virtual {p1, v0, v1, v2, p0}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addMapping(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lorg/ksoap2/serialization/Marshal;)V
 
-    .line 75
     iget-object v0, p1, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->xsd:Ljava/lang/String;
 
     const-string v1, "string"
@@ -146,7 +134,6 @@
 
     invoke-virtual {p1, v0, v1, v2, p0}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addMapping(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lorg/ksoap2/serialization/Marshal;)V
 
-    .line 76
     iget-object v0, p1, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->xsd:Ljava/lang/String;
 
     const-string v1, "boolean"
@@ -155,7 +142,6 @@
 
     invoke-virtual {p1, v0, v1, v2, p0}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addMapping(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lorg/ksoap2/serialization/Marshal;)V
 
-    .line 77
     return-void
 .end method
 
@@ -170,23 +156,19 @@
     .end annotation
 
     .prologue
-    .line 59
     instance-of v4, p2, Lorg/ksoap2/serialization/AttributeContainer;
 
     if-eqz v4, :cond_0
 
     move-object v0, p2
 
-    .line 60
     check-cast v0, Lorg/ksoap2/serialization/AttributeContainer;
 
-    .line 61
     .local v0, "attributeContainer":Lorg/ksoap2/serialization/AttributeContainer;
     invoke-virtual {v0}, Lorg/ksoap2/serialization/AttributeContainer;->getAttributeCount()I
 
     move-result v2
 
-    .line 62
     .local v2, "cnt":I
     const/4 v3, 0x0
 
@@ -194,16 +176,13 @@
     :goto_0
     if-ge v3, v2, :cond_0
 
-    .line 63
     new-instance v1, Lorg/ksoap2/serialization/AttributeInfo;
 
     invoke-direct {v1}, Lorg/ksoap2/serialization/AttributeInfo;-><init>()V
 
-    .line 64
     .local v1, "attributeInfo":Lorg/ksoap2/serialization/AttributeInfo;
     invoke-virtual {v0, v3, v1}, Lorg/ksoap2/serialization/AttributeContainer;->getAttributeInfo(ILorg/ksoap2/serialization/AttributeInfo;)V
 
-    .line 65
     invoke-virtual {v1}, Lorg/ksoap2/serialization/AttributeInfo;->getNamespace()Ljava/lang/String;
 
     move-result-object v4
@@ -222,12 +201,10 @@
 
     invoke-interface {p1, v4, v5, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 62
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 69
     .end local v0    # "attributeContainer":Lorg/ksoap2/serialization/AttributeContainer;
     .end local v1    # "attributeInfo":Lorg/ksoap2/serialization/AttributeInfo;
     .end local v2    # "cnt":I
@@ -239,6 +216,5 @@
 
     invoke-interface {p1, v4}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 70
     return-void
 .end method

@@ -117,114 +117,91 @@
     .end annotation
 
     .prologue
-    .line 414
     .local p2, "anqpElements":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Lcom/android/server/wifi/anqp/ANQPElement;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 415
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mSSID:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mSSID:Ljava/lang/String;
 
-    .line 416
     iget-wide v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mBSSID:J
 
     iput-wide v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mBSSID:J
 
-    .line 417
     iget-wide v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mHESSID:J
 
     iput-wide v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mHESSID:J
 
-    .line 418
     iget v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mStationCount:I
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mStationCount:I
 
-    .line 419
     iget v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mChannelUtilization:I
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mChannelUtilization:I
 
-    .line 420
     iget v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCapacity:I
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCapacity:I
 
-    .line 421
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnt:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnt:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 422
     iget-boolean v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mInternet:Z
 
     iput-boolean v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mInternet:Z
 
-    .line 423
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mVenueGroup:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mVenueGroup:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 424
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mVenueType:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mVenueType:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 425
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mHSRelease:Lcom/android/server/wifi/hotspot2/NetworkDetail$HSRelease;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mHSRelease:Lcom/android/server/wifi/hotspot2/NetworkDetail$HSRelease;
 
-    .line 426
     iget v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnqpDomainID:I
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnqpDomainID:I
 
-    .line 427
     iget v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnqpOICount:I
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnqpOICount:I
 
-    .line 428
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mRoamingConsortiums:[J
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mRoamingConsortiums:[J
 
-    .line 429
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mExtendedCapabilities:Ljava/lang/Long;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mExtendedCapabilities:Ljava/lang/Long;
 
-    .line 430
     iput-object p2, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mANQPElements:Ljava/util/Map;
 
-    .line 431
     iget v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mChannelWidth:I
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mChannelWidth:I
 
-    .line 432
     iget v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mPrimaryFreq:I
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mPrimaryFreq:I
 
-    .line 433
     iget v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCenterfreq0:I
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCenterfreq0:I
 
-    .line 434
     iget v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCenterfreq1:I
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCenterfreq1:I
 
-    .line 435
     iget-boolean v0, p1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->m80211McRTTResponder:Z
 
     iput-boolean v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->m80211McRTTResponder:Z
 
-    .line 436
     return-void
 .end method
 
@@ -246,14 +223,11 @@
     .end annotation
 
     .prologue
-    .line 125
     .local p3, "anqpLines":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 127
     if-nez p2, :cond_0
 
-    .line 128
     new-instance v48, Ljava/lang/IllegalArgumentException;
 
     const-string v49, "Null information element string"
@@ -262,7 +236,6 @@
 
     throw v48
 
-    .line 130
     :cond_0
     const/16 v48, 0x3d
 
@@ -274,11 +247,9 @@
 
     move-result v39
 
-    .line 131
     .local v39, "separator":I
     if-gez v39, :cond_1
 
-    .line 132
     new-instance v48, Ljava/lang/IllegalArgumentException;
 
     const-string v49, "No element separator"
@@ -287,7 +258,6 @@
 
     throw v48
 
-    .line 135
     :cond_1
     invoke-static/range {p1 .. p1}, Lcom/android/server/wifi/hotspot2/Utils;->parseMac(Ljava/lang/String;)J
 
@@ -299,7 +269,6 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mBSSID:J
 
-    .line 137
     add-int/lit8 v48, v39, 0x1
 
     move-object/from16 v0, p2
@@ -324,91 +293,69 @@
 
     move-result-object v15
 
-    .line 140
     .local v15, "data":Ljava/nio/ByteBuffer;
     const/16 v40, 0x0
 
-    .line 141
     .local v40, "ssid":Ljava/lang/String;
     const/16 v41, 0x0
 
-    .line 142
     .local v41, "ssidOctets":[B
     const/16 v42, 0x0
 
-    .line 143
     .local v42, "stationCount":I
     const/4 v14, 0x0
 
-    .line 144
     .local v14, "channelUtilization":I
     const/4 v9, 0x0
 
-    .line 146
     .local v9, "capacity":I
     const/4 v8, 0x0
 
-    .line 147
     .local v8, "ant":Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
     const/16 v29, 0x0
 
-    .line 148
     .local v29, "internet":Z
     const/16 v44, 0x0
 
-    .line 149
     .local v44, "venueGroup":Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
     const/16 v45, 0x0
 
-    .line 150
     .local v45, "venueType":Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
     const-wide/16 v24, 0x0
 
-    .line 152
     .local v24, "hessid":J
     const/4 v7, 0x0
 
-    .line 153
     .local v7, "anqpOICount":I
     const/16 v37, 0x0
 
-    .line 155
     .local v37, "roamingConsortiums":[J
     const/16 v27, 0x0
 
-    .line 156
     .local v27, "hsRelease":Lcom/android/server/wifi/hotspot2/NetworkDetail$HSRelease;
     const/4 v6, 0x0
 
-    .line 158
     .local v6, "anqpDomainID":I
     const/16 v23, 0x0
 
-    .line 160
     .local v23, "extendedCapabilities":Ljava/lang/Long;
     const/16 v38, 0x0
 
-    .line 161
     .local v38, "secondChanelOffset":I
     const/4 v13, 0x0
 
-    .line 162
     .local v13, "channelMode":I
     const/4 v11, 0x0
 
-    .line 163
     .local v11, "centerFreqIndex1":I
     const/4 v12, 0x0
 
-    .line 164
     .local v12, "centerFreqIndex2":I
     const/4 v4, 0x0
 
-    .line 166
     .local v4, "RTTResponder":Z
     const/16 v22, 0x0
 
-    .line 169
     .local v22, "exception":Ljava/lang/RuntimeException;
     :cond_2
     :goto_0
@@ -425,7 +372,6 @@
 
     if-le v0, v1, :cond_12
 
-    .line 170
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v48
@@ -436,7 +382,6 @@
 
     move/from16 v19, v0
 
-    .line 171
     .local v19, "eid":I
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->get()B
 
@@ -448,7 +393,6 @@
 
     move/from16 v21, v0
 
-    .line 173
     .local v21, "elementLength":I
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -460,7 +404,6 @@
 
     if-le v0, v1, :cond_3
 
-    .line 174
     new-instance v48, Ljava/lang/IllegalArgumentException;
 
     new-instance v49, Ljava/lang/StringBuilder;
@@ -521,13 +464,11 @@
     .catch Ljava/nio/BufferUnderflowException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 315
     .end local v19    # "eid":I
     .end local v21    # "elementLength":I
     :catch_0
     move-exception v18
 
-    .line 316
     .local v18, "e":Ljava/lang/RuntimeException;
     :goto_1
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -562,10 +503,8 @@
 
     invoke-static/range {v48 .. v49}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
     if-nez v41, :cond_11
 
-    .line 318
     new-instance v48, Ljava/lang/IllegalArgumentException;
 
     const-string v49, "Malformed IE string (no SSID)"
@@ -580,7 +519,6 @@
 
     throw v48
 
-    .line 178
     .end local v18    # "e":Ljava/lang/RuntimeException;
     .restart local v19    # "eid":I
     .restart local v21    # "elementLength":I
@@ -591,11 +529,9 @@
 
     if-nez v41, :cond_2
 
-    .line 185
     :cond_4
     sparse-switch v19, :sswitch_data_0
 
-    .line 310
     :try_start_1
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->position()I
 
@@ -609,7 +545,6 @@
 
     goto/16 :goto_0
 
-    .line 315
     .end local v19    # "eid":I
     .end local v21    # "elementLength":I
     :catch_1
@@ -617,7 +552,6 @@
 
     goto :goto_1
 
-    .line 187
     .restart local v19    # "eid":I
     .restart local v21    # "elementLength":I
     :sswitch_0
@@ -627,14 +561,12 @@
 
     move-object/from16 v41, v0
 
-    .line 188
     move-object/from16 v0, v41
 
     invoke-virtual {v15, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     goto/16 :goto_0
 
-    .line 315
     .end local v19    # "eid":I
     .end local v21    # "elementLength":I
     :catch_2
@@ -642,7 +574,6 @@
 
     goto :goto_1
 
-    .line 191
     .restart local v19    # "eid":I
     .restart local v21    # "elementLength":I
     :sswitch_1
@@ -654,7 +585,6 @@
 
     if-eq v0, v1, :cond_5
 
-    .line 192
     new-instance v48, Ljava/lang/IllegalArgumentException;
 
     new-instance v49, Ljava/lang/StringBuilder;
@@ -683,7 +613,6 @@
 
     throw v48
 
-    .line 195
     :cond_5
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -693,7 +622,6 @@
 
     and-int v42, v48, v49
 
-    .line 196
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v48
@@ -702,7 +630,6 @@
 
     and-int/lit16 v14, v0, 0xff
 
-    .line 197
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v48
@@ -711,10 +638,8 @@
 
     and-int v9, v48, v49
 
-    .line 198
     goto/16 :goto_0
 
-    .line 200
     :sswitch_2
     move/from16 v0, v21
 
@@ -722,13 +647,11 @@
 
     move-result-object v20
 
-    .line 201
     .local v20, "element":Ljava/nio/ByteBuffer;
     invoke-virtual/range {v20 .. v20}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v36
 
-    .line 202
     .local v36, "primary_channel":I
     invoke-virtual/range {v20 .. v20}, Ljava/nio/ByteBuffer;->get()B
 
@@ -736,10 +659,8 @@
 
     and-int/lit8 v38, v48, 0x3
 
-    .line 203
     goto/16 :goto_0
 
-    .line 205
     .end local v20    # "element":Ljava/nio/ByteBuffer;
     .end local v36    # "primary_channel":I
     :sswitch_3
@@ -749,7 +670,6 @@
 
     move-result-object v20
 
-    .line 206
     .restart local v20    # "element":Ljava/nio/ByteBuffer;
     invoke-virtual/range {v20 .. v20}, Ljava/nio/ByteBuffer;->get()B
 
@@ -759,7 +679,6 @@
 
     and-int/lit16 v13, v0, 0xff
 
-    .line 207
     invoke-virtual/range {v20 .. v20}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v48
@@ -768,7 +687,6 @@
 
     and-int/lit16 v11, v0, 0xff
 
-    .line 208
     invoke-virtual/range {v20 .. v20}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v48
@@ -777,10 +695,8 @@
 
     and-int/lit16 v12, v0, 0xff
 
-    .line 209
     goto/16 :goto_0
 
-    .line 211
     .end local v20    # "element":Ljava/nio/ByteBuffer;
     :sswitch_4
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->get()B
@@ -791,7 +707,6 @@
 
     and-int/lit16 v5, v0, 0xff
 
-    .line 212
     .local v5, "anOptions":I
     invoke-static {}, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->values()[Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
@@ -805,14 +720,12 @@
     .catch Ljava/nio/BufferUnderflowException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 213
     and-int/lit8 v48, v5, 0x10
 
     if-eqz v48, :cond_9
 
     const/16 v29, 0x1
 
-    .line 215
     :goto_2
     const/16 v48, 0x3
 
@@ -830,14 +743,12 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 217
     :cond_6
     :try_start_2
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v46
 
-    .line 218
     .local v46, "vinfo":Ljava/nio/ByteBuffer;
     invoke-virtual/range {v46 .. v46}, Ljava/nio/ByteBuffer;->position()I
 
@@ -851,7 +762,6 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 219
     new-instance v47, Lcom/android/server/wifi/anqp/VenueNameElement;
 
     sget-object v48, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQPVenueName:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
@@ -864,18 +774,15 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/wifi/anqp/VenueNameElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
 
-    .line 222
     .local v47, "vne":Lcom/android/server/wifi/anqp/VenueNameElement;
     invoke-virtual/range {v47 .. v47}, Lcom/android/server/wifi/anqp/VenueNameElement;->getGroup()Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     move-result-object v44
 
-    .line 223
     invoke-virtual/range {v47 .. v47}, Lcom/android/server/wifi/anqp/VenueNameElement;->getType()Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     move-result-object v45
 
-    .line 224
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->getShort()S
     :try_end_2
     .catch Ljava/net/ProtocolException; {:try_start_2 .. :try_end_2} :catch_4
@@ -883,7 +790,6 @@
     .catch Ljava/nio/BufferUnderflowException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 232
     .end local v46    # "vinfo":Ljava/nio/ByteBuffer;
     .end local v47    # "vne":Lcom/android/server/wifi/anqp/VenueNameElement;
     :cond_7
@@ -904,7 +810,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 233
     :cond_8
     :try_start_3
     sget-object v48, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
@@ -921,13 +826,11 @@
 
     goto/16 :goto_0
 
-    .line 213
     :cond_9
     const/16 v29, 0x0
 
     goto :goto_2
 
-    .line 228
     :cond_a
     const/16 v48, 0x1
 
@@ -945,7 +848,6 @@
 
     if-eq v0, v1, :cond_7
 
-    .line 229
     new-instance v48, Ljava/lang/IllegalArgumentException;
 
     new-instance v49, Ljava/lang/StringBuilder;
@@ -974,7 +876,6 @@
 
     throw v48
 
-    .line 237
     .end local v5    # "anOptions":I
     :sswitch_5
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->get()B
@@ -985,7 +886,6 @@
 
     and-int/lit16 v7, v0, 0xff
 
-    .line 239
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v48
@@ -996,17 +896,14 @@
 
     move/from16 v31, v0
 
-    .line 240
     .local v31, "oi12Length":I
     and-int/lit8 v32, v31, 0xf
 
-    .line 241
     .local v32, "oi1Length":I
     ushr-int/lit8 v48, v31, 0x4
 
     and-int/lit8 v33, v48, 0xf
 
-    .line 242
     .local v33, "oi2Length":I
     add-int/lit8 v48, v21, -0x2
 
@@ -1014,30 +911,22 @@
 
     sub-int v34, v48, v33
 
-    .line 243
     .local v34, "oi3Length":I
     const/16 v35, 0x0
 
-    .line 244
     .local v35, "oiCount":I
     if-lez v32, :cond_b
 
-    .line 245
     add-int/lit8 v35, v35, 0x1
 
-    .line 246
     if-lez v33, :cond_b
 
-    .line 247
     add-int/lit8 v35, v35, 0x1
 
-    .line 248
     if-lez v34, :cond_b
 
-    .line 249
     add-int/lit8 v35, v35, 0x1
 
-    .line 253
     :cond_b
     move/from16 v0, v35
 
@@ -1045,7 +934,6 @@
 
     move-object/from16 v37, v0
 
-    .line 254
     if-lez v32, :cond_c
 
     move-object/from16 v0, v37
@@ -1056,7 +944,6 @@
 
     if-lez v48, :cond_c
 
-    .line 255
     const/16 v48, 0x0
 
     sget-object v49, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
@@ -1071,7 +958,6 @@
 
     aput-wide v50, v37, v48
 
-    .line 258
     :cond_c
     if-lez v33, :cond_d
 
@@ -1089,7 +975,6 @@
 
     if-le v0, v1, :cond_d
 
-    .line 259
     const/16 v48, 0x1
 
     sget-object v49, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
@@ -1104,7 +989,6 @@
 
     aput-wide v50, v37, v48
 
-    .line 262
     :cond_d
     if-lez v34, :cond_2
 
@@ -1122,7 +1006,6 @@
 
     if-le v0, v1, :cond_2
 
-    .line 263
     const/16 v48, 0x2
 
     sget-object v49, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
@@ -1139,7 +1022,6 @@
 
     goto/16 :goto_0
 
-    .line 268
     .end local v31    # "oi12Length":I
     .end local v32    # "oi1Length":I
     .end local v33    # "oi2Length":I
@@ -1152,7 +1034,6 @@
 
     move-result-object v20
 
-    .line 269
     .restart local v20    # "element":Ljava/nio/ByteBuffer;
     const/16 v48, 0x5
 
@@ -1174,7 +1055,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 270
     invoke-virtual/range {v20 .. v20}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v48
@@ -1185,7 +1065,6 @@
 
     move/from16 v26, v0
 
-    .line 271
     .local v26, "hsConf":I
     shr-int/lit8 v48, v26, 0x4
 
@@ -1193,16 +1072,13 @@
 
     packed-switch v48, :pswitch_data_0
 
-    .line 279
     sget-object v27, Lcom/android/server/wifi/hotspot2/NetworkDetail$HSRelease;->Unknown:Lcom/android/server/wifi/hotspot2/NetworkDetail$HSRelease;
 
-    .line 282
     :goto_4
     and-int/lit8 v48, v26, 0x4
 
     if-eqz v48, :cond_2
 
-    .line 283
     const/16 v48, 0x7
 
     move/from16 v0, v21
@@ -1211,7 +1087,6 @@
 
     if-ge v0, v1, :cond_e
 
-    .line 284
     new-instance v48, Ljava/lang/IllegalArgumentException;
 
     new-instance v49, Ljava/lang/StringBuilder;
@@ -1240,21 +1115,16 @@
 
     throw v48
 
-    .line 273
     :pswitch_0
     sget-object v27, Lcom/android/server/wifi/hotspot2/NetworkDetail$HSRelease;->R1:Lcom/android/server/wifi/hotspot2/NetworkDetail$HSRelease;
 
-    .line 274
     goto :goto_4
 
-    .line 276
     :pswitch_1
     sget-object v27, Lcom/android/server/wifi/hotspot2/NetworkDetail$HSRelease;->R2:Lcom/android/server/wifi/hotspot2/NetworkDetail$HSRelease;
 
-    .line 277
     goto :goto_4
 
-    .line 287
     :cond_e
     invoke-virtual/range {v20 .. v20}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -1266,7 +1136,6 @@
 
     goto/16 :goto_0
 
-    .line 292
     .end local v20    # "element":Ljava/nio/ByteBuffer;
     .end local v26    # "hsConf":I
     :sswitch_7
@@ -1274,7 +1143,6 @@
 
     move-result-object v20
 
-    .line 293
     .restart local v20    # "element":Ljava/nio/ByteBuffer;
     sget-object v48, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
@@ -1290,14 +1158,11 @@
 
     move-result-object v23
 
-    .line 296
     const/16 v28, 0x8
 
-    .line 297
     .local v28, "index":I
     const/16 v30, 0x6
 
-    .line 299
     .local v30, "offset":B
     const/16 v48, 0x9
 
@@ -1307,10 +1172,8 @@
 
     if-ge v0, v1, :cond_f
 
-    .line 300
     const/4 v4, 0x0
 
-    .line 301
     invoke-virtual/range {v20 .. v20}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v48
@@ -1325,7 +1188,6 @@
 
     goto/16 :goto_0
 
-    .line 305
     :cond_f
     invoke-virtual/range {v20 .. v20}, Ljava/nio/ByteBuffer;->position()I
 
@@ -1339,7 +1201,6 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 307
     invoke-virtual/range {v20 .. v20}, Ljava/nio/ByteBuffer;->get()B
     :try_end_3
     .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_0
@@ -1354,17 +1215,14 @@
 
     const/4 v4, 0x1
 
-    .line 308
     :goto_5
     goto/16 :goto_0
 
-    .line 307
     :cond_10
     const/4 v4, 0x0
 
     goto :goto_5
 
-    .line 320
     .end local v19    # "eid":I
     .end local v20    # "element":Ljava/nio/ByteBuffer;
     .end local v21    # "elementLength":I
@@ -1374,12 +1232,10 @@
     :cond_11
     move-object/from16 v22, v18
 
-    .line 323
     .end local v18    # "e":Ljava/lang/RuntimeException;
     :cond_12
     if-eqz v41, :cond_15
 
-    .line 324
     if-eqz v23, :cond_13
 
     invoke-virtual/range {v23 .. v23}, Ljava/lang/Long;->longValue()J
@@ -1398,7 +1254,6 @@
 
     const/16 v43, 0x1
 
-    .line 335
     .local v43, "strictUTF8":Z
     :goto_6
     sget-object v48, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
@@ -1407,7 +1262,6 @@
 
     move-result-object v17
 
-    .line 337
     .local v17, "decoder":Ljava/nio/charset/CharsetDecoder;
     :try_start_4
     invoke-static/range {v41 .. v41}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
@@ -1422,7 +1276,6 @@
 
     move-result-object v16
 
-    .line 338
     .local v16, "decoded":Ljava/nio/CharBuffer;
     invoke-virtual/range {v16 .. v16}, Ljava/nio/CharBuffer;->toString()Ljava/lang/String;
     :try_end_4
@@ -1430,17 +1283,14 @@
 
     move-result-object v40
 
-    .line 344
     .end local v16    # "decoded":Ljava/nio/CharBuffer;
     :goto_7
     if-nez v40, :cond_15
 
-    .line 345
     if-eqz v43, :cond_14
 
     if-eqz v22, :cond_14
 
-    .line 346
     new-instance v48, Ljava/lang/IllegalArgumentException;
 
     const-string v49, "Failed to decode SSID in dubious IE string"
@@ -1449,7 +1299,6 @@
 
     throw v48
 
-    .line 324
     .end local v17    # "decoder":Ljava/nio/charset/CharsetDecoder;
     .end local v43    # "strictUTF8":Z
     :cond_13
@@ -1457,19 +1306,16 @@
 
     goto :goto_6
 
-    .line 340
     .restart local v17    # "decoder":Ljava/nio/charset/CharsetDecoder;
     .restart local v43    # "strictUTF8":Z
     :catch_3
     move-exception v10
 
-    .line 341
     .local v10, "cce":Ljava/nio/charset/CharacterCodingException;
     const/16 v40, 0x0
 
     goto :goto_7
 
-    .line 349
     .end local v10    # "cce":Ljava/nio/charset/CharacterCodingException;
     :cond_14
     new-instance v40, Ljava/lang/String;
@@ -1485,7 +1331,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 354
     .end local v17    # "decoder":Ljava/nio/charset/CharsetDecoder;
     .end local v43    # "strictUTF8":Z
     .restart local v40    # "ssid":Ljava/lang/String;
@@ -1496,88 +1341,74 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mSSID:Ljava/lang/String;
 
-    .line 355
     move-wide/from16 v0, v24
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mHESSID:J
 
-    .line 356
     move/from16 v0, v42
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mStationCount:I
 
-    .line 357
     move-object/from16 v0, p0
 
     iput v14, v0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mChannelUtilization:I
 
-    .line 358
     move-object/from16 v0, p0
 
     iput v9, v0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCapacity:I
 
-    .line 359
     move-object/from16 v0, p0
 
     iput-object v8, v0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnt:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 360
     move/from16 v0, v29
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mInternet:Z
 
-    .line 361
     move-object/from16 v0, v44
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mVenueGroup:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 362
     move-object/from16 v0, v45
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mVenueType:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 363
     move-object/from16 v0, v27
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mHSRelease:Lcom/android/server/wifi/hotspot2/NetworkDetail$HSRelease;
 
-    .line 364
     move-object/from16 v0, p0
 
     iput v6, v0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnqpDomainID:I
 
-    .line 365
     move-object/from16 v0, p0
 
     iput v7, v0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnqpOICount:I
 
-    .line 366
     move-object/from16 v0, v37
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mRoamingConsortiums:[J
 
-    .line 367
     move-object/from16 v0, v23
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mExtendedCapabilities:Ljava/lang/Long;
 
-    .line 368
     invoke-static/range {p3 .. p3}, Lcom/android/server/wifi/hotspot2/SupplicantBridge;->parseANQPLines(Ljava/util/List;)Ljava/util/Map;
 
     move-result-object v48
@@ -1588,17 +1419,14 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mANQPElements:Ljava/util/Map;
 
-    .line 370
     move/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mPrimaryFreq:I
 
-    .line 372
     if-eqz v13, :cond_17
 
-    .line 374
     add-int/lit8 v48, v13, 0x1
 
     move/from16 v0, v48
@@ -1607,7 +1435,6 @@
 
     iput v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mChannelWidth:I
 
-    .line 375
     add-int/lit8 v48, v11, -0x24
 
     mul-int/lit8 v48, v48, 0x5
@@ -1624,14 +1451,12 @@
 
     iput v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCenterfreq0:I
 
-    .line 376
     const/16 v48, 0x1
 
     move/from16 v0, v48
 
     if-le v13, v0, :cond_16
 
-    .line 377
     add-int/lit8 v48, v12, -0x24
 
     mul-int/lit8 v48, v48, 0x5
@@ -1648,16 +1473,13 @@
 
     iput v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCenterfreq1:I
 
-    .line 399
     :goto_8
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->m80211McRTTResponder:Z
 
-    .line 405
     return-void
 
-    .line 379
     :cond_16
     const/16 v48, 0x0
 
@@ -1669,11 +1491,9 @@
 
     goto :goto_8
 
-    .line 383
     :cond_17
     if-eqz v38, :cond_1a
 
-    .line 384
     const/16 v48, 0x1
 
     move/from16 v0, v48
@@ -1682,7 +1502,6 @@
 
     iput v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mChannelWidth:I
 
-    .line 385
     const/16 v48, 0x1
 
     move/from16 v0, v38
@@ -1691,7 +1510,6 @@
 
     if-ne v0, v1, :cond_18
 
-    .line 386
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mPrimaryFreq:I
@@ -1706,7 +1524,6 @@
 
     iput v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCenterfreq0:I
 
-    .line 397
     :goto_9
     const/16 v48, 0x0
 
@@ -1718,7 +1535,6 @@
 
     goto :goto_8
 
-    .line 387
     :cond_18
     const/16 v48, 0x3
 
@@ -1728,7 +1544,6 @@
 
     if-ne v0, v1, :cond_19
 
-    .line 388
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mPrimaryFreq:I
@@ -1745,7 +1560,6 @@
 
     goto :goto_9
 
-    .line 390
     :cond_19
     const/16 v48, 0x0
 
@@ -1755,7 +1569,6 @@
 
     iput v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCenterfreq0:I
 
-    .line 391
     const-string v48, "NetworkDetail:"
 
     const-string v49, "Error on secondChanelOffset"
@@ -1764,7 +1577,6 @@
 
     goto :goto_9
 
-    .line 394
     :cond_1a
     const/16 v48, 0x0
 
@@ -1774,7 +1586,6 @@
 
     iput v0, v1, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCenterfreq0:I
 
-    .line 395
     const/16 v48, 0x0
 
     move/from16 v0, v48
@@ -1785,7 +1596,6 @@
 
     goto :goto_9
 
-    .line 225
     .restart local v5    # "anOptions":I
     .restart local v19    # "eid":I
     .restart local v21    # "elementLength":I
@@ -1794,7 +1604,6 @@
 
     goto/16 :goto_3
 
-    .line 185
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -1807,7 +1616,6 @@
         0xdd -> :sswitch_6
     .end sparse-switch
 
-    .line 271
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1821,7 +1629,6 @@
     .param p1, "plLength"    # I
 
     .prologue
-    .line 408
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -1834,7 +1641,6 @@
 
     move-result-object v0
 
-    .line 409
     .local v0, "payload":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->position()I
 
@@ -1844,7 +1650,6 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 410
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v1
@@ -1853,7 +1658,6 @@
 
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 411
     return-object v0
 .end method
 
@@ -1862,23 +1666,19 @@
     .param p0, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 629
     new-instance v1, Landroid/net/wifi/ScanResult;
 
     invoke-direct {v1}, Landroid/net/wifi/ScanResult;-><init>()V
 
-    .line 630
     .local v1, "scanResult":Landroid/net/wifi/ScanResult;
     const-string v2, "wing"
 
     iput-object v2, v1, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
-    .line 631
     const-string v2, "610408"
 
     iput-object v2, v1, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
-    .line 632
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
     iget-object v2, v1, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
@@ -1891,13 +1691,11 @@
 
     invoke-direct {v0, v2, v3, v4, v5}, Lcom/android/server/wifi/hotspot2/NetworkDetail;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;I)V
 
-    .line 633
     .local v0, "nwkDetail":Lcom/android/server/wifi/hotspot2/NetworkDetail;
     sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v2, v0}, Ljava/io/PrintStream;->println(Ljava/lang/Object;)V
 
-    .line 634
     return-void
 .end method
 
@@ -1908,14 +1706,11 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 444
     const-wide/16 v2, 0x0
 
-    .line 445
     .local v2, "mac":J
     const/4 v0, 0x0
 
-    .line 446
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -1927,7 +1722,6 @@
 
     if-ge v1, v5, :cond_1
 
-    .line 447
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -1936,11 +1730,9 @@
 
     move-result v4
 
-    .line 448
     .local v4, "nibble":I
     if-ltz v4, :cond_0
 
-    .line 449
     const/4 v5, 0x4
 
     shl-long v6, v2, v5
@@ -1949,16 +1741,13 @@
 
     or-long v2, v6, v8
 
-    .line 450
     add-int/lit8 v0, v0, 0x1
 
-    .line 446
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 453
     .end local v4    # "nibble":I
     :cond_1
     const/16 v5, 0xc
@@ -1969,7 +1758,6 @@
 
     if-ne v5, v10, :cond_3
 
-    .line 454
     :cond_2
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
@@ -2001,7 +1789,6 @@
 
     throw v5
 
-    .line 456
     :cond_3
     return-wide v2
 .end method
@@ -2011,16 +1798,13 @@
     .param p0, "mac"    # J
 
     .prologue
-    .line 606
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 607
     .local v2, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x1
 
-    .line 608
     .local v0, "first":Z
     const/4 v1, 0x5
 
@@ -2028,13 +1812,10 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 609
     if-eqz v0, :cond_0
 
-    .line 610
     const/4 v0, 0x0
 
-    .line 614
     :goto_1
     const-string v3, "%02x"
 
@@ -2064,12 +1845,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 608
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 612
     :cond_0
     const/16 v3, 0x3a
 
@@ -2077,7 +1856,6 @@
 
     goto :goto_1
 
-    .line 616
     :cond_1
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2103,7 +1881,6 @@
     .end annotation
 
     .prologue
-    .line 439
     .local p1, "anqpElements":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Lcom/android/server/wifi/anqp/ANQPElement;>;"
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
@@ -2121,15 +1898,12 @@
 
     const/4 v2, 0x0
 
-    .line 566
     if-ne p0, p1, :cond_1
 
-    .line 575
     :cond_0
     :goto_0
     return v1
 
-    .line 569
     :cond_1
     if-eqz p1, :cond_2
 
@@ -2146,16 +1920,13 @@
     :cond_2
     move v1, v2
 
-    .line 570
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 573
     check-cast v0, Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
-    .line 575
     .local v0, "that":Lcom/android/server/wifi/hotspot2/NetworkDetail;
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getSSID()Ljava/lang/String;
 
@@ -2203,7 +1974,6 @@
     .end annotation
 
     .prologue
-    .line 541
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mANQPElements:Ljava/util/Map;
 
     return-object v0
@@ -2213,7 +1983,6 @@
     .locals 1
 
     .prologue
-    .line 525
     iget v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnqpDomainID:I
 
     return v0
@@ -2223,7 +1992,6 @@
     .locals 1
 
     .prologue
-    .line 529
     iget v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnqpOICount:I
 
     return v0
@@ -2233,7 +2001,6 @@
     .locals 1
 
     .prologue
-    .line 505
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnt:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
     return-object v0
@@ -2243,7 +2010,6 @@
     .locals 2
 
     .prologue
-    .line 485
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mBSSID:J
 
     return-wide v0
@@ -2253,7 +2019,6 @@
     .locals 2
 
     .prologue
-    .line 602
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mBSSID:J
 
     invoke-static {v0, v1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->toMACString(J)Ljava/lang/String;
@@ -2267,7 +2032,6 @@
     .locals 1
 
     .prologue
-    .line 497
     iget v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCapacity:I
 
     return v0
@@ -2277,7 +2041,6 @@
     .locals 1
 
     .prologue
-    .line 549
     iget v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCenterfreq0:I
 
     return v0
@@ -2287,7 +2050,6 @@
     .locals 1
 
     .prologue
-    .line 553
     iget v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mCenterfreq1:I
 
     return v0
@@ -2297,7 +2059,6 @@
     .locals 1
 
     .prologue
-    .line 493
     iget v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mChannelUtilization:I
 
     return v0
@@ -2307,7 +2068,6 @@
     .locals 1
 
     .prologue
-    .line 545
     iget v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mChannelWidth:I
 
     return v0
@@ -2317,7 +2077,6 @@
     .locals 1
 
     .prologue
-    .line 537
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mExtendedCapabilities:Ljava/lang/Long;
 
     return-object v0
@@ -2327,7 +2086,6 @@
     .locals 2
 
     .prologue
-    .line 481
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mHESSID:J
 
     return-wide v0
@@ -2337,7 +2095,6 @@
     .locals 1
 
     .prologue
-    .line 521
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mHSRelease:Lcom/android/server/wifi/hotspot2/NetworkDetail$HSRelease;
 
     return-object v0
@@ -2347,7 +2104,6 @@
     .locals 1
 
     .prologue
-    .line 533
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mRoamingConsortiums:[J
 
     return-object v0
@@ -2357,7 +2113,6 @@
     .locals 1
 
     .prologue
-    .line 468
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mSSID:Ljava/lang/String;
 
     return-object v0
@@ -2367,7 +2122,6 @@
     .locals 1
 
     .prologue
-    .line 489
     iget v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mStationCount:I
 
     return v0
@@ -2377,7 +2131,6 @@
     .locals 2
 
     .prologue
-    .line 472
     const/4 v0, 0x0
 
     .local v0, "n":I
@@ -2390,7 +2143,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 473
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mSSID:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->charAt(I)C
@@ -2399,20 +2151,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 474
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mSSID:Ljava/lang/String;
 
-    .line 477
     :goto_1
     return-object v1
 
-    .line 472
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 477
     :cond_1
     const-string v1, ""
 
@@ -2423,7 +2171,6 @@
     .locals 1
 
     .prologue
-    .line 513
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mVenueGroup:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     return-object v0
@@ -2433,7 +2180,6 @@
     .locals 1
 
     .prologue
-    .line 517
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mVenueType:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     return-object v0
@@ -2443,7 +2189,6 @@
     .locals 1
 
     .prologue
-    .line 460
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnt:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
     if-nez v0, :cond_0
@@ -2472,7 +2217,6 @@
     .locals 1
 
     .prologue
-    .line 464
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnt:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
     if-eqz v0, :cond_0
@@ -2492,7 +2236,6 @@
     .locals 4
 
     .prologue
-    .line 580
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mSSID:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -2526,7 +2269,6 @@
     .locals 1
 
     .prologue
-    .line 557
     iget-boolean v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->m80211McRTTResponder:Z
 
     return v0
@@ -2536,7 +2278,6 @@
     .locals 1
 
     .prologue
-    .line 509
     iget-boolean v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mInternet:Z
 
     return v0
@@ -2546,7 +2287,6 @@
     .locals 1
 
     .prologue
-    .line 501
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mAnt:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
     if-eqz v0, :cond_0
@@ -2566,7 +2306,6 @@
     .locals 4
 
     .prologue
-    .line 561
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mExtendedCapabilities:Ljava/lang/Long;
 
     if-eqz v0, :cond_0
@@ -2608,7 +2347,6 @@
 
     const/4 v4, 0x0
 
-    .line 596
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/NetworkDetail;->mHESSID:J
 
     const-wide/16 v2, 0x0
@@ -2678,7 +2416,6 @@
     .locals 6
 
     .prologue
-    .line 585
     const-string v0, "NetworkInfo{mSSID=\'%s\', mHESSID=%x, mBSSID=%x, mStationCount=%d, mChannelUtilization=%d, mCapacity=%d, mAnt=%s, mInternet=%s, mVenueGroup=%s, mVenueType=%s, mHSRelease=%s, mAnqpDomainID=%d, mAnqpOICount=%d, mRoamingConsortiums=%s}"
 
     const/16 v1, 0xe

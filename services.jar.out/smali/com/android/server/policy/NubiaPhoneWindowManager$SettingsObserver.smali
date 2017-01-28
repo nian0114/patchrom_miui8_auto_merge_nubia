@@ -27,16 +27,12 @@
     .param p3, "listener"    # Lcom/android/server/policy/ISettingListener;
 
     .prologue
-    .line 31
     iput-object p1, p0, Lcom/android/server/policy/NubiaPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/NubiaPhoneWindowManager;
 
-    .line 32
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 33
     iput-object p3, p0, Lcom/android/server/policy/NubiaPhoneWindowManager$SettingsObserver;->mListener:Lcom/android/server/policy/ISettingListener;
 
-    .line 34
     return-void
 .end method
 
@@ -46,7 +42,6 @@
     .locals 2
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager$SettingsObserver;->mListener:Lcom/android/server/policy/ISettingListener;
 
     iget-object v1, p0, Lcom/android/server/policy/NubiaPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/NubiaPhoneWindowManager;
@@ -62,7 +57,6 @@
 
     invoke-interface {v0, v1, p0}, Lcom/android/server/policy/ISettingListener;->registerSettingsObserver(Landroid/content/ContentResolver;Landroid/database/ContentObserver;)V
 
-    .line 39
     return-void
 .end method
 
@@ -71,11 +65,9 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager$SettingsObserver;->mListener:Lcom/android/server/policy/ISettingListener;
 
     invoke-interface {v0}, Lcom/android/server/policy/ISettingListener;->updateSettings()V
 
-    .line 44
     return-void
 .end method

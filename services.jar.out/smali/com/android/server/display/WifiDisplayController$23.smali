@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1165
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$23;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,18 +39,15 @@
     .locals 2
 
     .prologue
-    .line 1168
     const-string v0, "WifiDisplayController"
 
     const-string v1, "requestStopScan"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1169
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$23;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayController;->requestStopScan()V
 
-    .line 1170
     return-void
 .end method

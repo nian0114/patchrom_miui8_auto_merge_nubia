@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 354
     iput-object p1, p0, Lcom/android/server/policy/NubiaGlobalActions$4;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 357
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$4;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mAudioManager:Landroid/media/AudioManager;
@@ -55,11 +53,9 @@
 
     move-result v0
 
-    .line 358
     .local v0, "vibratorModeOn":I
     if-ne v0, v2, :cond_0
 
-    .line 359
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$4;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mAudioManager:Landroid/media/AudioManager;
@@ -71,14 +67,12 @@
 
     invoke-virtual {v1, v2}, Landroid/media/AudioManager;->setRingerMode(I)V
 
-    .line 365
     :goto_0
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$4;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # invokes: Lcom/android/server/policy/NubiaGlobalActions;->setRingerModeView()V
     invoke-static {v1}, Lcom/android/server/policy/NubiaGlobalActions;->access$300(Lcom/android/server/policy/NubiaGlobalActions;)V
 
-    .line 366
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$4;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mDialog:Lcom/android/server/policy/NubiaShutdownRebootDialog;
@@ -88,10 +82,8 @@
 
     invoke-virtual {v1}, Lcom/android/server/policy/NubiaShutdownRebootDialog;->dismiss()V
 
-    .line 367
     return-void
 
-    .line 362
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/NubiaGlobalActions$4;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 782
     iput-object p1, p0, Lcom/android/server/am/NubiaSelfStartUtil$9;->this$0:Lcom/android/server/am/NubiaSelfStartUtil;
 
     iput-object p2, p0, Lcom/android/server/am/NubiaSelfStartUtil$9;->val$packageName:Ljava/lang/String;
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 785
     iget-object v0, p0, Lcom/android/server/am/NubiaSelfStartUtil$9;->this$0:Lcom/android/server/am/NubiaSelfStartUtil;
 
     iget-object v1, p0, Lcom/android/server/am/NubiaSelfStartUtil$9;->val$packageName:Ljava/lang/String;
@@ -58,6 +56,5 @@
     # invokes: Lcom/android/server/am/NubiaSelfStartUtil;->addWidgetFromDb(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/am/NubiaSelfStartUtil;->access$1600(Lcom/android/server/am/NubiaSelfStartUtil;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 786
     return-void
 .end method

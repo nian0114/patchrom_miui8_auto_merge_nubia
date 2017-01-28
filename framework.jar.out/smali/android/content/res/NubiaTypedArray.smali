@@ -16,10 +16,8 @@
     .param p4, "len"    # I
 
     .prologue
-    .line 12
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/content/res/TypedArray;-><init>(Landroid/content/res/Resources;[I[II)V
 
-    .line 9
     invoke-virtual {p0}, Landroid/content/res/NubiaTypedArray;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -28,7 +26,6 @@
 
     iput-boolean v0, p0, Landroid/content/res/NubiaTypedArray;->mIsNubiaResources:Z
 
-    .line 13
     return-void
 .end method
 
@@ -37,16 +34,13 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 16
     const/4 v1, 0x0
 
-    .line 17
     .local v1, "str":Ljava/lang/CharSequence;
     iget-boolean v2, p0, Landroid/content/res/NubiaTypedArray;->mIsNubiaResources:Z
 
     if-eqz v2, :cond_0
 
-    .line 18
     iget-object v2, p0, Landroid/content/res/NubiaTypedArray;->mData:[I
 
     add-int/lit8 v3, p1, 0x0
@@ -57,14 +51,12 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 19
     iget-object v2, p0, Landroid/content/res/NubiaTypedArray;->mData:[I
 
     add-int/lit8 v3, p1, 0x3
 
     aget v0, v2, v3
 
-    .line 20
     .local v0, "id":I
     invoke-virtual {p0}, Landroid/content/res/NubiaTypedArray;->getResources()Landroid/content/res/Resources;
 
@@ -76,7 +68,6 @@
 
     move-result-object v1
 
-    .line 24
     .end local v0    # "id":I
     :cond_0
     return-object v1
@@ -89,23 +80,19 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 30
     mul-int/lit8 v1, p1, 0x6
 
     invoke-direct {p0, v1}, Landroid/content/res/NubiaTypedArray;->loadStringValueAt(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 32
     .local v0, "value":Ljava/lang/CharSequence;
     if-eqz v0, :cond_0
 
-    .line 33
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 34
     :goto_0
     return-object v1
 
@@ -122,18 +109,15 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 39
     mul-int/lit8 v1, p1, 0x6
 
     invoke-direct {p0, v1}, Landroid/content/res/NubiaTypedArray;->loadStringValueAt(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 41
     .local v0, "value":Ljava/lang/CharSequence;
     if-eqz v0, :cond_0
 
-    .line 43
     .end local v0    # "value":Ljava/lang/CharSequence;
     :goto_0
     return-object v0

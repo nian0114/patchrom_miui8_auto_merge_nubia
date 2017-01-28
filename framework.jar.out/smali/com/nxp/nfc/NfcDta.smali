@@ -15,13 +15,10 @@
     .param p1, "mDtaService"    # Lcom/nxp/nfc/INfcDta;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     sput-object p1, Lcom/nxp/nfc/NfcDta;->mService:Lcom/nxp/nfc/INfcDta;
 
-    .line 38
     return-void
 .end method
 
@@ -37,7 +34,6 @@
     .param p6, "testCaseId"    # I
 
     .prologue
-    .line 61
     :try_start_0
     sget-object v0, Lcom/nxp/nfc/NfcDta;->mService:Lcom/nxp/nfc/INfcDta;
 
@@ -59,15 +55,12 @@
 
     move-result v0
 
-    .line 63
     :goto_0
     return v0
 
-    .line 62
     :catch_0
     move-exception v7
 
-    .line 63
     .local v7, "e":Landroid/os/RemoteException;
     const/4 v0, 0x0
 

@@ -49,31 +49,24 @@
     .prologue
     const v2, 0x961901
 
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
-    .line 44
     new-instance v0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor$1;-><init>(Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mSensorEventLister:Landroid/hardware/SensorEventListener;
 
-    .line 89
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mContext:Landroid/content/Context;
 
-    .line 90
     iput-object p2, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHandler:Landroid/os/Handler;
 
-    .line 91
     iput-object p3, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mWapper:Lcom/android/server/policy/PhoneWindowManagerWapper;
 
-    .line 92
     const-string v0, "sensor"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -84,7 +77,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->sensorManager:Landroid/hardware/SensorManager;
 
-    .line 94
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->sensorManager:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x1
@@ -95,12 +87,10 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallSensor:Landroid/hardware/Sensor;
 
-    .line 96
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallSensor:Landroid/hardware/Sensor;
 
     if-nez v0, :cond_0
 
-    .line 97
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->sensorManager:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x0
@@ -111,7 +101,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallSensor:Landroid/hardware/Sensor;
 
-    .line 99
     :cond_0
     invoke-static {p1}, Lcn/nubia/server/policy/smartface/util/PowerCtrl;->getInstance(Landroid/content/Context;)Lcn/nubia/server/policy/smartface/util/PowerCtrl;
 
@@ -119,7 +108,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mPowerCtrl:Lcn/nubia/server/policy/smartface/util/PowerCtrl;
 
-    .line 100
     return-void
 .end method
 
@@ -128,7 +116,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -140,7 +127,6 @@
     .param p1, "x1"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 25
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->smartFaceOpen(Landroid/hardware/SensorEvent;)Z
 
     move-result v0
@@ -153,7 +139,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
     return-object v0
@@ -165,7 +150,6 @@
     .param p1, "x1"    # Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
     .prologue
-    .line 25
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
     return-object p1
@@ -177,7 +161,6 @@
     .param p1, "x1"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 25
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->smartFaceLattice(Landroid/hardware/SensorEvent;)Z
 
     move-result v0
@@ -190,7 +173,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mCallback:Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
 
     return-object v0
@@ -202,7 +184,6 @@
     .param p1, "x1"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 25
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->smartFaceFlip(Landroid/hardware/SensorEvent;)Z
 
     move-result v0
@@ -216,7 +197,6 @@
     .param p1, "x1"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 25
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->smartFaceWindow(Landroid/hardware/SensorEvent;)Z
 
     move-result v0
@@ -229,7 +209,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     .prologue
-    .line 25
     iget v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->pendingSensorState:F
 
     return v0
@@ -241,7 +220,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 25
     iput p1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->pendingSensorState:F
 
     return p1
@@ -252,7 +230,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -263,7 +240,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mWapper:Lcom/android/server/policy/PhoneWindowManagerWapper;
 
     return-object v0
@@ -280,7 +256,6 @@
 
     const/high16 v3, 0x40000000    # 2.0f
 
-    .line 155
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v2, v2, v1
@@ -310,7 +285,6 @@
     .locals 4
 
     .prologue
-    .line 122
     new-instance v0, Lcn/nubia/server/policy/smartface/Listener/ExitHallNearCtrl;
 
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mContext:Landroid/content/Context;
@@ -319,7 +293,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
-    .line 123
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mCallback:Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
@@ -330,12 +303,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;->registerCallback(Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;Landroid/os/Handler;Lcom/android/server/policy/PhoneWindowManagerWapper;)V
 
-    .line 124
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;->doOperationOnUI()V
 
-    .line 125
     return-void
 .end method
 
@@ -348,7 +319,6 @@
 
     const/4 v1, 0x0
 
-    .line 150
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v2, v2, v1
@@ -387,7 +357,6 @@
 
     const/4 v1, 0x0
 
-    .line 181
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v2, v2, v1
@@ -426,7 +395,6 @@
 
     const/4 v1, 0x0
 
-    .line 164
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v2, v2, v1
@@ -475,7 +443,6 @@
 
     const/4 v1, 0x0
 
-    .line 186
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v2, v2, v1
@@ -520,7 +487,6 @@
     .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 176
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->smartFaceAutoFlip(Landroid/hardware/SensorEvent;)Z
 
     move-result v0
@@ -556,7 +522,6 @@
     .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 160
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->smartFaceAutoLattice(Landroid/hardware/SensorEvent;)Z
 
     move-result v0
@@ -590,7 +555,6 @@
 
     const/4 v1, 0x0
 
-    .line 192
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v2, v2, v1
@@ -633,7 +597,6 @@
     .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 146
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->singleHallFar(Landroid/hardware/SensorEvent;)Z
 
     move-result v0
@@ -667,7 +630,6 @@
 
     const/4 v1, 0x0
 
-    .line 198
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v2, v2, v1
@@ -714,7 +676,6 @@
 
     const/4 v1, 0x0
 
-    .line 170
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v2, v2, v1
@@ -758,7 +719,6 @@
     .locals 4
 
     .prologue
-    .line 107
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->sensorManager:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_0
@@ -771,7 +731,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 109
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->sensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mSensorEventLister:Landroid/hardware/SensorEventListener;
@@ -782,7 +741,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 112
     :cond_0
     return-void
 .end method
@@ -791,7 +749,6 @@
     .locals 2
 
     .prologue
-    .line 115
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->sensorManager:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_0
@@ -800,18 +757,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 116
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->sensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mSensorEventLister:Landroid/hardware/SensorEventListener;
 
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    .line 118
     :cond_0
     invoke-direct {p0}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->disableSmartFace()V
 
-    .line 119
     return-void
 .end method
 
@@ -820,7 +774,6 @@
     .param p1, "isScreenChange"    # Z
 
     .prologue
-    .line 134
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
     if-eqz v1, :cond_1
@@ -831,12 +784,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 135
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
     check-cast v0, Lcn/nubia/server/policy/smartface/Listener/NoHallNearCtrl;
 
-    .line 136
     .local v0, "mNoHallNearCtrl":Lcn/nubia/server/policy/smartface/Listener/NoHallNearCtrl;
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
@@ -848,16 +799,13 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;->registerCallback(Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;Landroid/os/Handler;Lcom/android/server/policy/PhoneWindowManagerWapper;)V
 
-    .line 137
     invoke-virtual {v0, p1}, Lcn/nubia/server/policy/smartface/Listener/NoHallNearCtrl;->openUnLockScreen(Z)V
 
-    .line 143
     .end local v0    # "mNoHallNearCtrl":Lcn/nubia/server/policy/smartface/Listener/NoHallNearCtrl;
     :cond_0
     :goto_0
     return-void
 
-    .line 138
     :cond_1
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
@@ -881,7 +829,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 141
     :cond_2
     iget-object v1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mHallNearCtrl:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
@@ -897,10 +844,8 @@
     .param p1, "l"    # Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
 
     .prologue
-    .line 103
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mCallback:Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
 
-    .line 104
     return-void
 .end method
 
@@ -909,15 +854,12 @@
     .param p1, "needTurnOffScreen"    # Z
 
     .prologue
-    .line 128
     if-eqz p1, :cond_0
 
-    .line 129
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->mPowerCtrl:Lcn/nubia/server/policy/smartface/util/PowerCtrl;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/util/PowerCtrl;->goToSleep()V
 
-    .line 131
     :cond_0
     return-void
 .end method

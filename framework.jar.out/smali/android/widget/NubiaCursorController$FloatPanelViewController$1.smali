@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 276
     iput-object p1, p0, Landroid/widget/NubiaCursorController$FloatPanelViewController$1;->this$1:Landroid/widget/NubiaCursorController$FloatPanelViewController;
 
     iput-object p2, p0, Landroid/widget/NubiaCursorController$FloatPanelViewController$1;->val$this$0:Landroid/widget/NubiaCursorController;
@@ -44,13 +43,11 @@
     .locals 1
 
     .prologue
-    .line 280
     iget-object v0, p0, Landroid/widget/NubiaCursorController$FloatPanelViewController$1;->this$1:Landroid/widget/NubiaCursorController$FloatPanelViewController;
 
     # invokes: Landroid/widget/NubiaCursorController$FloatPanelViewController;->updatePosition()V
     invoke-static {v0}, Landroid/widget/NubiaCursorController$FloatPanelViewController;->access$000(Landroid/widget/NubiaCursorController$FloatPanelViewController;)V
 
-    .line 281
     const/4 v0, 0x1
 
     return v0

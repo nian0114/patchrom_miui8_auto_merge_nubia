@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 42
     iput-object p1, p0, Lcom/android/server/wifi/WifiParser$IE;->this$0:Lcom/android/server/wifi/WifiParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

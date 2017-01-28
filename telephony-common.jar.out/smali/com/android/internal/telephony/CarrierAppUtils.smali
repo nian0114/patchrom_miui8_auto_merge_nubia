@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 66
     const-class v2, Lcom/android/internal/telephony/CarrierAppUtils;
 
     monitor-enter v2
@@ -44,18 +42,15 @@
 
     move-result-object v0
 
-    .line 68
     .local v0, "systemCarrierAppsDisabledUntilUsed":[Ljava/lang/String;
     invoke-static {p0, p1, p2, p3, v0}, Lcom/android/internal/telephony/CarrierAppUtils;->disableCarrierAppsUntilPrivileged(Ljava/lang/String;Landroid/content/pm/IPackageManager;Landroid/telephony/TelephonyManager;I[Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 70
     monitor-exit v2
 
     return-void
 
-    .line 66
     .end local v0    # "systemCarrierAppsDisabledUntilUsed":[Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -74,7 +69,6 @@
     .param p4, "systemCarrierAppsDisabledUntilUsed"    # [Ljava/lang/String;
 
     .prologue
-    .line 77
     move-object/from16 v0, p1
 
     move/from16 v1, p3
@@ -85,7 +79,6 @@
 
     move-result-object v10
 
-    .line 79
     .local v10, "candidates":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     if-eqz v10, :cond_0
 
@@ -95,18 +88,15 @@
 
     if-eqz v3, :cond_1
 
-    .line 131
     :cond_0
     :goto_0
     return-void
 
-    .line 83
     :cond_1
     new-instance v12, Ljava/util/ArrayList;
 
     invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
 
-    .line 86
     .local v12, "enabledCarrierPackages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_0
     invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -128,11 +118,9 @@
 
     check-cast v9, Landroid/content/pm/ApplicationInfo;
 
-    .line 87
     .local v9, "ai":Landroid/content/pm/ApplicationInfo;
     iget-object v4, v9, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    .line 88
     .local v4, "packageName":Ljava/lang/String;
     move-object/from16 v0, p2
 
@@ -146,7 +134,6 @@
 
     const/4 v13, 0x1
 
-    .line 94
     .local v13, "hasPrivileges":Z
     :goto_2
     invoke-virtual {v9}, Landroid/content/pm/ApplicationInfo;->isUpdatedSystemApp()Z
@@ -155,7 +142,6 @@
 
     if-nez v3, :cond_4
 
-    .line 95
     if-eqz v13, :cond_6
 
     iget v3, v9, Landroid/content/pm/ApplicationInfo;->enabledSetting:I
@@ -168,7 +154,6 @@
 
     if-ne v3, v5, :cond_6
 
-    .line 99
     :cond_3
     const-string v3, "CarrierAppUtils"
 
@@ -204,7 +189,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     const/4 v5, 0x1
 
     const/4 v6, 0x1
@@ -217,12 +201,10 @@
 
     invoke-interface/range {v3 .. v8}, Landroid/content/pm/IPackageManager;->setApplicationEnabledSetting(Ljava/lang/String;IIILjava/lang/String;)V
 
-    .line 116
     :cond_4
     :goto_3
     if-eqz v13, :cond_2
 
-    .line 117
     iget-object v3, v9, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-interface {v12, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -231,7 +213,6 @@
 
     goto :goto_1
 
-    .line 128
     .end local v4    # "packageName":Ljava/lang/String;
     .end local v9    # "ai":Landroid/content/pm/ApplicationInfo;
     .end local v13    # "hasPrivileges":Z
@@ -239,7 +220,6 @@
     :catch_0
     move-exception v11
 
-    .line 129
     .local v11, "e":Landroid/os/RemoteException;
     const-string v3, "CarrierAppUtils"
 
@@ -249,7 +229,6 @@
 
     goto :goto_0
 
-    .line 88
     .end local v11    # "e":Landroid/os/RemoteException;
     .restart local v4    # "packageName":Ljava/lang/String;
     .restart local v9    # "ai":Landroid/content/pm/ApplicationInfo;
@@ -259,7 +238,6 @@
 
     goto :goto_2
 
-    .line 104
     .restart local v13    # "hasPrivileges":Z
     :cond_6
     if-nez v13, :cond_4
@@ -269,7 +247,6 @@
 
     if-nez v3, :cond_4
 
-    .line 107
     const-string v3, "CarrierAppUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -304,7 +281,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     const/4 v5, 0x4
 
     const/4 v6, 0x0
@@ -319,7 +295,6 @@
 
     goto :goto_3
 
-    .line 121
     .end local v4    # "packageName":Ljava/lang/String;
     .end local v9    # "ai":Landroid/content/pm/ApplicationInfo;
     .end local v13    # "hasPrivileges":Z
@@ -330,18 +305,15 @@
 
     if-nez v3, :cond_0
 
-    .line 124
     invoke-interface {v12}, Ljava/util/List;->size()I
 
     move-result v3
 
     new-array v15, v3, [Ljava/lang/String;
 
-    .line 125
     .local v15, "packageNames":[Ljava/lang/String;
     invoke-interface {v12, v15}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 126
     move-object/from16 v0, p1
 
     move/from16 v1, p3
@@ -370,7 +342,6 @@
     .end annotation
 
     .prologue
-    .line 178
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -381,7 +352,6 @@
 
     move-result-object v0
 
-    .line 180
     .local v0, "systemCarrierAppsDisabledUntilUsed":[Ljava/lang/String;
     invoke-static {p0, p1, v0}, Lcom/android/internal/telephony/CarrierAppUtils;->getDefaultCarrierAppCandidatesHelper(Landroid/content/pm/IPackageManager;I[Ljava/lang/String;)Ljava/util/List;
 
@@ -410,26 +380,21 @@
     .end annotation
 
     .prologue
-    .line 187
     if-eqz p2, :cond_0
 
     array-length v8, p2
 
     if-nez v8, :cond_1
 
-    .line 189
     :cond_0
     const/4 v1, 0x0
 
-    .line 209
     :goto_0
     return-object v1
 
-    .line 191
     :cond_1
     const/4 v1, 0x0
 
-    .line 193
     .local v1, "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
@@ -440,7 +405,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 194
     .end local v1    # "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     .local v2, "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     move-object v3, p2
@@ -458,7 +422,6 @@
 
     aget-object v7, v3, v5
 
-    .line 195
     .local v7, "packageName":Ljava/lang/String;
     const v8, 0x8000
 
@@ -466,18 +429,15 @@
 
     move-result-object v0
 
-    .line 197
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     if-nez v0, :cond_3
 
-    .line 194
     :cond_2
     :goto_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 201
     :cond_3
     invoke-virtual {v0}, Landroid/content/pm/ApplicationInfo;->isSystemApp()Z
 
@@ -485,14 +445,12 @@
 
     if-eqz v8, :cond_2
 
-    .line 204
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_2
 
-    .line 206
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     .end local v5    # "i$":I
     .end local v6    # "len$":I
@@ -502,7 +460,6 @@
 
     move-object v1, v2
 
-    .line 207
     .end local v2    # "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     .end local v3    # "arr$":[Ljava/lang/String;
     .restart local v1    # "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
@@ -525,12 +482,10 @@
     :cond_4
     move-object v1, v2
 
-    .line 208
     .end local v2    # "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     .restart local v1    # "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     goto :goto_0
 
-    .line 206
     .end local v3    # "arr$":[Ljava/lang/String;
     .end local v5    # "i$":I
     .end local v6    # "len$":I
@@ -561,12 +516,10 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 143
     invoke-static {p0, p2}, Lcom/android/internal/telephony/CarrierAppUtils;->getDefaultCarrierAppCandidates(Landroid/content/pm/IPackageManager;I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 144
     .local v1, "candidates":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     if-eqz v1, :cond_0
 
@@ -576,16 +529,13 @@
 
     if-eqz v6, :cond_2
 
-    .line 145
     :cond_0
     const/4 v1, 0x0
 
-    .line 162
     .end local v1    # "candidates":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     :cond_1
     return-object v1
 
-    .line 151
     .restart local v1    # "candidates":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     :cond_2
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -598,18 +548,15 @@
     :goto_0
     if-ltz v3, :cond_1
 
-    .line 152
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/pm/ApplicationInfo;
 
-    .line 153
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     iget-object v4, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    .line 154
     .local v4, "packageName":Ljava/lang/String;
     invoke-virtual {p1, v4}, Landroid/telephony/TelephonyManager;->checkCarrierPrivilegesForPackageAnyPhone(Ljava/lang/String;)I
 
@@ -619,21 +566,17 @@
 
     move v2, v5
 
-    .line 157
     .local v2, "hasPrivileges":Z
     :goto_1
     if-nez v2, :cond_3
 
-    .line 158
     invoke-interface {v1, v3}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 151
     :cond_3
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_0
 
-    .line 154
     .end local v2    # "hasPrivileges":Z
     :cond_4
     const/4 v2, 0x0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 421
     iput-object p1, p0, Lcn/nubia/server/breathinglight/BreathingLightService$BinderService;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-direct {p0}, Lnubia/hardware/IBreathingLightManager$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcn/nubia/server/breathinglight/BreathingLightService$1;
 
     .prologue
-    .line 421
     invoke-direct {p0, p1}, Lcn/nubia/server/breathinglight/BreathingLightService$BinderService;-><init>(Lcn/nubia/server/breathinglight/BreathingLightService;)V
 
     return-void
@@ -50,12 +48,10 @@
     .param p1, "known"    # I
 
     .prologue
-    .line 425
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService$BinderService;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/breathinglight/BreathingLightService;->requestBreathingLightInternal(I)V
 
-    .line 426
     return-void
 .end method
 
@@ -68,7 +64,6 @@
     .param p5, "color"    # I
 
     .prologue
-    .line 432
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService$BinderService;->this$0:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     move v1, p1
@@ -83,6 +78,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcn/nubia/server/breathinglight/BreathingLightService;->requestBreathingLightExtInternal(IIIII)V
 
-    .line 434
     return-void
 .end method

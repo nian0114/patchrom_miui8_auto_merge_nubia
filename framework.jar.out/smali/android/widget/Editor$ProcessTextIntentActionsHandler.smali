@@ -50,24 +50,20 @@
     .param p1, "editor"    # Landroid/widget/Editor;
 
     .prologue
-    .line 5717
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5713
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mAccessibilityIntents:Landroid/util/SparseArray;
 
-    .line 5714
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mAccessibilityActions:Landroid/util/SparseArray;
 
-    .line 5718
     invoke-static {p1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -76,7 +72,6 @@
 
     iput-object v0, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mEditor:Landroid/widget/Editor;
 
-    .line 5719
     iget-object v0, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mEditor:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -92,7 +87,6 @@
 
     iput-object v0, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mTextView:Landroid/widget/TextView;
 
-    .line 5720
     iget-object v0, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -111,7 +105,6 @@
 
     iput-object v0, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 5722
     return-void
 .end method
 
@@ -121,7 +114,6 @@
     .param p2, "x1"    # Landroid/widget/Editor$1;
 
     .prologue
-    .line 5708
     invoke-direct {p0, p1}, Landroid/widget/Editor$ProcessTextIntentActionsHandler;-><init>(Landroid/widget/Editor;)V
 
     return-void
@@ -131,7 +123,6 @@
     .locals 2
 
     .prologue
-    .line 5809
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -156,7 +147,6 @@
     .param p1, "info"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 5803
     invoke-direct {p0}, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->createProcessTextIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -205,7 +195,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 5788
     if-eqz p1, :cond_0
 
     const-string v1, "android.intent.action.PROCESS_TEXT"
@@ -220,7 +209,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 5789
     const-string v1, "android.intent.extra.PROCESS_TEXT"
 
     iget-object v2, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mTextView:Landroid/widget/TextView;
@@ -231,19 +219,16 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5790
     iget-object v1, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mEditor:Landroid/widget/Editor;
 
     iput-boolean v0, v1, Landroid/widget/Editor;->mPreserveDetachedSelection:Z
 
-    .line 5791
     iget-object v1, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mTextView:Landroid/widget/TextView;
 
     const/16 v2, 0x64
 
     invoke-virtual {v1, p1, v2}, Landroid/widget/TextView;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 5794
     :goto_0
     return v0
 
@@ -258,7 +243,6 @@
     .param p1, "resolveInfo"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 5815
     iget-object v0, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mPackageManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {p1, v0}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
@@ -281,7 +265,6 @@
     .end annotation
 
     .prologue
-    .line 5798
     iget-object v1, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -292,7 +275,6 @@
 
     move-result-object v0
 
-    .line 5799
     .local v0, "packageManager":Landroid/content/pm/PackageManager;
     invoke-direct {p0}, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->createProcessTextIntent()Landroid/content/Intent;
 
@@ -313,20 +295,16 @@
     .locals 8
 
     .prologue
-    .line 5752
     iget-object v5, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mAccessibilityIntents:Landroid/util/SparseArray;
 
     invoke-virtual {v5}, Landroid/util/SparseArray;->clear()V
 
-    .line 5753
     iget-object v5, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mAccessibilityActions:Landroid/util/SparseArray;
 
     invoke-virtual {v5}, Landroid/util/SparseArray;->clear()V
 
-    .line 5754
     const/4 v1, 0x0
 
-    .line 5755
     .local v1, "i":I
     invoke-direct {p0}, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->getSupportedActivities()Ljava/util/List;
 
@@ -350,7 +328,6 @@
 
     check-cast v4, Landroid/content/pm/ResolveInfo;
 
-    .line 5756
     .local v4, "resolveInfo":Landroid/content/pm/ResolveInfo;
     const v5, 0x10000100
 
@@ -360,7 +337,6 @@
     .local v2, "i":I
     add-int v0, v5, v1
 
-    .line 5757
     .local v0, "actionId":I
     iget-object v5, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mAccessibilityActions:Landroid/util/SparseArray;
 
@@ -374,7 +350,6 @@
 
     invoke-virtual {v5, v0, v6}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 5761
     iget-object v5, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mAccessibilityIntents:Landroid/util/SparseArray;
 
     invoke-direct {p0, v4}, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->createProcessTextIntentForResolveInfo(Landroid/content/pm/ResolveInfo;)Landroid/content/Intent;
@@ -385,12 +360,10 @@
 
     move v1, v2
 
-    .line 5763
     .end local v2    # "i":I
     .restart local v1    # "i":I
     goto :goto_0
 
-    .line 5764
     .end local v0    # "actionId":I
     .end local v4    # "resolveInfo":Landroid/content/pm/ResolveInfo;
     :cond_0
@@ -402,7 +375,6 @@
     .param p1, "nodeInfo"    # Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .prologue
-    .line 5772
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -415,7 +387,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 5773
     iget-object v1, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mAccessibilityActions:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -426,12 +397,10 @@
 
     invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
-    .line 5772
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 5775
     :cond_0
     return-void
 .end method
@@ -443,10 +412,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 5728
     const/4 v0, 0x0
 
-    .line 5729
     .local v0, "i":I
     invoke-direct {p0}, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->getSupportedActivities()Ljava/util/List;
 
@@ -470,7 +437,6 @@
 
     check-cast v3, Landroid/content/pm/ResolveInfo;
 
-    .line 5730
     .local v3, "resolveInfo":Landroid/content/pm/ResolveInfo;
     add-int/lit8 v1, v0, 0x1
 
@@ -500,12 +466,10 @@
 
     move v0, v1
 
-    .line 5735
     .end local v1    # "i":I
     .restart local v0    # "i":I
     goto :goto_0
 
-    .line 5736
     .end local v3    # "resolveInfo":Landroid/content/pm/ResolveInfo;
     :cond_0
     return-void
@@ -516,7 +480,6 @@
     .param p1, "actionId"    # I
 
     .prologue
-    .line 5784
     iget-object v0, p0, Landroid/widget/Editor$ProcessTextIntentActionsHandler;->mAccessibilityIntents:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -537,7 +500,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 5745
     invoke-interface {p1}, Landroid/view/MenuItem;->getIntent()Landroid/content/Intent;
 
     move-result-object v0

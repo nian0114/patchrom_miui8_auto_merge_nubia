@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 244
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,21 +38,17 @@
     .locals 1
 
     .prologue
-    .line 270
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     iput v0, p0, Lcom/android/server/pm/Settings$VersionInfo;->sdkVersion:I
 
-    .line 271
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/server/pm/Settings$VersionInfo;->databaseVersion:I
 
-    .line 272
     sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/pm/Settings$VersionInfo;->fingerprint:Ljava/lang/String;
 
-    .line 273
     return-void
 .end method

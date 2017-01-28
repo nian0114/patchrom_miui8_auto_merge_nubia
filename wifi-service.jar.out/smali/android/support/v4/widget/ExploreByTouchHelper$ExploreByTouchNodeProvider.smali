@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 739
     iput-object p1, p0, Landroid/support/v4/widget/ExploreByTouchHelper$ExploreByTouchNodeProvider;->this$0:Landroid/support/v4/widget/ExploreByTouchHelper;
 
     invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityNodeProviderCompat;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/support/v4/widget/ExploreByTouchHelper$1;
 
     .prologue
-    .line 739
     invoke-direct {p0, p1}, Landroid/support/v4/widget/ExploreByTouchHelper$ExploreByTouchNodeProvider;-><init>(Landroid/support/v4/widget/ExploreByTouchHelper;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "virtualViewId"    # I
 
     .prologue
-    .line 742
     iget-object v0, p0, Landroid/support/v4/widget/ExploreByTouchHelper$ExploreByTouchNodeProvider;->this$0:Landroid/support/v4/widget/ExploreByTouchHelper;
 
     # invokes: Landroid/support/v4/widget/ExploreByTouchHelper;->createNode(I)Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;
@@ -68,7 +65,6 @@
     .param p3, "arguments"    # Landroid/os/Bundle;
 
     .prologue
-    .line 747
     iget-object v0, p0, Landroid/support/v4/widget/ExploreByTouchHelper$ExploreByTouchNodeProvider;->this$0:Landroid/support/v4/widget/ExploreByTouchHelper;
 
     # invokes: Landroid/support/v4/widget/ExploreByTouchHelper;->performAction(IILandroid/os/Bundle;)Z

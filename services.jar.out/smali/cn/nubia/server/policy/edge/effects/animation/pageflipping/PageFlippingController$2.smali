@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 189
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$2;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 193
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$2;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController;
 
     # invokes: Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController;->initGLSurfaceView()V
     invoke-static {v0}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController;->access$600(Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController;)V
 
-    .line 194
     return-void
 .end method

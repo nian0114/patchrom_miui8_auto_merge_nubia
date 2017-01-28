@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 51
     iput-object p1, p0, Lnubia/util/FrameworkDataStatisticsManager$ClientHandler;->this$0:Lnubia/util/FrameworkDataStatisticsManager;
 
-    .line 52
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 53
     return-void
 .end method
 
@@ -41,16 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 57
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 66
     :goto_0
     return-void
 
-    .line 59
     :pswitch_0
     iget-object v0, p0, Lnubia/util/FrameworkDataStatisticsManager$ClientHandler;->this$0:Lnubia/util/FrameworkDataStatisticsManager;
 
@@ -59,7 +53,6 @@
 
     goto :goto_0
 
-    .line 63
     :pswitch_1
     iget-object v0, p0, Lnubia/util/FrameworkDataStatisticsManager$ClientHandler;->this$0:Lnubia/util/FrameworkDataStatisticsManager;
 
@@ -68,7 +61,6 @@
 
     goto :goto_0
 
-    .line 57
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

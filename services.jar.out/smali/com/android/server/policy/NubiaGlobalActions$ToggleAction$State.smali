@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 840
     new-instance v0, Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;
 
     const-string v1, "Off"
@@ -85,7 +84,6 @@
 
     sput-object v0, Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;->On:Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;
 
-    .line 839
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;
@@ -121,13 +119,10 @@
     .end annotation
 
     .prologue
-    .line 844
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 845
     iput-boolean p3, p0, Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;->inTransition:Z
 
-    .line 846
     return-void
 .end method
 
@@ -136,7 +131,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 839
     const-class v0, Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -152,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 839
     sget-object v0, Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;->$VALUES:[Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;
 
     invoke-virtual {v0}, [Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;->clone()Ljava/lang/Object;
@@ -170,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 849
     iget-boolean v0, p0, Lcom/android/server/policy/NubiaGlobalActions$ToggleAction$State;->inTransition:Z
 
     return v0

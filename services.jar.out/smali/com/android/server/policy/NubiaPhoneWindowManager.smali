@@ -33,26 +33,20 @@
     .param p3, "windowManagerFuncs"    # Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-object p2, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mContext:Landroid/content/Context;
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 51
     new-instance v0, Lcom/android/server/policy/FeatureFunctionManager;
 
     invoke-direct {v0, p2, p1, p3}, Lcom/android/server/policy/FeatureFunctionManager;-><init>(Landroid/content/Context;Lcom/android/server/policy/PhoneWindowManager;Landroid/view/WindowManagerPolicy$WindowManagerFuncs;)V
 
     iput-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
-    .line 52
     invoke-direct {p0}, Lcom/android/server/policy/NubiaPhoneWindowManager;->initCtrls()V
 
-    .line 53
     return-void
 .end method
 
@@ -61,7 +55,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/NubiaPhoneWindowManager;
 
     .prologue
-    .line 19
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -71,7 +64,6 @@
     .locals 4
 
     .prologue
-    .line 57
     iget-object v1, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -84,11 +76,9 @@
 
     move-result v0
 
-    .line 59
     .local v0, "smartFaceEnable":Z
     if-eqz v0, :cond_0
 
-    .line 60
     new-instance v1, Lcn/nubia/server/policy/SmartFaceManager;
 
     iget-object v2, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -99,7 +89,6 @@
 
     iput-object v1, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mSmartFaceCtrl:Lcn/nubia/server/policy/SmartFaceManager;
 
-    .line 61
     iget-object v1, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
     iget-object v1, v1, Lcom/android/server/policy/FeatureFunctionManager;->mQueueingHandlers:Ljava/util/ArrayList;
@@ -108,7 +97,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 63
     :cond_0
     return-void
 .end method
@@ -118,7 +106,6 @@
     .param p0, "result"    # J
 
     .prologue
-    .line 135
     const-wide/high16 v0, -0x8000000000000000L
 
     cmp-long v0, p0, v0
@@ -141,7 +128,6 @@
     .param p0, "result"    # J
 
     .prologue
-    .line 106
     const-wide/high16 v0, -0x8000000000000000L
 
     cmp-long v0, p0, v0
@@ -164,7 +150,6 @@
     .param p0, "result"    # I
 
     .prologue
-    .line 139
     const/4 v0, -0x1
 
     if-eq p0, v0, :cond_0
@@ -186,12 +171,10 @@
     .locals 4
 
     .prologue
-    .line 66
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    .line 67
     .local v0, "handler":Landroid/os/Handler;
     iget-object v3, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
@@ -215,7 +198,6 @@
 
     check-cast v2, Lcom/android/server/policy/ISettingListener;
 
-    .line 68
     .local v2, "listener":Lcom/android/server/policy/ISettingListener;
     new-instance v3, Lcom/android/server/policy/NubiaPhoneWindowManager$SettingsObserver;
 
@@ -225,7 +207,6 @@
 
     goto :goto_0
 
-    .line 70
     .end local v2    # "listener":Lcom/android/server/policy/ISettingListener;
     :cond_0
     return-void
@@ -237,7 +218,6 @@
     .param p2, "keyguardOn"    # Z
 
     .prologue
-    .line 175
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/policy/FeatureFunctionManager;->interceptBottomKey(Landroid/view/KeyEvent;Z)Z
@@ -251,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 144
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/FeatureFunctionManager;->interceptFreeSnapshot()Z
@@ -268,14 +247,11 @@
     .param p3, "policyFlags"    # I
 
     .prologue
-    .line 119
     const-wide/high16 v4, -0x8000000000000000L
 
-    .line 120
     .local v4, "result":J
     const/4 v2, 0x0
 
-    .line 121
     .local v2, "position":I
     iget-object v3, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
@@ -299,20 +275,17 @@
 
     check-cast v0, Lcom/android/server/policy/IKeyBeforeDispatchingHandler;
 
-    .line 122
     .local v0, "handler":Lcom/android/server/policy/IKeyBeforeDispatchingHandler;
     invoke-interface {v0, p1, p2, p3}, Lcom/android/server/policy/IKeyBeforeDispatchingHandler;->interceptKeyBeforeDispatching(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/KeyEvent;I)J
 
     move-result-wide v4
 
-    .line 124
     const-wide/high16 v8, -0x8000000000000000L
 
     cmp-long v3, v4, v8
 
     if-eqz v3, :cond_0
 
-    .line 125
     const-string v3, "NubiaPhoneWindowManager"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -347,28 +320,24 @@
 
     move-wide v6, v4
 
-    .line 131
     .end local v0    # "handler":Lcom/android/server/policy/IKeyBeforeDispatchingHandler;
     .end local v4    # "result":J
     .local v6, "result":J
     :goto_1
     return-wide v6
 
-    .line 129
     .end local v6    # "result":J
     .restart local v0    # "handler":Lcom/android/server/policy/IKeyBeforeDispatchingHandler;
     .restart local v4    # "result":J
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
-    .line 130
     goto :goto_0
 
     .end local v0    # "handler":Lcom/android/server/policy/IKeyBeforeDispatchingHandler;
     :cond_1
     move-wide v6, v4
 
-    .line 131
     .end local v4    # "result":J
     .restart local v6    # "result":J
     goto :goto_1
@@ -381,14 +350,11 @@
     .param p3, "isScreenOn"    # Z
 
     .prologue
-    .line 90
     const-wide/high16 v4, -0x8000000000000000L
 
-    .line 91
     .local v4, "result":J
     const/4 v2, 0x0
 
-    .line 92
     .local v2, "position":I
     iget-object v3, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
@@ -412,20 +378,17 @@
 
     check-cast v0, Lcom/android/server/policy/IKeyBeforeQueueingHandler;
 
-    .line 93
     .local v0, "handler":Lcom/android/server/policy/IKeyBeforeQueueingHandler;
     invoke-interface {v0, p1, p2, p3}, Lcom/android/server/policy/IKeyBeforeQueueingHandler;->interceptKeyBeforeQueueing(Landroid/view/KeyEvent;IZ)J
 
     move-result-wide v4
 
-    .line 95
     const-wide/high16 v8, -0x8000000000000000L
 
     cmp-long v3, v4, v8
 
     if-eqz v3, :cond_0
 
-    .line 96
     const-string v3, "NubiaPhoneWindowManager"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -460,28 +423,24 @@
 
     move-wide v6, v4
 
-    .line 102
     .end local v0    # "handler":Lcom/android/server/policy/IKeyBeforeQueueingHandler;
     .end local v4    # "result":J
     .local v6, "result":J
     :goto_1
     return-wide v6
 
-    .line 100
     .end local v6    # "result":J
     .restart local v0    # "handler":Lcom/android/server/policy/IKeyBeforeQueueingHandler;
     .restart local v4    # "result":J
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
-    .line 101
     goto :goto_0
 
     .end local v0    # "handler":Lcom/android/server/policy/IKeyBeforeQueueingHandler;
     :cond_1
     move-wide v6, v4
 
-    .line 102
     .end local v4    # "result":J
     .restart local v6    # "result":J
     goto :goto_1
@@ -492,7 +451,6 @@
     .param p1, "policyFlags"    # I
 
     .prologue
-    .line 171
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
     invoke-virtual {v0, p1}, Lcom/android/server/policy/FeatureFunctionManager;->interceptMotionAfterPressKey(I)Z
@@ -509,12 +467,10 @@
     .param p3, "keyguardOn"    # Z
 
     .prologue
-    .line 167
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/policy/FeatureFunctionManager;->playSoundEffect(Landroid/view/KeyEvent;IZ)V
 
-    .line 168
     return-void
 .end method
 
@@ -522,12 +478,10 @@
     .locals 1
 
     .prologue
-    .line 158
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/FeatureFunctionManager;->systemBooted()V
 
-    .line 159
     return-void
 .end method
 
@@ -535,23 +489,19 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mSmartFaceCtrl:Lcn/nubia/server/policy/SmartFaceManager;
 
     if-eqz v0, :cond_0
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mSmartFaceCtrl:Lcn/nubia/server/policy/SmartFaceManager;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/SmartFaceManager;->startSmartFaceService()V
 
-    .line 154
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/FeatureFunctionManager;->systemReady()V
 
-    .line 155
     return-void
 .end method
 
@@ -561,12 +511,10 @@
     .param p2, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 163
     iget-object v0, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/policy/FeatureFunctionManager;->updatePackageChanged(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 164
     return-void
 .end method
 
@@ -574,14 +522,12 @@
     .locals 3
 
     .prologue
-    .line 73
     iget-object v2, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-boolean v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mSystemReady:Z
 
     if-eqz v2, :cond_0
 
-    .line 74
     iget-object v2, p0, Lcom/android/server/policy/NubiaPhoneWindowManager;->mFeatureFunctionManager:Lcom/android/server/policy/FeatureFunctionManager;
 
     iget-object v2, v2, Lcom/android/server/policy/FeatureFunctionManager;->mSettingListeners:Ljava/util/ArrayList;
@@ -604,13 +550,11 @@
 
     check-cast v0, Lcom/android/server/policy/ISettingListener;
 
-    .line 75
     .local v0, "handler":Lcom/android/server/policy/ISettingListener;
     invoke-interface {v0}, Lcom/android/server/policy/ISettingListener;->updateSettings()V
 
     goto :goto_0
 
-    .line 78
     .end local v0    # "handler":Lcom/android/server/policy/ISettingListener;
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0

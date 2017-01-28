@@ -27,13 +27,10 @@
     .param p1, "open"    # Z
 
     .prologue
-    .line 459
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 460
     iput-boolean p1, p0, Lnubia/util/FrameworkDataStatisticsManager$OpenActivityDurationTrack;->mOpen:Z
 
-    .line 461
     return-void
 .end method
 
@@ -49,11 +46,9 @@
     .end annotation
 
     .prologue
-    .line 466
     iget-boolean v0, p0, Lnubia/util/FrameworkDataStatisticsManager$OpenActivityDurationTrack;->mOpen:Z
 
     invoke-interface {p1, v0}, Lnubia/util/IFrameworkDataStatisticsService;->openActivityDurationTrack(Z)V
 
-    .line 467
     return-void
 .end method

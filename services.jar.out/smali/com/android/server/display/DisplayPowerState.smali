@@ -78,12 +78,10 @@
     .locals 2
 
     .prologue
-    .line 51
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/server/display/DisplayPowerState;->DEBUG:Z
 
-    .line 94
     new-instance v0, Lcom/android/server/display/DisplayPowerState$1;
 
     const-string v1, "electronBeamLevel"
@@ -92,7 +90,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayPowerState;->COLOR_FADE_LEVEL:Landroid/util/FloatProperty;
 
-    .line 107
     new-instance v0, Lcom/android/server/display/DisplayPowerState$2;
 
     const-string v1, "screenBrightness"
@@ -112,82 +109,66 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 303
     new-instance v0, Lcom/android/server/display/DisplayPowerState$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/DisplayPowerState$3;-><init>(Lcom/android/server/display/DisplayPowerState;)V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenUpdateRunnable:Ljava/lang/Runnable;
 
-    .line 324
     new-instance v0, Lcom/android/server/display/DisplayPowerState$4;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/DisplayPowerState$4;-><init>(Lcom/android/server/display/DisplayPowerState;)V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeDrawRunnable:Ljava/lang/Runnable;
 
-    .line 72
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Z)V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mHandler:Landroid/os/Handler;
 
-    .line 73
     invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mChoreographer:Landroid/view/Choreographer;
 
-    .line 74
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerState;->mBlanker:Lcom/android/server/display/DisplayBlanker;
 
-    .line 75
     iput-object p2, p0, Lcom/android/server/display/DisplayPowerState;->mColorFade:Lcom/android/server/display/ColorFade;
 
-    .line 76
     new-instance v0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;-><init>(Lcom/android/server/display/DisplayPowerState;)V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mPhotonicModulator:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mPhotonicModulator:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     invoke-virtual {v0}, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->start()V
 
-    .line 85
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenState:I
 
-    .line 86
     const/16 v0, 0xff
 
     iput v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenBrightness:I
 
-    .line 87
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerState;->scheduleScreenUpdate()V
 
-    .line 89
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadePrepared:Z
 
-    .line 90
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeLevel:F
 
-    .line 91
     iput-boolean v1, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeReady:Z
 
-    .line 92
     return-void
 .end method
 
@@ -197,7 +178,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 48
     iput-boolean p1, p0, Lcom/android/server/display/DisplayPowerState;->mScreenUpdatePending:Z
 
     return p1
@@ -208,7 +188,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 48
     iget v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenState:I
 
     return v0
@@ -219,7 +198,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFade:Lcom/android/server/display/ColorFade;
 
     return-object v0
@@ -231,7 +209,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 48
     iput-boolean p1, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeReady:Z
 
     return p1
@@ -242,7 +219,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerState;->postScreenUpdateThreadSafe()V
 
     return-void
@@ -253,7 +229,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mBlanker:Lcom/android/server/display/DisplayBlanker;
 
     return-object v0
@@ -264,7 +239,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 48
     iget v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeLevel:F
 
     return v0
@@ -275,7 +249,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 48
     iget v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenBrightness:I
 
     return v0
@@ -286,7 +259,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mPhotonicModulator:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     return-object v0
@@ -296,7 +268,6 @@
     .locals 1
 
     .prologue
-    .line 48
     sget-boolean v0, Lcom/android/server/display/DisplayPowerState;->DEBUG:Z
 
     return v0
@@ -308,7 +279,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 48
     iput-boolean p1, p0, Lcom/android/server/display/DisplayPowerState;->mScreenReady:Z
 
     return p1
@@ -319,7 +289,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerState;->invokeCleanListenerIfNeeded()V
 
     return-void
@@ -331,7 +300,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 48
     iput-boolean p1, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeDrawPending:Z
 
     return p1
@@ -342,7 +310,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 48
     iget-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadePrepared:Z
 
     return v0
@@ -352,10 +319,8 @@
     .locals 2
 
     .prologue
-    .line 296
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mCleanListener:Ljava/lang/Runnable;
 
-    .line 297
     .local v0, "listener":Ljava/lang/Runnable;
     if-eqz v0, :cond_0
 
@@ -367,15 +332,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 298
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/display/DisplayPowerState;->mCleanListener:Ljava/lang/Runnable;
 
-    .line 299
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 301
     :cond_0
     return-void
 .end method
@@ -384,21 +346,18 @@
     .locals 2
 
     .prologue
-    .line 283
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState;->mScreenUpdateRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 284
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState;->mScreenUpdateRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 285
     return-void
 .end method
 
@@ -406,17 +365,14 @@
     .locals 4
 
     .prologue
-    .line 288
     iget-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeDrawPending:Z
 
     if-nez v0, :cond_0
 
-    .line 289
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeDrawPending:Z
 
-    .line 290
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mChoreographer:Landroid/view/Choreographer;
 
     const/4 v1, 0x2
@@ -427,7 +383,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/view/Choreographer;->postCallback(ILjava/lang/Runnable;Ljava/lang/Object;)V
 
-    .line 293
     :cond_0
     return-void
 .end method
@@ -436,20 +391,16 @@
     .locals 1
 
     .prologue
-    .line 276
     iget-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenUpdatePending:Z
 
     if-nez v0, :cond_0
 
-    .line 277
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenUpdatePending:Z
 
-    .line 278
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerState;->postScreenUpdateThreadSafe()V
 
-    .line 280
     :cond_0
     return-void
 .end method
@@ -460,22 +411,18 @@
     .locals 1
 
     .prologue
-    .line 193
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFade:Lcom/android/server/display/ColorFade;
 
     invoke-virtual {v0}, Lcom/android/server/display/ColorFade;->dismiss()V
 
-    .line 194
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadePrepared:Z
 
-    .line 195
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeReady:Z
 
-    .line 196
     return-void
 .end method
 
@@ -483,12 +430,10 @@
     .locals 1
 
     .prologue
-    .line 202
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFade:Lcom/android/server/display/ColorFade;
 
     invoke-virtual {v0}, Lcom/android/server/display/ColorFade;->dismissResources()V
 
-    .line 203
     return-void
 .end method
 
@@ -497,15 +442,12 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 260
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 261
     const-string v0, "Display Power State:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 262
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -532,7 +474,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 263
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -555,7 +496,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 264
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -578,7 +518,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 265
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -601,7 +540,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 266
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -624,7 +562,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 267
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -647,7 +584,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 268
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -670,7 +606,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 269
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -693,17 +628,14 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 271
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mPhotonicModulator:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->dump(Ljava/io/PrintWriter;)V
 
-    .line 272
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFade:Lcom/android/server/display/ColorFade;
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/ColorFade;->dump(Ljava/io/PrintWriter;)V
 
-    .line 273
     return-void
 .end method
 
@@ -711,7 +643,6 @@
     .locals 1
 
     .prologue
-    .line 240
     iget v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeLevel:F
 
     return v0
@@ -721,7 +652,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenBrightness:I
 
     return v0
@@ -731,7 +661,6 @@
     .locals 1
 
     .prologue
-    .line 139
     iget v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenState:I
 
     return v0
@@ -747,7 +676,6 @@
 
     const/4 v0, 0x0
 
-    .line 177
     iget-object v2, p0, Lcom/android/server/display/DisplayPowerState;->mColorFade:Lcom/android/server/display/ColorFade;
 
     invoke-virtual {v2, p1, p2}, Lcom/android/server/display/ColorFade;->prepare(Landroid/content/Context;I)Z
@@ -756,29 +684,22 @@
 
     if-nez v2, :cond_0
 
-    .line 178
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadePrepared:Z
 
-    .line 179
     iput-boolean v1, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeReady:Z
 
-    .line 186
     :goto_0
     return v0
 
-    .line 183
     :cond_0
     iput-boolean v1, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadePrepared:Z
 
-    .line 184
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeReady:Z
 
-    .line 185
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerState;->scheduleColorFadeDraw()V
 
     move v0, v1
 
-    .line 186
     goto :goto_0
 .end method
 
@@ -789,19 +710,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 219
     iget v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeLevel:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_2
 
-    .line 220
     sget-boolean v0, Lcom/android/server/display/DisplayPowerState;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 221
     const-string v0, "DisplayPowerState"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -824,36 +742,28 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
     :cond_0
     iput p1, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeLevel:F
 
-    .line 225
     iget v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenState:I
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_1
 
-    .line 226
     iput-boolean v3, p0, Lcom/android/server/display/DisplayPowerState;->mScreenReady:Z
 
-    .line 227
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerState;->scheduleScreenUpdate()V
 
-    .line 229
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadePrepared:Z
 
     if-eqz v0, :cond_2
 
-    .line 230
     iput-boolean v3, p0, Lcom/android/server/display/DisplayPowerState;->mColorFadeReady:Z
 
-    .line 231
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerState;->scheduleColorFadeDraw()V
 
-    .line 234
     :cond_2
     return-void
 .end method
@@ -863,17 +773,14 @@
     .param p1, "brightness"    # I
 
     .prologue
-    .line 148
     iget v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenBrightness:I
 
     if-eq v0, p1, :cond_1
 
-    .line 149
     sget-boolean v0, Lcom/android/server/display/DisplayPowerState;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 150
     const-string v0, "DisplayPowerState"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -896,26 +803,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     :cond_0
     iput p1, p0, Lcom/android/server/display/DisplayPowerState;->mScreenBrightness:I
 
-    .line 154
     iget v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenState:I
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_1
 
-    .line 155
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenReady:Z
 
-    .line 156
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerState;->scheduleScreenUpdate()V
 
-    .line 159
     :cond_1
     return-void
 .end method
@@ -925,17 +827,14 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 124
     iget v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenState:I
 
     if-eq v0, p1, :cond_1
 
-    .line 125
     sget-boolean v0, Lcom/android/server/display/DisplayPowerState;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 126
     const-string v0, "DisplayPowerState"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -958,19 +857,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     :cond_0
     iput p1, p0, Lcom/android/server/display/DisplayPowerState;->mScreenState:I
 
-    .line 130
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenReady:Z
 
-    .line 131
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerState;->scheduleScreenUpdate()V
 
-    .line 133
     :cond_1
     return-void
 .end method
@@ -980,7 +875,6 @@
     .param p1, "listener"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 250
     iget-boolean v0, p0, Lcom/android/server/display/DisplayPowerState;->mScreenReady:Z
 
     if-eqz v0, :cond_0
@@ -989,24 +883,19 @@
 
     if-nez v0, :cond_1
 
-    .line 251
     :cond_0
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerState;->mCleanListener:Ljava/lang/Runnable;
 
-    .line 252
     const/4 v0, 0x0
 
-    .line 255
     :goto_0
     return v0
 
-    .line 254
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerState;->mCleanListener:Ljava/lang/Runnable;
 
-    .line 255
     const/4 v0, 0x1
 
     goto :goto_0

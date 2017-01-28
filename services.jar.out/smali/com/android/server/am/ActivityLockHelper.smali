@@ -134,26 +134,22 @@
     .locals 2
 
     .prologue
-    .line 72
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/am/ActivityLockHelper;->APPLOCK_PASSWORD_NAME_LIST:Ljava/util/ArrayList;
 
-    .line 73
     sget-object v0, Lcom/android/server/am/ActivityLockHelper;->APPLOCK_PASSWORD_NAME_LIST:Ljava/util/ArrayList;
 
     const-string v1, "cn.nubia.applockmanager.AppLockActivity"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 83
     const/4 v0, 0x0
 
     sput v0, Lcom/android/server/am/ActivityLockHelper;->mRid:I
 
-    .line 92
     invoke-static {}, Lcom/android/server/am/ActivityLockHelper;->withoutSmartContainer()Z
 
     move-result v0
@@ -170,10 +166,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
@@ -186,59 +180,48 @@
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mSystemFile:Ljava/io/File;
 
-    .line 77
     iput-boolean v3, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedOn:Z
 
-    .line 78
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedApps:Ljava/util/HashSet;
 
-    .line 79
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedStatus:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 80
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mRecords:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 81
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mPermitUid:Ljava/util/HashSet;
 
-    .line 82
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mTempRecord:Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
-    .line 89
     iput-boolean v3, p0, Lcom/android/server/am/ActivityLockHelper;->mCallFromMoveToTaskFront:Z
 
-    .line 123
     new-instance v0, Lcom/android/server/am/ActivityLockHelper$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/ActivityLockHelper$1;-><init>(Lcom/android/server/am/ActivityLockHelper;)V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->_screenReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 96
     iput-object p1, p0, Lcom/android/server/am/ActivityLockHelper;->mContext:Landroid/content/Context;
 
-    .line 97
     invoke-direct {p0}, Lcom/android/server/am/ActivityLockHelper;->initLockedApps()V
 
-    .line 98
     return-void
 .end method
 
@@ -247,7 +230,6 @@
     .param p0, "x0"    # Lcom/android/server/am/ActivityLockHelper;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedApps:Ljava/util/HashSet;
 
     return-object v0
@@ -258,7 +240,6 @@
     .param p0, "x0"    # Lcom/android/server/am/ActivityLockHelper;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedStatus:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object v0
@@ -269,7 +250,6 @@
     .param p0, "x0"    # Lcom/android/server/am/ActivityLockHelper;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -280,7 +260,6 @@
     .param p0, "x0"    # Lcom/android/server/am/ActivityLockHelper;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcom/android/server/am/ActivityLockHelper;->updateAppSwitch()V
 
     return-void
@@ -291,7 +270,6 @@
     .param p0, "x0"    # Lcom/android/server/am/ActivityLockHelper;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcom/android/server/am/ActivityLockHelper;->updateAppList()V
 
     return-void
@@ -302,7 +280,6 @@
     .param p1, "app"    # Ljava/lang/String;
 
     .prologue
-    .line 148
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -314,13 +291,11 @@
 
     move-result v0
 
-    .line 149
     .local v0, "uid":I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 150
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mPermitUid:Ljava/util/HashSet;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -331,13 +306,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 153
     .end local v0    # "uid":I
     :cond_0
     :goto_0
     return-void
 
-    .line 151
     :catch_0
     move-exception v1
 
@@ -349,10 +322,8 @@
     .param p1, "r"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 355
     const/4 v2, 0x0
 
-    .line 356
     .local v2, "record":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     iget-object v3, p0, Lcom/android/server/am/ActivityLockHelper;->mRecords:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -379,7 +350,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 357
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/android/server/am/ActivityLockHelper$VerifyRecord;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -391,7 +361,6 @@
 
     if-ne p1, v3, :cond_0
 
-    .line 358
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -402,7 +371,6 @@
     .restart local v2    # "record":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     goto :goto_0
 
-    .line 360
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/android/server/am/ActivityLockHelper$VerifyRecord;>;"
     :cond_1
     return-object v2
@@ -412,10 +380,8 @@
     .locals 4
 
     .prologue
-    .line 113
     invoke-direct {p0}, Lcom/android/server/am/ActivityLockHelper;->readDataFromFile()V
 
-    .line 114
     iget-object v2, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedApps:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -436,7 +402,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 115
     .local v1, "s":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedStatus:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -450,7 +415,6 @@
 
     goto :goto_0
 
-    .line 117
     .end local v1    # "s":Ljava/lang/String;
     :cond_0
     return-void
@@ -461,7 +425,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 207
     iget-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedApps:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -476,7 +439,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 156
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mPermitUid:Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -487,13 +449,11 @@
 
     move-result v0
 
-    .line 157
     .local v0, "permission":Z
     sget-boolean v1, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 158
     const-string v1, "AppLocker"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -520,7 +480,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
     :cond_0
     return v0
 .end method
@@ -530,18 +489,15 @@
     .param p1, "r"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 401
     iget-object v4, p1, Lcom/android/server/am/ActivityRecord;->realActivity:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 402
     .local v0, "activityName":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 403
     .local v2, "result":Z
     sget-object v4, Lcom/android/server/am/ActivityLockHelper;->APPLOCK_PASSWORD_NAME_LIST:Ljava/util/ArrayList;
 
@@ -563,7 +519,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 404
     .local v3, "s":Ljava/lang/String;
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -571,10 +526,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 405
     const/4 v2, 0x1
 
-    .line 409
     .end local v3    # "s":Ljava/lang/String;
     :cond_1
     return v2
@@ -584,7 +537,6 @@
     .locals 1
 
     .prologue
-    .line 364
     sget v0, Lcom/android/server/am/ActivityLockHelper;->mRid:I
 
     add-int/lit8 v0, v0, 0x1
@@ -600,7 +552,6 @@
     .param p2, "restricted"    # Z
 
     .prologue
-    .line 637
     :try_start_0
     const-string v6, "com.cmx.cmplus.SmartContainerManagerNative"
 
@@ -608,7 +559,6 @@
 
     move-result-object v5
 
-    .line 638
     .local v5, "smartContainerClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v6, "get"
 
@@ -620,7 +570,6 @@
 
     move-result-object v1
 
-    .line 639
     .local v1, "get":Ljava/lang/reflect/Method;
     const/4 v6, 0x0
 
@@ -630,7 +579,6 @@
 
     move-result-object v4
 
-    .line 640
     .local v4, "smartContainer":Ljava/lang/Object;
     const-string v6, "com.cmx.cmplus.ISmartContainerManager"
 
@@ -638,7 +586,6 @@
 
     move-result-object v2
 
-    .line 641
     .local v2, "iSmartContainer":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v6, "markIntentRestricted"
 
@@ -662,7 +609,6 @@
 
     move-result-object v3
 
-    .line 642
     .local v3, "markIntentRestriced":Ljava/lang/reflect/Method;
     const/4 v6, 0x2
 
@@ -684,7 +630,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 646
     .end local v1    # "get":Ljava/lang/reflect/Method;
     .end local v2    # "iSmartContainer":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v3    # "markIntentRestriced":Ljava/lang/reflect/Method;
@@ -693,11 +638,9 @@
     :goto_0
     return-void
 
-    .line 643
     :catch_0
     move-exception v0
 
-    .line 644
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -710,7 +653,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 607
     new-instance v2, Ljava/io/File;
 
     iget-object v6, p0, Lcom/android/server/am/ActivityLockHelper;->mSystemFile:Ljava/io/File;
@@ -719,7 +661,6 @@
 
     invoke-direct {v2, v6, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 608
     .local v2, "readFile":Ljava/io/File;
     :try_start_0
     new-instance v1, Ljava/io/FileReader;
@@ -731,7 +672,6 @@
     .local v1, "fileReader":Ljava/io/FileReader;
     const/4 v6, 0x0
 
-    .line 609
     :try_start_1
     new-instance v3, Ljava/io/BufferedReader;
 
@@ -740,21 +680,17 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 608
     .local v3, "reader":Ljava/io/BufferedReader;
     const/4 v7, 0x0
 
-    .line 610
     const/4 v4, 0x0
 
-    .line 611
     .local v4, "tempString":Ljava/lang/String;
     :try_start_2
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 612
     const-string v9, "on"
 
     invoke-virtual {v9, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -763,7 +699,6 @@
 
     iput-boolean v9, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedOn:Z
 
-    .line 613
     :goto_0
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -771,7 +706,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 614
     iget-object v9, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedApps:Ljava/util/HashSet;
 
     invoke-virtual {v9, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -781,7 +715,6 @@
 
     goto :goto_0
 
-    .line 608
     :catch_0
     move-exception v6
 
@@ -790,7 +723,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 616
     :catchall_0
     move-exception v7
 
@@ -819,7 +751,6 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 608
     .end local v3    # "reader":Ljava/io/BufferedReader;
     .end local v4    # "tempString":Ljava/lang/String;
     :catch_1
@@ -830,7 +761,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 616
     :catchall_1
     move-exception v7
 
@@ -860,7 +790,6 @@
     :catch_2
     move-exception v0
 
-    .line 617
     .local v0, "e":Ljava/io/IOException;
     const-string v6, "AppLocker"
 
@@ -888,13 +817,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 620
     .end local v0    # "e":Ljava/io/IOException;
     :cond_2
     :goto_5
     return-void
 
-    .line 616
     .restart local v1    # "fileReader":Ljava/io/FileReader;
     .restart local v3    # "reader":Ljava/io/BufferedReader;
     .restart local v4    # "tempString":Ljava/lang/String;
@@ -1014,7 +941,6 @@
     .locals 3
 
     .prologue
-    .line 170
     new-instance v0, Lcom/android/server/am/ActivityLockHelper$AppLockedObserver;
 
     new-instance v2, Landroid/os/Handler;
@@ -1023,11 +949,9 @@
 
     invoke-direct {v0, p0, v2}, Lcom/android/server/am/ActivityLockHelper$AppLockedObserver;-><init>(Lcom/android/server/am/ActivityLockHelper;Landroid/os/Handler;)V
 
-    .line 172
     .local v0, "appLockedObserver":Lcom/android/server/am/ActivityLockHelper$AppLockedObserver;
     invoke-virtual {v0}, Lcom/android/server/am/ActivityLockHelper$AppLockedObserver;->observe()V
 
-    .line 173
     new-instance v1, Lcom/android/server/am/ActivityLockHelper$AppSwitchObserver;
 
     new-instance v2, Landroid/os/Handler;
@@ -1036,11 +960,9 @@
 
     invoke-direct {v1, p0, v2}, Lcom/android/server/am/ActivityLockHelper$AppSwitchObserver;-><init>(Lcom/android/server/am/ActivityLockHelper;Landroid/os/Handler;)V
 
-    .line 175
     .local v1, "appSwitchObserver":Lcom/android/server/am/ActivityLockHelper$AppSwitchObserver;
     invoke-virtual {v1}, Lcom/android/server/am/ActivityLockHelper$AppSwitchObserver;->observe()V
 
-    .line 176
     return-void
 .end method
 
@@ -1048,25 +970,21 @@
     .locals 3
 
     .prologue
-    .line 164
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 165
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 166
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/am/ActivityLockHelper;->_screenReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 167
     return-void
 .end method
 
@@ -1076,14 +994,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 550
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 551
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "content://cn.nubia.applockmanager/locked_app_packages"
 
@@ -1101,11 +1017,9 @@
 
     move-result-object v6
 
-    .line 553
     .local v6, "cursor":Landroid/database/Cursor;
     if-nez v6, :cond_2
 
-    .line 563
     if-eqz v6, :cond_0
 
     if-eqz v2, :cond_1
@@ -1115,12 +1029,10 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 565
     :cond_0
     :goto_0
     return-void
 
-    .line 563
     :catch_0
     move-exception v9
 
@@ -1135,7 +1047,6 @@
 
     goto :goto_0
 
-    .line 555
     :cond_2
     :try_start_1
     const-string v1, "packagename"
@@ -1144,19 +1055,16 @@
 
     move-result v7
 
-    .line 556
     .local v7, "packageIndex":I
     new-instance v8, Ljava/util/HashSet;
 
     invoke-direct {v8}, Ljava/util/HashSet;-><init>()V
 
-    .line 557
     .local v8, "tempLockedApps":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     const/4 v1, -0x1
 
     invoke-interface {v6, v1}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 558
     :goto_1
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1164,7 +1072,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 559
     invoke-interface {v6, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1176,7 +1083,6 @@
 
     goto :goto_1
 
-    .line 551
     .end local v7    # "packageIndex":I
     .end local v8    # "tempLockedApps":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :catch_1
@@ -1187,7 +1093,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 563
     :catchall_0
     move-exception v2
 
@@ -1211,20 +1116,17 @@
     :goto_3
     throw v1
 
-    .line 561
     .restart local v7    # "packageIndex":I
     .restart local v8    # "tempLockedApps":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :cond_4
     :try_start_4
     iput-object v8, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedApps:Ljava/util/HashSet;
 
-    .line 562
     invoke-direct {p0}, Lcom/android/server/am/ActivityLockHelper;->updateAppStatus()V
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 563
     if-eqz v6, :cond_5
 
     if-eqz v2, :cond_6
@@ -1234,14 +1136,12 @@
     :try_end_5
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 564
     :cond_5
     :goto_4
     invoke-direct {p0}, Lcom/android/server/am/ActivityLockHelper;->writeDataToFile()V
 
     goto :goto_0
 
-    .line 563
     :catch_2
     move-exception v9
 
@@ -1282,12 +1182,10 @@
     .locals 7
 
     .prologue
-    .line 568
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 569
     .local v4, "tempRemoveList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v5, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedApps:Ljava/util/HashSet;
 
@@ -1310,7 +1208,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 570
     .local v0, "app":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedStatus:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1320,7 +1217,6 @@
 
     if-nez v5, :cond_0
 
-    .line 571
     iget-object v5, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedStatus:Ljava/util/concurrent/ConcurrentHashMap;
 
     const/4 v6, 0x1
@@ -1333,7 +1229,6 @@
 
     goto :goto_0
 
-    .line 574
     .end local v0    # "app":Ljava/lang/String;
     :cond_1
     iget-object v5, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedStatus:Ljava/util/concurrent/ConcurrentHashMap;
@@ -1360,7 +1255,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 575
     .local v2, "key":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedApps:Ljava/util/HashSet;
 
@@ -1370,12 +1264,10 @@
 
     if-nez v5, :cond_2
 
-    .line 576
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 579
     .end local v2    # "key":Ljava/lang/String;
     :cond_3
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1395,7 +1287,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 580
     .local v3, "remove":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedStatus:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1403,7 +1294,6 @@
 
     goto :goto_2
 
-    .line 582
     .end local v3    # "remove":Ljava/lang/String;
     :cond_4
     return-void
@@ -1415,14 +1305,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 534
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 535
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "content://cn.nubia.applockmanager/locked_app_manager/applock_switch"
 
@@ -1440,11 +1328,9 @@
 
     move-result-object v6
 
-    .line 537
     .local v6, "cursor":Landroid/database/Cursor;
     if-nez v6, :cond_2
 
-    .line 545
     if-eqz v6, :cond_0
 
     if-eqz v2, :cond_1
@@ -1454,12 +1340,10 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 547
     :cond_0
     :goto_0
     return-void
 
-    .line 545
     :catch_0
     move-exception v8
 
@@ -1474,7 +1358,6 @@
 
     goto :goto_0
 
-    .line 539
     :cond_2
     :try_start_1
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
@@ -1486,7 +1369,6 @@
 
     if-nez v1, :cond_4
 
-    .line 545
     if-eqz v6, :cond_0
 
     if-eqz v2, :cond_3
@@ -1512,7 +1394,6 @@
 
     goto :goto_0
 
-    .line 542
     :cond_4
     :try_start_3
     const-string v1, "value"
@@ -1525,7 +1406,6 @@
 
     move-result-object v7
 
-    .line 544
     .local v7, "value":Ljava/lang/String;
     const-string v1, "on"
 
@@ -1538,7 +1418,6 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 545
     if-eqz v6, :cond_5
 
     if-eqz v2, :cond_6
@@ -1548,14 +1427,12 @@
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 546
     :cond_5
     :goto_1
     invoke-direct {p0}, Lcom/android/server/am/ActivityLockHelper;->writeDataToFile()V
 
     goto :goto_0
 
-    .line 545
     :catch_2
     move-exception v8
 
@@ -1570,7 +1447,6 @@
 
     goto :goto_1
 
-    .line 535
     .end local v7    # "value":Ljava/lang/String;
     :catch_3
     move-exception v1
@@ -1580,7 +1456,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 545
     :catchall_0
     move-exception v2
 
@@ -1630,7 +1505,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 625
     :try_start_0
     const-string v3, "com.cmx.cmplus.SmartContainerConfig"
 
@@ -1638,7 +1512,6 @@
 
     move-result-object v0
 
-    .line 626
     .local v0, "configClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v3, "WITH_OUT_ALL"
 
@@ -1646,13 +1519,11 @@
 
     move-result-object v2
 
-    .line 627
     .local v2, "filed":Ljava/lang/reflect/Field;
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 628
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1667,22 +1538,18 @@
 
     move-result v3
 
-    .line 632
     .end local v2    # "filed":Ljava/lang/reflect/Field;
     :goto_0
     return v3
 
-    .line 629
     :catch_0
     move-exception v1
 
-    .line 630
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     move v3, v4
 
-    .line 632
     goto :goto_0
 .end method
 
@@ -1692,7 +1559,6 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 585
     new-instance v6, Ljava/io/File;
 
     iget-object v8, p0, Lcom/android/server/am/ActivityLockHelper;->mSystemFile:Ljava/io/File;
@@ -1701,7 +1567,6 @@
 
     invoke-direct {v6, v8, v9}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 586
     .local v6, "writeTarget":Ljava/io/File;
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
@@ -1713,7 +1578,6 @@
     .local v1, "fstr":Ljava/io/FileOutputStream;
     const/4 v9, 0x0
 
-    .line 587
     :try_start_1
     new-instance v5, Ljava/io/BufferedOutputStream;
 
@@ -1722,23 +1586,19 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 586
     .local v5, "str":Ljava/io/BufferedOutputStream;
     const/4 v11, 0x0
 
-    .line 588
     :try_start_2
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 589
     .local v4, "sb":Ljava/lang/StringBuilder;
     const/4 v8, 0x0
 
     invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 590
     iget-boolean v8, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedOn:Z
 
     if-eqz v8, :cond_3
@@ -1748,12 +1608,10 @@
     :goto_0
     invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 591
     const-string v8, "\n"
 
     invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 592
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
@@ -1764,7 +1622,6 @@
 
     invoke-virtual {v5, v8}, Ljava/io/BufferedOutputStream;->write([B)V
 
-    .line 593
     iget-object v8, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedApps:Ljava/util/HashSet;
 
     invoke-virtual {v8}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -1785,21 +1642,17 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 594
     .local v3, "pkg":Ljava/lang/String;
     const/4 v8, 0x0
 
     invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 595
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 596
     const-string v8, "\n"
 
     invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 597
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
@@ -1815,7 +1668,6 @@
 
     goto :goto_1
 
-    .line 586
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "pkg":Ljava/lang/String;
     .end local v4    # "sb":Ljava/lang/StringBuilder;
@@ -1827,7 +1679,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 600
     :catchall_0
     move-exception v9
 
@@ -1856,7 +1707,6 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 586
     .end local v5    # "str":Ljava/io/BufferedOutputStream;
     :catch_1
     move-exception v8
@@ -1866,7 +1716,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 600
     :catchall_1
     move-exception v9
 
@@ -1896,7 +1745,6 @@
     :catch_2
     move-exception v0
 
-    .line 601
     .local v0, "e":Ljava/lang/Exception;
     const-string v8, "AppLocker"
 
@@ -1924,13 +1772,11 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 604
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     :goto_6
     return-void
 
-    .line 590
     .restart local v1    # "fstr":Ljava/io/FileOutputStream;
     .restart local v4    # "sb":Ljava/lang/StringBuilder;
     .restart local v5    # "str":Ljava/io/BufferedOutputStream;
@@ -1940,7 +1786,6 @@
 
     goto :goto_0
 
-    .line 599
     .restart local v2    # "i$":Ljava/util/Iterator;
     :cond_4
     invoke-virtual {v5}, Ljava/io/BufferedOutputStream;->flush()V
@@ -1948,7 +1793,6 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_0
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 600
     if-eqz v5, :cond_5
 
     if-eqz v10, :cond_6
@@ -2072,7 +1916,6 @@
     .locals 1
 
     .prologue
-    .line 291
     iget-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mTempRecord:Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
     return-object v0
@@ -2083,7 +1926,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 193
     const-string v3, "nubia_locked_startinfo_id"
 
     const/4 v4, 0x0
@@ -2092,7 +1934,6 @@
 
     move-result v0
 
-    .line 194
     .local v0, "id":I
     iget-object v3, p0, Lcom/android/server/am/ActivityLockHelper;->mRecords:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2106,24 +1947,19 @@
 
     check-cast v2, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
-    .line 195
     .local v2, "r":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     const/4 v1, 0x0
 
-    .line 196
     .local v1, "info":Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;
     if-eqz v2, :cond_0
 
-    .line 197
     iget-object v1, v2, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mStartIntentInfo:Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;
 
-    .line 199
     :cond_0
     sget-boolean v3, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v3, :cond_2
 
-    .line 200
     const-string v3, "AppLocker"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2152,7 +1988,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     :cond_2
     return-object v1
 .end method
@@ -2162,7 +1997,6 @@
     .param p1, "r"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 105
     iget-object v0, p1, Lcom/android/server/am/ActivityRecord;->realActivity:Landroid/content/ComponentName;
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -2181,7 +2015,6 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 109
     invoke-direct {p0, p1}, Lcom/android/server/am/ActivityLockHelper;->isLockedPackage(Ljava/lang/String;)Z
 
     move-result v0
@@ -2193,7 +2026,6 @@
     .locals 1
 
     .prologue
-    .line 101
     iget-boolean v0, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedOn:Z
 
     return v0
@@ -2204,7 +2036,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 179
     iget-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedStatus:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2225,7 +2056,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 185
     :try_start_0
     const-string v2, "nubia_locked_restartIntent"
 
@@ -2237,17 +2067,14 @@
 
     move-result v1
 
-    .line 189
     .local v1, "isRestart":Z
     :goto_0
     return v1
 
-    .line 186
     .end local v1    # "isRestart":Z
     :catch_0
     move-exception v0
 
-    .line 187
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
@@ -2263,7 +2090,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 381
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_2
@@ -2271,16 +2097,13 @@
     :cond_0
     move v1, v3
 
-    .line 397
     :cond_1
     :goto_0
     return v1
 
-    .line 383
     :cond_2
     const/4 v1, 0x0
 
-    .line 384
     .local v1, "need":Z
     invoke-direct {p0, p2}, Lcom/android/server/am/ActivityLockHelper;->isUnlockAppActivity(Lcom/android/server/am/ActivityRecord;)Z
 
@@ -2288,7 +2111,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 385
     iget-object v4, p2, Lcom/android/server/am/ActivityRecord;->intent:Landroid/content/Intent;
 
     const-string v5, "nubia_locked_start_id"
@@ -2297,7 +2119,6 @@
 
     move-result v0
 
-    .line 386
     .local v0, "id":I
     iget-object v4, p0, Lcom/android/server/am/ActivityLockHelper;->mRecords:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2311,7 +2132,6 @@
 
     check-cast v2, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
-    .line 387
     .local v2, "r":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     if-eqz v2, :cond_1
 
@@ -2319,7 +2139,6 @@
 
     if-nez v4, :cond_1
 
-    .line 388
     iget-object v4, v2, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mAttachActivity:Lcom/android/server/am/ActivityRecord;
 
     iget-object v4, v4, Lcom/android/server/am/ActivityRecord;->task:Lcom/android/server/am/TaskRecord;
@@ -2334,10 +2153,8 @@
 
     move v1, v3
 
-    .line 389
     goto :goto_0
 
-    .line 391
     :cond_3
     iget-object v4, v2, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mAttachActivity:Lcom/android/server/am/ActivityRecord;
 
@@ -2345,11 +2162,9 @@
 
     move v1, v3
 
-    .line 392
     :goto_1
     if-eqz v1, :cond_1
 
-    .line 393
     iget-object v3, p0, Lcom/android/server/am/ActivityLockHelper;->mRecords:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget v4, v2, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mVerifyId:I
@@ -2362,7 +2177,6 @@
 
     goto :goto_0
 
-    .line 391
     :cond_4
     const/4 v1, 0x1
 
@@ -2379,12 +2193,10 @@
 
     const/4 v4, 0x0
 
-    .line 211
     sget-boolean v2, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 212
     const-string v2, "AppLocker"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2417,13 +2229,11 @@
 
     invoke-static {v2, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 215
     .local v0, "callUid":I
     invoke-direct {p0, v0}, Lcom/android/server/am/ActivityLockHelper;->isUidPermited(I)Z
 
@@ -2431,11 +2241,9 @@
 
     if-nez v2, :cond_1
 
-    .line 228
     :goto_0
     return v4
 
-    .line 217
     :cond_1
     iget-object v2, p0, Lcom/android/server/am/ActivityLockHelper;->mRecords:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2449,7 +2257,6 @@
 
     check-cast v1, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
-    .line 218
     .local v1, "r":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     const-string v5, "AppLocker"
 
@@ -2478,10 +2285,8 @@
 
     invoke-static {v5, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     if-eqz v1, :cond_3
 
-    .line 220
     iget-object v5, p0, Lcom/android/server/am/ActivityLockHelper;->mLockedStatus:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget-object v6, v1, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mPackageName:Ljava/lang/String;
@@ -2497,18 +2302,14 @@
 
     invoke-virtual {v5, v6, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 221
     iget-boolean v2, v1, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mVerifyWithStart:Z
 
     if-eqz v2, :cond_3
 
-    .line 222
     if-eqz p2, :cond_2
 
-    .line 223
     invoke-virtual {p0, v1}, Lcom/android/server/am/ActivityLockHelper;->restartLockedActivity(Lcom/android/server/am/ActivityLockHelper$VerifyRecord;)V
 
-    .line 225
     :cond_2
     iget-object v2, p0, Lcom/android/server/am/ActivityLockHelper;->mRecords:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2521,19 +2322,16 @@
     :cond_3
     move v4, v3
 
-    .line 228
     goto :goto_0
 
     :cond_4
     move-object v2, v1
 
-    .line 218
     goto :goto_1
 
     :cond_5
     move v2, v4
 
-    .line 220
     goto :goto_2
 .end method
 
@@ -2546,19 +2344,16 @@
 
     const/4 v2, 0x0
 
-    .line 295
     invoke-virtual {p0, p1}, Lcom/android/server/am/ActivityLockHelper;->isLockActivity(Lcom/android/server/am/ActivityRecord;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 296
     sget-boolean v1, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 297
     const-string v1, "AppLocker"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2587,16 +2382,13 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 351
     :cond_0
     :goto_0
     return v2
 
-    .line 302
     :cond_1
     const/4 v8, 0x0
 
-    .line 303
     .local v8, "result":I
     iget-object v1, p1, Lcom/android/server/am/ActivityRecord;->realActivity:Landroid/content/ComponentName;
 
@@ -2610,18 +2402,15 @@
 
     if-eqz v1, :cond_8
 
-    .line 304
     invoke-direct {p0, p1}, Lcom/android/server/am/ActivityLockHelper;->getVerifyRecord(Lcom/android/server/am/ActivityRecord;)Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
     move-result-object v7
 
-    .line 305
     .local v7, "record":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     sget-boolean v1, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v1, :cond_2
 
-    .line 306
     const-string v3, "AppLocker"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2665,11 +2454,9 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 310
     :cond_2
     if-nez v7, :cond_5
 
-    .line 311
     new-instance v0, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
     invoke-direct {p0}, Lcom/android/server/am/ActivityLockHelper;->makeId()I
@@ -2688,7 +2475,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;-><init>(Lcom/android/server/am/ActivityLockHelper;ZILjava/lang/String;Lcom/android/server/am/ActivityRecord;Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;)V
 
-    .line 313
     .local v0, "verifyRecord":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mRecords:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2700,18 +2486,14 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 314
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mTempRecord:Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
-    .line 315
     const/4 v8, 0x1
 
-    .line 316
     sget-boolean v1, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v1, :cond_3
 
-    .line 317
     const-string v1, "AppLocker"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2751,16 +2533,13 @@
     :goto_2
     move v2, v8
 
-    .line 351
     goto/16 :goto_0
 
     :cond_4
     move-object v1, v7
 
-    .line 306
     goto :goto_1
 
-    .line 321
     :cond_5
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mRecords:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2772,12 +2551,10 @@
 
     invoke-virtual {v1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 322
     iget-boolean v1, p0, Lcom/android/server/am/ActivityLockHelper;->mCallFromMoveToTaskFront:Z
 
     if-eqz v1, :cond_7
 
-    .line 323
     new-instance v0, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
     invoke-direct {p0}, Lcom/android/server/am/ActivityLockHelper;->makeId()I
@@ -2796,7 +2573,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;-><init>(Lcom/android/server/am/ActivityLockHelper;ZILjava/lang/String;Lcom/android/server/am/ActivityRecord;Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;)V
 
-    .line 325
     .restart local v0    # "verifyRecord":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mRecords:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2808,18 +2584,14 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 326
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper;->mTempRecord:Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
-    .line 327
     const/4 v8, 0x1
 
-    .line 328
     sget-boolean v1, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v1, :cond_6
 
-    .line 329
     const-string v1, "AppLocker"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2854,7 +2626,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     .end local v0    # "verifyRecord":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     :cond_6
     :goto_3
@@ -2862,7 +2633,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 336
     const-string v1, "AppLocker"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2889,24 +2659,20 @@
 
     goto :goto_2
 
-    .line 333
     :cond_7
     const/4 v8, 0x2
 
     goto :goto_3
 
-    .line 341
     .end local v7    # "record":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     :cond_8
     invoke-direct {p0, p1}, Lcom/android/server/am/ActivityLockHelper;->getVerifyRecord(Lcom/android/server/am/ActivityRecord;)Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
     move-result-object v7
 
-    .line 342
     .restart local v7    # "record":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     if-eqz v7, :cond_9
 
-    .line 343
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mRecords:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget v2, v7, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mVerifyId:I
@@ -2917,13 +2683,11 @@
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 345
     :cond_9
     sget-boolean v1, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v1, :cond_3
 
-    .line 346
     const-string v2, "AppLocker"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2982,7 +2746,6 @@
     .param p19, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 239
     new-instance v1, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;
 
     move-object/from16 v2, p1
@@ -3023,7 +2786,6 @@
 
     invoke-direct/range {v1 .. v19}, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;-><init>(Landroid/app/IApplicationThread;ILjava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/service/voice/IVoiceInteractionSession;Lcom/android/internal/app/IVoiceInteractor;Landroid/os/IBinder;Ljava/lang/String;IILandroid/app/ProfilerInfo;Landroid/app/IActivityManager$WaitResult;Landroid/content/res/Configuration;Landroid/os/Bundle;ILandroid/app/IActivityContainer;Lcom/android/server/am/TaskRecord;)V
 
-    .line 244
     .local v1, "restartInfo":Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;
     new-instance v2, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
@@ -3043,7 +2805,6 @@
 
     invoke-direct/range {v2 .. v8}, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;-><init>(Lcom/android/server/am/ActivityLockHelper;ZILjava/lang/String;Lcom/android/server/am/ActivityRecord;Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;)V
 
-    .line 246
     .local v2, "r":Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
     move-object/from16 v0, p0
 
@@ -3057,7 +2818,6 @@
 
     move-result-object v21
 
-    .line 247
     .local v21, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/android/server/am/ActivityLockHelper$VerifyRecord;>;>;"
     :cond_0
     :goto_0
@@ -3067,14 +2827,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 248
     invoke-interface/range {v21 .. v21}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v20
 
     check-cast v20, Ljava/util/Map$Entry;
 
-    .line 249
     .local v20, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/android/server/am/ActivityLockHelper$VerifyRecord;>;"
     invoke-interface/range {v20 .. v20}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -3092,12 +2850,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 250
     invoke-interface/range {v21 .. v21}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 253
     .end local v20    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/android/server/am/ActivityLockHelper$VerifyRecord;>;"
     :cond_1
     move-object/from16 v0, p0
@@ -3112,12 +2868,10 @@
 
     invoke-virtual {v3, v4, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 255
     sget-boolean v3, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v3, :cond_2
 
-    .line 256
     const-string v3, "AppLocker"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3140,13 +2894,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     :cond_2
     sget-boolean v3, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v3, :cond_3
 
-    .line 260
     const-string v3, "AppLocker"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3185,13 +2937,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     :cond_3
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v2}, Lcom/android/server/am/ActivityLockHelper;->startUnlockAppActivity(Lcom/android/server/am/ActivityLockHelper$VerifyRecord;)V
 
-    .line 264
     return-void
 .end method
 
@@ -3199,25 +2949,20 @@
     .locals 2
 
     .prologue
-    .line 140
     invoke-direct {p0}, Lcom/android/server/am/ActivityLockHelper;->registerReceiver()V
 
-    .line 141
     invoke-direct {p0}, Lcom/android/server/am/ActivityLockHelper;->registerObserver()V
 
-    .line 142
     const-string v0, "cn.nubia.applockmanager"
 
     invoke-direct {p0, v0}, Lcom/android/server/am/ActivityLockHelper;->addPermitApp(Ljava/lang/String;)V
 
-    .line 143
     const-string v0, "AppLocker"
 
     const-string v1, "register success."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     return-void
 .end method
 
@@ -3228,12 +2973,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 268
     sget-boolean v1, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 269
     const-string v1, "AppLocker"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3256,18 +2999,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     :cond_0
     iget-object v1, p1, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mStartIntentInfo:Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;
 
     if-eqz v1, :cond_1
 
-    .line 273
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 274
     .local v0, "restartIntent":Landroid/content/Intent;
     iget-object v1, p1, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mStartIntentInfo:Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;
 
@@ -3279,45 +3019,37 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 276
     const-string v1, "nubia_locked_restartIntent"
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 277
     const-string v1, "nubia_locked_startinfo_id"
 
     iget v2, p1, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mVerifyId:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 278
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 280
     sget-boolean v1, Lcom/android/server/am/ActivityLockHelper;->WITHOUT_SMARTCONTAINER:Z
 
     if-eqz v1, :cond_2
 
-    .line 281
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 288
     .end local v0    # "restartIntent":Landroid/content/Intent;
     :cond_1
     :goto_0
     return-void
 
-    .line 283
     .restart local v0    # "restartIntent":Landroid/content/Intent;
     :cond_2
     invoke-direct {p0, v0, v4}, Lcom/android/server/am/ActivityLockHelper;->markIntentRestricted(Landroid/content/Intent;Z)V
 
-    .line 284
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/os/UserHandle;
@@ -3338,10 +3070,8 @@
     .param p1, "callFromMoveToTaskFront"    # Z
 
     .prologue
-    .line 120
     iput-boolean p1, p0, Lcom/android/server/am/ActivityLockHelper;->mCallFromMoveToTaskFront:Z
 
-    .line 121
     return-void
 .end method
 
@@ -3350,12 +3080,10 @@
     .param p1, "record"    # Lcom/android/server/am/ActivityLockHelper$VerifyRecord;
 
     .prologue
-    .line 368
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 369
     .local v0, "passIntent":Landroid/content/Intent;
     const-string v1, "nubia_locked_start_id"
 
@@ -3363,39 +3091,32 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 370
     const-string v1, "nubia_locked_package_name"
 
     iget-object v2, p1, Lcom/android/server/am/ActivityLockHelper$VerifyRecord;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 371
     const-string v1, "cn.nubia.applockmanager.nubia_application_applock"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 372
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 373
     const v1, 0x8000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 374
     iget-object v1, p0, Lcom/android/server/am/ActivityLockHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 375
     sget-boolean v1, Lcom/android/server/am/AppLockerConfig;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 376
     const-string v1, "AppLocker"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3418,7 +3139,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 378
     :cond_0
     return-void
 .end method

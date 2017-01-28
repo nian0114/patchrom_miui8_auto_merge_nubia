@@ -34,17 +34,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 64
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 65
     iput-object p1, p0, Lcom/android/server/display/WfdNotificationHandler;->mContext:Landroid/content/Context;
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mContext:Landroid/content/Context;
 
     const-string v1, "notification"
@@ -57,7 +54,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mNotificationManager:Landroid/app/NotificationManager;
 
-    .line 68
     return-void
 .end method
 
@@ -68,22 +64,18 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 55
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 61
     :goto_0
     return-void
 
-    .line 57
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/display/WfdNotificationHandler;->handleUpdateNotification()Z
 
     goto :goto_0
 
-    .line 55
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_0
@@ -104,75 +96,61 @@
 
     const/4 v1, 0x0
 
-    .line 91
     monitor-enter p0
 
-    .line 92
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mPendingNotificationUpdate:Z
 
     if-nez v0, :cond_0
 
-    .line 93
     monitor-exit p0
 
-    .line 171
     :goto_0
     return v1
 
-    .line 95
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mPendingNotificationUpdate:Z
 
-    .line 96
     iget v10, p0, Lcom/android/server/display/WfdNotificationHandler;->mActiveDisplayState:I
 
-    .line 97
     .local v10, "state":I
     iget-object v7, p0, Lcom/android/server/display/WfdNotificationHandler;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
-    .line 98
     .local v7, "display":Landroid/hardware/display/WifiDisplay;
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mNotificationManager:Landroid/app/NotificationManager;
 
     sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {v0, v4, v14, v3}, Landroid/app/NotificationManager;->cancelAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)V
 
-    .line 104
     if-eq v10, v12, :cond_1
 
     const/4 v0, 0x2
 
     if-ne v10, v0, :cond_4
 
-    .line 108
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mSettingsPendingIntent:Landroid/app/PendingIntent;
 
     if-nez v0, :cond_2
 
-    .line 109
     new-instance v2, Landroid/content/Intent;
 
     const-string v0, "android.settings.CAST_SETTINGS"
 
     invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 110
     .local v2, "settingsIntent":Landroid/content/Intent;
     const/high16 v0, 0x14200000
 
     invoke-virtual {v2, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mContext:Landroid/content/Context;
 
     sget-object v5, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -185,21 +163,18 @@
 
     iput-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mSettingsPendingIntent:Landroid/app/PendingIntent;
 
-    .line 117
     .end local v2    # "settingsIntent":Landroid/content/Intent;
     :cond_2
     iget-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mDisconnectPendingIntent:Landroid/app/PendingIntent;
 
     if-nez v0, :cond_3
 
-    .line 118
     new-instance v6, Landroid/content/Intent;
 
     const-string v0, "android.server.display.wfd.DISCONNECT"
 
     invoke-direct {v6, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 119
     .local v6, "disconnectIntent":Landroid/content/Intent;
     iget-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mContext:Landroid/content/Context;
 
@@ -211,7 +186,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mDisconnectPendingIntent:Landroid/app/PendingIntent;
 
-    .line 124
     .end local v6    # "disconnectIntent":Landroid/content/Intent;
     :cond_3
     iget-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mContext:Landroid/content/Context;
@@ -220,11 +194,9 @@
 
     move-result-object v9
 
-    .line 126
     .local v9, "r":Landroid/content/res/Resources;
     if-ne v10, v12, :cond_5
 
-    .line 127
     new-instance v0, Landroid/app/Notification$Builder;
 
     iget-object v3, p0, Lcom/android/server/display/WfdNotificationHandler;->mContext:Landroid/content/Context;
@@ -291,7 +263,6 @@
 
     move-result-object v8
 
-    .line 167
     .local v8, "notification":Landroid/app/Notification;
     :goto_1
     iget-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mNotificationManager:Landroid/app/NotificationManager;
@@ -305,10 +276,8 @@
     :cond_4
     move v1, v12
 
-    .line 171
     goto/16 :goto_0
 
-    .line 98
     .end local v7    # "display":Landroid/hardware/display/WifiDisplay;
     .end local v10    # "state":I
     :catchall_0
@@ -321,7 +290,6 @@
 
     throw v0
 
-    .line 141
     .restart local v7    # "display":Landroid/hardware/display/WifiDisplay;
     .restart local v9    # "r":Landroid/content/res/Resources;
     .restart local v10    # "state":I
@@ -338,7 +306,6 @@
 
     invoke-direct {v11, v0, v3}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    .line 142
     .local v11, "views":Landroid/widget/RemoteViews;
     new-instance v0, Landroid/app/Notification$Builder;
 
@@ -370,7 +337,6 @@
 
     move-result-object v8
 
-    .line 148
     .restart local v8    # "notification":Landroid/app/Notification;
     const v0, 0x30d00ab
 
@@ -378,7 +344,6 @@
 
     invoke-virtual {v11, v0, v3}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
-    .line 149
     const v0, 0x30d00ab
 
     iget-object v3, p0, Lcom/android/server/display/WfdNotificationHandler;->mContext:Landroid/content/Context;
@@ -389,22 +354,18 @@
 
     invoke-virtual {v11, v0, v3}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 151
     iget-boolean v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mIsResumed:Z
 
     if-eqz v0, :cond_6
 
-    .line 152
     const v0, 0x30d00a7
 
     const/16 v3, 0x8
 
     invoke-virtual {v11, v0, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 153
     invoke-virtual {v11, v13, v1}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 154
     iget-object v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mContext:Landroid/content/Context;
 
     const v1, 0x30c0039
@@ -415,7 +376,6 @@
 
     invoke-virtual {v11, v13, v0}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 164
     :goto_2
     const v0, 0x30d00a6
 
@@ -427,18 +387,15 @@
 
     goto :goto_1
 
-    .line 157
     :cond_6
     const v0, 0x30d00a7
 
     invoke-virtual {v11, v0, v1}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 158
     const/16 v0, 0x8
 
     invoke-virtual {v11, v13, v0}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 159
     const v0, 0x30d00a8
 
     iget-object v1, p0, Lcom/android/server/display/WfdNotificationHandler;->mContext:Landroid/content/Context;
@@ -451,7 +408,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 161
     const v0, 0x30d00a9
 
     iget-object v1, p0, Lcom/android/server/display/WfdNotificationHandler;->mContext:Landroid/content/Context;
@@ -474,13 +430,10 @@
     .param p3, "display"    # Landroid/hardware/display/WifiDisplay;
 
     .prologue
-    .line 72
     iput-boolean p1, p0, Lcom/android/server/display/WfdNotificationHandler;->mIsResumed:Z
 
-    .line 73
     invoke-virtual {p0, p2, p3}, Lcom/android/server/display/WfdNotificationHandler;->scheduleUpdateNotificationLocked(ILandroid/hardware/display/WifiDisplay;)V
 
-    .line 74
     return-void
 .end method
 
@@ -490,28 +443,22 @@
     .param p2, "display"    # Landroid/hardware/display/WifiDisplay;
 
     .prologue
-    .line 77
     iput p1, p0, Lcom/android/server/display/WfdNotificationHandler;->mActiveDisplayState:I
 
-    .line 78
     iput-object p2, p0, Lcom/android/server/display/WfdNotificationHandler;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
-    .line 79
     iget-boolean v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mPendingNotificationUpdate:Z
 
     if-nez v0, :cond_0
 
-    .line 80
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/WfdNotificationHandler;->mPendingNotificationUpdate:Z
 
-    .line 81
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lcom/android/server/display/WfdNotificationHandler;->sendEmptyMessage(I)Z
 
-    .line 83
     :cond_0
     return-void
 .end method

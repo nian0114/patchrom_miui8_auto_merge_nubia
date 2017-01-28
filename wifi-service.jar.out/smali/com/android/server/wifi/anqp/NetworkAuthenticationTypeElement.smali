@@ -38,17 +38,14 @@
     .end annotation
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 58
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement;->m_authenticationTypes:Ljava/util/List;
 
-    .line 60
     :goto_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -56,14 +53,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 61
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v2
 
     and-int/lit16 v1, v2, 0xff
 
-    .line 63
     .local v1, "typeNumber":I
     invoke-static {}, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NwkAuthTypeEnum;->values()[Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NwkAuthTypeEnum;
 
@@ -75,7 +70,6 @@
 
     sget-object v0, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NwkAuthTypeEnum;->Reserved:Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NwkAuthTypeEnum;
 
-    .line 67
     .local v0, "type":Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NwkAuthTypeEnum;
     :goto_1
     iget-object v2, p0, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement;->m_authenticationTypes:Ljava/util/List;
@@ -98,7 +92,6 @@
 
     goto :goto_0
 
-    .line 63
     .end local v0    # "type":Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NwkAuthTypeEnum;
     :cond_0
     invoke-static {}, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NwkAuthTypeEnum;->values()[Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NwkAuthTypeEnum;
@@ -109,7 +102,6 @@
 
     goto :goto_1
 
-    .line 70
     .end local v1    # "typeNumber":I
     :cond_1
     return-void
@@ -130,7 +122,6 @@
     .end annotation
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement;->m_authenticationTypes:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -144,7 +135,6 @@
     .locals 2
 
     .prologue
-    .line 78
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

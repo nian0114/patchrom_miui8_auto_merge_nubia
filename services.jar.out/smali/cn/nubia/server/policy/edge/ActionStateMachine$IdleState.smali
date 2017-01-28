@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 344
     iput-object p1, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$IdleState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,14 +36,12 @@
     .locals 2
 
     .prologue
-    .line 347
     const-string v0, "FitActionStateMachine"
 
     const-string v1, "enter IdleState"
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->sysi(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 348
     iget-object v0, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$IdleState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     # getter for: Lcn/nubia/server/policy/edge/ActionStateMachine;->mActionListener:Lcn/nubia/server/policy/edge/OnActionListener;
@@ -54,7 +51,6 @@
 
     invoke-interface {v0}, Lcn/nubia/server/policy/edge/OnActionListener;->onEnterIdleState()V
 
-    .line 349
     return-void
 .end method
 
@@ -65,12 +61,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 353
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcn/nubia/edgegesture/EdgeGesture;
 
-    .line 354
     .local v0, "gesture":Lcn/nubia/edgegesture/EdgeGesture;
     const-string v2, "FitActionStateMachine"
 
@@ -111,7 +105,6 @@
 
     invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/LogUtils;->sysd(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 356
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$IdleState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     # invokes: Lcn/nubia/server/policy/edge/ActionStateMachine;->isLauncherSlide()Z
@@ -121,29 +114,24 @@
 
     if-eqz v2, :cond_0
 
-    .line 357
     const-string v2, "FitActionStateMachine"
 
     const-string v3, "Launcher is slide now!"
 
     invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/LogUtils;->sysw(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 377
     :goto_0
     return v1
 
-    .line 361
     :cond_0
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 377
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 364
     :sswitch_0
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$IdleState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
@@ -152,7 +140,6 @@
 
     goto :goto_0
 
-    .line 368
     :sswitch_1
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$IdleState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
@@ -161,7 +148,6 @@
 
     goto :goto_0
 
-    .line 371
     :sswitch_2
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$IdleState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
@@ -170,7 +156,6 @@
 
     goto :goto_0
 
-    .line 374
     :sswitch_3
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$IdleState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
@@ -179,7 +164,6 @@
 
     goto :goto_0
 
-    .line 361
     :sswitch_data_0
     .sparse-switch
         0x1005 -> :sswitch_0

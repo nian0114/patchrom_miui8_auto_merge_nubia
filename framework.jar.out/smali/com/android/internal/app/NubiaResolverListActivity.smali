@@ -56,36 +56,30 @@
     .locals 1
 
     .prologue
-    .line 47
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 52
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mIntents:Ljava/util/List;
 
-    .line 53
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mResolvingHome:Z
 
-    .line 58
     new-instance v0, Lcom/android/internal/app/NubiaResolverController;
 
     invoke-direct {v0}, Lcom/android/internal/app/NubiaResolverController;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
 
-    .line 193
     new-instance v0, Lcom/android/internal/app/NubiaResolverListActivity$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/app/NubiaResolverListActivity$1;-><init>(Lcom/android/internal/app/NubiaResolverListActivity;)V
 
     iput-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mPackageMonitor:Lcom/android/internal/content/PackageMonitor;
 
-    .line 392
     return-void
 .end method
 
@@ -94,7 +88,6 @@
     .param p0, "x0"    # Lcom/android/internal/app/NubiaResolverListActivity;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mIntents:Ljava/util/List;
 
     return-object v0
@@ -106,7 +99,6 @@
     .param p1, "x1"    # Ljava/util/List;
 
     .prologue
-    .line 47
     iput-object p1, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mIntents:Ljava/util/List;
 
     return-object p1
@@ -118,7 +110,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 47
     iput p1, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mLaunchedFromUid:I
 
     return p1
@@ -130,7 +121,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 152
     :try_start_0
     const-string v3, "Intent"
 
@@ -138,7 +128,6 @@
 
     move-result-object v0
 
-    .line 153
     .local v0, "configClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v3, "mCloneExtras"
 
@@ -146,13 +135,11 @@
 
     move-result-object v2
 
-    .line 154
     .local v2, "field":Ljava/lang/reflect/Field;
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 155
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -163,17 +150,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 159
     .end local v0    # "configClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v2    # "field":Ljava/lang/reflect/Field;
     :goto_0
     return-object v3
 
-    .line 156
     :catch_0
     move-exception v1
 
-    .line 157
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "NubiaResolverListActivity"
 
@@ -199,7 +183,6 @@
 
     move-object v3, v4
 
-    .line 159
     goto :goto_0
 .end method
 
@@ -207,25 +190,20 @@
     .locals 3
 
     .prologue
-    .line 186
     invoke-virtual {p0}, Lcom/android/internal/app/NubiaResolverListActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 187
     .local v0, "actionBar":Landroid/app/ActionBar;
     const/16 v1, 0xc
 
-    .line 189
     .local v1, "options":I
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayOptions(I)V
 
-    .line 190
     const v2, 0x30c0054
 
     invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setTitle(I)V
 
-    .line 191
     return-void
 .end method
 
@@ -233,7 +211,6 @@
     .locals 4
 
     .prologue
-    .line 201
     new-instance v0, Landroid/content/Intent;
 
     invoke-virtual {p0}, Lcom/android/internal/app/NubiaResolverListActivity;->getIntent()Landroid/content/Intent;
@@ -242,7 +219,6 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 202
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "android.intent.extra.INTENT"
 
@@ -250,7 +226,6 @@
 
     move-result-object v1
 
-    .line 204
     .local v1, "targetParcelable":Landroid/os/Parcelable;
     if-eqz v1, :cond_0
 
@@ -260,16 +235,13 @@
 
     move-object v0, v1
 
-    .line 205
     check-cast v0, Landroid/content/Intent;
 
-    .line 207
     :cond_0
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 210
     iget-object v2, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
 
     invoke-virtual {v2}, Lcom/android/internal/app/NubiaResolverController;->getWithOutAppClone()Z
@@ -278,12 +250,10 @@
 
     if-nez v2, :cond_1
 
-    .line 211
     iget-object v2, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
 
     invoke-virtual {v2, v0}, Lcom/android/internal/app/NubiaResolverController;->processIntentForClone(Landroid/content/Intent;)V
 
-    .line 215
     :cond_1
     invoke-virtual {v0}, Landroid/content/Intent;->getFlags()I
 
@@ -295,7 +265,6 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 217
     return-object v0
 .end method
 
@@ -304,12 +273,10 @@
     .param p1, "in"    # Landroid/content/Intent;
 
     .prologue
-    .line 221
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 222
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.SEND"
 
@@ -327,13 +294,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 224
     :cond_0
     const/high16 v1, 0x8080000
 
     invoke-virtual {p1, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 227
     :cond_1
     return-void
 .end method
@@ -360,14 +325,12 @@
     .end annotation
 
     .prologue
-    .line 174
     .local p1, "payloadIntents":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     .local p3, "rList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const v0, 0x3030026
 
     invoke-virtual {p0, v0}, Lcom/android/internal/app/NubiaResolverListActivity;->setContentView(I)V
 
-    .line 175
     const v0, 0x30d0062
 
     invoke-virtual {p0, v0}, Lcom/android/internal/app/NubiaResolverListActivity;->findViewById(I)Landroid/view/View;
@@ -378,23 +341,19 @@
 
     iput-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mListView:Landroid/widget/ListView;
 
-    .line 176
     new-instance v8, Lcom/android/internal/app/NubiaResolverListActivity$ItemClickListener;
 
     invoke-direct {v8, p0}, Lcom/android/internal/app/NubiaResolverListActivity$ItemClickListener;-><init>(Lcom/android/internal/app/NubiaResolverListActivity;)V
 
-    .line 177
     .local v8, "listener":Lcom/android/internal/app/NubiaResolverListActivity$ItemClickListener;
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v0, v8}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 178
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v0, v8}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
-    .line 179
     new-instance v0, Lcom/android/internal/app/NubiaResolverListActivity$NubiaShareListApater;
 
     iget v6, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mLaunchedFromUid:I
@@ -415,17 +374,14 @@
 
     iput-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mShareListApater:Lcom/android/internal/app/NubiaResolverListActivity$NubiaShareListApater;
 
-    .line 181
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mListView:Landroid/widget/ListView;
 
     iget-object v1, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mShareListApater:Lcom/android/internal/app/NubiaResolverListActivity$NubiaShareListApater;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 182
     invoke-direct {p0}, Lcom/android/internal/app/NubiaResolverListActivity;->initActionBar()V
 
-    .line 183
     return-void
 .end method
 
@@ -440,12 +396,10 @@
 
     const/4 v3, 0x0
 
-    .line 64
     invoke-direct {p0}, Lcom/android/internal/app/NubiaResolverListActivity;->makeMyIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 65
     .local v2, "intent":Landroid/content/Intent;
     const-string v0, "android.intent.extra.INITIAL_INTENTS"
 
@@ -453,20 +407,16 @@
 
     move-result-object v11
 
-    .line 67
     .local v11, "pa":[Landroid/os/Parcelable;
     const/4 v5, 0x0
 
-    .line 68
     .local v5, "initialIntents":[Landroid/content/Intent;
     if-eqz v11, :cond_1
 
-    .line 69
     array-length v0, v11
 
     new-array v5, v0, [Landroid/content/Intent;
 
-    .line 70
     const/4 v9, 0x0
 
     .local v9, "i":I
@@ -475,44 +425,35 @@
 
     if-ge v9, v0, :cond_1
 
-    .line 71
     aget-object v0, v11, v9
 
     instance-of v0, v0, Landroid/content/Intent;
 
     if-nez v0, :cond_0
 
-    .line 72
     invoke-virtual {p0}, Lcom/android/internal/app/NubiaResolverListActivity;->finish()V
 
-    .line 73
     invoke-super {p0, v3}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 102
     .end local v9    # "i":I
     :goto_1
     return-void
 
-    .line 76
     .restart local v9    # "i":I
     :cond_0
     aget-object v10, v11, v9
 
     check-cast v10, Landroid/content/Intent;
 
-    .line 77
     .local v10, "in":Landroid/content/Intent;
     invoke-direct {p0, v10}, Lcom/android/internal/app/NubiaResolverListActivity;->modifyTargetIntent(Landroid/content/Intent;)V
 
-    .line 78
     aput-object v10, v5, v9
 
-    .line 70
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 81
     .end local v9    # "i":I
     .end local v10    # "in":Landroid/content/Intent;
     :cond_1
@@ -520,7 +461,6 @@
 
     move-result-object v8
 
-    .line 82
     .local v8, "categories":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const-string v0, "android.intent.action.MAIN"
 
@@ -550,16 +490,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 86
     iput-boolean v7, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mResolvingHome:Z
 
-    .line 89
     :cond_2
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
 
     invoke-virtual {v0, v7}, Lcom/android/internal/app/NubiaResolverController;->setSafeForwardingMode(Z)V
 
-    .line 92
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
 
     invoke-virtual {v0}, Lcom/android/internal/app/NubiaResolverController;->getWithOutAppClone()Z
@@ -589,7 +526,6 @@
 
     move v7, v4
 
-    .line 95
     invoke-virtual/range {v0 .. v7}, Lcom/android/internal/app/NubiaResolverListActivity;->onCreate(Landroid/os/Bundle;Landroid/content/Intent;Ljava/lang/CharSequence;I[Landroid/content/Intent;Ljava/util/List;Z)V
 
     goto :goto_1
@@ -601,7 +537,6 @@
 
     move-object v6, v3
 
-    .line 98
     invoke-virtual/range {v0 .. v7}, Lcom/android/internal/app/NubiaResolverListActivity;->onCreate(Landroid/os/Bundle;Landroid/content/Intent;Ljava/lang/CharSequence;I[Landroid/content/Intent;Ljava/util/List;Z)V
 
     goto :goto_1
@@ -634,15 +569,12 @@
     .local p6, "rList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const/4 v4, 0x0
 
-    .line 118
     const v2, 0x30e0005
 
     invoke-virtual {p0, v2}, Lcom/android/internal/app/NubiaResolverListActivity;->setTheme(I)V
 
-    .line 119
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 121
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -660,7 +592,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 127
     :goto_0
     iget v2, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mLaunchedFromUid:I
 
@@ -674,19 +605,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 129
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/app/NubiaResolverListActivity;->finish()V
 
-    .line 148
     :goto_1
     return-void
 
-    .line 123
     :catch_0
     move-exception v1
 
-    .line 124
     .local v1, "e":Landroid/os/RemoteException;
     const/4 v2, -0x1
 
@@ -694,7 +621,6 @@
 
     goto :goto_0
 
-    .line 133
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/app/NubiaResolverListActivity;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -703,7 +629,6 @@
 
     iput-object v2, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 135
     iget-object v2, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mPackageMonitor:Lcom/android/internal/content/PackageMonitor;
 
     invoke-virtual {p0}, Lcom/android/internal/app/NubiaResolverListActivity;->getMainLooper()Landroid/os/Looper;
@@ -712,12 +637,10 @@
 
     invoke-virtual {v2, p0, v3, v4}, Lcom/android/internal/content/PackageMonitor;->register(Landroid/content/Context;Landroid/os/Looper;Z)V
 
-    .line 136
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mRegistered:Z
 
-    .line 138
     const-string v2, "activity"
 
     invoke-virtual {p0, v2}, Lcom/android/internal/app/NubiaResolverListActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -726,7 +649,6 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 139
     .local v0, "am":Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getLauncherLargeIconDensity()I
 
@@ -734,7 +656,6 @@
 
     iput v2, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mIconDpi:I
 
-    .line 143
     iget-object v2, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mIntents:Ljava/util/List;
 
     new-instance v3, Landroid/content/Intent;
@@ -743,7 +664,6 @@
 
     invoke-interface {v2, v4, v3}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 145
     iget-object v3, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
 
     iget-object v2, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mIntents:Ljava/util/List;
@@ -754,7 +674,6 @@
 
     invoke-virtual {v3, p0, v2, p5, v4}, Lcom/android/internal/app/NubiaResolverController;->init(Landroid/app/Activity;Ljava/util/ArrayList;[Landroid/content/Intent;I)V
 
-    .line 147
     iget-object v2, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mIntents:Ljava/util/List;
 
     invoke-virtual {p0, v2, p5, p6, p7}, Lcom/android/internal/app/NubiaResolverListActivity;->configureContentView(Ljava/util/List;[Landroid/content/Intent;Ljava/util/List;Z)V
@@ -785,7 +704,6 @@
     .end annotation
 
     .prologue
-    .line 111
     .local p5, "rList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const/4 v4, 0x0
 
@@ -805,7 +723,6 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/internal/app/NubiaResolverListActivity;->onCreate(Landroid/os/Bundle;Landroid/content/Intent;Ljava/lang/CharSequence;I[Landroid/content/Intent;Ljava/util/List;Z)V
 
-    .line 113
     return-void
 .end method
 
@@ -814,14 +731,12 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 231
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 236
     invoke-super {p0, p1}, Landroid/app/Activity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
@@ -829,16 +744,13 @@
     :goto_0
     return v0
 
-    .line 233
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/internal/app/NubiaResolverListActivity;->finish()V
 
-    .line 234
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 231
     nop
 
     :pswitch_data_0
@@ -851,25 +763,20 @@
     .locals 1
 
     .prologue
-    .line 164
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
-    .line 165
     iget-boolean v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mRegistered:Z
 
     if-eqz v0, :cond_0
 
-    .line 166
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mPackageMonitor:Lcom/android/internal/content/PackageMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/content/PackageMonitor;->unregister()V
 
-    .line 167
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/app/NubiaResolverListActivity;->mRegistered:Z
 
-    .line 169
     :cond_0
     return-void
 .end method

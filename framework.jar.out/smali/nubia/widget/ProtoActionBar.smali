@@ -55,13 +55,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object p1, p0, Lnubia/widget/ProtoActionBar;->mContext:Landroid/content/Context;
 
-    .line 28
     return-void
 .end method
 
@@ -71,20 +68,16 @@
     .param p2, "view"    # Landroid/widget/ActionMenuView;
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lnubia/widget/ProtoActionBar;->mContext:Landroid/content/Context;
 
-    .line 42
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lnubia/widget/ProtoActionBar;->mActionMenuView:Ljava/lang/ref/WeakReference;
 
-    .line 43
     return-void
 .end method
 
@@ -94,20 +87,16 @@
     .param p2, "view"    # Lcom/android/internal/view/menu/ActionMenuItemView;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Lnubia/widget/ProtoActionBar;->mContext:Landroid/content/Context;
 
-    .line 37
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lnubia/widget/ProtoActionBar;->mActionMenuItemView:Ljava/lang/ref/WeakReference;
 
-    .line 38
     return-void
 .end method
 
@@ -117,20 +106,16 @@
     .param p2, "view"    # Lcom/android/internal/widget/ActionBarView;
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-object p1, p0, Lnubia/widget/ProtoActionBar;->mContext:Landroid/content/Context;
 
-    .line 32
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lnubia/widget/ProtoActionBar;->mActionBarView:Ljava/lang/ref/WeakReference;
 
-    .line 33
     return-void
 .end method
 
@@ -144,7 +129,6 @@
     .param p4, "menuPaddingRight"    # I
 
     .prologue
-    .line 145
     mul-int v0, p1, p2
 
     return v0
@@ -154,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 160
     const/4 v0, 0x0
 
     return v0
@@ -164,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 155
     const/4 v0, 0x0
 
     return v0
@@ -174,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 150
     const/4 v0, -0x1
 
     return v0
@@ -186,7 +167,6 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 134
     const/4 v0, 0x0
 
     return v0
@@ -196,14 +176,11 @@
     .locals 4
 
     .prologue
-    .line 69
     const v1, 0x109001d
 
-    .line 70
     .local v1, "menuLayout":I
     const v0, 0x109001c
 
-    .line 71
     .local v0, "menuItemLayout":I
     new-instance v2, Landroid/widget/ActionMenuPresenter;
 
@@ -223,7 +200,6 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 128
     const/4 v0, 0x0
 
     return v0
@@ -235,7 +211,6 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 122
     const/4 v0, 0x0
 
     return v0
@@ -245,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 111
     const v0, 0x109001f
 
     return v0
@@ -256,7 +230,6 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 205
     return p1
 .end method
 
@@ -265,7 +238,6 @@
     .param p1, "translationX"    # F
 
     .prologue
-    .line 200
     return p1
 .end method
 
@@ -274,7 +246,6 @@
     .param p1, "isSpilt"    # Z
 
     .prologue
-    .line 183
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -293,7 +264,6 @@
     .param p1, "temp"    # Landroid/content/res/TypedArray;
 
     .prologue
-    .line 62
     const/16 v0, 0x10
 
     const v1, 0x1090018
@@ -309,7 +279,6 @@
     .locals 2
 
     .prologue
-    .line 81
     iget-object v1, p0, Lnubia/widget/ProtoActionBar;->mActionBarView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -318,16 +287,13 @@
 
     check-cast v0, Lcom/android/internal/widget/ActionBarView;
 
-    .line 83
     .local v0, "v":Lcom/android/internal/widget/ActionBarView;
     if-eqz v0, :cond_0
 
-    .line 84
     invoke-virtual {v0}, Lcom/android/internal/widget/ActionBarView;->getStartOffset()I
 
     move-result v1
 
-    .line 87
     :goto_0
     return v1
 
@@ -342,14 +308,12 @@
     .param p1, "maxIconSizie"    # I
 
     .prologue
-    .line 47
     iget-object v2, p0, Lnubia/widget/ProtoActionBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 48
     .local v1, "res":Landroid/content/res/Resources;
     invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -357,7 +321,6 @@
 
     iget v0, v2, Landroid/util/DisplayMetrics;->density:F
 
-    .line 49
     .local v0, "density":F
     int-to-float v2, p1
 
@@ -377,7 +340,6 @@
     .param p1, "a"    # Landroid/content/res/TypedArray;
 
     .prologue
-    .line 177
     const/4 v0, 0x4
 
     const/4 v1, -0x1
@@ -394,7 +356,6 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 210
     return-object p1
 .end method
 
@@ -403,7 +364,6 @@
     .param p1, "a"    # Landroid/content/res/TypedArray;
 
     .prologue
-    .line 188
     const/16 v0, 0x30
 
     const v1, 0x10900c8
@@ -419,7 +379,6 @@
     .locals 2
 
     .prologue
-    .line 165
     iget-object v0, p0, Lnubia/widget/ProtoActionBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -440,7 +399,6 @@
     .param p1, "strict"    # Z
 
     .prologue
-    .line 101
     return p1
 .end method
 
@@ -449,7 +407,6 @@
     .param p1, "actionBarPolicy"    # Lcom/android/internal/view/ActionBarPolicy;
 
     .prologue
-    .line 106
     invoke-virtual {p1}, Lcom/android/internal/view/ActionBarPolicy;->showsOverflowMenuButton()Z
 
     move-result v0
@@ -461,7 +418,6 @@
     .locals 2
 
     .prologue
-    .line 171
     iget-object v0, p0, Lnubia/widget/ProtoActionBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -481,7 +437,6 @@
     .locals 1
 
     .prologue
-    .line 116
     const/4 v0, 0x0
 
     return v0
@@ -491,7 +446,6 @@
     .locals 1
 
     .prologue
-    .line 139
     const/4 v0, 0x0
 
     return v0
@@ -502,7 +456,6 @@
     .param p1, "spinner"    # Landroid/widget/Spinner;
 
     .prologue
-    .line 77
     return-void
 .end method
 
@@ -511,7 +464,6 @@
     .param p1, "showIcon"    # Z
 
     .prologue
-    .line 92
     iget-object v1, p0, Lnubia/widget/ProtoActionBar;->mActionBarView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -520,14 +472,11 @@
 
     check-cast v0, Lcom/android/internal/widget/ActionBarView;
 
-    .line 94
     .local v0, "v":Lcom/android/internal/widget/ActionBarView;
     if-eqz v0, :cond_0
 
-    .line 95
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/ActionBarView;->setShowIcon(Z)V
 
-    .line 97
     :cond_0
     return-void
 .end method
@@ -539,7 +488,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 54
     iget-object v1, p0, Lnubia/widget/ProtoActionBar;->mActionMenuItemView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -548,14 +496,11 @@
 
     check-cast v0, Lcom/android/internal/view/menu/ActionMenuItemView;
 
-    .line 55
     .local v0, "v":Lcom/android/internal/view/menu/ActionMenuItemView;
     if-eqz v0, :cond_0
 
-    .line 56
     invoke-virtual {v0, p1, v2, v2, v2}, Lcom/android/internal/view/menu/ActionMenuItemView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 58
     :cond_0
     return-void
 .end method
@@ -566,6 +511,5 @@
     .param p2, "actionMenuItemView"    # Lcom/android/internal/view/menu/ActionMenuItemView;
 
     .prologue
-    .line 196
     return-void
 .end method

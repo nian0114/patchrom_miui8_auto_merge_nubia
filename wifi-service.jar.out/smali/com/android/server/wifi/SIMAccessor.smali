@@ -15,24 +15,20 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     invoke-static {p1}, Landroid/telephony/TelephonyManager;->from(Landroid/content/Context;)Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wifi/SIMAccessor;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 16
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wifi/SIMAccessor;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
 
-    .line 17
     return-void
 .end method
 
@@ -56,20 +52,16 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 20
     if-nez p1, :cond_0
 
-    .line 30
     :goto_0
     return-object v6
 
-    .line 23
     :cond_0
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 24
     .local v3, "imsis":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v7, p0, Lcom/android/server/wifi/SIMAccessor;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
 
@@ -89,7 +81,6 @@
 
     aget v5, v0, v1
 
-    .line 25
     .local v5, "subId":I
     iget-object v7, p0, Lcom/android/server/wifi/SIMAccessor;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -97,7 +88,6 @@
 
     move-result-object v2
 
-    .line 26
     .local v2, "imsi":Ljava/lang/String;
     invoke-virtual {p1, v2}, Lcom/android/server/wifi/IMSIParameter;->matches(Ljava/lang/String;)Z
 
@@ -105,16 +95,13 @@
 
     if-eqz v7, :cond_1
 
-    .line 27
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 24
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 30
     .end local v2    # "imsi":Ljava/lang/String;
     .end local v5    # "subId":I
     :cond_2

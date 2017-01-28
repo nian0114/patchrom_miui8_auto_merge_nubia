@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 11
     .local p0, "this":Landroid/app/ServiceProxyInfo;, "Landroid/app/ServiceProxyInfo<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +48,6 @@
     .end annotation
 
     .prologue
-    .line 17
     .local p0, "this":Landroid/app/ServiceProxyInfo;, "Landroid/app/ServiceProxyInfo<TT;>;"
     new-instance v0, Landroid/app/ServiceProxyInfo$1;
 
@@ -73,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 31
     .local p0, "this":Landroid/app/ServiceProxyInfo;, "Landroid/app/ServiceProxyInfo<TT;>;"
     const/4 v0, 0x1
 

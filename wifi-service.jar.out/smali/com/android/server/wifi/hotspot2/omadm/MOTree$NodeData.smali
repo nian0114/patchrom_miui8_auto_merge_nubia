@@ -28,13 +28,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     iput-object p1, p0, Lcom/android/server/wifi/hotspot2/omadm/MOTree$NodeData;->mName:Ljava/lang/String;
 
-    .line 65
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .param p2, "x1"    # Lcom/android/server/wifi/hotspot2/omadm/MOTree$1;
 
     .prologue
-    .line 58
     invoke-direct {p0, p1}, Lcom/android/server/wifi/hotspot2/omadm/MOTree$NodeData;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -56,7 +52,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     invoke-direct {p0, p1}, Lcom/android/server/wifi/hotspot2/omadm/MOTree$NodeData;->setPath(Ljava/lang/String;)V
 
     return-void
@@ -68,7 +63,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     invoke-direct {p0, p1}, Lcom/android/server/wifi/hotspot2/omadm/MOTree$NodeData;->setValue(Ljava/lang/String;)V
 
     return-void
@@ -79,10 +73,8 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     iput-object p1, p0, Lcom/android/server/wifi/hotspot2/omadm/MOTree$NodeData;->mPath:Ljava/lang/String;
 
-    .line 69
     return-void
 .end method
 
@@ -91,10 +83,8 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     iput-object p1, p0, Lcom/android/server/wifi/hotspot2/omadm/MOTree$NodeData;->mValue:Ljava/lang/String;
 
-    .line 73
     return-void
 .end method
 
@@ -104,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/MOTree$NodeData;->mName:Ljava/lang/String;
 
     return-object v0
@@ -114,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/MOTree$NodeData;->mPath:Ljava/lang/String;
 
     return-object v0
@@ -124,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/MOTree$NodeData;->mValue:Ljava/lang/String;
 
     return-object v0

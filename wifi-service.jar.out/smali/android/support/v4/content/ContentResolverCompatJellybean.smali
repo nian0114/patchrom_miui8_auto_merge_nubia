@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "e"    # Ljava/lang/Exception;
 
     .prologue
-    .line 34
     instance-of v0, p0, Landroid/os/OperationCanceledException;
 
     return v0
@@ -36,7 +34,6 @@
     .param p6, "cancellationSignalObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 29
     move-object v6, p6
 
     check-cast v6, Landroid/os/CancellationSignal;

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1000
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
     invoke-direct {p0}, Landroid/support/v4/media/VolumeProviderCompat$Callback;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "volumeProvider"    # Landroid/support/v4/media/VolumeProviderCompat;
 
     .prologue
-    .line 1003
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
     # getter for: Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mVolumeProvider:Landroid/support/v4/media/VolumeProviderCompat;
@@ -48,11 +46,9 @@
 
     if-eq v1, p1, :cond_0
 
-    .line 1010
     :goto_0
     return-void
 
-    .line 1006
     :cond_0
     new-instance v0, Landroid/support/v4/media/session/ParcelableVolumeInfo;
 
@@ -84,7 +80,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/support/v4/media/session/ParcelableVolumeInfo;-><init>(IIIII)V
 
-    .line 1009
     .local v0, "info":Landroid/support/v4/media/session/ParcelableVolumeInfo;
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 

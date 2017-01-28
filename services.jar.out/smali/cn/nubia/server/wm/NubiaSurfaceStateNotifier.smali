@@ -13,13 +13,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     iput-object p1, p0, Lcn/nubia/server/wm/NubiaSurfaceStateNotifier;->mContext:Landroid/content/Context;
 
-    .line 17
     return-void
 .end method
 
@@ -30,7 +27,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcn/nubia/server/wm/NubiaSurfaceStateNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -41,7 +37,6 @@
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 29
     const-string v0, "FitAnimSurface"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,7 +59,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     return-void
 .end method
 
@@ -73,7 +67,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 20
     iget-object v0, p0, Lcn/nubia/server/wm/NubiaSurfaceStateNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -84,7 +77,6 @@
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 21
     const-string v0, "FitAnimSurface"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -107,7 +99,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     return-void
 .end method
 
@@ -116,7 +107,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcn/nubia/server/wm/NubiaSurfaceStateNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -127,7 +117,6 @@
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 37
     const-string v0, "FitAnimSurface"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -150,6 +139,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
     return-void
 .end method

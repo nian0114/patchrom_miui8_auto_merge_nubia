@@ -55,13 +55,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     iput-object p1, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
-    .line 31
     return-void
 .end method
 
@@ -71,20 +68,16 @@
     .param p2, "view"    # Landroid/widget/ActionMenuView;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-object p1, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
-    .line 45
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lnubia/widget/NubiaActionBar;->mActionMenuView:Ljava/lang/ref/WeakReference;
 
-    .line 46
     return-void
 .end method
 
@@ -94,20 +87,16 @@
     .param p2, "view"    # Lcom/android/internal/view/menu/ActionMenuItemView;
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object p1, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
-    .line 40
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lnubia/widget/NubiaActionBar;->mActionMenuItemView:Ljava/lang/ref/WeakReference;
 
-    .line 41
     return-void
 .end method
 
@@ -117,20 +106,16 @@
     .param p2, "view"    # Lcom/android/internal/widget/ActionBarView;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput-object p1, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
-    .line 35
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lnubia/widget/NubiaActionBar;->mActionBarView:Ljava/lang/ref/WeakReference;
 
-    .line 36
     return-void
 .end method
 
@@ -140,7 +125,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 250
     iget-object v2, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
     const/4 v3, 0x1
@@ -155,17 +139,14 @@
 
     move-result-object v0
 
-    .line 252
     .local v0, "b":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v5, v5}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
-    .line 253
     .local v1, "isHideActionBarTitle":Z
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 254
     return v1
 .end method
 
@@ -179,15 +160,12 @@
     .param p4, "menuPaddingRight"    # I
 
     .prologue
-    .line 160
     add-int v0, p3, p4
 
     if-ne p2, v0, :cond_0
 
-    .line 161
     const/4 v0, 0x0
 
-    .line 163
     :goto_0
     return v0
 
@@ -201,7 +179,6 @@
     .locals 2
 
     .prologue
-    .line 180
     iget-object v0, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -221,7 +198,6 @@
     .locals 1
 
     .prologue
-    .line 175
     const/4 v0, 0x0
 
     return v0
@@ -231,7 +207,6 @@
     .locals 2
 
     .prologue
-    .line 169
     iget-object v0, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -253,7 +228,6 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 148
     iget-object v0, p0, Lnubia/widget/NubiaActionBar;->mActionMenuItemView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -273,14 +247,11 @@
     .locals 4
 
     .prologue
-    .line 76
     const v1, 0x3030009
 
-    .line 77
     .local v1, "mMenuLayout":I
     const v0, 0x3030008
 
-    .line 78
     .local v0, "mMenuItemLayout":I
     new-instance v2, Landroid/widget/ActionMenuPresenter;
 
@@ -300,7 +271,6 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 141
     iget-object v0, p0, Lnubia/widget/NubiaActionBar;->mActionMenuView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -332,7 +302,6 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 134
     iget-object v0, p0, Lnubia/widget/NubiaActionBar;->mActionMenuView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -352,7 +321,6 @@
     .locals 1
 
     .prologue
-    .line 123
     const v0, 0x303000a
 
     return v0
@@ -363,7 +331,6 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 241
     const/4 v0, 0x0
 
     return v0
@@ -374,7 +341,6 @@
     .param p1, "translationX"    # F
 
     .prologue
-    .line 236
     const/4 v0, 0x0
 
     return v0
@@ -385,7 +351,6 @@
     .param p1, "isSplit"    # Z
 
     .prologue
-    .line 208
     const/4 v0, 0x1
 
     return v0
@@ -396,7 +361,6 @@
     .param p1, "temp"    # Landroid/content/res/TypedArray;
 
     .prologue
-    .line 69
     const/16 v0, 0x10
 
     const v1, 0x3030007
@@ -412,7 +376,6 @@
     .locals 2
 
     .prologue
-    .line 93
     iget-object v1, p0, Lnubia/widget/NubiaActionBar;->mActionBarView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -421,16 +384,13 @@
 
     check-cast v0, Lcom/android/internal/widget/ActionBarView;
 
-    .line 95
     .local v0, "v":Lcom/android/internal/widget/ActionBarView;
     if-eqz v0, :cond_0
 
-    .line 96
     invoke-virtual {v0}, Lcom/android/internal/widget/ActionBarView;->getNubiaStartOffset()I
 
     move-result v1
 
-    .line 99
     :goto_0
     return v1
 
@@ -445,7 +405,6 @@
     .param p1, "maxIconSize"    # I
 
     .prologue
-    .line 50
     iget-object v0, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -466,7 +425,6 @@
     .param p1, "a"    # Landroid/content/res/TypedArray;
 
     .prologue
-    .line 202
     iget-object v0, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -487,7 +445,6 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 246
     invoke-direct {p0}, Lnubia/widget/NubiaActionBar;->isHideTitle()Z
 
     move-result v0
@@ -506,7 +463,6 @@
     .param p1, "a"    # Landroid/content/res/TypedArray;
 
     .prologue
-    .line 213
     const v0, 0x10900c8
 
     return v0
@@ -516,7 +472,6 @@
     .locals 2
 
     .prologue
-    .line 188
     iget-object v0, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -537,7 +492,6 @@
     .param p1, "strict"    # Z
 
     .prologue
-    .line 113
     const/4 v0, 0x0
 
     return v0
@@ -548,7 +502,6 @@
     .param p1, "actionBarPolicy"    # Lcom/android/internal/view/ActionBarPolicy;
 
     .prologue
-    .line 118
     invoke-virtual {p1}, Lcom/android/internal/view/ActionBarPolicy;->showsNubiaOverflowMenuButton()Z
 
     move-result v0
@@ -560,7 +513,6 @@
     .locals 2
 
     .prologue
-    .line 196
     iget-object v0, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -580,7 +532,6 @@
     .locals 1
 
     .prologue
-    .line 128
     const/4 v0, 0x1
 
     return v0
@@ -590,7 +541,6 @@
     .locals 1
 
     .prologue
-    .line 154
     const/4 v0, 0x1
 
     return v0
@@ -601,12 +551,10 @@
     .param p1, "spinner"    # Landroid/widget/Spinner;
 
     .prologue
-    .line 83
     new-instance v1, Landroid/util/DisplayMetrics;
 
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 84
     .local v1, "metric":Landroid/util/DisplayMetrics;
     iget-object v3, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
@@ -618,7 +566,6 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 86
     .local v0, "mWindowManager":Landroid/view/WindowManager;
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -626,14 +573,11 @@
 
     invoke-virtual {v3, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 87
     iget v2, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 88
     .local v2, "width":I
     invoke-virtual {p1, v2}, Landroid/widget/Spinner;->setDropDownWidth(I)V
 
-    .line 89
     return-void
 .end method
 
@@ -642,7 +586,6 @@
     .param p1, "showIcon"    # Z
 
     .prologue
-    .line 104
     iget-object v1, p0, Lnubia/widget/NubiaActionBar;->mActionBarView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -651,14 +594,11 @@
 
     check-cast v0, Lcom/android/internal/widget/ActionBarView;
 
-    .line 106
     .local v0, "v":Lcom/android/internal/widget/ActionBarView;
     if-eqz v0, :cond_0
 
-    .line 107
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/ActionBarView;->setNubiaShowIcon(Z)V
 
-    .line 109
     :cond_0
     return-void
 .end method
@@ -670,7 +610,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 56
     iget-object v2, p0, Lnubia/widget/NubiaActionBar;->mActionMenuItemView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -679,11 +618,9 @@
 
     check-cast v1, Lcom/android/internal/view/menu/ActionMenuItemView;
 
-    .line 57
     .local v1, "v":Lcom/android/internal/view/menu/ActionMenuItemView;
     if-eqz v1, :cond_0
 
-    .line 58
     iget-object v2, p0, Lnubia/widget/NubiaActionBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -696,22 +633,18 @@
 
     iget v0, v2, Landroid/content/res/Configuration;->orientation:I
 
-    .line 59
     .local v0, "screenOrientation":I
     const/4 v2, 0x2
 
     if-ne v0, v2, :cond_1
 
-    .line 60
     invoke-virtual {v1, p1, v3, v3, v3}, Lcom/android/internal/view/menu/ActionMenuItemView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 65
     .end local v0    # "screenOrientation":I
     :cond_0
     :goto_0
     return-void
 
-    .line 62
     .restart local v0    # "screenOrientation":I
     :cond_1
     invoke-virtual {v1, v3, p1, v3, v3}, Lcom/android/internal/view/menu/ActionMenuItemView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
@@ -725,10 +658,8 @@
     .param p2, "actionMenuItemView"    # Lcom/android/internal/view/menu/ActionMenuItemView;
 
     .prologue
-    .line 219
     const/4 v0, 0x0
 
-    .line 220
     .local v0, "nubiaActionMenuItemBg":Landroid/graphics/drawable/Drawable;
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -740,13 +671,11 @@
 
     iget v1, v2, Landroid/content/res/Configuration;->orientation:I
 
-    .line 221
     .local v1, "screenOrientation":I
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_1
 
-    .line 222
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -757,21 +686,17 @@
 
     move-result-object v0
 
-    .line 231
     :cond_0
     :goto_0
     invoke-virtual {p2, v0}, Lcom/android/internal/view/menu/ActionMenuItemView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 232
     return-void
 
-    .line 224
     :cond_1
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_0
 
-    .line 225
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2

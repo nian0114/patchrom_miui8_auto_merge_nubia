@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1549
     iput-object p1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$11;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1562
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$11;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mHigherBarCenter:Landroid/view/ViewGroup;
@@ -51,7 +49,6 @@
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->performClick()Z
 
-    .line 1563
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1557
     return-void
 .end method
 
@@ -69,6 +65,5 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1553
     return-void
 .end method

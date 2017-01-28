@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 620
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController;
 
     iput-object p2, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;->val$delTextures:Ljava/util/List;
@@ -48,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 624
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController;->mRenderer:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingRenderer;
@@ -60,7 +58,6 @@
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingRenderer;->deleteTextures(Ljava/util/List;)V
 
-    .line 625
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController;->mAnimParam:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;
@@ -74,6 +71,5 @@
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;->postRunable(Ljava/lang/Runnable;)V
 
-    .line 640
     return-void
 .end method

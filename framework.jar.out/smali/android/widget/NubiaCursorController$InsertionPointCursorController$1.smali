@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 669
     iput-object p1, p0, Landroid/widget/NubiaCursorController$InsertionPointCursorController$1;->this$0:Landroid/widget/NubiaCursorController$InsertionPointCursorController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 672
     iget-object v0, p0, Landroid/widget/NubiaCursorController$InsertionPointCursorController$1;->this$0:Landroid/widget/NubiaCursorController$InsertionPointCursorController;
 
     iget-object v0, v0, Landroid/widget/NubiaCursorController$InsertionPointCursorController;->mEditor:Landroid/widget/Editor;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/widget/Editor;->handleFloatPanelClick(Landroid/view/View;Landroid/widget/NubiaCursorController;)V
 
-    .line 674
     iget-object v0, p0, Landroid/widget/NubiaCursorController$InsertionPointCursorController$1;->this$0:Landroid/widget/NubiaCursorController$InsertionPointCursorController;
 
     # getter for: Landroid/widget/NubiaCursorController$InsertionPointCursorController;->mPanel:Landroid/widget/NubiaCursorController$FloatPanelViewController;
@@ -60,6 +57,5 @@
 
     invoke-virtual {v0}, Landroid/widget/NubiaCursorController$FloatPanelViewController;->hide()V
 
-    .line 675
     return-void
 .end method

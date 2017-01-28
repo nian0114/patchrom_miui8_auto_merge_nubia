@@ -57,12 +57,10 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 24
     new-array v2, v7, [Ljava/lang/String;
 
     sput-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->TagOnly:[Ljava/lang/String;
 
-    .line 25
     new-instance v2, Ljava/util/EnumMap;
 
     const-class v3, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
@@ -71,21 +69,18 @@
 
     sput-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapMappings:Ljava/util/Map;
 
-    .line 27
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     sput-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sRevMappings:Ljava/util/Map;
 
-    .line 29
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     sput-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapAttributes:Ljava/util/Map;
 
-    .line 33
     sget-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapMappings:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;->SPPVersion:Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
@@ -94,7 +89,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     sget-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapMappings:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;->RedirectURI:Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
@@ -103,7 +97,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 35
     sget-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapMappings:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;->RequestReason:Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
@@ -112,7 +105,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     sget-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapMappings:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;->SessionID:Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
@@ -121,7 +113,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 37
     sget-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapMappings:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;->SupportedVersions:Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
@@ -130,7 +121,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     sget-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapMappings:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;->SupportedMOs:Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
@@ -139,7 +129,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
     sget-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapMappings:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -164,7 +153,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 41
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;Ljava/lang/String;>;"
     sget-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sRevMappings:Ljava/util/Map;
 
@@ -180,7 +168,6 @@
 
     goto :goto_0
 
-    .line 45
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;Ljava/lang/String;>;"
     :cond_0
     sget-object v3, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapAttributes:Ljava/util/Map;
@@ -247,7 +234,6 @@
 
     invoke-interface {v3, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     sget-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapAttributes:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapMappings:Ljava/util/Map;
@@ -262,7 +248,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 52
     sget-object v2, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapAttributes:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapMappings:Ljava/util/Map;
@@ -277,7 +262,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
     return-void
 .end method
 
@@ -285,7 +269,6 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
     return-void
@@ -311,7 +294,6 @@
     .end annotation
 
     .prologue
-    .line 111
     .local p1, "values":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;Ljava/lang/String;>;"
     .local p2, "mos":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/server/wifi/hotspot2/omadm/MOTree;>;"
     sget-object v8, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sSoapAttributes:Ljava/util/Map;
@@ -326,16 +308,13 @@
 
     check-cast v2, [Ljava/lang/String;
 
-    .line 113
     .local v2, "attributes":[Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 114
     array-length v8, v2
 
     if-nez v8, :cond_2
 
-    .line 115
     sget-object v8, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sRevMappings:Ljava/util/Map;
 
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->getTag()Ljava/lang/String;
@@ -348,7 +327,6 @@
 
     check-cast v4, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
 
-    .line 116
     .local v4, "field":Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->getText()Ljava/lang/String;
 
@@ -356,7 +334,6 @@
 
     invoke-interface {p1, v4, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 130
     .end local v4    # "field":Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->getMOTree()Lcom/android/server/wifi/hotspot2/omadm/MOTree;
@@ -365,14 +342,12 @@
 
     if-eqz v8, :cond_1
 
-    .line 131
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->getMOTree()Lcom/android/server/wifi/hotspot2/omadm/MOTree;
 
     move-result-object v8
 
     invoke-interface {p2, v8}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 133
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->getChildren()Ljava/util/List;
 
@@ -396,13 +371,11 @@
 
     check-cast v3, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
-    .line 134
     .local v3, "child":Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
     invoke-static {v3, p1, p2}, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->extractFields(Lcom/android/server/wifi/hotspot2/omadm/XMLNode;Ljava/util/Map;Ljava/util/Collection;)V
 
     goto :goto_0
 
-    .line 118
     .end local v3    # "child":Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
     .end local v5    # "i$":Ljava/util/Iterator;
     :cond_2
@@ -420,7 +393,6 @@
 
     aget-object v1, v0, v5
 
-    .line 119
     .local v1, "attribute":Ljava/lang/String;
     sget-object v8, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->sRevMappings:Ljava/util/Map;
 
@@ -430,30 +402,24 @@
 
     check-cast v4, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
 
-    .line 120
     .restart local v4    # "field":Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
     if-eqz v4, :cond_3
 
-    .line 121
     invoke-virtual {p0, v1}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->getAttributeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 123
     .local v7, "value":Ljava/lang/String;
     if-eqz v7, :cond_3
 
-    .line 124
     invoke-interface {p1, v4, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 118
     .end local v7    # "value":Ljava/lang/String;
     :cond_3
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 136
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "attribute":Ljava/lang/String;
     .end local v4    # "field":Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
@@ -473,12 +439,10 @@
     .end annotation
 
     .prologue
-    .line 139
     new-instance v5, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;
 
     invoke-direct {v5}, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;-><init>()V
 
-    .line 140
     .local v5, "soapParser":Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;
     new-instance v6, Ljava/io/File;
 
@@ -492,7 +456,6 @@
 
     move-result-object v4
 
-    .line 142
     .local v4, "root":Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
     sget-object v6, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -502,14 +465,12 @@
 
     invoke-virtual {v6, v7}, Ljava/io/PrintStream;->println(Ljava/lang/Object;)V
 
-    .line 143
     sget-object v6, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v7, "Marshalled: "
 
     invoke-virtual {v6, v7}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 144
     invoke-virtual {v5}, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->getRequestDetail()Lcom/android/server/wifi/hotspot2/omadm/RequestDetail;
 
     move-result-object v6
@@ -536,17 +497,14 @@
 
     check-cast v2, Lcom/android/server/wifi/hotspot2/omadm/MOTree;
 
-    .line 145
     .local v2, "mo":Lcom/android/server/wifi/hotspot2/omadm/MOTree;
     new-instance v3, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v3}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 146
     .local v3, "out":Ljava/io/ByteArrayOutputStream;
     invoke-virtual {v2, v3}, Lcom/android/server/wifi/hotspot2/omadm/MOTree;->marshal(Ljava/io/OutputStream;)V
 
-    .line 147
     sget-object v6, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
@@ -555,7 +513,6 @@
 
     invoke-virtual {v6, v7}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 148
     new-instance v6, Ljava/io/ByteArrayInputStream;
 
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
@@ -568,7 +525,6 @@
 
     move-result-object v0
 
-    .line 149
     .local v0, "back":Lcom/android/server/wifi/hotspot2/omadm/MOTree;
     sget-object v6, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -576,7 +532,6 @@
 
     goto :goto_0
 
-    .line 151
     .end local v0    # "back":Lcom/android/server/wifi/hotspot2/omadm/MOTree;
     .end local v2    # "mo":Lcom/android/server/wifi/hotspot2/omadm/MOTree;
     .end local v3    # "out":Ljava/io/ByteArrayOutputStream;
@@ -587,7 +542,6 @@
 
     invoke-virtual {v6, v7}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 152
     return-void
 .end method
 
@@ -605,12 +559,10 @@
     .end annotation
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->addText([CII)V
 
-    .line 99
     return-void
 .end method
 
@@ -626,7 +578,6 @@
     .end annotation
 
     .prologue
-    .line 83
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     invoke-virtual {v1}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->getTag()Ljava/lang/String;
@@ -639,7 +590,6 @@
 
     if-nez v1, :cond_0
 
-    .line 84
     new-instance v1, Lorg/xml/sax/SAXException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -676,7 +626,6 @@
 
     throw v1
 
-    .line 88
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
@@ -685,7 +634,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 93
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     invoke-virtual {v1}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->getParent()Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
@@ -694,14 +642,11 @@
 
     iput-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
-    .line 94
     return-void
 
-    .line 89
     :catch_0
     move-exception v0
 
-    .line 90
     .local v0, "ioe":Ljava/io/IOException;
     new-instance v1, Lorg/xml/sax/SAXException;
 
@@ -716,26 +661,22 @@
     .locals 3
 
     .prologue
-    .line 102
     new-instance v1, Ljava/util/EnumMap;
 
     const-class v2, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;
 
     invoke-direct {v1, v2}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
 
-    .line 104
     .local v1, "values":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/hotspot2/omadm/RequestDetail$RequestFields;Ljava/lang/String;>;"
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 105
     .local v0, "mos":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/wifi/hotspot2/omadm/MOTree;>;"
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mRoot:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     invoke-static {v2, v1, v0}, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->extractFields(Lcom/android/server/wifi/hotspot2/omadm/XMLNode;Ljava/util/Map;Ljava/util/Collection;)V
 
-    .line 106
     new-instance v2, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail;
 
     invoke-direct {v2, v1, v0}, Lcom/android/server/wifi/hotspot2/omadm/RequestDetail;-><init>(Ljava/util/Map;Ljava/util/Collection;)V
@@ -755,7 +696,6 @@
     .end annotation
 
     .prologue
-    .line 56
     invoke-static {}, Ljavax/xml/parsers/SAXParserFactory;->newInstance()Ljavax/xml/parsers/SAXParserFactory;
 
     move-result-object v2
@@ -764,7 +704,6 @@
 
     move-result-object v1
 
-    .line 58
     .local v1, "parser":Ljavax/xml/parsers/SAXParser;
     new-instance v0, Ljava/io/BufferedInputStream;
 
@@ -774,22 +713,18 @@
 
     invoke-direct {v0, v2}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 60
     .local v0, "in":Ljava/io/BufferedInputStream;
     :try_start_0
     invoke-virtual {v1, v0, p0}, Ljavax/xml/parsers/SAXParser;->parse(Ljava/io/InputStream;Lorg/xml/sax/helpers/DefaultHandler;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 62
     invoke-virtual {v0}, Ljava/io/BufferedInputStream;->close()V
 
-    .line 64
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mRoot:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     return-object v2
 
-    .line 62
     :catchall_0
     move-exception v2
 
@@ -811,10 +746,8 @@
     .end annotation
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
-    .line 72
     .local v0, "parent":Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
     new-instance v1, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
@@ -824,7 +757,6 @@
 
     iput-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
-    .line 73
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -869,21 +801,17 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 75
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mRoot:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     if-nez v1, :cond_0
 
-    .line 76
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     iput-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mRoot:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
-    .line 79
     :goto_0
     return-void
 
-    .line 78
     :cond_0
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/SOAPParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 

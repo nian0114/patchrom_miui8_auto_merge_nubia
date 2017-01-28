@@ -104,7 +104,6 @@
 
     const/4 v5, 0x1
 
-    .line 24
     new-instance v2, Ljava/util/EnumMap;
 
     const-class v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
@@ -113,7 +112,6 @@
 
     sput-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP4Scores:Ljava/util/Map;
 
-    .line 26
     new-instance v2, Ljava/util/EnumMap;
 
     const-class v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;
@@ -122,21 +120,18 @@
 
     sput-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP6Scores:Ljava/util/Map;
 
-    .line 29
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     sput-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sPortScores:Ljava/util/Map;
 
-    .line 35
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     sput-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sAntScores:Ljava/util/Map;
 
-    .line 40
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sAntScores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->FreePublic:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
@@ -147,7 +142,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 41
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sAntScores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->ChargeablePublic:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
@@ -158,7 +152,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 42
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sAntScores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->PrivateWithGuest:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
@@ -169,7 +162,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sAntScores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Private:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
@@ -180,7 +172,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sAntScores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Personal:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
@@ -191,7 +182,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 45
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sAntScores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->EmergencyOnly:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
@@ -202,7 +192,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sAntScores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Wildcard:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
@@ -213,7 +202,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 47
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sAntScores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->TestOrExperimental:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
@@ -226,7 +214,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 49
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP4Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->NotAvailable:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
@@ -239,7 +226,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 50
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP4Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->PortRestricted:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
@@ -250,7 +236,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP4Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->PortRestrictedAndSingleNAT:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
@@ -261,7 +246,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 52
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP4Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->PortRestrictedAndDoubleNAT:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
@@ -272,7 +256,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP4Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->Unknown:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
@@ -283,7 +266,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP4Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->Public:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
@@ -294,7 +276,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 55
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP4Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->SingleNAT:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
@@ -305,7 +286,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP4Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->DoubleNAT:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
@@ -316,7 +296,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 58
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP6Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;->NotAvailable:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;
@@ -329,7 +308,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 59
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP6Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;->Reserved:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;
@@ -340,7 +318,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 60
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP6Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;->Unknown:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;
@@ -351,7 +328,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP6Scores:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;->Available:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;
@@ -362,12 +338,10 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 63
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 64
     .local v0, "tcpMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     const/16 v2, 0x14
 
@@ -381,7 +355,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 65
     const/16 v2, 0x15
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -394,7 +367,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 66
     const/16 v2, 0x16
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -409,7 +381,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 67
     const/16 v2, 0x17
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -422,7 +393,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 68
     const/16 v2, 0x19
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -437,7 +407,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
     const/16 v2, 0x1a
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -452,7 +421,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
     const/16 v2, 0x35
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -467,7 +435,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 71
     const/16 v2, 0x50
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -480,7 +447,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     const/16 v2, 0x6e
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -493,7 +459,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
     const/16 v2, 0x8f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -506,7 +471,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 74
     const/16 v2, 0x1bb
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -519,7 +483,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 75
     const/16 v2, 0x3e1
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -532,7 +495,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 76
     const/16 v2, 0x6bb
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -547,12 +509,10 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 78
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 79
     .local v1, "udpMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     const/16 v2, 0x35
 
@@ -566,7 +526,6 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 80
     const/16 v2, 0x1f4
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -581,7 +540,6 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 81
     const/16 v2, 0x13c4
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -594,7 +552,6 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 82
     const/16 v2, 0x1194
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -607,7 +564,6 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 84
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sPortScores:Ljava/util/Map;
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -616,7 +572,6 @@
 
     invoke-interface {v2, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
     sget-object v2, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sPortScores:Ljava/util/Map;
 
     const/16 v3, 0x11
@@ -627,7 +582,6 @@
 
     invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 86
     return-void
 .end method
 
@@ -638,41 +592,34 @@
     .param p3, "homeSP"    # Lcom/android/server/wifi/hotspot2/pps/HomeSP;
 
     .prologue
-    .line 90
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
     move-object/from16 v0, p1
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->mPasspointMatch:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    .line 92
     move-object/from16 v0, p2
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->mScanDetail:Lcom/android/server/wifi/ScanDetail;
 
-    .line 93
     move-object/from16 v0, p3
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->mHomeSP:Lcom/android/server/wifi/hotspot2/pps/HomeSP;
 
-    .line 96
     sget-object v11, Lcom/android/server/wifi/hotspot2/PasspointMatch;->HomeProvider:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     move-object/from16 v0, p1
 
     if-ne v0, v11, :cond_7
 
-    .line 97
     const/16 v7, 0x64
 
-    .line 106
     .local v7, "score":I
     :goto_0
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->getNetworkDetail()Lcom/android/server/wifi/hotspot2/NetworkDetail;
@@ -685,7 +632,6 @@
 
     if-eqz v11, :cond_0
 
-    .line 107
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->getNetworkDetail()Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
     move-result-object v11
@@ -703,7 +649,6 @@
     :goto_1
     add-int/2addr v7, v11
 
-    .line 110
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->getNetworkDetail()Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
@@ -715,7 +660,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 111
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->getNetworkDetail()Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
     move-result-object v11
@@ -731,7 +675,6 @@
     :goto_2
     add-int/2addr v7, v11
 
-    .line 114
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->getNetworkDetail()Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
@@ -775,7 +718,6 @@
 
     add-int/2addr v7, v11
 
-    .line 119
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->getNetworkDetail()Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
     move-result-object v11
@@ -786,7 +728,6 @@
 
     if-eqz v11, :cond_2
 
-    .line 120
     sget-object v11, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sAntScores:Ljava/util/Map;
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->getNetworkDetail()Lcom/android/server/wifi/hotspot2/NetworkDetail;
@@ -809,7 +750,6 @@
 
     add-int/2addr v7, v11
 
-    .line 123
     :cond_2
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->getNetworkDetail()Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
@@ -819,11 +759,9 @@
 
     move-result-object v2
 
-    .line 125
     .local v2, "anqp":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Lcom/android/server/wifi/anqp/ANQPElement;>;"
     if-eqz v2, :cond_6
 
-    .line 126
     sget-object v11, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->HSWANMetrics:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     invoke-interface {v2, v11}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -832,11 +770,9 @@
 
     check-cast v10, Lcom/android/server/wifi/anqp/HSWanMetricsElement;
 
-    .line 128
     .local v10, "wm":Lcom/android/server/wifi/anqp/HSWanMetricsElement;
     if-eqz v10, :cond_4
 
-    .line 129
     invoke-virtual {v10}, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->getStatus()Lcom/android/server/wifi/anqp/HSWanMetricsElement$LinkStatus;
 
     move-result-object v11
@@ -851,11 +787,9 @@
 
     if-eqz v11, :cond_b
 
-    .line 130
     :cond_3
     add-int/lit16 v7, v7, -0x3e8
 
-    .line 140
     :cond_4
     :goto_3
     sget-object v11, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQPIPAddrAvailability:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
@@ -866,11 +800,9 @@
 
     check-cast v6, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;
 
-    .line 143
     .local v6, "ipa":Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;
     if-eqz v6, :cond_5
 
-    .line 144
     sget-object v11, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP4Scores:Ljava/util/Map;
 
     invoke-virtual {v6}, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;->getV4Availability()Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
@@ -883,7 +815,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 145
     .local v3, "as14":Ljava/lang/Integer;
     sget-object v11, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sIP6Scores:Ljava/util/Map;
 
@@ -897,7 +828,6 @@
 
     check-cast v4, Ljava/lang/Integer;
 
-    .line 146
     .local v4, "as16":Ljava/lang/Integer;
     if-eqz v3, :cond_c
 
@@ -910,7 +840,6 @@
 
     move-result-object v3
 
-    .line 147
     if-eqz v4, :cond_d
 
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
@@ -922,7 +851,6 @@
 
     move-result-object v4
 
-    .line 149
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v11
@@ -937,7 +865,6 @@
 
     add-int/2addr v7, v11
 
-    .line 152
     .end local v3    # "as14":Ljava/lang/Integer;
     .end local v4    # "as16":Ljava/lang/Integer;
     :cond_5
@@ -949,11 +876,9 @@
 
     check-cast v5, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement;
 
-    .line 155
     .local v5, "cce":Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement;
     if-eqz v5, :cond_6
 
-    .line 156
     invoke-static {v5}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->protoScore(Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement;)I
 
     move-result v11
@@ -972,7 +897,6 @@
 
     move-result v7
 
-    .line 160
     .end local v5    # "cce":Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement;
     .end local v6    # "ipa":Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;
     .end local v10    # "wm":Lcom/android/server/wifi/anqp/HSWanMetricsElement;
@@ -981,10 +905,8 @@
 
     iput v7, v0, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->mScore:I
 
-    .line 161
     return-void
 
-    .line 99
     .end local v2    # "anqp":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Lcom/android/server/wifi/anqp/ANQPElement;>;"
     .end local v7    # "score":I
     :cond_7
@@ -994,13 +916,11 @@
 
     if-ne v0, v11, :cond_8
 
-    .line 100
     const/4 v7, 0x0
 
     .restart local v7    # "score":I
     goto/16 :goto_0
 
-    .line 103
     .end local v7    # "score":I
     :cond_8
     const/16 v7, -0x3e8
@@ -1008,19 +928,16 @@
     .restart local v7    # "score":I
     goto/16 :goto_0
 
-    .line 107
     :cond_9
     const/4 v11, 0x0
 
     goto/16 :goto_1
 
-    .line 111
     :cond_a
     const/16 v11, -0x14
 
     goto/16 :goto_2
 
-    .line 132
     .restart local v2    # "anqp":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Lcom/android/server/wifi/anqp/ANQPElement;>;"
     .restart local v10    # "wm":Lcom/android/server/wifi/anqp/HSWanMetricsElement;
     :cond_b
@@ -1064,7 +981,6 @@
 
     add-long v8, v12, v14
 
-    .line 135
     .local v8, "scaledSpeed":J
     int-to-long v12, v7
 
@@ -1084,7 +1000,6 @@
 
     goto/16 :goto_3
 
-    .line 146
     .end local v8    # "scaledSpeed":J
     .restart local v3    # "as14":Ljava/lang/Integer;
     .restart local v4    # "as16":Ljava/lang/Integer;
@@ -1094,7 +1009,6 @@
 
     goto/16 :goto_4
 
-    .line 147
     :cond_d
     const/4 v11, 0x1
 
@@ -1108,10 +1022,8 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 190
     const/4 v4, 0x0
 
-    .line 191
     .local v4, "score":I
     invoke-virtual {p0}, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement;->getStatusList()Ljava/util/List;
 
@@ -1135,7 +1047,6 @@
 
     check-cast v6, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;
 
-    .line 192
     .local v6, "tuple":Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;
     invoke-virtual {v6}, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;->getStatus()Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtoStatus;
 
@@ -1147,12 +1058,10 @@
 
     move v5, v7
 
-    .line 195
     .local v5, "sign":I
     :goto_1
     const/4 v0, 0x1
 
-    .line 196
     .local v0, "elementScore":I
     invoke-virtual {v6}, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;->getProtocol()I
 
@@ -1160,20 +1069,16 @@
 
     if-ne v8, v7, :cond_2
 
-    .line 197
     const/4 v0, 0x1
 
-    .line 209
     :cond_0
     :goto_2
     mul-int v8, v0, v5
 
     add-int/2addr v4, v8
 
-    .line 210
     goto :goto_0
 
-    .line 192
     .end local v0    # "elementScore":I
     .end local v5    # "sign":I
     :cond_1
@@ -1181,7 +1086,6 @@
 
     goto :goto_1
 
-    .line 199
     .restart local v0    # "elementScore":I
     .restart local v5    # "sign":I
     :cond_2
@@ -1193,12 +1097,10 @@
 
     if-ne v8, v9, :cond_3
 
-    .line 200
     const/4 v0, 0x5
 
     goto :goto_2
 
-    .line 203
     :cond_3
     sget-object v8, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->sPortScores:Ljava/util/Map;
 
@@ -1216,11 +1118,9 @@
 
     check-cast v3, Ljava/util/Map;
 
-    .line 204
     .local v3, "protoMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     if-eqz v3, :cond_0
 
-    .line 205
     invoke-virtual {v6}, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;->getPort()I
 
     move-result v8
@@ -1235,7 +1135,6 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 206
     .local v2, "portScore":Ljava/lang/Integer;
     if-eqz v2, :cond_4
 
@@ -1251,7 +1150,6 @@
 
     goto :goto_3
 
-    .line 211
     .end local v0    # "elementScore":I
     .end local v2    # "portScore":Ljava/lang/Integer;
     .end local v3    # "protoMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
@@ -1268,7 +1166,6 @@
     .param p1, "that"    # Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;
 
     .prologue
-    .line 186
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->getScore()I
 
     move-result v0
@@ -1286,7 +1183,6 @@
     .locals 1
 
     .prologue
-    .line 18
     check-cast p1, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->compareTo(Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;)I
@@ -1305,15 +1201,12 @@
 
     const/4 v2, 0x0
 
-    .line 216
     if-ne p0, p1, :cond_1
 
-    .line 225
     :cond_0
     :goto_0
     return v1
 
-    .line 219
     :cond_1
     if-eqz p1, :cond_2
 
@@ -1330,16 +1223,13 @@
     :cond_2
     move v1, v2
 
-    .line 220
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 223
     check-cast v0, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;
 
-    .line 225
     .local v0, "that":Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->getNetworkDetail()Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
@@ -1393,7 +1283,6 @@
     .locals 1
 
     .prologue
-    .line 177
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->mHomeSP:Lcom/android/server/wifi/hotspot2/pps/HomeSP;
 
     return-object v0
@@ -1403,7 +1292,6 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->mScanDetail:Lcom/android/server/wifi/ScanDetail;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/ScanDetail;->getNetworkDetail()Lcom/android/server/wifi/hotspot2/NetworkDetail;
@@ -1417,7 +1305,6 @@
     .locals 1
 
     .prologue
-    .line 164
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->mPasspointMatch:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     return-object v0
@@ -1427,7 +1314,6 @@
     .locals 1
 
     .prologue
-    .line 168
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->mScanDetail:Lcom/android/server/wifi/ScanDetail;
 
     return-object v0
@@ -1437,7 +1323,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget v0, p0, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->mScore:I
 
     return v0
@@ -1449,7 +1334,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 232
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->mPasspointMatch:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     if-eqz v2, :cond_1
@@ -1460,7 +1344,6 @@
 
     move-result v0
 
-    .line 233
     .local v0, "result":I
     :goto_0
     mul-int/lit8 v2, v0, 0x1f
@@ -1475,7 +1358,6 @@
 
     add-int v0, v2, v3
 
-    .line 234
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v3, p0, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;->mHomeSP:Lcom/android/server/wifi/hotspot2/pps/HomeSP;
@@ -1491,14 +1373,12 @@
     :cond_0
     add-int v0, v2, v1
 
-    .line 235
     return v0
 
     .end local v0    # "result":I
     :cond_1
     move v0, v1
 
-    .line 232
     goto :goto_0
 .end method
 
@@ -1506,7 +1386,6 @@
     .locals 2
 
     .prologue
-    .line 240
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

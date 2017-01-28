@@ -30,19 +30,14 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3454
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3455
     iput p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;->uid:I
 
-    .line 3456
     iput p2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;->hostId:I
 
-    .line 3457
     iput-object p3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;->packageName:Ljava/lang/String;
 
-    .line 3458
     return-void
 .end method
 
@@ -57,24 +52,19 @@
 
     const/4 v2, 0x0
 
-    .line 3462
     if-ne p0, p1, :cond_1
 
-    .line 3485
     :cond_0
     :goto_0
     return v1
 
-    .line 3465
     :cond_1
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 3466
     goto :goto_0
 
-    .line 3468
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -88,16 +78,13 @@
 
     move v1, v2
 
-    .line 3469
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 3471
     check-cast v0, Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;
 
-    .line 3472
     .local v0, "other":Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;
     iget v3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;->uid:I
 
@@ -107,10 +94,8 @@
 
     move v1, v2
 
-    .line 3473
     goto :goto_0
 
-    .line 3475
     :cond_4
     iget v3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;->hostId:I
 
@@ -120,26 +105,21 @@
 
     move v1, v2
 
-    .line 3476
     goto :goto_0
 
-    .line 3478
     :cond_5
     iget-object v3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;->packageName:Ljava/lang/String;
 
     if-nez v3, :cond_6
 
-    .line 3479
     iget-object v3, v0, Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;->packageName:Ljava/lang/String;
 
     if-eqz v3, :cond_0
 
     move v1, v2
 
-    .line 3480
     goto :goto_0
 
-    .line 3482
     :cond_6
     iget-object v3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;->packageName:Ljava/lang/String;
 
@@ -153,7 +133,6 @@
 
     move v1, v2
 
-    .line 3483
     goto :goto_0
 .end method
 
@@ -161,10 +140,8 @@
     .locals 3
 
     .prologue
-    .line 3490
     iget v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;->uid:I
 
-    .line 3491
     .local v0, "result":I
     mul-int/lit8 v1, v0, 0x1f
 
@@ -172,7 +149,6 @@
 
     add-int v0, v1, v2
 
-    .line 3492
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;->packageName:Ljava/lang/String;
@@ -188,10 +164,8 @@
     :goto_0
     add-int v0, v2, v1
 
-    .line 3494
     return v0
 
-    .line 3492
     :cond_0
     const/4 v1, 0x0
 
@@ -202,7 +176,6 @@
     .locals 2
 
     .prologue
-    .line 3499
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -46,21 +46,16 @@
     .param p2, "audioService"    # Lcom/android/server/audio/AudioService;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     const/4 v0, 0x3
 
     iput v0, p0, Lcn/nubia/server/media/NubiaVolume;->mAffectStreamTypeByRingerModeForNubia:I
 
-    .line 33
     iput-object p2, p0, Lcn/nubia/server/media/NubiaVolume;->mAudioService:Lcom/android/server/audio/AudioService;
 
-    .line 34
     iput-object p1, p0, Lcn/nubia/server/media/NubiaVolume;->mContext:Landroid/content/Context;
 
-    .line 35
     return-void
 .end method
 
@@ -73,25 +68,21 @@
     .param p3, "def"    # I
 
     .prologue
-    .line 130
     and-int/lit16 v0, p2, 0x18c
 
     if-nez v0, :cond_1
 
-    .line 138
     .end local p3    # "def":I
     :cond_0
     :goto_0
     return p3
 
-    .line 135
     .restart local p3    # "def":I
     :cond_1
     const/4 v0, 0x3
 
     if-ne p1, v0, :cond_0
 
-    .line 136
     const/4 p3, 0x7
 
     goto :goto_0
@@ -101,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 159
     iget v0, p0, Lcn/nubia/server/media/NubiaVolume;->mLastRingerMode:I
 
     return v0
@@ -111,12 +101,10 @@
     .locals 6
 
     .prologue
-    .line 181
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 182
     .local v0, "ident":J
     iget-object v3, p0, Lcn/nubia/server/media/NubiaVolume;->mContext:Landroid/content/Context;
 
@@ -132,11 +120,9 @@
 
     move-result v2
 
-    .line 184
     .local v2, "volume":I
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 185
     return v2
 .end method
 
@@ -152,14 +138,12 @@
 
     const/4 v8, 0x0
 
-    .line 39
     iget-object v6, p0, Lcn/nubia/server/media/NubiaVolume;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 40
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     const-string v6, "nubia_last_ringer_mode"
 
@@ -167,7 +151,6 @@
 
     move-result v2
 
-    .line 42
     .local v2, "lastRingerMode":I
     const-string v6, "nubia_stream_music_before_muted"
 
@@ -175,7 +158,6 @@
 
     move-result v1
 
-    .line 45
     .local v1, "lastPersistMusicVolume":I
     const-string v6, "nubia_set_ringer_mode"
 
@@ -190,13 +172,10 @@
     :goto_0
     iput-boolean v6, p0, Lcn/nubia/server/media/NubiaVolume;->mSetRingerMode:Z
 
-    .line 47
     iput v1, p0, Lcn/nubia/server/media/NubiaVolume;->mLastPersistMusicVolume:I
 
-    .line 48
     iput v2, p0, Lcn/nubia/server/media/NubiaVolume;->mLastRingerMode:I
 
-    .line 49
     const-string v6, "headset_plug_origin_volume"
 
     invoke-static {v0, v6, v8, v9}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
@@ -205,7 +184,6 @@
 
     iput v6, p0, Lcn/nubia/server/media/NubiaVolume;->mOriginVolume:I
 
-    .line 51
     const-string v6, "headset_volume_restored"
 
     invoke-static {v0, v6, v8, v9}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
@@ -217,23 +195,19 @@
     :goto_1
     iput-boolean v7, p0, Lcn/nubia/server/media/NubiaVolume;->mVolumeRestored:Z
 
-    .line 53
     iget-boolean v6, p0, Lcn/nubia/server/media/NubiaVolume;->mVolumeRestored:Z
 
     if-eqz v6, :cond_0
 
-    .line 54
     sget-object v6, Landroid/provider/Settings$System;->VOLUME_SETTINGS:[Ljava/lang/String;
 
     aget-object v3, v6, v10
 
-    .line 55
     .local v3, "name":Ljava/lang/String;
     invoke-static {v10}, Landroid/media/AudioSystem;->getOutputDeviceName(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 56
     .local v5, "suffix":Ljava/lang/String;
     invoke-virtual {v5}, Ljava/lang/String;->isEmpty()Z
 
@@ -243,14 +217,12 @@
 
     move-object v4, v3
 
-    .line 57
     .local v4, "settingName":Ljava/lang/String;
     :goto_2
     iget v6, p0, Lcn/nubia/server/media/NubiaVolume;->mOriginVolume:I
 
     invoke-static {v0, v4, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 59
     .end local v3    # "name":Ljava/lang/String;
     .end local v4    # "settingName":Ljava/lang/String;
     .end local v5    # "suffix":Ljava/lang/String;
@@ -260,16 +232,13 @@
     :cond_1
     move v6, v8
 
-    .line 45
     goto :goto_0
 
     :cond_2
     move v7, v8
 
-    .line 51
     goto :goto_1
 
-    .line 56
     .restart local v3    # "name":Ljava/lang/String;
     .restart local v5    # "suffix":Ljava/lang/String;
     :cond_3
@@ -311,7 +280,6 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 143
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_0
@@ -329,13 +297,11 @@
     :cond_0
     move v0, p7
 
-    .line 155
     .end local p7    # "step":I
     .local v0, "step":I
     :goto_0
     return v0
 
-    .line 148
     .end local v0    # "step":I
     .restart local p7    # "step":I
     :cond_1
@@ -353,7 +319,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 152
     iget-object v1, p0, Lcn/nubia/server/media/NubiaVolume;->mAudioService:Lcom/android/server/audio/AudioService;
 
     iget v2, p0, Lcn/nubia/server/media/NubiaVolume;->mLastPersistMusicVolume:I
@@ -369,7 +334,6 @@
     :cond_2
     move v0, p7
 
-    .line 155
     .end local p7    # "step":I
     .restart local v0    # "step":I
     goto :goto_0
@@ -391,7 +355,6 @@
 
     const/4 v4, 0x0
 
-    .line 189
     const/4 v0, 0x4
 
     if-eq p1, v0, :cond_0
@@ -400,15 +363,12 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 214
     :goto_0
     return-void
 
-    .line 192
     :cond_0
     if-ne p2, v6, :cond_4
 
-    .line 193
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mAudioService:Lcom/android/server/audio/AudioService;
 
     invoke-virtual {v0, v1, v1}, Lcom/android/server/audio/AudioService;->getStreamVolumeForDevice(II)I
@@ -417,12 +377,10 @@
 
     iput v0, p0, Lcn/nubia/server/media/NubiaVolume;->mOriginVolume:I
 
-    .line 195
     iget v0, p0, Lcn/nubia/server/media/NubiaVolume;->mOriginVolume:I
 
     if-le v0, v3, :cond_3
 
-    .line 196
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mAudioService:Lcom/android/server/audio/AudioService;
 
     iget-object v2, p0, Lcn/nubia/server/media/NubiaVolume;->mContext:Landroid/content/Context;
@@ -433,10 +391,8 @@
 
     invoke-virtual {v0, v1, v3, v4, v2}, Lcom/android/server/audio/AudioService;->setStreamVolume(IIILjava/lang/String;)V
 
-    .line 198
     iput-boolean v6, p0, Lcn/nubia/server/media/NubiaVolume;->mVolumeRestored:Z
 
-    .line 202
     :goto_1
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mContext:Landroid/content/Context;
 
@@ -450,7 +406,6 @@
 
     invoke-static {v0, v1, v2, v7}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 211
     :cond_1
     :goto_2
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mContext:Landroid/content/Context;
@@ -472,19 +427,16 @@
 
     goto :goto_0
 
-    .line 200
     :cond_3
     iput-boolean v4, p0, Lcn/nubia/server/media/NubiaVolume;->mVolumeRestored:Z
 
     goto :goto_1
 
-    .line 206
     :cond_4
     iget-boolean v0, p0, Lcn/nubia/server/media/NubiaVolume;->mVolumeRestored:Z
 
     if-eqz v0, :cond_1
 
-    .line 207
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mAudioService:Lcom/android/server/audio/AudioService;
 
     iget v3, p0, Lcn/nubia/server/media/NubiaVolume;->mOriginVolume:I
@@ -495,7 +447,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/audio/AudioService;->setStreamVolumeForDevice(IIIILjava/lang/String;)V
 
-    .line 208
     iput-boolean v4, p0, Lcn/nubia/server/media/NubiaVolume;->mVolumeRestored:Z
 
     goto :goto_2
@@ -510,32 +461,27 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 120
     if-ne p3, v1, :cond_1
 
     const/4 v0, 0x3
 
     if-ne p1, v0, :cond_1
 
-    .line 122
     add-int/lit8 v0, p2, 0x5
 
     div-int/lit8 v0, v0, 0xa
 
     iput v0, p0, Lcn/nubia/server/media/NubiaVolume;->mLastPersistMusicVolume:I
 
-    .line 127
     :cond_0
     :goto_0
     return-void
 
-    .line 123
     :cond_1
     if-ne p3, v1, :cond_0
 
     if-ne p1, v1, :cond_0
 
-    .line 125
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/nubia/server/media/NubiaVolume;->mVolumeRestored:Z
@@ -553,21 +499,17 @@
 
     const/4 v3, -0x2
 
-    .line 106
     if-eq p2, v1, :cond_1
 
-    .line 117
     :cond_0
     :goto_0
     return-void
 
-    .line 108
     :cond_1
     const/4 v0, 0x3
 
     if-ne p1, v0, :cond_2
 
-    .line 109
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -582,11 +524,9 @@
 
     goto :goto_0
 
-    .line 112
     :cond_2
     if-ne p1, v1, :cond_0
 
-    .line 113
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -619,14 +559,12 @@
     .prologue
     const/4 v3, -0x2
 
-    .line 95
     iget-object v1, p0, Lcn/nubia/server/media/NubiaVolume;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 96
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     const-string v1, "nubia_last_ringer_mode"
 
@@ -634,14 +572,12 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 98
     const-string v1, "nubia_stream_music_before_muted"
 
     iget v2, p0, Lcn/nubia/server/media/NubiaVolume;->mLastPersistMusicVolume:I
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 101
     const-string v2, "nubia_set_ringer_mode"
 
     iget-boolean v1, p0, Lcn/nubia/server/media/NubiaVolume;->mSetRingerMode:Z
@@ -653,10 +589,8 @@
     :goto_0
     invoke-static {v0, v2, v1, v3}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 103
     return-void
 
-    .line 101
     :cond_0
     const/4 v1, 0x0
 
@@ -668,20 +602,16 @@
     .param p1, "volume"    # I
 
     .prologue
-    .line 163
     if-gez p1, :cond_0
 
-    .line 172
     :goto_0
     return-void
 
-    .line 165
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 167
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcn/nubia/server/media/NubiaVolume;->mContext:Landroid/content/Context;
@@ -696,7 +626,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 170
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -715,19 +644,16 @@
     .param p2, "visible"    # Z
 
     .prologue
-    .line 175
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_0
 
     if-eqz p2, :cond_1
 
-    .line 178
     :cond_0
     :goto_0
     return-void
 
-    .line 177
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mAudioService:Lcom/android/server/audio/AudioService;
 
@@ -745,7 +671,6 @@
     .param p1, "ringerMode"    # I
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mAudioService:Lcom/android/server/audio/AudioService;
 
     invoke-virtual {v0}, Lcom/android/server/audio/AudioService;->getRingerModeInternal()I
@@ -754,7 +679,6 @@
 
     iput v0, p0, Lcn/nubia/server/media/NubiaVolume;->mLastRingerMode:I
 
-    .line 90
     iget-boolean v0, p0, Lcn/nubia/server/media/NubiaVolume;->mAdjustVolume:Z
 
     if-nez v0, :cond_0
@@ -764,10 +688,8 @@
     :goto_0
     iput-boolean v0, p0, Lcn/nubia/server/media/NubiaVolume;->mSetRingerMode:Z
 
-    .line 91
     return-void
 
-    .line 90
     :cond_0
     const/4 v0, 0x0
 
@@ -787,19 +709,16 @@
 
     const/4 v2, 0x2
 
-    .line 64
     if-eqz p1, :cond_0
 
     const/4 v0, 0x3
 
     if-eq p2, v0, :cond_1
 
-    .line 86
     :cond_0
     :goto_0
     return-void
 
-    .line 66
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mAudioService:Lcom/android/server/audio/AudioService;
 
@@ -807,7 +726,6 @@
 
     move-result v6
 
-    .line 68
     .local v6, "currentIndex":I
     const-string v0, "NubiaVolume"
 
@@ -863,7 +781,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     if-eq p3, v2, :cond_2
 
     const/4 v0, 0x1
@@ -873,7 +790,6 @@
     :cond_2
     if-nez v6, :cond_3
 
-    .line 73
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mAudioService:Lcom/android/server/audio/AudioService;
 
     iget v3, p0, Lcn/nubia/server/media/NubiaVolume;->mLastPersistMusicVolume:I
@@ -884,14 +800,11 @@
 
     goto :goto_0
 
-    .line 77
     :cond_3
     if-nez p3, :cond_0
 
-    .line 78
     if-eqz v6, :cond_0
 
-    .line 79
     iget-object v0, p0, Lcn/nubia/server/media/NubiaVolume;->mAudioService:Lcom/android/server/audio/AudioService;
 
     move v1, p2
@@ -900,7 +813,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/audio/AudioService;->setStreamVolumeForDevice(IIIILjava/lang/String;)V
 
-    .line 83
     iput v6, p0, Lcn/nubia/server/media/NubiaVolume;->mLastPersistMusicVolume:I
 
     goto :goto_0

@@ -58,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 56
     new-instance v0, Lorg/ksoap2/serialization/DM;
 
     invoke-direct {v0}, Lorg/ksoap2/serialization/DM;-><init>()V
@@ -73,43 +72,36 @@
     .param p1, "version"    # I
 
     .prologue
-    .line 102
     invoke-direct {p0, p1}, Lorg/ksoap2/SoapEnvelope;-><init>(I)V
 
-    .line 57
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     iput-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->properties:Ljava/util/Hashtable;
 
-    .line 59
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     iput-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->idMap:Ljava/util/Hashtable;
 
-    .line 87
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     iput-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->qNameToClass:Ljava/util/Hashtable;
 
-    .line 93
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     iput-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->classToQName:Ljava/util/Hashtable;
 
-    .line 98
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addAdornments:Z
 
-    .line 103
     iget-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->enc:Ljava/lang/String;
 
     const-string v1, "Array"
@@ -118,12 +110,10 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addMapping(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 104
     sget-object v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->DEFAULT_MARSHAL:Lorg/ksoap2/serialization/Marshal;
 
     invoke-interface {v0, p0}, Lorg/ksoap2/serialization/Marshal;->register(Lorg/ksoap2/serialization/SoapSerializationEnvelope;)V
 
-    .line 105
     return-void
 .end method
 
@@ -134,10 +124,8 @@
     .param p3, "dflt"    # I
 
     .prologue
-    .line 293
     if-nez p1, :cond_1
 
-    .line 296
     .end local p3    # "dflt":I
     :cond_0
     :goto_0
@@ -187,21 +175,17 @@
     .end annotation
 
     .prologue
-    .line 698
     if-eqz p4, :cond_0
 
-    .line 699
     check-cast p4, Lorg/ksoap2/serialization/Marshal;
 
     .end local p4    # "marshal":Ljava/lang/Object;
     invoke-interface {p4, p1, p2}, Lorg/ksoap2/serialization/Marshal;->writeInstance(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/Object;)V
 
-    .line 709
     .end local p2    # "element":Ljava/lang/Object;
     :goto_0
     return-void
 
-    .line 700
     .restart local p2    # "element":Ljava/lang/Object;
     .restart local p4    # "marshal":Ljava/lang/Object;
     :cond_0
@@ -209,7 +193,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 701
     check-cast p2, Lorg/ksoap2/serialization/SoapObject;
 
     .end local p2    # "element":Ljava/lang/Object;
@@ -217,14 +200,12 @@
 
     goto :goto_0
 
-    .line 702
     .restart local p2    # "element":Ljava/lang/Object;
     :cond_1
     instance-of v0, p2, Lorg/ksoap2/serialization/KvmSerializable;
 
     if-eqz v0, :cond_2
 
-    .line 703
     check-cast p2, Lorg/ksoap2/serialization/KvmSerializable;
 
     .end local p2    # "element":Ljava/lang/Object;
@@ -232,14 +213,12 @@
 
     goto :goto_0
 
-    .line 704
     .restart local p2    # "element":Ljava/lang/Object;
     :cond_2
     instance-of v0, p2, Ljava/util/Vector;
 
     if-eqz v0, :cond_3
 
-    .line 705
     check-cast p2, Ljava/util/Vector;
 
     .end local p2    # "element":Ljava/lang/Object;
@@ -249,7 +228,6 @@
 
     goto :goto_0
 
-    .line 707
     .restart local p2    # "element":Ljava/lang/Object;
     :cond_3
     new-instance v0, Ljava/lang/RuntimeException;
@@ -286,12 +264,10 @@
     .param p3, "clazz"    # Ljava/lang/Class;
 
     .prologue
-    .line 517
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addMapping(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lorg/ksoap2/serialization/Marshal;)V
 
-    .line 518
     return-void
 .end method
 
@@ -305,7 +281,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 505
     iget-object v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->qNameToClass:Ljava/util/Hashtable;
 
     new-instance v2, Lorg/ksoap2/serialization/SoapPrimitive;
@@ -319,7 +294,6 @@
     :goto_0
     invoke-virtual {v1, v2, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 508
     iget-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->classToQName:Ljava/util/Hashtable;
 
     invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -348,13 +322,11 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 511
     return-void
 
     :cond_0
     move-object v0, p4
 
-    .line 505
     goto :goto_0
 .end method
 
@@ -363,7 +335,6 @@
     .param p1, "so"    # Lorg/ksoap2/serialization/SoapObject;
 
     .prologue
-    .line 525
     iget-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->qNameToClass:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/ksoap2/serialization/SoapPrimitive;
@@ -378,7 +349,6 @@
 
     invoke-virtual {v0, v1, p1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 526
     return-void
 .end method
 
@@ -398,10 +368,8 @@
 
     const/4 v5, 0x0
 
-    .line 470
     if-nez p1, :cond_1
 
-    .line 471
     instance-of v3, p2, Lorg/ksoap2/serialization/SoapObject;
 
     if-nez v3, :cond_0
@@ -410,11 +378,9 @@
 
     if-eqz v3, :cond_3
 
-    .line 472
     :cond_0
     move-object p1, p2
 
-    .line 477
     .end local p1    # "type":Ljava/lang/Object;
     :cond_1
     :goto_0
@@ -424,10 +390,8 @@
 
     move-object v0, p1
 
-    .line 478
     check-cast v0, Lorg/ksoap2/serialization/SoapObject;
 
-    .line 479
     .local v0, "so":Lorg/ksoap2/serialization/SoapObject;
     const/4 v3, 0x4
 
@@ -449,13 +413,11 @@
 
     aput-object v5, v2, v9
 
-    .line 495
     .end local v0    # "so":Lorg/ksoap2/serialization/SoapObject;
     :cond_2
     :goto_1
     return-object v2
 
-    .line 474
     .restart local p1    # "type":Ljava/lang/Object;
     :cond_3
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -465,7 +427,6 @@
     .local p1, "type":Ljava/lang/Class;
     goto :goto_0
 
-    .line 483
     .end local p1    # "type":Ljava/lang/Class;
     :cond_4
     instance-of v3, p1, Lorg/ksoap2/serialization/SoapPrimitive;
@@ -474,10 +435,8 @@
 
     move-object v1, p1
 
-    .line 484
     check-cast v1, Lorg/ksoap2/serialization/SoapPrimitive;
 
-    .line 485
     .local v1, "sp":Lorg/ksoap2/serialization/SoapPrimitive;
     const/4 v3, 0x4
 
@@ -503,7 +462,6 @@
 
     goto :goto_1
 
-    .line 489
     .end local v1    # "sp":Lorg/ksoap2/serialization/SoapPrimitive;
     :cond_5
     instance-of v3, p1, Ljava/lang/Class;
@@ -514,7 +472,6 @@
 
     if-eq p1, v3, :cond_6
 
-    .line 490
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->classToQName:Ljava/util/Hashtable;
 
     check-cast p1, Ljava/lang/Class;
@@ -533,11 +490,9 @@
 
     check-cast v2, [Ljava/lang/Object;
 
-    .line 491
     .local v2, "tmp":[Ljava/lang/Object;
     if-nez v2, :cond_2
 
-    .line 495
     .end local v2    # "tmp":[Ljava/lang/Object;
     :cond_6
     const/4 v3, 0x4
@@ -568,27 +523,23 @@
     .end annotation
 
     .prologue
-    .line 536
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->bodyIn:Ljava/lang/Object;
 
     instance-of v3, v3, Lorg/ksoap2/SoapFault;
 
     if-eqz v3, :cond_0
 
-    .line 537
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->bodyIn:Ljava/lang/Object;
 
     check-cast v3, Lorg/ksoap2/SoapFault;
 
     throw v3
 
-    .line 539
     :cond_0
     iget-object v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->bodyIn:Ljava/lang/Object;
 
     check-cast v1, Lorg/ksoap2/serialization/KvmSerializable;
 
-    .line 541
     .local v1, "ks":Lorg/ksoap2/serialization/KvmSerializable;
     invoke-interface {v1}, Lorg/ksoap2/serialization/KvmSerializable;->getPropertyCount()I
 
@@ -596,15 +547,12 @@
 
     if-nez v3, :cond_2
 
-    .line 542
     const/4 v2, 0x0
 
-    .line 550
     :cond_1
     :goto_0
     return-object v2
 
-    .line 543
     :cond_2
     invoke-interface {v1}, Lorg/ksoap2/serialization/KvmSerializable;->getPropertyCount()I
 
@@ -614,7 +562,6 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 544
     const/4 v3, 0x0
 
     invoke-interface {v1, v3}, Lorg/ksoap2/serialization/KvmSerializable;->getProperty(I)Ljava/lang/Object;
@@ -623,13 +570,11 @@
 
     goto :goto_0
 
-    .line 546
     :cond_3
     new-instance v2, Ljava/util/Vector;
 
     invoke-direct {v2}, Ljava/util/Vector;-><init>()V
 
-    .line 547
     .local v2, "ret":Ljava/util/Vector;
     const/4 v0, 0x0
 
@@ -641,14 +586,12 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 548
     invoke-interface {v1, v0}, Lorg/ksoap2/serialization/KvmSerializable;->getProperty(I)Ljava/lang/Object;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 547
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -658,7 +601,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-boolean v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addAdornments:Z
 
     return v0
@@ -679,13 +621,10 @@
 
     const/4 v10, 0x2
 
-    .line 138
     iput-object v2, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->bodyIn:Ljava/lang/Object;
 
-    .line 139
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 140
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v0
@@ -716,34 +655,28 @@
 
     if-eqz v0, :cond_2
 
-    .line 143
     iget v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->version:I
 
     const/16 v1, 0x78
 
     if-ge v0, v1, :cond_1
 
-    .line 144
     new-instance v7, Lorg/ksoap2/SoapFault;
 
     iget v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->version:I
 
     invoke-direct {v7, v0}, Lorg/ksoap2/SoapFault;-><init>(I)V
 
-    .line 148
     .local v7, "fault":Lorg/ksoap2/SoapFault;
     :goto_0
     invoke-virtual {v7, p1}, Lorg/ksoap2/SoapFault;->parse(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 149
     iput-object v7, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->bodyIn:Ljava/lang/Object;
 
-    .line 162
     .end local v7    # "fault":Lorg/ksoap2/SoapFault;
     :cond_0
     return-void
 
-    .line 146
     :cond_1
     new-instance v7, Lorg/ksoap2/SoapFault12;
 
@@ -754,7 +687,6 @@
     .restart local v7    # "fault":Lorg/ksoap2/SoapFault;
     goto :goto_0
 
-    .line 151
     .end local v7    # "fault":Lorg/ksoap2/SoapFault;
     :cond_2
     :goto_1
@@ -764,7 +696,6 @@
 
     if-ne v0, v10, :cond_0
 
-    .line 152
     iget-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->enc:Ljava/lang/String;
 
     const-string v1, "root"
@@ -773,7 +704,6 @@
 
     move-result-object v9
 
-    .line 154
     .local v9, "rootAttr":Ljava/lang/String;
     const/4 v3, -0x1
 
@@ -795,7 +725,6 @@
 
     move-result-object v8
 
-    .line 156
     .local v8, "o":Ljava/lang/Object;
     const-string v0, "1"
 
@@ -809,11 +738,9 @@
 
     if-nez v0, :cond_4
 
-    .line 157
     :cond_3
     iput-object v8, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->bodyIn:Ljava/lang/Object;
 
-    .line 159
     :cond_4
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
@@ -836,12 +763,10 @@
     .end annotation
 
     .prologue
-    .line 348
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 349
     .local v6, "elementName":Ljava/lang/String;
     const/16 v16, 0x0
 
@@ -857,14 +782,11 @@
 
     move-result-object v9
 
-    .line 351
     .local v9, "href":Ljava/lang/String;
     if-eqz v9, :cond_4
 
-    .line 352
     if-nez p2, :cond_0
 
-    .line 353
     new-instance v16, Ljava/lang/RuntimeException;
 
     const-string v17, "href at root level?!?"
@@ -873,7 +795,6 @@
 
     throw v16
 
-    .line 355
     :cond_0
     const/16 v16, 0x1
 
@@ -883,7 +804,6 @@
 
     move-result-object v9
 
-    .line 356
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->idMap:Ljava/util/Hashtable;
@@ -896,7 +816,6 @@
 
     move-result-object v13
 
-    .line 357
     .local v13, "obj":Ljava/lang/Object;
     if-eqz v13, :cond_1
 
@@ -906,30 +825,25 @@
 
     if-eqz v16, :cond_2
 
-    .line 358
     :cond_1
     new-instance v7, Lorg/ksoap2/serialization/FwdRef;
 
     invoke-direct {v7}, Lorg/ksoap2/serialization/FwdRef;-><init>()V
 
-    .line 359
     .local v7, "f":Lorg/ksoap2/serialization/FwdRef;
     check-cast v13, Lorg/ksoap2/serialization/FwdRef;
 
     .end local v13    # "obj":Ljava/lang/Object;
     iput-object v13, v7, Lorg/ksoap2/serialization/FwdRef;->next:Lorg/ksoap2/serialization/FwdRef;
 
-    .line 360
     move-object/from16 v0, p2
 
     iput-object v0, v7, Lorg/ksoap2/serialization/FwdRef;->obj:Ljava/lang/Object;
 
-    .line 361
     move/from16 v0, p3
 
     iput v0, v7, Lorg/ksoap2/serialization/FwdRef;->index:I
 
-    .line 362
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->idMap:Ljava/util/Hashtable;
@@ -940,15 +854,12 @@
 
     invoke-virtual {v0, v9, v7}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 363
     const/4 v13, 0x0
 
-    .line 365
     .end local v7    # "f":Lorg/ksoap2/serialization/FwdRef;
     :cond_2
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 366
     const/16 v16, 0x3
 
     const/16 v17, 0x0
@@ -961,7 +872,6 @@
 
     invoke-interface {v0, v1, v2, v6}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 423
     :cond_3
     :goto_0
     const/16 v16, 0x3
@@ -976,10 +886,8 @@
 
     invoke-interface {v0, v1, v2, v6}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 424
     return-object v13
 
-    .line 368
     :cond_4
     move-object/from16 v0, p0
 
@@ -999,7 +907,6 @@
 
     move-result-object v12
 
-    .line 369
     .local v12, "nullAttr":Ljava/lang/String;
     const/16 v16, 0x0
 
@@ -1015,11 +922,9 @@
 
     move-result-object v10
 
-    .line 370
     .local v10, "id":Ljava/lang/String;
     if-nez v12, :cond_5
 
-    .line 371
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->xsi:Ljava/lang/String;
@@ -1038,7 +943,6 @@
 
     move-result-object v12
 
-    .line 373
     :cond_5
     if-eqz v12, :cond_9
 
@@ -1048,14 +952,11 @@
 
     if-eqz v16, :cond_9
 
-    .line 374
     const/4 v13, 0x0
 
-    .line 375
     .restart local v13    # "obj":Ljava/lang/Object;
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 376
     const/16 v16, 0x3
 
     const/16 v17, 0x0
@@ -1068,13 +969,11 @@
 
     invoke-interface {v0, v1, v2, v6}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 404
     .end local v13    # "obj":Ljava/lang/Object;
     :cond_6
     :goto_1
     if-eqz v10, :cond_3
 
-    .line 405
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->idMap:Ljava/util/Hashtable;
@@ -1087,7 +986,6 @@
 
     move-result-object v8
 
-    .line 406
     .local v8, "hlp":Ljava/lang/Object;
     instance-of v0, v8, Lorg/ksoap2/serialization/FwdRef;
 
@@ -1097,10 +995,8 @@
 
     move-object v7, v8
 
-    .line 407
     check-cast v7, Lorg/ksoap2/serialization/FwdRef;
 
-    .line 409
     .restart local v7    # "f":Lorg/ksoap2/serialization/FwdRef;
     :cond_7
     iget-object v0, v7, Lorg/ksoap2/serialization/FwdRef;->obj:Ljava/lang/Object;
@@ -1115,7 +1011,6 @@
 
     if-eqz v16, :cond_f
 
-    .line 410
     iget-object v0, v7, Lorg/ksoap2/serialization/FwdRef;->obj:Ljava/lang/Object;
 
     move-object/from16 v16, v0
@@ -1132,14 +1027,11 @@
 
     invoke-interface {v0, v1, v13}, Lorg/ksoap2/serialization/KvmSerializable;->setProperty(ILjava/lang/Object;)V
 
-    .line 414
     :goto_2
     iget-object v7, v7, Lorg/ksoap2/serialization/FwdRef;->next:Lorg/ksoap2/serialization/FwdRef;
 
-    .line 415
     if-nez v7, :cond_7
 
-    .line 419
     .end local v7    # "f":Lorg/ksoap2/serialization/FwdRef;
     :cond_8
     move-object/from16 v0, p0
@@ -1154,7 +1046,6 @@
 
     goto/16 :goto_0
 
-    .line 378
     .end local v8    # "hlp":Ljava/lang/Object;
     :cond_9
     move-object/from16 v0, p0
@@ -1175,18 +1066,15 @@
 
     move-result-object v15
 
-    .line 379
     .local v15, "type":Ljava/lang/String;
     if-eqz v15, :cond_d
 
-    .line 380
     const/16 v16, 0x3a
 
     invoke-virtual/range {v15 .. v16}, Ljava/lang/String;->indexOf(I)I
 
     move-result v5
 
-    .line 381
     .local v5, "cut":I
     add-int/lit8 v16, v5, 0x1
 
@@ -1194,7 +1082,6 @@
 
     move-result-object p5
 
-    .line 382
     const/16 v16, -0x1
 
     move/from16 v0, v16
@@ -1203,7 +1090,6 @@
 
     const-string v14, ""
 
-    .line 383
     .local v14, "prefix":Ljava/lang/String;
     :goto_3
     move-object/from16 v0, p1
@@ -1212,14 +1098,12 @@
 
     move-result-object p4
 
-    .line 395
     .end local v5    # "cut":I
     .end local v14    # "prefix":Ljava/lang/String;
     :cond_a
     :goto_4
     if-nez v15, :cond_b
 
-    .line 396
     const/16 v16, 0x1
 
     move/from16 v0, v16
@@ -1228,7 +1112,6 @@
 
     iput-boolean v0, v1, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->implicitTypes:Z
 
-    .line 398
     :cond_b
     move-object/from16 v0, p0
 
@@ -1244,11 +1127,9 @@
 
     move-result-object v13
 
-    .line 399
     .restart local v13    # "obj":Ljava/lang/Object;
     if-nez v13, :cond_6
 
-    .line 400
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -1263,7 +1144,6 @@
 
     goto/16 :goto_1
 
-    .line 382
     .end local v13    # "obj":Ljava/lang/Object;
     .restart local v5    # "cut":I
     :cond_c
@@ -1277,14 +1157,12 @@
 
     goto :goto_3
 
-    .line 384
     .end local v5    # "cut":I
     :cond_d
     if-nez p5, :cond_a
 
     if-nez p4, :cond_a
 
-    .line 385
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->enc:Ljava/lang/String;
@@ -1305,19 +1183,16 @@
 
     if-eqz v16, :cond_e
 
-    .line 386
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->enc:Ljava/lang/String;
 
     move-object/from16 p4, v0
 
-    .line 387
     const-string p5, "Array"
 
     goto :goto_4
 
-    .line 389
     :cond_e
     move-object/from16 v0, p6
 
@@ -1337,7 +1212,6 @@
 
     move-result-object v11
 
-    .line 390
     .local v11, "names":[Ljava/lang/Object;
     const/16 v16, 0x0
 
@@ -1346,7 +1220,6 @@
     .end local p4    # "namespace":Ljava/lang/String;
     check-cast p4, Ljava/lang/String;
 
-    .line 391
     .restart local p4    # "namespace":Ljava/lang/String;
     const/16 v16, 0x1
 
@@ -1358,7 +1231,6 @@
     .restart local p5    # "name":Ljava/lang/String;
     goto :goto_4
 
-    .line 412
     .end local v11    # "names":[Ljava/lang/Object;
     .end local v15    # "type":Ljava/lang/String;
     .restart local v7    # "f":Lorg/ksoap2/serialization/FwdRef;
@@ -1382,12 +1254,10 @@
 
     goto/16 :goto_2
 
-    .line 416
     .end local v7    # "f":Lorg/ksoap2/serialization/FwdRef;
     :cond_10
     if-eqz v8, :cond_8
 
-    .line 417
     new-instance v16, Ljava/lang/RuntimeException;
 
     const-string v17, "double ID"
@@ -1413,7 +1283,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 434
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->qNameToClass:Ljava/util/Hashtable;
 
     new-instance v4, Lorg/ksoap2/serialization/SoapPrimitive;
@@ -1424,25 +1293,21 @@
 
     move-result-object v1
 
-    .line 435
     .local v1, "obj":Ljava/lang/Object;
     if-nez v1, :cond_0
 
     move-object v1, v2
 
-    .line 461
     .end local v1    # "obj":Ljava/lang/Object;
     :goto_0
     return-object v1
 
-    .line 438
     .restart local v1    # "obj":Ljava/lang/Object;
     :cond_0
     instance-of v2, v1, Lorg/ksoap2/serialization/Marshal;
 
     if-eqz v2, :cond_1
 
-    .line 439
     check-cast v1, Lorg/ksoap2/serialization/Marshal;
 
     .end local v1    # "obj":Ljava/lang/Object;
@@ -1452,14 +1317,12 @@
 
     goto :goto_0
 
-    .line 440
     .restart local v1    # "obj":Ljava/lang/Object;
     :cond_1
     instance-of v2, v1, Lorg/ksoap2/serialization/SoapObject;
 
     if-eqz v2, :cond_2
 
-    .line 441
     check-cast v1, Lorg/ksoap2/serialization/SoapObject;
 
     .end local v1    # "obj":Ljava/lang/Object;
@@ -1467,7 +1330,6 @@
 
     move-result-object v1
 
-    .line 452
     :goto_1
     instance-of v2, v1, Lorg/ksoap2/serialization/SoapObject;
 
@@ -1475,21 +1337,18 @@
 
     move-object v2, v1
 
-    .line 453
     check-cast v2, Lorg/ksoap2/serialization/SoapObject;
 
     invoke-virtual {p0, p1, v2}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->readSerializable(Lorg/xmlpull/v1/XmlPullParser;Lorg/ksoap2/serialization/SoapObject;)V
 
     goto :goto_0
 
-    .line 442
     .restart local v1    # "obj":Ljava/lang/Object;
     :cond_2
     const-class v2, Lorg/ksoap2/serialization/SoapObject;
 
     if-ne v1, v2, :cond_3
 
-    .line 443
     new-instance v1, Lorg/ksoap2/serialization/SoapObject;
 
     .end local v1    # "obj":Ljava/lang/Object;
@@ -1498,7 +1357,6 @@
     .local v1, "obj":Lorg/ksoap2/serialization/SoapObject;
     goto :goto_1
 
-    .line 446
     .local v1, "obj":Ljava/lang/Object;
     :cond_3
     :try_start_0
@@ -1514,12 +1372,10 @@
     .restart local v1    # "obj":Ljava/lang/Object;
     goto :goto_1
 
-    .line 447
     .end local v1    # "obj":Ljava/lang/Object;
     :catch_0
     move-exception v0
 
-    .line 448
     .local v0, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -1531,7 +1387,6 @@
 
     throw v2
 
-    .line 454
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_4
     instance-of v2, v1, Lorg/ksoap2/serialization/KvmSerializable;
@@ -1540,14 +1395,12 @@
 
     move-object v2, v1
 
-    .line 455
     check-cast v2, Lorg/ksoap2/serialization/KvmSerializable;
 
     invoke-virtual {p0, p1, v2}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->readSerializable(Lorg/xmlpull/v1/XmlPullParser;Lorg/ksoap2/serialization/KvmSerializable;)V
 
     goto :goto_0
 
-    .line 456
     :cond_5
     instance-of v2, v1, Ljava/util/Vector;
 
@@ -1555,7 +1408,6 @@
 
     move-object v2, v1
 
-    .line 457
     check-cast v2, Ljava/util/Vector;
 
     iget-object v3, p4, Lorg/ksoap2/serialization/PropertyInfo;->elementType:Lorg/ksoap2/serialization/PropertyInfo;
@@ -1564,7 +1416,6 @@
 
     goto :goto_0
 
-    .line 459
     :cond_6
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -1607,7 +1458,6 @@
     .end annotation
 
     .prologue
-    .line 180
     :cond_0
     :goto_0
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
@@ -1618,12 +1468,10 @@
 
     if-eq v1, v2, :cond_9
 
-    .line 181
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 182
     .local v13, "name":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1637,23 +1485,19 @@
 
     if-nez v1, :cond_8
 
-    .line 183
     :cond_1
     new-instance v7, Lorg/ksoap2/serialization/PropertyInfo;
 
     invoke-direct {v7}, Lorg/ksoap2/serialization/PropertyInfo;-><init>()V
 
-    .line 184
     .local v7, "info":Lorg/ksoap2/serialization/PropertyInfo;
     invoke-interface/range {p2 .. p2}, Lorg/ksoap2/serialization/KvmSerializable;->getPropertyCount()I
 
     move-result v15
 
-    .line 185
     .local v15, "propertyCount":I
     const/16 v16, 0x0
 
-    .line 187
     .local v16, "propertyFound":Z
     const/4 v4, 0x0
 
@@ -1663,10 +1507,8 @@
 
     if-nez v16, :cond_5
 
-    .line 188
     invoke-virtual {v7}, Lorg/ksoap2/serialization/PropertyInfo;->clear()V
 
-    .line 189
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->properties:Ljava/util/Hashtable;
@@ -1675,7 +1517,6 @@
 
     invoke-interface {v0, v4, v1, v7}, Lorg/ksoap2/serialization/KvmSerializable;->getPropertyInfo(ILjava/util/Hashtable;Lorg/ksoap2/serialization/PropertyInfo;)V
 
-    .line 191
     iget-object v1, v7, Lorg/ksoap2/serialization/PropertyInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1709,11 +1550,9 @@
 
     if-eqz v1, :cond_4
 
-    .line 194
     :cond_3
     const/16 v16, 0x1
 
-    .line 195
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -1732,24 +1571,20 @@
 
     invoke-interface {v0, v4, v1}, Lorg/ksoap2/serialization/KvmSerializable;->setProperty(ILjava/lang/Object;)V
 
-    .line 187
     :cond_4
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 199
     :cond_5
     if-nez v16, :cond_0
 
-    .line 200
     move-object/from16 v0, p0
 
     iget-boolean v1, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->avoidExceptionForUnknownProperty:Z
 
     if-eqz v1, :cond_7
 
-    .line 203
     :cond_6
     :goto_2
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -1772,7 +1607,6 @@
 
     goto :goto_2
 
-    .line 207
     :cond_7
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1805,7 +1639,6 @@
     :cond_8
     move-object/from16 v1, p2
 
-    .line 213
     check-cast v1, Lorg/ksoap2/serialization/SoapObject;
 
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -1840,7 +1673,6 @@
 
     goto/16 :goto_0
 
-    .line 218
     .end local v13    # "name":Ljava/lang/String;
     :cond_9
     const/4 v1, 0x3
@@ -1853,7 +1685,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 219
     return-void
 .end method
 
@@ -1869,7 +1700,6 @@
     .end annotation
 
     .prologue
-    .line 168
     const/4 v1, 0x0
 
     .local v1, "counter":I
@@ -1880,33 +1710,27 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 169
     invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 170
     .local v0, "attributeName":Ljava/lang/String;
     invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 171
     .local v2, "value":Ljava/lang/String;
     invoke-virtual {p2, v0, v2}, Lorg/ksoap2/serialization/SoapObject;->addAttribute(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 168
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 173
     .end local v0    # "attributeName":Ljava/lang/String;
     .end local v2    # "value":Ljava/lang/String;
     :cond_0
     invoke-virtual {p0, p1, p2}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->readSerializable(Lorg/xmlpull/v1/XmlPullParser;Lorg/ksoap2/serialization/KvmSerializable;)V
 
-    .line 174
     return-void
 .end method
 
@@ -1923,24 +1747,20 @@
     .end annotation
 
     .prologue
-    .line 235
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v15
 
-    .line 236
     .local v15, "name":Ljava/lang/String;
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getNamespace()Ljava/lang/String;
 
     move-result-object v16
 
-    .line 239
     .local v16, "namespace":Ljava/lang/String;
     new-instance v13, Ljava/util/Vector;
 
     invoke-direct {v13}, Ljava/util/Vector;-><init>()V
 
-    .line 240
     .local v13, "attributeInfoVector":Ljava/util/Vector;
     const/4 v11, 0x0
 
@@ -1952,12 +1772,10 @@
 
     if-ge v11, v4, :cond_0
 
-    .line 241
     new-instance v12, Lorg/ksoap2/serialization/AttributeInfo;
 
     invoke-direct {v12}, Lorg/ksoap2/serialization/AttributeInfo;-><init>()V
 
-    .line 242
     .local v12, "attributeInfo":Lorg/ksoap2/serialization/AttributeInfo;
     move-object/from16 v0, p1
 
@@ -1967,7 +1785,6 @@
 
     invoke-virtual {v12, v4}, Lorg/ksoap2/serialization/AttributeInfo;->setName(Ljava/lang/String;)V
 
-    .line 243
     move-object/from16 v0, p1
 
     invoke-interface {v0, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
@@ -1976,7 +1793,6 @@
 
     invoke-virtual {v12, v4}, Lorg/ksoap2/serialization/AttributeInfo;->setValue(Ljava/lang/Object;)V
 
-    .line 244
     move-object/from16 v0, p1
 
     invoke-interface {v0, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeNamespace(I)Ljava/lang/String;
@@ -1985,7 +1801,6 @@
 
     invoke-virtual {v12, v4}, Lorg/ksoap2/serialization/AttributeInfo;->setNamespace(Ljava/lang/String;)V
 
-    .line 245
     move-object/from16 v0, p1
 
     invoke-interface {v0, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeType(I)Ljava/lang/String;
@@ -1994,27 +1809,21 @@
 
     invoke-virtual {v12, v4}, Lorg/ksoap2/serialization/AttributeInfo;->setType(Ljava/lang/Object;)V
 
-    .line 246
     invoke-virtual {v13, v12}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
-    .line 240
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
-    .line 249
     .end local v12    # "attributeInfo":Lorg/ksoap2/serialization/AttributeInfo;
     :cond_0
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 250
     const/16 v17, 0x0
 
-    .line 251
     .local v17, "result":Ljava/lang/Object;
     const/16 v19, 0x0
 
-    .line 252
     .local v19, "text":Ljava/lang/String;
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
@@ -2024,12 +1833,10 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 253
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v19
 
-    .line 254
     new-instance v18, Lorg/ksoap2/serialization/SoapPrimitive;
 
     move-object/from16 v0, v18
@@ -2042,11 +1849,9 @@
 
     invoke-direct {v0, v1, v2, v3}, Lorg/ksoap2/serialization/SoapPrimitive;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 255
     .local v18, "sp":Lorg/ksoap2/serialization/SoapPrimitive;
     move-object/from16 v17, v18
 
-    .line 257
     .local v17, "result":Lorg/ksoap2/serialization/SoapPrimitive;
     const/4 v14, 0x0
 
@@ -2058,7 +1863,6 @@
 
     if-ge v14, v4, :cond_1
 
-    .line 258
     invoke-virtual {v13, v14}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -2069,16 +1873,13 @@
 
     invoke-virtual {v0, v4}, Lorg/ksoap2/serialization/SoapPrimitive;->addAttribute(Lorg/ksoap2/serialization/AttributeInfo;)V
 
-    .line 257
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_1
 
-    .line 260
     :cond_1
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 270
     .end local v14    # "i":I
     .end local v17    # "result":Lorg/ksoap2/serialization/SoapPrimitive;
     .end local v18    # "sp":Lorg/ksoap2/serialization/SoapPrimitive;
@@ -2092,7 +1893,6 @@
 
     if-ne v4, v5, :cond_8
 
-    .line 271
     if-eqz v19, :cond_5
 
     invoke-virtual/range {v19 .. v19}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -2105,7 +1905,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 272
     new-instance v4, Ljava/lang/RuntimeException;
 
     const-string v5, "Malformed input: Mixed content"
@@ -2114,7 +1913,6 @@
 
     throw v4
 
-    .line 261
     .local v17, "result":Ljava/lang/Object;
     :cond_3
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
@@ -2125,7 +1923,6 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 262
     new-instance v6, Lorg/ksoap2/serialization/SoapObject;
 
     move-object/from16 v0, p2
@@ -2134,7 +1931,6 @@
 
     invoke-direct {v6, v0, v1}, Lorg/ksoap2/serialization/SoapObject;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 264
     .local v6, "so":Lorg/ksoap2/serialization/SoapObject;
     const/4 v14, 0x0
 
@@ -2146,7 +1942,6 @@
 
     if-ge v14, v4, :cond_4
 
-    .line 265
     invoke-virtual {v13, v14}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -2155,19 +1950,16 @@
 
     invoke-virtual {v6, v4}, Lorg/ksoap2/serialization/SoapObject;->addAttribute(Lorg/ksoap2/serialization/AttributeInfo;)V
 
-    .line 264
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_3
 
-    .line 267
     :cond_4
     move-object/from16 v17, v6
 
     .local v17, "result":Lorg/ksoap2/serialization/SoapObject;
     goto :goto_2
 
-    .line 274
     .end local v6    # "so":Lorg/ksoap2/serialization/SoapObject;
     .end local v14    # "i":I
     .end local v17    # "result":Lorg/ksoap2/serialization/SoapObject;
@@ -2180,7 +1972,6 @@
 
     invoke-direct {v6, v0, v1}, Lorg/ksoap2/serialization/SoapObject;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 276
     .restart local v6    # "so":Lorg/ksoap2/serialization/SoapObject;
     const/4 v14, 0x0
 
@@ -2192,7 +1983,6 @@
 
     if-ge v14, v4, :cond_6
 
-    .line 277
     invoke-virtual {v13, v14}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -2201,12 +1991,10 @@
 
     invoke-virtual {v6, v4}, Lorg/ksoap2/serialization/SoapObject;->addAttribute(Lorg/ksoap2/serialization/AttributeInfo;)V
 
-    .line 276
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_4
 
-    .line 280
     :cond_6
     :goto_5
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
@@ -2217,7 +2005,6 @@
 
     if-eq v4, v5, :cond_7
 
-    .line 281
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v20
@@ -2244,16 +2031,13 @@
 
     invoke-virtual {v6, v0, v4}, Lorg/ksoap2/serialization/SoapObject;->addProperty(Ljava/lang/String;Ljava/lang/Object;)Lorg/ksoap2/serialization/SoapObject;
 
-    .line 284
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
     goto :goto_5
 
-    .line 286
     :cond_7
     move-object/from16 v17, v6
 
-    .line 288
     .end local v6    # "so":Lorg/ksoap2/serialization/SoapObject;
     .end local v14    # "i":I
     :cond_8
@@ -2265,7 +2049,6 @@
 
     invoke-interface {v0, v4, v1, v15}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 289
     return-object v17
 .end method
 
@@ -2282,24 +2065,19 @@
     .end annotation
 
     .prologue
-    .line 303
     const/4 v4, 0x0
 
-    .line 304
     .local v4, "namespace":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 305
     .local v5, "name":Ljava/lang/String;
     invoke-virtual {p2}, Ljava/util/Vector;->size()I
 
     move-result v11
 
-    .line 306
     .local v11, "size":I
     const/4 v9, 0x1
 
-    .line 307
     .local v9, "dynamic":Z
     iget-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->enc:Ljava/lang/String;
 
@@ -2309,18 +2087,15 @@
 
     move-result-object v12
 
-    .line 308
     .local v12, "type":Ljava/lang/String;
     if-eqz v12, :cond_0
 
-    .line 309
     const/16 v0, 0x3a
 
     invoke-virtual {v12, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v7
 
-    .line 310
     .local v7, "cut0":I
     const-string v0, "["
 
@@ -2328,7 +2103,6 @@
 
     move-result v8
 
-    .line 311
     .local v8, "cut1":I
     add-int/lit8 v0, v7, 0x1
 
@@ -2336,53 +2110,43 @@
 
     move-result-object v5
 
-    .line 312
     const/4 v0, -0x1
 
     if-ne v7, v0, :cond_3
 
     const-string v10, ""
 
-    .line 313
     .local v10, "prefix":Ljava/lang/String;
     :goto_0
     invoke-interface {p1, v10}, Lorg/xmlpull/v1/XmlPullParser;->getNamespace(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 314
     const/4 v0, -0x1
 
     invoke-direct {p0, v12, v8, v0}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->getIndex(Ljava/lang/String;II)I
 
     move-result v11
 
-    .line 315
     const/4 v0, -0x1
 
     if-eq v11, v0, :cond_0
 
-    .line 316
     invoke-virtual {p2, v11}, Ljava/util/Vector;->setSize(I)V
 
-    .line 317
     const/4 v9, 0x0
 
-    .line 320
     .end local v7    # "cut0":I
     .end local v8    # "cut1":I
     .end local v10    # "prefix":Ljava/lang/String;
     :cond_0
     if-nez p3, :cond_1
 
-    .line 321
     sget-object p3, Lorg/ksoap2/serialization/PropertyInfo;->OBJECT_TYPE:Lorg/ksoap2/serialization/PropertyInfo;
 
-    .line 323
     :cond_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 324
     iget-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->enc:Ljava/lang/String;
 
     const-string v1, "offset"
@@ -2399,7 +2163,6 @@
 
     move-result v3
 
-    .line 325
     .local v3, "position":I
     :goto_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
@@ -2410,7 +2173,6 @@
 
     if-eq v0, v1, :cond_4
 
-    .line 327
     iget-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->enc:Ljava/lang/String;
 
     const-string v1, "position"
@@ -2425,15 +2187,12 @@
 
     move-result v3
 
-    .line 328
     if-eqz v9, :cond_2
 
     if-lt v3, v11, :cond_2
 
-    .line 329
     add-int/lit8 v11, v3, 0x1
 
-    .line 330
     invoke-virtual {p2, v11}, Ljava/util/Vector;->setSize(I)V
 
     :cond_2
@@ -2445,22 +2204,18 @@
 
     move-object/from16 v6, p3
 
-    .line 333
     invoke-virtual/range {v0 .. v6}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->read(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/Object;ILjava/lang/String;Ljava/lang/String;Lorg/ksoap2/serialization/PropertyInfo;)Ljava/lang/Object;
 
     move-result-object v0
 
     invoke-virtual {p2, v0, v3}, Ljava/util/Vector;->setElementAt(Ljava/lang/Object;I)V
 
-    .line 334
     add-int/lit8 v3, v3, 0x1
 
-    .line 335
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
     goto :goto_1
 
-    .line 312
     .end local v3    # "position":I
     .restart local v7    # "cut0":I
     .restart local v8    # "cut1":I
@@ -2473,7 +2228,6 @@
 
     goto :goto_0
 
-    .line 337
     .end local v7    # "cut0":I
     .end local v8    # "cut1":I
     .restart local v3    # "position":I
@@ -2486,7 +2240,6 @@
 
     invoke-interface {p1, v0, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 338
     return-void
 .end method
 
@@ -2495,10 +2248,8 @@
     .param p1, "addAdornments"    # Z
 
     .prologue
-    .line 121
     iput-boolean p1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addAdornments:Z
 
-    .line 122
     return-void
 .end method
 
@@ -2507,15 +2258,12 @@
     .param p1, "emptyBody"    # Z
 
     .prologue
-    .line 131
     if-eqz p1, :cond_0
 
-    .line 132
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->bodyOut:Ljava/lang/Object;
 
-    .line 134
     :cond_0
     return-void
 .end method
@@ -2538,33 +2286,28 @@
 
     const/4 v4, 0x0
 
-    .line 563
     iget-object v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->bodyOut:Ljava/lang/Object;
 
     if-eqz v1, :cond_2
 
-    .line 564
     new-instance v1, Ljava/util/Vector;
 
     invoke-direct {v1}, Ljava/util/Vector;-><init>()V
 
     iput-object v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->multiRef:Ljava/util/Vector;
 
-    .line 565
     iget-object v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->multiRef:Ljava/util/Vector;
 
     iget-object v2, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->bodyOut:Ljava/lang/Object;
 
     invoke-virtual {v1, v2}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
-    .line 566
     iget-object v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->bodyOut:Ljava/lang/Object;
 
     invoke-virtual {p0, v4, v1}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->getInfo(Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 567
     .local v0, "qName":[Ljava/lang/Object;
     iget-boolean v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->dotNet:Z
 
@@ -2581,12 +2324,10 @@
 
     invoke-interface {p1, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 569
     iget-boolean v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->dotNet:Z
 
     if-eqz v1, :cond_0
 
-    .line 570
     const-string v2, "xmlns"
 
     aget-object v1, v0, v5
@@ -2595,13 +2336,11 @@
 
     invoke-interface {p1, v4, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 572
     :cond_0
     iget-boolean v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addAdornments:Z
 
     if-eqz v1, :cond_1
 
-    .line 573
     const-string v2, "id"
 
     aget-object v1, v0, v3
@@ -2613,7 +2352,6 @@
     :goto_1
     invoke-interface {p1, v4, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 574
     iget-object v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->enc:Ljava/lang/String;
 
     const-string v2, "root"
@@ -2622,7 +2360,6 @@
 
     invoke-interface {p1, v1, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 576
     :cond_1
     iget-object v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->bodyOut:Ljava/lang/Object;
 
@@ -2632,7 +2369,6 @@
 
     invoke-direct {p0, p1, v1, v4, v2}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->writeElement(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/Object;Lorg/ksoap2/serialization/PropertyInfo;Ljava/lang/Object;)V
 
-    .line 577
     iget-boolean v1, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->dotNet:Z
 
     if-eqz v1, :cond_5
@@ -2648,12 +2384,10 @@
 
     invoke-interface {p1, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 580
     .end local v0    # "qName":[Ljava/lang/Object;
     :cond_2
     return-void
 
-    .line 567
     .restart local v0    # "qName":[Ljava/lang/Object;
     :cond_3
     aget-object v1, v0, v5
@@ -2664,7 +2398,6 @@
 
     goto :goto_0
 
-    .line 573
     :cond_4
     aget-object v1, v0, v3
 
@@ -2672,7 +2405,6 @@
 
     goto :goto_1
 
-    .line 577
     :cond_5
     aget-object v1, v0, v5
 
@@ -2694,18 +2426,15 @@
     .end annotation
 
     .prologue
-    .line 603
     invoke-interface/range {p2 .. p2}, Lorg/ksoap2/serialization/KvmSerializable;->getPropertyCount()I
 
     move-result v3
 
-    .line 604
     .local v3, "cnt":I
     new-instance v10, Lorg/ksoap2/serialization/PropertyInfo;
 
     invoke-direct {v10}, Lorg/ksoap2/serialization/PropertyInfo;-><init>()V
 
-    .line 608
     .local v10, "propertyInfo":Lorg/ksoap2/serialization/PropertyInfo;
     const/4 v4, 0x0
 
@@ -2713,14 +2442,12 @@
     :goto_0
     if-ge v4, v3, :cond_b
 
-    .line 610
     move-object/from16 v0, p2
 
     invoke-interface {v0, v4}, Lorg/ksoap2/serialization/KvmSerializable;->getProperty(I)Ljava/lang/Object;
 
     move-result-object v9
 
-    .line 612
     .local v9, "prop":Ljava/lang/Object;
     move-object/from16 v0, p0
 
@@ -2730,19 +2457,16 @@
 
     invoke-interface {v0, v4, v14, v10}, Lorg/ksoap2/serialization/KvmSerializable;->getPropertyInfo(ILjava/util/Hashtable;Lorg/ksoap2/serialization/PropertyInfo;)V
 
-    .line 614
     instance-of v14, v9, Lorg/ksoap2/serialization/SoapObject;
 
     if-nez v14, :cond_1
 
-    .line 616
     iget v14, v10, Lorg/ksoap2/serialization/PropertyInfo;->flags:I
 
     and-int/lit8 v14, v14, 0x1
 
     if-nez v14, :cond_0
 
-    .line 617
     iget-object v14, v10, Lorg/ksoap2/serialization/PropertyInfo;->namespace:Ljava/lang/String;
 
     iget-object v15, v10, Lorg/ksoap2/serialization/PropertyInfo;->name:Ljava/lang/String;
@@ -2751,7 +2475,6 @@
 
     invoke-interface {v0, v14, v15}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 618
     move-object/from16 v0, p2
 
     invoke-interface {v0, v4}, Lorg/ksoap2/serialization/KvmSerializable;->getProperty(I)Ljava/lang/Object;
@@ -2764,7 +2487,6 @@
 
     invoke-virtual {v0, v1, v14, v10}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->writeProperty(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/Object;Lorg/ksoap2/serialization/PropertyInfo;)V
 
-    .line 619
     iget-object v14, v10, Lorg/ksoap2/serialization/PropertyInfo;->namespace:Ljava/lang/String;
 
     iget-object v15, v10, Lorg/ksoap2/serialization/PropertyInfo;->name:Ljava/lang/String;
@@ -2773,7 +2495,6 @@
 
     invoke-interface {v0, v14, v15}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 608
     :cond_0
     :goto_1
     add-int/lit8 v4, v4, 0x1
@@ -2783,10 +2504,8 @@
     :cond_1
     move-object v7, v9
 
-    .line 623
     check-cast v7, Lorg/ksoap2/serialization/SoapObject;
 
-    .line 625
     .local v7, "nestedSoap":Lorg/ksoap2/serialization/SoapObject;
     const/4 v14, 0x0
 
@@ -2796,7 +2515,6 @@
 
     move-result-object v11
 
-    .line 626
     .local v11, "qName":[Ljava/lang/Object;
     const/4 v14, 0x0
 
@@ -2804,7 +2522,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 627
     .local v6, "namespace":Ljava/lang/String;
     const/4 v14, 0x1
 
@@ -2812,7 +2529,6 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 630
     .local v12, "type":Ljava/lang/String;
     iget-object v14, v10, Lorg/ksoap2/serialization/PropertyInfo;->name:Ljava/lang/String;
 
@@ -2826,10 +2542,8 @@
 
     if-lez v14, :cond_5
 
-    .line 631
     iget-object v5, v10, Lorg/ksoap2/serialization/PropertyInfo;->name:Ljava/lang/String;
 
-    .line 637
     .local v5, "name":Ljava/lang/String;
     :goto_2
     const-string v14, "DevInfo"
@@ -2864,25 +2578,21 @@
 
     if-eqz v14, :cond_7
 
-    .line 641
     :cond_2
     new-instance v2, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 642
     .local v2, "bos":Ljava/io/ByteArrayOutputStream;
     new-instance v13, Lorg/kxml2/io/KXmlSerializer;
 
     invoke-direct {v13}, Lorg/kxml2/io/KXmlSerializer;-><init>()V
 
-    .line 643
     .local v13, "xw":Lorg/xmlpull/v1/XmlSerializer;
     const-string v14, "UTF-8"
 
     invoke-interface {v13, v2, v14}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 644
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->dotNet:Z
@@ -2894,14 +2604,12 @@
     :goto_3
     invoke-interface {v13, v14, v5}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 645
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->implicitTypes:Z
 
     if-nez v14, :cond_3
 
-    .line 646
     const/4 v14, 0x1
 
     move-object/from16 v0, p1
@@ -2910,7 +2618,6 @@
 
     move-result-object v8
 
-    .line 647
     .local v8, "prefix":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2950,14 +2657,12 @@
 
     invoke-interface {v0, v14, v15, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 649
     .end local v8    # "prefix":Ljava/lang/String;
     :cond_3
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v13, v7}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->writeObjectBody(Lorg/xmlpull/v1/XmlSerializer;Lorg/ksoap2/serialization/SoapObject;)V
 
-    .line 650
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->dotNet:Z
@@ -2970,13 +2675,10 @@
     :cond_4
     invoke-interface {v13, v6, v5}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 651
     invoke-interface {v13}, Lorg/xmlpull/v1/XmlSerializer;->flush()V
 
-    .line 654
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->flush()V
 
-    .line 655
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
 
     move-result-object v14
@@ -2987,7 +2689,6 @@
 
     goto/16 :goto_1
 
-    .line 633
     .end local v2    # "bos":Ljava/io/ByteArrayOutputStream;
     .end local v5    # "name":Ljava/lang/String;
     .end local v13    # "xw":Lorg/xmlpull/v1/XmlSerializer;
@@ -3007,10 +2708,8 @@
     :cond_6
     move-object v14, v6
 
-    .line 644
     goto :goto_3
 
-    .line 659
     .end local v2    # "bos":Ljava/io/ByteArrayOutputStream;
     .end local v13    # "xw":Lorg/xmlpull/v1/XmlSerializer;
     :cond_7
@@ -3027,14 +2726,12 @@
 
     invoke-interface {v0, v14, v5}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 660
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->implicitTypes:Z
 
     if-nez v14, :cond_8
 
-    .line 661
     const/4 v14, 0x1
 
     move-object/from16 v0, p1
@@ -3043,7 +2740,6 @@
 
     move-result-object v8
 
-    .line 662
     .restart local v8    # "prefix":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3083,7 +2779,6 @@
 
     invoke-interface {v0, v14, v15, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 664
     .end local v8    # "prefix":Ljava/lang/String;
     :cond_8
     move-object/from16 v0, p0
@@ -3092,7 +2787,6 @@
 
     invoke-virtual {v0, v1, v7}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->writeObjectBody(Lorg/xmlpull/v1/XmlSerializer;Lorg/ksoap2/serialization/SoapObject;)V
 
-    .line 665
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->dotNet:Z
@@ -3113,10 +2807,8 @@
     :cond_a
     move-object v14, v6
 
-    .line 659
     goto :goto_4
 
-    .line 669
     .end local v5    # "name":Ljava/lang/String;
     .end local v6    # "namespace":Ljava/lang/String;
     .end local v7    # "nestedSoap":Lorg/ksoap2/serialization/SoapObject;
@@ -3138,16 +2830,13 @@
     .end annotation
 
     .prologue
-    .line 587
     move-object v3, p2
 
-    .line 588
     .local v3, "soapObject":Lorg/ksoap2/serialization/SoapObject;
     invoke-virtual {v3}, Lorg/ksoap2/serialization/SoapObject;->getAttributeCount()I
 
     move-result v1
 
-    .line 589
     .local v1, "cnt":I
     const/4 v2, 0x0
 
@@ -3155,16 +2844,13 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 590
     new-instance v0, Lorg/ksoap2/serialization/AttributeInfo;
 
     invoke-direct {v0}, Lorg/ksoap2/serialization/AttributeInfo;-><init>()V
 
-    .line 591
     .local v0, "attributeInfo":Lorg/ksoap2/serialization/AttributeInfo;
     invoke-virtual {v3, v2, v0}, Lorg/ksoap2/serialization/SoapObject;->getAttributeInfo(ILorg/ksoap2/serialization/AttributeInfo;)V
 
-    .line 592
     invoke-virtual {v0}, Lorg/ksoap2/serialization/AttributeInfo;->getNamespace()Ljava/lang/String;
 
     move-result-object v4
@@ -3183,17 +2869,14 @@
 
     invoke-interface {p1, v4, v5, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 589
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 596
     .end local v0    # "attributeInfo":Lorg/ksoap2/serialization/AttributeInfo;
     :cond_0
     invoke-virtual {p0, p1, p2}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->writeObjectBody(Lorg/xmlpull/v1/XmlSerializer;Lorg/ksoap2/serialization/KvmSerializable;)V
 
-    .line 597
     return-void
 .end method
 
@@ -3215,20 +2898,16 @@
 
     const/4 v6, 0x2
 
-    .line 673
     if-nez p2, :cond_0
 
-    .line 693
     :goto_0
     return-void
 
-    .line 678
     :cond_0
     invoke-virtual {p0, v8, p2}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->getInfo(Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 679
     .local v2, "qName":[Ljava/lang/Object;
     iget-boolean v3, p3, Lorg/ksoap2/serialization/PropertyInfo;->multiRef:Z
 
@@ -3238,7 +2917,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 680
     :cond_1
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->multiRef:Ljava/util/Vector;
 
@@ -3246,25 +2924,21 @@
 
     move-result v0
 
-    .line 681
     .local v0, "i":I
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_2
 
-    .line 682
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->multiRef:Ljava/util/Vector;
 
     invoke-virtual {v3}, Ljava/util/Vector;->size()I
 
     move-result v0
 
-    .line 683
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->multiRef:Ljava/util/Vector;
 
     invoke-virtual {v3, p2}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
-    .line 685
     :cond_2
     const-string v4, "href"
 
@@ -3318,7 +2992,6 @@
 
     goto :goto_1
 
-    .line 687
     .end local v0    # "i":I
     :cond_4
     iget-boolean v3, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->implicitTypes:Z
@@ -3333,7 +3006,6 @@
 
     if-eq v3, v4, :cond_6
 
-    .line 688
     :cond_5
     const/4 v3, 0x0
 
@@ -3345,7 +3017,6 @@
 
     move-result-object v1
 
-    .line 689
     .local v1, "prefix":Ljava/lang/String;
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->xsi:Ljava/lang/String;
 
@@ -3377,7 +3048,6 @@
 
     invoke-interface {p1, v3, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 691
     .end local v1    # "prefix":Ljava/lang/String;
     :cond_6
     const/4 v3, 0x3
@@ -3403,28 +3073,22 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 713
     const-string v4, "item"
 
-    .line 714
     .local v4, "itemsTagName":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 716
     .local v3, "itemsNamespace":Ljava/lang/String;
     if-nez p3, :cond_2
 
-    .line 717
     sget-object p3, Lorg/ksoap2/serialization/PropertyInfo;->OBJECT_TYPE:Lorg/ksoap2/serialization/PropertyInfo;
 
-    .line 725
     :cond_0
     :goto_0
     invoke-virtual {p2}, Ljava/util/Vector;->size()I
 
     move-result v1
 
-    .line 726
     .local v1, "cnt":I
     iget-object v6, p3, Lorg/ksoap2/serialization/PropertyInfo;->type:Ljava/lang/Object;
 
@@ -3434,13 +3098,11 @@
 
     move-result-object v0
 
-    .line 729
     .local v0, "arrType":[Ljava/lang/Object;
     iget-boolean v6, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->implicitTypes:Z
 
     if-nez v6, :cond_1
 
-    .line 730
     iget-object v7, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->enc:Ljava/lang/String;
 
     const-string v8, "arrayType"
@@ -3497,11 +3159,9 @@
 
     invoke-interface {p1, v7, v8, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 735
     :cond_1
     const/4 v5, 0x0
 
-    .line 736
     .local v5, "skipped":Z
     const/4 v2, 0x0
 
@@ -3509,23 +3169,19 @@
     :goto_1
     if-ge v2, v1, :cond_5
 
-    .line 737
     invoke-virtual {p2, v2}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
     move-result-object v6
 
     if-nez v6, :cond_3
 
-    .line 738
     const/4 v5, 0x1
 
-    .line 736
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 718
     .end local v0    # "arrType":[Ljava/lang/Object;
     .end local v1    # "cnt":I
     .end local v2    # "i":I
@@ -3535,20 +3191,16 @@
 
     if-eqz v6, :cond_0
 
-    .line 719
     iget-object v6, p3, Lorg/ksoap2/serialization/PropertyInfo;->name:Ljava/lang/String;
 
     if-eqz v6, :cond_0
 
-    .line 720
     iget-object v4, p3, Lorg/ksoap2/serialization/PropertyInfo;->name:Ljava/lang/String;
 
-    .line 721
     iget-object v3, p3, Lorg/ksoap2/serialization/PropertyInfo;->namespace:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 740
     .restart local v0    # "arrType":[Ljava/lang/Object;
     .restart local v1    # "cnt":I
     .restart local v2    # "i":I
@@ -3556,10 +3208,8 @@
     :cond_3
     invoke-interface {p1, v3, v4}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 741
     if-eqz v5, :cond_4
 
-    .line 742
     iget-object v6, p0, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->enc:Ljava/lang/String;
 
     const-string v7, "position"
@@ -3590,10 +3240,8 @@
 
     invoke-interface {p1, v6, v7, v8}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 743
     const/4 v5, 0x0
 
-    .line 745
     :cond_4
     invoke-virtual {p2, v2}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
@@ -3601,12 +3249,10 @@
 
     invoke-virtual {p0, p1, v6, p3}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->writeProperty(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/Object;Lorg/ksoap2/serialization/PropertyInfo;)V
 
-    .line 746
     invoke-interface {p1, v3, v4}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_2
 
-    .line 749
     :cond_5
     return-void
 .end method

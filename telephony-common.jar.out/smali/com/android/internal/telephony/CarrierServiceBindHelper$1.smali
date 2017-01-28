@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 61
     iput-object p1, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$1;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 66
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -62,23 +60,19 @@
     # invokes: Lcom/android/internal/telephony/CarrierServiceBindHelper;->log(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/CarrierServiceBindHelper;->access$100(Ljava/lang/String;)V
 
-    .line 69
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 95
     :cond_0
     :goto_0
     return-void
 
-    .line 71
     :pswitch_0
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
 
-    .line 72
     .local v2, "binding":Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -105,19 +99,16 @@
     # invokes: Lcom/android/internal/telephony/CarrierServiceBindHelper;->log(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/CarrierServiceBindHelper;->access$100(Ljava/lang/String;)V
 
-    .line 73
     invoke-virtual {v2}, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->bind()Z
 
     goto :goto_0
 
-    .line 76
     .end local v2    # "binding":Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
     :pswitch_1
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
 
-    .line 77
     .restart local v2    # "binding":Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -144,19 +135,16 @@
     # invokes: Lcom/android/internal/telephony/CarrierServiceBindHelper;->log(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/CarrierServiceBindHelper;->access$100(Ljava/lang/String;)V
 
-    .line 78
     invoke-virtual {v2}, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->unbind()V
 
     goto :goto_0
 
-    .line 81
     .end local v2    # "binding":Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
     :pswitch_2
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
 
-    .line 82
     .restart local v2    # "binding":Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -183,19 +171,16 @@
     # invokes: Lcom/android/internal/telephony/CarrierServiceBindHelper;->log(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/CarrierServiceBindHelper;->access$100(Ljava/lang/String;)V
 
-    .line 83
     invoke-virtual {v2}, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->unbind()V
 
     goto :goto_0
 
-    .line 86
     .end local v2    # "binding":Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
     :pswitch_3
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/String;
 
-    .line 87
     .local v3, "carrierPackageName":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$1;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
@@ -216,7 +201,6 @@
 
     aget-object v0, v1, v4
 
-    .line 88
     .local v0, "appBinding":Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
     invoke-virtual {v0}, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->getPackage()Ljava/lang/String;
 
@@ -228,7 +212,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 89
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -250,16 +233,13 @@
     # invokes: Lcom/android/internal/telephony/CarrierServiceBindHelper;->log(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/CarrierServiceBindHelper;->access$100(Ljava/lang/String;)V
 
-    .line 90
     invoke-virtual {v0}, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->bind()Z
 
-    .line 87
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 69
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

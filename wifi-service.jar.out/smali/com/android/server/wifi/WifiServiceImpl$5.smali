@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1501
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$5;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v6, -0x1
 
-    .line 1504
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
@@ -60,12 +58,10 @@
     :goto_0
     packed-switch v4, :pswitch_data_0
 
-    .line 1524
     :cond_1
     :goto_1
     return-void
 
-    .line 1504
     :sswitch_0
     const-string v7, "android.intent.action.PACKAGE_REMOVED"
 
@@ -92,7 +88,6 @@
 
     goto :goto_0
 
-    .line 1506
     :pswitch_0
     const-string v4, "android.intent.extra.REPLACING"
 
@@ -102,31 +97,26 @@
 
     if-nez v4, :cond_1
 
-    .line 1509
     const-string v4, "android.intent.extra.UID"
 
     invoke-virtual {p2, v4, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 1510
     .local v1, "uid":I
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 1511
     .local v2, "uri":Landroid/net/Uri;
     if-eq v1, v6, :cond_1
 
     if-eqz v2, :cond_1
 
-    .line 1514
     invoke-virtual {v2}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1515
     .local v0, "pkgName":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/wifi/WifiServiceImpl$5;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
@@ -136,7 +126,6 @@
 
     goto :goto_1
 
-    .line 1519
     .end local v0    # "pkgName":Ljava/lang/String;
     .end local v1    # "uid":I
     .end local v2    # "uri":Landroid/net/Uri;
@@ -147,7 +136,6 @@
 
     move-result v3
 
-    .line 1520
     .local v3, "userHandle":I
     iget-object v4, p0, Lcom/android/server/wifi/WifiServiceImpl$5;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
@@ -157,7 +145,6 @@
 
     goto :goto_1
 
-    .line 1504
     :sswitch_data_0
     .sparse-switch
         -0x7ad942ef -> :sswitch_1

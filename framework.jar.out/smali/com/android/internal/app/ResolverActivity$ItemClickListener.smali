@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 1137
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,14 +57,12 @@
 
     const/4 v5, 0x0
 
-    .line 1144
     iget-object v6, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v6}, Lcom/android/internal/app/ResolverActivity;->readCheckedPosFromSharedPreferences()I
 
     move-result v0
 
-    .line 1145
     .local v0, "checkedPos":I
     const/4 v6, -0x1
 
@@ -73,7 +70,6 @@
 
     move v1, v4
 
-    .line 1146
     .local v1, "hasValidSelection":Z
     :goto_0
     iget-object v6, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -82,7 +78,6 @@
 
     move-result v3
 
-    .line 1147
     .local v3, "realPosition":I
     iget-object v6, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -104,14 +99,12 @@
 
     if-eq v6, v3, :cond_2
 
-    .line 1149
     :cond_0
     iget-object v5, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # invokes: Lcom/android/internal/app/ResolverActivity;->setAlwaysButtonEnabled(ZIZ)V
     invoke-static {v5, v1, v3, v4}, Lcom/android/internal/app/ResolverActivity;->access$500(Lcom/android/internal/app/ResolverActivity;ZIZ)V
 
-    .line 1150
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mOnceButton:Landroid/widget/Button;
@@ -121,19 +114,16 @@
 
     invoke-virtual {v4, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 1167
     :goto_1
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # setter for: Lcom/android/internal/app/ResolverActivity;->mLastSelected:I
     invoke-static {v4, v3}, Lcom/android/internal/app/ResolverActivity;->access$402(Lcom/android/internal/app/ResolverActivity;I)I
 
-    .line 1168
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v4, v3}, Lcom/android/internal/app/ResolverActivity;->writeCheckedPosToSharedPreferences(I)V
 
-    .line 1169
     return-void
 
     .end local v1    # "hasValidSelection":Z
@@ -141,10 +131,8 @@
     :cond_1
     move v1, v5
 
-    .line 1145
     goto :goto_0
 
-    .line 1151
     .restart local v1    # "hasValidSelection":Z
     .restart local v3    # "realPosition":I
     :cond_2
@@ -161,12 +149,10 @@
 
     if-ne v6, v3, :cond_3
 
-    .line 1153
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 1154
     .local v2, "intent":Landroid/content/Intent;
     const-string v6, "android.intent.extra.INTENT"
 
@@ -185,33 +171,28 @@
 
     invoke-virtual {v2, v6, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 1156
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     const-class v5, Lcom/android/internal/app/NubiaResolverListActivity;
 
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 1158
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v4, v2}, Lcom/android/internal/app/ResolverActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1159
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v4}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
     goto :goto_1
 
-    .line 1161
     .end local v2    # "intent":Landroid/content/Intent;
     :cond_3
     iget-object v6, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v6, v3, v5, v4}, Lcom/android/internal/app/ResolverActivity;->startSelected(IZZ)V
 
-    .line 1162
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v4, v4, Lcom/android/internal/app/ResolverActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
@@ -231,7 +212,6 @@
     :goto_2
     invoke-static {v5, v4, v3}, Ljava/util/Collections;->swap(Ljava/util/List;II)V
 
-    .line 1165
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v5, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -246,7 +226,6 @@
 
     goto :goto_1
 
-    .line 1162
     :cond_4
     add-int/lit8 v4, v3, -0x1
 
@@ -269,7 +248,6 @@
     .end annotation
 
     .prologue
-    .line 1174
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v0, 0x1
 

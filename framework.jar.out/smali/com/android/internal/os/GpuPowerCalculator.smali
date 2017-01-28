@@ -25,13 +25,10 @@
     .param p1, "profile"    # Lcom/android/internal/os/PowerProfile;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lcom/android/internal/os/PowerCalculator;-><init>()V
 
-    .line 38
     iput-object p1, p0, Lcom/android/internal/os/GpuPowerCalculator;->mProfile:Lcom/android/internal/os/PowerProfile;
 
-    .line 39
     return-void
 .end method
 
@@ -41,38 +38,32 @@
     .param p2, "statsType"    # I
 
     .prologue
-    .line 68
     invoke-virtual {p1}, Landroid/os/BatteryStats;->getUidStats()Landroid/util/SparseArray;
 
     move-result-object v7
 
-    .line 69
     .local v7, "uidStats":Landroid/util/SparseArray;, "Landroid/util/SparseArray<+Landroid/os/BatteryStats$Uid;>;"
     invoke-virtual {v7}, Landroid/util/SparseArray;->size()I
 
     move-result v0
 
-    .line 70
     .local v0, "NU":I
     const-wide/16 v8, 0x0
 
     iput-wide v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumUidFgTime:J
 
-    .line 73
     const/4 v2, 0x0
 
     .local v2, "iu":I
     :goto_0
     if-ge v2, v0, :cond_2
 
-    .line 74
     invoke-virtual {v7, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Landroid/os/BatteryStats$Uid;
 
-    .line 75
     .local v6, "u":Landroid/os/BatteryStats$Uid;
     invoke-virtual {v6}, Landroid/os/BatteryStats$Uid;->getUid()I
 
@@ -88,25 +79,21 @@
 
     if-ne v8, v9, :cond_1
 
-    .line 73
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 78
     :cond_1
     invoke-virtual {v6}, Landroid/os/BatteryStats$Uid;->getProcessStats()Landroid/util/ArrayMap;
 
     move-result-object v3
 
-    .line 79
     .local v3, "processStats":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;+Landroid/os/BatteryStats$Uid$Proc;>;"
     invoke-virtual {v3}, Landroid/util/ArrayMap;->size()I
 
     move-result v4
 
-    .line 80
     .local v4, "processStatsCount":I
     const/4 v1, 0x0
 
@@ -114,14 +101,12 @@
     :goto_1
     if-ge v1, v4, :cond_0
 
-    .line 81
     invoke-virtual {v3, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/os/BatteryStats$Uid$Proc;
 
-    .line 82
     .local v5, "ps":Landroid/os/BatteryStats$Uid$Proc;
     iget-wide v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumUidFgTime:J
 
@@ -133,12 +118,10 @@
 
     iput-wide v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumUidFgTime:J
 
-    .line 80
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 85
     .end local v1    # "i":I
     .end local v3    # "processStats":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;+Landroid/os/BatteryStats$Uid$Proc;>;"
     .end local v4    # "processStatsCount":I
@@ -156,26 +139,21 @@
     .param p2, "statsType"    # I
 
     .prologue
-    .line 42
     iget-object v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mProfile:Lcom/android/internal/os/PowerProfile;
 
     invoke-virtual {v8}, Lcom/android/internal/os/PowerProfile;->getNumGpuSpeedSteps()I
 
     move-result v0
 
-    .line 43
     .local v0, "speedSteps":I
     const-wide/16 v4, 0x0
 
-    .line 44
     .local v4, "steptime":J
     const-wide/16 v6, 0x0
 
-    .line 45
     .local v6, "sumsteptime":J
     const-wide/16 v2, 0x0
 
-    .line 47
     .local v2, "steppower":D
     const/4 v1, 0x0
 
@@ -183,7 +161,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 48
     iget-object v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mProfile:Lcom/android/internal/os/PowerProfile;
 
     const-string v9, "gpu.active"
@@ -192,12 +169,10 @@
 
     move-result-wide v2
 
-    .line 49
     invoke-virtual {p1, v1, p2}, Landroid/os/BatteryStats;->getTimeAtGpuSpeedStep(II)J
 
     move-result-wide v4
 
-    .line 52
     iget-wide v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumPower:D
 
     long-to-double v10, v4
@@ -208,19 +183,16 @@
 
     iput-wide v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumPower:D
 
-    .line 53
     iget-wide v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumTime:J
 
     add-long/2addr v8, v4
 
     iput-wide v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumTime:J
 
-    .line 47
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 56
     :cond_0
     iget-wide v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumPower:D
 
@@ -230,10 +202,8 @@
 
     iput-wide v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumPower:D
 
-    .line 61
     invoke-direct {p0, p1, p2}, Lcom/android/internal/os/GpuPowerCalculator;->calcSumFgTime(Landroid/os/BatteryStats;I)V
 
-    .line 63
     iget-wide v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumPower:D
 
     return-wide v8
@@ -252,7 +222,6 @@
 
     const-wide/16 v2, 0x0
 
-    .line 98
     iget-wide v0, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumUidFgTime:J
 
     cmp-long v0, v0, v4
@@ -265,15 +234,12 @@
 
     if-gez v0, :cond_1
 
-    .line 99
     :cond_0
     iput-wide v2, p1, Lcom/android/internal/os/BatterySipper;->gpuPowerMah:D
 
-    .line 112
     :goto_0
     return-void
 
-    .line 103
     :cond_1
     invoke-virtual {p2}, Landroid/os/BatteryStats$Uid;->getUid()I
 
@@ -289,13 +255,11 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 104
     :cond_2
     iput-wide v2, p1, Lcom/android/internal/os/BatterySipper;->gpuPowerMah:D
 
     goto :goto_0
 
-    .line 108
     :cond_3
     iget-wide v0, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumPower:D
 
@@ -322,17 +286,13 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 89
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumPower:D
 
-    .line 90
     iput-wide v2, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumTime:J
 
-    .line 91
     iput-wide v2, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSumUidFgTime:J
 
-    .line 92
     return-void
 .end method

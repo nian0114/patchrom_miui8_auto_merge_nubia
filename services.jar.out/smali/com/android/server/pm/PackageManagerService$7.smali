@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 9985
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,21 +49,16 @@
 
     const/4 v2, -0x1
 
-    .line 9987
     iget v0, p1, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 9988
     .local v0, "v1":I
     iget v1, p2, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 9990
     .local v1, "v2":I
     if-eq v0, v1, :cond_2
 
-    .line 9991
     if-le v0, v1, :cond_1
 
-    .line 10010
     :cond_0
     :goto_0
     return v2
@@ -72,27 +66,21 @@
     :cond_1
     move v2, v3
 
-    .line 9991
     goto :goto_0
 
-    .line 9993
     :cond_2
     iget v0, p1, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
-    .line 9994
     iget v1, p2, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
-    .line 9995
     if-eq v0, v1, :cond_3
 
-    .line 9996
     if-gt v0, v1, :cond_0
 
     move v2, v3
 
     goto :goto_0
 
-    .line 9998
     :cond_3
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->isDefault:Z
 
@@ -100,7 +88,6 @@
 
     if-eq v4, v5, :cond_4
 
-    .line 9999
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->isDefault:Z
 
     if-nez v4, :cond_0
@@ -109,24 +96,19 @@
 
     goto :goto_0
 
-    .line 10001
     :cond_4
     iget v0, p1, Landroid/content/pm/ResolveInfo;->match:I
 
-    .line 10002
     iget v1, p2, Landroid/content/pm/ResolveInfo;->match:I
 
-    .line 10004
     if-eq v0, v1, :cond_5
 
-    .line 10005
     if-gt v0, v1, :cond_0
 
     move v2, v3
 
     goto :goto_0
 
-    .line 10007
     :cond_5
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->system:Z
 
@@ -134,7 +116,6 @@
 
     if-eq v4, v5, :cond_6
 
-    .line 10008
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->system:Z
 
     if-nez v4, :cond_0
@@ -143,7 +124,6 @@
 
     goto :goto_0
 
-    .line 10010
     :cond_6
     const/4 v2, 0x0
 
@@ -154,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 9985
     check-cast p1, Landroid/content/pm/ResolveInfo;
 
     check-cast p2, Landroid/content/pm/ResolveInfo;

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 55
     iput-object p1, p0, Lcn/nubia/server/policy/edge/Animation$1;->this$0:Lcn/nubia/server/policy/edge/Animation;
 
     iput-object p2, p0, Lcn/nubia/server/policy/edge/Animation$1;->val$savedEvent:Landroid/view/MotionEvent;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcn/nubia/server/policy/edge/Animation$1;->this$0:Lcn/nubia/server/policy/edge/Animation;
 
     # getter for: Lcn/nubia/server/policy/edge/Animation;->mAdapter:Lcn/nubia/server/policy/edge/effects/EffectsAdapter;
@@ -56,11 +54,9 @@
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/edge/effects/EffectsAdapter;->onEdgeTouch(Landroid/view/MotionEvent;)V
 
-    .line 59
     iget-object v0, p0, Lcn/nubia/server/policy/edge/Animation$1;->val$savedEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 60
     return-void
 .end method

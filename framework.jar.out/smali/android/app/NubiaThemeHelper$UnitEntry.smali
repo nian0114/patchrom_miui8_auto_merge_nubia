@@ -33,21 +33,15 @@
     .param p4, "scale"    # F
 
     .prologue
-    .line 244
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 245
     iput-object p1, p0, Landroid/app/NubiaThemeHelper$UnitEntry;->name:Ljava/lang/String;
 
-    .line 246
     iput p2, p0, Landroid/app/NubiaThemeHelper$UnitEntry;->type:I
 
-    .line 247
     iput p3, p0, Landroid/app/NubiaThemeHelper$UnitEntry;->unit:I
 
-    .line 248
     iput p4, p0, Landroid/app/NubiaThemeHelper$UnitEntry;->scale:F
 
-    .line 249
     return-void
 .end method

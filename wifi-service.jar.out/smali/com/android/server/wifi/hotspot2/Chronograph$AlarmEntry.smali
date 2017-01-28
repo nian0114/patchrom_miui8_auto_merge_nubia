@@ -30,19 +30,14 @@
     .param p4, "token"    # Ljava/lang/Object;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     iput-wide p1, p0, Lcom/android/server/wifi/hotspot2/Chronograph$AlarmEntry;->mAt:J
 
-    .line 22
     iput-object p3, p0, Lcom/android/server/wifi/hotspot2/Chronograph$AlarmEntry;->mAlarmHandler:Lcom/android/server/wifi/hotspot2/AlarmHandler;
 
-    .line 23
     iput-object p4, p0, Lcom/android/server/wifi/hotspot2/Chronograph$AlarmEntry;->mToken:Ljava/lang/Object;
 
-    .line 24
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .param p5, "x3"    # Lcom/android/server/wifi/hotspot2/Chronograph$1;
 
     .prologue
-    .line 15
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/wifi/hotspot2/Chronograph$AlarmEntry;-><init>(JLcom/android/server/wifi/hotspot2/AlarmHandler;Ljava/lang/Object;)V
 
     return-void
@@ -65,7 +59,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/hotspot2/Chronograph$AlarmEntry;
 
     .prologue
-    .line 15
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/Chronograph$AlarmEntry;->mAt:J
 
     return-wide v0
@@ -76,7 +69,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/hotspot2/Chronograph$AlarmEntry;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lcom/android/server/wifi/hotspot2/Chronograph$AlarmEntry;->callout()V
 
     return-void
@@ -86,13 +78,11 @@
     .locals 2
 
     .prologue
-    .line 27
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/Chronograph$AlarmEntry;->mAlarmHandler:Lcom/android/server/wifi/hotspot2/AlarmHandler;
 
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/Chronograph$AlarmEntry;->mToken:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Lcom/android/server/wifi/hotspot2/AlarmHandler;->wake(Ljava/lang/Object;)V
 
-    .line 28
     return-void
 .end method

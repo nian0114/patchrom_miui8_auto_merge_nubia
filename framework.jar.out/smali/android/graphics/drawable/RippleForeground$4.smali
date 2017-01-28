@@ -29,7 +29,6 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 422
     invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -42,7 +41,6 @@
     .param p1, "object"    # Landroid/graphics/drawable/RippleForeground;
 
     .prologue
-    .line 431
     # getter for: Landroid/graphics/drawable/RippleForeground;->mOpacity:F
     invoke-static {p1}, Landroid/graphics/drawable/RippleForeground;->access$400(Landroid/graphics/drawable/RippleForeground;)F
 
@@ -59,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 422
     check-cast p1, Landroid/graphics/drawable/RippleForeground;
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/RippleForeground$4;->get(Landroid/graphics/drawable/RippleForeground;)Ljava/lang/Float;
@@ -75,14 +72,11 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 425
     # setter for: Landroid/graphics/drawable/RippleForeground;->mOpacity:F
     invoke-static {p1, p2}, Landroid/graphics/drawable/RippleForeground;->access$402(Landroid/graphics/drawable/RippleForeground;F)F
 
-    .line 426
     invoke-virtual {p1}, Landroid/graphics/drawable/RippleForeground;->invalidateSelf()V
 
-    .line 427
     return-void
 .end method
 
@@ -90,7 +84,6 @@
     .locals 0
 
     .prologue
-    .line 422
     check-cast p1, Landroid/graphics/drawable/RippleForeground;
 
     invoke-virtual {p0, p1, p2}, Landroid/graphics/drawable/RippleForeground$4;->setValue(Landroid/graphics/drawable/RippleForeground;F)V

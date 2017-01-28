@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 37
     iput-object p1, p0, Lcom/android/server/wm/SmartKeyActionService$1;->this$0:Lcom/android/server/wm/SmartKeyActionService;
 
     invoke-direct {p0}, Lnubia/smartkey/ISmartKeyAction$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .locals 4
 
     .prologue
-    .line 41
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/SmartKeyActionService$1;->this$0:Lcom/android/server/wm/SmartKeyActionService;
 
@@ -48,7 +46,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 42
     iget-object v1, p0, Lcom/android/server/wm/SmartKeyActionService$1;->this$0:Lcom/android/server/wm/SmartKeyActionService;
 
     # getter for: Lcom/android/server/wm/SmartKeyActionService;->mTakeScreenshot:Ljava/lang/reflect/Method;
@@ -71,16 +68,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 47
     :cond_0
     :goto_0
     return-void
 
-    .line 44
     :catch_0
     move-exception v0
 
-    .line 45
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

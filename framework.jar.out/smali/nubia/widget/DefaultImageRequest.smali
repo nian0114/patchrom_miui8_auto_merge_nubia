@@ -46,36 +46,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     const/4 v0, 0x1
 
     iput v0, p0, Lnubia/widget/DefaultImageRequest;->mContactType:I
 
-    .line 21
     const v0, 0x3f333333    # 0.7f
 
     iput v0, p0, Lnubia/widget/DefaultImageRequest;->mScale:F
 
-    .line 23
     const/4 v0, 0x0
 
     iput v0, p0, Lnubia/widget/DefaultImageRequest;->mOffset:F
 
-    .line 25
     iput-boolean v1, p0, Lnubia/widget/DefaultImageRequest;->mIsCircular:Z
 
-    .line 27
     const/4 v0, -0x1
 
     iput v0, p0, Lnubia/widget/DefaultImageRequest;->mCardId:I
 
-    .line 29
     iput v1, p0, Lnubia/widget/DefaultImageRequest;->mCardResType:I
 
-    .line 32
     return-void
 .end method
 
@@ -89,7 +81,6 @@
     .param p6, "isCircular"    # Z
 
     .prologue
-    .line 48
     const/4 v7, -0x1
 
     const/4 v8, 0x0
@@ -110,7 +101,6 @@
 
     invoke-direct/range {v0 .. v8}, Lnubia/widget/DefaultImageRequest;-><init>(Ljava/lang/String;Ljava/lang/String;IFFZII)V
 
-    .line 50
     return-void
 .end method
 
@@ -128,60 +118,44 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     const/4 v0, 0x1
 
     iput v0, p0, Lnubia/widget/DefaultImageRequest;->mContactType:I
 
-    .line 21
     const v0, 0x3f333333    # 0.7f
 
     iput v0, p0, Lnubia/widget/DefaultImageRequest;->mScale:F
 
-    .line 23
     const/4 v0, 0x0
 
     iput v0, p0, Lnubia/widget/DefaultImageRequest;->mOffset:F
 
-    .line 25
     iput-boolean v1, p0, Lnubia/widget/DefaultImageRequest;->mIsCircular:Z
 
-    .line 27
     const/4 v0, -0x1
 
     iput v0, p0, Lnubia/widget/DefaultImageRequest;->mCardId:I
 
-    .line 29
     iput v1, p0, Lnubia/widget/DefaultImageRequest;->mCardResType:I
 
-    .line 67
     iput-object p1, p0, Lnubia/widget/DefaultImageRequest;->mDisplayName:Ljava/lang/String;
 
-    .line 68
     iput-object p2, p0, Lnubia/widget/DefaultImageRequest;->mIdentifier:Ljava/lang/String;
 
-    .line 69
     iput p3, p0, Lnubia/widget/DefaultImageRequest;->mContactType:I
 
-    .line 70
     iput p4, p0, Lnubia/widget/DefaultImageRequest;->mScale:F
 
-    .line 71
     iput p5, p0, Lnubia/widget/DefaultImageRequest;->mOffset:F
 
-    .line 72
     iput-boolean p6, p0, Lnubia/widget/DefaultImageRequest;->mIsCircular:Z
 
-    .line 73
     iput p7, p0, Lnubia/widget/DefaultImageRequest;->mCardId:I
 
-    .line 74
     iput p8, p0, Lnubia/widget/DefaultImageRequest;->mCardResType:I
 
-    .line 75
     return-void
 .end method
 
@@ -193,7 +167,6 @@
     .param p4, "isCircular"    # Z
 
     .prologue
-    .line 42
     const v4, 0x3f333333    # 0.7f
 
     const/4 v5, 0x0
@@ -214,7 +187,6 @@
 
     invoke-direct/range {v0 .. v8}, Lnubia/widget/DefaultImageRequest;-><init>(Ljava/lang/String;Ljava/lang/String;IFFZII)V
 
-    .line 44
     return-void
 .end method
 
@@ -227,7 +199,6 @@
     .param p5, "cardId"    # I
 
     .prologue
-    .line 54
     const v4, 0x3f333333    # 0.7f
 
     const/4 v5, 0x0
@@ -248,7 +219,6 @@
 
     invoke-direct/range {v0 .. v8}, Lnubia/widget/DefaultImageRequest;-><init>(Ljava/lang/String;Ljava/lang/String;IFFZII)V
 
-    .line 56
     return-void
 .end method
 
@@ -262,7 +232,6 @@
     .param p6, "cardResType"    # I
 
     .prologue
-    .line 60
     const v4, 0x3f333333    # 0.7f
 
     const/4 v5, 0x0
@@ -283,7 +252,6 @@
 
     invoke-direct/range {v0 .. v8}, Lnubia/widget/DefaultImageRequest;-><init>(Ljava/lang/String;Ljava/lang/String;IFFZII)V
 
-    .line 62
     return-void
 .end method
 
@@ -294,7 +262,6 @@
     .param p3, "isCircular"    # Z
 
     .prologue
-    .line 36
     const/4 v3, 0x1
 
     const v4, 0x3f333333    # 0.7f
@@ -315,6 +282,5 @@
 
     invoke-direct/range {v0 .. v8}, Lnubia/widget/DefaultImageRequest;-><init>(Ljava/lang/String;Ljava/lang/String;IFFZII)V
 
-    .line 38
     return-void
 .end method

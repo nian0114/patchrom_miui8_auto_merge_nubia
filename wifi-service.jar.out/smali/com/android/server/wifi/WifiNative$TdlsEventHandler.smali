@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1989
     iput-object p1, p0, Lcom/android/server/wifi/WifiNative$TdlsEventHandler;->this$0:Lcom/android/server/wifi/WifiNative;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

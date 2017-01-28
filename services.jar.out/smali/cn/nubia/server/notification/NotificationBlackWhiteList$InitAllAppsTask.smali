@@ -37,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 150
     iput-object p1, p0, Lcn/nubia/server/notification/NotificationBlackWhiteList$InitAllAppsTask;->this$0:Lcn/nubia/server/notification/NotificationBlackWhiteList;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -51,7 +50,6 @@
     .param p2, "x1"    # Lcn/nubia/server/notification/NotificationBlackWhiteList$1;
 
     .prologue
-    .line 150
     invoke-direct {p0, p1}, Lcn/nubia/server/notification/NotificationBlackWhiteList$InitAllAppsTask;-><init>(Lcn/nubia/server/notification/NotificationBlackWhiteList;)V
 
     return-void
@@ -63,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 150
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/notification/NotificationBlackWhiteList$InitAllAppsTask;->doInBackground([Ljava/lang/Void;)Ljava/util/Map;
@@ -90,7 +87,6 @@
     .end annotation
 
     .prologue
-    .line 154
     iget-object v0, p0, Lcn/nubia/server/notification/NotificationBlackWhiteList$InitAllAppsTask;->this$0:Lcn/nubia/server/notification/NotificationBlackWhiteList;
 
     # invokes: Lcn/nubia/server/notification/NotificationBlackWhiteList;->getInstalledAppsFlag()Ljava/util/Map;
@@ -105,7 +101,6 @@
     .locals 0
 
     .prologue
-    .line 150
     check-cast p1, Ljava/util/Map;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/notification/NotificationBlackWhiteList$InitAllAppsTask;->onPostExecute(Ljava/util/Map;)V
@@ -127,11 +122,9 @@
     .end annotation
 
     .prologue
-    .line 159
     .local p1, "flags":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     if-eqz p1, :cond_0
 
-    .line 160
     iget-object v0, p0, Lcn/nubia/server/notification/NotificationBlackWhiteList$InitAllAppsTask;->this$0:Lcn/nubia/server/notification/NotificationBlackWhiteList;
 
     # getter for: Lcn/nubia/server/notification/NotificationBlackWhiteList;->mFlags:Ljava/util/Map;
@@ -141,7 +134,6 @@
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 161
     iget-object v0, p0, Lcn/nubia/server/notification/NotificationBlackWhiteList$InitAllAppsTask;->this$0:Lcn/nubia/server/notification/NotificationBlackWhiteList;
 
     # getter for: Lcn/nubia/server/notification/NotificationBlackWhiteList;->mFlags:Ljava/util/Map;
@@ -151,7 +143,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 163
     :cond_0
     return-void
 .end method

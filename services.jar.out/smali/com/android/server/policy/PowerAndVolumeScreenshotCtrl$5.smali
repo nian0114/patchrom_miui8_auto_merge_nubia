@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 111
     iput-object p1, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$5;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 5
 
     .prologue
-    .line 113
     iget-object v2, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$5;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     # getter for: Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->mSettingScreenshotEnable:Z
@@ -50,14 +48,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 114
     const-string v2, "supersnapshot"
 
     const-string v3, "about to enter super snapshot"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     iget-object v2, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$5;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     # getter for: Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->mContext:Landroid/content/Context;
@@ -73,30 +69,25 @@
 
     invoke-virtual {v2, v3}, Lnubia/util/FrameworkDataStatisticsManager;->onEventWithStartOnce(Ljava/lang/String;)V
 
-    .line 117
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 118
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "cn.nubia.action.supersnap.takescreenshot"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 119
     const-string v2, "enterPattern"
 
     const-string v3, "powerAndVolumeService"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 120
     const-string v2, "cn.nubia.supersnap"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 122
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$5;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
@@ -109,17 +100,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 130
     .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 123
     .restart local v1    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v0
 
-    .line 124
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "supersnapshot"
 
@@ -145,7 +133,6 @@
 
     goto :goto_0
 
-    .line 128
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_0

@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 210
     iput-object p1, p0, Lcn/nubia/server/HapticsService$2;->this$0:Lcn/nubia/server/HapticsService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 213
     iget-object v0, p0, Lcn/nubia/server/HapticsService$2;->this$0:Lcn/nubia/server/HapticsService;
 
     iget-object v1, p0, Lcn/nubia/server/HapticsService$2;->this$0:Lcn/nubia/server/HapticsService;
@@ -58,6 +56,5 @@
     # setter for: Lcn/nubia/server/HapticsService;->mA2H_str:Ljava/lang/String;
     invoke-static {v0, v1}, Lcn/nubia/server/HapticsService;->access$402(Lcn/nubia/server/HapticsService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 214
     return-void
 .end method

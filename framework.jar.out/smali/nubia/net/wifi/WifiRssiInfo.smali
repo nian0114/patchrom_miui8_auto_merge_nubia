@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 100
     new-instance v0, Lnubia/net/wifi/WifiRssiInfo$1;
 
     invoke-direct {v0}, Lnubia/net/wifi/WifiRssiInfo$1;-><init>()V
@@ -51,24 +50,18 @@
     .prologue
     const/16 v0, -0x64
 
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput v0, p0, Lnubia/net/wifi/WifiRssiInfo;->mLastSignalRssi:I
 
-    .line 26
     iput v0, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewRssi:I
 
-    .line 27
     const/4 v0, 0x0
 
     iput v0, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewFreq:I
 
-    .line 28
     iput-object p1, p0, Lnubia/net/wifi/WifiRssiInfo;->mContext:Landroid/content/Context;
 
-    .line 29
     return-void
 .end method
 
@@ -78,7 +71,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 17
     iput p1, p0, Lnubia/net/wifi/WifiRssiInfo;->mLastSignalRssi:I
 
     return p1
@@ -90,7 +82,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 17
     iput p1, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewRssi:I
 
     return p1
@@ -102,7 +93,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 17
     iput p1, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewFreq:I
 
     return p1
@@ -114,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 93
     const/4 v0, 0x0
 
     return v0
@@ -124,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget v0, p0, Lnubia/net/wifi/WifiRssiInfo;->mLastSignalRssi:I
 
     return v0
@@ -134,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget v0, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewFreq:I
 
     return v0
@@ -144,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget v0, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewRssi:I
 
     return v0
@@ -155,10 +141,8 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 36
     iput p1, p0, Lnubia/net/wifi/WifiRssiInfo;->mLastSignalRssi:I
 
-    .line 37
     return-void
 .end method
 
@@ -167,10 +151,8 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 40
     iput p1, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewRssi:I
 
-    .line 41
     return-void
 .end method
 
@@ -179,10 +161,8 @@
     .param p1, "rssi"    # I
 
     .prologue
-    .line 32
     iput p1, p0, Lnubia/net/wifi/WifiRssiInfo;->mLastSignalRssi:I
 
-    .line 33
     return-void
 .end method
 
@@ -191,10 +171,8 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 44
     iput p1, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewFreq:I
 
-    .line 45
     return-void
 .end method
 
@@ -214,11 +192,9 @@
     .end annotation
 
     .prologue
-    .line 60
     .local p3, "list":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/ScanResult;>;"
     iput p1, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewRssi:I
 
-    .line 61
     if-eqz p3, :cond_1
 
     invoke-interface {p3}, Ljava/util/List;->size()I
@@ -227,7 +203,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 64
     if-eqz p2, :cond_1
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
@@ -236,7 +211,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 65
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -255,7 +229,6 @@
 
     check-cast v1, Landroid/net/wifi/ScanResult;
 
-    .line 66
     .local v1, "result":Landroid/net/wifi/ScanResult;
     iget-object v2, v1, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
@@ -273,12 +246,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 67
     iget v2, v1, Landroid/net/wifi/ScanResult;->frequency:I
 
     iput v2, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewFreq:I
 
-    .line 74
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "result":Landroid/net/wifi/ScanResult;
     :cond_1
@@ -291,32 +262,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 81
     monitor-enter p0
 
-    .line 82
     :try_start_0
     iget v0, p0, Lnubia/net/wifi/WifiRssiInfo;->mLastSignalRssi:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 83
     iget v0, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewRssi:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 84
     iget v0, p0, Lnubia/net/wifi/WifiRssiInfo;->mNewFreq:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 85
     monitor-exit p0
 
-    .line 86
     return-void
 
-    .line 85
     :catchall_0
     move-exception v0
 

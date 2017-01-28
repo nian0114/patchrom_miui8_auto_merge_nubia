@@ -23,17 +23,14 @@
     .locals 2
 
     .prologue
-    .line 718
     iput-object p1, p0, Lcom/android/server/wifi/WifiConfigStore$WpaConfigFileObserver;->this$0:Lcom/android/server/wifi/WifiConfigStore;
 
-    .line 719
     const-string v0, "/data/misc/wifi/wpa_supplicant.conf"
 
     const/16 v1, 0x8
 
     invoke-direct {p0, v0, v1}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
 
-    .line 720
     return-void
 .end method
 
@@ -45,19 +42,16 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 724
     const/16 v1, 0x8
 
     if-ne p1, v1, :cond_0
 
-    .line 725
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/misc/wifi/wpa_supplicant.conf"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 726
     .local v0, "file":Ljava/io/File;
     # getter for: Lcom/android/server/wifi/WifiConfigStore;->VDBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiConfigStore;->access$000()Z
@@ -93,7 +87,6 @@
     # invokes: Lcom/android/server/wifi/WifiConfigStore;->localLog(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/WifiConfigStore;->access$100(Lcom/android/server/wifi/WifiConfigStore;Ljava/lang/String;)V
 
-    .line 728
     .end local v0    # "file":Ljava/io/File;
     :cond_0
     return-void

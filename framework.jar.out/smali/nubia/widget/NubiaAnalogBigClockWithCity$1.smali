@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 196
     iput-object p1, p0, Lnubia/widget/NubiaAnalogBigClockWithCity$1;->this$0:Lnubia/widget/NubiaAnalogBigClockWithCity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 200
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -61,14 +59,12 @@
 
     if-nez v1, :cond_0
 
-    .line 202
     const-string v1, "time-zone"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 203
     .local v0, "tz":Ljava/lang/String;
     iget-object v1, p0, Lnubia/widget/NubiaAnalogBigClockWithCity$1;->this$0:Lnubia/widget/NubiaAnalogBigClockWithCity;
 
@@ -83,7 +79,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 205
     .end local v0    # "tz":Ljava/lang/String;
     :cond_0
     iget-object v1, p0, Lnubia/widget/NubiaAnalogBigClockWithCity$1;->this$0:Lnubia/widget/NubiaAnalogBigClockWithCity;
@@ -101,12 +96,10 @@
     # setter for: Lnubia/widget/NubiaAnalogBigClockWithCity;->mIs24Hour:Z
     invoke-static {v1, v2}, Lnubia/widget/NubiaAnalogBigClockWithCity;->access$202(Lnubia/widget/NubiaAnalogBigClockWithCity;Z)Z
 
-    .line 206
     iget-object v1, p0, Lnubia/widget/NubiaAnalogBigClockWithCity$1;->this$0:Lnubia/widget/NubiaAnalogBigClockWithCity;
 
     # invokes: Lnubia/widget/NubiaAnalogBigClockWithCity;->updateTime()V
     invoke-static {v1}, Lnubia/widget/NubiaAnalogBigClockWithCity;->access$300(Lnubia/widget/NubiaAnalogBigClockWithCity;)V
 
-    .line 207
     return-void
 .end method

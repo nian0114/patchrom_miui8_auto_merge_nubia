@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 110
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationPushController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 113
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationPushController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationPushController;->mHandler:Landroid/os/Handler;
@@ -50,12 +48,10 @@
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 114
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationPushController;
 
     # invokes: Lcn/nubia/server/appmgmt/ApplicationPushController;->loadPushData()V
     invoke-static {v0}, Lcn/nubia/server/appmgmt/ApplicationPushController;->access$100(Lcn/nubia/server/appmgmt/ApplicationPushController;)V
 
-    .line 115
     return-void
 .end method

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 51
     invoke-direct {p0}, Landroid/support/v4/content/ContentResolverCompat$ContentResolverCompatImplBase;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .param p7, "cancellationSignal"    # Landroid/support/v4/os/CancellationSignal;
 
     .prologue
-    .line 57
     if-eqz p7, :cond_0
 
     :try_start_0
@@ -72,11 +70,9 @@
 
     goto :goto_0
 
-    .line 61
     :catch_0
     move-exception v7
 
-    .line 62
     .local v7, "e":Ljava/lang/Exception;
     invoke-static {v7}, Landroid/support/v4/content/ContentResolverCompatJellybean;->isFrameworkOperationCanceledException(Ljava/lang/Exception;)Z
 
@@ -84,14 +80,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 65
     new-instance v0, Landroid/support/v4/os/OperationCanceledException;
 
     invoke-direct {v0}, Landroid/support/v4/os/OperationCanceledException;-><init>()V
 
     throw v0
 
-    .line 68
     :cond_1
     throw v7
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 163
     iput-object p1, p0, Lnubia/widget/NubiaMorePopup$3;->this$0:Lnubia/widget/NubiaMorePopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 166
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$3;->this$0:Lnubia/widget/NubiaMorePopup;
 
     # getter for: Lnubia/widget/NubiaMorePopup;->mPopup:Landroid/widget/PopupWindow;
@@ -58,13 +56,11 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 168
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$3;->this$0:Lnubia/widget/NubiaMorePopup;
 
     # invokes: Lnubia/widget/NubiaMorePopup;->startEntryAnimation()V
     invoke-static {v0}, Lnubia/widget/NubiaMorePopup;->access$000(Lnubia/widget/NubiaMorePopup;)V
 
-    .line 169
     const/4 v0, 0x1
 
     return v0

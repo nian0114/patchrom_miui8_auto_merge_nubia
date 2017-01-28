@@ -80,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 130
     new-instance v0, Landroid/telephony/RadioAccessFamily$1;
 
     invoke-direct {v0}, Landroid/telephony/RadioAccessFamily$1;-><init>()V
@@ -96,16 +95,12 @@
     .param p2, "radioAccessFamily"    # I
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     iput p1, p0, Landroid/telephony/RadioAccessFamily;->mPhoneId:I
 
-    .line 76
     iput p2, p0, Landroid/telephony/RadioAccessFamily;->mRadioAccessFamily:I
 
-    .line 77
     return-void
 .end method
 
@@ -120,14 +115,12 @@
 
     const v1, 0x8e08
 
-    .line 238
     and-int v0, v2, p0
 
     if-lez v0, :cond_0
 
     or-int/2addr p0, v2
 
-    .line 239
     :cond_0
     and-int v0, v1, p0
 
@@ -135,7 +128,6 @@
 
     or-int/2addr p0, v1
 
-    .line 240
     :cond_1
     and-int/lit8 v0, p0, 0x70
 
@@ -143,7 +135,6 @@
 
     or-int/lit8 p0, p0, 0x70
 
-    .line 241
     :cond_2
     and-int/lit16 v0, p0, 0x3180
 
@@ -151,7 +142,6 @@
 
     or-int/lit16 p0, p0, 0x3180
 
-    .line 242
     :cond_3
     and-int v0, v3, p0
 
@@ -159,7 +149,6 @@
 
     or-int/2addr p0, v3
 
-    .line 244
     :cond_4
     return p0
 .end method
@@ -169,221 +158,172 @@
     .param p0, "raf"    # I
 
     .prologue
-    .line 250
     invoke-static {p0}, Landroid/telephony/RadioAccessFamily;->getAdjustedRaf(I)I
 
     move-result p0
 
-    .line 252
     sparse-switch p0, :sswitch_data_0
 
-    .line 320
     sget v0, Lcom/android/internal/telephony/RILConstants;->PREFERRED_NETWORK_MODE:I
 
-    .line 324
     .local v0, "type":I
     :goto_0
     return v0
 
-    .line 254
     .end local v0    # "type":I
     :sswitch_0
     const/4 v0, 0x0
 
-    .line 255
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 257
     .end local v0    # "type":I
     :sswitch_1
     const/4 v0, 0x1
 
-    .line 258
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 260
     .end local v0    # "type":I
     :sswitch_2
     const/4 v0, 0x2
 
-    .line 261
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 263
     .end local v0    # "type":I
     :sswitch_3
     const/4 v0, 0x4
 
-    .line 264
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 266
     .end local v0    # "type":I
     :sswitch_4
     const/16 v0, 0x8
 
-    .line 267
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 269
     .end local v0    # "type":I
     :sswitch_5
     const/16 v0, 0x9
 
-    .line 270
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 272
     .end local v0    # "type":I
     :sswitch_6
     const/16 v0, 0xa
 
-    .line 273
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 275
     .end local v0    # "type":I
     :sswitch_7
     const/16 v0, 0xb
 
-    .line 276
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 278
     .end local v0    # "type":I
     :sswitch_8
     const/16 v0, 0xc
 
-    .line 279
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 281
     .end local v0    # "type":I
     :sswitch_9
     const/4 v0, 0x5
 
-    .line 282
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 284
     .end local v0    # "type":I
     :sswitch_a
     const/4 v0, 0x6
 
-    .line 285
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 287
     .end local v0    # "type":I
     :sswitch_b
     const/4 v0, 0x7
 
-    .line 288
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 290
     .end local v0    # "type":I
     :sswitch_c
     const/16 v0, 0xd
 
-    .line 291
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 293
     .end local v0    # "type":I
     :sswitch_d
     const/16 v0, 0xe
 
-    .line 294
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 296
     .end local v0    # "type":I
     :sswitch_e
     const/16 v0, 0xf
 
-    .line 297
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 299
     .end local v0    # "type":I
     :sswitch_f
     const/16 v0, 0x10
 
-    .line 300
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 302
     .end local v0    # "type":I
     :sswitch_10
     const/16 v0, 0x11
 
-    .line 303
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 305
     .end local v0    # "type":I
     :sswitch_11
     const/16 v0, 0x12
 
-    .line 306
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 308
     .end local v0    # "type":I
     :sswitch_12
     const/16 v0, 0x13
 
-    .line 309
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 311
     .end local v0    # "type":I
     :sswitch_13
     const/16 v0, 0x14
 
-    .line 312
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 314
     .end local v0    # "type":I
     :sswitch_14
     const/16 v0, 0x15
 
-    .line 315
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 317
     .end local v0    # "type":I
     :sswitch_15
     const/16 v0, 0x16
 
-    .line 318
     .restart local v0    # "type":I
     goto :goto_0
 
-    .line 252
     nop
 
     :sswitch_data_0
@@ -418,235 +358,183 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 150
     packed-switch p0, :pswitch_data_0
 
-    .line 226
     :pswitch_0
     const/4 v0, 0x1
 
-    .line 230
     .local v0, "raf":I
     :goto_0
     return v0
 
-    .line 152
     .end local v0    # "raf":I
     :pswitch_1
     const v0, 0x18e0e
 
-    .line 153
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 155
     .end local v0    # "raf":I
     :pswitch_2
     const v0, 0x10006
 
-    .line 156
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 158
     .end local v0    # "raf":I
     :pswitch_3
     const v0, 0x8e08
 
-    .line 159
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 161
     .end local v0    # "raf":I
     :pswitch_4
     const v0, 0x18e0e
 
-    .line 162
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 164
     .end local v0    # "raf":I
     :pswitch_5
     const/16 v0, 0x31f0
 
-    .line 165
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 167
     .end local v0    # "raf":I
     :pswitch_6
     const v0, 0x871f0
 
-    .line 168
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 170
     .end local v0    # "raf":I
     :pswitch_7
     const v0, 0x9ce0e
 
-    .line 171
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 173
     .end local v0    # "raf":I
     :pswitch_8
     const v0, 0x9fffe
 
-    .line 174
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 176
     .end local v0    # "raf":I
     :pswitch_9
     const v0, 0x84000
 
-    .line 177
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 179
     .end local v0    # "raf":I
     :pswitch_a
     const v0, 0x8ce08
 
-    .line 180
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 182
     .end local v0    # "raf":I
     :pswitch_b
     const/16 v0, 0x70
 
-    .line 183
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 185
     .end local v0    # "raf":I
     :pswitch_c
     const/16 v0, 0x3180
 
-    .line 186
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 188
     .end local v0    # "raf":I
     :pswitch_d
     const v0, 0x1bffe
 
-    .line 189
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 191
     .end local v0    # "raf":I
     :pswitch_e
     const/high16 v0, 0x20000
 
-    .line 192
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 194
     .end local v0    # "raf":I
     :pswitch_f
     const v0, 0x28e08
 
-    .line 195
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 197
     .end local v0    # "raf":I
     :pswitch_10
     const v0, 0xa4000
 
-    .line 198
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 200
     .end local v0    # "raf":I
     :pswitch_11
     const v0, 0x30006
 
-    .line 201
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 203
     .end local v0    # "raf":I
     :pswitch_12
     const v0, 0xb4006
 
-    .line 204
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 206
     .end local v0    # "raf":I
     :pswitch_13
     const v0, 0x38e0e
 
-    .line 207
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 209
     .end local v0    # "raf":I
     :pswitch_14
     const v0, 0xace08
 
-    .line 210
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 212
     .end local v0    # "raf":I
     :pswitch_15
     const v0, 0xbce0e
 
-    .line 213
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 215
     .end local v0    # "raf":I
     :pswitch_16
     const v0, 0x3bffe
 
-    .line 216
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 218
     .end local v0    # "raf":I
     :pswitch_17
     const v0, 0xbfffe
 
-    .line 219
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 222
     .end local v0    # "raf":I
     :pswitch_18
     const v0, 0x10076    # 9.2001E-41f
 
-    .line 223
     .restart local v0    # "raf":I
     goto :goto_0
 
-    .line 150
     nop
 
     :pswitch_data_0
@@ -686,23 +574,19 @@
     .param p0, "rafList"    # Ljava/lang/String;
 
     .prologue
-    .line 356
     invoke-virtual {p0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 357
     const-string v7, "\\|"
 
     invoke-virtual {p0, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 358
     .local v5, "rafs":[Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 359
     .local v6, "result":I
     move-object v0, v5
 
@@ -718,7 +602,6 @@
 
     aget-object v3, v0, v1
 
-    .line 360
     .local v3, "raf":Ljava/lang/String;
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -728,25 +611,21 @@
 
     move-result v4
 
-    .line 361
     .local v4, "rafType":I
     const/4 v7, 0x1
 
     if-ne v4, v7, :cond_0
 
-    .line 364
     .end local v3    # "raf":Ljava/lang/String;
     .end local v4    # "rafType":I
     :goto_1
     return v4
 
-    .line 362
     .restart local v3    # "raf":Ljava/lang/String;
     .restart local v4    # "rafType":I
     :cond_0
     or-int/2addr v6, v4
 
-    .line 359
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -756,7 +635,6 @@
     :cond_1
     move v4, v6
 
-    .line 364
     goto :goto_1
 .end method
 
@@ -775,7 +653,6 @@
 
     const/4 v4, 0x1
 
-    .line 328
     const/4 v5, -0x1
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -790,12 +667,10 @@
 
     move v0, v4
 
-    .line 351
     :goto_1
     :pswitch_0
     return v0
 
-    .line 328
     :sswitch_0
     const-string v6, "GPRS"
 
@@ -1085,130 +960,108 @@
     :pswitch_1
     move v0, v1
 
-    .line 330
     goto/16 :goto_1
 
     :pswitch_2
     move v0, v2
 
-    .line 331
     goto/16 :goto_1
 
     :pswitch_3
     move v0, v3
 
-    .line 332
     goto/16 :goto_1
 
-    .line 333
     :pswitch_4
     const/16 v0, 0x20
 
     goto/16 :goto_1
 
-    .line 334
     :pswitch_5
     const/16 v0, 0x40
 
     goto/16 :goto_1
 
-    .line 335
     :pswitch_6
     const/16 v0, 0x80
 
     goto/16 :goto_1
 
-    .line 336
     :pswitch_7
     const/16 v0, 0x100
 
     goto/16 :goto_1
 
-    .line 337
     :pswitch_8
     const/16 v0, 0x200
 
     goto/16 :goto_1
 
-    .line 338
     :pswitch_9
     const/16 v0, 0x400
 
     goto/16 :goto_1
 
-    .line 339
     :pswitch_a
     const/16 v0, 0x800
 
     goto/16 :goto_1
 
-    .line 340
     :pswitch_b
     const/16 v0, 0x1000
 
     goto/16 :goto_1
 
-    .line 341
     :pswitch_c
     const/16 v0, 0x2000
 
     goto/16 :goto_1
 
-    .line 342
     :pswitch_d
     const/16 v0, 0x4000
 
     goto/16 :goto_1
 
-    .line 343
     :pswitch_e
     const v0, 0x8000
 
     goto/16 :goto_1
 
-    .line 344
     :pswitch_f
     const/high16 v0, 0x10000
 
     goto/16 :goto_1
 
-    .line 345
     :pswitch_10
     const/high16 v0, 0x20000
 
     goto/16 :goto_1
 
-    .line 346
     :pswitch_11
     const v0, 0x8e00
 
     goto/16 :goto_1
 
-    .line 347
     :pswitch_12
     const/16 v0, 0x70
 
     goto/16 :goto_1
 
-    .line 348
     :pswitch_13
     const/16 v0, 0x3180
 
     goto/16 :goto_1
 
-    .line 349
     :pswitch_14
     const v0, 0x8e08
 
     goto/16 :goto_1
 
-    .line 350
     :pswitch_15
     const/high16 v0, 0x80000
 
     goto/16 :goto_1
 
-    .line 328
     :sswitch_data_0
     .sparse-switch
         -0x798f2fe0 -> :sswitch_15
@@ -1268,7 +1121,6 @@
     .locals 1
 
     .prologue
-    .line 112
     const/4 v0, 0x0
 
     return v0
@@ -1278,7 +1130,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget v0, p0, Landroid/telephony/RadioAccessFamily;->mPhoneId:I
 
     return v0
@@ -1288,7 +1139,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget v0, p0, Landroid/telephony/RadioAccessFamily;->mRadioAccessFamily:I
 
     return v0
@@ -1298,12 +1148,11 @@
     .locals 3
 
     .prologue
-    .line 99
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "{ mPhoneId = "
+    const-string v2, "{ mPhoneId = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1327,7 +1176,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "}"
+    const-string v2, "}"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1337,7 +1186,6 @@
 
     move-result-object v0
 
-    .line 102
     .local v0, "ret":Ljava/lang/String;
     return-object v0
 .end method
@@ -1348,16 +1196,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 123
     iget v0, p0, Landroid/telephony/RadioAccessFamily;->mPhoneId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 124
     iget v0, p0, Landroid/telephony/RadioAccessFamily;->mRadioAccessFamily:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 125
     return-void
 .end method

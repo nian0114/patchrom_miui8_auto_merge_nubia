@@ -51,22 +51,17 @@
     .end annotation
 
     .prologue
-    .line 1029
     .local p6, "array":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;>;"
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1030
     iput-wide p2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->defaultDelay:J
 
-    .line 1031
     iput-wide p4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->screenDelay:J
 
-    .line 1032
     iput-object p6, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->array:Ljava/util/HashMap;
 
-    .line 1033
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
 
     .prologue
-    .line 1024
     iget-wide v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->defaultDelay:J
 
     return-wide v0
@@ -87,7 +81,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 1024
     iput-wide p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->defaultDelay:J
 
     return-wide p1
@@ -98,7 +91,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
 
     .prologue
-    .line 1024
     iget-wide v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->screenDelay:J
 
     return-wide v0
@@ -110,7 +102,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 1024
     iput-wide p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->screenDelay:J
 
     return-wide p1
@@ -121,7 +112,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;
 
     .prologue
-    .line 1024
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$XmlData;->array:Ljava/util/HashMap;
 
     return-object v0

@@ -128,36 +128,28 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 112
     invoke-direct {p0, p1}, Lcn/nubia/server/NubiaSystemService;-><init>(Landroid/content/Context;)V
 
-    .line 35
     iput-boolean v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->bootCompleted:Z
 
-    .line 36
     iput-boolean v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->shutdown:Z
 
-    .line 37
     iput-boolean v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mInit:Z
 
-    .line 205
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightService$1;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/breathinglight/BreathingLightService$1;-><init>(Lcn/nubia/server/breathinglight/BreathingLightService;)V
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mMainHandler:Landroid/os/Handler;
 
-    .line 216
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightService$2;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/breathinglight/BreathingLightService$2;-><init>(Lcn/nubia/server/breathinglight/BreathingLightService;)V
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mSystemReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 113
     iput-object p1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mContext:Landroid/content/Context;
 
-    .line 115
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "BreathLightCallJNI"
@@ -166,12 +158,10 @@
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mCallJNIThread:Landroid/os/HandlerThread;
 
-    .line 116
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mCallJNIThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 117
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightService$CallJNIHandler;
 
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mCallJNIThread:Landroid/os/HandlerThread;
@@ -184,7 +174,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mCallJNIHandler:Lcn/nubia/server/breathinglight/BreathingLightService$CallJNIHandler;
 
-    .line 118
     return-void
 .end method
 
@@ -193,7 +182,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightService;
 
     .prologue
-    .line 22
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mMissEventObserver:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     return-object v0
@@ -204,7 +192,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightService;
 
     .prologue
-    .line 22
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightService;->bootCompleted()V
 
     return-void
@@ -215,7 +202,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightService;
 
     .prologue
-    .line 22
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mStateMachine:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     return-object v0
@@ -226,7 +212,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightService;
 
     .prologue
-    .line 22
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     return-object v0
@@ -237,7 +222,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightService;
 
     .prologue
-    .line 22
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mMainHandler:Landroid/os/Handler;
 
     return-object v0
@@ -249,7 +233,6 @@
     .param p1, "x1"    # Landroid/content/Intent;
 
     .prologue
-    .line 22
     invoke-direct {p0, p1}, Lcn/nubia/server/breathinglight/BreathingLightService;->hadleBatteryChange(Landroid/content/Intent;)V
 
     return-void
@@ -259,29 +242,24 @@
     .locals 2
 
     .prologue
-    .line 169
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->bootCompleted:Z
 
-    .line 170
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mStateMachine:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->sendMessage(I)V
 
-    .line 172
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->handleBootCompeleted()V
 
-    .line 173
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mMissEventObserver:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/MissEventObserver;->handleBootCompleted()V
 
-    .line 174
     return-void
 .end method
 
@@ -292,22 +270,17 @@
     .param p3, "maxTime"    # I
 
     .prologue
-    .line 287
     if-ge p1, p2, :cond_1
 
-    .line 288
     move p1, p2
 
-    .line 292
     :cond_0
     :goto_0
     return p1
 
-    .line 289
     :cond_1
     if-le p1, p3, :cond_0
 
-    .line 290
     move p1, p3
 
     goto :goto_0
@@ -320,7 +293,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 249
     invoke-virtual {p0}, Lcn/nubia/server/breathinglight/BreathingLightService;->isChargeSwitchEnable()Z
 
     move-result v3
@@ -335,14 +307,12 @@
 
     if-nez v3, :cond_0
 
-    .line 250
     const-string v3, "plugged"
 
     invoke-virtual {p1, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 252
     .local v1, "plugged":I
     const-string v3, "level"
 
@@ -350,7 +320,6 @@
 
     move-result v0
 
-    .line 253
     .local v0, "level":I
     const-string v3, "status"
 
@@ -360,7 +329,6 @@
 
     move-result v2
 
-    .line 256
     .local v2, "status":I
     if-lez v1, :cond_1
 
@@ -368,12 +336,10 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 257
     const/16 v3, 0x6a
 
     invoke-virtual {p0, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->sendRequestToStateMachine(I)V
 
-    .line 263
     .end local v0    # "level":I
     .end local v1    # "plugged":I
     .end local v2    # "status":I
@@ -381,7 +347,6 @@
     :goto_0
     return-void
 
-    .line 258
     .restart local v0    # "level":I
     .restart local v1    # "plugged":I
     .restart local v2    # "status":I
@@ -396,7 +361,6 @@
 
     if-lt v0, v3, :cond_0
 
-    .line 260
     :cond_2
     const/16 v3, 0x6b
 
@@ -413,15 +377,12 @@
 
     const/4 v3, 0x0
 
-    .line 145
     iput-boolean v2, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->shutdown:Z
 
-    .line 146
     const/16 v0, 0x28
 
     invoke-virtual {p0, v0, v3, v3, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 147
     const/16 v0, 0x10
 
     const/4 v1, 0x4
@@ -432,7 +393,6 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 149
     return-void
 .end method
 
@@ -444,7 +404,6 @@
     .prologue
     const/16 v3, 0x64
 
-    .line 193
     invoke-virtual {p0}, Lcn/nubia/server/breathinglight/BreathingLightService;->isChargeSwitchEnable()Z
 
     move-result v2
@@ -459,14 +418,12 @@
 
     if-nez v2, :cond_0
 
-    .line 194
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mBatteryManagerInternal:Landroid/os/BatteryManagerInternal;
 
     invoke-virtual {v2}, Landroid/os/BatteryManagerInternal;->getPlugType()I
 
     move-result v1
 
-    .line 195
     .local v1, "plugged":I
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mBatteryManagerInternal:Landroid/os/BatteryManagerInternal;
 
@@ -474,25 +431,21 @@
 
     move-result v0
 
-    .line 197
     .local v0, "level":I
     if-lez v1, :cond_1
 
     if-ge v0, v3, :cond_1
 
-    .line 198
     const/16 v2, 0x6a
 
     invoke-virtual {p0, v2}, Lcn/nubia/server/breathinglight/BreathingLightService;->sendRequestToStateMachine(I)V
 
-    .line 203
     .end local v0    # "level":I
     .end local v1    # "plugged":I
     :cond_0
     :goto_0
     return-void
 
-    .line 199
     .restart local v0    # "level":I
     .restart local v1    # "plugged":I
     :cond_1
@@ -500,7 +453,6 @@
 
     if-lt v0, v3, :cond_0
 
-    .line 200
     const/16 v2, 0x6b
 
     invoke-virtual {p0, v2}, Lcn/nubia/server/breathinglight/BreathingLightService;->sendRequestToStateMachine(I)V
@@ -515,7 +467,6 @@
     .locals 1
 
     .prologue
-    .line 270
     invoke-virtual {p0}, Lcn/nubia/server/breathinglight/BreathingLightService;->getMinGradeJNI()I
 
     move-result v0
@@ -534,24 +485,20 @@
 
     const/4 v1, 0x0
 
-    .line 275
     const/4 v0, 0x5
 
     invoke-direct {p0, p1, v1, v0}, Lcn/nubia/server/breathinglight/BreathingLightService;->getCheckTime(III)I
 
     move-result p1
 
-    .line 278
     invoke-direct {p0, p2, v1, v2}, Lcn/nubia/server/breathinglight/BreathingLightService;->getCheckTime(III)I
 
     move-result p2
 
-    .line 281
     invoke-direct {p0, p3, v1, v2}, Lcn/nubia/server/breathinglight/BreathingLightService;->getCheckTime(III)I
 
     move-result p3
 
-    .line 283
     shl-int/lit8 v0, p1, 0x8
 
     shl-int/lit8 v1, p2, 0x4
@@ -570,7 +517,6 @@
     .locals 2
 
     .prologue
-    .line 364
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightService$BinderService;
 
     const/4 v1, 0x0
@@ -584,7 +530,6 @@
     .locals 1
 
     .prologue
-    .line 359
     const-string v0, "nubia.breathinglight"
 
     return-object v0
@@ -594,7 +539,6 @@
     .locals 5
 
     .prologue
-    .line 122
     const-string v1, "notification"
 
     invoke-virtual {p0, v1}, Lcn/nubia/server/breathinglight/BreathingLightService;->getBinderService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -607,7 +551,6 @@
 
     iput-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mNotifition:Landroid/app/INotificationManager;
 
-    .line 124
     const-class v1, Landroid/os/BatteryManagerInternal;
 
     invoke-virtual {p0, v1}, Lcn/nubia/server/breathinglight/BreathingLightService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -618,45 +561,37 @@
 
     iput-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mBatteryManagerInternal:Landroid/os/BatteryManagerInternal;
 
-    .line 126
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 127
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 128
     const-string v1, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 129
     const-string v1, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 130
     const-string v1, "android.intent.action.USER_PRESENT"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 131
     const-string v1, "android.intent.action.BATTERY_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 132
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mSystemReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 134
     new-instance v1, Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mContext:Landroid/content/Context;
@@ -665,7 +600,6 @@
 
     iput-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
-    .line 135
     new-instance v1, Lcn/nubia/server/breathinglight/MissEventObserver;
 
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mContext:Landroid/content/Context;
@@ -678,7 +612,6 @@
 
     iput-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mMissEventObserver:Lcn/nubia/server/breathinglight/MissEventObserver;
 
-    .line 138
     new-instance v1, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mContext:Landroid/content/Context;
@@ -687,17 +620,14 @@
 
     iput-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mStateMachine:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
-    .line 139
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mStateMachine:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     invoke-virtual {v1}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->start()V
 
-    .line 141
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mInit:Z
 
-    .line 142
     return-void
 .end method
 
@@ -705,7 +635,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget-boolean v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->bootCompleted:Z
 
     return v0
@@ -715,7 +644,6 @@
     .locals 1
 
     .prologue
-    .line 177
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->isBreathingLightTouchEnable()Z
@@ -729,7 +657,6 @@
     .locals 1
 
     .prologue
-    .line 185
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->isChargeSwitchEnable()Z
@@ -743,7 +670,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->isSingleUiModeEnable()Z
@@ -757,12 +683,10 @@
     .locals 1
 
     .prologue
-    .line 189
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mMissEventObserver:Lcn/nubia/server/breathinglight/MissEventObserver;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/MissEventObserver;->setNoDisturb()V
 
-    .line 190
     return-void
 .end method
 
@@ -771,15 +695,12 @@
     .param p1, "phase"    # I
 
     .prologue
-    .line 352
     const/16 v0, 0x226
 
     if-ne p1, v0, :cond_0
 
-    .line 353
     invoke-virtual {p0}, Lcn/nubia/server/breathinglight/BreathingLightService;->init()V
 
-    .line 355
     :cond_0
     return-void
 .end method
@@ -793,7 +714,6 @@
     .param p5, "color"    # I
 
     .prologue
-    .line 419
     return-void
 .end method
 
@@ -802,30 +722,25 @@
     .param p1, "known"    # I
 
     .prologue
-    .line 368
     iget-boolean v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->shutdown:Z
 
     if-eqz v0, :cond_1
 
-    .line 369
     const-string v0, "BreathingLightService"
 
     const-string v1, "reject all request when shutdown!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     :cond_0
     :goto_0
     return-void
 
-    .line 373
     :cond_1
     iget-boolean v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mInit:Z
 
     if-nez v0, :cond_2
 
-    .line 374
     const-string v0, "BreathingLightService"
 
     const-string v1, "reject all request when the breathing Light is not init!"
@@ -834,7 +749,6 @@
 
     goto :goto_0
 
-    .line 379
     :cond_2
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
@@ -848,7 +762,6 @@
 
     if-eq p1, v0, :cond_3
 
-    .line 380
     const-string v0, "BreathingLightService"
 
     const-string v1, "reject all request when single ui mode except shutdown!"
@@ -857,11 +770,9 @@
 
     goto :goto_0
 
-    .line 385
     :cond_3
     packed-switch p1, :pswitch_data_0
 
-    .line 412
     const-string v0, "BreathingLightService"
 
     const-string v1, "Unknown request type!"
@@ -870,7 +781,6 @@
 
     goto :goto_0
 
-    .line 387
     :pswitch_0
     const/16 v0, 0x64
 
@@ -878,7 +788,6 @@
 
     goto :goto_0
 
-    .line 390
     :pswitch_1
     const/16 v0, 0x65
 
@@ -886,7 +795,6 @@
 
     goto :goto_0
 
-    .line 393
     :pswitch_2
     invoke-virtual {p0}, Lcn/nubia/server/breathinglight/BreathingLightService;->isBreathingLightTouchEnable()Z
 
@@ -894,14 +802,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 394
     const/16 v0, 0x66
 
     invoke-virtual {p0, v0}, Lcn/nubia/server/breathinglight/BreathingLightService;->sendRequestToStateMachine(I)V
 
     goto :goto_0
 
-    .line 398
     :pswitch_3
     invoke-virtual {p0}, Lcn/nubia/server/breathinglight/BreathingLightService;->isBreathingLightTouchEnable()Z
 
@@ -909,20 +815,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 399
     const/16 v0, 0x67
 
     invoke-virtual {p0, v0}, Lcn/nubia/server/breathinglight/BreathingLightService;->sendRequestToStateMachine(I)V
 
     goto :goto_0
 
-    .line 403
     :pswitch_4
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightService;->setLightWhenShutdown()V
 
     goto :goto_0
 
-    .line 406
     :pswitch_5
     const/16 v0, 0x6d
 
@@ -930,7 +833,6 @@
 
     goto :goto_0
 
-    .line 409
     :pswitch_6
     const/16 v0, 0x6e
 
@@ -938,7 +840,6 @@
 
     goto :goto_0
 
-    .line 385
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -956,12 +857,10 @@
     .param p1, "what"    # I
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mStateMachine:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->sendMessage(I)V
 
-    .line 153
     return-void
 .end method
 
@@ -973,29 +872,23 @@
     .param p4, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 157
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mStateMachine:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     invoke-virtual {v1, p1}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 158
     .local v0, "msg":Landroid/os/Message;
     iput p2, v0, Landroid/os/Message;->arg1:I
 
-    .line 159
     iput p3, v0, Landroid/os/Message;->arg2:I
 
-    .line 160
     iput-object p4, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 161
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mStateMachine:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     invoke-virtual {v1, v0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->sendMessage(Landroid/os/Message;)V
 
-    .line 162
     return-void
 .end method
 
@@ -1010,7 +903,6 @@
     .param p4, "color"    # I
 
     .prologue
-    .line 297
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mCallJNIHandler:Lcn/nubia/server/breathinglight/BreathingLightService$CallJNIHandler;
 
     invoke-virtual {v2}, Lcn/nubia/server/breathinglight/BreathingLightService$CallJNIHandler;->isPocessing()Z
@@ -1035,56 +927,45 @@
 
     if-ne v2, p3, :cond_0
 
-    .line 300
     const-string v2, "BreathingLightService"
 
     const-string v3, "setBreathingLightState: repeated process!"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
     :goto_0
     return-void
 
-    .line 304
     :cond_0
     iput p2, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mLastMode:I
 
-    .line 305
     iput p1, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mLastLights:I
 
-    .line 306
     iput p3, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mLastFrequency:I
 
-    .line 308
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 309
     .local v0, "data":Landroid/os/Bundle;
     const-string v2, "light"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 310
     const-string v2, "mode"
 
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 311
     const-string v2, "frequency"
 
     invoke-virtual {v0, v2, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 312
     const-string v2, "color"
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 314
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mCallJNIHandler:Lcn/nubia/server/breathinglight/BreathingLightService$CallJNIHandler;
 
     const/16 v3, 0x64
@@ -1093,11 +974,9 @@
 
     move-result-object v1
 
-    .line 316
     .local v1, "msg":Landroid/os/Message;
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 317
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightService;->mCallJNIHandler:Lcn/nubia/server/breathinglight/BreathingLightService$CallJNIHandler;
 
     invoke-virtual {v2, v1}, Lcn/nubia/server/breathinglight/BreathingLightService$CallJNIHandler;->sendMessage(Landroid/os/Message;)Z
@@ -1110,10 +989,8 @@
     .param p1, "brightness"    # I
 
     .prologue
-    .line 266
     invoke-virtual {p0, p1}, Lcn/nubia/server/breathinglight/BreathingLightService;->setMinGradeJNI(I)V
 
-    .line 267
     return-void
 .end method
 

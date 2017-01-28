@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 335
     iput-object p1, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$DefaultState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 338
     const-string v0, "FitActionStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -84,7 +82,6 @@
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->sysi(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 340
     const/4 v0, 0x1
 
     return v0

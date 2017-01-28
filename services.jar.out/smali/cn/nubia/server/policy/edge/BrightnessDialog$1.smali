@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 94
     iput-object p1, p0, Lcn/nubia/server/policy/edge/BrightnessDialog$1;->this$0:Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,12 +39,10 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcn/nubia/server/policy/edge/BrightnessDialog$1;->this$0:Lcn/nubia/server/policy/edge/BrightnessDialog;
 
     # invokes: Lcn/nubia/server/policy/edge/BrightnessDialog;->updateView()V
     invoke-static {v0}, Lcn/nubia/server/policy/edge/BrightnessDialog;->access$300(Lcn/nubia/server/policy/edge/BrightnessDialog;)V
 
-    .line 98
     return-void
 .end method

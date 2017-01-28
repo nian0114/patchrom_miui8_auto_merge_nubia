@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 130
     iput-object p1, p0, Lnubia/util/FrameworkDataStatisticsManager$1;->this$0:Lnubia/util/FrameworkDataStatisticsManager;
 
     iput-object p2, p0, Lnubia/util/FrameworkDataStatisticsManager$1;->val$r:Lnubia/util/FrameworkDataStatisticsManager$ServiceRunnable;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 133
     iget-object v0, p0, Lnubia/util/FrameworkDataStatisticsManager$1;->this$0:Lnubia/util/FrameworkDataStatisticsManager;
 
     # getter for: Lnubia/util/FrameworkDataStatisticsManager;->mRunnableQ:Ljava/util/LinkedList;
@@ -56,12 +54,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
-    .line 134
     iget-object v0, p0, Lnubia/util/FrameworkDataStatisticsManager$1;->this$0:Lnubia/util/FrameworkDataStatisticsManager;
 
     # invokes: Lnubia/util/FrameworkDataStatisticsManager;->scheduleNextRun()V
     invoke-static {v0}, Lnubia/util/FrameworkDataStatisticsManager;->access$300(Lnubia/util/FrameworkDataStatisticsManager;)V
 
-    .line 135
     return-void
 .end method

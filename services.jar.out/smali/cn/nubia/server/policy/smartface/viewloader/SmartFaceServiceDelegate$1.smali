@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 31
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate$1;->this$0:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 35
     const-string v0, "SmartFaceServiceDelegate"
 
     const-string v1, "*** SmartFace connected (yay!)"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate$1;->this$0:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     new-instance v1, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;
@@ -63,7 +60,6 @@
     # setter for: Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->mSmartFaceService:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;
     invoke-static {v0, v1}, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->access$002(Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;)Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;
 
-    .line 38
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate$1;->this$0:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     new-instance v1, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate$SmartFaceCallbackDelegate;
@@ -76,7 +72,6 @@
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->setSmartFaceCallback(Lnubia/os/ISmartFaceCallback;)V
 
-    .line 39
     return-void
 .end method
 
@@ -85,14 +80,12 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 44
     const-string v0, "SmartFaceServiceDelegate"
 
     const-string v1, "*** SmartFace disconnected (boo!)"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate$1;->this$0:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     const/4 v1, 0x0
@@ -100,12 +93,10 @@
     # setter for: Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->mSmartFaceService:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;
     invoke-static {v0, v1}, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->access$002(Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;)Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceWrapper;
 
-    .line 46
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate$1;->this$0:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     # invokes: Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->resetStates()V
     invoke-static {v0}, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->access$200(Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;)V
 
-    .line 47
     return-void
 .end method

@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 825
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DcTracker$RetryFailures;
 
     const-string v1, "ALWAYS"
@@ -49,7 +48,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/DcTracker$RetryFailures;->ALWAYS:Lcom/android/internal/telephony/dataconnection/DcTracker$RetryFailures;
 
-    .line 829
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DcTracker$RetryFailures;
 
     const-string v1, "ONLY_ON_CHANGE"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/DcTracker$RetryFailures;->ONLY_ON_CHANGE:Lcom/android/internal/telephony/dataconnection/DcTracker$RetryFailures;
 
-    .line 823
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/android/internal/telephony/dataconnection/DcTracker$RetryFailures;
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 823
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +92,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 823
     const-class v0, Lcom/android/internal/telephony/dataconnection/DcTracker$RetryFailures;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 823
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcTracker$RetryFailures;->$VALUES:[Lcom/android/internal/telephony/dataconnection/DcTracker$RetryFailures;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/dataconnection/DcTracker$RetryFailures;->clone()Ljava/lang/Object;

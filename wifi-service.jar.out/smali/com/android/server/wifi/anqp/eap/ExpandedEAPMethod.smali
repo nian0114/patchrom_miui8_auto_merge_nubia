@@ -22,19 +22,14 @@
     .param p3, "vendorType"    # J
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object p1, p0, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;->mAuthInfoID:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    .line 40
     iput p2, p0, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;->mVendorID:I
 
-    .line 41
     iput-wide p3, p0, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;->mVendorType:J
 
-    .line 42
     return-void
 .end method
 
@@ -50,15 +45,12 @@
     .end annotation
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     const/4 v2, 0x7
 
     if-eq p2, v2, :cond_0
 
-    .line 23
     new-instance v2, Ljava/net/ProtocolException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -87,11 +79,9 @@
 
     throw v2
 
-    .line 26
     :cond_0
     iput-object p1, p0, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;->mAuthInfoID:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    .line 28
     invoke-virtual {p3}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v2
@@ -102,7 +92,6 @@
 
     move-result-object v1
 
-    .line 30
     .local v1, "vndBuffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -112,7 +101,6 @@
 
     and-int v0, v2, v3
 
-    .line 31
     .local v0, "id":I
     shl-int/lit8 v2, v0, 0x8
 
@@ -124,10 +112,8 @@
 
     or-int v0, v2, v3
 
-    .line 32
     iput v0, p0, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;->mVendorID:I
 
-    .line 33
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v2
@@ -140,7 +126,6 @@
 
     iput-wide v2, p0, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;->mVendorType:J
 
-    .line 35
     invoke-virtual {p3}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v2
@@ -149,7 +134,6 @@
 
     invoke-virtual {p3, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 36
     return-void
 .end method
 
@@ -164,15 +148,12 @@
 
     const/4 v2, 0x0
 
-    .line 56
     if-ne p1, p0, :cond_1
 
-    .line 62
     :cond_0
     :goto_0
     return v1
 
-    .line 58
     :cond_1
     if-eqz p1, :cond_2
 
@@ -187,16 +168,13 @@
     :cond_2
     move v1, v2
 
-    .line 59
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 61
     check-cast v0, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;
 
-    .line 62
     .local v0, "that":Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;
     invoke-virtual {v0}, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;->getVendorID()I
 
@@ -230,7 +208,6 @@
     .locals 1
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;->mAuthInfoID:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
     return-object v0
@@ -240,7 +217,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget v0, p0, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;->mVendorID:I
 
     return v0
@@ -250,7 +226,6 @@
     .locals 2
 
     .prologue
-    .line 71
     iget-wide v0, p0, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;->mVendorType:J
 
     return-wide v0
@@ -260,7 +235,6 @@
     .locals 4
 
     .prologue
-    .line 51
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;->mAuthInfoID:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->hashCode()I
@@ -288,7 +262,6 @@
     .locals 4
 
     .prologue
-    .line 76
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 328
     iput-object p1, p0, Lcom/android/server/policy/NubiaSlideView$4;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     iput p2, p0, Lcom/android/server/policy/NubiaSlideView$4;->val$alpha:I
@@ -53,7 +52,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 331
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -64,7 +62,6 @@
 
     move-result v0
 
-    .line 332
     .local v0, "fra":F
     iget-object v2, p0, Lcom/android/server/policy/NubiaSlideView$4;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
@@ -91,7 +88,6 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 333
     iget-object v2, p0, Lcom/android/server/policy/NubiaSlideView$4;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     # getter for: Lcom/android/server/policy/NubiaSlideView;->mMaxScrollerDistance:F
@@ -121,7 +117,6 @@
 
     if-gtz v2, :cond_0
 
-    .line 334
     iget-object v2, p0, Lcom/android/server/policy/NubiaSlideView$4;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     # getter for: Lcom/android/server/policy/NubiaSlideView;->mTextPaint:Landroid/graphics/Paint;
@@ -147,7 +142,6 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 336
     :cond_0
     iget-object v2, p0, Lcom/android/server/policy/NubiaSlideView$4;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
@@ -171,12 +165,10 @@
     # setter for: Lcom/android/server/policy/NubiaSlideView;->mShift:F
     invoke-static {v2, v3}, Lcom/android/server/policy/NubiaSlideView;->access$302(Lcom/android/server/policy/NubiaSlideView;F)F
 
-    .line 337
     iget-object v2, p0, Lcom/android/server/policy/NubiaSlideView$4;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     invoke-virtual {v2}, Lcom/android/server/policy/NubiaSlideView;->invalidate()V
 
-    .line 339
     iget-object v2, p0, Lcom/android/server/policy/NubiaSlideView$4;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     # getter for: Lcom/android/server/policy/NubiaSlideView;->mMsgFlag:I
@@ -186,23 +178,19 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 353
     :goto_0
     return-void
 
-    .line 341
     :pswitch_0
     new-instance v1, Landroid/os/Message;
 
     invoke-direct {v1}, Landroid/os/Message;-><init>()V
 
-    .line 342
     .local v1, "msg":Landroid/os/Message;
     const/16 v2, 0x1234
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 343
     iget-object v2, p0, Lcom/android/server/policy/NubiaSlideView$4;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     # getter for: Lcom/android/server/policy/NubiaSlideView;->mHandler:Landroid/os/Handler;
@@ -214,20 +202,17 @@
 
     goto :goto_0
 
-    .line 346
     .end local v1    # "msg":Landroid/os/Message;
     :pswitch_1
     new-instance v1, Landroid/os/Message;
 
     invoke-direct {v1}, Landroid/os/Message;-><init>()V
 
-    .line 347
     .restart local v1    # "msg":Landroid/os/Message;
     const/16 v2, 0x1235
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 348
     iget-object v2, p0, Lcom/android/server/policy/NubiaSlideView$4;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     # getter for: Lcom/android/server/policy/NubiaSlideView;->mHandler:Landroid/os/Handler;
@@ -239,7 +224,6 @@
 
     goto :goto_0
 
-    .line 339
     nop
 
     :pswitch_data_0

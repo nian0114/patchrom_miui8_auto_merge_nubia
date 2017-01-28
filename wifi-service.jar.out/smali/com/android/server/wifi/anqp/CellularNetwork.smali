@@ -55,28 +55,23 @@
 
     const/4 v8, 0x0
 
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5, p1}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v5, p0, Lcom/android/server/wifi/anqp/CellularNetwork;->mMccMnc:Ljava/util/List;
 
-    .line 19
     :goto_0
     if-lez p1, :cond_2
 
-    .line 20
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v5
 
     if-ge v5, v11, :cond_0
 
-    .line 21
     new-instance v5, Ljava/net/ProtocolException;
 
     const-string v6, "Truncated PLMN info"
@@ -85,15 +80,12 @@
 
     throw v5
 
-    .line 23
     :cond_0
     new-array v4, v11, [B
 
-    .line 24
     .local v4, "plmn":[B
     invoke-virtual {p2, v4}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 26
     aget-byte v5, v4, v8
 
     shl-int/lit8 v5, v5, 0x8
@@ -112,7 +104,6 @@
 
     or-int v0, v5, v6
 
-    .line 30
     .local v0, "mcc":I
     aget-byte v5, v4, v10
 
@@ -128,7 +119,6 @@
 
     or-int v2, v5, v6
 
-    .line 33
     .local v2, "mnc":I
     aget-byte v5, v4, v9
 
@@ -136,7 +126,6 @@
 
     and-int/lit8 v3, v5, 0xf
 
-    .line 34
     .local v3, "n2":I
     const/16 v5, 0xf
 
@@ -166,20 +155,16 @@
 
     move-result-object v1
 
-    .line 38
     .local v1, "mccMnc":Ljava/lang/String;
     :goto_1
     iget-object v5, p0, Lcom/android/server/wifi/anqp/CellularNetwork;->mMccMnc:Ljava/util/List;
 
     invoke-interface {v5, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 39
     add-int/lit8 p1, p1, -0x1
 
-    .line 40
     goto :goto_0
 
-    .line 34
     .end local v1    # "mccMnc":Ljava/lang/String;
     :cond_1
     const-string v5, "%03x%02x"
@@ -204,7 +189,6 @@
 
     goto :goto_1
 
-    .line 41
     .end local v0    # "mcc":I
     .end local v2    # "mnc":I
     .end local v3    # "n2":I
@@ -223,14 +207,12 @@
     .end annotation
 
     .prologue
-    .line 45
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v3
 
     and-int/lit16 v0, v3, 0xff
 
-    .line 46
     .local v0, "iei":I
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->get()B
 
@@ -238,11 +220,9 @@
 
     and-int/lit8 v2, v3, 0x7f
 
-    .line 48
     .local v2, "plmnLen":I
     if-eqz v0, :cond_0
 
-    .line 49
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v3
@@ -251,14 +231,11 @@
 
     invoke-virtual {p0, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 50
     const/4 v3, 0x0
 
-    .line 54
     :goto_0
     return-object v3
 
-    .line 53
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->get()B
 
@@ -266,7 +243,6 @@
 
     and-int/lit16 v1, v3, 0xff
 
-    .line 54
     .local v1, "plmnCount":I
     new-instance v3, Lcom/android/server/wifi/anqp/CellularNetwork;
 
@@ -290,7 +266,6 @@
     .end annotation
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/android/server/wifi/anqp/CellularNetwork;->mMccMnc:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -304,14 +279,12 @@
     .locals 4
 
     .prologue
-    .line 64
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "PLMN:"
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 65
     .local v2, "sb":Ljava/lang/StringBuilder;
     iget-object v3, p0, Lcom/android/server/wifi/anqp/CellularNetwork;->mMccMnc:Ljava/util/List;
 
@@ -333,7 +306,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 66
     .local v1, "mccMnc":Ljava/lang/String;
     const/16 v3, 0x20
 
@@ -345,7 +317,6 @@
 
     goto :goto_0
 
-    .line 68
     .end local v1    # "mccMnc":Ljava/lang/String;
     :cond_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

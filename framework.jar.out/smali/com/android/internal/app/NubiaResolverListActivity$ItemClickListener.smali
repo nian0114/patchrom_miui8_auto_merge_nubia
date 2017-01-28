@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 333
     iput-object p1, p0, Lcom/android/internal/app/NubiaResolverListActivity$ItemClickListener;->this$0:Lcom/android/internal/app/NubiaResolverListActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 339
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity$ItemClickListener;->this$0:Lcom/android/internal/app/NubiaResolverListActivity;
 
@@ -65,7 +63,6 @@
 
     invoke-virtual {v0, p3, v1, v2}, Lcom/android/internal/app/NubiaResolverController;->startSelected(IZZ)V
 
-    .line 340
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity$ItemClickListener;->this$0:Lcom/android/internal/app/NubiaResolverListActivity;
 
     iget-object v0, v0, Lcom/android/internal/app/NubiaResolverListActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
@@ -85,7 +82,6 @@
     :goto_0
     invoke-static {v1, v0, p3}, Ljava/util/Collections;->swap(Ljava/util/List;II)V
 
-    .line 342
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity$ItemClickListener;->this$0:Lcom/android/internal/app/NubiaResolverListActivity;
 
     iget-object v0, v0, Lcom/android/internal/app/NubiaResolverListActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
@@ -100,15 +96,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/app/NubiaResolverController;->saveDisplayListSort(Ljava/util/List;)V
 
-    .line 345
     iget-object v0, p0, Lcom/android/internal/app/NubiaResolverListActivity$ItemClickListener;->this$0:Lcom/android/internal/app/NubiaResolverListActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/NubiaResolverListActivity;->finish()V
 
-    .line 346
     return-void
 
-    .line 340
     :cond_0
     add-int/lit8 v0, p3, -0x1
 
@@ -131,7 +124,6 @@
     .end annotation
 
     .prologue
-    .line 351
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v0, 0x1
 

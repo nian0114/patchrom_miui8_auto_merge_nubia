@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 424
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$3;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,13 +38,11 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 427
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$3;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     const v1, 0x21006
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->sendMessage(I)V
 
-    .line 428
     return-void
 .end method

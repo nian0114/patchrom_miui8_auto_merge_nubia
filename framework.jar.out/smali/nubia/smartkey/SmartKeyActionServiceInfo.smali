@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Landroid/app/ServiceProxyInfo;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .end annotation
 
     .prologue
-    .line 19
     const-class v0, Lnubia/smartkey/SmartKeyActionManager;
 
     return-object v0
@@ -50,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 14
     const-string v0, "nubia.smartkey.action"
 
     return-object v0
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 9
     invoke-virtual {p0}, Lnubia/smartkey/SmartKeyActionServiceInfo;->getServiceProxy()Lnubia/smartkey/SmartKeyActionManager;
 
     move-result-object v0
@@ -72,7 +68,6 @@
     .locals 3
 
     .prologue
-    .line 24
     invoke-virtual {p0}, Lnubia/smartkey/SmartKeyActionServiceInfo;->getServiceName()Ljava/lang/String;
 
     move-result-object v2
@@ -81,13 +76,11 @@
 
     move-result-object v0
 
-    .line 25
     .local v0, "binder":Landroid/os/IBinder;
     invoke-static {v0}, Lnubia/smartkey/ISmartKeyAction$Stub;->asInterface(Landroid/os/IBinder;)Lnubia/smartkey/ISmartKeyAction;
 
     move-result-object v1
 
-    .line 26
     .local v1, "service":Lnubia/smartkey/ISmartKeyAction;
     new-instance v2, Lnubia/smartkey/SmartKeyActionManager;
 
@@ -100,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget-boolean v0, Lnubia/smartkey/Utils;->sHasSmartKey:Z
 
     return v0

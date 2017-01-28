@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 41
     const-string v0, "com.android.frameworks.telresources"
 
     sput-object v0, Lcom/android/internal/telephony/ConfigResourceUtil;->packageName:Ljava/lang/String;
@@ -26,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +36,6 @@
     .param p1, "resourceName"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -50,18 +47,15 @@
 
     move-result-object v1
 
-    .line 54
     .local v1, "res":Landroid/content/res/Resources;
     if-nez v1, :cond_0
 
-    .line 55
     const-string v4, "ConfigResourceUtil"
 
     const-string v5, "res is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     :cond_0
     const-string v4, "bool"
 
@@ -71,13 +65,11 @@
 
     move-result v2
 
-    .line 57
     .local v2, "resId":I
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v3
 
-    .line 58
     .local v3, "resValue":Z
     const-string v4, "ConfigResourceUtil"
 
@@ -124,17 +116,14 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 60
     return v3
 
-    .line 61
     .end local v1    # "res":Landroid/content/res/Resources;
     .end local v2    # "resId":I
     .end local v3    # "resValue":Z
     :catch_0
     move-exception v0
 
-    .line 62
     .local v0, "e":Ljava/lang/Exception;
     :goto_0
     new-instance v4, Ljava/lang/RuntimeException;
@@ -147,7 +136,6 @@
 
     throw v4
 
-    .line 61
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
@@ -161,7 +149,6 @@
     .param p1, "resourceName"    # Ljava/lang/String;
 
     .prologue
-    .line 122
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -173,18 +160,15 @@
 
     move-result-object v1
 
-    .line 123
     .local v1, "res":Landroid/content/res/Resources;
     if-nez v1, :cond_0
 
-    .line 124
     const-string v4, "ConfigResourceUtil"
 
     const-string v5, "res is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     :cond_0
     const-string v4, "array"
 
@@ -194,13 +178,11 @@
 
     move-result v2
 
-    .line 126
     .local v2, "resId":I
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getIntArray(I)[I
 
     move-result-object v3
 
-    .line 127
     .local v3, "resValue":[I
     const-string v4, "ConfigResourceUtil"
 
@@ -251,17 +233,14 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 129
     return-object v3
 
-    .line 130
     .end local v1    # "res":Landroid/content/res/Resources;
     .end local v2    # "resId":I
     .end local v3    # "resValue":[I
     :catch_0
     move-exception v0
 
-    .line 131
     .local v0, "e":Ljava/lang/Exception;
     :goto_0
     new-instance v4, Ljava/lang/RuntimeException;
@@ -274,7 +253,6 @@
 
     throw v4
 
-    .line 130
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
@@ -288,7 +266,6 @@
     .param p1, "resourceName"    # Ljava/lang/String;
 
     .prologue
-    .line 76
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -300,18 +277,15 @@
 
     move-result-object v1
 
-    .line 77
     .local v1, "res":Landroid/content/res/Resources;
     if-nez v1, :cond_0
 
-    .line 78
     const-string v4, "ConfigResourceUtil"
 
     const-string v5, "res is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     :cond_0
     const-string v4, "integer"
 
@@ -321,13 +295,11 @@
 
     move-result v2
 
-    .line 80
     .local v2, "resId":I
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v3
 
-    .line 81
     .local v3, "resValue":I
     const-string v4, "ConfigResourceUtil"
 
@@ -374,17 +346,14 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 83
     return v3
 
-    .line 84
     .end local v1    # "res":Landroid/content/res/Resources;
     .end local v2    # "resId":I
     .end local v3    # "resValue":I
     :catch_0
     move-exception v0
 
-    .line 85
     .local v0, "e":Ljava/lang/Exception;
     :goto_0
     new-instance v4, Ljava/lang/RuntimeException;
@@ -397,7 +366,6 @@
 
     throw v4
 
-    .line 84
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
@@ -411,7 +379,6 @@
     .param p1, "resourceName"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -423,18 +390,15 @@
 
     move-result-object v1
 
-    .line 146
     .local v1, "res":Landroid/content/res/Resources;
     if-nez v1, :cond_0
 
-    .line 147
     const-string v4, "ConfigResourceUtil"
 
     const-string v5, "res is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     :cond_0
     const-string v4, "array"
 
@@ -444,13 +408,11 @@
 
     move-result v2
 
-    .line 149
     .local v2, "resId":I
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 150
     .local v3, "resValue":[Ljava/lang/String;
     const-string v4, "ConfigResourceUtil"
 
@@ -501,17 +463,14 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 152
     return-object v3
 
-    .line 153
     .end local v1    # "res":Landroid/content/res/Resources;
     .end local v2    # "resId":I
     .end local v3    # "resValue":[Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 154
     .local v0, "e":Ljava/lang/Exception;
     :goto_0
     new-instance v4, Ljava/lang/RuntimeException;
@@ -524,7 +483,6 @@
 
     throw v4
 
-    .line 153
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
@@ -538,7 +496,6 @@
     .param p1, "resourceName"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -550,18 +507,15 @@
 
     move-result-object v1
 
-    .line 100
     .local v1, "res":Landroid/content/res/Resources;
     if-nez v1, :cond_0
 
-    .line 101
     const-string v4, "ConfigResourceUtil"
 
     const-string v5, "res is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     :cond_0
     const-string v4, "string"
 
@@ -571,13 +525,11 @@
 
     move-result v2
 
-    .line 103
     .local v2, "resId":I
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 104
     .local v3, "resValue":Ljava/lang/String;
     const-string v4, "ConfigResourceUtil"
 
@@ -624,17 +576,14 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 106
     return-object v3
 
-    .line 107
     .end local v1    # "res":Landroid/content/res/Resources;
     .end local v2    # "resId":I
     .end local v3    # "resValue":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 108
     .local v0, "e":Ljava/lang/Exception;
     :goto_0
     new-instance v4, Ljava/lang/RuntimeException;
@@ -647,7 +596,6 @@
 
     throw v4
 
-    .line 107
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0

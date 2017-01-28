@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 9160
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$ActivityIntentResolver$AuthoritiesIterGenerator;->this$1:Lcom/android/server/pm/PackageManagerService$ActivityIntentResolver;
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/PackageManagerService$ActivityIntentResolver$IterGenerator;-><init>(Lcom/android/server/pm/PackageManagerService$ActivityIntentResolver;)V
@@ -58,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 9163
     invoke-virtual {p1}, Landroid/content/pm/PackageParser$ActivityIntentInfo;->authoritiesIterator()Ljava/util/Iterator;
 
     move-result-object v0

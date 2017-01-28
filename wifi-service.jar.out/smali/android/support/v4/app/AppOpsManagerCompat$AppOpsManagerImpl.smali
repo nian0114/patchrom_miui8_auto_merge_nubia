@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Landroid/support/v4/app/AppOpsManagerCompat$1;
 
     .prologue
-    .line 50
     invoke-direct {p0}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;-><init>()V
 
     return-void
@@ -46,7 +44,6 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     const/4 v0, 0x1
 
     return v0
@@ -59,7 +56,6 @@
     .param p3, "proxiedPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     const/4 v0, 0x1
 
     return v0
@@ -70,7 +66,6 @@
     .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     return-object v0

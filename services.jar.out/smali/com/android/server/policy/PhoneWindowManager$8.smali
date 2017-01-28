@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1643
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$8;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1645
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$8;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->mVibrationMotor:Lcn/nubia/Motor/IVibrationMotor;
@@ -49,6 +47,5 @@
 
     invoke-interface {v0}, Lcn/nubia/Motor/IVibrationMotor;->chargerConnected()V
 
-    .line 1646
     return-void
 .end method

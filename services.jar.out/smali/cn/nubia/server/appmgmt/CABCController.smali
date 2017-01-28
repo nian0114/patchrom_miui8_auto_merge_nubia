@@ -122,10 +122,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     const-string v0, "eng"
 
     sget-object v2, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -152,36 +150,30 @@
     :goto_0
     iput-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
-    .line 37
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mResumedPackages:Ljava/util/HashMap;
 
-    .line 39
     iput-boolean v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mSupportCABCControl:Z
 
-    .line 42
     const/16 v0, 0x19
 
     iput v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mDefaultCABCMode:I
 
-    .line 45
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModesLock:Ljava/lang/Object;
 
-    .line 46
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
-    .line 74
     new-instance v0, Ljava/io/File;
 
     const-string v2, "/sys/kernel/lcd_enhance/cabc"
@@ -190,16 +182,12 @@
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mCABCFile:Ljava/io/File;
 
-    .line 78
     iput-boolean v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mScreenOn:Z
 
-    .line 79
     iput-boolean v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mStatusBarExpanding:Z
 
-    .line 80
     iput-boolean v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mExecutingMagicBookAnimation:Z
 
-    .line 540
     new-instance v0, Lcn/nubia/server/appmgmt/CABCController$AdjustCABCRunnable;
 
     const/4 v1, 0x0
@@ -208,20 +196,16 @@
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAdjustCABCRunnable:Lcn/nubia/server/appmgmt/CABCController$AdjustCABCRunnable;
 
-    .line 559
     new-instance v0, Lcn/nubia/server/appmgmt/CABCController$1;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/appmgmt/CABCController$1;-><init>(Lcn/nubia/server/appmgmt/CABCController;)V
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mQueryCABCRunnable:Ljava/lang/Runnable;
 
-    .line 83
     iput-object p1, p0, Lcn/nubia/server/appmgmt/CABCController;->mContext:Landroid/content/Context;
 
-    .line 84
     iput-object p2, p0, Lcn/nubia/server/appmgmt/CABCController;->mHandler:Landroid/os/Handler;
 
-    .line 86
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mCABCFile:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -230,12 +214,10 @@
 
     iput-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mSupportCABCControl:Z
 
-    .line 88
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mSupportCABCControl:Z
 
     if-eqz v0, :cond_1
 
-    .line 89
     const-string v0, "security_cabc_manager.xml"
 
     invoke-static {v0}, Lcn/nubia/server/appmgmt/ApplicationControllerUtils;->createFile(Ljava/lang/String;)Ljava/io/File;
@@ -244,7 +226,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mCABCSettingFile:Ljava/io/File;
 
-    .line 91
     new-instance v0, Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mCABCSettingFile:Ljava/io/File;
@@ -253,24 +234,20 @@
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mXmlOperator:Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;
 
-    .line 92
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/CABCController;->initSettings()V
 
-    .line 93
     new-instance v0, Lcn/nubia/server/appmgmt/CABCController$ScreenStateReceiver;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/appmgmt/CABCController$ScreenStateReceiver;-><init>(Lcn/nubia/server/appmgmt/CABCController;)V
 
     iput-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mScreenStateReceiver:Lcn/nubia/server/appmgmt/CABCController$ScreenStateReceiver;
 
-    .line 95
     :cond_1
     return-void
 
     :cond_2
     move v0, v1
 
-    .line 33
     goto :goto_0
 .end method
 
@@ -279,7 +256,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/CABCController;
 
     .prologue
-    .line 31
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/CABCController;->loadCABCFromNubiaDb()V
 
     return-void
@@ -290,7 +266,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/CABCController;
 
     .prologue
-    .line 31
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     return-object v0
@@ -301,7 +276,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/CABCController;
 
     .prologue
-    .line 31
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mResumedPackages:Ljava/util/HashMap;
 
     return-object v0
@@ -312,7 +286,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/CABCController;
 
     .prologue
-    .line 31
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mScreenOn:Z
 
     return v0
@@ -324,7 +297,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 31
     iput-boolean p1, p0, Lcn/nubia/server/appmgmt/CABCController;->mScreenOn:Z
 
     return p1
@@ -335,7 +307,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/CABCController;
 
     .prologue
-    .line 31
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     return v0
@@ -346,7 +317,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/CABCController;
 
     .prologue
-    .line 31
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/CABCController;->adjustCABCMode()V
 
     return-void
@@ -357,7 +327,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/CABCController;
 
     .prologue
-    .line 31
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -368,7 +337,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/CABCController;
 
     .prologue
-    .line 31
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAdjustCABCRunnable:Lcn/nubia/server/appmgmt/CABCController$AdjustCABCRunnable;
 
     return-object v0
@@ -379,7 +347,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/CABCController;
 
     .prologue
-    .line 31
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -391,10 +358,8 @@
     .prologue
     const/16 v9, 0x1b
 
-    .line 371
     const/16 v0, 0x1b
 
-    .line 374
     .local v0, "bestMode":I
     iget-object v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mResumedPackages:Ljava/util/HashMap;
 
@@ -424,7 +389,6 @@
 
     move-result v4
 
-    .line 375
     .local v4, "stackId":I
     iget-object v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mResumedPackages:Ljava/util/HashMap;
 
@@ -438,13 +402,11 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 377
     .local v3, "name":Ljava/lang/String;
     iget-object v6, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModesLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 378
     :try_start_0
     iget-object v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
@@ -454,7 +416,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 379
     iget-object v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     invoke-virtual {v5, v3}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -467,14 +428,11 @@
 
     move-result v2
 
-    .line 380
     .local v2, "mode":I
     if-ge v2, v0, :cond_0
 
-    .line 381
     move v0, v2
 
-    .line 383
     .end local v2    # "mode":I
     :cond_0
     monitor-exit v6
@@ -490,7 +448,6 @@
 
     throw v5
 
-    .line 386
     .end local v3    # "name":Ljava/lang/String;
     .end local v4    # "stackId":I
     :cond_1
@@ -498,41 +455,33 @@
 
     if-eqz v5, :cond_2
 
-    .line 387
     iget-boolean v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mScreenOn:Z
 
     if-eqz v5, :cond_4
 
-    .line 388
     const/16 v5, 0x18
 
     if-ge v5, v0, :cond_2
 
-    .line 389
     const/16 v0, 0x18
 
-    .line 395
     :cond_2
     :goto_1
     iget-boolean v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mExecutingMagicBookAnimation:Z
 
     if-eqz v5, :cond_3
 
-    .line 396
     const/16 v0, 0x18
 
-    .line 397
     const/4 v5, 0x0
 
     iput-boolean v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mExecutingMagicBookAnimation:Z
 
-    .line 400
     :cond_3
     iget-boolean v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     if-eqz v5, :cond_7
 
-    .line 401
     iget-object v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mResumedPackages:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->size()I
@@ -543,7 +492,6 @@
 
     if-le v5, v6, :cond_7
 
-    .line 402
     iget-object v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mResumedPackages:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -571,7 +519,6 @@
 
     move-result v4
 
-    .line 403
     .restart local v4    # "stackId":I
     iget-object v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mResumedPackages:Ljava/util/HashMap;
 
@@ -585,13 +532,11 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 405
     .restart local v3    # "name":Ljava/lang/String;
     iget-object v6, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModesLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 406
     :try_start_1
     iget-object v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
@@ -601,7 +546,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 407
     iget-object v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     invoke-virtual {v5, v3}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -614,7 +558,6 @@
 
     move-result v2
 
-    .line 408
     .restart local v2    # "mode":I
     const-string v5, "CABCController"
 
@@ -658,7 +601,6 @@
 
     invoke-static {v5, v7}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     .end local v2    # "mode":I
     :goto_3
     monitor-exit v6
@@ -674,7 +616,6 @@
 
     throw v5
 
-    .line 391
     .end local v3    # "name":Ljava/lang/String;
     .end local v4    # "stackId":I
     :cond_4
@@ -682,7 +623,6 @@
 
     goto/16 :goto_1
 
-    .line 411
     .restart local v3    # "name":Ljava/lang/String;
     .restart local v4    # "stackId":I
     :cond_5
@@ -729,30 +669,25 @@
 
     goto :goto_3
 
-    .line 417
     .end local v3    # "name":Ljava/lang/String;
     .end local v4    # "stackId":I
     :cond_6
     if-ne v0, v9, :cond_9
 
-    .line 418
     const-string v5, "CABCController"
 
     const-string v6, "Decide to use default CABC mode"
 
     invoke-static {v5, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 424
     :cond_7
     :goto_4
     if-ne v0, v9, :cond_a
 
-    .line 428
     iget-boolean v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     if-eqz v5, :cond_8
 
-    .line 429
     const-string v5, "CABCController"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -777,17 +712,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 431
     :cond_8
     iget v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mDefaultCABCMode:I
 
     invoke-direct {p0, v5}, Lcn/nubia/server/appmgmt/CABCController;->setCABCMode(I)V
 
-    .line 438
     :goto_5
     return-void
 
-    .line 420
     :cond_9
     const-string v5, "CABCController"
 
@@ -813,13 +745,11 @@
 
     goto :goto_4
 
-    .line 433
     :cond_a
     iget-boolean v5, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     if-eqz v5, :cond_b
 
-    .line 434
     const-string v5, "CABCController"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -842,7 +772,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 436
     :cond_b
     invoke-direct {p0, v0}, Lcn/nubia/server/appmgmt/CABCController;->setCABCMode(I)V
 
@@ -853,7 +782,6 @@
     .locals 2
 
     .prologue
-    .line 100
     const-string v1, "security_cabc_manager.xml"
 
     invoke-static {v1}, Lcn/nubia/server/appmgmt/ApplicationControllerUtils;->isFileExist(Ljava/lang/String;)Z
@@ -862,7 +790,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 101
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mXmlOperator:Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;
 
     invoke-virtual {v1}, Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;->readDataFromFile()Ljava/lang/Object;
@@ -871,11 +798,9 @@
 
     check-cast v0, Lcn/nubia/server/appmgmt/CABCController$XmlData;
 
-    .line 102
     .local v0, "data":Lcn/nubia/server/appmgmt/CABCController$XmlData;
     if-eqz v0, :cond_0
 
-    .line 103
     # getter for: Lcn/nubia/server/appmgmt/CABCController$XmlData;->value:I
     invoke-static {v0}, Lcn/nubia/server/appmgmt/CABCController$XmlData;->access$000(Lcn/nubia/server/appmgmt/CABCController$XmlData;)I
 
@@ -883,7 +808,6 @@
 
     iput v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mDefaultCABCMode:I
 
-    .line 104
     # getter for: Lcn/nubia/server/appmgmt/CABCController$XmlData;->array:Landroid/util/ArrayMap;
     invoke-static {v0}, Lcn/nubia/server/appmgmt/CABCController$XmlData;->access$100(Lcn/nubia/server/appmgmt/CABCController$XmlData;)Landroid/util/ArrayMap;
 
@@ -891,13 +815,11 @@
 
     iput-object v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
-    .line 109
     .end local v0    # "data":Lcn/nubia/server/appmgmt/CABCController$XmlData;
     :cond_0
     :goto_0
     return-void
 
-    .line 107
     :cond_1
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/CABCController;->loadCABCFromNubiaDb()V
 
@@ -908,17 +830,14 @@
     .locals 1
 
     .prologue
-    .line 113
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/CABCController;->loadCABCSettings()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 114
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/CABCController;->loadDefaultSettings()V
 
-    .line 116
     :cond_0
     return-void
 .end method
@@ -927,7 +846,6 @@
     .locals 18
 
     .prologue
-    .line 179
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcn/nubia/server/appmgmt/CABCController;->mContext:Landroid/content/Context;
@@ -936,7 +854,6 @@
 
     move-result-object v1
 
-    .line 180
     .local v1, "resolver":Landroid/content/ContentResolver;
     :try_start_0
     const-string v2, "content://cn.nubia.security.power/cabc_control_table"
@@ -962,13 +879,10 @@
     .local v7, "c":Landroid/database/Cursor;
     const/4 v3, 0x0
 
-    .line 181
     if-nez v7, :cond_2
 
-    .line 182
     const/4 v2, 0x0
 
-    .line 201
     if-eqz v7, :cond_0
 
     if-eqz v3, :cond_1
@@ -979,13 +893,11 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 208
     .end local v7    # "c":Landroid/database/Cursor;
     :cond_0
     :goto_0
     return v2
 
-    .line 201
     .restart local v7    # "c":Landroid/database/Cursor;
     :catch_0
     move-exception v16
@@ -1005,7 +917,6 @@
     :catch_1
     move-exception v9
 
-    .line 202
     .local v9, "e":Ljava/lang/Exception;
     const-string v2, "CABCController"
 
@@ -1013,12 +924,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 201
     .end local v9    # "e":Ljava/lang/Exception;
     .restart local v7    # "c":Landroid/database/Cursor;
     :cond_1
@@ -1029,7 +938,6 @@
 
     goto :goto_0
 
-    .line 184
     :cond_2
     :try_start_4
     const-string v2, "type"
@@ -1038,7 +946,6 @@
 
     move-result v15
 
-    .line 185
     .local v15, "typeIndex":I
     const-string v2, "package"
 
@@ -1046,7 +953,6 @@
 
     move-result v13
 
-    .line 186
     .local v13, "pkgIndex":I
     const-string v2, "mode"
 
@@ -1054,18 +960,15 @@
 
     move-result v11
 
-    .line 187
     .local v11, "modeIndex":I
     const/4 v2, -0x1
 
     invoke-interface {v7, v2}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 188
     new-instance v8, Landroid/util/ArrayMap;
 
     invoke-direct {v8}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 189
     .local v8, "cacheModes":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     :cond_3
     :goto_1
@@ -1075,12 +978,10 @@
 
     if-eqz v2, :cond_6
 
-    .line 190
     invoke-interface {v7, v15}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 191
     .local v14, "type":Ljava/lang/String;
     const-string v2, "default"
 
@@ -1090,12 +991,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 192
     invoke-interface {v7, v11}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v10
 
-    .line 193
     .local v10, "mode":I
     move-object/from16 v0, p0
 
@@ -1106,7 +1005,6 @@
 
     goto :goto_1
 
-    .line 180
     .end local v8    # "cacheModes":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     .end local v10    # "mode":I
     .end local v11    # "modeIndex":I
@@ -1121,7 +1019,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 201
     :catchall_0
     move-exception v3
 
@@ -1149,7 +1046,6 @@
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
 
-    .line 194
     .restart local v8    # "cacheModes":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     .restart local v11    # "modeIndex":I
     .restart local v13    # "pkgIndex":I
@@ -1165,18 +1061,15 @@
 
     if-eqz v2, :cond_3
 
-    .line 195
     invoke-interface {v7, v13}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 196
     .local v12, "pkg":Ljava/lang/String;
     invoke-interface {v7, v11}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v10
 
-    .line 197
     .restart local v10    # "mode":I
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1186,7 +1079,6 @@
 
     goto :goto_1
 
-    .line 201
     .end local v8    # "cacheModes":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     .end local v10    # "mode":I
     .end local v11    # "modeIndex":I
@@ -1199,7 +1091,6 @@
 
     goto :goto_2
 
-    .line 200
     .restart local v8    # "cacheModes":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     .restart local v11    # "modeIndex":I
     .restart local v13    # "pkgIndex":I
@@ -1212,7 +1103,6 @@
     .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_2
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 201
     if-eqz v7, :cond_7
 
     if-eqz v3, :cond_8
@@ -1223,7 +1113,6 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_3
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
 
-    .line 205
     :cond_7
     :goto_4
     move-object/from16 v0, p0
@@ -1232,7 +1121,6 @@
 
     monitor-enter v3
 
-    .line 206
     :try_start_a
     move-object/from16 v0, p0
 
@@ -1254,17 +1142,14 @@
 
     invoke-virtual {v2, v4}, Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;->writeDataToFile(Ljava/lang/Object;)V
 
-    .line 207
     monitor-exit v3
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 208
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 201
     :catch_3
     move-exception v16
 
@@ -1304,7 +1189,6 @@
 
     goto :goto_3
 
-    .line 207
     .restart local v8    # "cacheModes":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     .restart local v11    # "modeIndex":I
     .restart local v13    # "pkgIndex":I
@@ -1326,15 +1210,12 @@
     .prologue
     const/16 v0, 0x19
 
-    .line 225
     iput v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mDefaultCABCMode:I
 
-    .line 226
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModesLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 227
     :try_start_0
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
@@ -1348,7 +1229,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 228
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "cn.nubia.photoeditor"
@@ -1361,7 +1241,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 229
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.android.systemui"
@@ -1374,7 +1253,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 230
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "cn.nubia.minilauncher"
@@ -1387,7 +1265,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 231
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "cn.nubia.video"
@@ -1400,7 +1277,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.qiyi.video"
@@ -1413,7 +1289,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 235
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "tv.pps.mobile"
@@ -1426,7 +1301,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.letv.android.client"
@@ -1439,7 +1313,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.letv.android.client.pad"
@@ -1452,7 +1325,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.ifeng.newvideo"
@@ -1465,7 +1337,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 239
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.cmcc.cmvideo"
@@ -1478,7 +1349,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 240
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.tudou.android"
@@ -1491,7 +1361,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 241
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.sohu.sohuvideo"
@@ -1504,7 +1373,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.baidu.video"
@@ -1517,7 +1385,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 243
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.tencent.qqlive"
@@ -1530,7 +1397,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 244
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.funshion.video.mobile"
@@ -1543,7 +1409,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 245
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.yingshi2345"
@@ -1556,7 +1421,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 246
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.qihoo.video"
@@ -1569,7 +1433,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 247
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.letv.android.client.samsungpad"
@@ -1582,7 +1445,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 248
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.pplive.androidphone"
@@ -1595,7 +1457,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 251
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.android.gallery3d"
@@ -1608,7 +1469,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 252
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.baidu.cloud.gallery"
@@ -1621,7 +1481,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 253
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "cn.bluecrane.album"
@@ -1634,7 +1493,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 254
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.photosoft.android.tool0822"
@@ -1647,7 +1505,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 257
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "cn.nubia.accounts"
@@ -1660,7 +1517,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 258
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "cn.nubia.setupwizard"
@@ -1673,7 +1529,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     const-string v2, "com.android.provision"
@@ -1686,13 +1541,10 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 260
     monitor-exit v1
 
-    .line 261
     return-void
 
-    .line 260
     :catchall_0
     move-exception v0
 
@@ -1709,7 +1561,6 @@
     .prologue
     const/16 v5, 0x1b
 
-    .line 212
     :try_start_0
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -1726,17 +1577,14 @@
     .local v0, "br":Ljava/io/BufferedReader;
     const/4 v6, 0x0
 
-    .line 213
     :try_start_1
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 214
     .local v2, "line":Ljava/lang/String;
     if-eqz v2, :cond_2
 
-    .line 215
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_3
@@ -1744,7 +1592,6 @@
 
     move-result v4
 
-    .line 217
     if-eqz v0, :cond_0
 
     if-eqz v6, :cond_1
@@ -1755,14 +1602,12 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 221
     .end local v0    # "br":Ljava/io/BufferedReader;
     .end local v2    # "line":Ljava/lang/String;
     :cond_0
     :goto_0
     return v4
 
-    .line 217
     .restart local v0    # "br":Ljava/io/BufferedReader;
     .restart local v2    # "line":Ljava/lang/String;
     :catch_0
@@ -1782,7 +1627,6 @@
     :catch_1
     move-exception v1
 
-    .line 218
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "CABCController"
 
@@ -1794,10 +1638,8 @@
 
     move v4, v5
 
-    .line 219
     goto :goto_0
 
-    .line 217
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v0    # "br":Ljava/io/BufferedReader;
     .restart local v2    # "line":Ljava/lang/String;
@@ -1824,10 +1666,8 @@
     :goto_1
     move v4, v5
 
-    .line 221
     goto :goto_0
 
-    .line 217
     :catch_2
     move-exception v3
 
@@ -1845,7 +1685,6 @@
 
     goto :goto_1
 
-    .line 212
     .end local v2    # "line":Ljava/lang/String;
     :catch_3
     move-exception v4
@@ -1855,7 +1694,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 217
     :catchall_0
     move-exception v6
 
@@ -1908,27 +1746,22 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 354
     invoke-direct {p0}, Lcn/nubia/server/appmgmt/CABCController;->readCurrentMode()I
 
     move-result v1
 
-    .line 355
     .local v1, "currentCABCMode":I
     if-ne v1, p1, :cond_1
 
-    .line 368
     :cond_0
     :goto_0
     return-void
 
-    .line 359
     :cond_1
     iget-boolean v4, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     if-eqz v4, :cond_2
 
-    .line 360
     const-string v4, "CABCController"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1951,7 +1784,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 363
     :cond_2
     :try_start_0
     new-instance v0, Ljava/io/BufferedWriter;
@@ -1969,7 +1801,6 @@
     .local v0, "bw":Ljava/io/BufferedWriter;
     const/4 v5, 0x0
 
-    .line 364
     :try_start_1
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1980,7 +1811,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 365
     if-eqz v0, :cond_0
 
     if-eqz v5, :cond_3
@@ -2009,7 +1839,6 @@
     :catch_1
     move-exception v2
 
-    .line 366
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "CABCController"
 
@@ -2021,7 +1850,6 @@
 
     goto :goto_0
 
-    .line 365
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "bw":Ljava/io/BufferedWriter;
     :cond_3
@@ -2032,7 +1860,6 @@
 
     goto :goto_0
 
-    .line 363
     :catch_2
     move-exception v4
 
@@ -2041,7 +1868,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 365
     :catchall_0
     move-exception v5
 
@@ -2096,17 +1922,14 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 543
     const-string v2, "==========managed CABC apps=========="
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 544
     iget-object v3, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModesLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 545
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2130,7 +1953,6 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 546
     iget-object v2, p0, Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
 
     invoke-virtual {v2}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
@@ -2155,7 +1977,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 547
     .local v1, "pkg":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2189,7 +2010,6 @@
 
     goto :goto_0
 
-    .line 549
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "pkg":Ljava/lang/String;
     :catchall_0
@@ -2208,10 +2028,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 550
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 551
     return-void
 .end method
 
@@ -2220,22 +2038,18 @@
     .param p1, "stackId"    # I
 
     .prologue
-    .line 293
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mSupportCABCControl:Z
 
     if-nez v0, :cond_0
 
-    .line 301
     :goto_0
     return-void
 
-    .line 296
     :cond_0
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     if-eqz v0, :cond_1
 
-    .line 297
     const-string v0, "CABCController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2264,7 +2078,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mHandler:Landroid/os/Handler;
 
@@ -2282,23 +2095,19 @@
     .param p1, "execute"    # Z
 
     .prologue
-    .line 315
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mSupportCABCControl:Z
 
     if-nez v0, :cond_1
 
-    .line 325
     :cond_0
     :goto_0
     return-void
 
-    .line 318
     :cond_1
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     if-eqz v0, :cond_2
 
-    .line 319
     const-string v0, "CABCController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2321,11 +2130,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 322
     :cond_2
     if-eqz p1, :cond_0
 
-    .line 323
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mAdjustCABCRunnable:Lcn/nubia/server/appmgmt/CABCController$AdjustCABCRunnable;
@@ -2342,23 +2149,19 @@
     .param p1, "execute"    # Z
 
     .prologue
-    .line 340
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mSupportCABCControl:Z
 
     if-nez v0, :cond_1
 
-    .line 351
     :cond_0
     :goto_0
     return-void
 
-    .line 343
     :cond_1
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     if-eqz v0, :cond_2
 
-    .line 344
     const-string v0, "CABCController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2381,16 +2184,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 347
     :cond_2
     if-eqz p1, :cond_0
 
-    .line 348
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mExecutingMagicBookAnimation:Z
 
-    .line 349
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mAdjustCABCRunnable:Lcn/nubia/server/appmgmt/CABCController$AdjustCABCRunnable;
@@ -2410,22 +2210,18 @@
     .param p4, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 282
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mSupportCABCControl:Z
 
     if-nez v0, :cond_0
 
-    .line 290
     :goto_0
     return-void
 
-    .line 285
     :cond_0
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     if-eqz v0, :cond_1
 
-    .line 286
     const-string v0, "CABCController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2468,7 +2264,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mHandler:Landroid/os/Handler;
 
@@ -2489,22 +2284,18 @@
     .param p4, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 304
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mSupportCABCControl:Z
 
     if-nez v0, :cond_0
 
-    .line 312
     :goto_0
     return-void
 
-    .line 307
     :cond_0
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     if-eqz v0, :cond_1
 
-    .line 308
     const-string v0, "CABCController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2537,7 +2328,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 311
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mHandler:Landroid/os/Handler;
 
@@ -2559,26 +2349,21 @@
     .param p5, "isHomeActivity"    # Z
 
     .prologue
-    .line 268
     iget-boolean v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mSupportCABCControl:Z
 
     if-nez v1, :cond_1
 
-    .line 279
     :cond_0
     :goto_0
     return-void
 
-    .line 270
     :cond_1
     if-eqz p3, :cond_0
 
-    .line 273
     iget-boolean v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     if-eqz v1, :cond_2
 
-    .line 274
     const-string v1, "CABCController"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2621,13 +2406,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     :cond_2
     new-instance v0, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;
 
     invoke-direct {v0, p0, p2, p3, p5}, Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;-><init>(Lcn/nubia/server/appmgmt/CABCController;ILjava/lang/String;Z)V
 
-    .line 278
     .local v0, "nrar":Lcn/nubia/server/appmgmt/CABCController$NoteResumingActivityRunnable;
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mHandler:Landroid/os/Handler;
 
@@ -2641,22 +2424,18 @@
     .param p1, "expanding"    # Z
 
     .prologue
-    .line 328
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mSupportCABCControl:Z
 
     if-nez v0, :cond_0
 
-    .line 337
     :goto_0
     return-void
 
-    .line 331
     :cond_0
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
     if-eqz v0, :cond_1
 
-    .line 332
     const-string v0, "CABCController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2679,11 +2458,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     :cond_1
     iput-boolean p1, p0, Lcn/nubia/server/appmgmt/CABCController;->mStatusBarExpanding:Z
 
-    .line 336
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mAdjustCABCRunnable:Lcn/nubia/server/appmgmt/CABCController$AdjustCABCRunnable;
@@ -2698,10 +2475,8 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 263
     iput-boolean p1, p0, Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
 
-    .line 264
     return-void
 .end method
 
@@ -2709,7 +2484,6 @@
     .locals 2
 
     .prologue
-    .line 554
     iget-boolean v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mSupportCABCControl:Z
 
     if-eqz v0, :cond_0
@@ -2724,14 +2498,12 @@
 
     if-nez v0, :cond_0
 
-    .line 555
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController;->mQueryCABCRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 557
     :cond_0
     return-void
 .end method

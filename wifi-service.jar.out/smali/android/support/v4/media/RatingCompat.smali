@@ -59,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 121
     new-instance v0, Landroid/support/v4/media/RatingCompat$1;
 
     invoke-direct {v0}, Landroid/support/v4/media/RatingCompat$1;-><init>()V
@@ -75,16 +74,12 @@
     .param p2, "rating"    # F
 
     .prologue
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
     iput p1, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
-    .line 101
     iput p2, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
 
-    .line 102
     return-void
 .end method
 
@@ -95,7 +90,6 @@
     .param p3, "x2"    # Landroid/support/v4/media/RatingCompat$1;
 
     .prologue
-    .line 36
     invoke-direct {p0, p1, p2}, Landroid/support/v4/media/RatingCompat;-><init>(IF)V
 
     return-void
@@ -108,7 +102,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 322
     if-eqz p0, :cond_0
 
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -117,18 +110,15 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 352
     :cond_0
     :goto_0
     return-object v0
 
-    .line 326
     :cond_1
     invoke-static {p0}, Landroid/support/v4/media/RatingCompatApi21;->getRatingStyle(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 328
     .local v1, "ratingStyle":I
     invoke-static {p0}, Landroid/support/v4/media/RatingCompatApi21;->isRated(Ljava/lang/Object;)Z
 
@@ -136,12 +126,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 329
     packed-switch v1, :pswitch_data_0
 
     goto :goto_0
 
-    .line 331
     :pswitch_0
     invoke-static {p0}, Landroid/support/v4/media/RatingCompatApi21;->hasHeart(Ljava/lang/Object;)Z
 
@@ -151,14 +139,12 @@
 
     move-result-object v0
 
-    .line 351
     .local v0, "rating":Landroid/support/v4/media/RatingCompat;
     :goto_1
     iput-object p0, v0, Landroid/support/v4/media/RatingCompat;->mRatingObj:Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 334
     .end local v0    # "rating":Landroid/support/v4/media/RatingCompat;
     :pswitch_1
     invoke-static {p0}, Landroid/support/v4/media/RatingCompatApi21;->isThumbUp(Ljava/lang/Object;)Z
@@ -169,11 +155,9 @@
 
     move-result-object v0
 
-    .line 335
     .restart local v0    # "rating":Landroid/support/v4/media/RatingCompat;
     goto :goto_1
 
-    .line 339
     .end local v0    # "rating":Landroid/support/v4/media/RatingCompat;
     :pswitch_2
     invoke-static {p0}, Landroid/support/v4/media/RatingCompatApi21;->getStarRating(Ljava/lang/Object;)F
@@ -184,11 +168,9 @@
 
     move-result-object v0
 
-    .line 341
     .restart local v0    # "rating":Landroid/support/v4/media/RatingCompat;
     goto :goto_1
 
-    .line 343
     .end local v0    # "rating":Landroid/support/v4/media/RatingCompat;
     :pswitch_3
     invoke-static {p0}, Landroid/support/v4/media/RatingCompatApi21;->getPercentRating(Ljava/lang/Object;)F
@@ -199,11 +181,9 @@
 
     move-result-object v0
 
-    .line 344
     .restart local v0    # "rating":Landroid/support/v4/media/RatingCompat;
     goto :goto_1
 
-    .line 349
     .end local v0    # "rating":Landroid/support/v4/media/RatingCompat;
     :cond_2
     invoke-static {v1}, Landroid/support/v4/media/RatingCompat;->newUnratedRating(I)Landroid/support/v4/media/RatingCompat;
@@ -213,7 +193,6 @@
     .restart local v0    # "rating":Landroid/support/v4/media/RatingCompat;
     goto :goto_1
 
-    .line 329
     nop
 
     :pswitch_data_0
@@ -232,7 +211,6 @@
     .param p0, "hasHeart"    # Z
 
     .prologue
-    .line 170
     new-instance v1, Landroid/support/v4/media/RatingCompat;
 
     const/4 v2, 0x1
@@ -257,7 +235,6 @@
     .param p0, "percent"    # F
 
     .prologue
-    .line 228
     const/4 v0, 0x0
 
     cmpg-float v0, p0, v0
@@ -270,7 +247,6 @@
 
     if-lez v0, :cond_1
 
-    .line 229
     :cond_0
     const-string v0, "Rating"
 
@@ -278,10 +254,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     const/4 v0, 0x0
 
-    .line 232
     :goto_0
     return-object v0
 
@@ -303,14 +277,11 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 198
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 199
     .local v0, "maxRating":F
     packed-switch p0, :pswitch_data_0
 
-    .line 210
     const-string v2, "Rating"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -339,15 +310,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
     :goto_0
     return-object v1
 
-    .line 201
     :pswitch_0
     const/high16 v0, 0x40400000    # 3.0f
 
-    .line 213
     :goto_1
     const/4 v2, 0x0
 
@@ -359,7 +327,6 @@
 
     if-lez v2, :cond_1
 
-    .line 214
     :cond_0
     const-string v2, "Rating"
 
@@ -369,21 +336,16 @@
 
     goto :goto_0
 
-    .line 204
     :pswitch_1
     const/high16 v0, 0x40800000    # 4.0f
 
-    .line 205
     goto :goto_1
 
-    .line 207
     :pswitch_2
     const/high16 v0, 0x40a00000    # 5.0f
 
-    .line 208
     goto :goto_1
 
-    .line 217
     :cond_1
     new-instance v1, Landroid/support/v4/media/RatingCompat;
 
@@ -391,7 +353,6 @@
 
     goto :goto_0
 
-    .line 199
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_0
@@ -405,7 +366,6 @@
     .param p0, "thumbIsUp"    # Z
 
     .prologue
-    .line 181
     new-instance v1, Landroid/support/v4/media/RatingCompat;
 
     const/4 v2, 0x2
@@ -430,16 +390,13 @@
     .param p0, "ratingStyle"    # I
 
     .prologue
-    .line 149
     packed-switch p0, :pswitch_data_0
 
-    .line 158
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 156
     :pswitch_0
     new-instance v0, Landroid/support/v4/media/RatingCompat;
 
@@ -449,7 +406,6 @@
 
     goto :goto_0
 
-    .line 149
     nop
 
     :pswitch_data_0
@@ -469,7 +425,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
     return v0
@@ -479,7 +434,6 @@
     .locals 2
 
     .prologue
-    .line 305
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
     const/4 v1, 0x6
@@ -492,11 +446,9 @@
 
     if-nez v0, :cond_1
 
-    .line 306
     :cond_0
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 308
     :goto_0
     return v0
 
@@ -510,7 +462,6 @@
     .locals 2
 
     .prologue
-    .line 364
     iget-object v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingObj:Ljava/lang/Object;
 
     if-nez v0, :cond_0
@@ -521,15 +472,12 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 365
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingObj:Ljava/lang/Object;
 
-    .line 389
     :goto_0
     return-object v0
 
-    .line 368
     :cond_1
     invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->isRated()Z
 
@@ -537,18 +485,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 369
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 384
     :goto_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 371
     :pswitch_0
     invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->hasHeart()Z
 
@@ -560,13 +505,11 @@
 
     iput-object v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingObj:Ljava/lang/Object;
 
-    .line 389
     :goto_2
     iget-object v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingObj:Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 374
     :pswitch_1
     invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->isThumbUp()Z
 
@@ -580,7 +523,6 @@
 
     goto :goto_2
 
-    .line 379
     :pswitch_2
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
@@ -596,7 +538,6 @@
 
     goto :goto_2
 
-    .line 382
     :pswitch_3
     invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->getPercentRating()F
 
@@ -610,7 +551,6 @@
 
     goto :goto_1
 
-    .line 387
     :cond_2
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
@@ -622,7 +562,6 @@
 
     goto :goto_2
 
-    .line 369
     nop
 
     :pswitch_data_0
@@ -640,7 +579,6 @@
     .locals 1
 
     .prologue
-    .line 252
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
     return v0
@@ -650,19 +588,16 @@
     .locals 1
 
     .prologue
-    .line 287
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 295
     :cond_0
     const/high16 v0, -0x40800000    # -1.0f
 
     :goto_0
     return v0
 
-    .line 291
     :pswitch_0
     invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->isRated()Z
 
@@ -670,12 +605,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 292
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
 
     goto :goto_0
 
-    .line 287
     nop
 
     :pswitch_data_0
@@ -694,12 +627,10 @@
 
     const/4 v1, 0x0
 
-    .line 261
     iget v2, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
     if-eq v2, v0, :cond_0
 
-    .line 264
     :goto_0
     return v1
 
@@ -727,7 +658,6 @@
     .locals 2
 
     .prologue
-    .line 241
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
 
     const/4 v1, 0x0
@@ -753,14 +683,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 274
     iget v1, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
     const/4 v2, 0x2
 
     if-eq v1, v2, :cond_1
 
-    .line 277
     :cond_0
     :goto_0
     return v0
@@ -783,7 +711,6 @@
     .locals 3
 
     .prologue
-    .line 106
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -843,16 +770,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 117
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingStyle:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 118
     iget v0, p0, Landroid/support/v4/media/RatingCompat;->mRatingValue:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 119
     return-void
 .end method

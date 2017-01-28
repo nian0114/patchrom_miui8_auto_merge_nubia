@@ -42,12 +42,10 @@
     .locals 1
 
     .prologue
-    .line 35
     iput-object p1, p0, Lcn/nubia/server/ClipExtraService$ClipServiceExtraStub;->this$0:Lcn/nubia/server/ClipExtraService;
 
     invoke-direct {p0}, Lnubia/os/IClipService$Stub;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -69,29 +67,24 @@
     .end annotation
 
     .prologue
-    .line 42
     iget-object v1, p0, Lcn/nubia/server/ClipExtraService$ClipServiceExtraStub;->mDatas:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 43
     iget-object v1, p0, Lcn/nubia/server/ClipExtraService$ClipServiceExtraStub;->mDatas:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 44
     .local v0, "size":I
     const/16 v1, 0xa
 
     if-ge v0, v1, :cond_0
 
-    .line 47
     :goto_0
     return-void
 
-    .line 46
     :cond_0
     iget-object v1, p0, Lcn/nubia/server/ClipExtraService$ClipServiceExtraStub;->mDatas:Ljava/util/ArrayList;
 
@@ -128,21 +121,17 @@
     .end annotation
 
     .prologue
-    .line 50
     iget-object v1, p0, Lcn/nubia/server/ClipExtraService$ClipServiceExtraStub;->mDatas:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 51
     .local v0, "size":I
     if-ge v0, p1, :cond_0
 
-    .line 52
     iget-object v1, p0, Lcn/nubia/server/ClipExtraService$ClipServiceExtraStub;->mDatas:Ljava/util/ArrayList;
 
-    .line 53
     :goto_0
     return-object v1
 

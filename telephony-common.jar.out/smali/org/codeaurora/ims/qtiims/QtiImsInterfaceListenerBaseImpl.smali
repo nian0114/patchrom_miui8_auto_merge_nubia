@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener$Stub;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
     .param p1, "viceInfo"    # Lorg/codeaurora/ims/qtiims/QtiViceInfo;
 
     .prologue
-    .line 64
     return-void
 .end method
 
@@ -37,7 +35,6 @@
     .param p8, "service"    # I
 
     .prologue
-    .line 44
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .param p2, "packetCount"    # J
 
     .prologue
-    .line 52
     return-void
 .end method
 
@@ -57,7 +53,6 @@
     .param p2, "packetErrorCount"    # J
 
     .prologue
-    .line 56
     return-void
 .end method
 
@@ -66,7 +61,6 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 39
     return-void
 .end method
 
@@ -76,7 +70,6 @@
     .param p2, "errString"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     return-void
 .end method
 
@@ -85,7 +78,6 @@
     .param p1, "result"    # I
 
     .prologue
-    .line 60
     return-void
 .end method
 
@@ -94,6 +86,5 @@
     .param p1, "result"    # I
 
     .prologue
-    .line 68
     return-void
 .end method

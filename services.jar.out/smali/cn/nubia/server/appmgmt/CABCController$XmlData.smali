@@ -48,19 +48,15 @@
     .end annotation
 
     .prologue
-    .line 121
     .local p3, "array":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     iput-object p1, p0, Lcn/nubia/server/appmgmt/CABCController$XmlData;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 122
     iput p2, p0, Lcn/nubia/server/appmgmt/CABCController$XmlData;->value:I
 
-    .line 123
     iput-object p3, p0, Lcn/nubia/server/appmgmt/CABCController$XmlData;->array:Landroid/util/ArrayMap;
 
-    .line 124
     return-void
 .end method
 
@@ -69,7 +65,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/CABCController$XmlData;
 
     .prologue
-    .line 118
     iget v0, p0, Lcn/nubia/server/appmgmt/CABCController$XmlData;->value:I
 
     return v0
@@ -81,7 +76,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 118
     iput p1, p0, Lcn/nubia/server/appmgmt/CABCController$XmlData;->value:I
 
     return p1
@@ -92,7 +86,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/CABCController$XmlData;
 
     .prologue
-    .line 118
     iget-object v0, p0, Lcn/nubia/server/appmgmt/CABCController$XmlData;->array:Landroid/util/ArrayMap;
 
     return-object v0

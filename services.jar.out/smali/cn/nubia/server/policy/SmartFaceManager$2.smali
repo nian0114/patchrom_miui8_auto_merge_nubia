@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 91
     iput-object p1, p0, Lcn/nubia/server/policy/SmartFaceManager$2;->this$0:Lcn/nubia/server/policy/SmartFaceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .param p1, "enableFunction"    # Z
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager$2;->this$0:Lcn/nubia/server/policy/SmartFaceManager;
 
     # invokes: Lcn/nubia/server/policy/SmartFaceManager;->controlSmartFaceFunc(Z)V
     invoke-static {v0, p1}, Lcn/nubia/server/policy/SmartFaceManager;->access$600(Lcn/nubia/server/policy/SmartFaceManager;Z)V
 
-    .line 96
     return-void
 .end method

@@ -17,13 +17,10 @@
     .param p1, "parent"    # Landroid/support/v4/provider/DocumentFile;
 
     .prologue
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     iput-object p1, p0, Landroid/support/v4/provider/DocumentFile;->mParent:Landroid/support/v4/provider/DocumentFile;
 
-    .line 85
     return-void
 .end method
 
@@ -32,7 +29,6 @@
     .param p0, "file"    # Ljava/io/File;
 
     .prologue
-    .line 96
     new-instance v0, Landroid/support/v4/provider/RawDocumentFile;
 
     const/4 v1, 0x0
@@ -50,21 +46,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 110
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 111
     .local v0, "version":I
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 112
     new-instance v1, Landroid/support/v4/provider/SingleDocumentFile;
 
     invoke-direct {v1, v2, p0, p1}, Landroid/support/v4/provider/SingleDocumentFile;-><init>(Landroid/support/v4/provider/DocumentFile;Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 114
     :goto_0
     return-object v1
 
@@ -82,16 +74,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 128
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 129
     .local v0, "version":I
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 130
     new-instance v1, Landroid/support/v4/provider/TreeDocumentFile;
 
     invoke-static {p1}, Landroid/support/v4/provider/DocumentsContractApi21;->prepareTreeUri(Landroid/net/Uri;)Landroid/net/Uri;
@@ -100,7 +89,6 @@
 
     invoke-direct {v1, v2, p0, v3}, Landroid/support/v4/provider/TreeDocumentFile;-><init>(Landroid/support/v4/provider/DocumentFile;Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 133
     :goto_0
     return-object v1
 
@@ -116,21 +104,17 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 142
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 143
     .local v0, "version":I
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 144
     invoke-static {p0, p1}, Landroid/support/v4/provider/DocumentsContractApi19;->isDocumentUri(Landroid/content/Context;Landroid/net/Uri;)Z
 
     move-result v1
 
-    .line 146
     :goto_0
     return v1
 
@@ -165,7 +149,6 @@
     .param p1, "displayName"    # Ljava/lang/String;
 
     .prologue
-    .line 316
     invoke-virtual {p0}, Landroid/support/v4/provider/DocumentFile;->listFiles()[Landroid/support/v4/provider/DocumentFile;
 
     move-result-object v0
@@ -182,7 +165,6 @@
 
     aget-object v1, v0, v2
 
-    .line 317
     .local v1, "doc":Landroid/support/v4/provider/DocumentFile;
     invoke-virtual {v1}, Landroid/support/v4/provider/DocumentFile;->getName()Ljava/lang/String;
 
@@ -194,19 +176,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 321
     .end local v1    # "doc":Landroid/support/v4/provider/DocumentFile;
     :goto_1
     return-object v1
 
-    .line 316
     .restart local v1    # "doc":Landroid/support/v4/provider/DocumentFile;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 321
     .end local v1    # "doc":Landroid/support/v4/provider/DocumentFile;
     :cond_1
     const/4 v1, 0x0
@@ -221,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 217
     iget-object v0, p0, Landroid/support/v4/provider/DocumentFile;->mParent:Landroid/support/v4/provider/DocumentFile;
 
     return-object v0

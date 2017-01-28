@@ -29,27 +29,22 @@
     .param p2, "preLayout"    # Z
 
     .prologue
-    .line 1048
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1049
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/ActionMenuPresenter$MenuItemLayoutInfo;->left:I
 
-    .line 1050
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/ActionMenuPresenter$MenuItemLayoutInfo;->top:I
 
-    .line 1051
     if-eqz p2, :cond_0
 
-    .line 1054
     iget v0, p0, Landroid/widget/ActionMenuPresenter$MenuItemLayoutInfo;->left:I
 
     int-to-float v0, v0
@@ -64,7 +59,6 @@
 
     iput v0, p0, Landroid/widget/ActionMenuPresenter$MenuItemLayoutInfo;->left:I
 
-    .line 1055
     iget v0, p0, Landroid/widget/ActionMenuPresenter$MenuItemLayoutInfo;->top:I
 
     int-to-float v0, v0
@@ -79,10 +73,8 @@
 
     iput v0, p0, Landroid/widget/ActionMenuPresenter$MenuItemLayoutInfo;->top:I
 
-    .line 1057
     :cond_0
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$MenuItemLayoutInfo;->view:Landroid/view/View;
 
-    .line 1058
     return-void
 .end method

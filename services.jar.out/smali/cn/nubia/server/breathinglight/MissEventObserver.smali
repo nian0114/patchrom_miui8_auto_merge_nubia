@@ -91,7 +91,6 @@
     .locals 3
 
     .prologue
-    .line 64
     const-string v0, "content://cn.nubia.providers.AppSettingsInfoProvider/appsettingsinfo"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -100,7 +99,6 @@
 
     sput-object v0, Lcn/nubia/server/breathinglight/MissEventObserver;->NOTIFUCATION_CENTER_URI:Landroid/net/Uri;
 
-    .line 69
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -138,34 +136,28 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mWhiteAppList:Ljava/util/ArrayList;
 
-    .line 51
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNotificationList:Ljava/util/ArrayList;
 
-    .line 61
     iput-boolean v3, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mIsNoDisturb:Z
 
-    .line 75
     new-instance v1, Lcn/nubia/server/breathinglight/MissEventObserver$1;
 
     invoke-direct {v1, p0}, Lcn/nubia/server/breathinglight/MissEventObserver$1;-><init>(Lcn/nubia/server/breathinglight/MissEventObserver;)V
 
     iput-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNoDisturbReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 289
     new-instance v1, Lcn/nubia/server/breathinglight/MissEventObserver$2;
 
     new-instance v2, Landroid/os/Handler;
@@ -176,29 +168,22 @@
 
     iput-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mDataBaseObserver:Landroid/database/ContentObserver;
 
-    .line 338
     new-instance v1, Lcn/nubia/server/breathinglight/MissEventObserver$3;
 
     invoke-direct {v1, p0}, Lcn/nubia/server/breathinglight/MissEventObserver$3;-><init>(Lcn/nubia/server/breathinglight/MissEventObserver;)V
 
     iput-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mListener:Landroid/service/notification/INotificationListener$Stub;
 
-    .line 100
     iput-object p1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mContext:Landroid/content/Context;
 
-    .line 101
     iput-object p2, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
-    .line 102
     iput-object p3, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
-    .line 103
     iput-boolean v3, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mUsingMiddleLight:Z
 
-    .line 105
     iput-object p4, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNotification:Landroid/app/INotificationManager;
 
-    .line 107
     :try_start_0
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNotification:Landroid/app/INotificationManager;
 
@@ -232,7 +217,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 114
     :goto_0
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mContext:Landroid/content/Context;
 
@@ -246,14 +230,11 @@
 
     iput-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 116
     return-void
 
-    .line 110
     :catch_0
     move-exception v0
 
-    .line 111
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -265,7 +246,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/MissEventObserver;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/MissEventObserver;->scheduleAlarm()V
 
     return-void
@@ -279,7 +259,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 37
     invoke-direct {p0, p1, p2, p3}, Lcn/nubia/server/breathinglight/MissEventObserver;->scheduleAlarm(Ljava/lang/String;II)V
 
     return-void
@@ -290,7 +269,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/MissEventObserver;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/MissEventObserver;->getWhiteAppList()V
 
     return-void
@@ -300,7 +278,6 @@
     .locals 1
 
     .prologue
-    .line 37
     sget-object v0, Lcn/nubia/server/breathinglight/MissEventObserver;->NOTIFUCATION_CENTER_URI:Landroid/net/Uri;
 
     return-object v0
@@ -312,7 +289,6 @@
     .param p1, "x1"    # Landroid/service/notification/StatusBarNotification;
 
     .prologue
-    .line 37
     invoke-direct {p0, p1}, Lcn/nubia/server/breathinglight/MissEventObserver;->handleNotificationPosted(Landroid/service/notification/StatusBarNotification;)V
 
     return-void
@@ -324,7 +300,6 @@
     .param p1, "x1"    # Landroid/service/notification/StatusBarNotification;
 
     .prologue
-    .line 37
     invoke-direct {p0, p1}, Lcn/nubia/server/breathinglight/MissEventObserver;->handleNotificationRemoved(Landroid/service/notification/StatusBarNotification;)V
 
     return-void
@@ -336,7 +311,6 @@
     .param p2, "requestCode"    # I
 
     .prologue
-    .line 184
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mAlarmManager:Landroid/app/AlarmManager;
 
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mContext:Landroid/content/Context;
@@ -359,7 +333,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 187
     return-void
 .end method
 
@@ -367,28 +340,24 @@
     .locals 2
 
     .prologue
-    .line 160
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNoDisturbReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 161
     const-string v0, "cn.nubia.intent.action.breathinglight.event_no_disturb_morning"
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lcn/nubia/server/breathinglight/MissEventObserver;->cancelAlarm(Ljava/lang/String;I)V
 
-    .line 162
     const-string v0, "cn.nubia.intent.action.breathinglight.event_no_disturb_evening"
 
     const/4 v1, 0x1
 
     invoke-direct {p0, v0, v1}, Lcn/nubia/server/breathinglight/MissEventObserver;->cancelAlarm(Ljava/lang/String;I)V
 
-    .line 163
     return-void
 .end method
 
@@ -396,10 +365,8 @@
     .locals 10
 
     .prologue
-    .line 190
     const/4 v7, 0x0
 
-    .line 191
     .local v7, "cursor":Landroid/database/Cursor;
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mContext:Landroid/content/Context;
 
@@ -407,22 +374,18 @@
 
     move-result-object v0
 
-    .line 193
     .local v0, "cr":Landroid/content/ContentResolver;
     if-nez v0, :cond_1
 
-    .line 220
     :cond_0
     :goto_0
     return-void
 
-    .line 197
     :cond_1
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mWhiteAppList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 200
     :try_start_0
     sget-object v1, Lcn/nubia/server/breathinglight/MissEventObserver;->NOTIFUCATION_CENTER_URI:Landroid/net/Uri;
 
@@ -438,10 +401,8 @@
 
     move-result-object v7
 
-    .line 202
     if-eqz v7, :cond_3
 
-    .line 203
     :cond_2
     :goto_1
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
@@ -450,7 +411,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 204
     const-string v1, "FLAG"
 
     invoke-interface {v7, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -461,7 +421,6 @@
 
     move-result v9
 
-    .line 205
     .local v9, "flag":I
     const-string v1, "PKG_NAME"
 
@@ -473,7 +432,6 @@
 
     move-result-object v6
 
-    .line 207
     .local v6, "appName":Ljava/lang/String;
     and-int/lit8 v1, v9, 0x8
 
@@ -483,7 +441,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 209
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mWhiteAppList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -493,13 +450,11 @@
 
     goto :goto_1
 
-    .line 213
     .end local v6    # "appName":Ljava/lang/String;
     .end local v9    # "flag":I
     :catch_0
     move-exception v8
 
-    .line 214
     .local v8, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v1, "MissEventObserver"
@@ -510,31 +465,25 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 216
     if-eqz v7, :cond_0
 
-    .line 217
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 216
     .end local v8    # "e":Ljava/lang/Exception;
     :cond_3
     if-eqz v7, :cond_0
 
-    .line 217
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 216
     :catchall_0
     move-exception v1
 
     if-eqz v7, :cond_4
 
-    .line 217
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     :cond_4
@@ -546,21 +495,17 @@
     .param p1, "n"    # Landroid/service/notification/StatusBarNotification;
 
     .prologue
-    .line 316
     if-eqz p1, :cond_0
 
-    .line 317
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 318
     .local v1, "pkgName":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getId()I
 
     move-result v0
 
-    .line 319
     .local v0, "id":I
     iget-object v2, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mWhiteAppList:Ljava/util/ArrayList;
 
@@ -576,7 +521,6 @@
 
     if-nez v2, :cond_0
 
-    .line 320
     iget-object v2, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNotificationList:Ljava/util/ArrayList;
 
     new-instance v3, Ljava/lang/Integer;
@@ -589,7 +533,6 @@
 
     if-nez v2, :cond_0
 
-    .line 321
     iget-object v2, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNotificationList:Ljava/util/ArrayList;
 
     new-instance v3, Ljava/lang/Integer;
@@ -598,10 +541,8 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 322
     invoke-virtual {p0}, Lcn/nubia/server/breathinglight/MissEventObserver;->requestBreathingLight()V
 
-    .line 326
     .end local v0    # "id":I
     .end local v1    # "pkgName":Ljava/lang/String;
     :cond_0
@@ -613,21 +554,17 @@
     .param p1, "n"    # Landroid/service/notification/StatusBarNotification;
 
     .prologue
-    .line 329
     if-eqz p1, :cond_0
 
-    .line 330
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 331
     .local v1, "pkgName":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getId()I
 
     move-result v0
 
-    .line 332
     .local v0, "id":I
     iget-object v2, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mWhiteAppList:Ljava/util/ArrayList;
 
@@ -637,7 +574,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 333
     iget-object v2, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNotificationList:Ljava/util/ArrayList;
 
     new-instance v3, Ljava/lang/Integer;
@@ -646,7 +582,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 336
     .end local v0    # "id":I
     .end local v1    # "pkgName":Ljava/lang/String;
     :cond_0
@@ -663,14 +598,12 @@
 
     const/4 v3, 0x0
 
-    .line 263
     iget-object v4, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     invoke-virtual {v4}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->isNoDisturbEnable()Z
 
     move-result v0
 
-    .line 264
     .local v0, "isNoDisturbEnable":Z
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -699,7 +632,6 @@
     :cond_0
     move v1, v2
 
-    .line 268
     .local v1, "isNoDisturbTime":Z
     :goto_0
     if-eqz v0, :cond_2
@@ -713,14 +645,12 @@
     :cond_1
     move v1, v3
 
-    .line 264
     goto :goto_0
 
     .restart local v1    # "isNoDisturbTime":Z
     :cond_2
     move v2, v3
 
-    .line 268
     goto :goto_1
 .end method
 
@@ -729,26 +659,20 @@
     .param p1, "sn"    # Landroid/service/notification/StatusBarNotification;
 
     .prologue
-    .line 301
     const/4 v2, 0x0
 
-    .line 302
     .local v2, "result":Z
     if-eqz p1, :cond_1
 
-    .line 303
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v1
 
-    .line 304
     .local v1, "n":Landroid/app/Notification;
     if-eqz v1, :cond_1
 
-    .line 305
     iget v0, v1, Landroid/app/Notification;->flags:I
 
-    .line 306
     .local v0, "flags":I
     and-int/lit8 v3, v0, 0x2
 
@@ -758,11 +682,9 @@
 
     if-eqz v3, :cond_1
 
-    .line 308
     :cond_0
     const/4 v2, 0x1
 
-    .line 312
     .end local v0    # "flags":I
     .end local v1    # "n":Landroid/app/Notification;
     :cond_1
@@ -773,40 +695,33 @@
     .locals 3
 
     .prologue
-    .line 144
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 145
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.TIME_SET"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 146
     const-string v1, "android.intent.action.TIMEZONE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 147
     const-string v1, "cn.nubia.intent.action.breathinglight.event_no_disturb_morning"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 148
     const-string v1, "cn.nubia.intent.action.breathinglight.event_no_disturb_evening"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 149
     iget-object v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNoDisturbReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 150
     return-void
 .end method
 
@@ -814,7 +729,6 @@
     .locals 3
 
     .prologue
-    .line 153
     const-string v0, "cn.nubia.intent.action.breathinglight.event_no_disturb_morning"
 
     const/4 v1, 0x0
@@ -823,7 +737,6 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcn/nubia/server/breathinglight/MissEventObserver;->scheduleAlarm(Ljava/lang/String;II)V
 
-    .line 155
     const-string v0, "cn.nubia.intent.action.breathinglight.event_no_disturb_evening"
 
     const/4 v1, 0x1
@@ -832,7 +745,6 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcn/nubia/server/breathinglight/MissEventObserver;->scheduleAlarm(Ljava/lang/String;II)V
 
-    .line 157
     return-void
 .end method
 
@@ -847,45 +759,36 @@
 
     const/4 v6, 0x0
 
-    .line 166
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 167
     .local v0, "c":Ljava/util/Calendar;
     const/16 v3, 0xc
 
     invoke-virtual {v0, v3, v6}, Ljava/util/Calendar;->set(II)V
 
-    .line 168
     const/16 v3, 0xd
 
     invoke-virtual {v0, v3, v6}, Ljava/util/Calendar;->set(II)V
 
-    .line 169
     const/16 v3, 0xe
 
     invoke-virtual {v0, v3, v6}, Ljava/util/Calendar;->set(II)V
 
-    .line 170
     invoke-virtual {v0, v4}, Ljava/util/Calendar;->get(I)I
 
     move-result v1
 
-    .line 171
     .local v1, "curHourOfDay":I
     invoke-virtual {v0, v4, p3}, Ljava/util/Calendar;->set(II)V
 
-    .line 172
     if-lt v1, p3, :cond_0
 
-    .line 173
     const/16 v3, 0x18
 
     invoke-virtual {v0, v4, v3}, Ljava/util/Calendar;->add(II)V
 
-    .line 176
     :cond_0
     iget-object v3, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mContext:Landroid/content/Context;
 
@@ -903,13 +806,11 @@
 
     move-result-object v2
 
-    .line 179
     .local v2, "sender":Landroid/app/PendingIntent;
     iget-object v3, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mAlarmManager:Landroid/app/AlarmManager;
 
     invoke-virtual {v3, v2}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 180
     iget-object v3, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mAlarmManager:Landroid/app/AlarmManager;
 
     const/4 v4, 0x1
@@ -920,7 +821,6 @@
 
     invoke-virtual {v3, v4, v6, v7, v2}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
-    .line 181
     return-void
 .end method
 
@@ -928,13 +828,10 @@
     .locals 0
 
     .prologue
-    .line 139
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/MissEventObserver;->registerNoDisturbReceiver()V
 
-    .line 140
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/MissEventObserver;->scheduleAlarm()V
 
-    .line 141
     return-void
 .end method
 
@@ -944,7 +841,6 @@
     .locals 2
 
     .prologue
-    .line 249
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->isNotificationEnable()Z
@@ -959,12 +855,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 250
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mUsingMiddleLight:Z
 
-    .line 251
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNotificationList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -973,23 +867,19 @@
 
     if-lez v0, :cond_0
 
-    .line 252
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x71
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/breathinglight/BreathingLightService;->sendRequestToStateMachine(I)V
 
-    .line 253
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightService;->checkBatteryState()V
 
-    .line 260
     :goto_0
     return-void
 
-    .line 255
     :cond_0
     const-string v0, "MissEventObserver"
 
@@ -999,7 +889,6 @@
 
     goto :goto_0
 
-    .line 258
     :cond_1
     const-string v0, "MissEventObserver"
 
@@ -1014,7 +903,6 @@
     .locals 5
 
     .prologue
-    .line 119
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1031,7 +919,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 123
     new-instance v0, Lcn/nubia/server/breathinglight/MissEventObserver$InitAsyncTask;
 
     const/4 v1, 0x0
@@ -1044,10 +931,8 @@
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/breathinglight/MissEventObserver$InitAsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 125
     invoke-virtual {p0}, Lcn/nubia/server/breathinglight/MissEventObserver;->setNoDisturb()V
 
-    .line 126
     return-void
 .end method
 
@@ -1055,17 +940,14 @@
     .locals 1
 
     .prologue
-    .line 223
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNotificationList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 224
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mUsingMiddleLight:Z
 
-    .line 225
     return-void
 .end method
 
@@ -1073,7 +955,6 @@
     .locals 1
 
     .prologue
-    .line 228
     iget-boolean v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mUsingMiddleLight:Z
 
     return v0
@@ -1085,7 +966,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 232
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->isNotificationEnable()Z
@@ -1100,7 +980,6 @@
 
     if-nez v0, :cond_1
 
-    .line 234
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mNotificationList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1109,27 +988,22 @@
 
     if-lez v0, :cond_0
 
-    .line 235
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mUsingMiddleLight:Z
 
-    .line 236
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x69
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/breathinglight/BreathingLightService;->sendRequestToStateMachine(I)V
 
-    .line 246
     :goto_0
     return-void
 
-    .line 238
     :cond_0
     iput-boolean v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mUsingMiddleLight:Z
 
-    .line 239
     const-string v0, "MissEventObserver"
 
     const-string v1, "requestBreathingLight: mNotificationList is empty!!"
@@ -1138,11 +1012,9 @@
 
     goto :goto_0
 
-    .line 243
     :cond_1
     iput-boolean v1, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mUsingMiddleLight:Z
 
-    .line 244
     const-string v0, "MissEventObserver"
 
     const-string v1, "requestBreathingLight: notification is disable!!"
@@ -1156,7 +1028,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mSettings:Lcn/nubia/server/breathinglight/BreathingLightSettings;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightSettings;->isNoDisturbEnable()Z
@@ -1169,31 +1040,25 @@
 
     if-nez v0, :cond_1
 
-    .line 130
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mIsNoDisturb:Z
 
-    .line 131
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/MissEventObserver;->scheduleNoDisturb()V
 
-    .line 136
     :cond_0
     :goto_0
     return-void
 
-    .line 132
     :cond_1
     iget-boolean v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mIsNoDisturb:Z
 
     if-eqz v0, :cond_0
 
-    .line 133
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/nubia/server/breathinglight/MissEventObserver;->mIsNoDisturb:Z
 
-    .line 134
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/MissEventObserver;->cancelNoDisturb()V
 
     goto :goto_0

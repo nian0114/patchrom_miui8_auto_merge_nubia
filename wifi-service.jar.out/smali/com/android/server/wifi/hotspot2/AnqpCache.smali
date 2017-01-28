@@ -38,24 +38,20 @@
     .locals 2
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
-    .line 23
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mLastSweep:J
 
-    .line 24
     return-void
 .end method
 
@@ -67,38 +63,30 @@
     .param p2, "debug"    # Z
 
     .prologue
-    .line 160
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 161
     .local v4, "now":J
     iget-object v7, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
     monitor-enter v7
 
-    .line 162
     if-eqz p1, :cond_1
 
-    .line 163
     :try_start_0
     iget-object v6, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->clear()V
 
-    .line 164
     iput-wide v4, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mLastSweep:J
 
-    .line 181
     :cond_0
     :goto_0
     monitor-exit v7
 
-    .line 182
     return-void
 
-    .line 166
     :cond_1
     iget-wide v8, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mLastSweep:J
 
@@ -110,12 +98,10 @@
 
     if-lez v6, :cond_0
 
-    .line 167
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 168
     .local v3, "retirees":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;>;"
     iget-object v6, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
@@ -142,7 +128,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 169
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;Lcom/android/server/wifi/hotspot2/ANQPData;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -156,7 +141,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 170
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -165,7 +149,6 @@
 
     goto :goto_1
 
-    .line 181
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;Lcom/android/server/wifi/hotspot2/ANQPData;>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "retirees":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;>;"
@@ -178,7 +161,6 @@
 
     throw v6
 
-    .line 173
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v3    # "retirees":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;>;"
     :cond_3
@@ -201,16 +183,13 @@
 
     check-cast v2, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;
 
-    .line 174
     .local v2, "key":Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;
     iget-object v6, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
     invoke-virtual {v6, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 175
     if-eqz p2, :cond_4
 
-    .line 176
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v6
@@ -241,7 +220,6 @@
 
     goto :goto_2
 
-    .line 179
     .end local v2    # "key":Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;
     :cond_5
     iput-wide v4, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mLastSweep:J
@@ -256,7 +234,6 @@
     .param p1, "out"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 185
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -295,7 +272,6 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 186
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -320,7 +296,6 @@
 
     check-cast v0, Lcom/android/server/wifi/hotspot2/ANQPData;
 
-    .line 187
     .local v0, "anqpData":Lcom/android/server/wifi/hotspot2/ANQPData;
     const/4 v2, 0x0
 
@@ -332,7 +307,6 @@
 
     goto :goto_0
 
-    .line 189
     .end local v0    # "anqpData":Lcom/android/server/wifi/hotspot2/ANQPData;
     :cond_0
     return-void
@@ -343,7 +317,6 @@
     .param p1, "network"    # Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
     .prologue
-    .line 151
     const/4 v2, 0x1
 
     # invokes: Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->buildKey(Lcom/android/server/wifi/hotspot2/NetworkDetail;Z)Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;
@@ -351,13 +324,11 @@
 
     move-result-object v1
 
-    .line 152
     .local v1, "key":Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;
     iget-object v3, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 153
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
@@ -367,13 +338,11 @@
 
     check-cast v0, Lcom/android/server/wifi/hotspot2/ANQPData;
 
-    .line 154
     .local v0, "data":Lcom/android/server/wifi/hotspot2/ANQPData;
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 156
     if-eqz v0, :cond_0
 
     invoke-virtual {v0, p1}, Lcom/android/server/wifi/hotspot2/ANQPData;->isValid(Lcom/android/server/wifi/hotspot2/NetworkDetail;)Z
@@ -386,7 +355,6 @@
     :goto_0
     return-object v0
 
-    .line 154
     :catchall_0
     move-exception v2
 
@@ -397,7 +365,6 @@
 
     throw v2
 
-    .line 156
     .restart local v0    # "data":Lcom/android/server/wifi/hotspot2/ANQPData;
     :cond_0
     const/4 v0, 0x0
@@ -414,19 +381,16 @@
 
     const/4 v3, 0x1
 
-    .line 119
     # invokes: Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->buildKey(Lcom/android/server/wifi/hotspot2/NetworkDetail;Z)Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;
     invoke-static {p1, v3}, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->access$000(Lcom/android/server/wifi/hotspot2/NetworkDetail;Z)Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;
 
     move-result-object v1
 
-    .line 121
     .local v1, "key":Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;
     iget-object v4, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
     monitor-enter v4
 
-    .line 122
     :try_start_0
     iget-object v5, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
@@ -436,7 +400,6 @@
 
     check-cast v0, Lcom/android/server/wifi/hotspot2/ANQPData;
 
-    .line 123
     .local v0, "data":Lcom/android/server/wifi/hotspot2/ANQPData;
     if-eqz v0, :cond_0
 
@@ -446,7 +409,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 124
     :cond_0
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
@@ -456,16 +418,13 @@
 
     invoke-virtual {v2, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 125
     monitor-exit v4
 
     move v2, v3
 
-    .line 130
     :goto_0
     return v2
 
-    .line 128
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -503,12 +462,10 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     monitor-exit v4
 
     goto :goto_0
 
-    .line 132
     .end local v0    # "data":Lcom/android/server/wifi/hotspot2/ANQPData;
     :catchall_0
     move-exception v2
@@ -536,7 +493,6 @@
     .end annotation
 
     .prologue
-    .line 138
     .local p2, "anqpElements":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Lcom/android/server/wifi/anqp/ANQPElement;>;"
     const/4 v2, 0x1
 
@@ -545,31 +501,25 @@
 
     move-result-object v1
 
-    .line 142
     .local v1, "key":Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;
     iget-object v3, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 143
     :try_start_0
     new-instance v0, Lcom/android/server/wifi/hotspot2/ANQPData;
 
     invoke-direct {v0, p1, p2}, Lcom/android/server/wifi/hotspot2/ANQPData;-><init>(Lcom/android/server/wifi/hotspot2/NetworkDetail;Ljava/util/Map;)V
 
-    .line 144
     .local v0, "data":Lcom/android/server/wifi/hotspot2/ANQPData;
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/AnqpCache;->mANQPCache:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 145
     monitor-exit v3
 
-    .line 146
     return-void
 
-    .line 145
     .end local v0    # "data":Lcom/android/server/wifi/hotspot2/ANQPData;
     :catchall_0
     move-exception v2

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1560
     iput-object p1, p0, Lcom/android/internal/telephony/imsphone/ImsPhone$3;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhone;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v12, 0x1
 
-    .line 1564
     invoke-virtual {p0}, Lcom/android/internal/telephony/imsphone/ImsPhone$3;->getResultCode()I
 
     move-result v9
@@ -50,14 +48,12 @@
 
     if-ne v9, v10, :cond_0
 
-    .line 1568
     const-string v9, "alertTitle"
 
     invoke-virtual {p2, v9}, Landroid/content/Intent;->getCharSequenceExtra(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v8
 
-    .line 1569
     .local v8, "title":Ljava/lang/CharSequence;
     const-string v9, "alertMessage"
 
@@ -65,7 +61,6 @@
 
     move-result-object v0
 
-    .line 1570
     .local v0, "messageAlert":Ljava/lang/CharSequence;
     const-string v9, "notificationMessage"
 
@@ -73,7 +68,6 @@
 
     move-result-object v1
 
-    .line 1572
     .local v1, "messageNotification":Ljava/lang/CharSequence;
     new-instance v6, Landroid/content/Intent;
 
@@ -81,7 +75,6 @@
 
     invoke-direct {v6, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1573
     .local v6, "resultIntent":Landroid/content/Intent;
     const-string v9, "com.android.settings"
 
@@ -89,22 +82,18 @@
 
     invoke-virtual {v6, v9, v10}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1575
     const-string v9, "alertShow"
 
     invoke-virtual {v6, v9, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1576
     const-string v9, "alertTitle"
 
     invoke-virtual {v6, v9, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    .line 1577
     const-string v9, "alertMessage"
 
     invoke-virtual {v6, v9, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    .line 1578
     iget-object v9, p0, Lcom/android/internal/telephony/imsphone/ImsPhone$3;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhone;
 
     # getter for: Lcom/android/internal/telephony/imsphone/ImsPhone;->mContext:Landroid/content/Context;
@@ -120,7 +109,6 @@
 
     move-result-object v7
 
-    .line 1586
     .local v7, "resultPendingIntent":Landroid/app/PendingIntent;
     new-instance v9, Landroid/app/Notification$Builder;
 
@@ -171,15 +159,12 @@
 
     move-result-object v2
 
-    .line 1595
     .local v2, "notification":Landroid/app/Notification;
     const-string v5, "wifi_calling"
 
-    .line 1596
     .local v5, "notificationTag":Ljava/lang/String;
     const/4 v3, 0x1
 
-    .line 1598
     .local v3, "notificationId":I
     iget-object v9, p0, Lcom/android/internal/telephony/imsphone/ImsPhone$3;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhone;
 
@@ -196,13 +181,11 @@
 
     check-cast v4, Landroid/app/NotificationManager;
 
-    .line 1601
     .local v4, "notificationManager":Landroid/app/NotificationManager;
     const-string v9, "wifi_calling"
 
     invoke-virtual {v4, v9, v12, v2}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
 
-    .line 1604
     .end local v0    # "messageAlert":Ljava/lang/CharSequence;
     .end local v1    # "messageNotification":Ljava/lang/CharSequence;
     .end local v2    # "notification":Landroid/app/Notification;

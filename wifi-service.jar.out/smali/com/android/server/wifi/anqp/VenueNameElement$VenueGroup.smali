@@ -68,7 +68,6 @@
 
     const/4 v3, 0x0
 
-    .line 73
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "Unspecified"
@@ -77,7 +76,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->Unspecified:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 74
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "Assembly"
@@ -86,7 +84,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->Assembly:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 75
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "Business"
@@ -95,7 +92,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->Business:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 76
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "Educational"
@@ -104,7 +100,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->Educational:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 77
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "FactoryIndustrial"
@@ -113,7 +108,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->FactoryIndustrial:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 78
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "Institutional"
@@ -124,7 +118,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->Institutional:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 79
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "Mercantile"
@@ -135,7 +128,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->Mercantile:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 80
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "Residential"
@@ -146,7 +138,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->Residential:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 81
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "Storage"
@@ -157,7 +148,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->Storage:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 82
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "UtilityMiscellaneous"
@@ -168,7 +158,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->UtilityMiscellaneous:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 83
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "Vehicular"
@@ -179,7 +168,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->Vehicular:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 84
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "Outdoor"
@@ -190,7 +178,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->Outdoor:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 85
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     const-string v1, "Reserved"
@@ -201,7 +188,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->Reserved:Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
-    .line 72
     const/16 v0, 0xd
 
     new-array v0, v0, [Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
@@ -288,7 +274,6 @@
     .end annotation
 
     .prologue
-    .line 72
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -299,7 +284,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     const-class v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -315,7 +299,6 @@
     .locals 1
 
     .prologue
-    .line 72
     sget-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->$VALUES:[Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;
 
     invoke-virtual {v0}, [Lcom/android/server/wifi/anqp/VenueNameElement$VenueGroup;->clone()Ljava/lang/Object;

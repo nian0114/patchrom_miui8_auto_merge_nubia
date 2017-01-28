@@ -30,18 +30,13 @@
     .param p3, "isItalic"    # Z
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput-object p1, p0, Landroid/graphics/FontListParser$Font;->fontName:Ljava/lang/String;
 
-    .line 52
     iput p2, p0, Landroid/graphics/FontListParser$Font;->weight:I
 
-    .line 53
     iput-boolean p3, p0, Landroid/graphics/FontListParser$Font;->isItalic:Z
 
-    .line 54
     return-void
 .end method

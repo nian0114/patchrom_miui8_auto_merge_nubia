@@ -117,14 +117,12 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 79
     new-array v0, v1, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/server/wifi/WifiLogger;->MinWakeupIntervals:[I
 
-    .line 81
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
@@ -133,7 +131,6 @@
 
     return-void
 
-    .line 79
     :array_0
     .array-data 4
         0x0
@@ -142,7 +139,6 @@
         0xa
     .end array-data
 
-    .line 81
     :array_1
     .array-data 4
         0x0
@@ -157,15 +153,12 @@
     .param p1, "wifiStateMachine"    # Lcom/android/server/wifi/WifiStateMachine;
 
     .prologue
-    .line 91
     invoke-direct {p0}, Lcom/android/server/wifi/DummyWifiLogger;-><init>()V
 
-    .line 83
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/WifiLogger;->mLogLevel:I
 
-    .line 269
     new-instance v0, Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;
 
     const/4 v1, 0x1
@@ -174,7 +167,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mLastAlerts:Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;
 
-    .line 271
     new-instance v0, Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;
 
     const/4 v1, 0x4
@@ -183,24 +175,20 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mLastBugReports:Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;
 
-    .line 273
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mRingBufferData:Ljava/util/HashMap;
 
-    .line 275
     new-instance v0, Lcom/android/server/wifi/WifiLogger$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/wifi/WifiLogger$1;-><init>(Lcom/android/server/wifi/WifiLogger;)V
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mHandler:Lcom/android/server/wifi/WifiNative$WifiLoggerEventHandler;
 
-    .line 92
     iput-object p1, p0, Lcom/android/server/wifi/WifiLogger;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
-    .line 93
     return-void
 .end method
 
@@ -209,7 +197,6 @@
     .param p0, "x0"    # [B
 
     .prologue
-    .line 38
     invoke-static {p0}, Lcom/android/server/wifi/WifiLogger;->compressToBase64([B)Ljava/lang/String;
 
     move-result-object v0
@@ -223,37 +210,31 @@
     .param p2, "captureFWDump"    # Z
 
     .prologue
-    .line 394
     new-instance v7, Lcom/android/server/wifi/WifiLogger$BugReport;
 
     const/4 v8, 0x0
 
     invoke-direct {v7, v8}, Lcom/android/server/wifi/WifiLogger$BugReport;-><init>(Lcom/android/server/wifi/WifiLogger$1;)V
 
-    .line 395
     .local v7, "report":Lcom/android/server/wifi/WifiLogger$BugReport;
     iput p1, v7, Lcom/android/server/wifi/WifiLogger$BugReport;->errorCode:I
 
-    .line 396
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
     iput-wide v8, v7, Lcom/android/server/wifi/WifiLogger$BugReport;->systemTimeMs:J
 
-    .line 397
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v8
 
     iput-wide v8, v7, Lcom/android/server/wifi/WifiLogger$BugReport;->kernelTimeNanos:J
 
-    .line 399
     iget-object v8, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     if-eqz v8, :cond_1
 
-    .line 400
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     .local v0, "arr$":[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
@@ -268,13 +249,11 @@
 
     aget-object v1, v0, v5
 
-    .line 402
     .local v1, "buffer":Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     iget-object v8, v1, Lcom/android/server/wifi/WifiNative$RingBufferStatus;->name:Ljava/lang/String;
 
     invoke-static {v8}, Lcom/android/server/wifi/WifiNative;->getRingBufferData(Ljava/lang/String;)Z
 
-    .line 403
     iget-object v8, p0, Lcom/android/server/wifi/WifiLogger;->mRingBufferData:Ljava/util/HashMap;
 
     iget-object v9, v1, Lcom/android/server/wifi/WifiNative$RingBufferStatus;->name:Ljava/lang/String;
@@ -285,7 +264,6 @@
 
     check-cast v3, Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;
 
-    .line 404
     .local v3, "data":Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;, "Lcom/android/server/wifi/WifiLogger$LimitedCircularArray<[B>;"
     invoke-virtual {v3}, Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;->size()I
 
@@ -293,7 +271,6 @@
 
     new-array v2, v8, [[B
 
-    .line 405
     .local v2, "buffers":[[B
     const/4 v4, 0x0
 
@@ -305,7 +282,6 @@
 
     if-ge v4, v8, :cond_0
 
-    .line 406
     invoke-virtual {v3, v4}, Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -320,12 +296,10 @@
 
     aput-object v8, v2, v4
 
-    .line 405
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 408
     :cond_0
     iget-object v8, v7, Lcom/android/server/wifi/WifiLogger$BugReport;->ringBuffers:Ljava/util/HashMap;
 
@@ -333,12 +307,10 @@
 
     invoke-virtual {v8, v9, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 400
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 412
     .end local v0    # "arr$":[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     .end local v1    # "buffer":Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     .end local v2    # "buffers":[[B
@@ -349,14 +321,12 @@
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 413
     invoke-static {}, Lcom/android/server/wifi/WifiNative;->getFwMemoryDump()[B
 
     move-result-object v8
 
     iput-object v8, v7, Lcom/android/server/wifi/WifiLogger$BugReport;->fwMemoryDump:[B
 
-    .line 415
     :cond_2
     return-object v7
 .end method
@@ -368,37 +338,30 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 421
     new-instance v3, Ljava/util/zip/Deflater;
 
     invoke-direct {v3}, Ljava/util/zip/Deflater;-><init>()V
 
-    .line 422
     .local v3, "compressor":Ljava/util/zip/Deflater;
     const/16 v8, 0x9
 
     invoke-virtual {v3, v8}, Ljava/util/zip/Deflater;->setLevel(I)V
 
-    .line 423
     invoke-virtual {v3, p0}, Ljava/util/zip/Deflater;->setInput([B)V
 
-    .line 424
     invoke-virtual {v3}, Ljava/util/zip/Deflater;->finish()V
 
-    .line 425
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     array-length v8, p0
 
     invoke-direct {v0, v8}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    .line 426
     .local v0, "bos":Ljava/io/ByteArrayOutputStream;
     const/16 v8, 0x400
 
     new-array v1, v8, [B
 
-    .line 428
     .local v1, "buf":[B
     :goto_0
     invoke-virtual {v3}, Ljava/util/zip/Deflater;->finished()Z
@@ -407,34 +370,28 @@
 
     if-nez v8, :cond_0
 
-    .line 429
     invoke-virtual {v3, v1}, Ljava/util/zip/Deflater;->deflate([B)I
 
     move-result v4
 
-    .line 430
     .local v4, "count":I
     invoke-virtual {v0, v1, v10, v4}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     goto :goto_0
 
-    .line 434
     .end local v4    # "count":I
     :cond_0
     :try_start_0
     invoke-virtual {v3}, Ljava/util/zip/Deflater;->end()V
 
-    .line 435
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 442
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v2
 
-    .line 448
     .local v2, "compressed":[B
     array-length v8, v2
 
@@ -451,18 +408,15 @@
     .local v6, "result":Ljava/lang/String;
     move-object v7, v6
 
-    .line 455
     .end local v6    # "result":Ljava/lang/String;
     .local v7, "result":Ljava/lang/String;
     :goto_2
     return-object v7
 
-    .line 436
     .end local v7    # "result":Ljava/lang/String;
     :catch_0
     move-exception v5
 
-    .line 437
     .local v5, "e":Ljava/io/IOException;
     const-string v8, "WifiLogger"
 
@@ -470,7 +424,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 438
     invoke-static {p0, v10}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object v6
@@ -478,7 +431,6 @@
     .restart local v6    # "result":Ljava/lang/String;
     move-object v7, v6
 
-    .line 439
     .end local v6    # "result":Ljava/lang/String;
     .restart local v7    # "result":Ljava/lang/String;
     goto :goto_2
@@ -489,7 +441,6 @@
     :cond_1
     move-object v2, p0
 
-    .line 448
     goto :goto_1
 .end method
 
@@ -499,17 +450,14 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 303
     iget-object v5, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     if-eqz v5, :cond_1
 
-    .line 321
     :cond_0
     :goto_0
     return v4
 
-    .line 305
     :cond_1
     invoke-static {}, Lcom/android/server/wifi/WifiNative;->getRingBufferStatus()[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
@@ -517,12 +465,10 @@
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
-    .line 306
     iget-object v5, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     if-eqz v5, :cond_4
 
-    .line 307
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     .local v0, "arr$":[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
@@ -537,7 +483,6 @@
 
     aget-object v1, v0, v2
 
-    .line 309
     .local v1, "buffer":Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     iget-object v5, p0, Lcom/android/server/wifi/WifiLogger;->mRingBufferData:Ljava/util/HashMap;
 
@@ -549,7 +494,6 @@
 
     if-nez v5, :cond_2
 
-    .line 310
     iget-object v5, p0, Lcom/android/server/wifi/WifiLogger;->mRingBufferData:Ljava/util/HashMap;
 
     iget-object v6, v1, Lcom/android/server/wifi/WifiNative$RingBufferStatus;->name:Ljava/lang/String;
@@ -562,7 +506,6 @@
 
     invoke-virtual {v5, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 313
     :cond_2
     iget v5, v1, Lcom/android/server/wifi/WifiNative$RingBufferStatus;->flag:I
 
@@ -570,16 +513,13 @@
 
     if-eqz v5, :cond_3
 
-    .line 314
     iput-object v1, p0, Lcom/android/server/wifi/WifiLogger;->mPerPacketRingBuffer:Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
-    .line 307
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 318
     .end local v0    # "arr$":[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     .end local v1    # "buffer":Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     .end local v2    # "i$":I
@@ -591,7 +531,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     :cond_5
     iget-object v5, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
@@ -608,23 +547,19 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 376
     iget-object v6, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     if-nez v6, :cond_0
 
-    .line 377
     const-string v6, "WifiLogger"
 
     const-string v7, "Not ring buffers available to collect data!"
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     :goto_0
     return v5
 
-    .line 381
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
@@ -640,7 +575,6 @@
 
     aget-object v1, v0, v2
 
-    .line 382
     .local v1, "element":Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     iget-object v6, v1, Lcom/android/server/wifi/WifiNative$RingBufferStatus;->name:Ljava/lang/String;
 
@@ -648,11 +582,9 @@
 
     move-result v4
 
-    .line 383
     .local v4, "result":Z
     if-nez v4, :cond_1
 
-    .line 384
     const-string v6, "WifiLogger"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -679,13 +611,11 @@
 
     goto :goto_0
 
-    .line 381
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 389
     .end local v1    # "element":Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     .end local v4    # "result":Z
     :cond_2
@@ -695,7 +625,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     const/4 v5, 0x1
 
     goto :goto_0
@@ -705,19 +634,15 @@
     .locals 5
 
     .prologue
-    .line 326
     iget-object v4, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     if-nez v4, :cond_0
 
-    .line 328
     const/4 v4, 0x0
 
-    .line 342
     :goto_0
     return v4
 
-    .line 331
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
@@ -733,7 +658,6 @@
 
     aget-object v1, v0, v2
 
-    .line 333
     .local v1, "buffer":Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     iget v4, v1, Lcom/android/server/wifi/WifiNative$RingBufferStatus;->flag:I
 
@@ -741,19 +665,16 @@
 
     if-eqz v4, :cond_1
 
-    .line 331
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 339
     :cond_1
     invoke-direct {p0, v1}, Lcom/android/server/wifi/WifiLogger;->startLoggingRingBuffer(Lcom/android/server/wifi/WifiNative$RingBufferStatus;)Z
 
     goto :goto_2
 
-    .line 342
     .end local v1    # "buffer":Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     :cond_2
     const/4 v4, 0x1
@@ -768,14 +689,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 347
     sget-object v3, Lcom/android/server/wifi/WifiLogger;->MinWakeupIntervals:[I
 
     iget v4, p0, Lcom/android/server/wifi/WifiLogger;->mLogLevel:I
 
     aget v1, v3, v4
 
-    .line 348
     .local v1, "minInterval":I
     sget-object v3, Lcom/android/server/wifi/WifiLogger;->MinBufferSizes:[I
 
@@ -783,7 +702,6 @@
 
     aget v0, v3, v4
 
-    .line 350
     .local v0, "minDataSize":I
     iget v3, p0, Lcom/android/server/wifi/WifiLogger;->mLogLevel:I
 
@@ -795,7 +713,6 @@
 
     if-nez v3, :cond_0
 
-    .line 356
     :goto_0
     return v2
 
@@ -809,12 +726,10 @@
     .locals 5
 
     .prologue
-    .line 367
     iget-object v4, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     if-eqz v4, :cond_0
 
-    .line 368
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     .local v0, "arr$":[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
@@ -829,16 +744,13 @@
 
     aget-object v1, v0, v2
 
-    .line 369
     .local v1, "buffer":Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     invoke-direct {p0, v1}, Lcom/android/server/wifi/WifiLogger;->stopLoggingRingBuffer(Lcom/android/server/wifi/WifiNative$RingBufferStatus;)Z
 
-    .line 368
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 372
     .end local v0    # "arr$":[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     .end local v1    # "buffer":Lcom/android/server/wifi/WifiNative$RingBufferStatus;
     .end local v2    # "i$":I
@@ -856,7 +768,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 360
     iget-object v0, p1, Lcom/android/server/wifi/WifiNative$RingBufferStatus;->name:Ljava/lang/String;
 
     invoke-static {v1, v1, v1, v1, v0}, Lcom/android/server/wifi/WifiNative;->startLoggingRingBuffer(IIIILjava/lang/String;)Z
@@ -865,7 +776,6 @@
 
     if-nez v0, :cond_0
 
-    .line 363
     :cond_0
     const/4 v0, 0x1
 
@@ -880,7 +790,6 @@
     .param p2, "alertData"    # [B
 
     .prologue
-    .line 158
     monitor-enter p0
 
     const/4 v1, 0x1
@@ -890,23 +799,19 @@
 
     move-result-object v0
 
-    .line 159
     .local v0, "report":Lcom/android/server/wifi/WifiLogger$BugReport;
     iput-object p2, v0, Lcom/android/server/wifi/WifiLogger$BugReport;->alertData:[B
 
-    .line 160
     iget-object v1, p0, Lcom/android/server/wifi/WifiLogger;->mLastAlerts:Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;
 
     invoke-virtual {v1, v0}, Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;->addLast(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 161
     monitor-exit p0
 
     return-void
 
-    .line 158
     .end local v0    # "report":Lcom/android/server/wifi/WifiLogger$BugReport;
     :catchall_0
     move-exception v1
@@ -921,7 +826,6 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 152
     monitor-enter p0
 
     const/4 v1, 0x1
@@ -931,7 +835,6 @@
 
     move-result-object v0
 
-    .line 153
     .local v0, "report":Lcom/android/server/wifi/WifiLogger$BugReport;
     iget-object v1, p0, Lcom/android/server/wifi/WifiLogger;->mLastBugReports:Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;
 
@@ -939,12 +842,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 154
     monitor-exit p0
 
     return-void
 
-    .line 152
     .end local v0    # "report":Lcom/android/server/wifi/WifiLogger$BugReport;
     :catchall_0
     move-exception v1
@@ -961,7 +862,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 165
     monitor-enter p0
 
     :try_start_0
@@ -969,7 +869,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 166
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -992,7 +891,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 167
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1015,7 +913,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 168
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1038,7 +935,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 170
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1051,12 +947,10 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 171
     const-string v1, "--------------------------------------------------------------------"
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 172
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1077,7 +971,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 173
     iget-object v1, p0, Lcom/android/server/wifi/WifiLogger;->mLastAlerts:Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;
 
     invoke-virtual {v1, v0}, Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;->get(I)Ljava/lang/Object;
@@ -1086,17 +979,14 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 174
     const-string v1, "--------------------------------------------------------------------"
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 170
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 177
     :cond_0
     const/4 v0, 0x0
 
@@ -1109,12 +999,10 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 178
     const-string v1, "--------------------------------------------------------------------"
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 179
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1135,7 +1023,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 180
     iget-object v1, p0, Lcom/android/server/wifi/WifiLogger;->mLastBugReports:Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;
 
     invoke-virtual {v1, v0}, Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;->get(I)Ljava/lang/Object;
@@ -1144,17 +1031,14 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 181
     const-string v1, "--------------------------------------------------------------------"
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 177
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 184
     :cond_1
     const-string v1, "--------------------------------------------------------------------"
 
@@ -1162,12 +1046,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 185
     monitor-exit p0
 
     return-void
 
-    .line 165
     .end local v0    # "i":I
     :catchall_0
     move-exception v1
@@ -1183,7 +1065,6 @@
     .param p2, "buffer"    # [B
 
     .prologue
-    .line 289
     monitor-enter p0
 
     :try_start_0
@@ -1197,22 +1078,18 @@
 
     check-cast v0, Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;
 
-    .line 290
     .local v0, "ring":Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;, "Lcom/android/server/wifi/WifiLogger$LimitedCircularArray<[B>;"
     if-eqz v0, :cond_0
 
-    .line 291
     invoke-virtual {v0, p2}, Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;->addLast(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 293
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 289
     .end local v0    # "ring":Lcom/android/server/wifi/WifiLogger$LimitedCircularArray;, "Lcom/android/server/wifi/WifiLogger$LimitedCircularArray<[B>;"
     :catchall_0
     move-exception v1
@@ -1228,7 +1105,6 @@
     .param p2, "buffer"    # [B
 
     .prologue
-    .line 296
     monitor-enter p0
 
     :try_start_0
@@ -1236,7 +1112,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 297
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     const v1, 0x20064
@@ -1247,13 +1122,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 300
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 296
     :catchall_0
     move-exception v0
 
@@ -1267,7 +1140,6 @@
     .param p1, "verboseEnabled"    # Z
 
     .prologue
-    .line 97
     monitor-enter p0
 
     :try_start_0
@@ -1277,64 +1149,53 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mFirmwareVersion:Ljava/lang/String;
 
-    .line 98
     invoke-static {}, Lcom/android/server/wifi/WifiNative;->getDriverVersion()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mDriverVersion:Ljava/lang/String;
 
-    .line 99
     invoke-static {}, Lcom/android/server/wifi/WifiNative;->getSupportedLoggerFeatureSet()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/wifi/WifiLogger;->mSupportedFeatureSet:I
 
-    .line 101
     iget v0, p0, Lcom/android/server/wifi/WifiLogger;->mLogLevel:I
 
     if-nez v0, :cond_0
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mHandler:Lcom/android/server/wifi/WifiNative$WifiLoggerEventHandler;
 
     invoke-static {v0}, Lcom/android/server/wifi/WifiNative;->setLoggingEventHandler(Lcom/android/server/wifi/WifiNative$WifiLoggerEventHandler;)Z
 
-    .line 104
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 105
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/wifi/WifiLogger;->mLogLevel:I
 
-    .line 109
     :goto_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     if-nez v0, :cond_1
 
-    .line 110
     invoke-direct {p0}, Lcom/android/server/wifi/WifiLogger;->fetchRingBuffers()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 111
     invoke-direct {p0}, Lcom/android/server/wifi/WifiLogger;->startLoggingAllExceptPerPacketBuffers()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 114
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 107
     :cond_2
     const/4 v0, 0x1
 
@@ -1345,7 +1206,6 @@
 
     goto :goto_0
 
-    .line 97
     :catchall_0
     move-exception v0
 
@@ -1358,7 +1218,6 @@
     .locals 1
 
     .prologue
-    .line 118
     monitor-enter p0
 
     :try_start_0
@@ -1366,20 +1225,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 119
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mPerPacketRingBuffer:Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     invoke-direct {p0, v0}, Lcom/android/server/wifi/WifiLogger;->startLoggingRingBuffer(Lcom/android/server/wifi/WifiNative$RingBufferStatus;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 123
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 118
     :catchall_0
     move-exception v0
 
@@ -1392,7 +1248,6 @@
     .locals 2
 
     .prologue
-    .line 136
     monitor-enter p0
 
     :try_start_0
@@ -1400,43 +1255,36 @@
 
     if-eqz v0, :cond_1
 
-    .line 139
     invoke-static {}, Lcom/android/server/wifi/WifiNative;->resetLogHandler()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 140
     const-string v0, "WifiLogger"
 
     const-string v1, "Fail to reset log handler"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     :cond_0
     invoke-direct {p0}, Lcom/android/server/wifi/WifiLogger;->stopLoggingAllBuffers()Z
 
-    .line 145
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mRingBuffers:[Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
-    .line 146
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/WifiLogger;->mLogLevel:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 148
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 136
     :catchall_0
     move-exception v0
 
@@ -1449,7 +1297,6 @@
     .locals 1
 
     .prologue
-    .line 127
     monitor-enter p0
 
     :try_start_0
@@ -1457,20 +1304,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger;->mPerPacketRingBuffer:Lcom/android/server/wifi/WifiNative$RingBufferStatus;
 
     invoke-direct {p0, v0}, Lcom/android/server/wifi/WifiLogger;->stopLoggingRingBuffer(Lcom/android/server/wifi/WifiNative$RingBufferStatus;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 132
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 127
     :catchall_0
     move-exception v0
 

@@ -53,20 +53,15 @@
     .end annotation
 
     .prologue
-    .line 410
     .local p2, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 411
     iput-object p1, p0, Lnubia/util/FrameworkDataStatisticsManager$OnEventValue;->mEventId:Ljava/lang/String;
 
-    .line 412
     iput-object p2, p0, Lnubia/util/FrameworkDataStatisticsManager$OnEventValue;->mMap:Ljava/util/Map;
 
-    .line 413
     iput p3, p0, Lnubia/util/FrameworkDataStatisticsManager$OnEventValue;->mDuration:I
 
-    .line 414
     return-void
 .end method
 
@@ -82,7 +77,6 @@
     .end annotation
 
     .prologue
-    .line 419
     iget-object v0, p0, Lnubia/util/FrameworkDataStatisticsManager$OnEventValue;->mEventId:Ljava/lang/String;
 
     iget-object v1, p0, Lnubia/util/FrameworkDataStatisticsManager$OnEventValue;->mMap:Ljava/util/Map;
@@ -91,6 +85,5 @@
 
     invoke-interface {p1, v0, v1, v2}, Lnubia/util/IFrameworkDataStatisticsService;->onEventValue(Ljava/lang/String;Ljava/util/Map;I)V
 
-    .line 420
     return-void
 .end method

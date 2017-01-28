@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 127
     iput-object p1, p0, Lcn/nubia/server/edge/EdgeEventDispatcher$1;->this$0:Lcn/nubia/server/edge/EdgeEventDispatcher;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 130
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -50,18 +48,15 @@
 
     if-nez v1, :cond_1
 
-    .line 139
     :cond_0
     :goto_0
     return-void
 
-    .line 134
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 136
     .local v0, "action":Ljava/lang/String;
     const-string v1, "com.android.internal.policy.impl.ACTION_SCREEN_SAVER_SHOW"
 
@@ -71,7 +66,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 137
     iget-object v1, p0, Lcn/nubia/server/edge/EdgeEventDispatcher$1;->this$0:Lcn/nubia/server/edge/EdgeEventDispatcher;
 
     const-string v2, "showView"

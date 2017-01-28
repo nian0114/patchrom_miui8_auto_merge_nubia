@@ -40,10 +40,8 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v9
@@ -52,7 +50,6 @@
 
     if-ge v9, v11, :cond_0
 
-    .line 25
     new-instance v9, Ljava/net/ProtocolException;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -81,7 +78,6 @@
 
     throw v9
 
-    .line 28
     :cond_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -91,7 +87,6 @@
 
     and-int v3, v9, v11
 
-    .line 29
     .local v3, "length":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -99,7 +94,6 @@
 
     if-le v3, v9, :cond_1
 
-    .line 30
     new-instance v9, Ljava/net/ProtocolException;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -124,7 +118,6 @@
 
     throw v9
 
-    .line 32
     :cond_1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
@@ -136,7 +129,6 @@
 
     move v8, v10
 
-    .line 34
     .local v8, "utf8":Z
     :goto_0
     if-eqz v8, :cond_4
@@ -148,7 +140,6 @@
 
     move-result-object v5
 
-    .line 37
     .local v5, "realm":Ljava/lang/String;
     const-string v9, ";"
 
@@ -156,7 +147,6 @@
 
     move-result-object v7
 
-    .line 38
     .local v7, "realms":[Ljava/lang/String;
     new-instance v9, Ljava/util/ArrayList;
 
@@ -164,7 +154,6 @@
 
     iput-object v9, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mRealms:Ljava/util/List;
 
-    .line 39
     move-object v0, v7
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -179,7 +168,6 @@
 
     aget-object v6, v0, v1
 
-    .line 40
     .local v6, "realmElement":Ljava/lang/String;
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
@@ -187,18 +175,15 @@
 
     if-lez v9, :cond_2
 
-    .line 41
     iget-object v9, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mRealms:Ljava/util/List;
 
     invoke-interface {v9, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 39
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 32
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -211,14 +196,12 @@
 
     goto :goto_0
 
-    .line 34
     .restart local v8    # "utf8":Z
     :cond_4
     sget-object v9, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
     goto :goto_1
 
-    .line 45
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v1    # "i$":I
     .restart local v2    # "len$":I
@@ -231,7 +214,6 @@
 
     and-int/lit16 v4, v9, 0xff
 
-    .line 46
     .local v4, "methodCount":I
     new-instance v9, Ljava/util/ArrayList;
 
@@ -239,11 +221,9 @@
 
     iput-object v9, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mEAPMethods:Ljava/util/List;
 
-    .line 47
     :goto_3
     if-lez v4, :cond_6
 
-    .line 48
     iget-object v9, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mEAPMethods:Ljava/util/List;
 
     new-instance v10, Lcom/android/server/wifi/anqp/eap/EAPMethod;
@@ -252,12 +232,10 @@
 
     invoke-interface {v9, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 49
     add-int/lit8 v4, v4, -0x1
 
     goto :goto_3
 
-    .line 51
     :cond_6
     return-void
 .end method
@@ -277,7 +255,6 @@
     .end annotation
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mEAPMethods:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -300,7 +277,6 @@
     .end annotation
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mRealms:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -326,11 +302,9 @@
     .end annotation
 
     .prologue
-    .line 62
     .local p1, "credLabels":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v6, -0x1
 
-    .line 63
     .local v6, "realmMatch":I
     iget-object v7, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mRealms:Ljava/util/List;
 
@@ -340,7 +314,6 @@
 
     if-nez v7, :cond_4
 
-    .line 64
     iget-object v7, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mRealms:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -361,13 +334,11 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 65
     .local v5, "realm":Ljava/lang/String;
     invoke-static {v5}, Lcom/android/server/wifi/hotspot2/Utils;->splitDomain(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v3
 
-    .line 66
     .local v3, "labels":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-static {p1, v3}, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher;->arg2SubdomainOfArg1(Ljava/util/List;Ljava/util/List;)Z
 
@@ -375,10 +346,8 @@
 
     if-eqz v7, :cond_0
 
-    .line 67
     const/4 v6, 0x4
 
-    .line 71
     .end local v3    # "labels":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v5    # "realm":Ljava/lang/String;
     :cond_1
@@ -397,13 +366,11 @@
     :cond_2
     move v0, v6
 
-    .line 90
     .end local v2    # "i$":Ljava/util/Iterator;
     :cond_3
     :goto_0
     return v0
 
-    .line 76
     :cond_4
     iget-object v7, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mEAPMethods:Ljava/util/List;
 
@@ -413,16 +380,13 @@
 
     if-eqz v7, :cond_5
 
-    .line 77
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 80
     :cond_5
     const/4 v0, -0x1
 
-    .line 81
     .local v0, "best":I
     iget-object v7, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mEAPMethods:Ljava/util/List;
 
@@ -444,7 +408,6 @@
 
     check-cast v1, Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
-    .line 82
     .local v1, "eapMethod":Lcom/android/server/wifi/anqp/eap/EAPMethod;
     invoke-virtual {v1, p2}, Lcom/android/server/wifi/anqp/eap/EAPMethod;->match(Lcom/android/server/wifi/hotspot2/pps/Credential;)I
 
@@ -452,14 +415,11 @@
 
     or-int v4, v7, v6
 
-    .line 83
     .local v4, "match":I
     if-le v4, v0, :cond_6
 
-    .line 84
     move v0, v4
 
-    .line 85
     const/4 v7, 0x7
 
     if-ne v0, v7, :cond_6
@@ -471,18 +431,15 @@
     .locals 6
 
     .prologue
-    .line 95
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 97
     .local v3, "sb":Ljava/lang/StringBuilder;
     const-string v4, "  NAI Realm(s)"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 98
     iget-object v4, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mRealms:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -503,7 +460,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 99
     .local v2, "realm":Ljava/lang/String;
     const/16 v4, 0x20
 
@@ -515,14 +471,12 @@
 
     goto :goto_0
 
-    .line 101
     .end local v2    # "realm":Ljava/lang/String;
     :cond_0
     const/16 v4, 0xa
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 103
     iget-object v4, p0, Lcom/android/server/wifi/anqp/NAIRealmData;->mEAPMethods:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -542,7 +496,6 @@
 
     check-cast v0, Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
-    .line 104
     .local v0, "eapMethod":Lcom/android/server/wifi/anqp/eap/EAPMethod;
     const-string v4, "    "
 
@@ -558,7 +511,6 @@
 
     goto :goto_1
 
-    .line 106
     .end local v0    # "eapMethod":Lcom/android/server/wifi/anqp/eap/EAPMethod;
     :cond_1
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

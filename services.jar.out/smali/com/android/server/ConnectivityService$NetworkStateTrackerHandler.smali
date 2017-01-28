@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1945
     iput-object p1, p0, Lcom/android/server/ConnectivityService$NetworkStateTrackerHandler;->this$0:Lcom/android/server/ConnectivityService;
 
-    .line 1946
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1947
     return-void
 .end method
 
@@ -41,19 +38,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1952
     move-object/from16 v0, p1
 
     iget v1, v0, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 2130
     :cond_0
     :goto_0
     return-void
 
-    .line 1954
     :sswitch_0
     move-object/from16 v0, p0
 
@@ -66,7 +60,6 @@
 
     goto :goto_0
 
-    .line 1958
     :sswitch_1
     move-object/from16 v0, p0
 
@@ -87,7 +80,6 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 1959
     .local v11, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v11, :cond_0
 
@@ -97,7 +89,6 @@
 
     goto :goto_0
 
-    .line 1963
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :sswitch_2
     move-object/from16 v0, p0
@@ -111,7 +102,6 @@
 
     goto :goto_0
 
-    .line 1967
     :sswitch_3
     move-object/from16 v0, p0
 
@@ -132,11 +122,9 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 1968
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v11, :cond_1
 
-    .line 1969
     const-string v1, "EVENT_NETWORK_CAPABILITIES_CHANGED from unknown NetworkAgent"
 
     # invokes: Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
@@ -144,7 +132,6 @@
 
     goto :goto_0
 
-    .line 1971
     :cond_1
     move-object/from16 v0, p1
 
@@ -152,7 +139,6 @@
 
     check-cast v12, Landroid/net/NetworkCapabilities;
 
-    .line 1973
     .local v12, "networkCapabilities":Landroid/net/NetworkCapabilities;
     const/16 v1, 0x11
 
@@ -170,7 +156,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 1975
     :cond_2
     const-string v1, "ConnectivityService"
 
@@ -200,7 +185,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1977
     :cond_3
     iget-boolean v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
@@ -214,7 +198,6 @@
 
     if-nez v1, :cond_4
 
-    .line 1979
     const-string v1, "ConnectivityService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -259,7 +242,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1982
     :cond_4
     move-object/from16 v0, p0
 
@@ -270,7 +252,6 @@
 
     goto/16 :goto_0
 
-    .line 1987
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v12    # "networkCapabilities":Landroid/net/NetworkCapabilities;
     :sswitch_4
@@ -293,11 +274,9 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 1988
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v11, :cond_5
 
-    .line 1989
     const-string v1, "NetworkAgent not found for EVENT_NETWORK_PROPERTIES_CHANGED"
 
     # invokes: Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
@@ -305,15 +284,12 @@
 
     goto/16 :goto_0
 
-    .line 1995
     :cond_5
     iget-object v13, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 1996
     .local v13, "oldLp":Landroid/net/LinkProperties;
     monitor-enter v11
 
-    .line 1997
     :try_start_0
     move-object/from16 v0, p1
 
@@ -323,12 +299,10 @@
 
     iput-object v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 1998
     monitor-exit v11
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1999
     iget-boolean v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
     if-eqz v1, :cond_0
@@ -342,7 +316,6 @@
 
     goto/16 :goto_0
 
-    .line 1998
     :catchall_0
     move-exception v1
 
@@ -353,7 +326,6 @@
 
     throw v1
 
-    .line 2004
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v13    # "oldLp":Landroid/net/LinkProperties;
     :sswitch_5
@@ -376,11 +348,9 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2005
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v11, :cond_6
 
-    .line 2006
     const-string v1, "EVENT_NETWORK_INFO_CHANGED from unknown NetworkAgent"
 
     # invokes: Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
@@ -388,7 +358,6 @@
 
     goto/16 :goto_0
 
-    .line 2009
     :cond_6
     move-object/from16 v0, p1
 
@@ -396,7 +365,6 @@
 
     check-cast v10, Landroid/net/NetworkInfo;
 
-    .line 2010
     .local v10, "info":Landroid/net/NetworkInfo;
     move-object/from16 v0, p0
 
@@ -407,7 +375,6 @@
 
     goto/16 :goto_0
 
-    .line 2014
     .end local v10    # "info":Landroid/net/NetworkInfo;
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :sswitch_6
@@ -430,11 +397,9 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2015
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v11, :cond_7
 
-    .line 2016
     const-string v1, "EVENT_NETWORK_SCORE_CHANGED from unknown NetworkAgent"
 
     # invokes: Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
@@ -442,7 +407,6 @@
 
     goto/16 :goto_0
 
-    .line 2019
     :cond_7
     move-object/from16 v0, p1
 
@@ -450,7 +414,6 @@
 
     check-cast v15, Ljava/lang/Integer;
 
-    .line 2020
     .local v15, "score":Ljava/lang/Integer;
     if-eqz v15, :cond_0
 
@@ -467,7 +430,6 @@
 
     goto/16 :goto_0
 
-    .line 2024
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v15    # "score":Ljava/lang/Integer;
     :sswitch_7
@@ -490,11 +452,9 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2025
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v11, :cond_8
 
-    .line 2026
     const-string v1, "EVENT_UID_RANGES_ADDED from unknown NetworkAgent"
 
     # invokes: Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
@@ -502,7 +462,6 @@
 
     goto/16 :goto_0
 
-    .line 2030
     :cond_8
     :try_start_2
     move-object/from16 v0, p0
@@ -532,11 +491,9 @@
 
     goto/16 :goto_0
 
-    .line 2031
     :catch_0
     move-exception v9
 
-    .line 2033
     .local v9, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -561,7 +518,6 @@
 
     goto/16 :goto_0
 
-    .line 2038
     .end local v9    # "e":Ljava/lang/Exception;
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :sswitch_8
@@ -584,11 +540,9 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2039
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v11, :cond_9
 
-    .line 2040
     const-string v1, "EVENT_UID_RANGES_REMOVED from unknown NetworkAgent"
 
     # invokes: Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
@@ -596,7 +550,6 @@
 
     goto/16 :goto_0
 
-    .line 2044
     :cond_9
     :try_start_3
     move-object/from16 v0, p0
@@ -626,11 +579,9 @@
 
     goto/16 :goto_0
 
-    .line 2045
     :catch_1
     move-exception v9
 
-    .line 2047
     .restart local v9    # "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -655,7 +606,6 @@
 
     goto/16 :goto_0
 
-    .line 2052
     .end local v9    # "e":Ljava/lang/Exception;
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :sswitch_9
@@ -678,11 +628,9 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2053
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v11, :cond_a
 
-    .line 2054
     const-string v1, "EVENT_SET_EXPLICITLY_SELECTED from unknown NetworkAgent"
 
     # invokes: Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
@@ -690,7 +638,6 @@
 
     goto/16 :goto_0
 
-    .line 2057
     :cond_a
     iget-boolean v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
@@ -702,13 +649,11 @@
 
     if-nez v1, :cond_b
 
-    .line 2058
     const-string v1, "ERROR: created network explicitly selected."
 
     # invokes: Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->access$1100(Ljava/lang/String;)V
 
-    .line 2060
     :cond_b
     iget-object v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
@@ -716,7 +661,6 @@
 
     iput-boolean v2, v1, Landroid/net/NetworkMisc;->explicitlySelected:Z
 
-    .line 2061
     iget-object v2, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
     move-object/from16 v0, p1
@@ -733,7 +677,6 @@
 
     goto/16 :goto_0
 
-    .line 2065
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :sswitch_a
     move-object/from16 v0, p0
@@ -755,11 +698,9 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2066
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v11, :cond_c
 
-    .line 2067
     const-string v1, "EVENT_PACKET_KEEPALIVE from unknown NetworkAgent"
 
     # invokes: Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
@@ -767,7 +708,6 @@
 
     goto/16 :goto_0
 
-    .line 2070
     :cond_c
     move-object/from16 v0, p0
 
@@ -784,7 +724,6 @@
 
     goto/16 :goto_0
 
-    .line 2074
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :sswitch_b
     move-object/from16 v0, p1
@@ -793,7 +732,6 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2075
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     move-object/from16 v0, p0
 
@@ -808,7 +746,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2076
     move-object/from16 v0, p1
 
     iget v1, v0, Landroid/os/Message;->arg1:I
@@ -817,7 +754,6 @@
 
     const/16 v16, 0x1
 
-    .line 2078
     .local v16, "valid":Z
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -854,32 +790,27 @@
     # invokes: Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->access$1900(Ljava/lang/String;)V
 
-    .line 2079
     iget-boolean v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->lastValidated:Z
 
     move/from16 v0, v16
 
     if-eq v0, v1, :cond_d
 
-    .line 2080
     invoke-virtual {v11}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
     move-result v14
 
-    .line 2081
     .local v14, "oldScore":I
     move/from16 v0, v16
 
     iput-boolean v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->lastValidated:Z
 
-    .line 2082
     iget-boolean v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->everValidated:Z
 
     or-int v1, v1, v16
 
     iput-boolean v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->everValidated:Z
 
-    .line 2083
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService$NetworkStateTrackerHandler;->this$0:Lcom/android/server/ConnectivityService;
@@ -889,7 +820,6 @@
     # invokes: Lcom/android/server/ConnectivityService;->updateCapabilities(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkCapabilities;)V
     invoke-static {v1, v11, v2}, Lcom/android/server/ConnectivityService;->access$1200(Lcom/android/server/ConnectivityService;Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkCapabilities;)V
 
-    .line 2085
     invoke-virtual {v11}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
     move-result v1
@@ -903,7 +833,6 @@
     # invokes: Lcom/android/server/ConnectivityService;->sendUpdatedScoreToFactories(Lcom/android/server/connectivity/NetworkAgentInfo;)V
     invoke-static {v1, v11}, Lcom/android/server/ConnectivityService;->access$2000(Lcom/android/server/ConnectivityService;Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 2087
     .end local v14    # "oldScore":I
     :cond_d
     move-object/from16 v0, p0
@@ -913,7 +842,6 @@
     # invokes: Lcom/android/server/ConnectivityService;->updateInetCondition(Lcom/android/server/connectivity/NetworkAgentInfo;)V
     invoke-static {v1, v11}, Lcom/android/server/ConnectivityService;->access$2100(Lcom/android/server/ConnectivityService;Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 2089
     iget-object v2, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     const v4, 0x81007
@@ -931,27 +859,23 @@
 
     goto/16 :goto_0
 
-    .line 2076
     .end local v16    # "valid":Z
     :cond_e
     const/16 v16, 0x0
 
     goto :goto_1
 
-    .line 2078
     .restart local v16    # "valid":Z
     :cond_f
     const-string v1, "failed"
 
     goto :goto_2
 
-    .line 2089
     :cond_10
     const/4 v1, 0x2
 
     goto :goto_3
 
-    .line 2097
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v16    # "valid":Z
     :sswitch_c
@@ -961,7 +885,6 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2098
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     move-object/from16 v0, p0
 
@@ -976,7 +899,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2099
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService$NetworkStateTrackerHandler;->this$0:Lcom/android/server/ConnectivityService;
@@ -986,14 +908,12 @@
 
     goto/16 :goto_0
 
-    .line 2104
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :sswitch_d
     move-object/from16 v0, p1
 
     iget v3, v0, Landroid/os/Message;->arg2:I
 
-    .line 2105
     .local v3, "netId":I
     move-object/from16 v0, p1
 
@@ -1003,7 +923,6 @@
 
     const/16 v17, 0x1
 
-    .line 2107
     .local v17, "visible":Z
     :goto_4
     move-object/from16 v0, p0
@@ -1017,7 +936,6 @@
 
     monitor-enter v2
 
-    .line 2108
     :try_start_4
     move-object/from16 v0, p0
 
@@ -1034,13 +952,11 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2109
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     monitor-exit v2
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 2111
     if-eqz v11, :cond_11
 
     iget-boolean v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->lastCaptivePortalDetected:Z
@@ -1049,19 +965,16 @@
 
     if-eq v0, v1, :cond_11
 
-    .line 2112
     move/from16 v0, v17
 
     iput-boolean v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->lastCaptivePortalDetected:Z
 
-    .line 2113
     iget-boolean v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->everCaptivePortalDetected:Z
 
     or-int v1, v1, v17
 
     iput-boolean v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->everCaptivePortalDetected:Z
 
-    .line 2114
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService$NetworkStateTrackerHandler;->this$0:Lcom/android/server/ConnectivityService;
@@ -1071,11 +984,9 @@
     # invokes: Lcom/android/server/ConnectivityService;->updateCapabilities(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkCapabilities;)V
     invoke-static {v1, v11, v2}, Lcom/android/server/ConnectivityService;->access$1200(Lcom/android/server/ConnectivityService;Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkCapabilities;)V
 
-    .line 2116
     :cond_11
     if-nez v17, :cond_13
 
-    .line 2117
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService$NetworkStateTrackerHandler;->this$0:Lcom/android/server/ConnectivityService;
@@ -1097,7 +1008,6 @@
 
     goto/16 :goto_0
 
-    .line 2105
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v17    # "visible":Z
     :cond_12
@@ -1105,7 +1015,6 @@
 
     goto :goto_4
 
-    .line 2109
     .restart local v17    # "visible":Z
     :catchall_1
     move-exception v1
@@ -1117,12 +1026,10 @@
 
     throw v1
 
-    .line 2119
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_13
     if-nez v11, :cond_14
 
-    .line 2120
     const-string v1, "EVENT_PROVISIONING_NOTIFICATION from unknown NetworkMonitor"
 
     # invokes: Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
@@ -1130,7 +1037,6 @@
 
     goto/16 :goto_0
 
-    .line 2123
     :cond_14
     move-object/from16 v0, p0
 
@@ -1167,7 +1073,6 @@
 
     goto/16 :goto_0
 
-    .line 1952
     nop
 
     :sswitch_data_0

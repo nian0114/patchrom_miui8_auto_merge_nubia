@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 105
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcController;
 
     invoke-direct {p0, p2}, Landroid/telephony/PhoneStateListener;-><init>(Landroid/os/Looper;)V
@@ -39,12 +38,10 @@
     .param p1, "active"    # Z
 
     .prologue
-    .line 108
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcController;
 
     # setter for: Lcom/android/internal/telephony/dataconnection/DcController;->mExecutingCarrierChange:Z
     invoke-static {v0, p1}, Lcom/android/internal/telephony/dataconnection/DcController;->access$102(Lcom/android/internal/telephony/dataconnection/DcController;Z)Z
 
-    .line 109
     return-void
 .end method

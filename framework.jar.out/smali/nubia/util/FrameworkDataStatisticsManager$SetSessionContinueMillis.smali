@@ -27,13 +27,10 @@
     .param p1, "millis"    # J
 
     .prologue
-    .line 258
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 259
     iput-wide p1, p0, Lnubia/util/FrameworkDataStatisticsManager$SetSessionContinueMillis;->mMillis:J
 
-    .line 260
     return-void
 .end method
 
@@ -49,11 +46,9 @@
     .end annotation
 
     .prologue
-    .line 265
     iget-wide v0, p0, Lnubia/util/FrameworkDataStatisticsManager$SetSessionContinueMillis;->mMillis:J
 
     invoke-interface {p1, v0, v1}, Lnubia/util/IFrameworkDataStatisticsService;->setSessionContinueMillis(J)V
 
-    .line 266
     return-void
 .end method

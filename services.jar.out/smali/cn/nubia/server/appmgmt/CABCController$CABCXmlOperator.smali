@@ -33,13 +33,10 @@
     .param p2, "file"    # Ljava/io/File;
 
     .prologue
-    .line 128
     iput-object p1, p0, Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
-    .line 129
     invoke-direct {p0, p2}, Lcn/nubia/server/appmgmt/XmlOperator;-><init>(Ljava/io/File;)V
 
-    .line 130
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .locals 4
 
     .prologue
-    .line 174
     new-instance v0, Lcn/nubia/server/appmgmt/CABCController$XmlData;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;->this$0:Lcn/nubia/server/appmgmt/CABCController;
@@ -69,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 127
     invoke-virtual {p0}, Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;->createObject()Lcn/nubia/server/appmgmt/CABCController$XmlData;
 
     move-result-object v0
@@ -89,12 +84,10 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 149
     invoke-virtual {p0}, Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;->createObject()Lcn/nubia/server/appmgmt/CABCController$XmlData;
 
     move-result-object v4
 
-    .line 151
     .local v4, "temp":Lcn/nubia/server/appmgmt/CABCController$XmlData;
     :cond_0
     :goto_0
@@ -107,7 +100,6 @@
 
     if-eq v5, v6, :cond_2
 
-    .line 152
     const/4 v6, 0x3
 
     if-eq v5, v6, :cond_0
@@ -116,12 +108,10 @@
 
     if-eq v5, v6, :cond_0
 
-    .line 155
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 156
     .local v3, "tag":Ljava/lang/String;
     const-string v6, "default_setting"
 
@@ -131,18 +121,15 @@
 
     if-eqz v6, :cond_1
 
-    .line 157
     const-string v6, "default_mode"
 
     invoke-interface {p1, v8, v6}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 158
     .local v2, "defattr":Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 159
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v6
@@ -152,7 +139,6 @@
 
     goto :goto_0
 
-    .line 161
     .end local v2    # "defattr":Ljava/lang/String;
     :cond_1
     const-string v6, "app_setting"
@@ -163,14 +149,12 @@
 
     if-eqz v6, :cond_0
 
-    .line 162
     const-string v6, "app_name"
 
     invoke-interface {p1, v8, v6}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 163
     .local v0, "app":Ljava/lang/String;
     const-string v6, "app_mode"
 
@@ -178,13 +162,11 @@
 
     move-result-object v1
 
-    .line 164
     .local v1, "appMode":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     if-eqz v1, :cond_0
 
-    .line 165
     # getter for: Lcn/nubia/server/appmgmt/CABCController$XmlData;->array:Landroid/util/ArrayMap;
     invoke-static {v4}, Lcn/nubia/server/appmgmt/CABCController$XmlData;->access$100(Lcn/nubia/server/appmgmt/CABCController$XmlData;)Landroid/util/ArrayMap;
 
@@ -202,7 +184,6 @@
 
     goto :goto_0
 
-    .line 169
     .end local v0    # "app":Ljava/lang/String;
     .end local v1    # "appMode":Ljava/lang/String;
     .end local v3    # "tag":Ljava/lang/String;
@@ -219,7 +200,6 @@
     .end annotation
 
     .prologue
-    .line 127
     invoke-virtual {p0, p1}, Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;->readDataXml(Lorg/xmlpull/v1/XmlPullParser;)Lcn/nubia/server/appmgmt/CABCController$XmlData;
 
     move-result-object v0
@@ -241,12 +221,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 134
     const-string v2, "default_setting"
 
     invoke-interface {p2, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 135
     const-string v2, "default_mode"
 
     # getter for: Lcn/nubia/server/appmgmt/CABCController$XmlData;->value:I
@@ -260,12 +238,10 @@
 
     invoke-interface {p2, v4, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 136
     const-string v2, "default_setting"
 
     invoke-interface {p2, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 138
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -283,12 +259,10 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 139
     const-string v2, "app_setting"
 
     invoke-interface {p2, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 140
     const-string v3, "app_name"
 
     # getter for: Lcn/nubia/server/appmgmt/CABCController$XmlData;->array:Landroid/util/ArrayMap;
@@ -304,7 +278,6 @@
 
     invoke-interface {p2, v4, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 141
     iget-object v2, p0, Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     # getter for: Lcn/nubia/server/appmgmt/CABCController;->mAppCABCModes:Landroid/util/ArrayMap;
@@ -322,7 +295,6 @@
 
     move-result v1
 
-    .line 142
     .local v1, "value":I
     const-string v2, "app_mode"
 
@@ -332,17 +304,14 @@
 
     invoke-interface {p2, v4, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 143
     const-string v2, "app_setting"
 
     invoke-interface {p2, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 138
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 145
     .end local v1    # "value":I
     :cond_0
     return-void
@@ -357,7 +326,6 @@
     .end annotation
 
     .prologue
-    .line 127
     check-cast p3, Lcn/nubia/server/appmgmt/CABCController$XmlData;
 
     invoke-virtual {p0, p1, p2, p3}, Lcn/nubia/server/appmgmt/CABCController$CABCXmlOperator;->writeDataXml(Ljava/io/BufferedOutputStream;Lorg/xmlpull/v1/XmlSerializer;Lcn/nubia/server/appmgmt/CABCController$XmlData;)V

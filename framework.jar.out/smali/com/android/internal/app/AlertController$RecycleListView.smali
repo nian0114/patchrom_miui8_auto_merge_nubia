@@ -24,15 +24,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1051
     invoke-direct {p0, p1}, Landroid/widget/ListView;-><init>(Landroid/content/Context;)V
 
-    .line 1048
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/app/AlertController$RecycleListView;->mRecycleOnMeasure:Z
 
-    .line 1052
     return-void
 .end method
 
@@ -42,15 +39,12 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 1055
     invoke-direct {p0, p1, p2}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 1048
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/app/AlertController$RecycleListView;->mRecycleOnMeasure:Z
 
-    .line 1056
     return-void
 .end method
 
@@ -61,15 +55,12 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 1059
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 1048
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/app/AlertController$RecycleListView;->mRecycleOnMeasure:Z
 
-    .line 1060
     return-void
 .end method
 
@@ -81,15 +72,12 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 1064
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 1048
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/app/AlertController$RecycleListView;->mRecycleOnMeasure:Z
 
-    .line 1065
     return-void
 .end method
 
@@ -99,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 1069
     iget-boolean v0, p0, Lcom/android/internal/app/AlertController$RecycleListView;->mRecycleOnMeasure:Z
 
     return v0

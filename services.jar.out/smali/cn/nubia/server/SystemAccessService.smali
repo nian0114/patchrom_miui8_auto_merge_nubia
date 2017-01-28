@@ -37,30 +37,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 30
     invoke-direct {p0, p1}, Lcn/nubia/server/NubiaSystemService;-><init>(Landroid/content/Context;)V
 
-    .line 21
     iput-boolean v0, p0, Lcn/nubia/server/SystemAccessService;->Flag_EndCall:Z
 
-    .line 22
     iput-boolean v0, p0, Lcn/nubia/server/SystemAccessService;->Flag_Home:Z
 
-    .line 50
     new-instance v0, Lcn/nubia/server/SystemAccessService$1;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/SystemAccessService$1;-><init>(Lcn/nubia/server/SystemAccessService;)V
 
     iput-object v0, p0, Lcn/nubia/server/SystemAccessService;->mHandler:Landroid/os/Handler;
 
-    .line 31
     new-instance v0, Lcn/nubia/server/SystemAccessService$SystemAccessStub;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/SystemAccessService$SystemAccessStub;-><init>(Lcn/nubia/server/SystemAccessService;)V
 
     iput-object v0, p0, Lcn/nubia/server/SystemAccessService;->mSystemAccessStub:Lcn/nubia/server/SystemAccessService$SystemAccessStub;
 
-    .line 32
     return-void
 .end method
 
@@ -69,7 +63,6 @@
     .param p0, "x0"    # Lcn/nubia/server/SystemAccessService;
 
     .prologue
-    .line 16
     iget-boolean v0, p0, Lcn/nubia/server/SystemAccessService;->Flag_EndCall:Z
 
     return v0
@@ -81,7 +74,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 16
     iput-boolean p1, p0, Lcn/nubia/server/SystemAccessService;->Flag_EndCall:Z
 
     return p1
@@ -92,7 +84,6 @@
     .param p0, "x0"    # Lcn/nubia/server/SystemAccessService;
 
     .prologue
-    .line 16
     iget-boolean v0, p0, Lcn/nubia/server/SystemAccessService;->Flag_Home:Z
 
     return v0
@@ -104,7 +95,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 16
     iput-boolean p1, p0, Lcn/nubia/server/SystemAccessService;->Flag_Home:Z
 
     return p1
@@ -115,7 +105,6 @@
     .param p0, "x0"    # Lcn/nubia/server/SystemAccessService;
 
     .prologue
-    .line 16
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -126,7 +115,6 @@
     .param p0, "x0"    # Lcn/nubia/server/SystemAccessService;
 
     .prologue
-    .line 16
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService;->mSnapshotBm:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -138,7 +126,6 @@
     .param p1, "x1"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 16
     iput-object p1, p0, Lcn/nubia/server/SystemAccessService;->mSnapshotBm:Landroid/graphics/Bitmap;
 
     return-object p1
@@ -150,7 +137,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 16
     invoke-direct {p0, p1}, Lcn/nubia/server/SystemAccessService;->enableWake(Z)Z
 
     move-result v0
@@ -164,7 +150,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 16
     invoke-direct {p0, p1}, Lcn/nubia/server/SystemAccessService;->enablePalmDetect(Z)Z
 
     move-result v0
@@ -184,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcn/nubia/server/SystemAccessService;->mSystemAccessStub:Lcn/nubia/server/SystemAccessService$SystemAccessStub;
 
     return-object v0
@@ -194,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const-string v0, "system_access"
 
     return-object v0

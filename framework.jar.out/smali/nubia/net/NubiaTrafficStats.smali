@@ -24,12 +24,10 @@
     .locals 1
 
     .prologue
-    .line 9
     const-string v0, "nubia_runtime"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 10
     return-void
 .end method
 
@@ -37,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +46,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 49
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v0}, Lnubia/net/NubiaTrafficStats;->nativeGetIfaceUidStat(Ljava/lang/String;II)J
@@ -65,7 +61,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 89
     const/4 v0, 0x1
 
     invoke-static {p0, p1, v0}, Lnubia/net/NubiaTrafficStats;->nativeGetIfaceUidStat(Ljava/lang/String;II)J
@@ -81,7 +76,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 29
     const/4 v0, 0x2
 
     invoke-static {p0, p1, v0}, Lnubia/net/NubiaTrafficStats;->nativeGetIfaceUidStat(Ljava/lang/String;II)J
@@ -97,7 +91,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 69
     const/4 v0, 0x3
 
     invoke-static {p0, p1, v0}, Lnubia/net/NubiaTrafficStats;->nativeGetIfaceUidStat(Ljava/lang/String;II)J

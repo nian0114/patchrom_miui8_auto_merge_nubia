@@ -24,7 +24,6 @@
     .param p2, "x0"    # Ljava/io/Writer;
 
     .prologue
-    .line 2304
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$1;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     invoke-direct {p0, p2}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
@@ -38,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 2312
     return-void
 .end method
 
@@ -47,11 +45,9 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 2307
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$1;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/dataconnection/DataConnection;->logd(Ljava/lang/String;)V
 
-    .line 2308
     return-void
 .end method

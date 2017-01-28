@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 77
     iput-object p1, p0, Lnubia/widget/NubiaDigitalBigClockWithCity$HourFormatChangeObserver;->this$0:Lnubia/widget/NubiaDigitalBigClockWithCity;
 
-    .line 78
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 79
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 83
     iget-object v0, p0, Lnubia/widget/NubiaDigitalBigClockWithCity$HourFormatChangeObserver;->this$0:Lnubia/widget/NubiaDigitalBigClockWithCity;
 
     iget-object v1, p0, Lnubia/widget/NubiaDigitalBigClockWithCity$HourFormatChangeObserver;->this$0:Lnubia/widget/NubiaDigitalBigClockWithCity;
@@ -60,12 +56,10 @@
     # setter for: Lnubia/widget/NubiaDigitalBigClockWithCity;->mIs24Hour:Z
     invoke-static {v0, v1}, Lnubia/widget/NubiaDigitalBigClockWithCity;->access$302(Lnubia/widget/NubiaDigitalBigClockWithCity;Z)Z
 
-    .line 84
     iget-object v0, p0, Lnubia/widget/NubiaDigitalBigClockWithCity$HourFormatChangeObserver;->this$0:Lnubia/widget/NubiaDigitalBigClockWithCity;
 
     # invokes: Lnubia/widget/NubiaDigitalBigClockWithCity;->onTimeChanged()V
     invoke-static {v0}, Lnubia/widget/NubiaDigitalBigClockWithCity;->access$100(Lnubia/widget/NubiaDigitalBigClockWithCity;)V
 
-    .line 85
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 135
     iput-object p1, p0, Lcom/android/server/wifi/WifiApConfigStore$ActiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 137
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/wifi/WifiApConfigStore$ActiveState$1;
@@ -48,7 +46,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 143
     return-void
 .end method
 
@@ -57,32 +54,26 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 146
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 156
     const/4 v0, 0x0
 
-    .line 158
     :goto_0
     return v0
 
-    .line 150
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiApConfigStore$ActiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     # invokes: Lcom/android/server/wifi/WifiApConfigStore;->deferMessage(Landroid/os/Message;)V
     invoke-static {v0, p1}, Lcom/android/server/wifi/WifiApConfigStore;->access$500(Lcom/android/server/wifi/WifiApConfigStore;Landroid/os/Message;)V
 
-    .line 158
     :goto_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 153
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiApConfigStore$ActiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
@@ -98,7 +89,6 @@
 
     goto :goto_1
 
-    .line 146
     :pswitch_data_0
     .packed-switch 0x20019
         :pswitch_0

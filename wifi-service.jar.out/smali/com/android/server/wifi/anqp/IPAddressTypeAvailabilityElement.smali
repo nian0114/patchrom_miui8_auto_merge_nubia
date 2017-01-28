@@ -30,10 +30,8 @@
     .end annotation
 
     .prologue
-    .line 22
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 24
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v1
@@ -42,7 +40,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 25
     new-instance v1, Ljava/net/ProtocolException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -71,13 +68,11 @@
 
     throw v1
 
-    .line 28
     :cond_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v0
 
-    .line 29
     .local v0, "ipField":I
     invoke-static {}, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;->values()[Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;
 
@@ -89,12 +84,10 @@
 
     iput-object v1, p0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;->mV6Availability:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;
 
-    .line 31
     shr-int/lit8 v1, v0, 0x2
 
     and-int/lit8 v0, v1, 0x3f
 
-    .line 32
     invoke-static {}, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->values()[Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
     move-result-object v1
@@ -112,10 +105,8 @@
     :goto_0
     iput-object v1, p0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;->mV4Availability:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
-    .line 35
     return-void
 
-    .line 32
     :cond_1
     sget-object v1, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->Unknown:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
@@ -128,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;->mV4Availability:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
     return-object v0
@@ -138,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;->mV6Availability:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv6Availability;
 
     return-object v0
@@ -148,7 +137,6 @@
     .locals 2
 
     .prologue
-    .line 47
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

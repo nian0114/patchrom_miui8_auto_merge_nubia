@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 135
     iput-object p1, p0, Lcn/nubia/server/notification/NubiaZenModeHelper$4;->this$0:Lcn/nubia/server/notification/NubiaZenModeHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcn/nubia/server/notification/NubiaZenModeHelper$4;->this$0:Lcn/nubia/server/notification/NubiaZenModeHelper;
 
     # getter for: Lcn/nubia/server/notification/NubiaZenModeHelper;->mContext:Landroid/content/Context;
@@ -58,6 +56,5 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$Global;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
 
-    .line 140
     return-void
 .end method

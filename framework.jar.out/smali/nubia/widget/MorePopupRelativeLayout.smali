@@ -27,24 +27,18 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 21
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 12
     const/4 v0, 0x0
 
     iput v0, p0, Lnubia/widget/MorePopupRelativeLayout;->mHistoryPointCount:I
 
-    .line 17
     iput-wide v2, p0, Lnubia/widget/MorePopupRelativeLayout;->mDownPointX:D
 
-    .line 18
     iput-wide v2, p0, Lnubia/widget/MorePopupRelativeLayout;->mDownPointY:D
 
-    .line 22
     invoke-direct {p0, p1}, Lnubia/widget/MorePopupRelativeLayout;->initDistance(Landroid/content/Context;)V
 
-    .line 23
     return-void
 .end method
 
@@ -56,24 +50,18 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 26
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 12
     const/4 v0, 0x0
 
     iput v0, p0, Lnubia/widget/MorePopupRelativeLayout;->mHistoryPointCount:I
 
-    .line 17
     iput-wide v2, p0, Lnubia/widget/MorePopupRelativeLayout;->mDownPointX:D
 
-    .line 18
     iput-wide v2, p0, Lnubia/widget/MorePopupRelativeLayout;->mDownPointY:D
 
-    .line 27
     invoke-direct {p0, p1}, Lnubia/widget/MorePopupRelativeLayout;->initDistance(Landroid/content/Context;)V
 
-    .line 28
     return-void
 .end method
 
@@ -82,7 +70,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 78
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -95,7 +82,6 @@
 
     iput v0, p0, Lnubia/widget/MorePopupRelativeLayout;->mDistance:I
 
-    .line 80
     return-void
 .end method
 
@@ -108,7 +94,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 40
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v1
@@ -117,7 +102,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 41
     const-string v1, "persist.sys.gesture.capture"
 
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
@@ -126,10 +110,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 42
     const/4 v0, 0x1
 
-    .line 45
     :cond_0
     return v0
 .end method
@@ -143,7 +125,6 @@
 
     const/4 v1, 0x1
 
-    .line 50
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v3
@@ -153,11 +134,9 @@
     :goto_0
     move v1, v2
 
-    .line 74
     :goto_1
     return v1
 
-    .line 52
     :sswitch_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -167,7 +146,6 @@
 
     iput-wide v2, p0, Lnubia/widget/MorePopupRelativeLayout;->mDownPointX:D
 
-    .line 53
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v2
@@ -178,7 +156,6 @@
 
     goto :goto_1
 
-    .line 56
     :sswitch_1
     iget v2, p0, Lnubia/widget/MorePopupRelativeLayout;->mHistoryPointCount:I
 
@@ -188,7 +165,6 @@
 
     goto :goto_1
 
-    .line 60
     :sswitch_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -236,7 +212,6 @@
 
     move v0, v1
 
-    .line 62
     .local v0, "inScope":Z
     :goto_2
     iget v3, p0, Lnubia/widget/MorePopupRelativeLayout;->mHistoryPointCount:I
@@ -245,12 +220,10 @@
 
     iput v3, p0, Lnubia/widget/MorePopupRelativeLayout;->mHistoryPointCount:I
 
-    .line 64
     iget v3, p0, Lnubia/widget/MorePopupRelativeLayout;->mHistoryPointCount:I
 
     if-gt v3, v1, :cond_2
 
-    .line 65
     iget-object v3, p0, Lnubia/widget/MorePopupRelativeLayout;->mPopup:Landroid/widget/PopupWindow;
 
     if-eqz v3, :cond_0
@@ -261,14 +234,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 66
     iget-object v3, p0, Lnubia/widget/MorePopupRelativeLayout;->mNubiaMorePopup:Lnubia/widget/NubiaMorePopup;
 
     iget-object v4, p0, Lnubia/widget/MorePopupRelativeLayout;->mPopup:Landroid/widget/PopupWindow;
 
     invoke-virtual {v3, v4}, Lnubia/widget/NubiaMorePopup;->startExitAnimation(Landroid/widget/PopupWindow;)V
 
-    .line 68
     :cond_0
     iput v2, p0, Lnubia/widget/MorePopupRelativeLayout;->mHistoryPointCount:I
 
@@ -278,17 +249,14 @@
     :cond_1
     move v0, v2
 
-    .line 60
     goto :goto_2
 
-    .line 71
     .restart local v0    # "inScope":Z
     :cond_2
     iput v2, p0, Lnubia/widget/MorePopupRelativeLayout;->mHistoryPointCount:I
 
     goto :goto_0
 
-    .line 50
     nop
 
     :sswitch_data_0
@@ -304,10 +272,8 @@
     .param p1, "nubiaPop"    # Lnubia/widget/NubiaMorePopup;
 
     .prologue
-    .line 35
     iput-object p1, p0, Lnubia/widget/MorePopupRelativeLayout;->mNubiaMorePopup:Lnubia/widget/NubiaMorePopup;
 
-    .line 36
     return-void
 .end method
 
@@ -316,9 +282,7 @@
     .param p1, "pop"    # Landroid/widget/PopupWindow;
 
     .prologue
-    .line 31
     iput-object p1, p0, Lnubia/widget/MorePopupRelativeLayout;->mPopup:Landroid/widget/PopupWindow;
 
-    .line 32
     return-void
 .end method

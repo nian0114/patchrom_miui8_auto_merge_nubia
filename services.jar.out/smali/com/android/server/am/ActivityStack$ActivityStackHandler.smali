@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 297
     iput-object p1, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
-    .line 298
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 299
     return-void
 .end method
 
@@ -43,22 +40,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 303
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 365
     :goto_0
     return-void
 
-    .line 305
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/am/ActivityRecord;
 
-    .line 308
     .local v1, "r":Lcom/android/server/am/ActivityRecord;
     const-string v2, "ActivityManager"
 
@@ -82,20 +75,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 309
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
     iget-object v3, v2, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v3
 
-    .line 310
     :try_start_0
     iget-object v2, v1, Lcom/android/server/am/ActivityRecord;->app:Lcom/android/server/am/ProcessRecord;
 
     if-eqz v2, :cond_0
 
-    .line 311
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
     iget-object v2, v2, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -124,7 +114,6 @@
 
     invoke-virtual {v2, v4, v6, v7, v5}, Lcom/android/server/am/ActivityManagerService;->logAppTooSlow(Lcom/android/server/am/ProcessRecord;JLjava/lang/String;)V
 
-    .line 313
     :cond_0
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
@@ -134,7 +123,6 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/am/ActivityStack;->activityPausedLocked(Landroid/os/IBinder;Z)V
 
-    .line 314
     monitor-exit v3
 
     goto :goto_0
@@ -148,14 +136,12 @@
 
     throw v2
 
-    .line 317
     .end local v1    # "r":Lcom/android/server/am/ActivityRecord;
     :pswitch_1
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/am/ActivityRecord;
 
-    .line 318
     .restart local v1    # "r":Lcom/android/server/am/ActivityRecord;
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
@@ -163,7 +149,6 @@
 
     monitor-enter v3
 
-    .line 319
     :try_start_1
     invoke-virtual {v1}, Lcom/android/server/am/ActivityRecord;->continueLaunchTickingLocked()Z
 
@@ -171,7 +156,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 320
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
     iget-object v2, v2, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -200,7 +184,6 @@
 
     invoke-virtual {v2, v4, v6, v7, v5}, Lcom/android/server/am/ActivityManagerService;->logAppTooSlow(Lcom/android/server/am/ProcessRecord;JLjava/lang/String;)V
 
-    .line 322
     :cond_1
     monitor-exit v3
 
@@ -215,14 +198,12 @@
 
     throw v2
 
-    .line 325
     .end local v1    # "r":Lcom/android/server/am/ActivityRecord;
     :pswitch_2
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/am/ActivityRecord;
 
-    .line 328
     .restart local v1    # "r":Lcom/android/server/am/ActivityRecord;
     const-string v3, "ActivityManager"
 
@@ -246,14 +227,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
     iget-object v3, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
     iget-object v3, v3, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v3
 
-    .line 330
     :try_start_2
     iget-object v4, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
@@ -266,7 +245,6 @@
 
     invoke-virtual {v4, v2, v5}, Lcom/android/server/am/ActivityStack;->activityDestroyedLocked(Landroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 331
     monitor-exit v3
 
     goto/16 :goto_0
@@ -280,14 +258,12 @@
 
     throw v2
 
-    .line 334
     .end local v1    # "r":Lcom/android/server/am/ActivityRecord;
     :pswitch_3
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/am/ActivityRecord;
 
-    .line 337
     .restart local v1    # "r":Lcom/android/server/am/ActivityRecord;
     const-string v2, "ActivityManager"
 
@@ -311,14 +287,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 338
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
     iget-object v3, v2, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v3
 
-    .line 339
     :try_start_3
     invoke-virtual {v1}, Lcom/android/server/am/ActivityRecord;->isInHistory()Z
 
@@ -326,7 +300,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 340
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
     const/4 v4, 0x0
@@ -337,7 +310,6 @@
 
     invoke-virtual {v2, v1, v4, v5, v6}, Lcom/android/server/am/ActivityStack;->activityStoppedLocked(Lcom/android/server/am/ActivityRecord;Landroid/os/Bundle;Landroid/os/PersistableBundle;Ljava/lang/CharSequence;)V
 
-    .line 342
     :cond_3
     monitor-exit v3
 
@@ -352,14 +324,12 @@
 
     throw v2
 
-    .line 345
     .end local v1    # "r":Lcom/android/server/am/ActivityRecord;
     :pswitch_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/am/ActivityStack$ScheduleDestroyArgs;
 
-    .line 346
     .local v0, "args":Lcom/android/server/am/ActivityStack$ScheduleDestroyArgs;
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
@@ -367,7 +337,6 @@
 
     monitor-enter v3
 
-    .line 347
     :try_start_4
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
@@ -377,7 +346,6 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/am/ActivityStack;->destroyActivitiesLocked(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;)V
 
-    .line 348
     monitor-exit v3
 
     goto/16 :goto_0
@@ -391,7 +359,6 @@
 
     throw v2
 
-    .line 351
     .end local v0    # "args":Lcom/android/server/am/ActivityStack$ScheduleDestroyArgs;
     :pswitch_5
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
@@ -400,7 +367,6 @@
 
     monitor-enter v3
 
-    .line 352
     :try_start_5
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
@@ -408,7 +374,6 @@
 
     invoke-virtual {v2, v4}, Lcom/android/server/am/ActivityStack;->notifyActivityDrawnLocked(Lcom/android/server/am/ActivityRecord;)V
 
-    .line 353
     monitor-exit v3
 
     goto/16 :goto_0
@@ -422,7 +387,6 @@
 
     throw v2
 
-    .line 356
     :pswitch_6
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
@@ -430,7 +394,6 @@
 
     monitor-enter v3
 
-    .line 357
     :try_start_6
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
@@ -438,7 +401,6 @@
 
     move-result-object v1
 
-    .line 358
     .restart local v1    # "r":Lcom/android/server/am/ActivityRecord;
     const-string v2, "ActivityManager"
 
@@ -462,10 +424,8 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 359
     if-eqz v1, :cond_4
 
-    .line 360
     iget-object v2, p0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;->this$0:Lcom/android/server/am/ActivityStack;
 
     iget-object v2, v2, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -476,7 +436,6 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/am/ActivityManagerService;->killAppAtUsersRequest(Lcom/android/server/am/ProcessRecord;Landroid/app/Dialog;)V
 
-    .line 362
     :cond_4
     monitor-exit v3
 
@@ -492,7 +451,6 @@
 
     throw v2
 
-    .line 303
     :pswitch_data_0
     .packed-switch 0x65
         :pswitch_0

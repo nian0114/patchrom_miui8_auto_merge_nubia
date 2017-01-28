@@ -51,31 +51,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 295
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement$TextureItem;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 296
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement$TextureItem;->mTexureId:I
 
-    .line 297
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement$TextureItem;->mHashcode:I
 
-    .line 298
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement$TextureItem;->mWidth:I
 
-    .line 299
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement$TextureItem;->mHeight:I
 
-    .line 300
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement$TextureItem;->mStatus:I
 
-    .line 301
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement$TextureItem;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 302
     return-void
 .end method

@@ -55,40 +55,28 @@
     .param p11, "grantedPermissions"    # [Ljava/lang/String;
 
     .prologue
-    .line 11107
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    .line 11108
     invoke-direct {p0, p1, p9}, Lcom/android/server/pm/PackageManagerService$HandlerParams;-><init>(Lcom/android/server/pm/PackageManagerService;Landroid/os/UserHandle;)V
 
-    .line 11109
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->origin:Lcom/android/server/pm/PackageManagerService$OriginInfo;
 
-    .line 11110
     iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->move:Lcom/android/server/pm/PackageManagerService$MoveInfo;
 
-    .line 11111
     iput-object p4, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->observer:Landroid/content/pm/IPackageInstallObserver2;
 
-    .line 11112
     iput p5, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
 
-    .line 11113
     iput-object p6, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installerPackageName:Ljava/lang/String;
 
-    .line 11114
     iput-object p7, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->volumeUuid:Ljava/lang/String;
 
-    .line 11115
     iput-object p8, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->verificationParams:Landroid/content/pm/VerificationParams;
 
-    .line 11116
     iput-object p10, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->packageAbiOverride:Ljava/lang/String;
 
-    .line 11117
     iput-object p11, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->grantedRuntimePermissions:[Ljava/lang/String;
 
-    .line 11118
     return-void
 .end method
 
@@ -101,14 +89,11 @@
 
     const/4 v5, 0x1
 
-    .line 11134
     iget-object v3, p1, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
 
-    .line 11135
     .local v3, "packageName":Ljava/lang/String;
     iget v1, p1, Landroid/content/pm/PackageInfoLite;->installLocation:I
 
-    .line 11136
     .local v1, "installLocation":I
     iget v7, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
 
@@ -118,7 +103,6 @@
 
     move v2, v5
 
-    .line 11138
     .local v2, "onSd":Z
     :goto_0
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -127,7 +111,6 @@
 
     monitor-enter v7
 
-    .line 11139
     :try_start_0
     iget-object v8, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -139,18 +122,15 @@
 
     check-cast v4, Landroid/content/pm/PackageParser$Package;
 
-    .line 11140
     .local v4, "pkg":Landroid/content/pm/PackageParser$Package;
     if-eqz v4, :cond_6
 
-    .line 11141
     iget v8, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
 
     and-int/lit8 v8, v8, 0x2
 
     if-eqz v8, :cond_9
 
-    .line 11143
     iget v8, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -159,7 +139,6 @@
 
     if-nez v8, :cond_0
 
-    .line 11145
     :try_start_1
     # invokes: Lcom/android/server/pm/PackageManagerService;->checkDowngrade(Landroid/content/pm/PackageParser$Package;Landroid/content/pm/PackageInfoLite;)V
     invoke-static {v4, p1}, Lcom/android/server/pm/PackageManagerService;->access$3200(Landroid/content/pm/PackageParser$Package;Landroid/content/pm/PackageInfoLite;)V
@@ -167,7 +146,6 @@
     .catch Lcom/android/server/pm/PackageManagerException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 11152
     :cond_0
     :try_start_2
     iget-object v8, v4, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -178,26 +156,21 @@
 
     if-eqz v8, :cond_3
 
-    .line 11153
     if-eqz v2, :cond_2
 
-    .line 11154
     const-string v5, "PackageManager"
 
     const-string v6, "Cannot install update to system app on sdcard"
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11155
     const/4 v5, -0x3
 
     monitor-exit v7
 
-    .line 11188
     :goto_1
     return v5
 
-    .line 11136
     .end local v2    # "onSd":Z
     .end local v4    # "pkg":Landroid/content/pm/PackageParser$Package;
     :cond_1
@@ -205,13 +178,11 @@
 
     goto :goto_0
 
-    .line 11146
     .restart local v2    # "onSd":Z
     .restart local v4    # "pkg":Landroid/content/pm/PackageParser$Package;
     :catch_0
     move-exception v0
 
-    .line 11147
     .local v0, "e":Lcom/android/server/pm/PackageManagerException;
     const-string v5, "PackageManager"
 
@@ -239,14 +210,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11148
     const/4 v5, -0x7
 
     monitor-exit v7
 
     goto :goto_1
 
-    .line 11182
     .end local v0    # "e":Lcom/android/server/pm/PackageManagerException;
     .end local v4    # "pkg":Landroid/content/pm/PackageParser$Package;
     :catchall_0
@@ -258,7 +227,6 @@
 
     throw v5
 
-    .line 11157
     .restart local v4    # "pkg":Landroid/content/pm/PackageParser$Package;
     :cond_2
     :try_start_3
@@ -266,43 +234,34 @@
 
     goto :goto_1
 
-    .line 11159
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 11161
     monitor-exit v7
 
     move v5, v6
 
     goto :goto_1
 
-    .line 11164
     :cond_4
     if-ne v1, v5, :cond_5
 
-    .line 11166
     monitor-exit v7
 
     goto :goto_1
 
-    .line 11167
     :cond_5
     if-ne v1, v6, :cond_7
 
-    .line 11182
     :cond_6
     monitor-exit v7
 
-    .line 11185
     if-eqz v2, :cond_a
 
     move v5, v6
 
-    .line 11186
     goto :goto_1
 
-    .line 11171
     :cond_7
     # invokes: Lcom/android/server/pm/PackageManagerService;->isExternal(Landroid/content/pm/PackageParser$Package;)Z
     invoke-static {v4}, Lcom/android/server/pm/PackageManagerService;->access$800(Landroid/content/pm/PackageParser$Package;)Z
@@ -311,20 +270,17 @@
 
     if-eqz v8, :cond_8
 
-    .line 11172
     monitor-exit v7
 
     move v5, v6
 
     goto :goto_1
 
-    .line 11174
     :cond_8
     monitor-exit v7
 
     goto :goto_1
 
-    .line 11179
     :cond_9
     const/4 v5, -0x4
 
@@ -334,7 +290,6 @@
 
     goto :goto_1
 
-    .line 11188
     :cond_a
     iget v5, p1, Landroid/content/pm/PackageInfoLite;->recommendedInstallLocation:I
 
@@ -347,15 +302,12 @@
     .locals 1
 
     .prologue
-    .line 11127
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->verificationParams:Landroid/content/pm/VerificationParams;
 
     if-nez v0, :cond_0
 
-    .line 11128
     const/4 v0, 0x0
 
-    .line 11130
     :goto_0
     return-object v0
 
@@ -373,12 +325,10 @@
     .locals 3
 
     .prologue
-    .line 11452
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->mArgs:Lcom/android/server/pm/PackageManagerService$InstallArgs;
 
     if-eqz v0, :cond_0
 
-    .line 11453
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->mArgs:Lcom/android/server/pm/PackageManagerService$InstallArgs;
@@ -388,7 +338,6 @@
     # invokes: Lcom/android/server/pm/PackageManagerService;->processPendingInstall(Lcom/android/server/pm/PackageManagerService$InstallArgs;I)V
     invoke-static {v0, v1, v2}, Lcom/android/server/pm/PackageManagerService;->access$1600(Lcom/android/server/pm/PackageManagerService;Lcom/android/server/pm/PackageManagerService$InstallArgs;I)V
 
-    .line 11455
     :cond_0
     return-void
 .end method
@@ -397,7 +346,6 @@
     .locals 1
 
     .prologue
-    .line 11459
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     # invokes: Lcom/android/server/pm/PackageManagerService;->createInstallArgs(Lcom/android/server/pm/PackageManagerService$InstallParams;)Lcom/android/server/pm/PackageManagerService$InstallArgs;
@@ -407,12 +355,10 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->mArgs:Lcom/android/server/pm/PackageManagerService$InstallArgs;
 
-    .line 11460
     const/16 v0, -0x6e
 
     iput v0, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->mRet:I
 
-    .line 11461
     return-void
 .end method
 
@@ -425,10 +371,8 @@
     .end annotation
 
     .prologue
-    .line 11198
     const/16 v25, 0x1
 
-    .line 11201
     .local v25, "ret":I
     move-object/from16 v0, p0
 
@@ -438,7 +382,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 11202
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->origin:Lcom/android/server/pm/PackageManagerService$OriginInfo;
@@ -447,7 +390,6 @@
 
     if-eqz v4, :cond_c
 
-    .line 11203
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
@@ -458,7 +400,6 @@
 
     iput v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
 
-    .line 11204
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
@@ -469,7 +410,6 @@
 
     iput v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
 
-    .line 11213
     :cond_0
     :goto_0
     move-object/from16 v0, p0
@@ -482,7 +422,6 @@
 
     const/16 v20, 0x1
 
-    .line 11214
     .local v20, "onSd":Z
     :goto_1
     move-object/from16 v0, p0
@@ -495,28 +434,23 @@
 
     const/16 v17, 0x1
 
-    .line 11216
     .local v17, "onInt":Z
     :goto_2
     const/16 v21, 0x0
 
-    .line 11218
     .local v21, "pkgLite":Landroid/content/pm/PackageInfoLite;
     if-eqz v17, :cond_10
 
     if-eqz v20, :cond_10
 
-    .line 11220
     const-string v4, "PackageManager"
 
     const-string v7, "Conflicting flags specified for installing on both internal and external"
 
     invoke-static {v4, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11221
     const/16 v25, -0x13
 
-    .line 11260
     :cond_1
     :goto_3
     const/4 v4, 0x1
@@ -525,14 +459,12 @@
 
     if-ne v0, v4, :cond_2
 
-    .line 11261
     move-object/from16 v0, v21
 
     iget v0, v0, Landroid/content/pm/PackageInfoLite;->recommendedInstallLocation:I
 
     move/from16 v16, v0
 
-    .line 11262
     .local v16, "loc":I
     const/4 v4, -0x3
 
@@ -540,10 +472,8 @@
 
     if-ne v0, v4, :cond_12
 
-    .line 11263
     const/16 v25, -0x13
 
-    .line 11295
     .end local v16    # "loc":I
     :cond_2
     :goto_4
@@ -558,20 +488,17 @@
 
     move-result-object v14
 
-    .line 11296
     .local v14, "args":Lcom/android/server/pm/PackageManagerService$InstallArgs;
     move-object/from16 v0, p0
 
     iput-object v14, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->mArgs:Lcom/android/server/pm/PackageManagerService$InstallArgs;
 
-    .line 11298
     const/4 v4, 0x1
 
     move/from16 v0, v25
 
     if-ne v0, v4, :cond_b
 
-    .line 11303
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/PackageManagerService$InstallParams;->getUser()Landroid/os/UserHandle;
 
     move-result-object v4
@@ -580,7 +507,6 @@
 
     move-result v31
 
-    .line 11304
     .local v31, "userIdentifier":I
     const/4 v4, -0x1
 
@@ -596,10 +522,8 @@
 
     if-eqz v4, :cond_3
 
-    .line 11306
     const/16 v31, 0x0
 
-    .line 11313
     :cond_3
     move-object/from16 v0, p0
 
@@ -611,7 +535,6 @@
 
     const/16 v23, -0x1
 
-    .line 11315
     .local v23, "requiredUid":I
     :goto_5
     move-object/from16 v0, p0
@@ -645,20 +568,17 @@
 
     if-eqz v4, :cond_1c
 
-    .line 11317
     new-instance v5, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.PACKAGE_NEEDS_VERIFICATION"
 
     invoke-direct {v5, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 11319
     .local v5, "verification":Landroid/content/Intent;
     const/high16 v4, 0x10000000
 
     invoke-virtual {v5, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 11320
     new-instance v4, Ljava/io/File;
 
     move-object/from16 v0, p0
@@ -677,12 +597,10 @@
 
     invoke-virtual {v5, v4, v7}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 11322
     const/4 v4, 0x1
 
     invoke-virtual {v5, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 11324
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -697,7 +615,6 @@
 
     move-result-object v22
 
-    .line 11334
     .local v22, "receivers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     move-object/from16 v0, p0
 
@@ -708,7 +625,6 @@
 
     move-result v32
 
-    .line 11336
     .local v32, "verificationId":I
     const-string v4, "android.content.pm.extra.VERIFICATION_ID"
 
@@ -716,7 +632,6 @@
 
     invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 11338
     const-string v4, "android.content.pm.extra.VERIFICATION_INSTALLER_PACKAGE"
 
     move-object/from16 v0, p0
@@ -725,7 +640,6 @@
 
     invoke-virtual {v5, v4, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 11341
     const-string v4, "android.content.pm.extra.VERIFICATION_INSTALL_FLAGS"
 
     move-object/from16 v0, p0
@@ -734,7 +648,6 @@
 
     invoke-virtual {v5, v4, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 11344
     const-string v4, "android.content.pm.extra.VERIFICATION_PACKAGE_NAME"
 
     move-object/from16 v0, v21
@@ -743,7 +656,6 @@
 
     invoke-virtual {v5, v4, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 11347
     const-string v4, "android.content.pm.extra.VERIFICATION_VERSION_CODE"
 
     move-object/from16 v0, v21
@@ -752,14 +664,12 @@
 
     invoke-virtual {v5, v4, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 11350
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->verificationParams:Landroid/content/pm/VerificationParams;
 
     if-eqz v4, :cond_8
 
-    .line 11351
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->verificationParams:Landroid/content/pm/VerificationParams;
@@ -770,7 +680,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 11352
     const-string v4, "android.content.pm.extra.VERIFICATION_URI"
 
     move-object/from16 v0, p0
@@ -783,7 +692,6 @@
 
     invoke-virtual {v5, v4, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 11355
     :cond_4
     move-object/from16 v0, p0
 
@@ -795,7 +703,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 11356
     const-string v4, "android.intent.extra.ORIGINATING_URI"
 
     move-object/from16 v0, p0
@@ -808,7 +715,6 @@
 
     invoke-virtual {v5, v4, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 11359
     :cond_5
     move-object/from16 v0, p0
 
@@ -820,7 +726,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 11360
     const-string v4, "android.intent.extra.REFERRER"
 
     move-object/from16 v0, p0
@@ -833,7 +738,6 @@
 
     invoke-virtual {v5, v4, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 11363
     :cond_6
     move-object/from16 v0, p0
 
@@ -845,7 +749,6 @@
 
     if-ltz v4, :cond_7
 
-    .line 11364
     const-string v4, "android.intent.extra.ORIGINATING_UID"
 
     move-object/from16 v0, p0
@@ -858,7 +761,6 @@
 
     invoke-virtual {v5, v4, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 11367
     :cond_7
     move-object/from16 v0, p0
 
@@ -870,7 +772,6 @@
 
     if-ltz v4, :cond_8
 
-    .line 11368
     const-string v4, "android.content.pm.extra.VERIFICATION_INSTALLER_UID"
 
     move-object/from16 v0, p0
@@ -883,7 +784,6 @@
 
     invoke-virtual {v5, v4, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 11373
     :cond_8
     new-instance v33, Lcom/android/server/pm/PackageVerificationState;
 
@@ -893,7 +793,6 @@
 
     invoke-direct {v0, v1, v14}, Lcom/android/server/pm/PackageVerificationState;-><init>(ILcom/android/server/pm/PackageManagerService$InstallArgs;)V
 
-    .line 11376
     .local v33, "verificationState":Lcom/android/server/pm/PackageVerificationState;
     move-object/from16 v0, p0
 
@@ -907,7 +806,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 11378
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -923,45 +821,36 @@
 
     move-result-object v30
 
-    .line 11382
     .local v30, "sufficientVerifiers":Ljava/util/List;, "Ljava/util/List<Landroid/content/ComponentName;>;"
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/PackageManagerService$InstallParams;->getUser()Landroid/os/UserHandle;
 
     move-result-object v6
 
-    .line 11383
     .local v6, "verifierUser":Landroid/os/UserHandle;
     sget-object v4, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     if-ne v6, v4, :cond_9
 
-    .line 11384
     sget-object v6, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
-    .line 11391
     :cond_9
     if-eqz v30, :cond_a
 
-    .line 11392
     invoke-interface/range {v30 .. v30}, Ljava/util/List;->size()I
 
     move-result v13
 
-    .line 11393
     .local v13, "N":I
     if-nez v13, :cond_1b
 
-    .line 11394
     const-string v4, "PackageManager"
 
     const-string v7, "Additional verifiers required, but none installed."
 
     invoke-static {v4, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11395
     const/16 v25, -0x16
 
-    .line 11407
     .end local v13    # "N":I
     :cond_a
     move-object/from16 v0, p0
@@ -981,7 +870,6 @@
 
     move-result-object v24
 
-    .line 11409
     .local v24, "requiredVerifierComponent":Landroid/content/ComponentName;
     const/4 v4, 0x1
 
@@ -997,12 +885,10 @@
 
     if-eqz v4, :cond_b
 
-    .line 11416
     move-object/from16 v0, v24
 
     invoke-virtual {v5, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 11417
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -1029,14 +915,12 @@
 
     invoke-virtual/range {v4 .. v12}, Landroid/content/Context;->sendOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 11433
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->mArgs:Lcom/android/server/pm/PackageManagerService$InstallArgs;
 
-    .line 11444
     .end local v5    # "verification":Landroid/content/Intent;
     .end local v6    # "verifierUser":Landroid/os/UserHandle;
     .end local v22    # "receivers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
@@ -1054,10 +938,8 @@
 
     iput v0, v1, Lcom/android/server/pm/PackageManagerService$InstallParams;->mRet:I
 
-    .line 11445
     return-void
 
-    .line 11205
     .end local v14    # "args":Lcom/android/server/pm/PackageManagerService$InstallArgs;
     .end local v17    # "onInt":Z
     .end local v20    # "onSd":Z
@@ -1071,7 +953,6 @@
 
     if-eqz v4, :cond_d
 
-    .line 11206
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
@@ -1082,7 +963,6 @@
 
     iput v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
 
-    .line 11207
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
@@ -1095,7 +975,6 @@
 
     goto/16 :goto_0
 
-    .line 11209
     :cond_d
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -1105,20 +984,17 @@
 
     throw v4
 
-    .line 11213
     :cond_e
     const/16 v20, 0x0
 
     goto/16 :goto_1
 
-    .line 11214
     .restart local v20    # "onSd":Z
     :cond_f
     const/16 v17, 0x0
 
     goto/16 :goto_2
 
-    .line 11223
     .restart local v17    # "onInt":Z
     .restart local v21    # "pkgLite":Landroid/content/pm/PackageInfoLite;
     :cond_10
@@ -1149,7 +1025,6 @@
 
     move-result-object v21
 
-    .line 11230
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->origin:Lcom/android/server/pm/PackageManagerService$OriginInfo;
@@ -1166,7 +1041,6 @@
 
     if-ne v4, v7, :cond_1
 
-    .line 11233
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -1177,7 +1051,6 @@
 
     move-result-object v28
 
-    .line 11234
     .local v28, "storage":Landroid/os/storage/StorageManager;
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
@@ -1189,7 +1062,6 @@
 
     move-result-wide v18
 
-    .line 11237
     .local v18, "lowThreshold":J
     move-object/from16 v0, p0
 
@@ -1218,7 +1090,6 @@
 
     move-result-wide v26
 
-    .line 11240
     .local v26, "sizeBytes":J
     move-object/from16 v0, p0
 
@@ -1236,7 +1107,6 @@
 
     if-ltz v4, :cond_11
 
-    .line 11241
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -1264,7 +1134,6 @@
 
     move-result-object v21
 
-    .line 11252
     :cond_11
     move-object/from16 v0, v21
 
@@ -1274,7 +1143,6 @@
 
     if-ne v4, v7, :cond_1
 
-    .line 11254
     const/4 v4, -0x1
 
     move-object/from16 v0, v21
@@ -1283,7 +1151,6 @@
 
     goto/16 :goto_3
 
-    .line 11264
     .end local v18    # "lowThreshold":J
     .end local v26    # "sizeBytes":J
     .end local v28    # "storage":Landroid/os/storage/StorageManager;
@@ -1295,12 +1162,10 @@
 
     if-ne v0, v4, :cond_13
 
-    .line 11265
     const/16 v25, -0x1
 
     goto/16 :goto_4
 
-    .line 11266
     :cond_13
     const/4 v4, -0x1
 
@@ -1308,12 +1173,10 @@
 
     if-ne v0, v4, :cond_14
 
-    .line 11267
     const/16 v25, -0x4
 
     goto/16 :goto_4
 
-    .line 11268
     :cond_14
     const/4 v4, -0x2
 
@@ -1321,12 +1184,10 @@
 
     if-ne v0, v4, :cond_15
 
-    .line 11269
     const/16 v25, -0x2
 
     goto/16 :goto_4
 
-    .line 11270
     :cond_15
     const/4 v4, -0x6
 
@@ -1334,12 +1195,10 @@
 
     if-ne v0, v4, :cond_16
 
-    .line 11271
     const/16 v25, -0x3
 
     goto/16 :goto_4
 
-    .line 11272
     :cond_16
     const/4 v4, -0x5
 
@@ -1347,12 +1206,10 @@
 
     if-ne v0, v4, :cond_17
 
-    .line 11273
     const/16 v25, -0x14
 
     goto/16 :goto_4
 
-    .line 11276
     :cond_17
     move-object/from16 v0, p0
 
@@ -1362,32 +1219,27 @@
 
     move-result v16
 
-    .line 11277
     const/4 v4, -0x7
 
     move/from16 v0, v16
 
     if-ne v0, v4, :cond_18
 
-    .line 11278
     const/16 v25, -0x19
 
     goto/16 :goto_4
 
-    .line 11279
     :cond_18
     if-nez v20, :cond_2
 
     if-nez v17, :cond_2
 
-    .line 11281
     const/4 v4, 0x2
 
     move/from16 v0, v16
 
     if-ne v0, v4, :cond_19
 
-    .line 11283
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
@@ -1398,7 +1250,6 @@
 
     iput v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
 
-    .line 11284
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
@@ -1411,7 +1262,6 @@
 
     goto/16 :goto_4
 
-    .line 11288
     :cond_19
     move-object/from16 v0, p0
 
@@ -1423,7 +1273,6 @@
 
     iput v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
 
-    .line 11289
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
@@ -1436,7 +1285,6 @@
 
     goto/16 :goto_4
 
-    .line 11313
     .end local v16    # "loc":I
     .restart local v14    # "args":Lcom/android/server/pm/PackageManagerService$InstallArgs;
     .restart local v31    # "userIdentifier":I
@@ -1459,7 +1307,6 @@
 
     goto/16 :goto_5
 
-    .line 11397
     .restart local v5    # "verification":Landroid/content/Intent;
     .restart local v6    # "verifierUser":Landroid/os/UserHandle;
     .restart local v13    # "N":I
@@ -1475,7 +1322,6 @@
     :goto_7
     if-ge v15, v13, :cond_a
 
-    .line 11398
     move-object/from16 v0, v30
 
     invoke-interface {v0, v15}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1484,7 +1330,6 @@
 
     check-cast v34, Landroid/content/ComponentName;
 
-    .line 11400
     .local v34, "verifierComponent":Landroid/content/ComponentName;
     new-instance v29, Landroid/content/Intent;
 
@@ -1492,7 +1337,6 @@
 
     invoke-direct {v0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 11401
     .local v29, "sufficientIntent":Landroid/content/Intent;
     move-object/from16 v0, v29
 
@@ -1500,7 +1344,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 11402
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -1511,12 +1354,10 @@
 
     invoke-virtual {v4, v0, v6}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 11397
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_7
 
-    .line 11440
     .end local v5    # "verification":Landroid/content/Intent;
     .end local v6    # "verifierUser":Landroid/os/UserHandle;
     .end local v13    # "N":I
@@ -1550,7 +1391,6 @@
     .locals 1
 
     .prologue
-    .line 11464
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$InstallParams;->installFlags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -1572,7 +1412,6 @@
     .locals 2
 
     .prologue
-    .line 11122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

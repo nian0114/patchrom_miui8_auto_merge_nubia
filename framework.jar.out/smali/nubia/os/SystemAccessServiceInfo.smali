@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Landroid/app/ServiceProxyInfo;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .end annotation
 
     .prologue
-    .line 17
     const-class v0, Lnubia/os/SystemAccessManager;
 
     return-object v0
@@ -50,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 12
     const-string v0, "system_access"
 
     return-object v0
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 8
     invoke-virtual {p0}, Lnubia/os/SystemAccessServiceInfo;->getServiceProxy()Lnubia/os/SystemAccessManager;
 
     move-result-object v0
@@ -72,7 +68,6 @@
     .locals 3
 
     .prologue
-    .line 22
     invoke-virtual {p0}, Lnubia/os/SystemAccessServiceInfo;->getServiceName()Ljava/lang/String;
 
     move-result-object v2
@@ -81,13 +76,11 @@
 
     move-result-object v0
 
-    .line 23
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lnubia/os/ISystemAccess$Stub;->asInterface(Landroid/os/IBinder;)Lnubia/os/ISystemAccess;
 
     move-result-object v1
 
-    .line 24
     .local v1, "service":Lnubia/os/ISystemAccess;
     new-instance v2, Lnubia/os/SystemAccessManager;
 

@@ -43,30 +43,23 @@
     .param p3, "smallestDigitsMCC"    # I
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     if-nez p2, :cond_0
 
-    .line 59
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 61
     :cond_0
     iput p1, p0, Lcom/android/internal/telephony/MccTable$MccEntry;->mMcc:I
 
-    .line 62
     iput-object p2, p0, Lcom/android/internal/telephony/MccTable$MccEntry;->mIso:Ljava/lang/String;
 
-    .line 63
     iput p3, p0, Lcom/android/internal/telephony/MccTable$MccEntry;->mSmallestDigitsMnc:I
 
-    .line 64
     return-void
 .end method
 
@@ -77,7 +70,6 @@
     .param p1, "o"    # Lcom/android/internal/telephony/MccTable$MccEntry;
 
     .prologue
-    .line 68
     iget v0, p0, Lcom/android/internal/telephony/MccTable$MccEntry;->mMcc:I
 
     iget v1, p1, Lcom/android/internal/telephony/MccTable$MccEntry;->mMcc:I
@@ -91,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 52
     check-cast p1, Lcom/android/internal/telephony/MccTable$MccEntry;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/MccTable$MccEntry;->compareTo(Lcom/android/internal/telephony/MccTable$MccEntry;)I

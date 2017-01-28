@@ -28,21 +28,16 @@
     .param p2, "generationNumber"    # I
 
     .prologue
-    .line 1739
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
-    .line 1740
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 1737
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->mSimAbsentSeen:Z
 
-    .line 1741
     iput p2, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->mGenerationNumber:I
 
-    .line 1742
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1747
     const-string v11, "Tethering"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -100,7 +94,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1750
     iget v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->mGenerationNumber:I
 
     iget-object v12, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
@@ -116,12 +109,10 @@
 
     if-eq v11, v12, :cond_1
 
-    .line 1801
     :cond_0
     :goto_0
     return-void
 
-    .line 1752
     :cond_1
     const-string v11, "ss"
 
@@ -131,7 +122,6 @@
 
     move-result-object v7
 
-    .line 1755
     .local v7, "state":Ljava/lang/String;
     const-string v11, "Tethering"
 
@@ -167,7 +157,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1757
     iget-boolean v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->mSimAbsentSeen:Z
 
     if-nez v11, :cond_2
@@ -180,12 +169,10 @@
 
     if-eqz v11, :cond_2
 
-    .line 1758
     const/4 v11, 0x1
 
     iput-boolean v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->mSimAbsentSeen:Z
 
-    .line 1761
     :cond_2
     iget-boolean v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->mSimAbsentSeen:Z
 
@@ -199,12 +186,10 @@
 
     if-eqz v11, :cond_0
 
-    .line 1762
     const/4 v11, 0x0
 
     iput-boolean v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->mSimAbsentSeen:Z
 
-    .line 1764
     :try_start_0
     iget-object v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
@@ -231,7 +216,6 @@
 
     if-nez v11, :cond_8
 
-    .line 1766
     iget-object v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     iget-object v11, v11, Lcom/android/server/connectivity/Tethering$TetherMasterSM;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -251,13 +235,11 @@
 
     move-result-object v8
 
-    .line 1768
     .local v8, "tetherService":Ljava/lang/String;
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1769
     .local v10, "tethered":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
@@ -272,7 +254,6 @@
     :try_end_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1770
     :try_start_1
     iget-object v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
@@ -287,7 +268,6 @@
 
     move-result-object v4
 
-    .line 1771
     .local v4, "ifaces":Ljava/util/Set;
     invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -306,7 +286,6 @@
 
     move-result-object v3
 
-    .line 1772
     .local v3, "iface":Ljava/lang/Object;
     iget-object v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
@@ -323,7 +302,6 @@
 
     check-cast v5, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
 
-    .line 1773
     .local v5, "sm":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     if-eqz v5, :cond_3
 
@@ -333,7 +311,6 @@
 
     if-eqz v11, :cond_3
 
-    .line 1774
     iget-object v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     iget-object v13, v11, Lcom/android/server/connectivity/Tethering$TetherMasterSM;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -351,7 +328,6 @@
 
     if-eqz v11, :cond_4
 
-    .line 1775
     new-instance v11, Ljava/lang/Integer;
 
     const/4 v13, 0x1
@@ -362,7 +338,6 @@
 
     goto :goto_1
 
-    .line 1783
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "iface":Ljava/lang/Object;
     .end local v4    # "ifaces":Ljava/util/Set;
@@ -379,13 +354,11 @@
     :try_end_2
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 1796
     .end local v8    # "tetherService":Ljava/lang/String;
     .end local v10    # "tethered":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :catch_0
     move-exception v1
 
-    .line 1797
     .local v1, "e":Landroid/content/res/Resources$NotFoundException;
     const-string v11, "Tethering"
 
@@ -395,7 +368,6 @@
 
     goto/16 :goto_0
 
-    .line 1776
     .end local v1    # "e":Landroid/content/res/Resources$NotFoundException;
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v3    # "iface":Ljava/lang/Object;
@@ -421,7 +393,6 @@
 
     if-eqz v11, :cond_5
 
-    .line 1777
     new-instance v11, Ljava/lang/Integer;
 
     const/4 v13, 0x0
@@ -432,7 +403,6 @@
 
     goto :goto_1
 
-    .line 1778
     :cond_5
     iget-object v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
@@ -447,7 +417,6 @@
 
     if-eqz v11, :cond_3
 
-    .line 1779
     new-instance v11, Ljava/lang/Integer;
 
     const/4 v13, 0x2
@@ -458,14 +427,12 @@
 
     goto :goto_1
 
-    .line 1783
     .end local v5    # "sm":Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     :cond_6
     monitor-exit v12
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1784
     :try_start_4
     invoke-virtual {v10}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -488,33 +455,28 @@
 
     move-result v9
 
-    .line 1785
     .local v9, "tetherType":I
     new-instance v6, Landroid/content/Intent;
 
     invoke-direct {v6}, Landroid/content/Intent;-><init>()V
 
-    .line 1786
     .local v6, "startProvIntent":Landroid/content/Intent;
     const-string v11, "extraAddTetherType"
 
     invoke-virtual {v6, v11, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1787
     const-string v11, "extraRunProvision"
 
     const/4 v12, 0x1
 
     invoke-virtual {v6, v11, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1788
     invoke-static {v8}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v11
 
     invoke-virtual {v6, v11}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1790
     iget-object v11, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     iget-object v11, v11, Lcom/android/server/connectivity/Tethering$TetherMasterSM;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -530,7 +492,6 @@
 
     goto :goto_2
 
-    .line 1792
     .end local v6    # "startProvIntent":Landroid/content/Intent;
     .end local v9    # "tetherType":I
     :cond_7
@@ -542,7 +503,6 @@
 
     goto/16 :goto_0
 
-    .line 1794
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v4    # "ifaces":Ljava/util/Set;
     .end local v8    # "tetherService":Ljava/lang/String;

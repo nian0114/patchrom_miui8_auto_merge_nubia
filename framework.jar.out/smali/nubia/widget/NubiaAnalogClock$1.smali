@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 291
     iput-object p1, p0, Lnubia/widget/NubiaAnalogClock$1;->this$0:Lnubia/widget/NubiaAnalogClock;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 295
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -61,14 +59,12 @@
 
     if-nez v1, :cond_0
 
-    .line 296
     const-string v1, "time-zone"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 297
     .local v0, "tz":Ljava/lang/String;
     iget-object v1, p0, Lnubia/widget/NubiaAnalogClock$1;->this$0:Lnubia/widget/NubiaAnalogClock;
 
@@ -87,7 +83,6 @@
     # setter for: Lnubia/widget/NubiaAnalogClock;->mCalendar:Landroid/text/format/Time;
     invoke-static {v1, v2}, Lnubia/widget/NubiaAnalogClock;->access$102(Lnubia/widget/NubiaAnalogClock;Landroid/text/format/Time;)Landroid/text/format/Time;
 
-    .line 300
     .end local v0    # "tz":Ljava/lang/String;
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -114,25 +109,21 @@
 
     if-eqz v1, :cond_2
 
-    .line 301
     :cond_1
     iget-object v1, p0, Lnubia/widget/NubiaAnalogClock$1;->this$0:Lnubia/widget/NubiaAnalogClock;
 
     # invokes: Lnubia/widget/NubiaAnalogClock;->is24Hour()V
     invoke-static {v1}, Lnubia/widget/NubiaAnalogClock;->access$200(Lnubia/widget/NubiaAnalogClock;)V
 
-    .line 304
     :cond_2
     iget-object v1, p0, Lnubia/widget/NubiaAnalogClock$1;->this$0:Lnubia/widget/NubiaAnalogClock;
 
     # invokes: Lnubia/widget/NubiaAnalogClock;->onTimeChanged()V
     invoke-static {v1}, Lnubia/widget/NubiaAnalogClock;->access$300(Lnubia/widget/NubiaAnalogClock;)V
 
-    .line 305
     iget-object v1, p0, Lnubia/widget/NubiaAnalogClock$1;->this$0:Lnubia/widget/NubiaAnalogClock;
 
     invoke-virtual {v1}, Lnubia/widget/NubiaAnalogClock;->invalidate()V
 
-    .line 306
     return-void
 .end method

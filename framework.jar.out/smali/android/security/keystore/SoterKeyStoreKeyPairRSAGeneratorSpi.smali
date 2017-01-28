@@ -72,7 +72,6 @@
     .locals 2
 
     .prologue
-    .line 691
     sget-object v0, Ljava/math/BigInteger;->ONE:Ljava/math/BigInteger;
 
     const/16 v1, 0x40
@@ -83,7 +82,6 @@
 
     sput-object v0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->UINT64_RANGE:Ljava/math/BigInteger;
 
-    .line 692
     sget-object v0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->UINT64_RANGE:Ljava/math/BigInteger;
 
     sget-object v1, Ljava/math/BigInteger;->ONE:Ljava/math/BigInteger;
@@ -103,43 +101,32 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 115
     invoke-direct {p0}, Ljava/security/KeyPairGeneratorSpi;-><init>()V
 
-    .line 97
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterAlgorithm:I
 
-    .line 107
     iput-boolean v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isForSoter:Z
 
-    .line 108
     iput-boolean v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoSignedWithAttkWhenGetPublicKey:Z
 
-    .line 109
     iput-boolean v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoSignedWithCommonkWhenGetPublicKey:Z
 
-    .line 110
     const-string v0, ""
 
     iput-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mAutoSignedKeyNameWhenGetPublicKey:Ljava/lang/String;
 
-    .line 111
     iput-boolean v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isSecmsgFidCounterSignedWhenSign:Z
 
-    .line 112
     iput-boolean v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoAddCounterWhenGetPublicKey:Z
 
-    .line 113
     iput-boolean v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isNeedNextAttk:Z
 
-    .line 116
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mOriginalKeymasterAlgorithm:I
 
-    .line 117
     return-void
 .end method
 
@@ -148,30 +135,25 @@
     .param p1, "keymasterArgs"    # Landroid/security/keymaster/KeymasterArguments;
 
     .prologue
-    .line 420
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mRSAPublicExponent:Ljava/math/BigInteger;
 
     if-eqz v0, :cond_0
 
-    .line 421
     const v0, 0x500000c8
 
     iget-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mRSAPublicExponent:Ljava/math/BigInteger;
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addUnsignedLong(ILjava/math/BigInteger;)V
 
-    .line 425
     :cond_0
     iget-boolean v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isForSoter:Z
 
     if-eqz v0, :cond_1
 
-    .line 426
     const v0, 0x70002af8
 
     invoke-virtual {p1, v0}, Landroid/security/keymaster/KeymasterArguments;->addBoolean(I)V
 
-    .line 427
     const v0, 0x30002aff
 
     invoke-static {}, Landroid/os/Process;->myUid()I
@@ -182,29 +164,24 @@
 
     invoke-virtual {p1, v0, v2, v3}, Landroid/security/keymaster/KeymasterArguments;->addUnsignedInt(IJ)V
 
-    .line 430
     :cond_1
     iget-boolean v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoSignedWithAttkWhenGetPublicKey:Z
 
     if-eqz v0, :cond_2
 
-    .line 431
     const v0, 0x70002af9
 
     invoke-virtual {p1, v0}, Landroid/security/keymaster/KeymasterArguments;->addBoolean(I)V
 
-    .line 434
     :cond_2
     iget-boolean v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoSignedWithCommonkWhenGetPublicKey:Z
 
     if-eqz v0, :cond_3
 
-    .line 435
     const v0, 0x70002afa
 
     invoke-virtual {p1, v0}, Landroid/security/keymaster/KeymasterArguments;->addBoolean(I)V
 
-    .line 437
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mAutoSignedKeyNameWhenGetPublicKey:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/security/keystore/SoterUtil;->isNullOrNil(Ljava/lang/String;)Z
@@ -213,7 +190,6 @@
 
     if-nez v0, :cond_3
 
-    .line 439
     const v0, -0x6fffd505
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -242,40 +218,33 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addBytes(I[B)V
 
-    .line 443
     :cond_3
     iget-boolean v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoAddCounterWhenGetPublicKey:Z
 
     if-eqz v0, :cond_4
 
-    .line 444
     const v0, 0x70002afc
 
     invoke-virtual {p1, v0}, Landroid/security/keymaster/KeymasterArguments;->addBoolean(I)V
 
-    .line 448
     :cond_4
     iget-boolean v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isSecmsgFidCounterSignedWhenSign:Z
 
     if-eqz v0, :cond_5
 
-    .line 449
     const v0, 0x70002afd
 
     invoke-virtual {p1, v0}, Landroid/security/keymaster/KeymasterArguments;->addBoolean(I)V
 
-    .line 452
     :cond_5
     iget-boolean v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isNeedNextAttk:Z
 
     if-eqz v0, :cond_6
 
-    .line 453
     const v0, 0x70002afe
 
     invoke-virtual {p1, v0}, Landroid/security/keymaster/KeymasterArguments;->addBoolean(I)V
 
-    .line 456
     :cond_6
     return-void
 .end method
@@ -291,7 +260,6 @@
     .end annotation
 
     .prologue
-    .line 560
     const/16 v0, 0x200
 
     if-lt p1, v0, :cond_0
@@ -300,7 +268,6 @@
 
     if-le p1, v0, :cond_1
 
-    .line 561
     :cond_0
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
@@ -310,7 +277,6 @@
 
     throw v0
 
-    .line 564
     :cond_1
     return-void
 .end method
@@ -326,14 +292,12 @@
     .end annotation
 
     .prologue
-    .line 460
     const-string v2, "Soter"
 
     const-string v3, "generateSelfSignedCertificate"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 462
     iget v2, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterAlgorithm:I
 
     iget v3, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeySizeBits:I
@@ -344,27 +308,22 @@
 
     move-result-object v1
 
-    .line 464
     .local v1, "signatureAlgorithm":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 465
     const-string v2, "Soter"
 
     const-string v3, "generateSelfSignedCertificateWithFakeSignature1"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 467
     invoke-direct {p0, p2}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->generateSelfSignedCertificateWithFakeSignature(Ljava/security/PublicKey;)Ljava/security/cert/X509Certificate;
 
     move-result-object v2
 
-    .line 481
     :goto_0
     return-object v2
 
-    .line 471
     :cond_0
     :try_start_0
     const-string v2, "Soter"
@@ -373,7 +332,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 472
     invoke-direct {p0, p1, p2, v1}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->generateSelfSignedCertificateWithValidSignature(Ljava/security/PrivateKey;Ljava/security/PublicKey;Ljava/lang/String;)Ljava/security/cert/X509Certificate;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -382,11 +340,9 @@
 
     goto :goto_0
 
-    .line 474
     :catch_0
     move-exception v0
 
-    .line 480
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "Soter"
 
@@ -394,7 +350,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 481
     invoke-direct {p0, p2}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->generateSelfSignedCertificateWithFakeSignature(Ljava/security/PublicKey;)Ljava/security/cert/X509Certificate;
 
     move-result-object v2
@@ -412,18 +367,15 @@
     .end annotation
 
     .prologue
-    .line 511
     new-instance v7, Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;
 
     invoke-direct {v7}, Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;-><init>()V
 
-    .line 515
     .local v7, "tbsGenerator":Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;
     iget v10, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterAlgorithm:I
 
     packed-switch v10, :pswitch_data_0
 
-    .line 530
     :pswitch_0
     new-instance v10, Ljava/security/ProviderException;
 
@@ -451,23 +403,19 @@
 
     throw v10
 
-    .line 517
     :pswitch_1
     sget-object v3, Lcom/android/org/bouncycastle/asn1/x9/X9ObjectIdentifiers;->ecdsa_with_SHA256:Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
 
-    .line 518
     .local v3, "sigAlgOid":Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
     new-instance v2, Lcom/android/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
 
     invoke-direct {v2, v3}, Lcom/android/org/bouncycastle/asn1/x509/AlgorithmIdentifier;-><init>(Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;)V
 
-    .line 519
     .local v2, "sigAlgId":Lcom/android/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
     new-instance v8, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;
 
     invoke-direct {v8}, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;-><init>()V
 
-    .line 520
     .local v8, "v":Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;
     new-instance v10, Lcom/android/org/bouncycastle/asn1/DERInteger;
 
@@ -477,7 +425,6 @@
 
     invoke-virtual {v8, v10}, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/org/bouncycastle/asn1/ASN1Encodable;)V
 
-    .line 521
     new-instance v10, Lcom/android/org/bouncycastle/asn1/DERInteger;
 
     const-wide/16 v12, 0x0
@@ -486,7 +433,6 @@
 
     invoke-virtual {v8, v10}, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/org/bouncycastle/asn1/ASN1Encodable;)V
 
-    .line 522
     new-instance v10, Lcom/android/org/bouncycastle/asn1/DERSequence;
 
     invoke-direct {v10}, Lcom/android/org/bouncycastle/asn1/DERSequence;-><init>()V
@@ -495,7 +441,6 @@
 
     move-result-object v4
 
-    .line 533
     .end local v8    # "v":Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;
     .local v4, "signature":[B
     :goto_0
@@ -510,7 +455,6 @@
     .local v0, "publicKeyInfoIn":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     const/4 v11, 0x0
 
-    .line 534
     :try_start_0
     invoke-virtual {v0}, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 
@@ -525,7 +469,6 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 536
     if-eqz v0, :cond_0
 
     if-eqz v11, :cond_1
@@ -535,7 +478,6 @@
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 537
     :cond_0
     :goto_1
     new-instance v10, Lcom/android/org/bouncycastle/asn1/ASN1Integer;
@@ -550,7 +492,6 @@
 
     invoke-virtual {v7, v10}, Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;->setSerialNumber(Lcom/android/org/bouncycastle/asn1/ASN1Integer;)V
 
-    .line 538
     new-instance v5, Lcom/android/org/bouncycastle/jce/X509Principal;
 
     iget-object v10, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
@@ -565,14 +506,11 @@
 
     invoke-direct {v5, v10}, Lcom/android/org/bouncycastle/jce/X509Principal;-><init>([B)V
 
-    .line 540
     .local v5, "subject":Lcom/android/org/bouncycastle/jce/X509Principal;
     invoke-virtual {v7, v5}, Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;->setSubject(Lcom/android/org/bouncycastle/asn1/x509/X509Name;)V
 
-    .line 541
     invoke-virtual {v7, v5}, Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;->setIssuer(Lcom/android/org/bouncycastle/asn1/x509/X509Name;)V
 
-    .line 542
     new-instance v10, Lcom/android/org/bouncycastle/asn1/x509/Time;
 
     iget-object v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
@@ -585,7 +523,6 @@
 
     invoke-virtual {v7, v10}, Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;->setStartDate(Lcom/android/org/bouncycastle/asn1/x509/Time;)V
 
-    .line 543
     new-instance v10, Lcom/android/org/bouncycastle/asn1/x509/Time;
 
     iget-object v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
@@ -598,35 +535,28 @@
 
     invoke-virtual {v7, v10}, Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;->setEndDate(Lcom/android/org/bouncycastle/asn1/x509/Time;)V
 
-    .line 544
     invoke-virtual {v7, v2}, Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;->setSignature(Lcom/android/org/bouncycastle/asn1/x509/AlgorithmIdentifier;)V
 
-    .line 545
     invoke-virtual {v7}, Lcom/android/org/bouncycastle/asn1/x509/V3TBSCertificateGenerator;->generateTBSCertificate()Lcom/android/org/bouncycastle/asn1/x509/TBSCertificate;
 
     move-result-object v6
 
-    .line 547
     .local v6, "tbsCertificate":Lcom/android/org/bouncycastle/asn1/x509/TBSCertificate;
     new-instance v1, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;
 
     invoke-direct {v1}, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;-><init>()V
 
-    .line 548
     .local v1, "result":Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;
     invoke-virtual {v1, v6}, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/org/bouncycastle/asn1/ASN1Encodable;)V
 
-    .line 549
     invoke-virtual {v1, v2}, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/org/bouncycastle/asn1/ASN1Encodable;)V
 
-    .line 550
     new-instance v10, Lcom/android/org/bouncycastle/asn1/DERBitString;
 
     invoke-direct {v10, v4}, Lcom/android/org/bouncycastle/asn1/DERBitString;-><init>([B)V
 
     invoke-virtual {v1, v10}, Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/org/bouncycastle/asn1/ASN1Encodable;)V
 
-    .line 551
     new-instance v10, Lcom/android/org/bouncycastle/jce/provider/X509CertificateObject;
 
     new-instance v11, Lcom/android/org/bouncycastle/asn1/DERSequence;
@@ -641,7 +571,6 @@
 
     return-object v10
 
-    .line 525
     .end local v0    # "publicKeyInfoIn":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     .end local v1    # "result":Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;
     .end local v2    # "sigAlgId":Lcom/android/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
@@ -652,7 +581,6 @@
     :pswitch_2
     sget-object v3, Lcom/android/org/bouncycastle/asn1/pkcs/PKCSObjectIdentifiers;->sha256WithRSAEncryption:Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
 
-    .line 526
     .restart local v3    # "sigAlgOid":Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
     new-instance v2, Lcom/android/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
 
@@ -660,17 +588,14 @@
 
     invoke-direct {v2, v3, v10}, Lcom/android/org/bouncycastle/asn1/x509/AlgorithmIdentifier;-><init>(Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;Lcom/android/org/bouncycastle/asn1/ASN1Encodable;)V
 
-    .line 527
     .restart local v2    # "sigAlgId":Lcom/android/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
     const/4 v10, 0x1
 
     new-array v4, v10, [B
 
-    .line 528
     .restart local v4    # "signature":[B
     goto/16 :goto_0
 
-    .line 536
     .restart local v0    # "publicKeyInfoIn":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     :catch_0
     move-exception v9
@@ -686,7 +611,6 @@
 
     goto :goto_1
 
-    .line 533
     :catch_1
     move-exception v10
 
@@ -695,7 +619,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 536
     :catchall_0
     move-exception v11
 
@@ -738,7 +661,6 @@
 
     goto :goto_2
 
-    .line 515
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2
@@ -759,16 +681,13 @@
     .end annotation
 
     .prologue
-    .line 497
     new-instance v0, Lcom/android/org/bouncycastle/x509/X509V3CertificateGenerator;
 
     invoke-direct {v0}, Lcom/android/org/bouncycastle/x509/X509V3CertificateGenerator;-><init>()V
 
-    .line 498
     .local v0, "certGen":Lcom/android/org/bouncycastle/x509/X509V3CertificateGenerator;
     invoke-virtual {v0, p2}, Lcom/android/org/bouncycastle/x509/X509V3CertificateGenerator;->setPublicKey(Ljava/security/PublicKey;)V
 
-    .line 499
     iget-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
     invoke-virtual {v1}, Landroid/security/keystore/KeyGenParameterSpec;->getCertificateSerialNumber()Ljava/math/BigInteger;
@@ -777,7 +696,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/org/bouncycastle/x509/X509V3CertificateGenerator;->setSerialNumber(Ljava/math/BigInteger;)V
 
-    .line 500
     iget-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
     invoke-virtual {v1}, Landroid/security/keystore/KeyGenParameterSpec;->getCertificateSubject()Ljavax/security/auth/x500/X500Principal;
@@ -786,7 +704,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/org/bouncycastle/x509/X509V3CertificateGenerator;->setSubjectDN(Ljavax/security/auth/x500/X500Principal;)V
 
-    .line 501
     iget-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
     invoke-virtual {v1}, Landroid/security/keystore/KeyGenParameterSpec;->getCertificateSubject()Ljavax/security/auth/x500/X500Principal;
@@ -795,7 +712,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/org/bouncycastle/x509/X509V3CertificateGenerator;->setIssuerDN(Ljavax/security/auth/x500/X500Principal;)V
 
-    .line 502
     iget-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
     invoke-virtual {v1}, Landroid/security/keystore/KeyGenParameterSpec;->getCertificateNotBefore()Ljava/util/Date;
@@ -804,7 +720,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/org/bouncycastle/x509/X509V3CertificateGenerator;->setNotBefore(Ljava/util/Date;)V
 
-    .line 503
     iget-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
     invoke-virtual {v1}, Landroid/security/keystore/KeyGenParameterSpec;->getCertificateNotAfter()Ljava/util/Date;
@@ -813,10 +728,8 @@
 
     invoke-virtual {v0, v1}, Lcom/android/org/bouncycastle/x509/X509V3CertificateGenerator;->setNotAfter(Ljava/util/Date;)V
 
-    .line 504
     invoke-virtual {v0, p3}, Lcom/android/org/bouncycastle/x509/X509V3CertificateGenerator;->setSignatureAlgorithm(Ljava/lang/String;)V
 
-    .line 505
     invoke-virtual {v0, p1}, Lcom/android/org/bouncycastle/x509/X509V3CertificateGenerator;->generate(Ljava/security/PrivateKey;)Ljava/security/cert/X509Certificate;
 
     move-result-object v1
@@ -828,16 +741,13 @@
     .locals 3
 
     .prologue
-    .line 722
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
 
     move-result-object v0
 
-    .line 723
     .local v0, "application":Landroid/app/Application;
     if-nez v0, :cond_0
 
-    .line 724
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Failed to obtain application Context from ActivityThread"
@@ -846,7 +756,6 @@
 
     throw v1
 
-    .line 727
     :cond_0
     return-object v0
 .end method
@@ -870,12 +779,10 @@
     .end annotation
 
     .prologue
-    .line 653
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 654
     .local v1, "authorizedKeymasterKeyDigests":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     invoke-static {p0}, Landroid/security/keystore/KeyProperties$Digest;->allToKeymaster([Ljava/lang/String;)[I
 
@@ -893,7 +800,6 @@
 
     aget v3, v0, v2
 
-    .line 655
     .local v3, "keymasterDigest":I
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -901,19 +807,16 @@
 
     invoke-interface {v1, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 654
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 657
     .end local v3    # "keymasterDigest":I
     :cond_0
     new-instance v6, Ljava/util/HashSet;
 
     invoke-direct {v6}, Ljava/util/HashSet;-><init>()V
 
-    .line 659
     .local v6, "supportedKeymasterSignatureDigests":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     invoke-static {p1}, Landroid/security/keystore/KeyProperties$Digest;->allToKeymaster([Ljava/lang/String;)[I
 
@@ -928,7 +831,6 @@
 
     aget v3, v0, v2
 
-    .line 660
     .restart local v3    # "keymasterDigest":I
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -936,23 +838,19 @@
 
     invoke-interface {v6, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 659
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 662
     .end local v3    # "keymasterDigest":I
     :cond_1
     new-instance v5, Ljava/util/HashSet;
 
     invoke-direct {v5, v6}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 663
     .local v5, "result":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     invoke-interface {v5, v1}, Ljava/util/Set;->retainAll(Ljava/util/Collection;)Z
 
-    .line 664
     return-object v5
 .end method
 
@@ -967,7 +865,6 @@
 
     const/4 v9, 0x0
 
-    .line 583
     invoke-virtual {p2}, Landroid/security/keystore/KeyGenParameterSpec;->getPurposes()I
 
     move-result v8
@@ -978,11 +875,9 @@
 
     move-object v8, v9
 
-    .line 642
     :goto_0
     return-object v8
 
-    .line 587
     :cond_0
     invoke-virtual {p2}, Landroid/security/keystore/KeyGenParameterSpec;->isUserAuthenticationRequired()Z
 
@@ -992,10 +887,8 @@
 
     move-object v8, v9
 
-    .line 589
     goto :goto_0
 
-    .line 591
     :cond_1
     invoke-virtual {p2}, Landroid/security/keystore/KeyGenParameterSpec;->isDigestsSpecified()Z
 
@@ -1005,10 +898,8 @@
 
     move-object v8, v9
 
-    .line 593
     goto :goto_0
 
-    .line 599
     :cond_2
     invoke-virtual {p2}, Landroid/security/keystore/KeyGenParameterSpec;->getSignaturePaddings()[Ljava/lang/String;
 
@@ -1024,16 +915,13 @@
 
     move-result v7
 
-    .line 604
     .local v7, "pkcs1SignaturePaddingSupported":Z
     if-nez v7, :cond_3
 
     move-object v8, v9
 
-    .line 606
     goto :goto_0
 
-    .line 609
     :cond_3
     invoke-virtual {p2}, Landroid/security/keystore/KeyGenParameterSpec;->getDigests()[Ljava/lang/String;
 
@@ -1047,19 +935,15 @@
 
     move-result-object v0
 
-    .line 618
     .local v0, "availableKeymasterDigests":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     add-int/lit16 v5, p1, -0xf0
 
-    .line 619
     .local v5, "maxDigestOutputSizeBits":I
     const/4 v2, -0x1
 
-    .line 620
     .local v2, "bestKeymasterDigest":I
     const/4 v1, -0x1
 
-    .line 621
     .local v1, "bestDigestOutputSizeBits":I
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -1084,40 +968,31 @@
 
     move-result v4
 
-    .line 622
     .local v4, "keymasterDigest":I
     invoke-static {v4}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->getDigestOutputSizeBits(I)I
 
     move-result v6
 
-    .line 623
     .local v6, "outputSizeBits":I
     if-gt v6, v5, :cond_4
 
-    .line 627
     if-ne v2, v11, :cond_5
 
-    .line 629
     move v2, v4
 
-    .line 630
     move v1, v6
 
     goto :goto_1
 
-    .line 633
     :cond_5
     if-le v6, v1, :cond_4
 
-    .line 634
     move v2, v4
 
-    .line 635
     move v1, v6
 
     goto :goto_1
 
-    .line 639
     .end local v4    # "keymasterDigest":I
     .end local v6    # "outputSizeBits":I
     :cond_6
@@ -1125,10 +1000,8 @@
 
     move-object v8, v9
 
-    .line 640
     goto :goto_0
 
-    .line 642
     :cond_7
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1160,7 +1033,6 @@
     .param p0, "keymasterAlgorithm"    # I
 
     .prologue
-    .line 555
     const/16 v0, 0x800
 
     return v0
@@ -1171,10 +1043,8 @@
     .param p0, "keymasterDigest"    # I
 
     .prologue
-    .line 668
     packed-switch p0, :pswitch_data_0
 
-    .line 684
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1199,51 +1069,42 @@
 
     throw v0
 
-    .line 670
     :pswitch_0
     const/4 v0, -0x1
 
-    .line 682
     :goto_0
     return v0
 
-    .line 672
     :pswitch_1
     const/16 v0, 0x80
 
     goto :goto_0
 
-    .line 674
     :pswitch_2
     const/16 v0, 0xa0
 
     goto :goto_0
 
-    .line 676
     :pswitch_3
     const/16 v0, 0xe0
 
     goto :goto_0
 
-    .line 678
     :pswitch_4
     const/16 v0, 0x100
 
     goto :goto_0
 
-    .line 680
     :pswitch_5
     const/16 v0, 0x180
 
     goto :goto_0
 
-    .line 682
     :pswitch_6
     const/16 v0, 0x200
 
     goto :goto_0
 
-    .line 668
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1262,30 +1123,23 @@
     .param p1, "sizeBytes"    # I
 
     .prologue
-    .line 397
     if-gtz p1, :cond_0
 
-    .line 398
     sget-object v0, Llibcore/util/EmptyArray;->BYTE:[B
 
-    .line 405
     :goto_0
     return-object v0
 
-    .line 400
     :cond_0
     if-nez p0, :cond_1
 
-    .line 401
     invoke-static {}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->getRng()Ljava/security/SecureRandom;
 
     move-result-object p0
 
-    .line 403
     :cond_1
     new-array v0, p1, [B
 
-    .line 404
     .local v0, "result":[B
     invoke-virtual {p0, v0}, Ljava/security/SecureRandom;->nextBytes([B)V
 
@@ -1297,14 +1151,13 @@
     .param p1, "keyName"    # Ljava/lang/String;
 
     .prologue
-    .line 487
     const-string v0, "Soter"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "start retrieve key blob by key name: "
+    const-string v2, "start retrieve key blob by key name: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1320,7 +1173,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeyStore:Landroid/security/KeyStore;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1352,19 +1204,16 @@
     .locals 1
 
     .prologue
-    .line 411
     sget-object v0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->sRng:Ljava/security/SecureRandom;
 
     if-nez v0, :cond_0
 
-    .line 412
     new-instance v0, Ljava/security/SecureRandom;
 
     invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
 
     sput-object v0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->sRng:Ljava/security/SecureRandom;
 
-    .line 414
     :cond_0
     sget-object v0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->sRng:Ljava/security/SecureRandom;
 
@@ -1375,7 +1224,6 @@
     .locals 3
 
     .prologue
-    .line 647
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -1428,18 +1276,15 @@
     .end annotation
 
     .prologue
-    .line 247
     iget-object v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
     invoke-virtual {v4}, Landroid/security/keystore/KeyGenParameterSpec;->getAlgorithmParameterSpec()Ljava/security/spec/AlgorithmParameterSpec;
 
     move-result-object v0
 
-    .line 248
     .local v0, "algSpecificSpec":Ljava/security/spec/AlgorithmParameterSpec;
     sget-object v1, Ljava/security/spec/RSAKeyGenParameterSpec;->F4:Ljava/math/BigInteger;
 
-    .line 249
     .local v1, "publicExponent":Ljava/math/BigInteger;
     instance-of v4, v0, Ljava/security/spec/RSAKeyGenParameterSpec;
 
@@ -1447,10 +1292,8 @@
 
     move-object v2, v0
 
-    .line 251
     check-cast v2, Ljava/security/spec/RSAKeyGenParameterSpec;
 
-    .line 252
     .local v2, "rsaSpec":Ljava/security/spec/RSAKeyGenParameterSpec;
     iget v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeySizeBits:I
 
@@ -1458,20 +1301,17 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 253
     invoke-virtual {v2}, Ljava/security/spec/RSAKeyGenParameterSpec;->getKeysize()I
 
     move-result v4
 
     iput v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeySizeBits:I
 
-    .line 259
     :cond_0
     invoke-virtual {v2}, Ljava/security/spec/RSAKeyGenParameterSpec;->getPublicExponent()Ljava/math/BigInteger;
 
     move-result-object v1
 
-    .line 260
     sget-object v4, Ljava/math/BigInteger;->ZERO:Ljava/math/BigInteger;
 
     invoke-virtual {v1, v4}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
@@ -1482,7 +1322,6 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 261
     new-instance v4, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1507,7 +1346,6 @@
 
     throw v4
 
-    .line 254
     :cond_1
     iget v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeySizeBits:I
 
@@ -1517,7 +1355,6 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 255
     new-instance v4, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1580,7 +1417,6 @@
 
     throw v4
 
-    .line 264
     :cond_2
     sget-object v4, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->UINT64_MAX_VALUE:Ljava/math/BigInteger;
 
@@ -1590,7 +1426,6 @@
 
     if-lez v4, :cond_3
 
-    .line 265
     new-instance v4, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1627,12 +1462,10 @@
 
     throw v4
 
-    .line 270
     .end local v2    # "rsaSpec":Ljava/security/spec/RSAKeyGenParameterSpec;
     :cond_3
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mRSAPublicExponent:Ljava/math/BigInteger;
 
-    .line 271
     iget-object v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
     invoke-virtual {v4}, Landroid/security/keystore/KeyGenParameterSpec;->getKeystoreAlias()Ljava/lang/String;
@@ -1643,60 +1476,51 @@
 
     move-result-object v3
 
-    .line 272
     .local v3, "soterSpec":Landroid/security/keystore/SoterRSAKeyGenParameterSpec;
     if-eqz v3, :cond_4
 
-    .line 273
     invoke-virtual {v3}, Landroid/security/keystore/SoterRSAKeyGenParameterSpec;->isForSoter()Z
 
     move-result v4
 
     iput-boolean v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isForSoter:Z
 
-    .line 274
     invoke-virtual {v3}, Landroid/security/keystore/SoterRSAKeyGenParameterSpec;->isAutoSignedWithAttkWhenGetPublicKey()Z
 
     move-result v4
 
     iput-boolean v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoSignedWithAttkWhenGetPublicKey:Z
 
-    .line 275
     invoke-virtual {v3}, Landroid/security/keystore/SoterRSAKeyGenParameterSpec;->isAutoSignedWithCommonkWhenGetPublicKey()Z
 
     move-result v4
 
     iput-boolean v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoSignedWithCommonkWhenGetPublicKey:Z
 
-    .line 276
     invoke-virtual {v3}, Landroid/security/keystore/SoterRSAKeyGenParameterSpec;->getAutoSignedKeyNameWhenGetPublicKey()Ljava/lang/String;
 
     move-result-object v4
 
     iput-object v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mAutoSignedKeyNameWhenGetPublicKey:Ljava/lang/String;
 
-    .line 277
     invoke-virtual {v3}, Landroid/security/keystore/SoterRSAKeyGenParameterSpec;->isSecmsgFidCounterSignedWhenSign()Z
 
     move-result v4
 
     iput-boolean v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isSecmsgFidCounterSignedWhenSign:Z
 
-    .line 278
     invoke-virtual {v3}, Landroid/security/keystore/SoterRSAKeyGenParameterSpec;->isAutoAddCounterWhenGetPublicKey()Z
 
     move-result v4
 
     iput-boolean v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoAddCounterWhenGetPublicKey:Z
 
-    .line 279
     invoke-virtual {v3}, Landroid/security/keystore/SoterRSAKeyGenParameterSpec;->isNeedUseNextAttk()Z
 
     move-result v4
 
     iput-boolean v4, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isNeedNextAttk:Z
 
-    .line 282
     :cond_4
     return-void
 .end method
@@ -1706,14 +1530,12 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 731
     const/4 v1, 0x4
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 732
     .local v0, "converter":Ljava/nio/ByteBuffer;
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
@@ -1721,10 +1543,8 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 733
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 734
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v1
@@ -1737,10 +1557,8 @@
     .param p0, "keymasterPadding"    # I
 
     .prologue
-    .line 708
     packed-switch p0, :pswitch_data_0
 
-    .line 715
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1766,11 +1584,9 @@
 
     throw v0
 
-    .line 710
     :pswitch_1
     const/4 v0, 0x0
 
-    .line 713
     :goto_0
     return v0
 
@@ -1779,7 +1595,6 @@
 
     goto :goto_0
 
-    .line 708
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -1797,74 +1612,52 @@
 
     const/4 v1, 0x0
 
-    .line 217
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mEntryAlias:Ljava/lang/String;
 
-    .line 218
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mJcaKeyAlgorithm:Ljava/lang/String;
 
-    .line 219
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterAlgorithm:I
 
-    .line 220
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterPurposes:[I
 
-    .line 221
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterBlockModes:[I
 
-    .line 222
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterEncryptionPaddings:[I
 
-    .line 223
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterSignaturePaddings:[I
 
-    .line 224
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterDigests:[I
 
-    .line 225
     iput v2, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeySizeBits:I
 
-    .line 226
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
-    .line 227
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mRSAPublicExponent:Ljava/math/BigInteger;
 
-    .line 228
     iput-boolean v2, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mEncryptionAtRestRequired:Z
 
-    .line 229
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mRng:Ljava/security/SecureRandom;
 
-    .line 230
     iput-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeyStore:Landroid/security/KeyStore;
 
-    .line 231
     iput-boolean v2, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isForSoter:Z
 
-    .line 233
     iput-boolean v2, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoSignedWithAttkWhenGetPublicKey:Z
 
-    .line 235
     iput-boolean v2, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoSignedWithCommonkWhenGetPublicKey:Z
 
-    .line 237
     const-string v0, ""
 
     iput-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mAutoSignedKeyNameWhenGetPublicKey:Ljava/lang/String;
 
-    .line 239
     iput-boolean v2, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isSecmsgFidCounterSignedWhenSign:Z
 
-    .line 241
     iput-boolean v2, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isAutoAddCounterWhenGetPublicKey:Z
 
-    .line 243
     iput-boolean v2, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isNeedNextAttk:Z
 
-    .line 244
     return-void
 .end method
 
@@ -1873,19 +1666,16 @@
     .param p0, "value"    # J
 
     .prologue
-    .line 698
     const-wide/16 v0, 0x0
 
     cmp-long v0, p0, v0
 
     if-ltz v0, :cond_0
 
-    .line 699
     invoke-static {p0, p1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v0
 
-    .line 701
     :goto_0
     return-object v0
 
@@ -1909,7 +1699,6 @@
     .locals 14
 
     .prologue
-    .line 286
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeyStore:Landroid/security/KeyStore;
 
     if-eqz v0, :cond_0
@@ -1918,7 +1707,6 @@
 
     if-nez v0, :cond_1
 
-    .line 287
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1928,7 +1716,6 @@
 
     throw v0
 
-    .line 290
     :cond_1
     iget-boolean v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mEncryptionAtRestRequired:Z
 
@@ -1936,7 +1723,6 @@
 
     const/4 v4, 0x1
 
-    .line 291
     .local v4, "flags":I
     :goto_0
     and-int/lit8 v0, v4, 0x1
@@ -1953,7 +1739,6 @@
 
     if-eq v0, v12, :cond_3
 
-    .line 293
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v12, "Encryption at rest using secure lock screen credential requested for key pair, but the user has not yet entered the credential"
@@ -1962,21 +1747,18 @@
 
     throw v0
 
-    .line 290
     .end local v4    # "flags":I
     :cond_2
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 298
     .restart local v4    # "flags":I
     :cond_3
     new-instance v2, Landroid/security/keymaster/KeymasterArguments;
 
     invoke-direct {v2}, Landroid/security/keymaster/KeymasterArguments;-><init>()V
 
-    .line 299
     .local v2, "args":Landroid/security/keymaster/KeymasterArguments;
     const v0, 0x30000003
 
@@ -1986,49 +1768,42 @@
 
     invoke-virtual {v2, v0, v12, v13}, Landroid/security/keymaster/KeymasterArguments;->addUnsignedInt(IJ)V
 
-    .line 300
     const v0, 0x10000002
 
     iget v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterAlgorithm:I
 
     invoke-virtual {v2, v0, v12}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 301
     const v0, 0x20000001
 
     iget-object v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterPurposes:[I
 
     invoke-virtual {v2, v0, v12}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 302
     const v0, 0x20000004
 
     iget-object v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterBlockModes:[I
 
     invoke-virtual {v2, v0, v12}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 303
     const v0, 0x20000006
 
     iget-object v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterEncryptionPaddings:[I
 
     invoke-virtual {v2, v0, v12}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 304
     const v0, 0x20000006
 
     iget-object v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterSignaturePaddings:[I
 
     invoke-virtual {v2, v0, v12}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 305
     const v0, 0x20000005
 
     iget-object v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterDigests:[I
 
     invoke-virtual {v2, v0, v12}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 307
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
     invoke-virtual {v0}, Landroid/security/keystore/KeyGenParameterSpec;->isUserAuthenticationRequired()Z
@@ -2043,7 +1818,6 @@
 
     invoke-static {v2, v0, v12}, Landroid/security/keystore/KeymasterUtils;->addUserAuthArgs(Landroid/security/keymaster/KeymasterArguments;ZI)V
 
-    .line 310
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
     invoke-virtual {v0}, Landroid/security/keystore/KeyGenParameterSpec;->getKeyValidityStart()Ljava/util/Date;
@@ -2052,7 +1826,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 311
     const v0, 0x60000190
 
     iget-object v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
@@ -2063,7 +1836,6 @@
 
     invoke-virtual {v2, v0, v12}, Landroid/security/keymaster/KeymasterArguments;->addDate(ILjava/util/Date;)V
 
-    .line 313
     :cond_4
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
@@ -2073,7 +1845,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 314
     const v0, 0x60000191
 
     iget-object v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
@@ -2084,7 +1855,6 @@
 
     invoke-virtual {v2, v0, v12}, Landroid/security/keymaster/KeymasterArguments;->addDate(ILjava/util/Date;)V
 
-    .line 317
     :cond_5
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
@@ -2094,7 +1864,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 318
     const v0, 0x60000192
 
     iget-object v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
@@ -2105,11 +1874,9 @@
 
     invoke-virtual {v2, v0, v12}, Landroid/security/keymaster/KeymasterArguments;->addDate(ILjava/util/Date;)V
 
-    .line 321
     :cond_6
     invoke-direct {p0, v2}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->addAlgorithmSpecificParameters(Landroid/security/keymaster/KeymasterArguments;)V
 
-    .line 323
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mRng:Ljava/security/SecureRandom;
 
     iget v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeySizeBits:I
@@ -2122,7 +1889,6 @@
 
     move-result-object v3
 
-    .line 327
     .local v3, "additionalEntropy":[B
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2144,11 +1910,9 @@
 
     move-result-object v1
 
-    .line 328
     .local v1, "privateKeyAlias":Ljava/lang/String;
     const/4 v11, 0x0
 
-    .line 330
     .local v11, "success":Z
     :try_start_0
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeyStore:Landroid/security/KeyStore;
@@ -2157,12 +1921,10 @@
 
     invoke-static {v0, v12}, Landroid/security/Credentials;->deleteAllTypesForAlias(Landroid/security/KeyStore;Ljava/lang/String;)Z
 
-    .line 331
     new-instance v5, Landroid/security/keymaster/KeyCharacteristics;
 
     invoke-direct {v5}, Landroid/security/keymaster/KeyCharacteristics;-><init>()V
 
-    .line 332
     .local v5, "resultingKeyCharacteristics":Landroid/security/keymaster/KeyCharacteristics;
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -2170,13 +1932,11 @@
 
     move-result v9
 
-    .line 338
     .local v9, "errorCode":I
     const/4 v0, 0x1
 
     if-eq v9, v0, :cond_8
 
-    .line 339
     new-instance v0, Ljava/security/ProviderException;
 
     const-string v12, "Failed to generate key pair"
@@ -2191,7 +1951,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 383
     .end local v5    # "resultingKeyCharacteristics":Landroid/security/keymaster/KeyCharacteristics;
     .end local v9    # "errorCode":I
     :catchall_0
@@ -2199,7 +1958,6 @@
 
     if-nez v11, :cond_7
 
-    .line 384
     iget-object v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeyStore:Landroid/security/KeyStore;
 
     iget-object v13, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mEntryAlias:Ljava/lang/String;
@@ -2209,7 +1967,6 @@
     :cond_7
     throw v0
 
-    .line 345
     .restart local v5    # "resultingKeyCharacteristics":Landroid/security/keymaster/KeyCharacteristics;
     .restart local v9    # "errorCode":I
     :cond_8
@@ -2223,7 +1980,6 @@
 
     move-result-object v10
 
-    .line 351
     .local v10, "result":Ljava/security/KeyPair;
     :try_start_2
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mJcaKeyAlgorithm:Ljava/lang/String;
@@ -2242,7 +1998,6 @@
 
     if-nez v0, :cond_9
 
-    .line 352
     new-instance v0, Ljava/security/ProviderException;
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -2287,12 +2042,10 @@
 
     throw v0
 
-    .line 347
     .end local v10    # "result":Ljava/security/KeyPair;
     :catch_0
     move-exception v8
 
-    .line 348
     .local v8, "e":Ljava/security/UnrecoverableKeyException;
     new-instance v0, Ljava/security/ProviderException;
 
@@ -2304,7 +2057,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 359
     .end local v8    # "e":Ljava/security/UnrecoverableKeyException;
     .restart local v10    # "result":Ljava/security/KeyPair;
     :cond_9
@@ -2324,7 +2076,6 @@
 
     move-result-object v6
 
-    .line 366
     .local v6, "cert":Ljava/security/cert/X509Certificate;
     :try_start_4
     invoke-virtual {v6}, Ljava/security/cert/X509Certificate;->getEncoded()[B
@@ -2334,7 +2085,6 @@
 
     move-result-object v7
 
-    .line 372
     .local v7, "certBytes":[B
     :try_start_5
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeyStore:Landroid/security/KeyStore;
@@ -2367,7 +2117,6 @@
 
     if-nez v0, :cond_a
 
-    .line 377
     new-instance v0, Ljava/security/ProviderException;
 
     const-string v12, "Failed to store self-signed certificate"
@@ -2376,13 +2125,11 @@
 
     throw v0
 
-    .line 360
     .end local v6    # "cert":Ljava/security/cert/X509Certificate;
     .end local v7    # "certBytes":[B
     :catch_1
     move-exception v8
 
-    .line 361
     .local v8, "e":Ljava/lang/Exception;
     new-instance v0, Ljava/security/ProviderException;
 
@@ -2392,13 +2139,11 @@
 
     throw v0
 
-    .line 367
     .end local v8    # "e":Ljava/lang/Exception;
     .restart local v6    # "cert":Ljava/security/cert/X509Certificate;
     :catch_2
     move-exception v8
 
-    .line 368
     .local v8, "e":Ljava/security/cert/CertificateEncodingException;
     new-instance v0, Ljava/security/ProviderException;
 
@@ -2410,16 +2155,13 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 380
     .end local v8    # "e":Ljava/security/cert/CertificateEncodingException;
     .restart local v7    # "certBytes":[B
     :cond_a
     const/4 v11, 0x1
 
-    .line 383
     if-nez v11, :cond_b
 
-    .line 384
     iget-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeyStore:Landroid/security/KeyStore;
 
     iget-object v12, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mEntryAlias:Ljava/lang/String;
@@ -2436,7 +2178,6 @@
     .param p2, "random"    # Ljava/security/SecureRandom;
 
     .prologue
-    .line 120
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2479,17 +2220,13 @@
     .end annotation
 
     .prologue
-    .line 127
     invoke-direct {p0}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->resetAll()V
 
-    .line 129
     const/4 v10, 0x0
 
-    .line 131
     .local v10, "success":Z
     if-nez p1, :cond_1
 
-    .line 132
     :try_start_0
     new-instance v11, Ljava/security/InvalidAlgorithmParameterException;
 
@@ -2539,41 +2276,34 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 210
     :catchall_0
     move-exception v11
 
     if-nez v10, :cond_0
 
-    .line 211
     invoke-direct {p0}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->resetAll()V
 
     :cond_0
     throw v11
 
-    .line 138
     :cond_1
     const/4 v3, 0x0
 
-    .line 139
     .local v3, "encryptionAtRestRequired":Z
     :try_start_1
     iget v6, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mOriginalKeymasterAlgorithm:I
 
-    .line 140
     .local v6, "keymasterAlgorithm":I
     instance-of v11, p1, Landroid/security/keystore/KeyGenParameterSpec;
 
     if-eqz v11, :cond_3
 
-    .line 141
     move-object v0, p1
 
     check-cast v0, Landroid/security/keystore/KeyGenParameterSpec;
 
     move-object v9, v0
 
-    .line 149
     .local v9, "spec":Landroid/security/keystore/KeyGenParameterSpec;
     invoke-virtual {v9}, Landroid/security/keystore/KeyGenParameterSpec;->getKeystoreAlias()Ljava/lang/String;
 
@@ -2585,53 +2315,43 @@
 
     iput-object v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mEntryAlias:Ljava/lang/String;
 
-    .line 150
     iput-object v9, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
-    .line 151
     iput v6, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterAlgorithm:I
 
-    .line 152
     iput-boolean v3, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mEncryptionAtRestRequired:Z
 
-    .line 153
     invoke-virtual {v9}, Landroid/security/keystore/KeyGenParameterSpec;->getKeySize()I
 
     move-result v11
 
     iput v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeySizeBits:I
 
-    .line 154
     invoke-direct {p0}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->initAlgorithmSpecificParameters()V
 
-    .line 155
     iget v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeySizeBits:I
 
     const/4 v12, -0x1
 
     if-ne v11, v12, :cond_2
 
-    .line 156
     invoke-static {v6}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->getDefaultKeySize(I)I
 
     move-result v11
 
     iput v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeySizeBits:I
 
-    .line 158
     :cond_2
     iget v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeySizeBits:I
 
     invoke-static {v6, v11}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->checkValidKeySize(II)V
 
-    .line 160
     invoke-virtual {v9}, Landroid/security/keystore/KeyGenParameterSpec;->getKeystoreAlias()Ljava/lang/String;
 
     move-result-object v11
 
     if-nez v11, :cond_4
 
-    .line 161
     new-instance v11, Ljava/security/InvalidAlgorithmParameterException;
 
     const-string v12, "KeyStore entry alias not provided"
@@ -2640,7 +2360,6 @@
 
     throw v11
 
-    .line 143
     .end local v9    # "spec":Landroid/security/keystore/KeyGenParameterSpec;
     :cond_3
     new-instance v11, Ljava/security/InvalidAlgorithmParameterException;
@@ -2709,7 +2428,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 166
     .restart local v9    # "spec":Landroid/security/keystore/KeyGenParameterSpec;
     :cond_4
     :try_start_2
@@ -2717,7 +2435,6 @@
 
     move-result-object v5
 
-    .line 168
     .local v5, "jcaKeyAlgorithm":Ljava/lang/String;
     invoke-virtual {v9}, Landroid/security/keystore/KeyGenParameterSpec;->getPurposes()I
 
@@ -2729,7 +2446,6 @@
 
     iput-object v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterPurposes:[I
 
-    .line 169
     invoke-virtual {v9}, Landroid/security/keystore/KeyGenParameterSpec;->getBlockModes()[Ljava/lang/String;
 
     move-result-object v11
@@ -2740,7 +2456,6 @@
 
     iput-object v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterBlockModes:[I
 
-    .line 170
     invoke-virtual {v9}, Landroid/security/keystore/KeyGenParameterSpec;->getEncryptionPaddings()[Ljava/lang/String;
 
     move-result-object v11
@@ -2751,7 +2466,6 @@
 
     iput-object v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterEncryptionPaddings:[I
 
-    .line 172
     invoke-virtual {v9}, Landroid/security/keystore/KeyGenParameterSpec;->getPurposes()I
 
     move-result v11
@@ -2766,7 +2480,6 @@
 
     if-eqz v11, :cond_6
 
-    .line 174
     iget-object v1, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterEncryptionPaddings:[I
 
     .local v1, "arr$":[I
@@ -2781,7 +2494,6 @@
 
     aget v7, v1, v4
 
-    .line 175
     .local v7, "keymasterPadding":I
     invoke-static {v7}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->isKeymasterPaddingSchemeIndCpaCompatibleWithAsymmetricCrypto(I)Z
 
@@ -2789,7 +2501,6 @@
 
     if-nez v11, :cond_5
 
-    .line 177
     new-instance v11, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -2844,7 +2555,6 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 201
     .end local v1    # "arr$":[I
     .end local v4    # "i$":I
     .end local v5    # "jcaKeyAlgorithm":Ljava/lang/String;
@@ -2855,7 +2565,6 @@
 
     move-object v2, v11
 
-    .line 202
     .local v2, "e":Ljava/lang/RuntimeException;
     :goto_1
     :try_start_3
@@ -2867,7 +2576,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 174
     .end local v2    # "e":Ljava/lang/RuntimeException;
     .restart local v1    # "arr$":[I
     .restart local v4    # "i$":I
@@ -2879,7 +2587,6 @@
 
     goto :goto_0
 
-    .line 187
     .end local v1    # "arr$":[I
     .end local v4    # "i$":I
     .end local v7    # "keymasterPadding":I
@@ -2896,14 +2603,12 @@
 
     iput-object v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterSignaturePaddings:[I
 
-    .line 189
     invoke-virtual {v9}, Landroid/security/keystore/KeyGenParameterSpec;->isDigestsSpecified()Z
 
     move-result v11
 
     if-eqz v11, :cond_8
 
-    .line 190
     invoke-virtual {v9}, Landroid/security/keystore/KeyGenParameterSpec;->getDigests()[Ljava/lang/String;
 
     move-result-object v11
@@ -2914,7 +2619,6 @@
 
     iput-object v11, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mKeymasterDigests:[I
 
-    .line 198
     :goto_2
     new-instance v11, Landroid/security/keymaster/KeymasterArguments;
 
@@ -2938,16 +2642,13 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 205
     :try_start_5
     iput-object v5, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mJcaKeyAlgorithm:Ljava/lang/String;
 
-    .line 206
     move-object/from16 v0, p2
 
     iput-object v0, p0, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->mRng:Ljava/security/SecureRandom;
 
-    .line 207
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v11
@@ -2956,20 +2657,15 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 208
     const/4 v10, 0x1
 
-    .line 210
     if-nez v10, :cond_7
 
-    .line 211
     invoke-direct {p0}, Landroid/security/keystore/SoterKeyStoreKeyPairRSAGeneratorSpi;->resetAll()V
 
-    .line 214
     :cond_7
     return-void
 
-    .line 192
     :cond_8
     :try_start_6
     sget-object v11, Llibcore/util/EmptyArray;->INT:[I
@@ -2982,7 +2678,6 @@
 
     goto :goto_2
 
-    .line 201
     .end local v5    # "jcaKeyAlgorithm":Ljava/lang/String;
     :catch_1
     move-exception v11

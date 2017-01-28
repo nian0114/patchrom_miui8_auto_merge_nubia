@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 52
     iput-object p1, p0, Lcn/nubia/server/policy/CameraCtrl$2;->this$0:Lcn/nubia/server/policy/CameraCtrl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcn/nubia/server/policy/CameraCtrl$2;->this$0:Lcn/nubia/server/policy/CameraCtrl;
 
     # getter for: Lcn/nubia/server/policy/CameraCtrl;->mHandler:Landroid/os/Handler;
@@ -57,12 +55,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 55
     iget-object v0, p0, Lcn/nubia/server/policy/CameraCtrl$2;->this$0:Lcn/nubia/server/policy/CameraCtrl;
 
     # invokes: Lcn/nubia/server/policy/CameraCtrl;->startCamera()V
     invoke-static {v0}, Lcn/nubia/server/policy/CameraCtrl;->access$200(Lcn/nubia/server/policy/CameraCtrl;)V
 
-    .line 56
     return-void
 .end method

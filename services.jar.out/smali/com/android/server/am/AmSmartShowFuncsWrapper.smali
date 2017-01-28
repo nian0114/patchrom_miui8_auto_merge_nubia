@@ -30,28 +30,20 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-boolean v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mWithoutAppEvent:Z
 
-    .line 50
     iput-boolean v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mWithoutMultiWindow:Z
 
-    .line 51
     iput-boolean v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mWithoutSmartConfiguration:Z
 
-    .line 52
     iput-boolean v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mWithoutActivityController:Z
 
-    .line 53
     iput-boolean v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mWithoutSmartData:Z
 
-    .line 56
     iput-object p1, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
-    .line 57
     return-void
 .end method
 
@@ -62,19 +54,16 @@
     .param p1, "ar"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 112
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutAppEvent()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1}, Lcom/android/server/am/IAmSmartShowFuncs;->activityStateChangedLocked(Lcom/android/server/am/ActivityRecord;)V
 
-    .line 115
     :cond_0
     return-void
 .end method
@@ -84,19 +73,16 @@
     .param p1, "app"    # Lcom/android/server/am/ProcessRecord;
 
     .prologue
-    .line 126
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1}, Lcom/android/server/am/IAmSmartShowFuncs;->appCrashedLocked(Lcom/android/server/am/ProcessRecord;)V
 
-    .line 129
     :cond_0
     return-void
 .end method
@@ -106,19 +92,16 @@
     .param p1, "app"    # Lcom/android/server/am/ProcessRecord;
 
     .prologue
-    .line 274
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 275
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1}, Lcom/android/server/am/IAmSmartShowFuncs;->attachApplicationLocked(Lcom/android/server/am/ProcessRecord;)V
 
-    .line 277
     :cond_0
     return-void
 .end method
@@ -129,17 +112,14 @@
     .param p2, "newTask"    # Z
 
     .prologue
-    .line 318
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 319
     const/4 v0, 0x0
 
-    .line 321
     :goto_0
     return-object v0
 
@@ -158,17 +138,14 @@
     .param p1, "ar"    # Ljava/lang/Object;
 
     .prologue
-    .line 68
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutSmartData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 69
     const/4 v0, 0x0
 
-    .line 71
     :goto_0
     return-object v0
 
@@ -187,7 +164,6 @@
     .param p1, "service"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1}, Lcom/android/server/am/IAmSmartShowFuncs;->getActiveServices(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/IActiveServices;
@@ -202,19 +178,16 @@
     .param p1, "stack"    # Lcom/android/server/am/ActivityStack;
 
     .prologue
-    .line 170
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutSmartConfiguration()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 171
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mConfiguration:Landroid/content/res/Configuration;
 
-    .line 173
     :goto_0
     return-object v0
 
@@ -234,19 +207,16 @@
     .param p2, "app"    # Lcom/android/server/am/ProcessRecord;
 
     .prologue
-    .line 186
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutSmartConfiguration()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 187
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mConfiguration:Landroid/content/res/Configuration;
 
-    .line 189
     :goto_0
     return-object v0
 
@@ -265,19 +235,16 @@
     .param p1, "app"    # Lcom/android/server/am/ProcessRecord;
 
     .prologue
-    .line 178
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutSmartConfiguration()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 179
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mConfiguration:Landroid/content/res/Configuration;
 
-    .line 181
     :goto_0
     return-object v0
 
@@ -299,7 +266,6 @@
     .param p4, "displayId"    # I
 
     .prologue
-    .line 400
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/android/server/am/IAmSmartShowFuncs;->getProcessRecordLocked(Lcom/android/server/am/ActivityRecord;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;I)Lcom/android/server/am/ProcessRecord;
@@ -315,17 +281,14 @@
     .param p2, "ar"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 76
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 77
     const/4 v0, 0x0
 
-    .line 79
     :goto_0
     return-object v0
 
@@ -344,7 +307,6 @@
     .param p1, "service"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1}, Lcom/android/server/am/IAmSmartShowFuncs;->getStackSupervisor(Lcom/android/server/am/ActivityManagerService;)Ljava/lang/Object;
@@ -359,15 +321,12 @@
     .param p1, "service"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 297
     iput-object p1, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 298
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1}, Lcom/android/server/am/IAmSmartShowFuncs;->initActivityManagerService(Lcom/android/server/am/ActivityManagerService;)V
 
-    .line 299
     return-void
 .end method
 
@@ -376,17 +335,14 @@
     .param p1, "ar"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 118
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 119
     const/4 v0, 0x0
 
-    .line 121
     :goto_0
     return v0
 
@@ -405,17 +361,14 @@
     .param p1, "stack"    # Lcom/android/server/am/ActivityStack;
 
     .prologue
-    .line 258
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 259
     const/4 v0, 0x0
 
-    .line 261
     :goto_0
     return v0
 
@@ -434,17 +387,14 @@
     .param p1, "stack"    # Lcom/android/server/am/ActivityStack;
 
     .prologue
-    .line 302
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 303
     const/4 v0, -0x1
 
-    .line 305
     :goto_0
     return v0
 
@@ -465,17 +415,14 @@
     .param p3, "reasonStack"    # Lcom/android/server/am/ActivityStack;
 
     .prologue
-    .line 310
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 311
     const/4 v0, 0x0
 
-    .line 313
     :goto_0
     return v0
 
@@ -494,12 +441,10 @@
     .param p1, "tr"    # Lcom/android/server/am/TaskRecord;
 
     .prologue
-    .line 409
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1}, Lcom/android/server/am/IAmSmartShowFuncs;->moveTaskToFrontLocked(Lcom/android/server/am/TaskRecord;)V
 
-    .line 410
     return-void
 .end method
 
@@ -508,17 +453,14 @@
     .param p1, "stack"    # Lcom/android/server/am/ActivityStack;
 
     .prologue
-    .line 104
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 105
     const/4 v0, 0x0
 
-    .line 107
     :goto_0
     return v0
 
@@ -538,17 +480,14 @@
     .param p2, "prev"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 84
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 85
     const/4 v0, -0x1
 
-    .line 87
     :goto_0
     return v0
 
@@ -567,17 +506,14 @@
     .param p1, "stack"    # Lcom/android/server/am/ActivityStack;
 
     .prologue
-    .line 226
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 227
     const/4 v0, 0x0
 
-    .line 229
     :goto_0
     return v0
 
@@ -597,17 +533,14 @@
     .param p2, "userLeaving"    # Z
 
     .prologue
-    .line 218
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 219
     const/4 v0, 0x0
 
-    .line 221
     :goto_0
     return v0
 
@@ -626,17 +559,14 @@
     .param p1, "ar"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 202
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 203
     const/4 v0, 0x1
 
-    .line 205
     :goto_0
     return v0
 
@@ -655,17 +585,14 @@
     .param p1, "ar"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 234
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 235
     const/4 v0, 0x1
 
-    .line 237
     :goto_0
     return v0
 
@@ -684,17 +611,14 @@
     .param p1, "ar"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 210
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 211
     const/4 v0, 0x0
 
-    .line 213
     :goto_0
     return v0
 
@@ -714,17 +638,14 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 288
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 289
     const/4 v0, 0x1
 
-    .line 291
     :goto_0
     return v0
 
@@ -744,7 +665,6 @@
     .param p2, "targetStack"    # Lcom/android/server/am/ActivityStack;
 
     .prologue
-    .line 405
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1, p2}, Lcom/android/server/am/IAmSmartShowFuncs;->shouldMoveHomeStackLocked(Lcom/android/server/am/ActivityRecord;Lcom/android/server/am/ActivityStack;)Z
@@ -760,17 +680,14 @@
     .param p2, "killProcess"    # Z
 
     .prologue
-    .line 280
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 281
     const/4 v0, 0x1
 
-    .line 283
     :goto_0
     return v0
 
@@ -791,17 +708,14 @@
     .param p3, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 132
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutSmartConfiguration()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 133
     const/4 v0, 0x1
 
-    .line 135
     :goto_0
     return v0
 
@@ -821,19 +735,16 @@
     .param p2, "stackId"    # I
 
     .prologue
-    .line 98
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1, p2}, Lcom/android/server/am/IAmSmartShowFuncs;->stackCreated(II)V
 
-    .line 101
     :cond_0
     return-void
 .end method
@@ -844,19 +755,16 @@
     .param p2, "stackId"    # I
 
     .prologue
-    .line 92
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1, p2}, Lcom/android/server/am/IAmSmartShowFuncs;->stackRemoved(II)V
 
-    .line 95
     :cond_0
     return-void
 .end method
@@ -873,17 +781,14 @@
     .param p8, "userId"    # I
 
     .prologue
-    .line 342
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutActivityController()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 343
     const/4 v0, 0x0
 
-    .line 345
     :goto_0
     return v0
 
@@ -931,17 +836,14 @@
     .param p14, "outActivity"    # [Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 355
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutActivityController()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 356
     const/4 v0, 0x0
 
-    .line 358
     :goto_0
     return v0
 
@@ -1000,17 +902,14 @@
     .param p13, "userId"    # I
 
     .prologue
-    .line 330
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutActivityController()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 331
     const/4 v0, 0x0
 
-    .line 333
     :goto_0
     return v0
 
@@ -1055,17 +954,14 @@
     .param p1, "r"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 242
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 243
     const/4 v0, 0x0
 
-    .line 245
     :goto_0
     return v0
 
@@ -1084,17 +980,14 @@
     .param p1, "r"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 250
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 251
     const/4 v0, 0x0
 
-    .line 253
     :goto_0
     return v0
 
@@ -1115,17 +1008,14 @@
     .param p3, "sourceRecord"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 194
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 195
     const/4 v0, -0x1
 
-    .line 197
     :goto_0
     return v0
 
@@ -1144,19 +1034,16 @@
     .param p1, "ar"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 266
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutSmartConfiguration()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 267
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mConfiguration:Landroid/content/res/Configuration;
 
-    .line 269
     :goto_0
     return-object v0
 
@@ -1175,17 +1062,14 @@
     .param p1, "r"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 148
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutSmartConfiguration()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 149
     const/4 v0, 0x0
 
-    .line 151
     :goto_0
     return v0
 
@@ -1204,17 +1088,14 @@
     .param p1, "r"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 156
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutSmartConfiguration()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 157
     const/4 v0, -0x1
 
-    .line 159
     :goto_0
     return v0
 
@@ -1234,17 +1115,14 @@
     .param p2, "requestedOrientation"    # I
 
     .prologue
-    .line 140
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutSmartConfiguration()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 141
     const/4 v0, 0x0
 
-    .line 143
     :goto_0
     return v0
 
@@ -1264,7 +1142,6 @@
     .param p2, "changes"    # I
 
     .prologue
-    .line 164
     invoke-virtual {p0}, Lcom/android/server/am/AmSmartShowFuncsWrapper;->withoutMultiWindow()Z
 
     move-result v0
@@ -1277,13 +1154,11 @@
 
     if-nez v0, :cond_1
 
-    .line 165
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mImpl:Lcom/android/server/am/IAmSmartShowFuncs;
 
     invoke-interface {v0, p1, p2}, Lcom/android/server/am/IAmSmartShowFuncs;->updateConfigurationLocked(Landroid/content/res/Configuration;I)V
 
-    .line 167
     :cond_1
     return-void
 .end method
@@ -1292,15 +1167,12 @@
     .locals 1
 
     .prologue
-    .line 393
     iget-boolean v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mWithoutActivityController:Z
 
     if-eqz v0, :cond_0
 
-    .line 394
     const/4 v0, 0x1
 
-    .line 396
     :goto_0
     return v0
 
@@ -1318,15 +1190,12 @@
     .locals 1
 
     .prologue
-    .line 365
     iget-boolean v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mWithoutAppEvent:Z
 
     if-eqz v0, :cond_0
 
-    .line 366
     const/4 v0, 0x1
 
-    .line 368
     :goto_0
     return v0
 
@@ -1344,15 +1213,12 @@
     .locals 1
 
     .prologue
-    .line 372
     iget-boolean v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mWithoutMultiWindow:Z
 
     if-eqz v0, :cond_0
 
-    .line 373
     const/4 v0, 0x1
 
-    .line 375
     :goto_0
     return v0
 
@@ -1370,15 +1236,12 @@
     .locals 1
 
     .prologue
-    .line 386
     iget-boolean v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mWithoutSmartConfiguration:Z
 
     if-eqz v0, :cond_0
 
-    .line 387
     const/4 v0, 0x1
 
-    .line 389
     :goto_0
     return v0
 
@@ -1396,15 +1259,12 @@
     .locals 1
 
     .prologue
-    .line 379
     iget-boolean v0, p0, Lcom/android/server/am/AmSmartShowFuncsWrapper;->mWithoutSmartData:Z
 
     if-eqz v0, :cond_0
 
-    .line 380
     const/4 v0, 0x1
 
-    .line 382
     :goto_0
     return v0
 

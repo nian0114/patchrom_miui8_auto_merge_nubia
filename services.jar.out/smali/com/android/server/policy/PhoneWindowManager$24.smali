@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 6430
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$24;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,7 +36,6 @@
     .locals 3
 
     .prologue
-    .line 6433
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$24;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     const-string v1, "com.powermo.SmartBar"
@@ -47,7 +45,6 @@
     # invokes: Lcom/android/server/policy/PhoneWindowManager;->startService(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/policy/PhoneWindowManager;->access$2500(Lcom/android/server/policy/PhoneWindowManager;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6434
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$24;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     const-string v1, "com.powermo.SmartBar"
@@ -57,6 +54,5 @@
     # invokes: Lcom/android/server/policy/PhoneWindowManager;->startService(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/policy/PhoneWindowManager;->access$2500(Lcom/android/server/policy/PhoneWindowManager;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6435
     return-void
 .end method

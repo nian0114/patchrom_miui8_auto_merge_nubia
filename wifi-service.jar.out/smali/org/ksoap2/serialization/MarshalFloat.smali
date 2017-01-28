@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,12 +32,10 @@
     .end annotation
 
     .prologue
-    .line 33
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 35
     .local v1, "stringValue":Ljava/lang/String;
     const-string v2, "float"
 
@@ -48,16 +45,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 36
     new-instance v0, Ljava/lang/Float;
 
     invoke-direct {v0, v1}, Ljava/lang/Float;-><init>(Ljava/lang/String;)V
 
-    .line 44
     :goto_0
     return-object v0
 
-    .line 37
     :cond_0
     const-string v2, "double"
 
@@ -67,7 +61,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 38
     new-instance v0, Ljava/lang/Double;
 
     invoke-direct {v0, v1}, Ljava/lang/Double;-><init>(Ljava/lang/String;)V
@@ -75,7 +68,6 @@
     .local v0, "result":Ljava/lang/Double;
     goto :goto_0
 
-    .line 39
     .end local v0    # "result":Ljava/lang/Double;
     :cond_1
     const-string v2, "decimal"
@@ -86,7 +78,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 40
     new-instance v0, Ljava/math/BigDecimal;
 
     invoke-direct {v0, v1}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
@@ -94,7 +85,6 @@
     .local v0, "result":Ljava/math/BigDecimal;
     goto :goto_0
 
-    .line 42
     .end local v0    # "result":Ljava/math/BigDecimal;
     :cond_2
     new-instance v2, Ljava/lang/RuntimeException;
@@ -111,7 +101,6 @@
     .param p1, "cm"    # Lorg/ksoap2/serialization/SoapSerializationEnvelope;
 
     .prologue
-    .line 52
     iget-object v0, p1, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->xsd:Ljava/lang/String;
 
     const-string v1, "float"
@@ -120,7 +109,6 @@
 
     invoke-virtual {p1, v0, v1, v2, p0}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addMapping(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lorg/ksoap2/serialization/Marshal;)V
 
-    .line 53
     iget-object v0, p1, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->xsd:Ljava/lang/String;
 
     const-string v1, "double"
@@ -129,7 +117,6 @@
 
     invoke-virtual {p1, v0, v1, v2, p0}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addMapping(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lorg/ksoap2/serialization/Marshal;)V
 
-    .line 54
     iget-object v0, p1, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->xsd:Ljava/lang/String;
 
     const-string v1, "decimal"
@@ -138,7 +125,6 @@
 
     invoke-virtual {p1, v0, v1, v2, p0}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addMapping(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lorg/ksoap2/serialization/Marshal;)V
 
-    .line 55
     return-void
 .end method
 
@@ -153,13 +139,11 @@
     .end annotation
 
     .prologue
-    .line 48
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {p1, v0}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 49
     return-void
 .end method

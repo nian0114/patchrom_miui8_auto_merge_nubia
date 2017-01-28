@@ -27,18 +27,14 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 218
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 216
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lnubia/util/FrameworkDataStatisticsManager$EnableEncrypt;->mEnable:Z
 
-    .line 219
     iput-boolean p1, p0, Lnubia/util/FrameworkDataStatisticsManager$EnableEncrypt;->mEnable:Z
 
-    .line 220
     return-void
 .end method
 
@@ -54,11 +50,9 @@
     .end annotation
 
     .prologue
-    .line 225
     iget-boolean v0, p0, Lnubia/util/FrameworkDataStatisticsManager$EnableEncrypt;->mEnable:Z
 
     invoke-interface {p1, v0}, Lnubia/util/IFrameworkDataStatisticsService;->enableEncrypt(Z)V
 
-    .line 226
     return-void
 .end method

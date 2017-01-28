@@ -33,13 +33,10 @@
     .param p2, "file"    # Ljava/io/File;
 
     .prologue
-    .line 155
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;->this$0:Lcn/nubia/server/appmgmt/ApplicationPushController;
 
-    .line 156
     invoke-direct {p0, p2}, Lcn/nubia/server/appmgmt/XmlOperator;-><init>(Ljava/io/File;)V
 
-    .line 157
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .locals 4
 
     .prologue
-    .line 201
     new-instance v0, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
 
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;->this$0:Lcn/nubia/server/appmgmt/ApplicationPushController;
@@ -71,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 154
     invoke-virtual {p0}, Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;->createObject()Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
 
     move-result-object v0
@@ -91,12 +86,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 177
     invoke-virtual {p0}, Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;->createObject()Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
 
     move-result-object v3
 
-    .line 179
     .local v3, "temp":Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
     :cond_0
     :goto_0
@@ -109,7 +102,6 @@
 
     if-eq v4, v5, :cond_2
 
-    .line 180
     const/4 v5, 0x3
 
     if-eq v4, v5, :cond_0
@@ -118,12 +110,10 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 183
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 184
     .local v2, "tag":Ljava/lang/String;
     const-string v5, "dependce"
 
@@ -133,18 +123,15 @@
 
     if-eqz v5, :cond_1
 
-    .line 185
     const-string v5, "include_pkg"
 
     invoke-interface {p1, v6, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 186
     .local v1, "dependence":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 187
     # getter for: Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->prefixs:Ljava/util/HashSet;
     invoke-static {v3}, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->access$200(Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;)Ljava/util/HashSet;
 
@@ -154,7 +141,6 @@
 
     goto :goto_0
 
-    .line 189
     .end local v1    # "dependence":Ljava/lang/String;
     :cond_1
     const-string v5, "push"
@@ -165,18 +151,15 @@
 
     if-eqz v5, :cond_0
 
-    .line 190
     const-string v5, "include_pkg"
 
     invoke-interface {p1, v6, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 191
     .local v0, "accessPkg":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 192
     # getter for: Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->alloweds:Ljava/util/HashSet;
     invoke-static {v3}, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->access$300(Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;)Ljava/util/HashSet;
 
@@ -186,7 +169,6 @@
 
     goto :goto_0
 
-    .line 196
     .end local v0    # "accessPkg":Ljava/lang/String;
     .end local v2    # "tag":Ljava/lang/String;
     :cond_2
@@ -202,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 154
     invoke-virtual {p0, p1}, Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;->readDataXml(Lorg/xmlpull/v1/XmlPullParser;)Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
 
     move-result-object v0
@@ -224,7 +205,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 162
     # getter for: Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->prefixs:Ljava/util/HashSet;
     invoke-static {p3}, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->access$200(Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;)Ljava/util/HashSet;
 
@@ -248,25 +228,21 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 163
     .local v1, "name":Ljava/lang/String;
     const-string v3, "dependce"
 
     invoke-interface {p2, v4, v3}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 164
     const-string v3, "include_pkg"
 
     invoke-interface {p2, v4, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 165
     const-string v3, "dependce"
 
     invoke-interface {p2, v4, v3}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_0
 
-    .line 168
     .end local v1    # "name":Ljava/lang/String;
     :cond_0
     # getter for: Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->alloweds:Ljava/util/HashSet;
@@ -291,25 +267,21 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 169
     .local v2, "pkg":Ljava/lang/String;
     const-string v3, "push"
 
     invoke-interface {p2, v4, v3}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 170
     const-string v3, "include_pkg"
 
     invoke-interface {p2, v4, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 171
     const-string v3, "push"
 
     invoke-interface {p2, v4, v3}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_1
 
-    .line 173
     .end local v2    # "pkg":Ljava/lang/String;
     :cond_1
     return-void
@@ -324,7 +296,6 @@
     .end annotation
 
     .prologue
-    .line 154
     check-cast p3, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
 
     invoke-virtual {p0, p1, p2, p3}, Lcn/nubia/server/appmgmt/ApplicationPushController$PushXmlOperator;->writeDataXml(Ljava/io/BufferedOutputStream;Lorg/xmlpull/v1/XmlSerializer;Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;)V

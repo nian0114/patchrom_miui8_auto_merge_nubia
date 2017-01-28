@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,12 +17,10 @@
     .locals 1
 
     .prologue
-    .line 30
     const-string v0, "nubia_servers"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 31
     return-void
 .end method
 
@@ -33,15 +30,12 @@
     .param p1, "sequence"    # Lcn/nubia/server/Sequence;
 
     .prologue
-    .line 16
     sget-object v2, Lcn/nubia/server/Sequence;->FIRST:Lcn/nubia/server/Sequence;
 
     if-ne p1, v2, :cond_0
 
-    .line 17
     invoke-static {}, Lcn/nubia/server/NubiaServer;->loadLibraries()V
 
-    .line 19
     :cond_0
     sget-object v2, Lcn/nubia/server/ServiceInfoCache;->mInfos:Ljava/util/ArrayList;
 
@@ -64,7 +58,6 @@
 
     check-cast v1, Lcn/nubia/server/ServiceInfo;
 
-    .line 20
     .local v1, "info":Lcn/nubia/server/ServiceInfo;
     iget-boolean v2, v1, Lcn/nubia/server/ServiceInfo;->hasFeature:Z
 
@@ -74,7 +67,6 @@
 
     if-ne v2, p1, :cond_1
 
-    .line 21
     iget-object v2, v1, Lcn/nubia/server/ServiceInfo;->claseName:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -83,7 +75,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 22
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "ServiceInfo.claseName don\'t be null!"
@@ -92,7 +83,6 @@
 
     throw v2
 
-    .line 24
     :cond_2
     iget-object v2, v1, Lcn/nubia/server/ServiceInfo;->claseName:Ljava/lang/String;
 
@@ -100,7 +90,6 @@
 
     goto :goto_0
 
-    .line 27
     .end local v1    # "info":Lcn/nubia/server/ServiceInfo;
     :cond_3
     return-void

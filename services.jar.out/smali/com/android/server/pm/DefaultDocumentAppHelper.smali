@@ -41,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 28
     new-instance v0, Lcom/android/server/pm/DefaultDocumentAppHelper$1;
 
     invoke-direct {v0}, Lcom/android/server/pm/DefaultDocumentAppHelper$1;-><init>()V
@@ -56,21 +55,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     const-string v1, ""
 
     iput-object v1, p0, Lcom/android/server/pm/DefaultDocumentAppHelper;->mDefaultPkgName:Ljava/lang/String;
 
-    .line 76
     iput-object p1, p0, Lcom/android/server/pm/DefaultDocumentAppHelper;->mContext:Landroid/content/Context;
 
-    .line 77
     invoke-direct {p0}, Lcom/android/server/pm/DefaultDocumentAppHelper;->updateDefaultPackage()V
 
-    .line 78
     new-instance v0, Lcom/android/server/pm/DefaultDocumentAppHelper$DefaultDocumentObserver;
 
     new-instance v1, Landroid/os/Handler;
@@ -79,11 +73,9 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/pm/DefaultDocumentAppHelper$DefaultDocumentObserver;-><init>(Lcom/android/server/pm/DefaultDocumentAppHelper;Landroid/os/Handler;)V
 
-    .line 79
     .local v0, "observer":Lcom/android/server/pm/DefaultDocumentAppHelper$DefaultDocumentObserver;
     invoke-virtual {v0}, Lcom/android/server/pm/DefaultDocumentAppHelper$DefaultDocumentObserver;->observe()V
 
-    .line 80
     return-void
 .end method
 
@@ -92,7 +84,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/DefaultDocumentAppHelper;
 
     .prologue
-    .line 22
     iget-object v0, p0, Lcom/android/server/pm/DefaultDocumentAppHelper;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -103,7 +94,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/DefaultDocumentAppHelper;
 
     .prologue
-    .line 22
     invoke-direct {p0}, Lcom/android/server/pm/DefaultDocumentAppHelper;->updateDefaultPackage()V
 
     return-void
@@ -116,7 +106,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 129
     if-eqz p1, :cond_0
 
     const-string v2, "android.intent.action.VIEW"
@@ -141,18 +130,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 136
     :cond_0
     :goto_0
     return v1
 
-    .line 132
     :cond_1
     invoke-virtual {p1}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 133
     .local v0, "mimeType":Ljava/lang/String;
     sget-object v2, Lcom/android/server/pm/DefaultDocumentAppHelper;->DOCUMENT_TYPE_LIST:Ljava/util/ArrayList;
 
@@ -162,7 +148,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 136
     const/4 v1, 0x1
 
     goto :goto_0
@@ -177,7 +162,6 @@
 
     const/4 v4, 0x0
 
-    .line 101
     iget-object v5, p0, Lcom/android/server/pm/DefaultDocumentAppHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -188,7 +172,6 @@
 
     move-result-object v1
 
-    .line 102
     .local v1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     if-eqz v1, :cond_1
 
@@ -198,7 +181,6 @@
 
     if-le v5, v3, :cond_1
 
-    .line 103
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -217,7 +199,6 @@
 
     check-cast v2, Landroid/content/pm/PackageInfo;
 
-    .line 104
     .local v2, "r":Landroid/content/pm/PackageInfo;
     iget-object v5, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
@@ -235,7 +216,6 @@
 
     if-nez v5, :cond_0
 
-    .line 110
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v2    # "r":Landroid/content/pm/PackageInfo;
     :goto_0
@@ -253,20 +233,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 113
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 114
     .local v0, "callingUid":I
     const/4 v2, -0x1
 
-    .line 115
     .local v2, "weChatUid":I
     const/4 v3, -0x1
 
-    .line 117
     .local v3, "weChatUid10":I
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -281,7 +257,6 @@
 
     move-result v2
 
-    .line 118
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v5
@@ -296,25 +271,20 @@
 
     move-result v3
 
-    .line 122
     if-eq v2, v0, :cond_0
 
     if-ne v3, v0, :cond_1
 
-    .line 123
     :cond_0
     const/4 v4, 0x1
 
-    .line 125
     :cond_1
     :goto_0
     return v4
 
-    .line 119
     :catch_0
     move-exception v1
 
-    .line 120
     .local v1, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -323,7 +293,6 @@
     .locals 2
 
     .prologue
-    .line 155
     iget-object v0, p0, Lcom/android/server/pm/DefaultDocumentAppHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -338,17 +307,14 @@
 
     iput-object v0, p0, Lcom/android/server/pm/DefaultDocumentAppHelper;->mDefaultPkgName:Ljava/lang/String;
 
-    .line 156
     iget-object v0, p0, Lcom/android/server/pm/DefaultDocumentAppHelper;->mDefaultPkgName:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 157
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/pm/DefaultDocumentAppHelper;->mDefaultPkgName:Ljava/lang/String;
 
-    .line 159
     :cond_0
     return-void
 .end method
@@ -376,7 +342,6 @@
     .end annotation
 
     .prologue
-    .line 82
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     iget-object v2, p0, Lcom/android/server/pm/DefaultDocumentAppHelper;->mDefaultPkgName:Ljava/lang/String;
 
@@ -398,12 +363,10 @@
 
     if-nez v2, :cond_1
 
-    .line 98
     :cond_0
     :goto_0
     return-object p1
 
-    .line 86
     :cond_1
     invoke-direct {p0, p3}, Lcom/android/server/pm/DefaultDocumentAppHelper;->isDefaultAppFrozen(I)Z
 
@@ -411,7 +374,6 @@
 
     if-nez v2, :cond_0
 
-    .line 87
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -430,7 +392,6 @@
 
     check-cast v1, Landroid/content/pm/ResolveInfo;
 
-    .line 88
     .local v1, "info":Landroid/content/pm/ResolveInfo;
     if-eqz v1, :cond_2
 
@@ -448,7 +409,6 @@
 
     if-nez v2, :cond_2
 
-    .line 91
     iget-object v2, p0, Lcom/android/server/pm/DefaultDocumentAppHelper;->mDefaultPkgName:Ljava/lang/String;
 
     iget-object v3, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -461,10 +421,8 @@
 
     if-eqz v2, :cond_2
 
-    .line 92
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
-    .line 93
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0

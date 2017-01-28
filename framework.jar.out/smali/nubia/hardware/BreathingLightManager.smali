@@ -88,10 +88,8 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 113
     return-void
 .end method
 
@@ -99,12 +97,10 @@
     .locals 1
 
     .prologue
-    .line 106
     sget-object v0, Lnubia/hardware/BreathingLightManager;->mService:Lnubia/hardware/IBreathingLightManager;
 
     if-nez v0, :cond_0
 
-    .line 107
     const-string v0, "nubia.breathinglight"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -117,7 +113,6 @@
 
     sput-object v0, Lnubia/hardware/BreathingLightManager;->mService:Lnubia/hardware/IBreathingLightManager;
 
-    .line 110
     :cond_0
     sget-object v0, Lnubia/hardware/BreathingLightManager;->mService:Lnubia/hardware/IBreathingLightManager;
 
@@ -129,7 +124,6 @@
     .param p0, "known"    # I
 
     .prologue
-    .line 91
     :try_start_0
     invoke-static {}, Lnubia/hardware/BreathingLightManager;->getService()Lnubia/hardware/IBreathingLightManager;
 
@@ -139,11 +133,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 94
     :goto_0
     return-void
 
-    .line 92
     :catch_0
     move-exception v0
 
@@ -159,7 +151,6 @@
     .param p4, "color"    # I
 
     .prologue
-    .line 99
     :try_start_0
     invoke-static {}, Lnubia/hardware/BreathingLightManager;->getService()Lnubia/hardware/IBreathingLightManager;
 
@@ -179,11 +170,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 103
     :goto_0
     return-void
 
-    .line 101
     :catch_0
     move-exception v0
 
@@ -199,7 +188,6 @@
     .param p3, "scene"    # I
 
     .prologue
-    .line 86
     new-instance v0, Lnubia/hardware/BreathingLightManager$BreathingLightRequest;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lnubia/hardware/BreathingLightManager$BreathingLightRequest;-><init>(Lnubia/hardware/BreathingLightManager;III)V

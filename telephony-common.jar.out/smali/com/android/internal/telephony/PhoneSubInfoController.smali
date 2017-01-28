@@ -23,20 +23,15 @@
     .param p1, "phones"    # [Lcom/android/internal/telephony/Phone;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lcom/android/internal/telephony/PhoneSubInfoController;->mPhone:[Lcom/android/internal/telephony/Phone;
 
-    .line 41
     const/4 v2, 0x0
 
-    .line 42
     .local v2, "context":Landroid/content/Context;
     const/4 v0, 0x0
 
-    .line 43
     .local v0, "appOpsManager":Landroid/app/AppOpsManager;
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneSubInfoController;->mPhone:[Lcom/android/internal/telephony/Phone;
 
@@ -52,16 +47,13 @@
 
     aget-object v5, v1, v3
 
-    .line 44
     .local v5, "phone":Lcom/android/internal/telephony/Phone;
     if-eqz v5, :cond_2
 
-    .line 45
     invoke-interface {v5}, Lcom/android/internal/telephony/Phone;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    .line 46
     const-class v6, Landroid/app/AppOpsManager;
 
     invoke-virtual {v2, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -71,16 +63,13 @@
     .end local v0    # "appOpsManager":Landroid/app/AppOpsManager;
     check-cast v0, Landroid/app/AppOpsManager;
 
-    .line 50
     .end local v5    # "phone":Lcom/android/internal/telephony/Phone;
     .restart local v0    # "appOpsManager":Landroid/app/AppOpsManager;
     :cond_0
     iput-object v2, p0, Lcom/android/internal/telephony/PhoneSubInfoController;->mContext:Landroid/content/Context;
 
-    .line 51
     iput-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoController;->mAppOps:Landroid/app/AppOpsManager;
 
-    .line 52
     const-string v6, "iphonesubinfo"
 
     invoke-static {v6}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -89,16 +78,13 @@
 
     if-nez v6, :cond_1
 
-    .line 53
     const-string v6, "iphonesubinfo"
 
     invoke-static {v6, p0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 55
     :cond_1
     return-void
 
-    .line 43
     .restart local v5    # "phone":Lcom/android/internal/telephony/Phone;
     :cond_2
     add-int/lit8 v3, v3, 0x1
@@ -116,17 +102,14 @@
 
     const/4 v1, 0x0
 
-    .line 60
     iget-object v3, p0, Lcom/android/internal/telephony/PhoneSubInfoController;->mContext:Landroid/content/Context;
 
     if-nez v3, :cond_1
 
-    .line 79
     :cond_0
     :goto_0
     return v1
 
-    .line 62
     :cond_1
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/telephony/PhoneSubInfoController;->mContext:Landroid/content/Context;
@@ -139,14 +122,11 @@
 
     move v1, v2
 
-    .line 66
     goto :goto_0
 
-    .line 67
     :catch_0
     move-exception v0
 
-    .line 68
     .local v0, "e":Ljava/lang/SecurityException;
     iget-object v3, p0, Lcom/android/internal/telephony/PhoneSubInfoController;->mContext:Landroid/content/Context;
 
@@ -154,7 +134,6 @@
 
     invoke-virtual {v3, v4, p2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 74
     iget-object v3, p0, Lcom/android/internal/telephony/PhoneSubInfoController;->mAppOps:Landroid/app/AppOpsManager;
 
     const/16 v4, 0x33
@@ -171,7 +150,6 @@
 
     move v1, v2
 
-    .line 79
     goto :goto_0
 .end method
 
@@ -179,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 286
     invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getDefaultSubscription()I
 
     move-result v0
@@ -192,7 +169,6 @@
     .param p1, "phoneId"    # I
 
     .prologue
-    .line 279
     if-ltz p1, :cond_0
 
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -205,11 +181,9 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 280
     :cond_0
     const/4 p1, 0x0
 
-    .line 282
     :cond_1
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoController;->mPhone:[Lcom/android/internal/telephony/Phone;
 
@@ -225,12 +199,10 @@
     .param p1, "subId"    # I
 
     .prologue
-    .line 267
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getPhoneId(I)I
 
     move-result v1
 
-    .line 270
     .local v1, "phoneId":I
     :try_start_0
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhone(I)Lcom/android/internal/telephony/PhoneProxy;
@@ -243,15 +215,12 @@
 
     move-result-object v2
 
-    .line 274
     :goto_0
     return-object v2
 
-    .line 271
     :catch_0
     move-exception v0
 
-    .line 272
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v2, "PhoneSubInfoController"
 
@@ -289,10 +258,8 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    .line 274
     const/4 v2, 0x0
 
     goto :goto_0
@@ -304,7 +271,6 @@
     .locals 1
 
     .prologue
-    .line 233
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v0
@@ -321,25 +287,20 @@
     .param p1, "subId"    # I
 
     .prologue
-    .line 237
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 238
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 239
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getCompleteVoiceMailNumber()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 243
     :goto_0
     return-object v1
 
-    .line 241
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -363,7 +324,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     const/4 v1, 0x0
 
     goto :goto_0
@@ -374,7 +334,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v0
@@ -398,7 +357,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 88
     const-string v2, "getDeviceId"
 
     invoke-direct {p0, p2, v2}, Lcom/android/internal/telephony/PhoneSubInfoController;->canReadPhoneState(Ljava/lang/String;Ljava/lang/String;)Z
@@ -407,28 +365,23 @@
 
     if-nez v2, :cond_0
 
-    .line 97
     :goto_0
     return-object v1
 
-    .line 92
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhone(I)Lcom/android/internal/telephony/PhoneProxy;
 
     move-result-object v0
 
-    .line 93
     .local v0, "phone":Lcom/android/internal/telephony/Phone;
     if-eqz v0, :cond_1
 
-    .line 94
     invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getDeviceId()Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 96
     :cond_1
     const-string v2, "PhoneSubInfoController"
 
@@ -466,7 +419,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 126
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v0
@@ -484,25 +436,20 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 130
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 131
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 132
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getDeviceSvn(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 135
     :goto_0
     return-object v1
 
-    .line 134
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -510,7 +457,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     const/4 v1, 0x0
 
     goto :goto_0
@@ -521,7 +467,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 327
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v0
@@ -539,25 +484,20 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 331
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 332
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 333
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getGroupIdLevel1(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 337
     :goto_0
     return-object v1
 
-    .line 335
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -581,7 +521,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     const/4 v1, 0x0
 
     goto :goto_0
@@ -592,7 +531,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 158
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v0
@@ -610,25 +548,20 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 162
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 163
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 164
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getIccSerialNumber(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 168
     :goto_0
     return-object v1
 
-    .line 166
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -652,7 +585,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     const/4 v1, 0x0
 
     goto :goto_0
@@ -670,12 +602,10 @@
     .end annotation
 
     .prologue
-    .line 322
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 323
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getIccSimChallengeResponse(IILjava/lang/String;)Ljava/lang/String;
 
@@ -690,25 +620,20 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 113
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 114
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 115
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getImei(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 119
     :goto_0
     return-object v1
 
-    .line 117
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -732,7 +657,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     const/4 v1, 0x0
 
     goto :goto_0
@@ -748,7 +672,6 @@
     .end annotation
 
     .prologue
-    .line 316
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v1
@@ -757,7 +680,6 @@
 
     move-result-object v0
 
-    .line 317
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getIsimChallengeResponse(Ljava/lang/String;)Ljava/lang/String;
 
@@ -770,7 +692,6 @@
     .locals 2
 
     .prologue
-    .line 296
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v1
@@ -779,7 +700,6 @@
 
     move-result-object v0
 
-    .line 297
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getIsimDomain()Ljava/lang/String;
 
@@ -792,7 +712,6 @@
     .locals 2
 
     .prologue
-    .line 291
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v1
@@ -801,7 +720,6 @@
 
     move-result-object v0
 
-    .line 292
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getIsimImpi()Ljava/lang/String;
 
@@ -814,7 +732,6 @@
     .locals 2
 
     .prologue
-    .line 301
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v1
@@ -823,7 +740,6 @@
 
     move-result-object v0
 
-    .line 302
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getIsimImpu()[Ljava/lang/String;
 
@@ -841,7 +757,6 @@
     .end annotation
 
     .prologue
-    .line 306
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v1
@@ -850,7 +765,6 @@
 
     move-result-object v0
 
-    .line 307
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getIsimIst()Ljava/lang/String;
 
@@ -868,7 +782,6 @@
     .end annotation
 
     .prologue
-    .line 311
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v1
@@ -877,7 +790,6 @@
 
     move-result-object v0
 
-    .line 312
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getIsimPcscf()[Ljava/lang/String;
 
@@ -891,7 +803,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 188
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v0
@@ -909,25 +820,20 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 192
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 193
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 194
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getLine1AlphaTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 198
     :goto_0
     return-object v1
 
-    .line 196
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -951,7 +857,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     const/4 v1, 0x0
 
     goto :goto_0
@@ -962,7 +867,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 173
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v0
@@ -980,25 +884,20 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 177
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 178
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 179
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getLine1Number(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 183
     :goto_0
     return-object v1
 
-    .line 181
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -1022,7 +921,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1033,7 +931,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 203
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v0
@@ -1051,25 +948,20 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 207
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 208
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 209
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getMsisdn(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 213
     :goto_0
     return-object v1
 
-    .line 211
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -1093,7 +985,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1105,25 +996,20 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 103
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 104
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getNai(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 108
     :goto_0
     return-object v1
 
-    .line 106
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -1147,7 +1033,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1158,7 +1043,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 140
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v0
@@ -1176,25 +1060,20 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 144
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 145
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 146
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getSubscriberId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 150
     :goto_0
     return-object v1
 
-    .line 148
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -1218,7 +1097,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1229,7 +1107,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 248
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v0
@@ -1247,25 +1124,20 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 252
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 253
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 254
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getVoiceMailAlphaTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 258
     :goto_0
     return-object v1
 
-    .line 256
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -1289,7 +1161,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1300,7 +1171,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 218
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getDefaultSubscription()I
 
     move-result v0
@@ -1318,25 +1188,20 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 222
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoController;->getPhoneSubInfoProxy(I)Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     move-result-object v0
 
-    .line 223
     .local v0, "phoneSubInfoProxy":Lcom/android/internal/telephony/PhoneSubInfoProxy;
     if-eqz v0, :cond_0
 
-    .line 224
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getVoiceMailNumber(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 228
     :goto_0
     return-object v1
 
-    .line 226
     :cond_0
     const-string v1, "PhoneSubInfoController"
 
@@ -1360,7 +1225,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     const/4 v1, 0x0
 
     goto :goto_0

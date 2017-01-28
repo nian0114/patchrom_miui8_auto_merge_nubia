@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 100
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;-><init>(Landroid/support/v4/text/TextUtilsCompat$1;)V
@@ -32,7 +31,6 @@
     .param p1, "x0"    # Landroid/support/v4/text/TextUtilsCompat$1;
 
     .prologue
-    .line 100
     invoke-direct {p0}, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatJellybeanMr1Impl;-><init>()V
 
     return-void
@@ -48,7 +46,6 @@
     .end param
 
     .prologue
-    .line 108
     invoke-static {p1}, Landroid/support/v4/text/TextUtilsCompatJellybeanMr1;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
 
     move-result v0
@@ -66,7 +63,6 @@
     .end annotation
 
     .prologue
-    .line 103
     invoke-static {p1}, Landroid/support/v4/text/TextUtilsCompatJellybeanMr1;->htmlEncode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

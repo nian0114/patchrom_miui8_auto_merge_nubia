@@ -21,10 +21,8 @@
     .locals 0
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 127
     return-void
 .end method
 
@@ -33,10 +31,8 @@
     .param p0, "enabled"    # Z
 
     .prologue
-    .line 361
     sput-boolean p0, Landroid/support/v4/app/FragmentManagerImpl;->DEBUG:Z
 
-    .line 362
     return-void
 .end method
 
@@ -94,7 +90,6 @@
     .end annotation
 
     .prologue
-    .line 152
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v0

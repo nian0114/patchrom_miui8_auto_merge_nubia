@@ -19,10 +19,8 @@
     .end annotation
 
     .prologue
-    .line 14
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 15
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
@@ -35,7 +33,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/anqp/GenericStringElement;->mText:Ljava/lang/String;
 
-    .line 16
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 19
     iget-object v0, p0, Lcom/android/server/wifi/anqp/GenericStringElement;->mText:Ljava/lang/String;
 
     return-object v0
@@ -55,7 +51,6 @@
     .locals 2
 
     .prologue
-    .line 24
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

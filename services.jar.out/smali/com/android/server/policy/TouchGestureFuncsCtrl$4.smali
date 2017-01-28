@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 233
     iput-object p1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl$4;->this$0:Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 235
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 236
     .local v0, "action":Ljava/lang/String;
     const-string v1, "com.android.internal.policy.impl.ACTION_SCREEN_SAVER_SHOW"
 
@@ -54,7 +51,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 237
     iget-object v1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl$4;->this$0:Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     const-string v2, "showView"
@@ -68,7 +64,6 @@
     # setter for: Lcom/android/server/policy/TouchGestureFuncsCtrl;->isScreenSaverShow:Z
     invoke-static {v1, v2}, Lcom/android/server/policy/TouchGestureFuncsCtrl;->access$002(Lcom/android/server/policy/TouchGestureFuncsCtrl;Z)Z
 
-    .line 239
     :cond_0
     return-void
 .end method

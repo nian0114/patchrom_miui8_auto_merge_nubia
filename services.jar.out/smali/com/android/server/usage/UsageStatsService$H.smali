@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1045
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
-    .line 1046
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1047
     return-void
 .end method
 
@@ -45,19 +42,15 @@
 
     const/4 v2, 0x1
 
-    .line 1051
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1099
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 1102
     :goto_0
     return-void
 
-    .line 1053
     :pswitch_0
     iget-object v2, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -71,7 +64,6 @@
 
     goto :goto_0
 
-    .line 1057
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -79,7 +71,6 @@
 
     goto :goto_0
 
-    .line 1061
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -89,7 +80,6 @@
 
     goto :goto_0
 
-    .line 1065
     :pswitch_3
     iget-object v4, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -113,7 +103,6 @@
 
     goto :goto_1
 
-    .line 1069
     :pswitch_4
     iget-object v4, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -137,7 +126,6 @@
 
     goto :goto_2
 
-    .line 1073
     :pswitch_5
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -147,7 +135,6 @@
 
     goto :goto_0
 
-    .line 1077
     :pswitch_6
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -155,7 +142,6 @@
 
     goto :goto_0
 
-    .line 1082
     :pswitch_7
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -163,13 +149,11 @@
 
     goto :goto_0
 
-    .line 1086
     :pswitch_8
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 1087
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iget-object v4, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -191,12 +175,10 @@
 
     invoke-virtual {v4, v1, v2, v3}, Lcom/android/server/usage/UsageStatsService;->reportContentProviderUsage(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 1090
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
 
-    .line 1095
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_9
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
@@ -205,7 +187,6 @@
 
     goto :goto_0
 
-    .line 1051
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

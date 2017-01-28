@@ -46,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 74
     new-instance v0, Lcom/cmx/cmplus/ContainerInfo$1;
 
     invoke-direct {v0}, Lcom/cmx/cmplus/ContainerInfo$1;-><init>()V
@@ -63,26 +62,20 @@
     .param p3, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     iput p1, p0, Lcom/cmx/cmplus/ContainerInfo;->id:I
 
-    .line 56
     iput p2, p0, Lcom/cmx/cmplus/ContainerInfo;->type:I
 
-    .line 57
     iput-object p3, p0, Lcom/cmx/cmplus/ContainerInfo;->name:Ljava/lang/String;
 
-    .line 58
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Lcom/cmx/cmplus/ContainerInfo;->extra:Landroid/os/Bundle;
 
-    .line 59
     return-void
 .end method
 
@@ -91,38 +84,32 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/cmx/cmplus/ContainerInfo;->id:I
 
-    .line 49
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/cmx/cmplus/ContainerInfo;->type:I
 
-    .line 50
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/cmx/cmplus/ContainerInfo;->name:Ljava/lang/String;
 
-    .line 51
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/cmx/cmplus/ContainerInfo;->extra:Landroid/os/Bundle;
 
-    .line 52
     return-void
 .end method
 
@@ -131,7 +118,6 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 85
     if-ltz p0, :cond_0
 
     const/16 v0, 0x3e8
@@ -155,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     return v0
@@ -165,7 +150,6 @@
     .locals 2
 
     .prologue
-    .line 89
     iget v0, p0, Lcom/cmx/cmplus/ContainerInfo;->type:I
 
     if-ltz v0, :cond_0
@@ -193,26 +177,21 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 68
     iget v0, p0, Lcom/cmx/cmplus/ContainerInfo;->id:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 69
     iget v0, p0, Lcom/cmx/cmplus/ContainerInfo;->type:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 70
     iget-object v0, p0, Lcom/cmx/cmplus/ContainerInfo;->name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 71
     iget-object v0, p0, Lcom/cmx/cmplus/ContainerInfo;->extra:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 72
     return-void
 .end method

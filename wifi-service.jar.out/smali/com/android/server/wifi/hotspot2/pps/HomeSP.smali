@@ -111,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 50
     .local p1, "ssidMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Long;>;"
     .local p3, "roamingConsortiums":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Long;>;"
     .local p4, "otherHomePartners":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
@@ -119,10 +118,8 @@
     .local p6, "matchAllOIs":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     iput-object p1, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mSSIDs:Ljava/util/Map;
 
-    .line 53
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-interface {p4}, Ljava/util/Set;->size()I
@@ -131,7 +128,6 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 54
     .local v2, "otherPartners":Ljava/util/List;, "Ljava/util/List<Ljava/util/List<Ljava/lang/String;>;>;"
     invoke-interface {p4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -151,7 +147,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 55
     .local v1, "otherPartner":Ljava/lang/String;
     invoke-static {v1}, Lcom/android/server/wifi/hotspot2/Utils;->splitDomain(Ljava/lang/String;)Ljava/util/List;
 
@@ -161,15 +156,12 @@
 
     goto :goto_0
 
-    .line 57
     .end local v1    # "otherPartner":Ljava/lang/String;
     :cond_0
     iput-object p4, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mOtherHomePartners:Ljava/util/Set;
 
-    .line 58
     iput-object p2, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mFQDN:Ljava/lang/String;
 
-    .line 59
     new-instance v3, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher;
 
     invoke-static {p2}, Lcom/android/server/wifi/hotspot2/Utils;->splitDomain(Ljava/lang/String;)Ljava/util/List;
@@ -180,25 +172,18 @@
 
     iput-object v3, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mDomainMatcher:Lcom/android/server/wifi/hotspot2/pps/DomainMatcher;
 
-    .line 60
     iput-object p3, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mRoamingConsortiums:Ljava/util/HashSet;
 
-    .line 61
     iput-object p5, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mMatchAnyOIs:Ljava/util/Set;
 
-    .line 62
     iput-object p6, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mMatchAllOIs:Ljava/util/List;
 
-    .line 63
     iput-object p7, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mFriendlyName:Ljava/lang/String;
 
-    .line 64
     iput-object p8, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mIconURL:Ljava/lang/String;
 
-    .line 65
     iput-object p9, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mCredential:Lcom/android/server/wifi/hotspot2/pps/Credential;
 
-    .line 66
     return-void
 .end method
 
@@ -222,7 +207,6 @@
     .local p1, "imsis":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v5, 0x0
 
-    .line 211
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -240,11 +224,9 @@
     :cond_0
     move-object v2, v5
 
-    .line 222
     :goto_0
     return-object v2
 
-    .line 214
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/wifi/anqp/ThreeGPPNetworkElement;->getPlmns()Ljava/util/List;
 
@@ -267,7 +249,6 @@
 
     check-cast v4, Lcom/android/server/wifi/anqp/CellularNetwork;
 
-    .line 215
     .local v4, "network":Lcom/android/server/wifi/anqp/CellularNetwork;
     invoke-virtual {v4}, Lcom/android/server/wifi/anqp/CellularNetwork;->iterator()Ljava/util/Iterator;
 
@@ -287,13 +268,11 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 216
     .local v3, "mccMnc":Ljava/lang/String;
     invoke-direct {p0, p1, v3}, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->imsiMatch(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 217
     .local v2, "imsi":Ljava/lang/String;
     if-eqz v2, :cond_3
 
@@ -306,7 +285,6 @@
     :cond_4
     move-object v2, v5
 
-    .line 222
     goto :goto_0
 .end method
 
@@ -327,7 +305,6 @@
     .end annotation
 
     .prologue
-    .line 234
     .local p1, "imsis":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mCredential:Lcom/android/server/wifi/hotspot2/pps/Credential;
 
@@ -341,7 +318,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 235
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -360,7 +336,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 236
     .local v1, "imsi":Ljava/lang/String;
     invoke-virtual {v1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -368,7 +343,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 241
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "imsi":Ljava/lang/String;
     :goto_0
@@ -402,21 +376,17 @@
     .local p2, "fqdn":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
-    .line 226
     if-nez p1, :cond_1
 
-    .line 230
     :cond_0
     :goto_0
     return-object v1
 
-    .line 229
     :cond_1
     invoke-static {p2}, Lcom/android/server/wifi/hotspot2/Utils;->getMccMnc(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 230
     .local v0, "mccMnc":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -434,7 +404,6 @@
     .param p1, "other"    # Lcom/android/server/wifi/hotspot2/pps/HomeSP;
 
     .prologue
-    .line 270
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mFQDN:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mFQDN:Ljava/lang/String;
@@ -541,17 +510,13 @@
     .param p1, "thatObject"    # Ljava/lang/Object;
 
     .prologue
-    .line 283
     if-ne p0, p1, :cond_0
 
-    .line 284
     const/4 v1, 0x1
 
-    .line 290
     :goto_0
     return v1
 
-    .line 285
     :cond_0
     if-eqz p1, :cond_1
 
@@ -565,7 +530,6 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 286
     :cond_1
     const/4 v1, 0x0
 
@@ -574,10 +538,8 @@
     :cond_2
     move-object v0, p1
 
-    .line 289
     check-cast v0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;
 
-    .line 290
     .local v0, "that":Lcom/android/server/wifi/hotspot2/pps/HomeSP;
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mFQDN:Ljava/lang/String;
 
@@ -595,7 +557,6 @@
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 69
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->getCredential()Lcom/android/server/wifi/hotspot2/pps/Credential;
 
     move-result-object v0
@@ -606,7 +567,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 70
     new-instance v0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;
 
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mSSIDs:Ljava/util/Map;
@@ -633,7 +593,6 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/android/server/wifi/hotspot2/pps/HomeSP;-><init>(Ljava/util/Map;Ljava/lang/String;Ljava/util/HashSet;Ljava/util/Set;Ljava/util/Set;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lcom/android/server/wifi/hotspot2/pps/Credential;)V
 
-    .line 81
     :goto_0
     return-object v0
 
@@ -647,7 +606,6 @@
     .locals 1
 
     .prologue
-    .line 247
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mCredential:Lcom/android/server/wifi/hotspot2/pps/Credential;
 
     return-object v0
@@ -657,7 +615,6 @@
     .locals 1
 
     .prologue
-    .line 244
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mFQDN:Ljava/lang/String;
 
     return-object v0
@@ -667,7 +624,6 @@
     .locals 1
 
     .prologue
-    .line 245
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mFriendlyName:Ljava/lang/String;
 
     return-object v0
@@ -677,7 +633,6 @@
     .locals 1
 
     .prologue
-    .line 266
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mIconURL:Ljava/lang/String;
 
     return-object v0
@@ -696,7 +651,6 @@
     .end annotation
 
     .prologue
-    .line 262
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mMatchAllOIs:Ljava/util/List;
 
     return-object v0
@@ -715,7 +669,6 @@
     .end annotation
 
     .prologue
-    .line 258
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mMatchAnyOIs:Ljava/util/Set;
 
     return-object v0
@@ -734,7 +687,6 @@
     .end annotation
 
     .prologue
-    .line 254
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mOtherHomePartners:Ljava/util/Set;
 
     return-object v0
@@ -753,7 +705,6 @@
     .end annotation
 
     .prologue
-    .line 246
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mRoamingConsortiums:Ljava/util/HashSet;
 
     return-object v0
@@ -773,7 +724,6 @@
     .end annotation
 
     .prologue
-    .line 250
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mSSIDs:Ljava/util/Map;
 
     return-object v0
@@ -783,7 +733,6 @@
     .locals 1
 
     .prologue
-    .line 295
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mFQDN:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -813,7 +762,6 @@
     .end annotation
 
     .prologue
-    .line 89
     .local p2, "anqpElementMap":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Lcom/android/server/wifi/anqp/ANQPElement;>;"
     iget-object v4, p0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mCredential:Lcom/android/server/wifi/hotspot2/pps/Credential;
 
@@ -825,13 +773,11 @@
 
     move-result-object v1
 
-    .line 91
     .local v1, "imsis":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p0, p1, p2, v1}, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->matchSP(Lcom/android/server/wifi/hotspot2/NetworkDetail;Ljava/util/Map;Ljava/util/List;)Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     move-result-object v3
 
-    .line 93
     .local v3, "spMatch":Lcom/android/server/wifi/hotspot2/PasspointMatch;
     sget-object v4, Lcom/android/server/wifi/hotspot2/PasspointMatch;->Incomplete:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
@@ -841,13 +787,11 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 123
     .end local v3    # "spMatch":Lcom/android/server/wifi/hotspot2/PasspointMatch;
     :cond_0
     :goto_0
     return-object v3
 
-    .line 97
     .restart local v3    # "spMatch":Lcom/android/server/wifi/hotspot2/PasspointMatch;
     :cond_1
     sget-object v4, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQP3GPPNetwork:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
@@ -864,7 +808,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 100
     sget-object v4, Lcom/android/server/wifi/hotspot2/PasspointMatch;->None:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     if-ne v3, v4, :cond_0
@@ -873,7 +816,6 @@
 
     goto :goto_0
 
-    .line 103
     :cond_2
     sget-object v4, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQPNAIRealm:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
@@ -883,7 +825,6 @@
 
     check-cast v2, Lcom/android/server/wifi/anqp/NAIRealmElement;
 
-    .line 106
     .local v2, "naiRealmElement":Lcom/android/server/wifi/anqp/NAIRealmElement;
     if-eqz v2, :cond_3
 
@@ -893,7 +834,6 @@
 
     move-result v0
 
-    .line 110
     .local v0, "authMatch":I
     :goto_1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -958,31 +898,26 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     const/4 v4, -0x1
 
     if-ne v0, v4, :cond_4
 
-    .line 115
     sget-object v3, Lcom/android/server/wifi/hotspot2/PasspointMatch;->None:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     goto :goto_0
 
-    .line 106
     .end local v0    # "authMatch":I
     :cond_3
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 117
     .restart local v0    # "authMatch":I
     :cond_4
     and-int/lit8 v4, v0, 0x4
 
     if-eqz v4, :cond_0
 
-    .line 123
     sget-object v4, Lcom/android/server/wifi/hotspot2/PasspointMatch;->None:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     if-ne v3, v4, :cond_0
@@ -1013,7 +948,6 @@
     .end annotation
 
     .prologue
-    .line 131
     .local p2, "anqpElementMap":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Lcom/android/server/wifi/anqp/ANQPElement;>;"
     .local p3, "imsis":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     move-object/from16 v0, p0
@@ -1032,7 +966,6 @@
 
     if-eqz v18, :cond_1
 
-    .line 132
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/hotspot2/pps/HomeSP;->mSSIDs:Ljava/util/Map;
@@ -1049,7 +982,6 @@
 
     check-cast v7, Ljava/lang/Long;
 
-    .line 133
     .local v7, "hessid":Ljava/lang/Long;
     if-eqz v7, :cond_0
 
@@ -1065,7 +997,6 @@
 
     if-nez v18, :cond_1
 
-    .line 134
     :cond_0
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1079,21 +1010,17 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     sget-object v18, Lcom/android/server/wifi/hotspot2/PasspointMatch;->HomeProvider:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    .line 207
     .end local v7    # "hessid":Ljava/lang/Long;
     :goto_0
     return-object v18
 
-    .line 139
     :cond_1
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
-    .line 141
     .local v3, "anOIs":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Long;>;"
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getRoamingConsortiums()[J
 
@@ -1101,7 +1028,6 @@
 
     if-eqz v18, :cond_2
 
-    .line 142
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getRoamingConsortiums()[J
 
     move-result-object v4
@@ -1118,7 +1044,6 @@
 
     aget-wide v12, v4, v8
 
-    .line 143
     .local v12, "oi":J
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1128,12 +1053,10 @@
 
     invoke-interface {v3, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 142
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
-    .line 146
     .end local v4    # "arr$":[J
     .end local v8    # "i$":I
     .end local v9    # "len$":I
@@ -1155,12 +1078,10 @@
 
     move-object/from16 v14, v18
 
-    .line 149
     .local v14, "rcElement":Lcom/android/server/wifi/anqp/RoamingConsortiumElement;
     :goto_2
     if-eqz v14, :cond_3
 
-    .line 150
     invoke-virtual {v14}, Lcom/android/server/wifi/anqp/RoamingConsortiumElement;->getOIs()Ljava/util/List;
 
     move-result-object v18
@@ -1169,11 +1090,9 @@
 
     invoke-interface {v3, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 156
     :cond_3
     const/4 v15, 0x0
 
-    .line 158
     .local v15, "roamingMatch":Z
     move-object/from16 v0, p0
 
@@ -1187,10 +1106,8 @@
 
     if-nez v18, :cond_6
 
-    .line 159
     const/4 v11, 0x1
 
-    .line 161
     .local v11, "matchesAll":Z
     move-object/from16 v0, p0
 
@@ -1220,7 +1137,6 @@
 
     move-result-wide v16
 
-    .line 162
     .local v16, "spOI":J
     invoke-static/range {v16 .. v17}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1234,18 +1150,14 @@
 
     if-nez v18, :cond_4
 
-    .line 163
     const/4 v11, 0x0
 
-    .line 167
     .end local v16    # "spOI":J
     :cond_5
     if-eqz v11, :cond_a
 
-    .line 168
     const/4 v15, 0x1
 
-    .line 180
     .end local v8    # "i$":Ljava/util/Iterator;
     .end local v11    # "matchesAll":Z
     :cond_6
@@ -1279,20 +1191,16 @@
 
     if-nez v18, :cond_8
 
-    .line 183
     :cond_7
     const/4 v15, 0x1
 
-    .line 186
     :cond_8
     if-nez p2, :cond_d
 
-    .line 187
     sget-object v18, Lcom/android/server/wifi/hotspot2/PasspointMatch;->Incomplete:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     goto/16 :goto_0
 
-    .line 146
     .end local v14    # "rcElement":Lcom/android/server/wifi/anqp/RoamingConsortiumElement;
     .end local v15    # "roamingMatch":Z
     :cond_9
@@ -1300,7 +1208,6 @@
 
     goto :goto_2
 
-    .line 171
     .restart local v8    # "i$":Ljava/util/Iterator;
     .restart local v11    # "matchesAll":Z
     .restart local v14    # "rcElement":Lcom/android/server/wifi/anqp/RoamingConsortiumElement;
@@ -1314,19 +1221,16 @@
 
     if-nez v18, :cond_c
 
-    .line 172
     :cond_b
     sget-object v18, Lcom/android/server/wifi/hotspot2/PasspointMatch;->Declined:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     goto/16 :goto_0
 
-    .line 175
     :cond_c
     sget-object v18, Lcom/android/server/wifi/hotspot2/PasspointMatch;->Incomplete:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     goto/16 :goto_0
 
-    .line 190
     .end local v8    # "i$":Ljava/util/Iterator;
     .end local v11    # "matchesAll":Z
     :cond_d
@@ -1342,11 +1246,9 @@
 
     check-cast v6, Lcom/android/server/wifi/anqp/DomainNameElement;
 
-    .line 193
     .local v6, "domainNameElement":Lcom/android/server/wifi/anqp/DomainNameElement;
     if-eqz v6, :cond_10
 
-    .line 194
     invoke-virtual {v6}, Lcom/android/server/wifi/anqp/DomainNameElement;->getDomains()Ljava/util/List;
 
     move-result-object v18
@@ -1369,13 +1271,11 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 195
     .local v5, "domain":Ljava/lang/String;
     invoke-static {v5}, Lcom/android/server/wifi/hotspot2/Utils;->splitDomain(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 196
     .local v2, "anLabels":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
@@ -1389,7 +1289,6 @@
 
     move-result-object v10
 
-    .line 197
     .local v10, "match":Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
     sget-object v18, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;->None:Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
@@ -1397,12 +1296,10 @@
 
     if-eq v10, v0, :cond_f
 
-    .line 198
     sget-object v18, Lcom/android/server/wifi/hotspot2/PasspointMatch;->HomeProvider:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     goto/16 :goto_0
 
-    .line 201
     :cond_f
     move-object/from16 v0, p0
 
@@ -1414,12 +1311,10 @@
 
     if-eqz v18, :cond_e
 
-    .line 202
     sget-object v18, Lcom/android/server/wifi/hotspot2/PasspointMatch;->HomeProvider:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     goto/16 :goto_0
 
-    .line 207
     .end local v2    # "anLabels":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v5    # "domain":Ljava/lang/String;
     .end local v8    # "i$":Ljava/util/Iterator;
@@ -1445,7 +1340,6 @@
 
     const/16 v2, 0x7d
 
-    .line 300
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

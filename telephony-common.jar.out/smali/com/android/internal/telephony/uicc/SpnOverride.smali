@@ -30,20 +30,16 @@
     .locals 1
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride;->mCarrierSpnMap:Ljava/util/HashMap;
 
-    .line 44
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/SpnOverride;->loadSpnOverrides()V
 
-    .line 45
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .locals 15
 
     .prologue
-    .line 58
     new-instance v8, Ljava/io/File;
 
     invoke-static {}, Landroid/os/Environment;->getRootDirectory()Ljava/io/File;
@@ -62,7 +57,6 @@
 
     invoke-direct {v8, v12, v13}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 60
     .local v8, "spnFile":Ljava/io/File;
     new-instance v4, Ljava/io/File;
 
@@ -74,7 +68,6 @@
 
     invoke-direct {v4, v12, v13}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 63
     .local v4, "oemSpnFile":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -82,18 +75,15 @@
 
     if-eqz v12, :cond_1
 
-    .line 65
     invoke-virtual {v4}, Ljava/io/File;->lastModified()J
 
     move-result-wide v6
 
-    .line 66
     .local v6, "oemSpnTime":J
     invoke-virtual {v8}, Ljava/io/File;->lastModified()J
 
     move-result-wide v10
 
-    .line 67
     .local v10, "sysSpnTime":J
     const-string v12, "SpnOverride"
 
@@ -127,22 +117,18 @@
 
     invoke-static {v12, v13}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     cmp-long v12, v6, v10
 
     if-lez v12, :cond_0
 
-    .line 71
     const-string v12, "SpnOverride"
 
     const-string v13, "SPN in OEM image is newer than System image"
 
     invoke-static {v12, v13}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     move-object v8, v4
 
-    .line 81
     .end local v6    # "oemSpnTime":J
     .end local v10    # "sysSpnTime":J
     :cond_0
@@ -154,32 +140,26 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 88
     .local v9, "spnReader":Ljava/io/FileReader;
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v5
 
-    .line 89
     .local v5, "parser":Lorg/xmlpull/v1/XmlPullParser;
     invoke-interface {v5, v9}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    .line 91
     const-string v12, "spnOverrides"
 
     invoke-static {v5, v12}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 94
     :goto_1
     invoke-static {v5}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 96
     invoke-interface {v5}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 97
     .local v2, "name":Ljava/lang/String;
     const-string v12, "spnOverride"
 
@@ -189,20 +169,17 @@
 
     if-nez v12, :cond_2
 
-    .line 106
     invoke-virtual {v9}, Ljava/io/FileReader;->close()V
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 112
     .end local v2    # "name":Ljava/lang/String;
     .end local v5    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v9    # "spnReader":Ljava/io/FileReader;
     :goto_2
     return-void
 
-    .line 76
     :cond_1
     const-string v12, "SpnOverride"
 
@@ -238,11 +215,9 @@
 
     goto :goto_0
 
-    .line 82
     :catch_0
     move-exception v1
 
-    .line 83
     .local v1, "e":Ljava/io/FileNotFoundException;
     const-string v12, "SpnOverride"
 
@@ -272,7 +247,6 @@
 
     goto :goto_2
 
-    .line 101
     .end local v1    # "e":Ljava/io/FileNotFoundException;
     .restart local v2    # "name":Ljava/lang/String;
     .restart local v5    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -287,7 +261,6 @@
 
     move-result-object v3
 
-    .line 102
     .local v3, "numeric":Ljava/lang/String;
     const/4 v12, 0x0
 
@@ -297,7 +270,6 @@
 
     move-result-object v0
 
-    .line 104
     .local v0, "data":Ljava/lang/String;
     iget-object v12, p0, Lcom/android/internal/telephony/uicc/SpnOverride;->mCarrierSpnMap:Ljava/util/HashMap;
 
@@ -308,7 +280,6 @@
 
     goto :goto_1
 
-    .line 107
     .end local v0    # "data":Ljava/lang/String;
     .end local v2    # "name":Ljava/lang/String;
     .end local v3    # "numeric":Ljava/lang/String;
@@ -316,7 +287,6 @@
     :catch_1
     move-exception v1
 
-    .line 108
     .local v1, "e":Lorg/xmlpull/v1/XmlPullParserException;
     const-string v12, "SpnOverride"
 
@@ -342,12 +312,10 @@
 
     goto :goto_2
 
-    .line 109
     .end local v1    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_2
     move-exception v1
 
-    .line 110
     .local v1, "e":Ljava/io/IOException;
     const-string v12, "SpnOverride"
 
@@ -381,7 +349,6 @@
     .param p1, "carrier"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride;->mCarrierSpnMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -396,7 +363,6 @@
     .param p1, "carrier"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride;->mCarrierSpnMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;

@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 196
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/SystemGestureServiceImpl$1;->this$0:Lcn/nubia/server/policy/edge/effects/SystemGestureServiceImpl;
 
     iput-object p2, p0, Lcn/nubia/server/policy/edge/effects/SystemGestureServiceImpl$1;->val$callback:Lcn/nubia/server/policy/edge/effects/resloader/TakeCurrentScreenCallback;
@@ -53,7 +52,6 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 206
     invoke-static {}, Landroid/os/Process;->myTid()I
 
     move-result v2
@@ -62,13 +60,11 @@
 
     move-result v0
 
-    .line 207
     .local v0, "origPri":I
     const/16 v2, 0xa
 
     invoke-static {v2}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 208
     const/16 v2, 0x438
 
     const/16 v3, 0x780
@@ -77,7 +73,6 @@
 
     move-result-object v1
 
-    .line 210
     .local v1, "screenBitmap":Landroid/graphics/Bitmap;
     return-object v1
 .end method
@@ -86,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 196
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/effects/SystemGestureServiceImpl$1;->doInBackground([Ljava/lang/Void;)Landroid/graphics/Bitmap;
@@ -101,15 +95,12 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 215
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 216
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/SystemGestureServiceImpl$1;->val$callback:Lcn/nubia/server/policy/edge/effects/resloader/TakeCurrentScreenCallback;
 
     invoke-interface {v0, p1}, Lcn/nubia/server/policy/edge/effects/resloader/TakeCurrentScreenCallback;->onScreenUploaded(Landroid/graphics/Bitmap;)V
 
-    .line 217
     return-void
 .end method
 
@@ -117,7 +108,6 @@
     .locals 0
 
     .prologue
-    .line 196
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/effects/SystemGestureServiceImpl$1;->onPostExecute(Landroid/graphics/Bitmap;)V
@@ -130,7 +120,6 @@
     .param p1, "values"    # [Landroid/graphics/Bitmap;
 
     .prologue
-    .line 201
     return-void
 .end method
 
@@ -138,7 +127,6 @@
     .locals 0
 
     .prologue
-    .line 196
     check-cast p1, [Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/effects/SystemGestureServiceImpl$1;->onProgressUpdate([Landroid/graphics/Bitmap;)V

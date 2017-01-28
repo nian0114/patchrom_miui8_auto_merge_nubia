@@ -119,14 +119,12 @@
     .locals 3
 
     .prologue
-    .line 92
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
-    .line 165
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/4 v1, 0x0
@@ -139,7 +137,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 166
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/4 v1, 0x1
@@ -152,7 +149,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 167
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/4 v1, 0x2
@@ -165,7 +161,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 168
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/4 v1, 0x3
@@ -178,7 +173,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 169
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/4 v1, 0x4
@@ -191,7 +185,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 170
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/4 v1, 0x5
@@ -204,7 +197,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 171
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/4 v1, 0x6
@@ -217,7 +209,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 172
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x10
@@ -230,7 +221,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 173
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x11
@@ -243,7 +233,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 174
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x12
@@ -256,7 +245,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 175
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x13
@@ -269,7 +257,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 176
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x14
@@ -282,7 +269,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x15
@@ -295,7 +281,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x16
@@ -308,7 +293,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 179
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x17
@@ -321,7 +305,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 180
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x18
@@ -334,7 +317,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 181
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x19
@@ -347,7 +329,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 182
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x1a
@@ -360,7 +341,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 183
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x1b
@@ -373,7 +353,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 184
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x1c
@@ -386,7 +365,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 185
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x1d
@@ -399,7 +377,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 186
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x1e
@@ -412,7 +389,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 187
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x1f
@@ -425,7 +401,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 188
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x20
@@ -438,7 +413,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 189
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x21
@@ -451,7 +425,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 190
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x22
@@ -464,7 +437,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 191
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x23
@@ -477,7 +449,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 192
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x24
@@ -490,7 +461,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 193
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x25
@@ -503,7 +473,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 194
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x26
@@ -516,7 +485,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 195
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x27
@@ -529,7 +497,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 196
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0x80
@@ -542,7 +509,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 197
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
     const/16 v1, 0xff
@@ -555,7 +521,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
     return-void
 .end method
 
@@ -570,10 +535,8 @@
     .end annotation
 
     .prologue
-    .line 26
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 28
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v8
@@ -582,7 +545,6 @@
 
     if-ge v8, v9, :cond_0
 
-    .line 29
     new-instance v8, Ljava/net/ProtocolException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -611,7 +573,6 @@
 
     throw v8
 
-    .line 32
     :cond_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
@@ -619,11 +580,9 @@
 
     and-int/lit16 v6, v8, 0xff
 
-    .line 33
     .local v6, "locType":I
     if-eqz v6, :cond_1
 
-    .line 34
     new-instance v8, Ljava/net/ProtocolException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -648,7 +607,6 @@
 
     throw v8
 
-    .line 37
     :cond_1
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
@@ -656,13 +614,11 @@
 
     and-int/lit16 v5, v8, 0xff
 
-    .line 38
     .local v5, "locSubType":I
     const/16 v8, 0x63
 
     if-eq v5, v8, :cond_2
 
-    .line 39
     new-instance v8, Ljava/net/ProtocolException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -693,7 +649,6 @@
 
     throw v8
 
-    .line 43
     :cond_2
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
@@ -701,7 +656,6 @@
 
     and-int/lit16 v4, v8, 0xff
 
-    .line 44
     .local v4, "length":I
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -709,7 +663,6 @@
 
     if-le v4, v8, :cond_3
 
-    .line 45
     new-instance v8, Ljava/net/ProtocolException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -734,7 +687,6 @@
 
     throw v8
 
-    .line 48
     :cond_3
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
@@ -742,7 +694,6 @@
 
     and-int/lit16 v7, v8, 0xff
 
-    .line 49
     .local v7, "what":I
     invoke-static {}, Lcom/android/server/wifi/anqp/CivicLocationElement$LocationType;->values()[Lcom/android/server/wifi/anqp/CivicLocationElement$LocationType;
 
@@ -761,7 +712,6 @@
     :goto_0
     iput-object v8, p0, Lcom/android/server/wifi/anqp/CivicLocationElement;->mLocationType:Lcom/android/server/wifi/anqp/CivicLocationElement$LocationType;
 
-    .line 51
     const/4 v8, 0x2
 
     sget-object v9, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
@@ -776,14 +726,12 @@
 
     iput-object v8, p0, Lcom/android/server/wifi/anqp/CivicLocationElement;->mLocale:Ljava/util/Locale;
 
-    .line 53
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
     iput-object v8, p0, Lcom/android/server/wifi/anqp/CivicLocationElement;->mValues:Ljava/util/Map;
 
-    .line 54
     :cond_4
     :goto_1
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -792,14 +740,12 @@
 
     if-eqz v8, :cond_7
 
-    .line 55
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v8
 
     and-int/lit16 v1, v8, 0xff
 
-    .line 56
     .local v1, "caTypeNumber":I
     sget-object v8, Lcom/android/server/wifi/anqp/CivicLocationElement;->s_caTypes:Ljava/util/Map;
 
@@ -813,7 +759,6 @@
 
     check-cast v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 58
     .local v0, "caType":Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
@@ -821,7 +766,6 @@
 
     and-int/lit16 v2, v8, 0xff
 
-    .line 59
     .local v2, "caValLen":I
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -829,7 +773,6 @@
 
     if-le v2, v8, :cond_6
 
-    .line 60
     new-instance v8, Ljava/net/ProtocolException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -854,7 +797,6 @@
 
     throw v8
 
-    .line 49
     .end local v0    # "caType":Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
     .end local v1    # "caTypeNumber":I
     .end local v2    # "caValLen":I
@@ -863,21 +805,17 @@
 
     goto :goto_0
 
-    .line 62
     .restart local v0    # "caType":Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
     .restart local v1    # "caTypeNumber":I
     .restart local v2    # "caValLen":I
     :cond_6
     new-array v3, v2, [B
 
-    .line 63
     .local v3, "caValOctets":[B
     invoke-virtual {p2, v3}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 65
     if-eqz v0, :cond_4
 
-    .line 66
     iget-object v8, p0, Lcom/android/server/wifi/anqp/CivicLocationElement;->mValues:Ljava/util/Map;
 
     new-instance v9, Ljava/lang/String;
@@ -890,7 +828,6 @@
 
     goto :goto_1
 
-    .line 69
     .end local v0    # "caType":Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
     .end local v1    # "caTypeNumber":I
     .end local v2    # "caValLen":I
@@ -905,7 +842,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/android/server/wifi/anqp/CivicLocationElement;->mLocale:Ljava/util/Locale;
 
     return-object v0
@@ -915,7 +851,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Lcom/android/server/wifi/anqp/CivicLocationElement;->mLocationType:Lcom/android/server/wifi/anqp/CivicLocationElement$LocationType;
 
     return-object v0
@@ -935,7 +870,6 @@
     .end annotation
 
     .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/server/wifi/anqp/CivicLocationElement;->mValues:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
@@ -949,7 +883,6 @@
     .locals 2
 
     .prologue
-    .line 85
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -27,13 +27,10 @@
     .param p1, "eventId"    # Ljava/lang/String;
 
     .prologue
-    .line 278
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 279
     iput-object p1, p0, Lnubia/util/FrameworkDataStatisticsManager$OnEvent;->mEventId:Ljava/lang/String;
 
-    .line 280
     return-void
 .end method
 
@@ -49,11 +46,9 @@
     .end annotation
 
     .prologue
-    .line 285
     iget-object v0, p0, Lnubia/util/FrameworkDataStatisticsManager$OnEvent;->mEventId:Ljava/lang/String;
 
     invoke-interface {p1, v0}, Lnubia/util/IFrameworkDataStatisticsService;->onEvent(Ljava/lang/String;)V
 
-    .line 286
     return-void
 .end method

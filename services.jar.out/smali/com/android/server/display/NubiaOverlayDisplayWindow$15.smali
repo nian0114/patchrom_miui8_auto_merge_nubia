@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1725
     iput-object p1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$15;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +49,6 @@
 
     const/4 v4, 0x0
 
-    .line 1730
     const-string v1, "0"
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->KEY_MENU_AND_HOME_POS:Ljava/lang/String;
@@ -68,7 +66,6 @@
 
     move-result v0
 
-    .line 1733
     .local v0, "isKeyPosNotChanged":Z
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -76,22 +73,18 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1748
     :goto_0
     return v4
 
-    .line 1735
     :pswitch_0
     if-eqz v0, :cond_0
 
-    .line 1736
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$15;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-virtual {v1, v4, v6}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->sendInjectEvent(II)V
 
     goto :goto_0
 
-    .line 1738
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$15;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
@@ -99,18 +92,15 @@
 
     goto :goto_0
 
-    .line 1741
     :pswitch_1
     if-eqz v0, :cond_1
 
-    .line 1742
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$15;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-virtual {v1, v5, v6}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->sendInjectEvent(II)V
 
     goto :goto_0
 
-    .line 1744
     :cond_1
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$15;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
@@ -118,7 +108,6 @@
 
     goto :goto_0
 
-    .line 1733
     nop
 
     :pswitch_data_0

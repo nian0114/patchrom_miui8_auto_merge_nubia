@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 111
     iput-object p1, p0, Landroid/preference/CheckBoxPreference$Listener;->this$0:Landroid/preference/CheckBoxPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p2, "x1"    # Landroid/preference/CheckBoxPreference$1;
 
     .prologue
-    .line 111
     invoke-direct {p0, p1}, Landroid/preference/CheckBoxPreference$Listener;-><init>(Landroid/preference/CheckBoxPreference;)V
 
     return-void
@@ -58,7 +56,6 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 117
     iget-object v1, p0, Landroid/preference/CheckBoxPreference$Listener;->this$0:Landroid/preference/CheckBoxPreference;
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -71,7 +68,6 @@
 
     if-nez v1, :cond_2
 
-    .line 120
     if-nez p2, :cond_1
 
     const/4 v1, 0x1
@@ -79,24 +75,20 @@
     :goto_0
     invoke-virtual {p1, v1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
-    .line 143
     :cond_0
     :goto_1
     return-void
 
-    .line 120
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 124
     :cond_2
     iget-object v1, p0, Landroid/preference/CheckBoxPreference$Listener;->this$0:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1, p2}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
-    .line 125
     iget-object v1, p0, Landroid/preference/CheckBoxPreference$Listener;->this$0:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1}, Landroid/preference/CheckBoxPreference;->getPreferenceManager()Landroid/preference/PreferenceManager;
@@ -105,12 +97,10 @@
 
     iput-object v1, p0, Landroid/preference/CheckBoxPreference$Listener;->preferenceManager:Landroid/preference/PreferenceManager;
 
-    .line 126
     iget-object v1, p0, Landroid/preference/CheckBoxPreference$Listener;->preferenceManager:Landroid/preference/PreferenceManager;
 
     if-eqz v1, :cond_0
 
-    .line 127
     iget-object v1, p0, Landroid/preference/CheckBoxPreference$Listener;->this$0:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1}, Landroid/preference/CheckBoxPreference;->getOnPreferenceClickListener()Landroid/preference/Preference$OnPreferenceClickListener;
@@ -133,7 +123,6 @@
 
     if-nez v1, :cond_0
 
-    .line 132
     :cond_3
     iget-object v1, p0, Landroid/preference/CheckBoxPreference$Listener;->preferenceManager:Landroid/preference/PreferenceManager;
 
@@ -143,19 +132,16 @@
 
     iput-object v1, p0, Landroid/preference/CheckBoxPreference$Listener;->preferenceScreen:Landroid/preference/PreferenceScreen;
 
-    .line 134
     iget-object v1, p0, Landroid/preference/CheckBoxPreference$Listener;->preferenceScreen:Landroid/preference/PreferenceScreen;
 
     if-eqz v1, :cond_0
 
-    .line 135
     iget-object v1, p0, Landroid/preference/CheckBoxPreference$Listener;->preferenceManager:Landroid/preference/PreferenceManager;
 
     invoke-virtual {v1}, Landroid/preference/PreferenceManager;->getOnPreferenceTreeClickListener()Landroid/preference/PreferenceManager$OnPreferenceTreeClickListener;
 
     move-result-object v0
 
-    .line 137
     .local v0, "listener":Landroid/preference/PreferenceManager$OnPreferenceTreeClickListener;
     iget-object v1, p0, Landroid/preference/CheckBoxPreference$Listener;->preferenceScreen:Landroid/preference/PreferenceScreen;
 

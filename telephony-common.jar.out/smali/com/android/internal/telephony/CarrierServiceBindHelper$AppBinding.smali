@@ -38,15 +38,12 @@
     .param p2, "phoneId"    # I
 
     .prologue
-    .line 146
     iput-object p1, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 147
     iput p2, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->phoneId:I
 
-    .line 148
     return-void
 .end method
 
@@ -60,10 +57,8 @@
 
     const/4 v8, 0x0
 
-    .line 164
     invoke-virtual {p0}, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->unbind()V
 
-    .line 167
     iget-object v6, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
     # getter for: Lcom/android/internal/telephony/CarrierServiceBindHelper;->mContext:Landroid/content/Context;
@@ -87,7 +82,6 @@
 
     move-result-object v0
 
-    .line 172
     .local v0, "carrierPackageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v0, :cond_0
 
@@ -97,7 +91,6 @@
 
     if-gtz v6, :cond_1
 
-    .line 173
     :cond_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -124,11 +117,9 @@
 
     move v6, v8
 
-    .line 221
     :goto_0
     return v6
 
-    .line 177
     :cond_1
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -151,7 +142,6 @@
     # invokes: Lcom/android/internal/telephony/CarrierServiceBindHelper;->log(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/CarrierServiceBindHelper;->access$100(Ljava/lang/String;)V
 
-    .line 178
     invoke-interface {v0, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -160,34 +150,29 @@
 
     iput-object v6, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->carrierPackage:Ljava/lang/String;
 
-    .line 181
     iget v6, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->bindCount:I
 
     add-int/lit8 v6, v6, 0x1
 
     iput v6, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->bindCount:I
 
-    .line 182
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
 
     iput-wide v10, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->lastBindStartMillis:J
 
-    .line 185
     new-instance v2, Landroid/content/Intent;
 
     const-string v6, "android.service.carrier.CarrierService"
 
     invoke-direct {v2, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 186
     .local v2, "carrierService":Landroid/content/Intent;
     iget-object v6, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->carrierPackage:Ljava/lang/String;
 
     invoke-virtual {v2, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 188
     iget-object v6, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
     # getter for: Lcom/android/internal/telephony/CarrierServiceBindHelper;->mContext:Landroid/content/Context;
@@ -205,20 +190,16 @@
 
     move-result-object v1
 
-    .line 190
     .local v1, "carrierResolveInfo":Landroid/content/pm/ResolveInfo;
     const/4 v5, 0x0
 
-    .line 191
     .local v5, "metadata":Landroid/os/Bundle;
     if-eqz v1, :cond_2
 
-    .line 192
     iget-object v6, v1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iget-object v5, v6, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
 
-    .line 196
     :cond_2
     if-eqz v5, :cond_3
 
@@ -230,7 +211,6 @@
 
     if-nez v6, :cond_4
 
-    .line 198
     :cond_3
     const-string v6, "Carrier app does not want a long lived binding"
 
@@ -239,10 +219,8 @@
 
     move v6, v8
 
-    .line 199
     goto :goto_0
 
-    .line 202
     :cond_4
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -279,7 +257,6 @@
     # invokes: Lcom/android/internal/telephony/CarrierServiceBindHelper;->log(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/CarrierServiceBindHelper;->access$100(Ljava/lang/String;)V
 
-    .line 203
     new-instance v6, Lcom/android/internal/telephony/CarrierServiceBindHelper$CarrierServiceConnection;
 
     iget-object v9, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
@@ -288,7 +265,6 @@
 
     iput-object v6, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->connection:Lcom/android/internal/telephony/CarrierServiceBindHelper$CarrierServiceConnection;
 
-    .line 204
     iget-object v6, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
     # getter for: Lcom/android/internal/telephony/CarrierServiceBindHelper;->mHandler:Landroid/os/Handler;
@@ -313,7 +289,6 @@
 
     invoke-virtual {v6, v9, v10, v11}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 210
     :try_start_0
     iget-object v6, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
@@ -334,16 +309,13 @@
 
     move v6, v7
 
-    .line 211
     goto/16 :goto_0
 
-    .line 214
     :cond_5
     const-string v3, "bindService returned false"
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 219
     .local v3, "error":Ljava/lang/String;
     :goto_1
     new-instance v6, Ljava/lang/StringBuilder;
@@ -393,15 +365,12 @@
 
     move v6, v8
 
-    .line 221
     goto/16 :goto_0
 
-    .line 215
     .end local v3    # "error":Ljava/lang/String;
     :catch_0
     move-exception v4
 
-    .line 216
     .local v4, "ex":Ljava/lang/SecurityException;
     invoke-virtual {v4}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
 
@@ -418,7 +387,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 241
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -441,7 +409,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -464,7 +431,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 243
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -487,7 +453,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 244
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -510,7 +475,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 245
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -533,7 +497,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 246
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -556,10 +519,8 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 247
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 248
     return-void
 .end method
 
@@ -567,7 +528,6 @@
     .locals 1
 
     .prologue
-    .line 155
     iget-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->carrierPackage:Ljava/lang/String;
 
     return-object v0
@@ -577,7 +537,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->phoneId:I
 
     return v0
@@ -587,12 +546,10 @@
     .locals 1
 
     .prologue
-    .line 159
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->connection:Lcom/android/internal/telephony/CarrierServiceBindHelper$CarrierServiceConnection;
 
-    .line 160
     return-void
 .end method
 
@@ -600,7 +557,6 @@
     .locals 2
 
     .prologue
-    .line 225
     iget-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
     # getter for: Lcom/android/internal/telephony/CarrierServiceBindHelper;->mHandler:Landroid/os/Handler;
@@ -612,16 +568,13 @@
 
     invoke-virtual {v0, v1, p0}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
 
-    .line 226
     iget-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->connection:Lcom/android/internal/telephony/CarrierServiceBindHelper$CarrierServiceConnection;
 
     if-nez v0, :cond_0
 
-    .line 238
     :goto_0
     return-void
 
-    .line 231
     :cond_0
     iget v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->unbindCount:I
 
@@ -629,20 +582,17 @@
 
     iput v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->unbindCount:I
 
-    .line 232
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->lastUnbindMillis:J
 
-    .line 235
     const-string v0, "Unbinding from carrier app"
 
     # invokes: Lcom/android/internal/telephony/CarrierServiceBindHelper;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/internal/telephony/CarrierServiceBindHelper;->access$100(Ljava/lang/String;)V
 
-    .line 236
     iget-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
     # getter for: Lcom/android/internal/telephony/CarrierServiceBindHelper;->mContext:Landroid/content/Context;
@@ -654,7 +604,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 237
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->connection:Lcom/android/internal/telephony/CarrierServiceBindHelper$CarrierServiceConnection;

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 69
     iput-object p1, p0, Lcn/nubia/server/policy/edge/GestureSettings$1;->this$0:Lcn/nubia/server/policy/edge/GestureSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,16 +38,13 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 72
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 73
     .local v0, "uri":Landroid/net/Uri;
     if-eqz v0, :cond_0
 
-    .line 74
     const-string v1, "package"
 
     invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
@@ -73,13 +69,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 77
     iget-object v1, p0, Lcn/nubia/server/policy/edge/GestureSettings$1;->this$0:Lcn/nubia/server/policy/edge/GestureSettings;
 
     # invokes: Lcn/nubia/server/policy/edge/GestureSettings;->loadSettings()V
     invoke-static {v1}, Lcn/nubia/server/policy/edge/GestureSettings;->access$000(Lcn/nubia/server/policy/edge/GestureSettings;)V
 
-    .line 80
     :cond_0
     return-void
 .end method

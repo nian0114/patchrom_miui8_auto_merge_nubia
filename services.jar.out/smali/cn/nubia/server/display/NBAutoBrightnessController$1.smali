@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcn/nubia/server/display/NBAutoBrightnessController$1;->this$0:Lcn/nubia/server/display/NBAutoBrightnessController;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcn/nubia/server/display/NBAutoBrightnessController$1;->this$0:Lcn/nubia/server/display/NBAutoBrightnessController;
 
     # getter for: Lcn/nubia/server/display/NBAutoBrightnessController;->mCallback:Lcn/nubia/server/display/INBAutoBrightnessCallback;
@@ -51,6 +49,5 @@
 
     invoke-interface {v0, v1}, Lcn/nubia/server/display/INBAutoBrightnessCallback;->onBrightnessChange(Z)V
 
-    .line 103
     return-void
 .end method

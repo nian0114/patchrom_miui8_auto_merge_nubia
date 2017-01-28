@@ -29,22 +29,18 @@
     .param p3, "data"    # [Ljava/lang/CharSequence;
 
     .prologue
-    .line 588
     iput-object p1, p0, Lnubia/widget/NubiaMorePopup$MyAdapter;->this$0:Lnubia/widget/NubiaMorePopup;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 589
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lnubia/widget/NubiaMorePopup$MyAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 590
     iput-object p3, p0, Lnubia/widget/NubiaMorePopup$MyAdapter;->mDataList:[Ljava/lang/CharSequence;
 
-    .line 591
     return-void
 .end method
 
@@ -59,7 +55,6 @@
 
     const/4 v2, 0x0
 
-    .line 620
     const v1, 0x30d0046
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -68,11 +63,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 622
     .local v0, "text":Landroid/widget/TextView;
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 624
     iget-object v1, p0, Lnubia/widget/NubiaMorePopup$MyAdapter;->this$0:Lnubia/widget/NubiaMorePopup;
 
     # getter for: Lnubia/widget/NubiaMorePopup;->mItemEnabled:[Z
@@ -84,21 +77,16 @@
 
     if-nez v1, :cond_0
 
-    .line 625
     invoke-virtual {p2, v2}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 626
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 631
     :goto_0
     return-void
 
-    .line 628
     :cond_0
     invoke-virtual {p2, v3}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 629
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setEnabled(Z)V
 
     goto :goto_0
@@ -110,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 595
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$MyAdapter;->mDataList:[Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
@@ -133,7 +120,6 @@
     .param p1, "postion"    # I
 
     .prologue
-    .line 600
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$MyAdapter;->mDataList:[Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
@@ -156,7 +142,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 605
     int-to-long v0, p1
 
     return-wide v0
@@ -169,10 +154,8 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 610
     if-nez p2, :cond_0
 
-    .line 611
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$MyAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v1, 0x3030013
@@ -183,7 +166,6 @@
 
     move-result-object p2
 
-    .line 615
     :cond_0
     invoke-virtual {p0, p1}, Lnubia/widget/NubiaMorePopup$MyAdapter;->getItem(I)Ljava/lang/Object;
 
@@ -193,6 +175,5 @@
 
     invoke-direct {p0, v0, p2, p1}, Lnubia/widget/NubiaMorePopup$MyAdapter;->initItem(Ljava/lang/CharSequence;Landroid/view/View;I)V
 
-    .line 616
     return-object p2
 .end method

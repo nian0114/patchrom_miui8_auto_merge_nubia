@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 625
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7$1;->this$1:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 629
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -55,7 +53,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 630
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7$1;->this$1:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;
 
     iget-object v2, v2, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;->val$delHashcodes:Ljava/util/List;
@@ -70,7 +67,6 @@
 
     move-result v0
 
-    .line 631
     .local v0, "hashcode":I
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7$1;->this$1:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;
 
@@ -85,7 +81,6 @@
 
     invoke-virtual {v2, v0, v3}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;->setTextureId(II)V
 
-    .line 632
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7$1;->this$1:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;
 
     iget-object v2, v2, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController;
@@ -97,12 +92,10 @@
 
     invoke-virtual {v2, v0}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/TextureManagement;->delItem(I)V
 
-    .line 629
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 635
     .end local v0    # "hashcode":I
     :cond_0
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7$1;->this$1:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;
@@ -111,20 +104,17 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    .line 636
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7$1;->this$1:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;
 
     iget-object v2, v2, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingController$7;->val$delTextures:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    .line 637
     const-string v2, "PageFlippingController"
 
     const-string v3, "uploadPageFlippingTextures delete texture end"
 
     invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 638
     return-void
 .end method

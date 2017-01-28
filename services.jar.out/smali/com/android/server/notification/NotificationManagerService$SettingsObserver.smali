@@ -26,13 +26,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 812
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    .line 813
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 809
     const-string v0, "notification_light_pulse"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -41,7 +38,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_LIGHT_PULSE_URI:Landroid/net/Uri;
 
-    .line 814
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 817
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -62,7 +57,6 @@
 
     move-result-object v0
 
-    .line 818
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_LIGHT_PULSE_URI:Landroid/net/Uri;
 
@@ -72,12 +66,10 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 820
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 821
     return-void
 .end method
 
@@ -87,10 +79,8 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 824
     invoke-virtual {p0, p2}, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 825
     return-void
 .end method
 
@@ -101,7 +91,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 828
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -112,7 +101,6 @@
 
     move-result-object v1
 
-    .line 829
     .local v1, "resolver":Landroid/content/ContentResolver;
     if-eqz p1, :cond_0
 
@@ -124,7 +112,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 830
     :cond_0
     const-string v2, "notification_light_pulse"
 
@@ -136,7 +123,6 @@
 
     const/4 v0, 0x1
 
-    .line 832
     .local v0, "pulseEnabled":Z
     :cond_1
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -148,19 +134,16 @@
 
     if-eq v2, v0, :cond_2
 
-    .line 833
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mNotificationPulseEnabled:Z
     invoke-static {v2, v0}, Lcom/android/server/notification/NotificationManagerService;->access$1702(Lcom/android/server/notification/NotificationManagerService;Z)Z
 
-    .line 834
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # invokes: Lcom/android/server/notification/NotificationManagerService;->updateNotificationPulse()V
     invoke-static {v2}, Lcom/android/server/notification/NotificationManagerService;->access$1100(Lcom/android/server/notification/NotificationManagerService;)V
 
-    .line 837
     .end local v0    # "pulseEnabled":Z
     :cond_2
     return-void

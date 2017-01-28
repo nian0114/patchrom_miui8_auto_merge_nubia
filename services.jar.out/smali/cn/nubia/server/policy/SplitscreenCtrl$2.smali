@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 135
     iput-object p1, p0, Lcn/nubia/server/policy/SplitscreenCtrl$2;->this$0:Lcn/nubia/server/policy/SplitscreenCtrl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 137
     iget-object v0, p0, Lcn/nubia/server/policy/SplitscreenCtrl$2;->this$0:Lcn/nubia/server/policy/SplitscreenCtrl;
 
     const/16 v1, 0x52
@@ -48,6 +46,5 @@
     # invokes: Lcn/nubia/server/policy/SplitscreenCtrl;->injectBottomKeyEvent(I)V
     invoke-static {v0, v1}, Lcn/nubia/server/policy/SplitscreenCtrl;->access$000(Lcn/nubia/server/policy/SplitscreenCtrl;I)V
 
-    .line 138
     return-void
 .end method

@@ -39,13 +39,10 @@
     .param p1, "program"    # I
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     iput p1, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;->mId:I
 
-    .line 23
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;->mId:I
 
     const-string v1, "uMVPMatrix"
@@ -56,7 +53,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;->mMVPMatrixHandle:I
 
-    .line 24
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;->mId:I
 
     const-string v1, "aVertex"
@@ -67,7 +63,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;->mVertexHandle:I
 
-    .line 25
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;->mId:I
 
     const-string v1, "aTexCoor"
@@ -78,7 +73,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;->mTexCoorHandle:I
 
-    .line 26
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;->mId:I
 
     const-string v1, "uAlpha"
@@ -89,6 +83,5 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/animation/opengl/ShaderProgram;->mAlphaHandle:I
 
-    .line 27
     return-void
 .end method

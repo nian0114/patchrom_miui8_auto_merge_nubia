@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 2161
     iput-object p1, p0, Lcom/android/server/wifi/WifiConfigStore$3;->this$0:Lcom/android/server/wifi/WifiConfigStore;
 
     iput-object p2, p0, Lcom/android/server/wifi/WifiConfigStore$3;->val$networks:Ljava/util/List;
@@ -58,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 2163
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiConfigStore$3;->val$networks:Ljava/util/List;
@@ -81,7 +79,6 @@
 
     check-cast v3, Landroid/net/wifi/WifiConfiguration;
 
-    .line 2171
     .local v3, "config":Landroid/net/wifi/WifiConfiguration;
     # getter for: Lcom/android/server/wifi/WifiConfigStore;->VDBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiConfigStore;->access$000()Z
@@ -90,40 +87,33 @@
 
     if-eqz v14, :cond_3
 
-    .line 2172
     const/4 v9, 0x0
 
-    .line 2173
     .local v9, "num":I
     const/4 v10, 0x0
 
-    .line 2174
     .local v10, "numlink":I
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->connectChoices:Ljava/util/HashMap;
 
     if-eqz v14, :cond_1
 
-    .line 2175
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->connectChoices:Ljava/util/HashMap;
 
     invoke-virtual {v14}, Ljava/util/HashMap;->size()I
 
     move-result v9
 
-    .line 2177
     :cond_1
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->linkedConfigurations:Ljava/util/HashMap;
 
     if-eqz v14, :cond_2
 
-    .line 2178
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->linkedConfigurations:Ljava/util/HashMap;
 
     invoke-virtual {v14}, Ljava/util/HashMap;->size()I
 
     move-result v10
 
-    .line 2180
     :cond_2
     move-object/from16 v0, p0
 
@@ -259,7 +249,6 @@
 
     invoke-virtual {v14, v15}, Lcom/android/server/wifi/WifiConfigStore;->loge(Ljava/lang/String;)V
 
-    .line 2189
     .end local v9    # "num":I
     .end local v10    # "numlink":I
     :cond_3
@@ -269,12 +258,10 @@
 
     if-eqz v14, :cond_0
 
-    .line 2192
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
     if-nez v14, :cond_4
 
-    .line 2193
     # getter for: Lcom/android/server/wifi/WifiConfigStore;->VDBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiConfigStore;->access$000()Z
 
@@ -282,7 +269,6 @@
 
     if-eqz v14, :cond_0
 
-    .line 2194
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiConfigStore$3;->this$0:Lcom/android/server/wifi/WifiConfigStore;
@@ -293,7 +279,6 @@
 
     goto/16 :goto_0
 
-    .line 2198
     :cond_4
     # getter for: Lcom/android/server/wifi/WifiConfigStore;->VDBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiConfigStore;->access$000()Z
@@ -302,7 +287,6 @@
 
     if-eqz v14, :cond_5
 
-    .line 2199
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiConfigStore$3;->this$0:Lcom/android/server/wifi/WifiConfigStore;
@@ -331,7 +315,6 @@
 
     invoke-virtual {v14, v15}, Lcom/android/server/wifi/WifiConfigStore;->loge(Ljava/lang/String;)V
 
-    .line 2201
     :cond_5
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -365,12 +348,10 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2203
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
     if-eqz v14, :cond_6
 
-    .line 2204
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -401,13 +382,11 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2206
     :cond_6
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->FQDN:Ljava/lang/String;
 
     if-eqz v14, :cond_7
 
-    .line 2207
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -438,7 +417,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2210
     :cond_7
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -474,7 +452,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2212
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -509,7 +486,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2214
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -544,7 +520,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2216
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -579,7 +554,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2218
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -614,7 +588,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2220
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -649,7 +622,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2222
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -684,7 +656,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2224
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -719,7 +690,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2226
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -754,7 +724,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2228
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -789,12 +758,10 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2230
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->creationTime:Ljava/lang/String;
 
     if-eqz v14, :cond_8
 
-    .line 2231
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -825,13 +792,11 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2233
     :cond_8
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->updateTime:Ljava/lang/String;
 
     if-eqz v14, :cond_9
 
-    .line 2234
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -862,13 +827,11 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2236
     :cond_9
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->peerWifiConfiguration:Ljava/lang/String;
 
     if-eqz v14, :cond_a
 
-    .line 2237
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -899,7 +862,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2240
     :cond_a
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -935,7 +897,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2242
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -970,7 +931,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2244
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1005,7 +965,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2246
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1040,7 +999,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2248
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1075,7 +1033,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2250
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1110,7 +1067,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2252
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1145,7 +1101,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2256
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1180,7 +1135,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2258
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1215,7 +1169,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2260
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1250,7 +1203,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2262
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1281,7 +1233,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2264
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1312,7 +1263,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2266
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1347,7 +1297,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2268
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
     sget-object v15, Landroid/net/wifi/WifiConfiguration$KeyMgmt;->strings:[Ljava/lang/String;
@@ -1357,7 +1306,6 @@
 
     move-result-object v1
 
-    .line 2271
     .local v1, "allowedKeyManagementString":Ljava/lang/String;
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -1387,12 +1335,10 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2274
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->connectChoices:Ljava/util/HashMap;
 
     if-eqz v14, :cond_b
 
-    .line 2275
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->connectChoices:Ljava/util/HashMap;
 
     invoke-virtual {v14}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -1417,7 +1363,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 2276
     .local v7, "key":Ljava/lang/String;
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->connectChoices:Ljava/util/HashMap;
 
@@ -1427,7 +1372,6 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 2277
     .local v2, "choice":Ljava/lang/Integer;
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -1473,7 +1417,6 @@
 
     goto :goto_1
 
-    .line 2281
     .end local v2    # "choice":Ljava/lang/Integer;
     .end local v6    # "i$":Ljava/util/Iterator;
     .end local v7    # "key":Ljava/lang/String;
@@ -1482,7 +1425,6 @@
 
     if-eqz v14, :cond_c
 
-    .line 2282
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiConfigStore$3;->this$0:Lcom/android/server/wifi/WifiConfigStore;
@@ -1515,7 +1457,6 @@
 
     invoke-virtual {v14, v15}, Lcom/android/server/wifi/WifiConfigStore;->log(Ljava/lang/String;)V
 
-    .line 2285
     iget-object v14, v3, Landroid/net/wifi/WifiConfiguration;->linkedConfigurations:Ljava/util/HashMap;
 
     invoke-virtual {v14}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -1540,7 +1481,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 2286
     .restart local v7    # "key":Ljava/lang/String;
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -1572,17 +1512,14 @@
 
     goto :goto_2
 
-    .line 2290
     .end local v6    # "i$":Ljava/util/Iterator;
     .end local v7    # "key":Ljava/lang/String;
     :cond_c
     iget-object v8, v3, Landroid/net/wifi/WifiConfiguration;->defaultGwMacAddress:Ljava/lang/String;
 
-    .line 2291
     .local v8, "macAddress":Ljava/lang/String;
     if-eqz v8, :cond_d
 
-    .line 2292
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1611,7 +1548,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2295
     :cond_d
     move-object/from16 v0, p0
 
@@ -1623,7 +1559,6 @@
 
     if-eqz v14, :cond_e
 
-    .line 2296
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiConfigStore$3;->this$0:Lcom/android/server/wifi/WifiConfigStore;
@@ -1654,13 +1589,11 @@
 
     check-cast v12, Lcom/android/server/wifi/ScanDetail;
 
-    .line 2297
     .local v12, "scanDetail":Lcom/android/server/wifi/ScanDetail;
     invoke-virtual {v12}, Lcom/android/server/wifi/ScanDetail;->getScanResult()Landroid/net/wifi/ScanResult;
 
     move-result-object v11
 
-    .line 2298
     .local v11, "result":Landroid/net/wifi/ScanResult;
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -1692,7 +1625,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2301
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1727,7 +1659,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2304
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1762,7 +1693,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2307
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1797,7 +1727,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2314
     const-string v14, "/BSSID\n"
 
     move-object/from16 v0, p1
@@ -1806,7 +1735,6 @@
 
     goto/16 :goto_3
 
-    .line 2317
     .end local v6    # "i$":Ljava/util/Iterator;
     .end local v11    # "result":Landroid/net/wifi/ScanResult;
     .end local v12    # "scanDetail":Lcom/android/server/wifi/ScanDetail;
@@ -1815,7 +1743,6 @@
 
     if-eqz v14, :cond_f
 
-    .line 2318
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1846,7 +1773,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2320
     :cond_f
     const-string v14, "\n"
 
@@ -1854,14 +1780,12 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2322
     const-string v14, "\n"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2323
     const-string v14, "\n"
 
     move-object/from16 v0, p1
@@ -1870,7 +1794,6 @@
 
     goto/16 :goto_0
 
-    .line 2325
     .end local v1    # "allowedKeyManagementString":Ljava/lang/String;
     .end local v3    # "config":Landroid/net/wifi/WifiConfiguration;
     .end local v8    # "macAddress":Ljava/lang/String;
@@ -1885,7 +1808,6 @@
 
     if-lez v14, :cond_11
 
-    .line 2326
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiConfigStore$3;->val$deletedSSIDs:Ljava/util/List;
@@ -1908,7 +1830,6 @@
 
     check-cast v4, Ljava/lang/Long;
 
-    .line 2327
     .local v4, "i":Ljava/lang/Long;
     const-string v14, "DELETED_CRC32"
 
@@ -1916,7 +1837,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2328
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v14
@@ -1925,7 +1845,6 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2329
     const-string v14, "\n"
 
     move-object/from16 v0, p1
@@ -1934,7 +1853,6 @@
 
     goto :goto_4
 
-    .line 2332
     .end local v4    # "i":Ljava/lang/Long;
     .end local v5    # "i$":Ljava/util/Iterator;
     :cond_11
@@ -1948,7 +1866,6 @@
 
     if-lez v14, :cond_12
 
-    .line 2333
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiConfigStore$3;->val$deletedEphemeralSSIDs:Ljava/util/List;
@@ -1971,7 +1888,6 @@
 
     check-cast v13, Ljava/lang/String;
 
-    .line 2334
     .local v13, "ssid":Ljava/lang/String;
     const-string v14, "DELETED_EPHEMERAL"
 
@@ -1979,12 +1895,10 @@
 
     invoke-virtual {v0, v14}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2335
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v13}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 2336
     const-string v14, "\n"
 
     move-object/from16 v0, p1
@@ -1993,7 +1907,6 @@
 
     goto :goto_5
 
-    .line 2339
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v13    # "ssid":Ljava/lang/String;
     :cond_12

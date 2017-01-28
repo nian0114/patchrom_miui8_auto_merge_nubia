@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "x0"    # Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompat$1;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompat$AccessibilityWindowInfoStubImpl;-><init>()V
 
     return-void
@@ -47,7 +45,6 @@
     .param p2, "outBounds"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 84
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 108
     const/4 v0, 0x0
 
     return-object v0
@@ -68,7 +64,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 103
     const/4 v0, 0x0
 
     return v0
@@ -79,7 +74,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 79
     const/4 v0, -0x1
 
     return v0
@@ -90,7 +84,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 64
     const/4 v0, -0x1
 
     return v0
@@ -101,7 +94,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 74
     const/4 v0, 0x0
 
     return-object v0
@@ -112,7 +104,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     return-object v0
@@ -123,7 +114,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 59
     const/4 v0, -0x1
 
     return v0
@@ -134,7 +124,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 98
     const/4 v0, 0x1
 
     return v0
@@ -145,7 +134,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 88
     const/4 v0, 0x1
 
     return v0
@@ -156,7 +144,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 93
     const/4 v0, 0x1
 
     return v0
@@ -166,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 49
     const/4 v0, 0x0
 
     return-object v0
@@ -177,7 +163,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 54
     const/4 v0, 0x0
 
     return-object v0
@@ -188,6 +173,5 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 113
     return-void
 .end method

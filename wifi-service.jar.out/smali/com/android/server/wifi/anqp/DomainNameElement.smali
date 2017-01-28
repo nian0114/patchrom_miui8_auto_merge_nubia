@@ -28,17 +28,14 @@
     .end annotation
 
     .prologue
-    .line 18
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 19
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/anqp/DomainNameElement;->mDomains:Ljava/util/List;
 
-    .line 21
     :goto_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -46,7 +43,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 23
     iget-object v0, p0, Lcom/android/server/wifi/anqp/DomainNameElement;->mDomains:Ljava/util/List;
 
     const/4 v1, 0x1
@@ -61,7 +57,6 @@
 
     goto :goto_0
 
-    .line 25
     :cond_0
     return-void
 .end method
@@ -81,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/android/server/wifi/anqp/DomainNameElement;->mDomains:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -95,7 +89,6 @@
     .locals 2
 
     .prologue
-    .line 33
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

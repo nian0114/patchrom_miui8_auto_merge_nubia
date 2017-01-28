@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 435
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$5;->this$0:Landroid/widget/ActionMenuPresenter;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 438
     const/4 v0, 0x0
 
     .local v0, "j":I
@@ -56,7 +54,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 439
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$5;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mRunningItemAnimations:Ljava/util/List;
@@ -74,7 +71,6 @@
 
     if-ne v1, p1, :cond_1
 
-    .line 440
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$5;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mRunningItemAnimations:Ljava/util/List;
@@ -84,11 +80,9 @@
 
     invoke-interface {v1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 444
     :cond_0
     return-void
 
-    .line 438
     :cond_1
     add-int/lit8 v0, v0, 0x1
 

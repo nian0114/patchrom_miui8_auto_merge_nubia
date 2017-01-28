@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 16
     new-instance v0, Lcn/nubia/server/policy/edge/StatisticsCollector;
 
     invoke-direct {v0}, Lcn/nubia/server/policy/edge/StatisticsCollector;-><init>()V
@@ -43,10 +42,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     :try_start_0
     const-string v1, "nubia.util.FrameworkDataStatisticsManager"
 
@@ -56,7 +53,6 @@
 
     sput-object v1, Lcn/nubia/server/policy/edge/StatisticsCollector;->sManagerClass:Ljava/lang/Class;
 
-    .line 101
     sget-object v1, Lcn/nubia/server/policy/edge/StatisticsCollector;->sManagerClass:Ljava/lang/Class;
 
     const-string v2, "getIntance"
@@ -77,7 +73,6 @@
 
     sput-object v1, Lcn/nubia/server/policy/edge/StatisticsCollector;->sGetInstanceMethod:Ljava/lang/reflect/Method;
 
-    .line 103
     sget-object v1, Lcn/nubia/server/policy/edge/StatisticsCollector;->sManagerClass:Ljava/lang/Class;
 
     const-string v2, "onEventWithStartOnce"
@@ -104,7 +99,6 @@
 
     sput-object v1, Lcn/nubia/server/policy/edge/StatisticsCollector;->sOnEventWithStartOnceMap:Ljava/lang/reflect/Method;
 
-    .line 105
     sget-object v1, Lcn/nubia/server/policy/edge/StatisticsCollector;->sManagerClass:Ljava/lang/Class;
 
     const-string v2, "onEventWithStartOnce"
@@ -128,31 +122,24 @@
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 113
     :goto_0
     return-void
 
-    .line 107
     :catch_0
     move-exception v0
 
-    .line 108
     .local v0, "e":Ljava/lang/ReflectiveOperationException;
     :goto_1
     sput-object v6, Lcn/nubia/server/policy/edge/StatisticsCollector;->sManagerClass:Ljava/lang/Class;
 
-    .line 109
     sput-object v6, Lcn/nubia/server/policy/edge/StatisticsCollector;->sGetInstanceMethod:Ljava/lang/reflect/Method;
 
-    .line 110
     sput-object v6, Lcn/nubia/server/policy/edge/StatisticsCollector;->sOnEventWithStartOnceMap:Ljava/lang/reflect/Method;
 
-    .line 111
     sput-object v6, Lcn/nubia/server/policy/edge/StatisticsCollector;->sOnEventWithStartOnce:Ljava/lang/reflect/Method;
 
     goto :goto_0
 
-    .line 107
     .end local v0    # "e":Ljava/lang/ReflectiveOperationException;
     :catch_1
     move-exception v0
@@ -166,18 +153,15 @@
     .param p1, "gesture"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     invoke-static {}, Lcn/nubia/server/policy/edge/StatisticsCollector;->checkFunction()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 95
     :goto_0
     return-void
 
-    .line 89
     :cond_0
     :try_start_0
     sget-object v1, Lcn/nubia/server/policy/edge/StatisticsCollector;->sGetInstanceMethod:Ljava/lang/reflect/Method;
@@ -196,7 +180,6 @@
 
     move-result-object v0
 
-    .line 91
     .local v0, "managerObject":Ljava/lang/Object;
     sget-object v1, Lcn/nubia/server/policy/edge/StatisticsCollector;->sOnEventWithStartOnce:Ljava/lang/reflect/Method;
 
@@ -215,7 +198,6 @@
 
     goto :goto_0
 
-    .line 92
     .end local v0    # "managerObject":Ljava/lang/Object;
     :catch_0
     move-exception v1
@@ -246,7 +228,6 @@
     .end annotation
 
     .prologue
-    .line 73
     .local p2, "info":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {}, Lcn/nubia/server/policy/edge/StatisticsCollector;->checkFunctionMap()Z
 
@@ -254,11 +235,9 @@
 
     if-nez v1, :cond_0
 
-    .line 82
     :goto_0
     return-void
 
-    .line 76
     :cond_0
     :try_start_0
     sget-object v1, Lcn/nubia/server/policy/edge/StatisticsCollector;->sGetInstanceMethod:Ljava/lang/reflect/Method;
@@ -277,7 +256,6 @@
 
     move-result-object v0
 
-    .line 78
     .local v0, "managerObject":Ljava/lang/Object;
     sget-object v1, Lcn/nubia/server/policy/edge/StatisticsCollector;->sOnEventWithStartOnceMap:Ljava/lang/reflect/Method;
 
@@ -300,7 +278,6 @@
 
     goto :goto_0
 
-    .line 79
     .end local v0    # "managerObject":Ljava/lang/Object;
     :catch_0
     move-exception v1
@@ -317,7 +294,6 @@
     .locals 1
 
     .prologue
-    .line 67
     sget-object v0, Lcn/nubia/server/policy/edge/StatisticsCollector;->sManagerClass:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
@@ -345,7 +321,6 @@
     .locals 1
 
     .prologue
-    .line 62
     sget-object v0, Lcn/nubia/server/policy/edge/StatisticsCollector;->sManagerClass:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
@@ -373,7 +348,6 @@
     .locals 1
 
     .prologue
-    .line 19
     sget-object v0, Lcn/nubia/server/policy/edge/StatisticsCollector;->sInstance:Lcn/nubia/server/policy/edge/StatisticsCollector;
 
     return-object v0
@@ -388,12 +362,10 @@
     .param p3, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 40
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 41
     .local v0, "parameter":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "up_or_down"
 
@@ -404,20 +376,16 @@
     :goto_0
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 42
     const-string v1, "type"
 
     invoke-interface {v0, v1, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     const-string v1, "fit2_double_side_move"
 
     invoke-static {p1, v1, v0}, Lcn/nubia/server/policy/edge/StatisticsCollector;->callCollectorOnEventWithStartOnceMap(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 45
     return-void
 
-    .line 41
     :cond_0
     const-string v1, "down"
 
@@ -429,12 +397,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 48
     const-string v0, "fit2_double_tap"
 
     invoke-static {p1, v0}, Lcn/nubia/server/policy/edge/StatisticsCollector;->callCollectorOnEventWithStartOnce(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 49
     return-void
 .end method
 
@@ -443,12 +409,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 52
     const-string v0, "fit2_inside_move"
 
     invoke-static {p1, v0}, Lcn/nubia/server/policy/edge/StatisticsCollector;->callCollectorOnEventWithStartOnce(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 53
     return-void
 .end method
 
@@ -458,23 +422,19 @@
     .param p2, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 34
     .local v0, "parameter":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "type"
 
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 35
     const-string v1, "fit2_single_side_loop"
 
     invoke-static {p1, v1, v0}, Lcn/nubia/server/policy/edge/StatisticsCollector;->callCollectorOnEventWithStartOnceMap(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 37
     return-void
 .end method
 
@@ -486,12 +446,10 @@
     .param p4, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 25
     .local v0, "parameter":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "left_or_right"
 
@@ -502,7 +460,6 @@
     :goto_0
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 26
     const-string v2, "up_or_down"
 
     if-eqz p2, :cond_1
@@ -512,26 +469,21 @@
     :goto_1
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 27
     const-string v1, "type"
 
     invoke-interface {v0, v1, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 28
     const-string v1, "fit2_single_side_move"
 
     invoke-static {p1, v1, v0}, Lcn/nubia/server/policy/edge/StatisticsCollector;->callCollectorOnEventWithStartOnceMap(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 30
     return-void
 
-    .line 25
     :cond_0
     const-string v1, "right"
 
     goto :goto_0
 
-    .line 26
     :cond_1
     const-string v1, "down"
 
@@ -544,12 +496,10 @@
     .param p2, "isSuccess"    # I
 
     .prologue
-    .line 56
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 57
     .local v0, "parameter":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "success"
 
@@ -559,11 +509,9 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 58
     const-string v1, "fit2_single_tap"
 
     invoke-static {p1, v1, v0}, Lcn/nubia/server/policy/edge/StatisticsCollector;->callCollectorOnEventWithStartOnceMap(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 59
     return-void
 .end method

@@ -18,16 +18,12 @@
     .param p2, "mContext"    # Landroid/content/Context;
 
     .prologue
-    .line 16
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 17
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/observe/SettingObserver;->mHandler:Landroid/os/Handler;
 
-    .line 18
     iput-object p2, p0, Lcn/nubia/server/policy/smartface/observe/SettingObserver;->mContext:Landroid/content/Context;
 
-    .line 19
     return-void
 .end method
 
@@ -41,10 +37,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 23
     invoke-virtual {p0}, Lcn/nubia/server/policy/smartface/observe/SettingObserver;->update()V
 
-    .line 24
     return-void
 .end method
 
@@ -53,10 +47,8 @@
     .param p1, "l"    # Lcn/nubia/server/policy/smartface/observe/ObserverManager$ObserveCallback;
 
     .prologue
-    .line 27
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/observe/SettingObserver;->mCallback:Lcn/nubia/server/policy/smartface/observe/ObserverManager$ObserveCallback;
 
-    .line 28
     return-void
 .end method
 

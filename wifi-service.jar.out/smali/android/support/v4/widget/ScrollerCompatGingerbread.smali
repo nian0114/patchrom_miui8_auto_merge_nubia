@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,13 +18,11 @@
     .param p0, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 67
     check-cast p0, Landroid/widget/OverScroller;
 
     .end local p0    # "scroller":Ljava/lang/Object;
     invoke-virtual {p0}, Landroid/widget/OverScroller;->abortAnimation()V
 
-    .line 68
     return-void
 .end method
 
@@ -34,7 +31,6 @@
     .param p0, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 43
     check-cast p0, Landroid/widget/OverScroller;
 
     .end local p0    # "scroller":Ljava/lang/Object;
@@ -51,7 +47,6 @@
     .param p1, "interpolator"    # Landroid/view/animation/Interpolator;
 
     .prologue
-    .line 26
     if-eqz p1, :cond_0
 
     new-instance v0, Landroid/widget/OverScroller;
@@ -82,7 +77,6 @@
     .param p8, "maxY"    # I
 
     .prologue
-    .line 57
     move-object v0, p0
 
     check-cast v0, Landroid/widget/OverScroller;
@@ -105,7 +99,6 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/widget/OverScroller;->fling(IIIIIIII)V
 
-    .line 58
     return-void
 .end method
 
@@ -124,7 +117,6 @@
     .param p10, "overY"    # I
 
     .prologue
-    .line 62
     move-object v0, p0
 
     check-cast v0, Landroid/widget/OverScroller;
@@ -151,7 +143,6 @@
 
     invoke-virtual/range {v0 .. v10}, Landroid/widget/OverScroller;->fling(IIIIIIIIII)V
 
-    .line 64
     return-void
 .end method
 
@@ -160,7 +151,6 @@
     .param p0, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 35
     check-cast p0, Landroid/widget/OverScroller;
 
     .end local p0    # "scroller":Ljava/lang/Object;
@@ -176,7 +166,6 @@
     .param p0, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 39
     check-cast p0, Landroid/widget/OverScroller;
 
     .end local p0    # "scroller":Ljava/lang/Object;
@@ -192,7 +181,6 @@
     .param p0, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 84
     check-cast p0, Landroid/widget/OverScroller;
 
     .end local p0    # "scroller":Ljava/lang/Object;
@@ -208,7 +196,6 @@
     .param p0, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 88
     check-cast p0, Landroid/widget/OverScroller;
 
     .end local p0    # "scroller":Ljava/lang/Object;
@@ -224,7 +211,6 @@
     .param p0, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 31
     check-cast p0, Landroid/widget/OverScroller;
 
     .end local p0    # "scroller":Ljava/lang/Object;
@@ -240,7 +226,6 @@
     .param p0, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 80
     check-cast p0, Landroid/widget/OverScroller;
 
     .end local p0    # "scroller":Ljava/lang/Object;
@@ -259,13 +244,11 @@
     .param p3, "overX"    # I
 
     .prologue
-    .line 72
     check-cast p0, Landroid/widget/OverScroller;
 
     .end local p0    # "scroller":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Landroid/widget/OverScroller;->notifyHorizontalEdgeReached(III)V
 
-    .line 73
     return-void
 .end method
 
@@ -277,13 +260,11 @@
     .param p3, "overY"    # I
 
     .prologue
-    .line 76
     check-cast p0, Landroid/widget/OverScroller;
 
     .end local p0    # "scroller":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Landroid/widget/OverScroller;->notifyVerticalEdgeReached(III)V
 
-    .line 77
     return-void
 .end method
 
@@ -296,13 +277,11 @@
     .param p4, "dy"    # I
 
     .prologue
-    .line 47
     check-cast p0, Landroid/widget/OverScroller;
 
     .end local p0    # "scroller":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/OverScroller;->startScroll(IIII)V
 
-    .line 48
     return-void
 .end method
 
@@ -316,7 +295,6 @@
     .param p5, "duration"    # I
 
     .prologue
-    .line 52
     move-object v0, p0
 
     check-cast v0, Landroid/widget/OverScroller;
@@ -333,6 +311,5 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller;->startScroll(IIIII)V
 
-    .line 53
     return-void
 .end method

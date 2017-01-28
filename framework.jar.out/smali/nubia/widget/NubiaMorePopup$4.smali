@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 205
     iput-object p1, p0, Lnubia/widget/NubiaMorePopup$4;->this$0:Lnubia/widget/NubiaMorePopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 209
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$4;->this$0:Lnubia/widget/NubiaMorePopup;
 
@@ -65,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 210
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$4;->this$0:Lnubia/widget/NubiaMorePopup;
 
     # getter for: Lnubia/widget/NubiaMorePopup;->mOnClickListener:Lnubia/widget/NubiaMorePopup$OnClickListener;
@@ -75,7 +72,6 @@
 
     invoke-interface {v0, p3}, Lnubia/widget/NubiaMorePopup$OnClickListener;->onClick(I)V
 
-    .line 211
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$4;->this$0:Lnubia/widget/NubiaMorePopup;
 
     # getter for: Lnubia/widget/NubiaMorePopup;->mPopup:Landroid/widget/PopupWindow;
@@ -85,7 +81,6 @@
 
     invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
 
-    .line 213
     :cond_0
     return-void
 .end method

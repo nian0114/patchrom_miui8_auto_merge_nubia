@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 130
     iput-object p1, p0, Landroid/support/v4/media/TransportMediator$2;->this$0:Landroid/support/v4/media/TransportMediator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 133
     invoke-static {p1}, Landroid/support/v4/media/TransportMediator;->isMediaKey(I)Z
 
     move-result v0
@@ -72,7 +70,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 137
     const/4 v0, 0x0
 
     return v0
@@ -85,7 +82,6 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 147
     const/4 v0, 0x0
 
     return v0
@@ -97,7 +93,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 142
     invoke-static {p1}, Landroid/support/v4/media/TransportMediator;->isMediaKey(I)Z
 
     move-result v0

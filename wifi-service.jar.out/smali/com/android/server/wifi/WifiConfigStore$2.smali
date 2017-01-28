@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 2116
     iput-object p1, p0, Lcom/android/server/wifi/WifiConfigStore$2;->this$0:Lcom/android/server/wifi/WifiConfigStore;
 
     iput-object p2, p0, Lcom/android/server/wifi/WifiConfigStore$2;->val$homeSP:Lcom/android/server/wifi/hotspot2/pps/HomeSP;
@@ -54,13 +53,11 @@
     .end annotation
 
     .prologue
-    .line 2120
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore$2;->val$homeSP:Lcom/android/server/wifi/hotspot2/pps/HomeSP;
 
     if-eqz v1, :cond_0
 
-    .line 2121
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore$2;->this$0:Lcom/android/server/wifi/WifiConfigStore;
 
     # getter for: Lcom/android/server/wifi/WifiConfigStore;->mMOManager:Lcom/android/server/wifi/hotspot2/omadm/MOManager;
@@ -72,11 +69,9 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/wifi/hotspot2/omadm/MOManager;->addSP(Lcom/android/server/wifi/hotspot2/pps/HomeSP;)V
 
-    .line 2129
     :goto_0
     return-void
 
-    .line 2124
     :cond_0
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore$2;->this$0:Lcom/android/server/wifi/WifiConfigStore;
 
@@ -93,11 +88,9 @@
 
     goto :goto_0
 
-    .line 2126
     :catch_0
     move-exception v0
 
-    .line 2127
     .local v0, "e":Ljava/io/IOException;
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore$2;->this$0:Lcom/android/server/wifi/WifiConfigStore;
 

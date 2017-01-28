@@ -48,28 +48,20 @@
     .param p6, "status"    # I
 
     .prologue
-    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 129
     iput p1, p0, Lcom/android/internal/telephony/RadioCapability;->mPhoneId:I
 
-    .line 130
     iput p2, p0, Lcom/android/internal/telephony/RadioCapability;->mSession:I
 
-    .line 131
     iput p3, p0, Lcom/android/internal/telephony/RadioCapability;->mPhase:I
 
-    .line 132
     iput p4, p0, Lcom/android/internal/telephony/RadioCapability;->mRadioAccessFamily:I
 
-    .line 133
     iput-object p5, p0, Lcom/android/internal/telephony/RadioCapability;->mLogicalModemUuid:Ljava/lang/String;
 
-    .line 134
     iput p6, p0, Lcom/android/internal/telephony/RadioCapability;->mStatus:I
 
-    .line 135
     return-void
 .end method
 
@@ -79,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 189
     iget-object v0, p0, Lcom/android/internal/telephony/RadioCapability;->mLogicalModemUuid:Ljava/lang/String;
 
     return-object v0
@@ -89,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 171
     iget v0, p0, Lcom/android/internal/telephony/RadioCapability;->mPhase:I
 
     return v0
@@ -99,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget v0, p0, Lcom/android/internal/telephony/RadioCapability;->mPhoneId:I
 
     return v0
@@ -109,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 180
     iget v0, p0, Lcom/android/internal/telephony/RadioCapability;->mRadioAccessFamily:I
 
     return v0
@@ -119,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 161
     iget v0, p0, Lcom/android/internal/telephony/RadioCapability;->mSession:I
 
     return v0
@@ -129,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 198
     iget v0, p0, Lcom/android/internal/telephony/RadioCapability;->mStatus:I
 
     return v0
@@ -139,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 152
     const/4 v0, 0x1
 
     return v0
@@ -149,7 +134,6 @@
     .locals 2
 
     .prologue
-    .line 203
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

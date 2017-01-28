@@ -24,22 +24,16 @@
     .param p4, "timeout"    # I
 
     .prologue
-    .line 34
     invoke-direct {p0, p1, p2, p3, p4}, Lorg/ksoap2/transport/HttpsTransportSE;-><init>(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 35
     iput-object p1, p0, Lorg/ksoap2/transport/KeepAliveHttpsTransportSE;->host:Ljava/lang/String;
 
-    .line 36
     iput p2, p0, Lorg/ksoap2/transport/KeepAliveHttpsTransportSE;->port:I
 
-    .line 37
     iput-object p3, p0, Lorg/ksoap2/transport/KeepAliveHttpsTransportSE;->file:Ljava/lang/String;
 
-    .line 38
     iput p4, p0, Lorg/ksoap2/transport/KeepAliveHttpsTransportSE;->timeout:I
 
-    .line 39
     return-void
 .end method
 
@@ -54,12 +48,10 @@
     .end annotation
 
     .prologue
-    .line 50
     iget-object v0, p0, Lorg/ksoap2/transport/KeepAliveHttpsTransportSE;->serviceConnection:Lorg/ksoap2/transport/ServiceConnection;
 
     if-nez v0, :cond_0
 
-    .line 51
     new-instance v0, Lorg/ksoap2/transport/HttpsServiceConnectionSEIgnoringConnectionClose;
 
     iget-object v1, p0, Lorg/ksoap2/transport/KeepAliveHttpsTransportSE;->host:Ljava/lang/String;
@@ -74,7 +66,6 @@
 
     iput-object v0, p0, Lorg/ksoap2/transport/KeepAliveHttpsTransportSE;->serviceConnection:Lorg/ksoap2/transport/ServiceConnection;
 
-    .line 53
     iget-object v0, p0, Lorg/ksoap2/transport/KeepAliveHttpsTransportSE;->serviceConnection:Lorg/ksoap2/transport/ServiceConnection;
 
     const-string v1, "Connection"
@@ -83,7 +74,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/ksoap2/transport/ServiceConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 55
     :cond_0
     iget-object v0, p0, Lorg/ksoap2/transport/KeepAliveHttpsTransportSE;->serviceConnection:Lorg/ksoap2/transport/ServiceConnection;
 

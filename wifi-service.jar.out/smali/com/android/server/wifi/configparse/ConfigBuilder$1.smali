@@ -25,7 +25,6 @@
     .locals 3
 
     .prologue
-    .line 376
     invoke-static {}, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;->values()[Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
     move-result-object v0
@@ -99,7 +98,6 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_5
 
-    .line 178
     :goto_3
     invoke-static {}, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->values()[Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
@@ -218,7 +216,6 @@
 
     goto :goto_4
 
-    .line 376
     :catch_5
     move-exception v0
 

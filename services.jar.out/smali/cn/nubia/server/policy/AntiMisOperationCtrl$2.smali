@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 112
     iput-object p1, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl$2;->this$0:Lcn/nubia/server/policy/AntiMisOperationCtrl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 115
     iget-object v3, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl$2;->this$0:Lcn/nubia/server/policy/AntiMisOperationCtrl;
 
     # invokes: Lcn/nubia/server/policy/AntiMisOperationCtrl;->isPocketModeEnable()Z
@@ -51,22 +49,18 @@
 
     move-result v1
 
-    .line 116
     .local v1, "pocketEnabled":Z
     if-nez v1, :cond_1
 
-    .line 117
     iget-object v2, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl$2;->this$0:Lcn/nubia/server/policy/AntiMisOperationCtrl;
 
     # invokes: Lcn/nubia/server/policy/AntiMisOperationCtrl;->stopScreenSaverService()V
     invoke-static {v2}, Lcn/nubia/server/policy/AntiMisOperationCtrl;->access$200(Lcn/nubia/server/policy/AntiMisOperationCtrl;)V
 
-    .line 126
     :cond_0
     :goto_0
     return-void
 
-    .line 119
     :cond_1
     iget-object v3, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl$2;->this$0:Lcn/nubia/server/policy/AntiMisOperationCtrl;
 
@@ -87,12 +81,10 @@
 
     if-ne v3, v0, :cond_2
 
-    .line 122
     .local v0, "avoidMistouchEnable":Z
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 123
     iget-object v2, p0, Lcn/nubia/server/policy/AntiMisOperationCtrl$2;->this$0:Lcn/nubia/server/policy/AntiMisOperationCtrl;
 
     # invokes: Lcn/nubia/server/policy/AntiMisOperationCtrl;->startScreenSaverService()V
@@ -104,6 +96,5 @@
     :cond_2
     move v0, v2
 
-    .line 119
     goto :goto_1
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 234
     iput-object p1, p0, Lnubia/widget/MagnifierController$1;->this$0:Lnubia/widget/MagnifierController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 237
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -58,14 +56,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 239
     :cond_0
     iget-object v0, p0, Lnubia/widget/MagnifierController$1;->this$0:Lnubia/widget/MagnifierController;
 
     # invokes: Lnubia/widget/MagnifierController;->postAsync(Landroid/view/MotionEvent;)V
     invoke-static {v0, p1}, Lnubia/widget/MagnifierController;->access$000(Lnubia/widget/MagnifierController;Landroid/view/MotionEvent;)V
 
-    .line 241
     :cond_1
     return-void
 .end method

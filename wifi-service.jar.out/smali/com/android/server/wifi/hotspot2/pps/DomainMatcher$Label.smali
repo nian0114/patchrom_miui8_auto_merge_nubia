@@ -36,13 +36,10 @@
     .param p1, "match"    # Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     iput-object p1, p0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->mMatch:Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
-    .line 27
     sget-object v0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;->None:Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
     if-ne p1, v0, :cond_0
@@ -54,10 +51,8 @@
     :goto_0
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->mSubDomains:Ljava/util/Map;
 
-    .line 28
     return-void
 
-    .line 27
     :cond_0
     const/4 v0, 0x0
 
@@ -70,7 +65,6 @@
     .param p2, "x1"    # Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$1;
 
     .prologue
-    .line 21
     invoke-direct {p0, p1}, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;-><init>(Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;)V
 
     return-void
@@ -83,7 +77,6 @@
     .param p2, "x2"    # Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
     .prologue
-    .line 21
     invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->addDomain(Ljava/util/Iterator;Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;)V
 
     return-void
@@ -95,7 +88,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 21
     invoke-direct {p0, p1}, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->getSubLabel(Ljava/lang/String;)Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;
 
     move-result-object v0
@@ -119,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 31
     .local p1, "labels":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -127,7 +118,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 32
     .local v0, "labelName":Ljava/lang/String;
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -135,28 +125,23 @@
 
     if-eqz v2, :cond_0
 
-    .line 33
     new-instance v1, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;
 
     sget-object v2, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;->None:Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
     invoke-direct {v1, v2}, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;-><init>(Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;)V
 
-    .line 34
     .local v1, "subLabel":Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->mSubDomains:Ljava/util/Map;
 
     invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 35
     invoke-direct {v1, p1, p2}, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->addDomain(Ljava/util/Iterator;Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;)V
 
-    .line 39
     .end local v1    # "subLabel":Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;
     :goto_0
     return-void
 
-    .line 37
     :cond_0
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->mSubDomains:Ljava/util/Map;
 
@@ -174,7 +159,6 @@
     .param p1, "labelString"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->mSubDomains:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -191,17 +175,14 @@
     .param p1, "sb"    # Ljava/lang/StringBuilder;
 
     .prologue
-    .line 50
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->mSubDomains:Ljava/util/Map;
 
     if-eqz v2, :cond_1
 
-    .line 51
     const-string v2, ".{"
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 52
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->mSubDomains:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -226,7 +207,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 53
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -236,7 +216,6 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 54
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -247,19 +226,16 @@
 
     goto :goto_0
 
-    .line 56
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;>;"
     :cond_0
     const/16 v2, 0x7d
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 60
     .end local v1    # "i$":Ljava/util/Iterator;
     :goto_1
     return-void
 
-    .line 58
     :cond_1
     const/16 v2, 0x3d
 
@@ -280,7 +256,6 @@
     .locals 1
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->mMatch:Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
     return-object v0
@@ -290,16 +265,13 @@
     .locals 2
 
     .prologue
-    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 65
     .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-direct {p0, v0}, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Label;->toString(Ljava/lang/StringBuilder;)V
 
-    .line 66
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

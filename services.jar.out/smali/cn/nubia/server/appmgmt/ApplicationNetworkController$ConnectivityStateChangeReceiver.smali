@@ -27,26 +27,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 923
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 921
     iput-object v3, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
-    .line 924
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 925
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 929
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->access$1800(Lcn/nubia/server/appmgmt/ApplicationNetworkController;)Landroid/content/Context;
 
@@ -59,7 +54,6 @@
 
     invoke-virtual {v1, p0, v0, v3, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 930
     return-void
 .end method
 
@@ -73,7 +67,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 934
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -82,12 +75,10 @@
 
     if-nez v2, :cond_1
 
-    .line 977
     :cond_0
     :goto_0
     return-void
 
-    .line 937
     :cond_1
     const-string v2, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -101,12 +92,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 940
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     if-nez v2, :cond_2
 
-    .line 941
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mContext:Landroid/content/Context;
@@ -124,31 +113,26 @@
 
     iput-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
-    .line 943
     :cond_2
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     if-eqz v2, :cond_0
 
-    .line 946
     const-string v2, "ApplicationNetworkController"
 
     const-string v3, "get connectivityStateChange"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 947
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v2}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 948
     .local v0, "ni":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_7
 
-    .line 949
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mDumpDebugLog:Z
@@ -158,7 +142,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 950
     const-string v2, "ApplicationNetworkController"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -185,7 +168,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 953
     :cond_3
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
 
@@ -193,12 +175,10 @@
 
     if-nez v2, :cond_7
 
-    .line 954
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getSubtype()I
 
     move-result v1
 
-    .line 955
     .local v1, "subType":I
     const/4 v2, 0x4
 
@@ -210,7 +190,6 @@
 
     if-ne v1, v2, :cond_7
 
-    .line 958
     :cond_4
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -221,7 +200,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 959
     const-string v2, "ApplicationNetworkController"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -244,7 +222,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 962
     :cond_5
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -255,7 +232,6 @@
 
     if-nez v2, :cond_6
 
-    .line 963
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
@@ -272,7 +248,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 964
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
@@ -289,7 +264,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 966
     :cond_6
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -298,7 +272,6 @@
 
     goto/16 :goto_0
 
-    .line 972
     .end local v1    # "subType":I
     :cond_7
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
@@ -310,7 +283,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 973
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
@@ -327,7 +299,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 974
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
@@ -344,7 +315,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 976
     :cond_8
     iget-object v2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ConnectivityStateChangeReceiver;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 

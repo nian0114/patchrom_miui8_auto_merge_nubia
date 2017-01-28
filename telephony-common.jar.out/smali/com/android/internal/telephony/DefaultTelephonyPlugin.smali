@@ -12,10 +12,8 @@
     .locals 1
 
     .prologue
-    .line 40
     invoke-direct {p0}, Lcom/android/internal/telephony/TelephonyPluginBase;-><init>()V
 
-    .line 41
     const-string v0, "DefaultTelephonyPlugin"
 
     iput-object v0, p0, Lcom/android/internal/telephony/DefaultTelephonyPlugin;->TAG:Ljava/lang/String;

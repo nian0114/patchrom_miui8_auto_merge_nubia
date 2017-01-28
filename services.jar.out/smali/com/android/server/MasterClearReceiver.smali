@@ -20,10 +20,8 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 90
     return-void
 .end method
 
@@ -37,7 +35,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 41
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -50,7 +47,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 42
     const-string v1, "google.com"
 
     const-string v2, "from"
@@ -65,18 +61,15 @@
 
     if-nez v1, :cond_0
 
-    .line 43
     const-string v1, "MasterClear"
 
     const-string v2, "Ignoring master clear request -- not from trusted server."
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     :goto_0
     return-void
 
-    .line 48
     :cond_0
     const-string v1, "shutdown"
 
@@ -84,7 +77,6 @@
 
     move-result v5
 
-    .line 49
     .local v5, "shutdown":Z
     const-string v1, "android.intent.extra.REASON"
 
@@ -92,7 +84,6 @@
 
     move-result-object v6
 
-    .line 50
     .local v6, "reason":Ljava/lang/String;
     const-string v1, "android.intent.extra.WIPE_EXTERNAL_STORAGE"
 
@@ -100,7 +91,6 @@
 
     move-result v7
 
-    .line 53
     .local v7, "wipeExternalStorage":Z
     const-string v1, "extra.deletedata.args"
 
@@ -108,7 +98,6 @@
 
     move-result-object v3
 
-    .line 55
     .local v3, "args":Ljava/lang/String;
     const-string v1, "MasterClear"
 
@@ -116,7 +105,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     new-instance v0, Lcom/android/server/MasterClearReceiver$1;
 
     const-string v2, "Reboot"
@@ -127,11 +115,9 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/MasterClearReceiver$1;-><init>(Lcom/android/server/MasterClearReceiver;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;ZLjava/lang/String;)V
 
-    .line 82
     .local v0, "thr":Ljava/lang/Thread;
     if-eqz v7, :cond_1
 
-    .line 84
     new-instance v1, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;
 
     invoke-direct {v1, p0, p1, v0}, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;-><init>(Lcom/android/server/MasterClearReceiver;Landroid/content/Context;Ljava/lang/Thread;)V
@@ -142,7 +128,6 @@
 
     goto :goto_0
 
-    .line 86
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 

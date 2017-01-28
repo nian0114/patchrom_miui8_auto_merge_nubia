@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 410
     iput-object p1, p0, Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 13
 
     .prologue
-    .line 413
     new-instance v0, Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle;
@@ -118,11 +116,9 @@
 
     invoke-direct/range {v0 .. v12}, Lcom/android/server/display/NubiaOverlayDisplayWindow;-><init>(Landroid/content/Context;Ljava/lang/String;IIIIIILjava/lang/String;DLcom/android/server/display/NubiaOverlayDisplayWindow$Listener;)V
 
-    .line 417
     .local v0, "window":Lcom/android/server/display/NubiaOverlayDisplayWindow;
     invoke-virtual {v0}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->show()V
 
-    .line 418
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle;
 
     iget-object v1, v1, Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle;->this$0:Lcom/android/server/display/NubiaOverlayDisplayAdapter;
@@ -133,20 +129,16 @@
 
     monitor-enter v2
 
-    .line 419
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle;
 
     # setter for: Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle;->mWindow:Lcom/android/server/display/NubiaOverlayDisplayWindow;
     invoke-static {v1, v0}, Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle;->access$1202(Lcom/android/server/display/NubiaOverlayDisplayAdapter$OverlayDisplayHandle;Lcom/android/server/display/NubiaOverlayDisplayWindow;)Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
-    .line 420
     monitor-exit v2
 
-    .line 421
     return-void
 
-    .line 420
     :catchall_0
     move-exception v1
 

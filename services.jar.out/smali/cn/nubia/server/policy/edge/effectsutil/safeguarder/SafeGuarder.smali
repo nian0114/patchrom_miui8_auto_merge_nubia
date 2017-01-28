@@ -20,16 +20,12 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;->mGuardHandler:Landroid/os/Handler;
 
-    .line 16
     iput-object p2, p0, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;->mLooper:Landroid/os/Looper;
 
-    .line 17
     return-void
 .end method
 
@@ -40,7 +36,6 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 20
     new-instance v0, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/HandlerSafeWrapper;
 
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;->mGuardHandler:Landroid/os/Handler;
@@ -57,7 +52,6 @@
     .param p1, "runnable"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 24
     new-instance v0, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/RunnableSafeWrapper;
 
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;->mGuardHandler:Landroid/os/Handler;
@@ -72,7 +66,6 @@
     .param p1, "e"    # Ljava/lang/Exception;
 
     .prologue
-    .line 28
     const-string v1, "FitAnimCrash"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -95,7 +88,6 @@
 
     invoke-static {v1, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 29
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;->mGuardHandler:Landroid/os/Handler;
 
     const v2, 0x50001
@@ -104,12 +96,10 @@
 
     move-result-object v0
 
-    .line 30
     .local v0, "messgae":Landroid/os/Message;
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;->mGuardHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 31
     return-void
 .end method

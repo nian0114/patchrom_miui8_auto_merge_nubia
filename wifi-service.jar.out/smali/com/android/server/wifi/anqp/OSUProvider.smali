@@ -76,10 +76,8 @@
 
     const v11, 0xffff
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v9
@@ -88,7 +86,6 @@
 
     if-ge v9, v10, :cond_0
 
-    .line 31
     new-instance v9, Ljava/net/ProtocolException;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -117,7 +114,6 @@
 
     throw v9
 
-    .line 34
     :cond_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -125,7 +121,6 @@
 
     and-int v4, v9, v11
 
-    .line 35
     .local v4, "length":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -133,7 +128,6 @@
 
     and-int v8, v9, v11
 
-    .line 37
     .local v8, "namesLength":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
@@ -145,7 +139,6 @@
 
     move-result-object v7
 
-    .line 38
     .local v7, "namesBuffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v7}, Ljava/nio/ByteBuffer;->position()I
 
@@ -155,7 +148,6 @@
 
     invoke-virtual {v7, v9}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 39
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v9
@@ -164,14 +156,12 @@
 
     invoke-virtual {p1, v9}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 41
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v9, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mNames:Ljava/util/List;
 
-    .line 43
     :goto_0
     invoke-virtual {v7}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -179,7 +169,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 44
     iget-object v9, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mNames:Ljava/util/List;
 
     new-instance v10, Lcom/android/server/wifi/anqp/I18Name;
@@ -190,7 +179,6 @@
 
     goto :goto_0
 
-    .line 47
     :cond_1
     sget-object v9, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -200,14 +188,12 @@
 
     iput-object v9, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mOSUServer:Ljava/lang/String;
 
-    .line 48
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v9
 
     and-int/lit16 v6, v9, 0xff
 
-    .line 49
     .local v6, "methodLength":I
     new-instance v9, Ljava/util/ArrayList;
 
@@ -215,18 +201,15 @@
 
     iput-object v9, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mOSUMethods:Ljava/util/List;
 
-    .line 50
     :goto_1
     if-lez v6, :cond_3
 
-    .line 51
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v9
 
     and-int/lit16 v5, v9, 0xff
 
-    .line 52
     .local v5, "methodID":I
     iget-object v10, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mOSUMethods:Ljava/util/List;
 
@@ -247,19 +230,15 @@
     :goto_2
     invoke-interface {v10, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 55
     add-int/lit8 v6, v6, -0x1
 
-    .line 56
     goto :goto_1
 
-    .line 52
     :cond_2
     const/4 v9, 0x0
 
     goto :goto_2
 
-    .line 58
     .end local v5    # "methodID":I
     :cond_3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
@@ -268,7 +247,6 @@
 
     and-int v3, v9, v11
 
-    .line 59
     .local v3, "iconsLength":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
@@ -280,7 +258,6 @@
 
     move-result-object v2
 
-    .line 60
     .local v2, "iconsBuffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->position()I
 
@@ -290,7 +267,6 @@
 
     invoke-virtual {v2, v9}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 61
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v9
@@ -299,14 +275,12 @@
 
     invoke-virtual {p1, v9}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 63
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v9, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mIcons:Ljava/util/List;
 
-    .line 65
     :goto_3
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -314,7 +288,6 @@
 
     if-eqz v9, :cond_4
 
-    .line 66
     iget-object v9, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mIcons:Ljava/util/List;
 
     new-instance v10, Lcom/android/server/wifi/anqp/IconInfo;
@@ -325,7 +298,6 @@
 
     goto :goto_3
 
-    .line 69
     :cond_4
     sget-object v9, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -335,14 +307,12 @@
 
     iput-object v9, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mOsuNai:Ljava/lang/String;
 
-    .line 71
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v9
 
     and-int v1, v9, v11
 
-    .line 72
     .local v1, "descriptionsLength":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
@@ -354,7 +324,6 @@
 
     move-result-object v0
 
-    .line 73
     .local v0, "descriptionsBuffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->position()I
 
@@ -364,7 +333,6 @@
 
     invoke-virtual {v0, v9}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 74
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v9
@@ -373,14 +341,12 @@
 
     invoke-virtual {p1, v9}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 76
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v9, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mServiceDescriptions:Ljava/util/List;
 
-    .line 78
     :goto_4
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -388,7 +354,6 @@
 
     if-eqz v9, :cond_5
 
-    .line 79
     iget-object v9, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mServiceDescriptions:Ljava/util/List;
 
     new-instance v10, Lcom/android/server/wifi/anqp/I18Name;
@@ -399,7 +364,6 @@
 
     goto :goto_4
 
-    .line 81
     :cond_5
     return-void
 .end method
@@ -419,7 +383,6 @@
     .end annotation
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mIcons:Ljava/util/List;
 
     return-object v0
@@ -438,7 +401,6 @@
     .end annotation
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mNames:Ljava/util/List;
 
     return-object v0
@@ -457,7 +419,6 @@
     .end annotation
 
     .prologue
-    .line 92
     iget-object v0, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mOSUMethods:Ljava/util/List;
 
     return-object v0
@@ -467,7 +428,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mOSUServer:Ljava/lang/String;
 
     return-object v0
@@ -477,7 +437,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mOsuNai:Ljava/lang/String;
 
     return-object v0
@@ -496,7 +455,6 @@
     .end annotation
 
     .prologue
-    .line 104
     iget-object v0, p0, Lcom/android/server/wifi/anqp/OSUProvider;->mServiceDescriptions:Ljava/util/List;
 
     return-object v0
@@ -508,7 +466,6 @@
     .prologue
     const/16 v2, 0x27
 
-    .line 109
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

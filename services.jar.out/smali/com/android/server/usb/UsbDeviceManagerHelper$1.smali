@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 87
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManagerHelper$1;->this$0:Lcom/android/server/usb/UsbDeviceManagerHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 89
     const-string v0, "UsbDMHelper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -79,7 +77,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/usb/UsbDeviceManagerHelper$1;->this$0:Lcom/android/server/usb/UsbDeviceManagerHelper;
 
     # getter for: Lcom/android/server/usb/UsbDeviceManagerHelper;->mIsChanging:Z
@@ -89,7 +86,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 92
     iget-object v1, p0, Lcom/android/server/usb/UsbDeviceManagerHelper$1;->this$0:Lcom/android/server/usb/UsbDeviceManagerHelper;
 
     const-string v0, "android.intent.action.ACTION_POWER_CONNECTED"
@@ -110,17 +106,14 @@
     # setter for: Lcom/android/server/usb/UsbDeviceManagerHelper;->mIsChanging:Z
     invoke-static {v1, v0}, Lcom/android/server/usb/UsbDeviceManagerHelper;->access$002(Lcom/android/server/usb/UsbDeviceManagerHelper;Z)Z
 
-    .line 96
     :goto_1
     return-void
 
-    .line 92
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 95
     :cond_1
     iget-object v0, p0, Lcom/android/server/usb/UsbDeviceManagerHelper$1;->this$0:Lcom/android/server/usb/UsbDeviceManagerHelper;
 

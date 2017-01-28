@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 78
     iput-object p1, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$2;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,20 +39,17 @@
     .locals 2
 
     .prologue
-    .line 81
     const-string v0, "supersnapshot"
 
     const-string v1, "long press timeout: POWER + VOLDOWN"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$2;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     # invokes: Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->cancelPendingScreenshotChordAction()V
     invoke-static {v0}, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->access$200(Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;)V
 
-    .line 83
     iget-object v0, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$2;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     const/4 v1, 0x1
@@ -61,13 +57,11 @@
     # setter for: Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->mLongPressVolDownPwr:Z
     invoke-static {v0, v1}, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->access$302(Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;Z)Z
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$2;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     # invokes: Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->cancelPendingScreenshotForLog()V
     invoke-static {v0}, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->access$400(Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;)V
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$2;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     # getter for: Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->mHandler:Landroid/os/Handler;
@@ -84,7 +78,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl$2;->this$0:Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;
 
     const/4 v1, 0x0
@@ -92,6 +85,5 @@
     # setter for: Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->mVolumeDownKeyConsumedByScreenshotChord:Z
     invoke-static {v0, v1}, Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;->access$702(Lcom/android/server/policy/PowerAndVolumeScreenshotCtrl;Z)Z
 
-    .line 87
     return-void
 .end method

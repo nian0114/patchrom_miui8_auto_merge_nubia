@@ -58,20 +58,16 @@
     .end annotation
 
     .prologue
-    .line 148
     .local p2, "pre":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     .local p3, "all":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->this$0:Lcn/nubia/server/appmgmt/ApplicationPushController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 149
     iput-object p2, p0, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->prefixs:Ljava/util/HashSet;
 
-    .line 150
     iput-object p3, p0, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->alloweds:Ljava/util/HashSet;
 
-    .line 151
     return-void
 .end method
 
@@ -80,7 +76,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
 
     .prologue
-    .line 145
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->prefixs:Ljava/util/HashSet;
 
     return-object v0
@@ -91,7 +86,6 @@
     .param p0, "x0"    # Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;
 
     .prologue
-    .line 145
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationPushController$XmlData;->alloweds:Ljava/util/HashSet;
 
     return-object v0

@@ -13,13 +13,10 @@
     .param p1, "animParam"    # Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;
 
     .prologue
-    .line 9
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    .line 10
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/EndAnimListener;->mAnimParam:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;
 
-    .line 11
     return-void
 .end method
 
@@ -30,11 +27,9 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 15
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/EndAnimListener;->mAnimParam:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;->onAnimationEnd()V
 
-    .line 16
     return-void
 .end method

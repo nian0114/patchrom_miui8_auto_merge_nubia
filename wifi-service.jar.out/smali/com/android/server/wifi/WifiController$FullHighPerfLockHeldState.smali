@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 773
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$FullHighPerfLockHeldState;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,27 +38,23 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 776
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$FullHighPerfLockHeldState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->setOperationalMode(I)V
 
-    .line 777
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$FullHighPerfLockHeldState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->setDriverStart(Z)V
 
-    .line 778
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$FullHighPerfLockHeldState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->setHighPerfModeEnabled(Z)V
 
-    .line 779
     return-void
 .end method

@@ -44,24 +44,17 @@
     .param p5, "targetProcess"    # Ljava/lang/String;
 
     .prologue
-    .line 867
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 868
     iput p1, p0, Lcom/android/server/am/ActivityManagerService$Association;->mSourceUid:I
 
-    .line 869
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$Association;->mSourceProcess:Ljava/lang/String;
 
-    .line 870
     iput p3, p0, Lcom/android/server/am/ActivityManagerService$Association;->mTargetUid:I
 
-    .line 871
     iput-object p4, p0, Lcom/android/server/am/ActivityManagerService$Association;->mTargetComponent:Landroid/content/ComponentName;
 
-    .line 872
     iput-object p5, p0, Lcom/android/server/am/ActivityManagerService$Association;->mTargetProcess:Ljava/lang/String;
 
-    .line 873
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 276
     iput-object p1, p0, Lcom/android/server/wifi/WifiLogger$1;->this$0:Lcom/android/server/wifi/WifiLogger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "buffer"    # [B
 
     .prologue
-    .line 279
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger$1;->this$0:Lcom/android/server/wifi/WifiLogger;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/wifi/WifiLogger;->onRingBufferData(Lcom/android/server/wifi/WifiNative$RingBufferStatus;[B)V
 
-    .line 280
     return-void
 .end method
 
@@ -57,11 +54,9 @@
     .param p2, "buffer"    # [B
 
     .prologue
-    .line 284
     iget-object v0, p0, Lcom/android/server/wifi/WifiLogger$1;->this$0:Lcom/android/server/wifi/WifiLogger;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/wifi/WifiLogger;->onWifiAlert(I[B)V
 
-    .line 285
     return-void
 .end method

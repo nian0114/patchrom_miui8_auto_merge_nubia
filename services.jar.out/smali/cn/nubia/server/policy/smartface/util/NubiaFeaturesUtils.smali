@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 26
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -48,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,7 +57,6 @@
     .param p0, "enable"    # Z
 
     .prologue
-    .line 198
     sget-object v0, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils$4;
@@ -68,7 +65,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 204
     return-void
 .end method
 
@@ -78,14 +74,11 @@
     .param p1, "isSysSupport"    # Z
 
     .prologue
-    .line 39
     if-nez p1, :cond_0
 
-    .line 56
     :goto_0
     return-void
 
-    .line 41
     :cond_0
     sget-object v0, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;->mHandler:Landroid/os/Handler;
 
@@ -103,7 +96,6 @@
     .param p0, "enable"    # Z
 
     .prologue
-    .line 29
     sget-object v0, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils$1;
@@ -112,7 +104,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 35
     return-void
 .end method
 
@@ -122,14 +113,11 @@
     .param p1, "isSysSupport"    # Z
 
     .prologue
-    .line 60
     if-nez p1, :cond_0
 
-    .line 73
     :goto_0
     return-void
 
-    .line 62
     :cond_0
     sget-object v0, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;->mHandler:Landroid/os/Handler;
 
@@ -147,12 +135,10 @@
     .param p0, "enabled"    # Z
 
     .prologue
-    .line 130
     const-class v5, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;
 
     monitor-enter v5
 
-    .line 131
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -160,7 +146,6 @@
 
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 132
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -168,20 +153,16 @@
 
     if-nez v4, :cond_0
 
-    .line 133
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 155
     :goto_0
     return-void
 
-    .line 134
     :cond_0
     const/4 v2, 0x0
 
-    .line 136
     .local v2, "writer":Ljava/io/FileWriter;
     :try_start_1
     new-instance v3, Ljava/io/FileWriter;
@@ -193,28 +174,23 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 137
     .end local v2    # "writer":Ljava/io/FileWriter;
     .local v3, "writer":Ljava/io/FileWriter;
     if-eqz p0, :cond_2
 
-    .line 138
     :try_start_2
     const-string v4, "1"
 
     invoke-virtual {v3, v4}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 142
     :goto_1
     invoke-virtual {v3}, Ljava/io/FileWriter;->flush()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 146
     if-eqz v3, :cond_4
 
-    .line 148
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileWriter;->close()V
     :try_end_3
@@ -223,7 +199,6 @@
 
     move-object v2, v3
 
-    .line 154
     .end local v3    # "writer":Ljava/io/FileWriter;
     .restart local v2    # "writer":Ljava/io/FileWriter;
     :cond_1
@@ -244,7 +219,6 @@
 
     throw v4
 
-    .line 140
     .restart local v1    # "file":Ljava/io/File;
     .restart local v3    # "writer":Ljava/io/FileWriter;
     :cond_2
@@ -258,13 +232,11 @@
 
     goto :goto_1
 
-    .line 143
     :catch_0
     move-exception v0
 
     move-object v2, v3
 
-    .line 144
     .end local v3    # "writer":Ljava/io/FileWriter;
     .local v0, "e":Ljava/io/IOException;
     .restart local v2    # "writer":Ljava/io/FileWriter;
@@ -278,10 +250,8 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 146
     if-eqz v2, :cond_1
 
-    .line 148
     :try_start_7
     invoke-virtual {v2}, Ljava/io/FileWriter;->close()V
     :try_end_7
@@ -290,11 +260,9 @@
 
     goto :goto_2
 
-    .line 149
     :catch_1
     move-exception v0
 
-    .line 150
     :try_start_8
     const-string v4, "NubiaFeaturesManager"
 
@@ -304,14 +272,12 @@
 
     goto :goto_2
 
-    .line 149
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "writer":Ljava/io/FileWriter;
     .restart local v3    # "writer":Ljava/io/FileWriter;
     :catch_2
     move-exception v0
 
-    .line 150
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v4, "NubiaFeaturesManager"
 
@@ -323,12 +289,10 @@
 
     move-object v2, v3
 
-    .line 151
     .end local v3    # "writer":Ljava/io/FileWriter;
     .restart local v2    # "writer":Ljava/io/FileWriter;
     goto :goto_2
 
-    .line 146
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_1
     move-exception v4
@@ -336,24 +300,20 @@
     :goto_4
     if-eqz v2, :cond_3
 
-    .line 148
     :try_start_9
     invoke-virtual {v2}, Ljava/io/FileWriter;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_3
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 151
     :cond_3
     :goto_5
     :try_start_a
     throw v4
 
-    .line 149
     :catch_3
     move-exception v0
 
-    .line 150
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v6, "NubiaFeaturesManager"
 
@@ -365,7 +325,6 @@
 
     goto :goto_5
 
-    .line 146
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "writer":Ljava/io/FileWriter;
     .restart local v3    # "writer":Ljava/io/FileWriter;
@@ -378,7 +337,6 @@
     .restart local v2    # "writer":Ljava/io/FileWriter;
     goto :goto_4
 
-    .line 143
     :catch_4
     move-exception v0
 
@@ -399,12 +357,10 @@
     .param p0, "enabled"    # Z
 
     .prologue
-    .line 102
     const-class v5, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;
 
     monitor-enter v5
 
-    .line 103
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -412,7 +368,6 @@
 
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 104
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -420,20 +375,16 @@
 
     if-nez v4, :cond_0
 
-    .line 105
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 127
     :goto_0
     return-void
 
-    .line 106
     :cond_0
     const/4 v2, 0x0
 
-    .line 108
     .local v2, "writer":Ljava/io/FileWriter;
     :try_start_1
     new-instance v3, Ljava/io/FileWriter;
@@ -445,28 +396,23 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 109
     .end local v2    # "writer":Ljava/io/FileWriter;
     .local v3, "writer":Ljava/io/FileWriter;
     if-eqz p0, :cond_2
 
-    .line 110
     :try_start_2
     const-string v4, "3"
 
     invoke-virtual {v3, v4}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 114
     :goto_1
     invoke-virtual {v3}, Ljava/io/FileWriter;->flush()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 118
     if-eqz v3, :cond_4
 
-    .line 120
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileWriter;->close()V
     :try_end_3
@@ -475,7 +421,6 @@
 
     move-object v2, v3
 
-    .line 126
     .end local v3    # "writer":Ljava/io/FileWriter;
     .restart local v2    # "writer":Ljava/io/FileWriter;
     :cond_1
@@ -496,7 +441,6 @@
 
     throw v4
 
-    .line 112
     .restart local v1    # "file":Ljava/io/File;
     .restart local v3    # "writer":Ljava/io/FileWriter;
     :cond_2
@@ -510,13 +454,11 @@
 
     goto :goto_1
 
-    .line 115
     :catch_0
     move-exception v0
 
     move-object v2, v3
 
-    .line 116
     .end local v3    # "writer":Ljava/io/FileWriter;
     .local v0, "e":Ljava/io/IOException;
     .restart local v2    # "writer":Ljava/io/FileWriter;
@@ -530,10 +472,8 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 118
     if-eqz v2, :cond_1
 
-    .line 120
     :try_start_7
     invoke-virtual {v2}, Ljava/io/FileWriter;->close()V
     :try_end_7
@@ -542,11 +482,9 @@
 
     goto :goto_2
 
-    .line 121
     :catch_1
     move-exception v0
 
-    .line 122
     :try_start_8
     const-string v4, "NubiaFeaturesManager"
 
@@ -556,14 +494,12 @@
 
     goto :goto_2
 
-    .line 121
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "writer":Ljava/io/FileWriter;
     .restart local v3    # "writer":Ljava/io/FileWriter;
     :catch_2
     move-exception v0
 
-    .line 122
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v4, "NubiaFeaturesManager"
 
@@ -575,12 +511,10 @@
 
     move-object v2, v3
 
-    .line 123
     .end local v3    # "writer":Ljava/io/FileWriter;
     .restart local v2    # "writer":Ljava/io/FileWriter;
     goto :goto_2
 
-    .line 118
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_1
     move-exception v4
@@ -588,24 +522,20 @@
     :goto_4
     if-eqz v2, :cond_3
 
-    .line 120
     :try_start_9
     invoke-virtual {v2}, Ljava/io/FileWriter;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_3
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 123
     :cond_3
     :goto_5
     :try_start_a
     throw v4
 
-    .line 121
     :catch_3
     move-exception v0
 
-    .line 122
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v6, "NubiaFeaturesManager"
 
@@ -617,7 +547,6 @@
 
     goto :goto_5
 
-    .line 118
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "writer":Ljava/io/FileWriter;
     .restart local v3    # "writer":Ljava/io/FileWriter;
@@ -630,7 +559,6 @@
     .restart local v2    # "writer":Ljava/io/FileWriter;
     goto :goto_4
 
-    .line 115
     :catch_4
     move-exception v0
 
@@ -652,16 +580,13 @@
     .param p1, "filePath"    # Ljava/lang/String;
 
     .prologue
-    .line 158
     const/4 v0, 0x0
 
-    .line 159
     .local v0, "flag":Z
     invoke-static {p1}, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;->getScreenNodeModeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 160
     .local v1, "value":Ljava/lang/String;
     const-string v2, "NubiaFeaturesManager"
 
@@ -685,17 +610,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 162
     const/4 v0, 0x1
 
-    .line 164
     :cond_0
     return v0
 .end method
@@ -705,18 +627,15 @@
     .param p0, "filepath"    # Ljava/lang/String;
 
     .prologue
-    .line 168
     const-class v9, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;
 
     monitor-enter v9
 
-    .line 169
     :try_start_0
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 170
     .local v4, "file":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -724,22 +643,18 @@
 
     if-nez v8, :cond_0
 
-    .line 171
     const-string v7, ""
 
     monitor-exit v9
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 193
     :goto_0
     return-object v7
 
-    .line 173
     :cond_0
     const/4 v0, 0x0
 
-    .line 175
     .local v0, "breader":Ljava/io/BufferedReader;
     :try_start_1
     new-instance v1, Ljava/io/BufferedReader;
@@ -753,7 +668,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 176
     .end local v0    # "breader":Ljava/io/BufferedReader;
     .local v1, "breader":Ljava/io/BufferedReader;
     :try_start_2
@@ -761,16 +675,13 @@
 
     move-result-object v6
 
-    .line 177
     .local v6, "str":Ljava/lang/String;
     if-eqz v6, :cond_2
 
-    .line 178
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    .line 179
     .local v5, "length_str":I
     add-int/lit8 v8, v5, -0x1
 
@@ -781,18 +692,15 @@
 
     move-result-object v7
 
-    .line 185
     .local v7, "strnew":Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 187
     :try_start_3
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 190
     :cond_1
     :goto_1
     :try_start_4
@@ -800,7 +708,6 @@
 
     goto :goto_0
 
-    .line 194
     .end local v1    # "breader":Ljava/io/BufferedReader;
     .end local v4    # "file":Ljava/io/File;
     .end local v5    # "length_str":I
@@ -815,7 +722,6 @@
 
     throw v8
 
-    .line 188
     .restart local v1    # "breader":Ljava/io/BufferedReader;
     .restart local v4    # "file":Ljava/io/File;
     .restart local v5    # "length_str":I
@@ -824,7 +730,6 @@
     :catch_0
     move-exception v3
 
-    .line 189
     .local v3, "e2":Ljava/lang/Exception;
     :try_start_5
     const-string v8, "NubiaFeaturesManager"
@@ -837,14 +742,12 @@
 
     goto :goto_1
 
-    .line 185
     .end local v3    # "e2":Ljava/lang/Exception;
     .end local v5    # "length_str":I
     .end local v7    # "strnew":Ljava/lang/String;
     :cond_2
     if-eqz v1, :cond_5
 
-    .line 187
     :try_start_6
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_6
@@ -853,7 +756,6 @@
 
     move-object v0, v1
 
-    .line 193
     .end local v1    # "breader":Ljava/io/BufferedReader;
     .end local v6    # "str":Ljava/lang/String;
     .restart local v0    # "breader":Ljava/io/BufferedReader;
@@ -866,14 +768,12 @@
 
     goto :goto_0
 
-    .line 188
     .end local v0    # "breader":Ljava/io/BufferedReader;
     .restart local v1    # "breader":Ljava/io/BufferedReader;
     .restart local v6    # "str":Ljava/lang/String;
     :catch_1
     move-exception v3
 
-    .line 189
     .restart local v3    # "e2":Ljava/lang/Exception;
     const-string v8, "NubiaFeaturesManager"
 
@@ -885,18 +785,15 @@
 
     move-object v0, v1
 
-    .line 190
     .end local v1    # "breader":Ljava/io/BufferedReader;
     .restart local v0    # "breader":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 182
     .end local v3    # "e2":Ljava/lang/Exception;
     .end local v6    # "str":Ljava/lang/String;
     :catch_2
     move-exception v2
 
-    .line 183
     .local v2, "e":Ljava/io/IOException;
     :goto_3
     :try_start_8
@@ -908,10 +805,8 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 185
     if-eqz v0, :cond_3
 
-    .line 187
     :try_start_9
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_9
@@ -920,11 +815,9 @@
 
     goto :goto_2
 
-    .line 188
     :catch_3
     move-exception v3
 
-    .line 189
     .restart local v3    # "e2":Ljava/lang/Exception;
     :try_start_a
     const-string v8, "NubiaFeaturesManager"
@@ -937,7 +830,6 @@
 
     goto :goto_2
 
-    .line 185
     .end local v2    # "e":Ljava/io/IOException;
     .end local v3    # "e2":Ljava/lang/Exception;
     :catchall_1
@@ -946,24 +838,20 @@
     :goto_4
     if-eqz v0, :cond_4
 
-    .line 187
     :try_start_b
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_4
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
-    .line 190
     :cond_4
     :goto_5
     :try_start_c
     throw v8
 
-    .line 188
     :catch_4
     move-exception v3
 
-    .line 189
     .restart local v3    # "e2":Ljava/lang/Exception;
     const-string v10, "NubiaFeaturesManager"
 
@@ -975,7 +863,6 @@
 
     goto :goto_5
 
-    .line 185
     .end local v0    # "breader":Ljava/io/BufferedReader;
     .end local v3    # "e2":Ljava/lang/Exception;
     .restart local v1    # "breader":Ljava/io/BufferedReader;
@@ -988,7 +875,6 @@
     .restart local v0    # "breader":Ljava/io/BufferedReader;
     goto :goto_4
 
-    .line 182
     .end local v0    # "breader":Ljava/io/BufferedReader;
     .restart local v1    # "breader":Ljava/io/BufferedReader;
     :catch_5
@@ -1016,12 +902,10 @@
     .param p0, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 76
     const-class v5, Lcn/nubia/server/policy/smartface/util/NubiaFeaturesUtils;
 
     monitor-enter v5
 
-    .line 77
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -1029,7 +913,6 @@
 
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 78
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -1037,20 +920,16 @@
 
     if-nez v4, :cond_0
 
-    .line 79
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 98
     :goto_0
     return-void
 
-    .line 80
     :cond_0
     const/4 v2, 0x0
 
-    .line 82
     .local v2, "writer":Ljava/io/FileWriter;
     :try_start_1
     new-instance v3, Ljava/io/FileWriter;
@@ -1062,22 +941,18 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 83
     .end local v2    # "writer":Ljava/io/FileWriter;
     .local v3, "writer":Ljava/io/FileWriter;
     :try_start_2
     invoke-virtual {v3, p0}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {v3}, Ljava/io/FileWriter;->flush()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 88
     if-eqz v3, :cond_3
 
-    .line 90
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileWriter;->close()V
     :try_end_3
@@ -1086,7 +961,6 @@
 
     move-object v2, v3
 
-    .line 97
     .end local v3    # "writer":Ljava/io/FileWriter;
     .restart local v2    # "writer":Ljava/io/FileWriter;
     :cond_1
@@ -1107,13 +981,11 @@
 
     throw v4
 
-    .line 91
     .restart local v1    # "file":Ljava/io/File;
     .restart local v3    # "writer":Ljava/io/FileWriter;
     :catch_0
     move-exception v0
 
-    .line 92
     .local v0, "e":Ljava/io/IOException;
     :try_start_5
     const-string v4, "NubiaFeaturesManager"
@@ -1126,17 +998,14 @@
 
     move-object v2, v3
 
-    .line 94
     .end local v3    # "writer":Ljava/io/FileWriter;
     .restart local v2    # "writer":Ljava/io/FileWriter;
     goto :goto_1
 
-    .line 85
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 86
     .restart local v0    # "e":Ljava/io/IOException;
     :goto_2
     :try_start_6
@@ -1148,10 +1017,8 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 88
     if-eqz v2, :cond_1
 
-    .line 90
     :try_start_7
     invoke-virtual {v2}, Ljava/io/FileWriter;->close()V
     :try_end_7
@@ -1160,11 +1027,9 @@
 
     goto :goto_1
 
-    .line 91
     :catch_2
     move-exception v0
 
-    .line 92
     :try_start_8
     const-string v4, "NubiaFeaturesManager"
 
@@ -1176,7 +1041,6 @@
 
     goto :goto_1
 
-    .line 88
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_1
     move-exception v4
@@ -1184,24 +1048,20 @@
     :goto_3
     if-eqz v2, :cond_2
 
-    .line 90
     :try_start_9
     invoke-virtual {v2}, Ljava/io/FileWriter;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_3
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 94
     :cond_2
     :goto_4
     :try_start_a
     throw v4
 
-    .line 91
     :catch_3
     move-exception v0
 
-    .line 92
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v6, "NubiaFeaturesManager"
 
@@ -1213,7 +1073,6 @@
 
     goto :goto_4
 
-    .line 88
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "writer":Ljava/io/FileWriter;
     .restart local v3    # "writer":Ljava/io/FileWriter;
@@ -1226,7 +1085,6 @@
     .restart local v2    # "writer":Ljava/io/FileWriter;
     goto :goto_3
 
-    .line 85
     .end local v2    # "writer":Ljava/io/FileWriter;
     .restart local v3    # "writer":Ljava/io/FileWriter;
     :catch_4

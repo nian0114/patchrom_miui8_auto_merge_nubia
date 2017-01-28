@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 1296
     iput-object p1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,7 +57,6 @@
 
     const/4 v4, 0x0
 
-    .line 1306
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mCloseButton:Landroid/widget/ImageView;
@@ -68,7 +66,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1307
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -77,7 +74,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1309
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mContext:Landroid/content/Context;
@@ -93,17 +89,14 @@
 
     invoke-static {v0, v1, v4}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1311
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-virtual {v0}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->closeInputRect()V
 
-    .line 1364
     :cond_0
     :goto_0
     return v7
 
-    .line 1316
     :cond_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -111,20 +104,17 @@
 
     iput v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosCurrentX:F
 
-    .line 1317
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosCurrentY:F
 
-    .line 1319
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # invokes: Lcom/android/server/display/NubiaOverlayDisplayWindow;->needSingleLayerRefreshHere()V
     invoke-static {v0}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->access$900(Lcom/android/server/display/NubiaOverlayDisplayWindow;)V
 
-    .line 1321
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -135,7 +125,6 @@
 
     goto :goto_0
 
-    .line 1323
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
@@ -153,27 +142,23 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1324
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosStartX:F
 
-    .line 1325
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosStartY:F
 
-    .line 1326
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # invokes: Lcom/android/server/display/NubiaOverlayDisplayWindow;->ResetSlideBarAccordingToScreen()V
     invoke-static {v0}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->access$3200(Lcom/android/server/display/NubiaOverlayDisplayWindow;)V
 
-    .line 1327
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mSizeSlideBar:Landroid/view/ViewGroup;
@@ -183,7 +168,6 @@
 
     invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 1328
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mSizerMask:Landroid/view/ViewGroup;
@@ -193,7 +177,6 @@
 
     invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 1329
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mHigherCenterButton:Landroid/widget/ImageView;
@@ -203,7 +186,6 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1330
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mSizerButton:Landroid/widget/ImageView;
@@ -213,7 +195,6 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1331
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mCloseButton:Landroid/widget/ImageView;
@@ -223,7 +204,6 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1332
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
@@ -236,14 +216,12 @@
     # invokes: Lcom/android/server/display/NubiaOverlayDisplayWindow;->showHaloAnimation(Landroid/view/View;)V
     invoke-static {v0, v1}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->access$2800(Lcom/android/server/display/NubiaOverlayDisplayWindow;Landroid/view/View;)V
 
-    .line 1333
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-virtual {v0}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->closeInputRect()V
 
     goto :goto_0
 
-    .line 1336
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
@@ -256,7 +234,6 @@
     # invokes: Lcom/android/server/display/NubiaOverlayDisplayWindow;->adjustSlideBarBlockPosition(F)V
     invoke-static {v0, v1}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->access$3600(Lcom/android/server/display/NubiaOverlayDisplayWindow;F)V
 
-    .line 1337
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
@@ -335,19 +312,16 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->setSizerMaskSize(F)V
 
-    .line 1342
     iget v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosCurrentX:F
 
     iput v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosStartX:F
 
-    .line 1343
     iget v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosCurrentY:F
 
     iput v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosStartY:F
 
     goto/16 :goto_0
 
-    .line 1346
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
@@ -367,7 +341,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1347
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     iget v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosCurrentY:F
@@ -379,7 +352,6 @@
     # invokes: Lcom/android/server/display/NubiaOverlayDisplayWindow;->adjustSlideBarBlockPosition(F)V
     invoke-static {v0, v1}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->access$3600(Lcom/android/server/display/NubiaOverlayDisplayWindow;F)V
 
-    .line 1348
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
@@ -458,17 +430,14 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->setScreenSize(F)V
 
-    .line 1353
     iget v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosCurrentX:F
 
     iput v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosStartX:F
 
-    .line 1354
     iget v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosCurrentY:F
 
     iput v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->mSlidePosStartY:F
 
-    .line 1355
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mSizeSlideBar:Landroid/view/ViewGroup;
@@ -478,7 +447,6 @@
 
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 1356
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mSizerMask:Landroid/view/ViewGroup;
@@ -488,7 +456,6 @@
 
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 1357
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mHigherCenterButton:Landroid/widget/ImageView;
@@ -498,7 +465,6 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1358
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mSizerButton:Landroid/widget/ImageView;
@@ -508,7 +474,6 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1359
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mCloseButton:Landroid/widget/ImageView;
@@ -518,7 +483,6 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1360
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
@@ -531,14 +495,12 @@
     # invokes: Lcom/android/server/display/NubiaOverlayDisplayWindow;->hideHaloAnimation(Landroid/view/View;)V
     invoke-static {v0, v1}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->access$4000(Lcom/android/server/display/NubiaOverlayDisplayWindow;Landroid/view/View;)V
 
-    .line 1361
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$9;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-virtual {v0}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->resetInputRect()V
 
     goto/16 :goto_0
 
-    .line 1321
     nop
 
     :pswitch_data_0

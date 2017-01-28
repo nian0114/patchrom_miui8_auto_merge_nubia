@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 109
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationManagerService$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 112
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 113
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.PACKAGE_ADDED"
 
@@ -54,13 +51,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 114
     iget-object v1, p0, Lcn/nubia/server/appmgmt/ApplicationManagerService$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationManagerService;
 
     # invokes: Lcn/nubia/server/appmgmt/ApplicationManagerService;->updateAllControllersData()V
     invoke-static {v1}, Lcn/nubia/server/appmgmt/ApplicationManagerService;->access$000(Lcn/nubia/server/appmgmt/ApplicationManagerService;)V
 
-    .line 116
     :cond_0
     return-void
 .end method

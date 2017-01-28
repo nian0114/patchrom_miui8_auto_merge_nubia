@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 847
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 849
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$EAPMethod;
 
     invoke-direct {v0, p1}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$EAPMethod;-><init>(Landroid/os/Parcel;)V
@@ -57,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 847
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$EAPMethod$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/passpoint/WifiPasspointDmTree$EAPMethod;
 
     move-result-object v0
@@ -70,7 +67,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 853
     new-array v0, p1, [Landroid/net/wifi/passpoint/WifiPasspointDmTree$EAPMethod;
 
     return-object v0
@@ -80,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 847
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$EAPMethod$1;->newArray(I)[Landroid/net/wifi/passpoint/WifiPasspointDmTree$EAPMethod;
 
     move-result-object v0

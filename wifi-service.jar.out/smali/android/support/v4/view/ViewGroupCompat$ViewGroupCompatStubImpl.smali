@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "group"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     return v0
@@ -46,12 +44,10 @@
     .param p1, "group"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 88
     instance-of v0, p1, Landroid/support/v4/view/NestedScrollingParent;
 
     if-eqz v0, :cond_0
 
-    .line 89
     check-cast p1, Landroid/support/v4/view/NestedScrollingParent;
 
     .end local p1    # "group":Landroid/view/ViewGroup;
@@ -59,7 +55,6 @@
 
     move-result v0
 
-    .line 91
     :goto_0
     return v0
 
@@ -75,7 +70,6 @@
     .param p1, "group"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 83
     const/4 v0, 0x0
 
     return v0
@@ -88,7 +82,6 @@
     .param p3, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 60
     const/4 v0, 0x1
 
     return v0
@@ -100,7 +93,6 @@
     .param p2, "mode"    # I
 
     .prologue
-    .line 75
     return-void
 .end method
 
@@ -110,7 +102,6 @@
     .param p2, "split"    # Z
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -120,6 +111,5 @@
     .param p2, "isTransitionGroup"    # Z
 
     .prologue
-    .line 79
     return-void
 .end method

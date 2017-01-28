@@ -22,20 +22,16 @@
     .end annotation
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     new-array v0, p1, [B
 
     iput-object v0, p0, Lcom/android/server/wifi/anqp/eap/VendorSpecificAuth;->mData:[B
 
-    .line 16
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/VendorSpecificAuth;->mData:[B
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 17
     return-void
 .end method
 
@@ -46,18 +42,14 @@
     .param p1, "thatObject"    # Ljava/lang/Object;
 
     .prologue
-    .line 30
     if-ne p1, p0, :cond_0
 
-    .line 31
     const/4 v0, 0x1
 
-    .line 35
     .end local p1    # "thatObject":Ljava/lang/Object;
     :goto_0
     return v0
 
-    .line 32
     .restart local p1    # "thatObject":Ljava/lang/Object;
     :cond_0
     if-eqz p1, :cond_1
@@ -70,13 +62,11 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 33
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 35
     :cond_2
     check-cast p1, Lcom/android/server/wifi/anqp/eap/VendorSpecificAuth;
 
@@ -100,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 21
     sget-object v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->VendorSpecific:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
     return-object v0
@@ -110,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/VendorSpecificAuth;->mData:[B
 
     return-object v0
@@ -120,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/VendorSpecificAuth;->mData:[B
 
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
@@ -134,7 +121,6 @@
     .locals 2
 
     .prologue
-    .line 45
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

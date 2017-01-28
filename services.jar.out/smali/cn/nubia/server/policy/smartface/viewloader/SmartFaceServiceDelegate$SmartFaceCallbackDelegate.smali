@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 53
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate$SmartFaceCallbackDelegate;->this$0:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     invoke-direct {p0}, Lnubia/os/ISmartFaceCallback$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate$1;
 
     .prologue
-    .line 53
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate$SmartFaceCallbackDelegate;-><init>(Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;)V
 
     return-void
@@ -54,14 +52,12 @@
     .end annotation
 
     .prologue
-    .line 59
     const-string v0, "SmartFaceServiceDelegate"
 
     const-string v1, "**** SHOWN CALLED ****"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate$SmartFaceCallbackDelegate;->this$0:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     # getter for: Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->mHandler:Landroid/os/Handler;
@@ -73,7 +69,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 61
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate$SmartFaceCallbackDelegate;->this$0:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     # getter for: Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->mCtrl:Lcn/nubia/server/policy/smartface/util/PowerCtrl;
@@ -83,6 +78,5 @@
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/util/PowerCtrl;->userActivity()V
 
-    .line 62
     return-void
 .end method

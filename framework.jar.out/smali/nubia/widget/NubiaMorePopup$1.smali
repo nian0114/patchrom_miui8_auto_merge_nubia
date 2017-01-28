@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 119
     iput-object p1, p0, Lnubia/widget/NubiaMorePopup$1;->this$0:Lnubia/widget/NubiaMorePopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 122
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$1;->this$0:Lnubia/widget/NubiaMorePopup;
 
     # invokes: Lnubia/widget/NubiaMorePopup;->startEntryAnimation()V
     invoke-static {v0}, Lnubia/widget/NubiaMorePopup;->access$000(Lnubia/widget/NubiaMorePopup;)V
 
-    .line 123
     return-void
 .end method

@@ -29,15 +29,12 @@
     .param p2, "observer"    # Landroid/app/backup/IFullBackupRestoreObserver;
 
     .prologue
-    .line 3582
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3583
     iput-object p2, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
-    .line 3584
     return-void
 .end method
 
@@ -47,12 +44,10 @@
     .locals 3
 
     .prologue
-    .line 3611
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
     if-eqz v1, :cond_0
 
-    .line 3613
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
@@ -60,16 +55,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3619
     :cond_0
     :goto_0
     return-void
 
-    .line 3614
     :catch_0
     move-exception v0
 
-    .line 3615
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "BackupManagerService"
 
@@ -77,7 +69,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3616
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
@@ -90,12 +81,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3599
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
     if-eqz v1, :cond_0
 
-    .line 3602
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
@@ -103,16 +92,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3608
     :cond_0
     :goto_0
     return-void
 
-    .line 3603
     :catch_0
     move-exception v0
 
-    .line 3604
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "BackupManagerService"
 
@@ -120,7 +106,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3605
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
@@ -132,12 +117,10 @@
     .locals 3
 
     .prologue
-    .line 3588
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
     if-eqz v1, :cond_0
 
-    .line 3590
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;
 
@@ -145,16 +128,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3596
     :cond_0
     :goto_0
     return-void
 
-    .line 3591
     :catch_0
     move-exception v0
 
-    .line 3592
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "BackupManagerService"
 
@@ -162,7 +142,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3593
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupTask;->mObserver:Landroid/app/backup/IFullBackupRestoreObserver;

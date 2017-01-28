@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 125
     iput-object p1, p0, Lcom/android/server/policy/SingleUICtrl$1;->this$0:Lcom/android/server/policy/SingleUICtrl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 130
     iget-object v1, p0, Lcom/android/server/policy/SingleUICtrl$1;->this$0:Lcom/android/server/policy/SingleUICtrl;
 
     # getter for: Lcom/android/server/policy/SingleUICtrl;->mContext:Landroid/content/Context;
@@ -61,25 +59,21 @@
 
     move-result v0
 
-    .line 135
     .local v0, "mode":I
     if-eqz v0, :cond_0
 
     if-ne v0, v4, :cond_2
 
-    .line 138
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/SingleUICtrl$1;->this$0:Lcom/android/server/policy/SingleUICtrl;
 
     # invokes: Lcom/android/server/policy/SingleUICtrl;->longPressedKey(I)V
     invoke-static {v1, v4}, Lcom/android/server/policy/SingleUICtrl;->access$300(Lcom/android/server/policy/SingleUICtrl;I)V
 
-    .line 146
     :cond_1
     :goto_0
     return-void
 
-    .line 140
     :cond_2
     const/16 v1, 0xa
 
@@ -89,7 +83,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 143
     :cond_3
     iget-object v1, p0, Lcom/android/server/policy/SingleUICtrl$1;->this$0:Lcom/android/server/policy/SingleUICtrl;
 

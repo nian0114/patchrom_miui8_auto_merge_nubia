@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 97
     iput-object p1, p0, Lnubia/fancydrawable/DateDrawable$2;->this$0:Lnubia/fancydrawable/DateDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lnubia/fancydrawable/DateDrawable$2;->this$0:Lnubia/fancydrawable/DateDrawable;
 
     invoke-virtual {v0}, Lnubia/fancydrawable/DateDrawable;->invalidateSelf()V
 
-    .line 100
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 618
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,6 +36,5 @@
     .locals 0
 
     .prologue
-    .line 622
     return-void
 .end method

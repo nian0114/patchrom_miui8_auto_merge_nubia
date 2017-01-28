@@ -32,18 +32,14 @@
     .param p3, "backgroundPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 584
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 585
     iput p2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->mUid:I
 
-    .line 586
     iput-object p3, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->mBackgroundPackage:Ljava/lang/String;
 
-    .line 587
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .locals 10
 
     .prologue
-    .line 591
     iget-object v7, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mAppBackgroundConfigs:Ljava/util/HashMap;
@@ -69,16 +64,13 @@
 
     check-cast v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
 
-    .line 592
     .local v0, "config":Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;
     if-nez v0, :cond_1
 
-    .line 625
     :cond_0
     :goto_0
     return-void
 
-    .line 595
     :cond_1
     iget-object v7, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -113,7 +105,6 @@
 
     move-result v5
 
-    .line 596
     .local v5, "stackId":I
     iget-object v7, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -132,7 +123,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 597
     .local v4, "name":Ljava/lang/String;
     iget-object v7, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -155,7 +145,6 @@
 
     move-result v6
 
-    .line 599
     .local v6, "uid":I
     if-eqz v4, :cond_3
 
@@ -167,7 +156,6 @@
 
     if-nez v7, :cond_0
 
-    .line 602
     :cond_3
     iget v7, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->mUid:I
 
@@ -175,18 +163,15 @@
 
     goto :goto_0
 
-    .line 606
     .end local v4    # "name":Ljava/lang/String;
     .end local v5    # "stackId":I
     .end local v6    # "uid":I
     :cond_4
     iget-boolean v1, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableMobile:Z
 
-    .line 607
     .local v1, "enableMobile":Z
     iget-boolean v2, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableWifi:Z
 
-    .line 609
     .local v2, "enableWifi":Z
     iget-object v7, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -197,7 +182,6 @@
 
     if-nez v7, :cond_5
 
-    .line 610
     iget-object v7, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mIs2GNetwork:Z
@@ -211,16 +195,13 @@
 
     if-eqz v7, :cond_7
 
-    .line 611
     const/4 v1, 0x0
 
-    .line 615
     :goto_1
     iget-boolean v7, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableWifiInScreenOff:Z
 
     and-int/2addr v2, v7
 
-    .line 618
     :cond_5
     iget-object v7, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -231,13 +212,10 @@
 
     if-eqz v7, :cond_6
 
-    .line 619
     const/4 v1, 0x1
 
-    .line 620
     const/4 v2, 0x1
 
-    .line 623
     :cond_6
     iget-object v7, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -254,7 +232,6 @@
 
     invoke-virtual {v7, v8}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 624
     iget-object v7, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     iget v8, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$ControlAppNetworkInBackgroundRunnable;->mUid:I
@@ -266,7 +243,6 @@
 
     goto/16 :goto_0
 
-    .line 613
     :cond_7
     iget-boolean v7, v0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$AppNetworkConfig;->enableMobileInScreenOff:Z
 

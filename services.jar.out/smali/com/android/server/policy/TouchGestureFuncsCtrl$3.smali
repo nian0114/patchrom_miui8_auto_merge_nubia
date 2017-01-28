@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 201
     iput-object p1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl$3;->this$0:Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 204
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl$3;->this$0:Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     # getter for: Lcom/android/server/policy/TouchGestureFuncsCtrl;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
@@ -50,6 +48,5 @@
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->takeScreenshotProxy()V
 
-    .line 205
     return-void
 .end method

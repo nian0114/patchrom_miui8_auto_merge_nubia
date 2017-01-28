@@ -67,56 +67,44 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 70
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 62
     iput v1, p0, Lnubia/widget/LetterTitleDrawable;->mContactType:I
 
-    .line 63
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lnubia/widget/LetterTitleDrawable;->mScale:F
 
-    .line 64
     const/4 v0, 0x0
 
     iput v0, p0, Lnubia/widget/LetterTitleDrawable;->mOffset:F
 
-    .line 65
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lnubia/widget/LetterTitleDrawable;->mIsCircle:Z
 
-    .line 67
     const/4 v0, -0x1
 
     iput v0, p0, Lnubia/widget/LetterTitleDrawable;->mCardId:I
 
-    .line 71
     iput-object p1, p0, Lnubia/widget/LetterTitleDrawable;->mResources:Landroid/content/res/Resources;
 
-    .line 72
     iput p2, p0, Lnubia/widget/LetterTitleDrawable;->mCardId:I
 
-    .line 73
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lnubia/widget/LetterTitleDrawable;->mPaint:Landroid/graphics/Paint;
 
-    .line 74
     iget-object v0, p0, Lnubia/widget/LetterTitleDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 75
     iget-object v0, p0, Lnubia/widget/LetterTitleDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 76
     new-instance v0, Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     const/4 v1, 0x0
@@ -125,7 +113,6 @@
 
     sput-object v0, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
-    .line 77
     return-void
 .end method
 
@@ -138,17 +125,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 135
     const/4 v3, 0x1
 
-    .line 136
     .local v3, "drawLetterCount":I
     invoke-direct {p0}, Lnubia/widget/LetterTitleDrawable;->initOnlyOneChar()V
 
-    .line 137
     invoke-direct {p0}, Lnubia/widget/LetterTitleDrawable;->configDrawPaint()V
 
-    .line 139
     sget-object v0, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     # getter for: Lnubia/widget/LetterTitleDrawable$LetterTile;->mPaint:Landroid/graphics/Paint;
@@ -167,7 +150,6 @@
 
     move-result v9
 
-    .line 140
     .local v9, "textWidth":F
     sget-object v0, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
@@ -180,7 +162,6 @@
 
     move-result-object v8
 
-    .line 141
     .local v8, "fmi":Landroid/graphics/Paint$FontMetricsInt;
     invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
@@ -196,7 +177,6 @@
 
     div-int/lit8 v7, v0, 0x2
 
-    .line 142
     .local v7, "baseY":I
     sget-object v0, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
@@ -224,7 +204,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Canvas;->drawText([CIIFFLandroid/graphics/Paint;)V
 
-    .line 144
     return-void
 .end method
 
@@ -232,14 +211,12 @@
     .locals 3
 
     .prologue
-    .line 147
     iget v0, p0, Lnubia/widget/LetterTitleDrawable;->mCardResType:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 148
     sget-object v0, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     # getter for: Lnubia/widget/LetterTitleDrawable$LetterTile;->mPaint:Landroid/graphics/Paint;
@@ -257,7 +234,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 151
     :goto_0
     sget-object v0, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
@@ -270,10 +246,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 152
     return-void
 
-    .line 150
     :cond_0
     sget-object v0, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
@@ -305,12 +279,10 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 96
     invoke-virtual {p0}, Lnubia/widget/LetterTitleDrawable;->copyBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 100
     .local v0, "destRect":Landroid/graphics/Rect;
     iget v2, p0, Lnubia/widget/LetterTitleDrawable;->mScale:F
 
@@ -336,7 +308,6 @@
 
     float-to-int v1, v2
 
-    .line 103
     .local v1, "halfLength":I
     invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
 
@@ -396,7 +367,6 @@
 
     invoke-virtual {v0, v2, v3, v4, v5}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 109
     sget-object v2, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     # getter for: Lnubia/widget/LetterTitleDrawable$LetterTile;->mRect:Landroid/graphics/Rect;
@@ -406,7 +376,6 @@
 
     invoke-virtual {v2, v8, v8, p2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 111
     sget-object v2, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     # getter for: Lnubia/widget/LetterTitleDrawable$LetterTile;->mRect:Landroid/graphics/Rect;
@@ -418,7 +387,6 @@
 
     invoke-virtual {p4, p1, v2, v0, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 112
     return-void
 .end method
 
@@ -429,7 +397,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 115
     sget-object v4, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     # getter for: Lnubia/widget/LetterTitleDrawable$LetterTile;->mPaint:Landroid/graphics/Paint;
@@ -445,12 +412,10 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 116
     invoke-virtual {p0}, Lnubia/widget/LetterTitleDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 117
     .local v0, "bounds":Landroid/graphics/Rect;
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
@@ -464,7 +429,6 @@
 
     move-result v2
 
-    .line 120
     .local v2, "minDimension":I
     iget-object v4, p0, Lnubia/widget/LetterTitleDrawable;->mDisplayName:Ljava/lang/String;
 
@@ -474,7 +438,6 @@
 
     if-nez v4, :cond_0
 
-    .line 121
     iget-object v4, p0, Lnubia/widget/LetterTitleDrawable;->mDisplayName:Ljava/lang/String;
 
     invoke-virtual {v4, v6}, Ljava/lang/String;->charAt(I)C
@@ -485,11 +448,9 @@
 
     move-result v1
 
-    .line 122
     .local v1, "defImgResId":I
     invoke-direct {p0, p1, v0, v1}, Lnubia/widget/LetterTitleDrawable;->mergeDefaultImage(Landroid/graphics/Canvas;Landroid/graphics/Rect;I)V
 
-    .line 123
     iget-object v4, p0, Lnubia/widget/LetterTitleDrawable;->mDisplayName:Ljava/lang/String;
 
     invoke-virtual {v4, v6}, Ljava/lang/String;->charAt(I)C
@@ -502,26 +463,21 @@
 
     if-eqz v4, :cond_0
 
-    .line 124
     invoke-direct {p0, p1, v0, v2}, Lnubia/widget/LetterTitleDrawable;->configDrawLetterCanvas(Landroid/graphics/Canvas;Landroid/graphics/Rect;I)V
 
-    .line 127
     .end local v1    # "defImgResId":I
     :cond_0
     invoke-direct {p0}, Lnubia/widget/LetterTitleDrawable;->getCardImageResID()I
 
     move-result v3
 
-    .line 128
     .local v3, "resId":I
     const/4 v4, -0x1
 
     if-eq v3, v4, :cond_1
 
-    .line 129
     invoke-direct {p0, p1, v0, v3}, Lnubia/widget/LetterTitleDrawable;->mergeCardTag(Landroid/graphics/Canvas;Landroid/graphics/Rect;I)V
 
-    .line 131
     :cond_1
     return-void
 .end method
@@ -532,10 +488,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 198
     const/4 v0, -0x1
 
-    .line 199
     .local v0, "result":I
     invoke-direct {p0}, Lnubia/widget/LetterTitleDrawable;->shouldDisplayMulti()Z
 
@@ -543,7 +497,6 @@
 
     if-nez v1, :cond_3
 
-    .line 200
     iget v1, p0, Lnubia/widget/LetterTitleDrawable;->mCardId:I
 
     if-eqz v1, :cond_0
@@ -552,7 +505,6 @@
 
     if-ne v2, v1, :cond_1
 
-    .line 201
     :cond_0
     iget v1, p0, Lnubia/widget/LetterTitleDrawable;->mCardResType:I
 
@@ -560,38 +512,32 @@
 
     const v0, 0x302006d
 
-    .line 214
     :cond_1
     :goto_0
     return v0
 
-    .line 201
     :cond_2
     const v0, 0x302006e
 
     goto :goto_0
 
-    .line 205
     :cond_3
     iget v1, p0, Lnubia/widget/LetterTitleDrawable;->mCardId:I
 
     if-nez v1, :cond_4
 
-    .line 206
     iget v1, p0, Lnubia/widget/LetterTitleDrawable;->mCardResType:I
 
     if-nez v1, :cond_5
 
     const v0, 0x3020069
 
-    .line 209
     :cond_4
     :goto_1
     iget v1, p0, Lnubia/widget/LetterTitleDrawable;->mCardId:I
 
     if-ne v2, v1, :cond_1
 
-    .line 210
     iget v1, p0, Lnubia/widget/LetterTitleDrawable;->mCardResType:I
 
     if-nez v1, :cond_6
@@ -601,13 +547,11 @@
     :goto_2
     goto :goto_0
 
-    .line 206
     :cond_5
     const v0, 0x302006a
 
     goto :goto_1
 
-    .line 210
     :cond_6
     const v0, 0x302006c
 
@@ -619,14 +563,12 @@
     .param p1, "firstName"    # C
 
     .prologue
-    .line 219
     iget v1, p0, Lnubia/widget/LetterTitleDrawable;->mCardResType:I
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 220
     invoke-static {p1}, Lnubia/widget/LetterTitleDrawable;->isChinese(C)Z
 
     move-result v1
@@ -635,19 +577,16 @@
 
     const v0, 0x302005c
 
-    .line 226
     .local v0, "resId":I
     :goto_0
     return v0
 
-    .line 220
     .end local v0    # "resId":I
     :cond_0
     const v0, 0x302005e
 
     goto :goto_0
 
-    .line 223
     :cond_1
     invoke-static {p1}, Lnubia/widget/LetterTitleDrawable;->isChinese(C)Z
 
@@ -673,16 +612,13 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 279
     const/4 v3, -0x1
 
-    .line 280
     .local v3, "pos":I
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v1
 
-    .line 281
     .local v1, "ch":[C
     const/4 v2, 0x0
 
@@ -694,10 +630,8 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 282
     aget-char v0, v1, v2
 
-    .line 283
     .local v0, "c":C
     invoke-static {v0}, Lnubia/widget/LetterTitleDrawable;->isChinese(C)Z
 
@@ -705,15 +639,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 284
     move v3, v2
 
-    .line 288
     .end local v0    # "c":C
     :cond_0
     return v3
 
-    .line 281
     .restart local v0    # "c":C
     :cond_1
     add-int/lit8 v2, v2, 0x1
@@ -726,16 +657,13 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 266
     const/4 v3, -0x1
 
-    .line 267
     .local v3, "pos":I
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v1
 
-    .line 268
     .local v1, "ch":[C
     array-length v4, v1
 
@@ -745,10 +673,8 @@
     :goto_0
     if-ltz v2, :cond_0
 
-    .line 269
     aget-char v0, v1, v2
 
-    .line 270
     .local v0, "c":C
     invoke-static {v0}, Lnubia/widget/LetterTitleDrawable;->isChinese(C)Z
 
@@ -756,15 +682,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 271
     move v3, v2
 
-    .line 275
     .end local v0    # "c":C
     :cond_0
     return v3
 
-    .line 268
     .restart local v0    # "c":C
     :cond_1
     add-int/lit8 v2, v2, -0x1
@@ -776,10 +699,8 @@
     .locals 4
 
     .prologue
-    .line 166
     const/4 v0, 0x0
 
-    .line 167
     .local v0, "drawLetterCount":I
     const/4 v1, 0x0
 
@@ -793,7 +714,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 168
     sget-object v2, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     # getter for: Lnubia/widget/LetterTitleDrawable$LetterTile;->mShowChar:[C
@@ -813,7 +733,6 @@
 
     aput-char v3, v2, v1
 
-    .line 170
     const/4 v2, 0x2
 
     if-ge v1, v2, :cond_0
@@ -828,15 +747,12 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 172
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
-    .line 176
     :cond_1
     return v0
 
-    .line 167
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
@@ -848,7 +764,6 @@
     .param p1, "slotId"    # I
 
     .prologue
-    .line 238
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -865,7 +780,6 @@
     .param p1, "slotId"    # I
 
     .prologue
-    .line 234
     invoke-direct {p0, p1}, Lnubia/widget/LetterTitleDrawable;->getSimState(I)I
 
     move-result v0
@@ -891,18 +805,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 155
     iget-object v1, p0, Lnubia/widget/LetterTitleDrawable;->mDisplayName:Ljava/lang/String;
 
     invoke-static {v1}, Lnubia/widget/LetterTitleDrawable;->getFirstChineseCharPosition(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 156
     .local v0, "lastChineseCharPos":I
     if-ltz v0, :cond_0
 
-    .line 157
     sget-object v1, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     # getter for: Lnubia/widget/LetterTitleDrawable$LetterTile;->mShowChar:[C
@@ -922,11 +833,9 @@
 
     aput-char v2, v1, v3
 
-    .line 163
     :goto_0
     return-void
 
-    .line 160
     :cond_0
     sget-object v1, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
@@ -955,12 +864,10 @@
     .param p0, "c"    # C
 
     .prologue
-    .line 258
     invoke-static {p0}, Ljava/lang/Character$UnicodeBlock;->of(C)Ljava/lang/Character$UnicodeBlock;
 
     move-result-object v0
 
-    .line 259
     .local v0, "ub":Ljava/lang/Character$UnicodeBlock;
     sget-object v1, Ljava/lang/Character$UnicodeBlock;->CJK_UNIFIED_IDEOGRAPHS:Ljava/lang/Character$UnicodeBlock;
 
@@ -1007,7 +914,6 @@
     .param p0, "c"    # C
 
     .prologue
-    .line 292
     const/16 v0, 0x41
 
     if-gt v0, p0, :cond_0
@@ -1042,10 +948,8 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 243
     const/4 v0, 0x1
 
-    .line 244
     .local v0, "bRet":Z
     const/4 v1, 0x0
 
@@ -1057,24 +961,20 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 245
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
-    .line 246
     .local v2, "temp":C
     const/16 v3, 0x20
 
     if-ne v2, v3, :cond_1
 
-    .line 244
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 249
     :cond_1
     invoke-static {v2}, Lnubia/widget/LetterTitleDrawable;->isEnglishLetter(C)Z
 
@@ -1082,10 +982,8 @@
 
     if-nez v3, :cond_0
 
-    .line 250
     const/4 v0, 0x0
 
-    .line 254
     .end local v2    # "temp":C
     :cond_2
     return v0
@@ -1098,14 +996,12 @@
     .param p3, "resId"    # I
 
     .prologue
-    .line 180
     iget-object v1, p0, Lnubia/widget/LetterTitleDrawable;->mResources:Landroid/content/res/Resources;
 
     invoke-static {v1, p3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 181
     .local v0, "card":Landroid/graphics/Bitmap;
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
@@ -1140,13 +1036,10 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 183
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 184
     const/4 v0, 0x0
 
-    .line 185
     return-void
 .end method
 
@@ -1159,14 +1052,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 188
     iget-object v2, p0, Lnubia/widget/LetterTitleDrawable;->mResources:Landroid/content/res/Resources;
 
     invoke-static {v2, p3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 189
     .local v0, "defaultImage":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Rect;
 
@@ -1180,11 +1071,9 @@
 
     invoke-direct {v1, v4, v4, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 190
     .local v1, "rect":Landroid/graphics/Rect;
     if-eqz v0, :cond_0
 
-    .line 191
     sget-object v2, Lnubia/widget/LetterTitleDrawable;->mLetterTile:Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     # getter for: Lnubia/widget/LetterTitleDrawable$LetterTile;->mPaint:Landroid/graphics/Paint;
@@ -1194,15 +1083,12 @@
 
     invoke-virtual {p1, v0, v1, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 192
     const/16 v2, 0x1f
 
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->save(I)I
 
-    .line 193
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 195
     :cond_0
     return-void
 .end method
@@ -1215,7 +1101,6 @@
 
     const/4 v1, 0x0
 
-    .line 230
     invoke-direct {p0, v1}, Lnubia/widget/LetterTitleDrawable;->hasIccCard(I)Z
 
     move-result v2
@@ -1244,12 +1129,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 81
     invoke-virtual {p0}, Lnubia/widget/LetterTitleDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 82
     .local v0, "bounds":Landroid/graphics/Rect;
     invoke-virtual {p0}, Lnubia/widget/LetterTitleDrawable;->isVisible()Z
 
@@ -1263,10 +1146,8 @@
 
     if-nez v1, :cond_0
 
-    .line 83
     invoke-direct {p0, p1}, Lnubia/widget/LetterTitleDrawable;->drawLetterTile(Landroid/graphics/Canvas;)V
 
-    .line 85
     :cond_0
     return-void
 .end method
@@ -1275,7 +1156,6 @@
     .locals 1
 
     .prologue
-    .line 307
     const/4 v0, -0x1
 
     return v0
@@ -1286,12 +1166,10 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 297
     iget-object v0, p0, Lnubia/widget/LetterTitleDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 298
     return-void
 .end method
 
@@ -1300,10 +1178,8 @@
     .param p1, "cardResType"    # I
 
     .prologue
-    .line 353
     iput p1, p0, Lnubia/widget/LetterTitleDrawable;->mCardResType:I
 
-    .line 354
     return-void
 .end method
 
@@ -1312,12 +1188,10 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 302
     iget-object v0, p0, Lnubia/widget/LetterTitleDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 303
     return-void
 .end method
 
@@ -1327,13 +1201,10 @@
     .param p2, "identifier"    # Ljava/lang/String;
 
     .prologue
-    .line 340
     iput-object p1, p0, Lnubia/widget/LetterTitleDrawable;->mDisplayName:Ljava/lang/String;
 
-    .line 341
     iput-object p2, p0, Lnubia/widget/LetterTitleDrawable;->mIdentifier:Ljava/lang/String;
 
-    .line 342
     return-void
 .end method
 
@@ -1342,10 +1213,8 @@
     .param p1, "contactType"    # I
 
     .prologue
-    .line 345
     iput p1, p0, Lnubia/widget/LetterTitleDrawable;->mContactType:I
 
-    .line 346
     return-void
 .end method
 
@@ -1354,10 +1223,8 @@
     .param p1, "isCircle"    # Z
 
     .prologue
-    .line 349
     iput-boolean p1, p0, Lnubia/widget/LetterTitleDrawable;->mIsCircle:Z
 
-    .line 350
     return-void
 .end method
 
@@ -1366,10 +1233,8 @@
     .param p1, "offset"    # F
 
     .prologue
-    .line 336
     iput p1, p0, Lnubia/widget/LetterTitleDrawable;->mOffset:F
 
-    .line 337
     return-void
 .end method
 
@@ -1378,9 +1243,7 @@
     .param p1, "scale"    # F
 
     .prologue
-    .line 318
     iput p1, p0, Lnubia/widget/LetterTitleDrawable;->mScale:F
 
-    .line 319
     return-void
 .end method

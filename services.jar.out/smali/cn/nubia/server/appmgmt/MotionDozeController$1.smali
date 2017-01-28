@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 257
     iput-object p1, p0, Lcn/nubia/server/appmgmt/MotionDozeController$1;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     invoke-direct {p0}, Landroid/hardware/TriggerEventListener;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "event"    # Landroid/hardware/TriggerEvent;
 
     .prologue
-    .line 260
     iget-object v0, p0, Lcn/nubia/server/appmgmt/MotionDozeController$1;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     const/4 v1, 0x1
@@ -46,7 +44,6 @@
     # setter for: Lcn/nubia/server/appmgmt/MotionDozeController;->mGetSigMotion:Z
     invoke-static {v0, v1}, Lcn/nubia/server/appmgmt/MotionDozeController;->access$602(Lcn/nubia/server/appmgmt/MotionDozeController;Z)Z
 
-    .line 261
     iget-object v0, p0, Lcn/nubia/server/appmgmt/MotionDozeController$1;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
     # getter for: Lcn/nubia/server/appmgmt/MotionDozeController;->mDumpDebugLog:Z
@@ -56,14 +53,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 262
     const-string v0, "MotionDozeController"
 
     const-string v1, "mSigMotionListener::onTrigger "
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/appmgmt/MotionDozeController$1;->this$0:Lcn/nubia/server/appmgmt/MotionDozeController;
 
@@ -81,6 +76,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 265
     return-void
 .end method

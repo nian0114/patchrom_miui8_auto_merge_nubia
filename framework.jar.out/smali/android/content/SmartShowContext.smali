@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 24
     const/4 v0, 0x0
 
     sput-object v0, Landroid/content/SmartShowContext;->mContext:Landroid/content/ISmartShowContext;
@@ -24,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,10 +33,8 @@
     .param p0, "context"    # Landroid/content/ISmartShowContext;
 
     .prologue
-    .line 37
     sput-object p0, Landroid/content/SmartShowContext;->mContext:Landroid/content/ISmartShowContext;
 
-    .line 38
     return-void
 .end method
 
@@ -46,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 30
     sget-object v0, Landroid/content/SmartShowContext;->mContext:Landroid/content/ISmartShowContext;
 
     return-object v0

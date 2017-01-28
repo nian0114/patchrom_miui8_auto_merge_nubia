@@ -79,16 +79,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1301
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1319
     iput-boolean v0, p0, Landroid/service/notification/ZenModeConfig$XmlV1;->allowReminders:Z
 
-    .line 1320
     iput-boolean v0, p0, Landroid/service/notification/ZenModeConfig$XmlV1;->allowEvents:Z
 
-    .line 1321
     iput v0, p0, Landroid/service/notification/ZenModeConfig$XmlV1;->allowFrom:I
 
     return-void
@@ -99,10 +95,9 @@
     .param p0, "sleepMode"    # Ljava/lang/String;
 
     .prologue
-    .line 1335
     if-eqz p0, :cond_0
 
-    const-string/jumbo v0, "nights"
+    const-string v0, "nights"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -110,7 +105,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "weeknights"
+    const-string v0, "weeknights"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -147,24 +142,20 @@
     .end annotation
 
     .prologue
-    .line 1353
     new-instance v7, Landroid/service/notification/ZenModeConfig$XmlV1;
 
     invoke-direct {v7}, Landroid/service/notification/ZenModeConfig$XmlV1;-><init>()V
 
-    .line 1354
     .local v7, "rt":Landroid/service/notification/ZenModeConfig$XmlV1;
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1355
     .local v1, "conditionComponents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ComponentName;>;"
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1356
     .local v3, "conditionIds":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/net/Uri;>;"
     :cond_0
     :goto_0
@@ -177,18 +168,16 @@
 
     if-eq v11, v12, :cond_c
 
-    .line 1357
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 1358
     .local v10, "tag":Ljava/lang/String;
     const/4 v12, 0x3
 
     if-ne v11, v12, :cond_2
 
-    const-string/jumbo v12, "zen"
+    const-string v12, "zen"
 
     invoke-virtual {v12, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -196,14 +185,12 @@
 
     if-eqz v12, :cond_2
 
-    .line 1359
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v12
 
     if-nez v12, :cond_1
 
-    .line 1360
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v12
@@ -218,7 +205,6 @@
 
     iput-object v12, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->conditionComponents:[Landroid/content/ComponentName;
 
-    .line 1362
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v12
@@ -233,17 +219,14 @@
 
     iput-object v12, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->conditionIds:[Landroid/net/Uri;
 
-    .line 1364
     :cond_1
     return-object v7
 
-    .line 1366
     :cond_2
     const/4 v12, 0x2
 
     if-ne v11, v12, :cond_0
 
-    .line 1367
     const-string v12, "allow"
 
     invoke-virtual {v12, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -252,7 +235,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 1368
     const-string v12, "calls"
 
     const/4 v13, 0x0
@@ -264,8 +246,7 @@
 
     iput-boolean v12, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->allowCalls:Z
 
-    .line 1369
-    const-string/jumbo v12, "messages"
+    const-string v12, "messages"
 
     const/4 v13, 0x0
 
@@ -276,8 +257,7 @@
 
     iput-boolean v12, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->allowMessages:Z
 
-    .line 1370
-    const-string/jumbo v12, "reminders"
+    const-string v12, "reminders"
 
     const/4 v13, 0x0
 
@@ -288,7 +268,6 @@
 
     iput-boolean v12, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->allowReminders:Z
 
-    .line 1372
     const-string v12, "events"
 
     const/4 v13, 0x0
@@ -300,7 +279,6 @@
 
     iput-boolean v12, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->allowEvents:Z
 
-    .line 1374
     const-string v12, "from"
 
     const/4 v13, 0x0
@@ -312,7 +290,6 @@
 
     iput v12, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->allowFrom:I
 
-    .line 1375
     iget v12, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->allowFrom:I
 
     if-ltz v12, :cond_3
@@ -323,7 +300,6 @@
 
     if-le v12, v13, :cond_0
 
-    .line 1376
     :cond_3
     new-instance v12, Ljava/lang/IndexOutOfBoundsException;
 
@@ -351,9 +327,8 @@
 
     throw v12
 
-    .line 1379
     :cond_4
-    const-string/jumbo v12, "sleep"
+    const-string v12, "sleep"
 
     invoke-virtual {v12, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -361,16 +336,14 @@
 
     if-eqz v12, :cond_a
 
-    .line 1380
     const/4 v12, 0x0
 
-    const-string/jumbo v13, "mode"
+    const-string v13, "mode"
 
     invoke-interface {p0, v12, v13}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1381
     .local v6, "mode":Ljava/lang/String;
     invoke-static {v6}, Landroid/service/notification/ZenModeConfig$XmlV1;->isValidSleepMode(Ljava/lang/String;)Z
 
@@ -382,8 +355,7 @@
     :goto_1
     iput-object v6, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->sleepMode:Ljava/lang/String;
 
-    .line 1382
-    const-string/jumbo v12, "none"
+    const-string v12, "none"
 
     const/4 v13, 0x0
 
@@ -394,8 +366,7 @@
 
     iput-boolean v12, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->sleepNone:Z
 
-    .line 1383
-    const-string/jumbo v12, "startHour"
+    const-string v12, "startHour"
 
     const/4 v13, 0x0
 
@@ -404,9 +375,8 @@
 
     move-result v8
 
-    .line 1384
     .local v8, "startHour":I
-    const-string/jumbo v12, "startMin"
+    const-string v12, "startMin"
 
     const/4 v13, 0x0
 
@@ -415,7 +385,6 @@
 
     move-result v9
 
-    .line 1385
     .local v9, "startMinute":I
     const-string v12, "endHour"
 
@@ -426,7 +395,6 @@
 
     move-result v4
 
-    .line 1386
     .local v4, "endHour":I
     const-string v12, "endMin"
 
@@ -437,7 +405,6 @@
 
     move-result v5
 
-    .line 1387
     .local v5, "endMinute":I
     invoke-static {v8}, Landroid/service/notification/ZenModeConfig;->isValidHour(I)Z
 
@@ -449,7 +416,6 @@
     :goto_2
     iput v8, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->sleepStartHour:I
 
-    .line 1388
     invoke-static {v9}, Landroid/service/notification/ZenModeConfig;->isValidMinute(I)Z
 
     move-result v12
@@ -460,7 +426,6 @@
     :goto_3
     iput v9, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->sleepStartMinute:I
 
-    .line 1389
     invoke-static {v4}, Landroid/service/notification/ZenModeConfig;->isValidHour(I)Z
 
     move-result v12
@@ -471,7 +436,6 @@
     :goto_4
     iput v4, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->sleepEndHour:I
 
-    .line 1390
     invoke-static {v5}, Landroid/service/notification/ZenModeConfig;->isValidMinute(I)Z
 
     move-result v12
@@ -484,14 +448,12 @@
 
     goto/16 :goto_0
 
-    .line 1381
     .restart local v6    # "mode":Ljava/lang/String;
     :cond_5
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 1387
     .end local v6    # "mode":Ljava/lang/String;
     .restart local v4    # "endHour":I
     .restart local v5    # "endMinute":I
@@ -502,28 +464,24 @@
 
     goto :goto_2
 
-    .line 1388
     .end local v8    # "startHour":I
     :cond_7
     const/4 v9, 0x0
 
     goto :goto_3
 
-    .line 1389
     .end local v9    # "startMinute":I
     :cond_8
     const/4 v4, 0x0
 
     goto :goto_4
 
-    .line 1390
     .end local v4    # "endHour":I
     :cond_9
     const/4 v5, 0x0
 
     goto :goto_5
 
-    .line 1391
     .end local v5    # "endMinute":I
     :cond_a
     const-string v12, "condition"
@@ -534,7 +492,6 @@
 
     if-eqz v12, :cond_b
 
-    .line 1392
     const-string v12, "component"
 
     # invokes: Landroid/service/notification/ZenModeConfig;->safeComponentName(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Landroid/content/ComponentName;
@@ -542,7 +499,6 @@
 
     move-result-object v0
 
-    .line 1394
     .local v0, "component":Landroid/content/ComponentName;
     const-string v12, "id"
 
@@ -551,21 +507,17 @@
 
     move-result-object v2
 
-    .line 1395
     .local v2, "conditionId":Landroid/net/Uri;
     if-eqz v0, :cond_0
 
     if-eqz v2, :cond_0
 
-    .line 1396
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1397
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
 
-    .line 1399
     .end local v0    # "component":Landroid/content/ComponentName;
     .end local v2    # "conditionId":Landroid/net/Uri;
     :cond_b
@@ -577,19 +529,16 @@
 
     if-eqz v12, :cond_0
 
-    .line 1400
     invoke-static {p0}, Landroid/service/notification/ZenModeConfig;->readConditionXml(Lorg/xmlpull/v1/XmlPullParser;)Landroid/service/notification/Condition;
 
     move-result-object v12
 
     iput-object v12, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->exitCondition:Landroid/service/notification/Condition;
 
-    .line 1401
     iget-object v12, v7, Landroid/service/notification/ZenModeConfig$XmlV1;->exitCondition:Landroid/service/notification/Condition;
 
     if-eqz v12, :cond_0
 
-    .line 1402
     const-string v12, "component"
 
     # invokes: Landroid/service/notification/ZenModeConfig;->safeComponentName(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Landroid/content/ComponentName;
@@ -601,7 +550,6 @@
 
     goto/16 :goto_0
 
-    .line 1408
     .end local v10    # "tag":Ljava/lang/String;
     :cond_c
     new-instance v12, Ljava/lang/IllegalStateException;
@@ -620,22 +568,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1340
     if-nez p0, :cond_1
 
-    .line 1346
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1341
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1342
-    const-string/jumbo v1, "nights"
+    const-string v1, "nights"
 
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -647,9 +591,8 @@
 
     goto :goto_0
 
-    .line 1343
     :cond_2
-    const-string/jumbo v1, "weeknights"
+    const-string v1, "weeknights"
 
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -661,7 +604,6 @@
 
     goto :goto_0
 
-    .line 1344
     :cond_3
     const-string v1, "days:"
 
@@ -671,7 +613,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1345
     const-string v1, "days:"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -680,7 +621,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1346
     const-string v0, "days:"
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I

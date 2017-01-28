@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1294
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$8;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,29 +42,24 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1297
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1315
     const/4 v1, 0x0
 
     :goto_0
     return v1
 
-    .line 1299
     :pswitch_0
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 1301
     .local v0, "flags":I
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$8;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # invokes: Lcom/android/server/net/NetworkStatsService;->maybeRefreshTrustedTime()V
     invoke-static {v2}, Lcom/android/server/net/NetworkStatsService;->access$800(Lcom/android/server/net/NetworkStatsService;)V
 
-    .line 1303
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$8;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # invokes: Lcom/android/server/net/NetworkStatsService;->performPoll(I)V
@@ -73,7 +67,6 @@
 
     goto :goto_0
 
-    .line 1307
     .end local v0    # "flags":I
     :pswitch_1
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$8;->this$0:Lcom/android/server/net/NetworkStatsService;
@@ -83,7 +76,6 @@
 
     goto :goto_0
 
-    .line 1311
     :pswitch_2
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$8;->this$0:Lcom/android/server/net/NetworkStatsService;
 
@@ -92,7 +84,6 @@
 
     goto :goto_0
 
-    .line 1297
     nop
 
     :pswitch_data_0

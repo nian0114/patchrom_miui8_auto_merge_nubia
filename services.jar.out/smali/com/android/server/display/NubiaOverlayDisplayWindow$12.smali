@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1580
     iput-object p1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$12;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1593
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$12;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mWindowManager:Landroid/view/WindowManager;
@@ -58,7 +56,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 1594
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$12;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mWindowManager:Landroid/view/WindowManager;
@@ -75,13 +72,11 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 1595
     const/4 v0, 0x0
 
     # setter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mWindowVisible:Z
     invoke-static {v0}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->access$4602(Z)Z
 
-    .line 1596
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$12;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mMutiWindowContentObserver:Lcom/android/server/display/NubiaOverlayDisplayWindow$MutiWindowContentObserver;
@@ -91,7 +86,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1597
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$12;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mMutiWindowContentObserver:Lcom/android/server/display/NubiaOverlayDisplayWindow$MutiWindowContentObserver;
@@ -101,7 +95,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/display/NubiaOverlayDisplayWindow$MutiWindowContentObserver;->unobserve()V
 
-    .line 1598
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$12;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
@@ -112,7 +105,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1599
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$12;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mChangeSideContentObserver:Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;
@@ -122,7 +114,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/display/NubiaOverlayDisplayWindow$ChangeSideContentObserver;->unobserve()V
 
-    .line 1600
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$12;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
@@ -140,7 +131,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1601
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$12;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mSFHandler:Landroid/os/Handler;
@@ -157,7 +147,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1602
     return-void
 .end method
 
@@ -166,7 +155,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1588
     return-void
 .end method
 
@@ -175,6 +163,5 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1584
     return-void
 .end method

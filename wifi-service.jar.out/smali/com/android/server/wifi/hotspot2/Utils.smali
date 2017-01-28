@@ -14,7 +14,6 @@
     .locals 3
 
     .prologue
-    .line 18
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -58,7 +57,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -73,18 +71,15 @@
 
     const/4 v5, 0x0
 
-    .line 212
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 213
     .local v0, "dup":Ljava/nio/ByteBuffer;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 214
     .local v1, "sbx":Ljava/lang/StringBuilder;
     :goto_0
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -93,7 +88,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 215
     const-string v2, "%02x "
 
     new-array v3, v6, [Ljava/lang/Object;
@@ -118,18 +112,15 @@
 
     goto :goto_0
 
-    .line 217
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 218
     const/16 v2, 0x20
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 219
     :goto_1
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -137,7 +128,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 220
     const-string v2, "%c"
 
     new-array v3, v6, [Ljava/lang/Object;
@@ -166,7 +156,6 @@
 
     goto :goto_1
 
-    .line 222
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -181,12 +170,10 @@
     .param p1, "len"    # I
 
     .prologue
-    .line 206
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 207
     .local v0, "dup":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->position()I
 
@@ -196,7 +183,6 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 208
     invoke-static {v0}, Lcom/android/server/wifi/hotspot2/Utils;->bytesToBingoCard(Ljava/nio/ByteBuffer;)Ljava/lang/String;
 
     move-result-object v1
@@ -217,36 +203,29 @@
     .end annotation
 
     .prologue
-    .line 194
     .local p0, "c1":Ljava/lang/Comparable;, "Ljava/lang/Comparable<TT;>;"
     .local p1, "c2":Ljava/lang/Comparable;, "TT;"
     if-nez p0, :cond_1
 
-    .line 195
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 201
     :goto_0
     return v0
 
-    .line 195
     :cond_0
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 197
     :cond_1
     if-nez p1, :cond_2
 
-    .line 198
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 201
     :cond_2
     invoke-interface {p0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
@@ -266,7 +245,6 @@
     .end annotation
 
     .prologue
-    .line 166
     const/16 v0, 0x39
 
     if-gt p0, v0, :cond_0
@@ -275,14 +253,11 @@
 
     if-lt p0, v0, :cond_0
 
-    .line 167
     add-int/lit8 v0, p0, -0x30
 
-    .line 173
     :goto_0
     return v0
 
-    .line 168
     :cond_0
     const/16 v0, 0x61
 
@@ -292,14 +267,12 @@
 
     if-gt p0, v0, :cond_1
 
-    .line 169
     add-int/lit8 v0, p0, 0xa
 
     add-int/lit8 v0, v0, -0x61
 
     goto :goto_0
 
-    .line 170
     :cond_1
     const/16 v0, 0x46
 
@@ -309,23 +282,19 @@
 
     if-lt p0, v0, :cond_2
 
-    .line 171
     add-int/lit8 v0, p0, 0xa
 
     add-int/lit8 v0, v0, -0x41
 
     goto :goto_0
 
-    .line 172
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 173
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 175
     :cond_3
     new-instance v0, Ljava/lang/NumberFormatException;
 
@@ -373,7 +342,6 @@
 
     const/4 v8, 0x3
 
-    .line 59
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v5
@@ -386,12 +354,10 @@
 
     move-object v4, v6
 
-    .line 78
     :cond_0
     :goto_0
     return-object v4
 
-    .line 63
     :cond_1
     const/4 v3, 0x0
 
@@ -403,12 +369,10 @@
 
     if-ge v3, v5, :cond_4
 
-    .line 64
     sget-object v5, Lcom/android/server/wifi/hotspot2/Utils;->PLMNText:[Ljava/lang/String;
 
     aget-object v1, v5, v3
 
-    .line 65
     .local v1, "expect":Ljava/lang/String;
     const-string v5, "*"
 
@@ -424,7 +388,6 @@
 
     add-int/lit8 v2, v5, -0x1
 
-    .line 66
     .local v2, "len":I
     :goto_2
     invoke-interface {p0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -441,10 +404,8 @@
 
     move-object v4, v6
 
-    .line 67
     goto :goto_0
 
-    .line 65
     .end local v2    # "len":I
     :cond_2
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -453,14 +414,12 @@
 
     goto :goto_2
 
-    .line 63
     .restart local v2    # "len":I
     :cond_3
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 71
     .end local v1    # "expect":Ljava/lang/String;
     .end local v2    # "len":I
     :cond_4
@@ -502,7 +461,6 @@
 
     move-result-object v4
 
-    .line 72
     .local v4, "prefix":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -513,12 +471,10 @@
 
     if-ge v3, v5, :cond_0
 
-    .line 73
     invoke-virtual {v4, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 74
     .local v0, "ch":C
     const/16 v5, 0x30
 
@@ -531,10 +487,8 @@
     :cond_5
     move-object v4, v6
 
-    .line 75
     goto :goto_0
 
-    .line 72
     :cond_6
     add-int/lit8 v3, v3, 0x1
 
@@ -548,7 +502,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 151
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -559,7 +512,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 152
     new-instance v3, Ljava/lang/NumberFormatException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -588,7 +540,6 @@
 
     throw v3
 
-    .line 154
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -598,11 +549,9 @@
 
     new-array v0, v3, [B
 
-    .line 155
     .local v0, "data":[B
     const/4 v2, 0x0
 
-    .line 156
     .local v2, "position":I
     const/4 v1, 0x0
 
@@ -614,7 +563,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 157
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -645,15 +593,12 @@
 
     aput-byte v3, v0, v2
 
-    .line 160
     add-int/lit8 v2, v2, 0x1
 
-    .line 156
     add-int/lit8 v1, v1, 0x2
 
     goto :goto_0
 
-    .line 162
     :cond_1
     return-object v0
 .end method
@@ -663,7 +608,6 @@
     .param p0, "c"    # Ljava/lang/Class;
 
     .prologue
-    .line 21
     const-string v0, "HS20"
 
     return-object v0
@@ -674,7 +618,6 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 184
     const/4 v1, 0x0
 
     .local v1, "n":I
@@ -685,12 +628,10 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 185
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 186
     .local v0, "ch":C
     const/16 v2, 0x30
 
@@ -700,23 +641,19 @@
 
     if-le v0, v2, :cond_1
 
-    .line 187
     :cond_0
     const/4 v2, 0x0
 
-    .line 190
     .end local v0    # "ch":C
     :goto_1
     return v2
 
-    .line 184
     .restart local v0    # "ch":C
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 190
     .end local v0    # "ch":C
     :cond_2
     const/4 v2, 0x1
@@ -731,14 +668,11 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 43
     const-wide/16 v2, 0x0
 
-    .line 44
     .local v2, "mac":J
     const/4 v0, 0x0
 
-    .line 45
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -750,7 +684,6 @@
 
     if-ge v1, v5, :cond_1
 
-    .line 46
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -759,11 +692,9 @@
 
     move-result v4
 
-    .line 47
     .local v4, "nibble":I
     if-ltz v4, :cond_0
 
-    .line 48
     const/4 v5, 0x4
 
     shl-long v6, v2, v5
@@ -772,16 +703,13 @@
 
     or-long v2, v6, v8
 
-    .line 49
     add-int/lit8 v0, v0, 0x1
 
-    .line 45
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 52
     .end local v4    # "nibble":I
     :cond_1
     const/16 v5, 0xc
@@ -792,7 +720,6 @@
 
     if-ne v5, v10, :cond_3
 
-    .line 53
     :cond_2
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
@@ -824,7 +751,6 @@
 
     throw v5
 
-    .line 55
     :cond_3
     return-wide v2
 .end method
@@ -848,16 +774,13 @@
 
     const/4 v8, 0x0
 
-    .line 93
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 94
     .local v4, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x1
 
-    .line 95
     .local v0, "first":Z
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -881,14 +804,11 @@
 
     move-result-wide v2
 
-    .line 96
     .local v2, "oi":J
     if-eqz v0, :cond_0
 
-    .line 97
     const/4 v0, 0x0
 
-    .line 101
     :goto_1
     invoke-static {v2, v3}, Ljava/lang/Long;->numberOfLeadingZeros(J)I
 
@@ -898,7 +818,6 @@
 
     if-le v5, v6, :cond_1
 
-    .line 102
     const-string v5, "%06x"
 
     new-array v6, v9, [Ljava/lang/Object;
@@ -917,7 +836,6 @@
 
     goto :goto_0
 
-    .line 99
     :cond_0
     const-string v5, ", "
 
@@ -925,7 +843,6 @@
 
     goto :goto_1
 
-    .line 104
     :cond_1
     const-string v5, "%010x"
 
@@ -945,7 +862,6 @@
 
     goto :goto_0
 
-    .line 107
     .end local v2    # "oi":J
     :cond_2
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -960,17 +876,13 @@
     .param p0, "ois"    # [J
 
     .prologue
-    .line 82
     if-nez p0, :cond_0
 
-    .line 83
     const-string v6, "null"
 
-    .line 89
     :goto_0
     return-object v6
 
-    .line 85
     :cond_0
     new-instance v3, Ljava/util/ArrayList;
 
@@ -978,7 +890,6 @@
 
     invoke-direct {v3, v6}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 86
     .local v3, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     move-object v0, p0
 
@@ -994,7 +905,6 @@
 
     aget-wide v4, v0, v1
 
-    .line 87
     .local v4, "oi":J
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1002,12 +912,10 @@
 
     invoke-interface {v3, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 86
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 89
     .end local v4    # "oi":J
     :cond_1
     invoke-static {v3}, Lcom/android/server/wifi/hotspot2/Utils;->roamingConsortiumsToString(Ljava/util/Collection;)Ljava/lang/String;
@@ -1033,7 +941,6 @@
     .end annotation
 
     .prologue
-    .line 26
     const-string v7, "."
 
     invoke-virtual {p0, v7}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -1042,7 +949,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 27
     const/4 v7, 0x0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -1055,7 +961,6 @@
 
     move-result-object p0
 
-    .line 28
     :cond_0
     const/16 v7, 0x40
 
@@ -1063,18 +968,15 @@
 
     move-result v1
 
-    .line 29
     .local v1, "at":I
     if-ltz v1, :cond_1
 
-    .line 30
     add-int/lit8 v7, v1, 0x1
 
     invoke-virtual {p0, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 32
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -1086,13 +988,11 @@
 
     move-result-object v5
 
-    .line 33
     .local v5, "labels":[Ljava/lang/String;
     new-instance v4, Ljava/util/LinkedList;
 
     invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
 
-    .line 34
     .local v4, "labelList":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Ljava/lang/String;>;"
     move-object v0, v5
 
@@ -1108,16 +1008,13 @@
 
     aget-object v3, v0, v2
 
-    .line 35
     .local v3, "label":Ljava/lang/String;
     invoke-virtual {v4, v3}, Ljava/util/LinkedList;->addFirst(Ljava/lang/Object;)V
 
-    .line 34
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 38
     .end local v3    # "label":Ljava/lang/String;
     :cond_2
     return-object v4
@@ -1128,7 +1025,6 @@
     .param p0, "b"    # I
 
     .prologue
-    .line 180
     const/16 v0, 0x20
 
     if-lt p0, v0, :cond_0
@@ -1153,7 +1049,6 @@
     .param p0, "millis"    # J
 
     .prologue
-    .line 226
     const-wide/16 v12, 0x0
 
     cmp-long v12, p0, v12
@@ -1162,14 +1057,12 @@
 
     move-wide/from16 v8, p0
 
-    .line 227
     .local v8, "time":J
     :goto_0
     const-wide/16 v12, 0x3e8
 
     div-long v10, v8, v12
 
-    .line 228
     .local v10, "tmp":J
     const-wide/16 v12, 0x3e8
 
@@ -1177,39 +1070,32 @@
 
     sub-long v4, v8, v12
 
-    .line 230
     .local v4, "ms":J
     move-wide v8, v10
 
-    .line 231
     const-wide/16 v12, 0x3c
 
     div-long/2addr v10, v12
 
-    .line 232
     const-wide/16 v12, 0x3c
 
     mul-long/2addr v12, v10
 
     sub-long v6, v8, v12
 
-    .line 234
     .local v6, "s":J
     move-wide v8, v10
 
-    .line 235
     const-wide/16 v12, 0x3c
 
     div-long/2addr v10, v12
 
-    .line 236
     const-wide/16 v12, 0x3c
 
     mul-long/2addr v12, v10
 
     sub-long v2, v8, v12
 
-    .line 238
     .local v2, "m":J
     const-string v13, "%s%d:%02d:%02d.%03d"
 
@@ -1268,7 +1154,6 @@
 
     return-object v12
 
-    .line 226
     .end local v2    # "m":J
     .end local v4    # "ms":J
     .end local v6    # "s":J
@@ -1281,7 +1166,6 @@
 
     goto :goto_0
 
-    .line 238
     .restart local v2    # "m":J
     .restart local v4    # "ms":J
     .restart local v6    # "s":J
@@ -1298,7 +1182,6 @@
     .param p0, "octets"    # [B
 
     .prologue
-    .line 143
     new-instance v4, Ljava/lang/StringBuilder;
 
     array-length v5, p0
@@ -1307,7 +1190,6 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 144
     .local v4, "sb":Ljava/lang/StringBuilder;
     move-object v0, p0
 
@@ -1323,7 +1205,6 @@
 
     aget-byte v3, v0, v1
 
-    .line 145
     .local v3, "o":B
     const-string v5, "%02x"
 
@@ -1347,12 +1228,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 144
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 147
     .end local v3    # "o":B
     :cond_0
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1367,17 +1246,13 @@
     .param p0, "data"    # [B
 
     .prologue
-    .line 125
     if-nez p0, :cond_0
 
-    .line 126
     const-string v6, "null"
 
-    .line 139
     :goto_0
     return-object v6
 
-    .line 128
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1387,11 +1262,9 @@
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 130
     .local v5, "sb":Ljava/lang/StringBuilder;
     const/4 v2, 0x1
 
-    .line 131
     .local v2, "first":Z
     move-object v0, p0
 
@@ -1407,14 +1280,11 @@
 
     aget-byte v1, v0, v3
 
-    .line 132
     .local v1, "b":B
     if-eqz v2, :cond_1
 
-    .line 133
     const/4 v2, 0x0
 
-    .line 137
     :goto_2
     const-string v6, "%02x"
 
@@ -1438,12 +1308,10 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 131
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 135
     :cond_1
     const/16 v6, 0x20
 
@@ -1451,7 +1319,6 @@
 
     goto :goto_2
 
-    .line 139
     .end local v1    # "b":B
     :cond_2
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1472,21 +1339,17 @@
 
     const/4 v5, 0x1
 
-    .line 242
     const-wide/16 v2, 0x0
 
     cmp-long v1, p0, v2
 
     if-gez v1, :cond_0
 
-    .line 243
     const-string v1, "unset"
 
-    .line 247
     :goto_0
     return-object v1
 
-    .line 245
     :cond_0
     const-string v1, "UTC"
 
@@ -1498,11 +1361,9 @@
 
     move-result-object v0
 
-    .line 246
     .local v0, "c":Ljava/util/Calendar;
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 247
     const-string v1, "%4d/%02d/%02d %2d:%02d:%02dZ"
 
     const/4 v2, 0x6
@@ -1595,7 +1456,6 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 111
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -1604,7 +1464,6 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 112
     .local v2, "sb":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
@@ -1616,12 +1475,10 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 113
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 114
     .local v0, "ch":C
     const/16 v3, 0x20
 
@@ -1631,16 +1488,13 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 115
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 112
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 118
     :cond_0
     const-string v3, "\\u"
 
@@ -1670,7 +1524,6 @@
 
     goto :goto_1
 
-    .line 121
     .end local v0    # "ch":C
     :cond_1
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1685,19 +1538,15 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 257
     if-nez p0, :cond_1
 
-    .line 258
     const/4 p0, 0x0
 
-    .line 264
     .end local p0    # "s":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object p0
 
-    .line 260
     .restart local p0    # "s":Ljava/lang/String;
     :cond_1
     const-string v0, "\""
@@ -1716,7 +1565,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 261
     const/4 v0, 0x1
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I

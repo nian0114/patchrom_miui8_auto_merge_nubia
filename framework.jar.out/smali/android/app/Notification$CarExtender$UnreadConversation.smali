@@ -57,28 +57,20 @@
     .param p6, "latestTimestamp"    # J
 
     .prologue
-    .line 5487
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5488
     iput-object p1, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mMessages:[Ljava/lang/String;
 
-    .line 5489
     iput-object p2, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mRemoteInput:Landroid/app/RemoteInput;
 
-    .line 5490
     iput-object p4, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mReadPendingIntent:Landroid/app/PendingIntent;
 
-    .line 5491
     iput-object p3, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mReplyPendingIntent:Landroid/app/PendingIntent;
 
-    .line 5492
     iput-object p5, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mParticipants:[Ljava/lang/String;
 
-    .line 5493
     iput-wide p6, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mLatestTimestamp:J
 
-    .line 5494
     return-void
 .end method
 
@@ -89,41 +81,33 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 5573
     if-nez p0, :cond_0
 
     move-object v0, v6
 
-    .line 5609
     :goto_0
     return-object v0
 
-    .line 5576
     :cond_0
-    const-string/jumbo v0, "messages"
+    const-string v0, "messages"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
 
     move-result-object v9
 
-    .line 5577
     .local v9, "parcelableMessages":[Landroid/os/Parcelable;
     const/4 v1, 0x0
 
-    .line 5578
     .local v1, "messages":[Ljava/lang/String;
     if-eqz v9, :cond_2
 
-    .line 5579
     array-length v0, v9
 
     new-array v11, v0, [Ljava/lang/String;
 
-    .line 5580
     .local v11, "tmp":[Ljava/lang/String;
     const/4 v10, 0x1
 
-    .line 5581
     .local v10, "success":Z
     const/4 v8, 0x0
 
@@ -133,30 +117,25 @@
 
     if-ge v8, v0, :cond_1
 
-    .line 5582
     aget-object v0, v9, v8
 
     instance-of v0, v0, Landroid/os/Bundle;
 
     if-nez v0, :cond_4
 
-    .line 5583
     const/4 v10, 0x0
 
-    .line 5592
     :cond_1
     :goto_2
     if-eqz v10, :cond_6
 
-    .line 5593
     move-object v1, v11
 
-    .line 5599
     .end local v8    # "i":I
     .end local v10    # "success":Z
     .end local v11    # "tmp":[Ljava/lang/String;
     :cond_2
-    const-string/jumbo v0, "on_read"
+    const-string v0, "on_read"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -164,9 +143,8 @@
 
     check-cast v4, Landroid/app/PendingIntent;
 
-    .line 5600
     .local v4, "onRead":Landroid/app/PendingIntent;
-    const-string/jumbo v0, "on_reply"
+    const-string v0, "on_reply"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -174,9 +152,8 @@
 
     check-cast v3, Landroid/app/PendingIntent;
 
-    .line 5602
     .local v3, "onReply":Landroid/app/PendingIntent;
-    const-string/jumbo v0, "remote_input"
+    const-string v0, "remote_input"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -184,15 +161,13 @@
 
     check-cast v2, Landroid/app/RemoteInput;
 
-    .line 5604
     .local v2, "remoteInput":Landroid/app/RemoteInput;
-    const-string/jumbo v0, "participants"
+    const-string v0, "participants"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 5605
     .local v5, "participants":[Ljava/lang/String;
     if-eqz v5, :cond_3
 
@@ -205,10 +180,8 @@
     :cond_3
     move-object v0, v6
 
-    .line 5606
     goto :goto_0
 
-    .line 5586
     .end local v2    # "remoteInput":Landroid/app/RemoteInput;
     .end local v3    # "onReply":Landroid/app/PendingIntent;
     .end local v4    # "onRead":Landroid/app/PendingIntent;
@@ -221,7 +194,7 @@
 
     check-cast v0, Landroid/os/Bundle;
 
-    const-string/jumbo v7, "text"
+    const-string v7, "text"
 
     invoke-virtual {v0, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -229,18 +202,14 @@
 
     aput-object v0, v11, v8
 
-    .line 5587
     aget-object v0, v11, v8
 
     if-nez v0, :cond_5
 
-    .line 5588
     const/4 v10, 0x0
 
-    .line 5589
     goto :goto_2
 
-    .line 5581
     :cond_5
     add-int/lit8 v8, v8, 0x1
 
@@ -249,10 +218,8 @@
     :cond_6
     move-object v0, v6
 
-    .line 5595
     goto :goto_0
 
-    .line 5609
     .end local v8    # "i":I
     .end local v10    # "success":Z
     .end local v11    # "tmp":[Ljava/lang/String;
@@ -263,7 +230,7 @@
     :cond_7
     new-instance v0, Landroid/app/Notification$CarExtender$UnreadConversation;
 
-    const-string/jumbo v6, "timestamp"
+    const-string v6, "timestamp"
 
     invoke-virtual {p0, v6}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
@@ -280,16 +247,13 @@
     .locals 8
 
     .prologue
-    .line 5549
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 5550
     .local v1, "b":Landroid/os/Bundle;
     const/4 v0, 0x0
 
-    .line 5551
     .local v0, "author":Ljava/lang/String;
     iget-object v5, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mParticipants:[Ljava/lang/String;
 
@@ -303,14 +267,12 @@
 
     if-le v5, v6, :cond_0
 
-    .line 5552
     iget-object v5, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mParticipants:[Ljava/lang/String;
 
     const/4 v6, 0x0
 
     aget-object v0, v5, v6
 
-    .line 5554
     :cond_0
     iget-object v5, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mMessages:[Ljava/lang/String;
 
@@ -318,7 +280,6 @@
 
     new-array v4, v5, [Landroid/os/Parcelable;
 
-    .line 5555
     .local v4, "messages":[Landroid/os/Parcelable;
     const/4 v2, 0x0
 
@@ -328,14 +289,12 @@
 
     if-ge v2, v5, :cond_1
 
-    .line 5556
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 5557
     .local v3, "m":Landroid/os/Bundle;
-    const-string/jumbo v5, "text"
+    const-string v5, "text"
 
     iget-object v6, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mMessages:[Ljava/lang/String;
 
@@ -343,68 +302,57 @@
 
     invoke-virtual {v3, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5558
     const-string v5, "author"
 
     invoke-virtual {v3, v5, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5559
     aput-object v3, v4, v2
 
-    .line 5555
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 5561
     .end local v3    # "m":Landroid/os/Bundle;
     :cond_1
-    const-string/jumbo v5, "messages"
+    const-string v5, "messages"
 
     invoke-virtual {v1, v5, v4}, Landroid/os/Bundle;->putParcelableArray(Ljava/lang/String;[Landroid/os/Parcelable;)V
 
-    .line 5562
     iget-object v5, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mRemoteInput:Landroid/app/RemoteInput;
 
     if-eqz v5, :cond_2
 
-    .line 5563
-    const-string/jumbo v5, "remote_input"
+    const-string v5, "remote_input"
 
     iget-object v6, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mRemoteInput:Landroid/app/RemoteInput;
 
     invoke-virtual {v1, v5, v6}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 5565
     :cond_2
-    const-string/jumbo v5, "on_reply"
+    const-string v5, "on_reply"
 
     iget-object v6, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mReplyPendingIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v1, v5, v6}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 5566
-    const-string/jumbo v5, "on_read"
+    const-string v5, "on_read"
 
     iget-object v6, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mReadPendingIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v1, v5, v6}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 5567
-    const-string/jumbo v5, "participants"
+    const-string v5, "participants"
 
     iget-object v6, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mParticipants:[Ljava/lang/String;
 
     invoke-virtual {v1, v5, v6}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 5568
-    const-string/jumbo v5, "timestamp"
+    const-string v5, "timestamp"
 
     iget-wide v6, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mLatestTimestamp:J
 
     invoke-virtual {v1, v5, v6, v7}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 5569
     return-object v1
 .end method
 
@@ -412,7 +360,6 @@
     .locals 2
 
     .prologue
-    .line 5545
     iget-wide v0, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mLatestTimestamp:J
 
     return-wide v0
@@ -422,7 +369,6 @@
     .locals 1
 
     .prologue
-    .line 5500
     iget-object v0, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mMessages:[Ljava/lang/String;
 
     return-object v0
@@ -432,7 +378,6 @@
     .locals 2
 
     .prologue
-    .line 5538
     iget-object v0, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mParticipants:[Ljava/lang/String;
 
     array-length v0, v0
@@ -458,7 +403,6 @@
     .locals 1
 
     .prologue
-    .line 5531
     iget-object v0, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mParticipants:[Ljava/lang/String;
 
     return-object v0
@@ -468,7 +412,6 @@
     .locals 1
 
     .prologue
-    .line 5524
     iget-object v0, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mReadPendingIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -478,7 +421,6 @@
     .locals 1
 
     .prologue
-    .line 5508
     iget-object v0, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mRemoteInput:Landroid/app/RemoteInput;
 
     return-object v0
@@ -488,7 +430,6 @@
     .locals 1
 
     .prologue
-    .line 5516
     iget-object v0, p0, Landroid/app/Notification$CarExtender$UnreadConversation;->mReplyPendingIntent:Landroid/app/PendingIntent;
 
     return-object v0

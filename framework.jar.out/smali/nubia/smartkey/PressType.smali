@@ -35,7 +35,6 @@
 
     const/4 v2, 0x0
 
-    .line 4
     new-instance v0, Lnubia/smartkey/PressType;
 
     const-string v1, "SHORT"
@@ -52,7 +51,6 @@
 
     sput-object v0, Lnubia/smartkey/PressType;->LONG:Lnubia/smartkey/PressType;
 
-    .line 3
     const/4 v0, 0x2
 
     new-array v0, v0, [Lnubia/smartkey/PressType;
@@ -80,13 +78,10 @@
     .end annotation
 
     .prologue
-    .line 8
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 9
     iput p3, p0, Lnubia/smartkey/PressType;->mValue:I
 
-    .line 10
     return-void
 .end method
 
@@ -95,7 +90,6 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 17
     invoke-static {}, Lnubia/smartkey/PressType;->values()[Lnubia/smartkey/PressType;
 
     move-result-object v0
@@ -112,22 +106,18 @@
 
     aget-object v3, v0, v1
 
-    .line 18
     .local v3, "type":Lnubia/smartkey/PressType;
     iget v4, v3, Lnubia/smartkey/PressType;->mValue:I
 
     if-ne v4, p0, :cond_0
 
-    .line 19
     return-object v3
 
-    .line 17
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 21
     .end local v3    # "type":Lnubia/smartkey/PressType;
     :cond_1
     new-instance v4, Ljava/lang/IllegalArgumentException;
@@ -160,7 +150,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lnubia/smartkey/PressType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -176,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lnubia/smartkey/PressType;->$VALUES:[Lnubia/smartkey/PressType;
 
     invoke-virtual {v0}, [Lnubia/smartkey/PressType;->clone()Ljava/lang/Object;
@@ -194,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 13
     iget v0, p0, Lnubia/smartkey/PressType;->mValue:I
 
     return v0

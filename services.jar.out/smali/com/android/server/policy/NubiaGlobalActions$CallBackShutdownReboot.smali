@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 256
     iput-object p1, p0, Lcom/android/server/policy/NubiaGlobalActions$CallBackShutdownReboot;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/policy/NubiaGlobalActions$1;
 
     .prologue
-    .line 256
     invoke-direct {p0, p1}, Lcom/android/server/policy/NubiaGlobalActions$CallBackShutdownReboot;-><init>(Lcom/android/server/policy/NubiaGlobalActions;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 260
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$CallBackShutdownReboot;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -66,7 +63,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->reboot(Ljava/lang/String;Z)V
 
-    .line 261
     return-void
 .end method
 
@@ -74,7 +70,6 @@
     .locals 2
 
     .prologue
-    .line 265
     iget-object v0, p0, Lcom/android/server/policy/NubiaGlobalActions$CallBackShutdownReboot;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     # getter for: Lcom/android/server/policy/NubiaGlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -86,6 +81,5 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->shutdown(Z)V
 
-    .line 266
     return-void
 .end method

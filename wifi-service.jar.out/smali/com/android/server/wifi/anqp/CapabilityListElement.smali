@@ -19,10 +19,8 @@
     .end annotation
 
     .prologue
-    .line 15
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 16
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v4
@@ -33,7 +31,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 17
     new-instance v4, Ljava/net/ProtocolException;
 
     const-string v5, "Odd length"
@@ -42,7 +39,6 @@
 
     throw v4
 
-    .line 18
     :cond_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -54,10 +50,8 @@
 
     iput-object v4, p0, Lcom/android/server/wifi/anqp/CapabilityListElement;->mCapabilities:[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
-    .line 20
     const/4 v2, 0x0
 
-    .line 21
     .local v2, "index":I
     :goto_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -66,7 +60,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 22
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v4
@@ -75,17 +68,14 @@
 
     and-int v0, v4, v5
 
-    .line 23
     .local v0, "capID":I
     invoke-static {v0}, Lcom/android/server/wifi/anqp/Constants;->mapANQPElement(I)Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     move-result-object v1
 
-    .line 24
     .local v1, "capability":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
     if-nez v1, :cond_1
 
-    .line 25
     new-instance v4, Ljava/net/ProtocolException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -110,7 +100,6 @@
 
     throw v4
 
-    .line 26
     :cond_1
     iget-object v4, p0, Lcom/android/server/wifi/anqp/CapabilityListElement;->mCapabilities:[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
@@ -122,12 +111,10 @@
 
     move v2, v3
 
-    .line 27
     .end local v3    # "index":I
     .restart local v2    # "index":I
     goto :goto_0
 
-    .line 28
     .end local v0    # "capID":I
     .end local v1    # "capability":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
     :cond_2
@@ -140,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 31
     iget-object v0, p0, Lcom/android/server/wifi/anqp/CapabilityListElement;->mCapabilities:[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     return-object v0
@@ -150,7 +136,6 @@
     .locals 2
 
     .prologue
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

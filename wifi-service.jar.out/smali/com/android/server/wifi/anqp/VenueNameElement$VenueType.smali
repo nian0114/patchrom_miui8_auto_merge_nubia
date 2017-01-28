@@ -176,7 +176,6 @@
 
     const/4 v3, 0x0
 
-    .line 89
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Unspecified"
@@ -185,7 +184,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Unspecified:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 91
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UnspecifiedAssembly"
@@ -194,7 +192,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UnspecifiedAssembly:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 92
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Arena"
@@ -203,7 +200,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Arena:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 93
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Stadium"
@@ -212,7 +208,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Stadium:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 94
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "PassengerTerminal"
@@ -221,7 +216,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->PassengerTerminal:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 95
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Amphitheater"
@@ -232,7 +226,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Amphitheater:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 96
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "AmusementPark"
@@ -243,7 +236,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->AmusementPark:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 97
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "PlaceOfWorship"
@@ -254,7 +246,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->PlaceOfWorship:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 98
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "ConventionCenter"
@@ -265,7 +256,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->ConventionCenter:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 99
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Library"
@@ -276,7 +266,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Library:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 100
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Museum"
@@ -287,7 +276,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Museum:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 101
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Restaurant"
@@ -298,7 +286,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Restaurant:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 102
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Theater"
@@ -309,7 +296,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Theater:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 103
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Bar"
@@ -320,7 +306,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Bar:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 104
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "CoffeeShop"
@@ -331,7 +316,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->CoffeeShop:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 105
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "ZooOrAquarium"
@@ -342,7 +326,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->ZooOrAquarium:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 106
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "EmergencyCoordinationCenter"
@@ -353,7 +336,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->EmergencyCoordinationCenter:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 108
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UnspecifiedBusiness"
@@ -364,7 +346,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UnspecifiedBusiness:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 109
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "DoctorDentistoffice"
@@ -375,7 +356,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->DoctorDentistoffice:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 110
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Bank"
@@ -386,7 +366,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Bank:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 111
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "FireStation"
@@ -397,7 +376,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->FireStation:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 112
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "PoliceStation"
@@ -408,7 +386,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->PoliceStation:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 113
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "PostOffice"
@@ -419,7 +396,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->PostOffice:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 114
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "ProfessionalOffice"
@@ -430,7 +406,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->ProfessionalOffice:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 115
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "ResearchDevelopmentFacility"
@@ -441,7 +416,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->ResearchDevelopmentFacility:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 116
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "AttorneyOffice"
@@ -452,7 +426,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->AttorneyOffice:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 118
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UnspecifiedEducational"
@@ -463,7 +436,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UnspecifiedEducational:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 119
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "SchoolPrimary"
@@ -474,7 +446,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->SchoolPrimary:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 120
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "SchoolSecondary"
@@ -485,7 +456,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->SchoolSecondary:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 121
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UniversityCollege"
@@ -496,7 +466,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UniversityCollege:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 123
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UnspecifiedFactoryIndustrial"
@@ -507,7 +476,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UnspecifiedFactoryIndustrial:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 124
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Factory"
@@ -518,7 +486,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Factory:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 126
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UnspecifiedInstitutional"
@@ -529,7 +496,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UnspecifiedInstitutional:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 127
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Hospital"
@@ -540,7 +506,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Hospital:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 128
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "LongTermCareFacility"
@@ -551,7 +516,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->LongTermCareFacility:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 129
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "AlcoholAndDrugRehabilitationCenter"
@@ -562,7 +526,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->AlcoholAndDrugRehabilitationCenter:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 130
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "GroupHome"
@@ -573,7 +536,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->GroupHome:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 131
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "PrisonJail"
@@ -584,7 +546,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->PrisonJail:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 133
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UnspecifiedMercantile"
@@ -595,7 +556,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UnspecifiedMercantile:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 134
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "RetailStore"
@@ -606,7 +566,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->RetailStore:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 135
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "GroceryMarket"
@@ -617,7 +576,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->GroceryMarket:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 136
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "AutomotiveServiceStation"
@@ -628,7 +586,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->AutomotiveServiceStation:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 137
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "ShoppingMall"
@@ -639,7 +596,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->ShoppingMall:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 138
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "GasStation"
@@ -650,7 +606,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->GasStation:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 140
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UnspecifiedResidential"
@@ -661,7 +616,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UnspecifiedResidential:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 141
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "PrivateResidence"
@@ -672,7 +626,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->PrivateResidence:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 142
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "HotelMotel"
@@ -683,7 +636,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->HotelMotel:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 143
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Dormitory"
@@ -694,7 +646,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Dormitory:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 144
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "BoardingHouse"
@@ -705,7 +656,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->BoardingHouse:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 146
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UnspecifiedStorage"
@@ -716,7 +666,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UnspecifiedStorage:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 148
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UnspecifiedUtilityMiscellaneous"
@@ -727,7 +676,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UnspecifiedUtilityMiscellaneous:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 150
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UnspecifiedVehicular"
@@ -738,7 +686,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UnspecifiedVehicular:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 151
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "AutomobileOrTruck"
@@ -749,7 +696,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->AutomobileOrTruck:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 152
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Airplane"
@@ -760,7 +706,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Airplane:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 153
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Bus"
@@ -771,7 +716,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Bus:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 154
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Ferry"
@@ -782,7 +726,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Ferry:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 155
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "ShipOrBoat"
@@ -793,7 +736,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->ShipOrBoat:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 156
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Train"
@@ -804,7 +746,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Train:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 157
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "MotorBike"
@@ -815,7 +756,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->MotorBike:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 159
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "UnspecifiedOutdoor"
@@ -826,7 +766,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->UnspecifiedOutdoor:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 160
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "MuniMeshNetwork"
@@ -837,7 +776,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->MuniMeshNetwork:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 161
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "CityPark"
@@ -848,7 +786,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->CityPark:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 162
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "RestArea"
@@ -859,7 +796,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->RestArea:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 163
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "TrafficControl"
@@ -870,7 +806,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->TrafficControl:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 164
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "BusStop"
@@ -881,7 +816,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->BusStop:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 165
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Kiosk"
@@ -892,7 +826,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Kiosk:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 167
     new-instance v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     const-string v1, "Reserved"
@@ -903,7 +836,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->Reserved:Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
-    .line 88
     const/16 v0, 0x43
 
     new-array v0, v0, [Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
@@ -1314,7 +1246,6 @@
     .end annotation
 
     .prologue
-    .line 88
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -1325,7 +1256,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 88
     const-class v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1341,7 +1271,6 @@
     .locals 1
 
     .prologue
-    .line 88
     sget-object v0, Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->$VALUES:[Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;
 
     invoke-virtual {v0}, [Lcom/android/server/wifi/anqp/VenueNameElement$VenueType;->clone()Ljava/lang/Object;

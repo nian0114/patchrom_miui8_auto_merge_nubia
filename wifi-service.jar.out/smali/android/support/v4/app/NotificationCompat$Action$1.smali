@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 2171
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
     .param p5, "remoteInputs"    # [Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
 
     .prologue
-    .line 2176
     new-instance v0, Landroid/support/v4/app/NotificationCompat$Action;
 
     check-cast p5, [Landroid/support/v4/app/RemoteInput;
@@ -68,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 2171
     invoke-virtual/range {p0 .. p5}, Landroid/support/v4/app/NotificationCompat$Action$1;->build(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;)Landroid/support/v4/app/NotificationCompat$Action;
 
     move-result-object v0
@@ -81,7 +78,6 @@
     .param p1, "length"    # I
 
     .prologue
-    .line 2182
     new-array v0, p1, [Landroid/support/v4/app/NotificationCompat$Action;
 
     return-object v0
@@ -91,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 2171
     invoke-virtual {p0, p1}, Landroid/support/v4/app/NotificationCompat$Action$1;->newArray(I)[Landroid/support/v4/app/NotificationCompat$Action;
 
     move-result-object v0

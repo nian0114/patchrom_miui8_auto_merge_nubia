@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 126
     iput-object p1, p0, Lnubia/widget/NubiaMorePopup$2;->this$0:Lnubia/widget/NubiaMorePopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 129
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$2;->this$0:Lnubia/widget/NubiaMorePopup;
 
     iget-object v1, p0, Lnubia/widget/NubiaMorePopup$2;->this$0:Lnubia/widget/NubiaMorePopup;
@@ -53,6 +51,5 @@
 
     invoke-virtual {v0, v1}, Lnubia/widget/NubiaMorePopup;->startExitAnimation(Landroid/widget/PopupWindow;)V
 
-    .line 130
     return-void
 .end method

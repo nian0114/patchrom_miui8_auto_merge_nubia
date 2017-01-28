@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 144
     iput-object p1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "x1"    # Lcom/android/server/wifi/RttService$1;
 
     .prologue
-    .line 144
     invoke-direct {p0, p1}, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;-><init>(Lcom/android/server/wifi/RttService$RttServiceImpl;)V
 
     return-void
@@ -55,7 +53,6 @@
     .locals 3
 
     .prologue
-    .line 151
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,13 +91,11 @@
 
     move-result-object v0
 
-    .line 152
     .local v0, "str":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;->key:Ljava/lang/Integer;
 
     if-eqz v1, :cond_0
 
-    .line 153
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +120,6 @@
 
     move-result-object v1
 
-    .line 155
     :goto_0
     return-object v1
 

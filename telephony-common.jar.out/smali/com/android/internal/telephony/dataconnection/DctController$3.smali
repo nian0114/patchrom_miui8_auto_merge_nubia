@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 187
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,14 +37,12 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 190
     iget v2, p1, Landroid/os/Message;->what:I
 
     const/16 v3, 0x2bc
 
     if-lt v2, v3, :cond_1
 
-    .line 191
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,18 +75,15 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
 
-    .line 193
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 194
     .local v0, "ar":Landroid/os/AsyncResult;
     iget-object v1, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 195
     .local v1, "toggle":Ljava/lang/Integer;
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -107,14 +101,12 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->notifyEmergencyCallToggled(I)V
 
-    .line 207
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v1    # "toggle":Ljava/lang/Integer;
     :cond_0
     :goto_0
     return-void
 
-    .line 197
     :cond_1
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -122,7 +114,6 @@
 
     if-lt v2, v3, :cond_2
 
-    .line 198
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -155,7 +146,6 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
 
-    .line 200
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     iget-object v2, v2, Lcom/android/internal/telephony/dataconnection/DctController;->mDcSwitchAsyncChannel:[Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;
@@ -170,7 +160,6 @@
 
     goto :goto_0
 
-    .line 202
     :cond_2
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -178,7 +167,6 @@
 
     if-lt v2, v3, :cond_0
 
-    .line 203
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -211,7 +199,6 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
 
-    .line 205
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DctController$3;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     iget-object v2, v2, Lcom/android/internal/telephony/dataconnection/DctController;->mDcSwitchAsyncChannel:[Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 78
     iput-object p1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$DefaultState;->this$0:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 81
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$DefaultState;->this$0:Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -81,7 +79,6 @@
     # invokes: Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->loge(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->access$100(Lcn/nubia/server/breathinglight/BreathingLightStateMachine;Ljava/lang/String;)V
 
-    .line 83
     const/4 v0, 0x1
 
     return v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 395
     iput-object p1, p0, Lcom/android/server/storage/DeviceStorageMonitorService$3;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
@@ -40,7 +39,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 398
     iget-object v0, p0, Lcom/android/server/storage/DeviceStorageMonitorService$3;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     invoke-virtual {v0}, Lcom/android/server/storage/DeviceStorageMonitorService;->getContext()Landroid/content/Context;
@@ -55,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 401
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,11 +91,9 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 408
     :goto_0
     return-void
 
-    .line 407
     :cond_0
     iget-object v0, p0, Lcom/android/server/storage/DeviceStorageMonitorService$3;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 

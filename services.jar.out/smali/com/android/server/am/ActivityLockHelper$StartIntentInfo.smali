@@ -77,84 +77,63 @@
     .param p18, "inTask"    # Lcom/android/server/am/TaskRecord;
 
     .prologue
-    .line 475
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 476
     iput-object p1, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mCaller:Landroid/app/IApplicationThread;
 
-    .line 477
     iput p2, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mCallingUid:I
 
-    .line 478
     iput-object p3, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mCallingPackage:Ljava/lang/String;
 
-    .line 479
     iput-object p4, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mIntent:Landroid/content/Intent;
 
-    .line 480
     iput-object p5, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mResolvedType:Ljava/lang/String;
 
-    .line 481
     iput-object p6, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mVoiceSession:Landroid/service/voice/IVoiceInteractionSession;
 
-    .line 482
     iput-object p7, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mVoiceInteractor:Lcom/android/internal/app/IVoiceInteractor;
 
-    .line 483
     iput-object p8, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mResultTo:Landroid/os/IBinder;
 
-    .line 484
     iput-object p9, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mResultWho:Ljava/lang/String;
 
-    .line 485
     iput p10, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mRequestCode:I
 
-    .line 486
     iput p11, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mStartFlags:I
 
-    .line 487
     move-object/from16 v0, p12
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mProfilerInfo:Landroid/app/ProfilerInfo;
 
-    .line 488
     move-object/from16 v0, p13
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mOutResult:Landroid/app/IActivityManager$WaitResult;
 
-    .line 489
     move-object/from16 v0, p14
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mConfig:Landroid/content/res/Configuration;
 
-    .line 490
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mOptions:Landroid/os/Bundle;
 
-    .line 491
     move/from16 v0, p16
 
     iput v0, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mUserId:I
 
-    .line 492
     move-object/from16 v0, p17
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mIcontainer:Landroid/app/IActivityContainer;
 
-    .line 493
     move-object/from16 v0, p18
 
     iput-object v0, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mInTask:Lcom/android/server/am/TaskRecord;
 
-    .line 494
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/server/am/ActivityLockHelper$StartIntentInfo;->mToken:J
 
-    .line 495
     return-void
 .end method

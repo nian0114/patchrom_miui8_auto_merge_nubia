@@ -45,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 492
     .local p0, "this":Landroid/support/v4/content/ModernAsyncTask$WorkerRunnable;, "Landroid/support/v4/content/ModernAsyncTask$WorkerRunnable<TParams;TResult;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,7 +56,6 @@
     .param p1, "x0"    # Landroid/support/v4/content/ModernAsyncTask$1;
 
     .prologue
-    .line 492
     .local p0, "this":Landroid/support/v4/content/ModernAsyncTask$WorkerRunnable;, "Landroid/support/v4/content/ModernAsyncTask$WorkerRunnable<TParams;TResult;>;"
     invoke-direct {p0}, Landroid/support/v4/content/ModernAsyncTask$WorkerRunnable;-><init>()V
 

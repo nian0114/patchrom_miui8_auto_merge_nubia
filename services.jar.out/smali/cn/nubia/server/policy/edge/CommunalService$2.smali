@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 196
     iput-object p1, p0, Lcn/nubia/server/policy/edge/CommunalService$2;->this$0:Lcn/nubia/server/policy/edge/CommunalService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 199
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService$2;->this$0:Lcn/nubia/server/policy/edge/CommunalService;
 
     const/4 v1, 0x0
@@ -48,6 +46,5 @@
     # setter for: Lcn/nubia/server/policy/edge/CommunalService;->mIsSingleSlide:Z
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/CommunalService;->access$302(Lcn/nubia/server/policy/edge/CommunalService;Z)Z
 
-    .line 200
     return-void
 .end method

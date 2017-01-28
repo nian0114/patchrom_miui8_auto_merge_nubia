@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 107
     iput-object p1, p0, Lnubia/widget/DatePickerDialog$DatePickerOnDateChangeListener;->this$0:Lnubia/widget/DatePickerDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lnubia/widget/DatePickerDialog$1;
 
     .prologue
-    .line 107
     invoke-direct {p0, p1}, Lnubia/widget/DatePickerDialog$DatePickerOnDateChangeListener;-><init>(Lnubia/widget/DatePickerDialog;)V
 
     return-void
@@ -56,7 +54,6 @@
     .param p4, "dayOfMonth"    # I
 
     .prologue
-    .line 113
     iget-object v0, p0, Lnubia/widget/DatePickerDialog$DatePickerOnDateChangeListener;->this$0:Lnubia/widget/DatePickerDialog;
 
     # getter for: Lnubia/widget/DatePickerDialog;->mDatePicker:Lnubia/widget/DatePickerView;
@@ -73,6 +70,5 @@
 
     invoke-virtual {v0, p2, p3, p4, v1}, Lnubia/widget/DatePickerView;->update(IIILnubia/widget/DatePickerView$OnDateChangeListener;)V
 
-    .line 115
     return-void
 .end method

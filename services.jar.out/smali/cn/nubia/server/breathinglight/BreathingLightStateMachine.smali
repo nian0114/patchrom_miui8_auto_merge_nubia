@@ -91,53 +91,44 @@
     .param p2, "service"    # Lcn/nubia/server/breathinglight/BreathingLightService;
 
     .prologue
-    .line 54
     const-string v0, "BreathingLightStateMachine"
 
     invoke-direct {p0, v0}, Lcom/android/internal/util/StateMachine;-><init>(Ljava/lang/String;)V
 
-    .line 46
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$DefaultState;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$DefaultState;-><init>(Lcn/nubia/server/breathinglight/BreathingLightStateMachine;)V
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mDefaultState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$DefaultState;
 
-    .line 47
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOffState;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOffState;-><init>(Lcn/nubia/server/breathinglight/BreathingLightStateMachine;)V
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOffState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOffState;
 
-    .line 48
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnState;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnState;-><init>(Lcn/nubia/server/breathinglight/BreathingLightStateMachine;)V
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnState;
 
-    .line 49
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnLockedState;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnLockedState;-><init>(Lcn/nubia/server/breathinglight/BreathingLightStateMachine;)V
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnLockedState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnLockedState;
 
-    .line 50
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnNormalState;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnNormalState;-><init>(Lcn/nubia/server/breathinglight/BreathingLightStateMachine;)V
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnNormalState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnNormalState;
 
-    .line 55
     iput-object p1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mContext:Landroid/content/Context;
 
-    .line 56
     iput-object p2, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
-    .line 58
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mContext:Landroid/content/Context;
 
     const-string v1, "keyguard"
@@ -150,7 +141,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mKeyguardManager:Landroid/app/KeyguardManager;
 
-    .line 61
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "BreathLightCallJNI"
@@ -159,12 +149,10 @@
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventThread:Landroid/os/HandlerThread;
 
-    .line 62
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 63
     new-instance v0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;
 
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventThread:Landroid/os/HandlerThread;
@@ -177,45 +165,38 @@
 
     iput-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventHandler:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;
 
-    .line 66
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mDefaultState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$DefaultState;
 
     invoke-virtual {p0, v0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->addState(Lcom/android/internal/util/State;)V
 
-    .line 67
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOffState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOffState;
 
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mDefaultState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$DefaultState;
 
     invoke-virtual {p0, v0, v1}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 68
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnState;
 
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mDefaultState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$DefaultState;
 
     invoke-virtual {p0, v0, v1}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 69
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnLockedState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnLockedState;
 
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnState;
 
     invoke-virtual {p0, v0, v1}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 70
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnNormalState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnNormalState;
 
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnState;
 
     invoke-virtual {p0, v0, v1}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 71
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnLockedState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnLockedState;
 
     invoke-virtual {p0, v0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->setInitialState(Lcom/android/internal/util/State;)V
 
-    .line 72
     return-void
 .end method
 
@@ -224,7 +205,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->getCurrentStateName()Ljava/lang/String;
 
     move-result-object v0
@@ -238,7 +218,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 14
     invoke-virtual {p0, p1}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->loge(Ljava/lang/String;)V
 
     return-void
@@ -249,7 +228,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleProximityScreenOn()V
 
     return-void
@@ -260,7 +238,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleEnterSingleUiMode()V
 
     return-void
@@ -271,7 +248,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleExitSingleUiMode()V
 
     return-void
@@ -282,7 +258,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleKeyguardUnlock()V
 
     return-void
@@ -293,7 +268,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleKeyguardDragStart()V
 
     return-void
@@ -304,7 +278,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleKeyguardDragRelease()V
 
     return-void
@@ -315,7 +288,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleKeyEvent()V
 
     return-void
@@ -326,7 +298,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleMotionEvent()V
 
     return-void
@@ -337,7 +308,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleSetBrightnesss()V
 
     return-void
@@ -348,7 +318,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     return-object v0
@@ -359,7 +328,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleScreenOn()V
 
     return-void
@@ -370,7 +338,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleMissEvent()V
 
     return-void
@@ -381,7 +348,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleCloseMissEvent()V
 
     return-void
@@ -392,7 +358,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleCharging()V
 
     return-void
@@ -403,7 +368,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleCharged()V
 
     return-void
@@ -414,7 +378,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleScreenOff()V
 
     return-void
@@ -425,7 +388,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleBootCompleted()V
 
     return-void
@@ -436,7 +398,6 @@
     .param p0, "x0"    # Lcn/nubia/server/breathinglight/BreathingLightStateMachine;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->handleProximityScreenOff()V
 
     return-void
@@ -446,7 +407,6 @@
     .locals 1
 
     .prologue
-    .line 75
     invoke-virtual {p0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->getCurrentState()Lcom/android/internal/util/IState;
 
     move-result-object v0
@@ -464,7 +424,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 189
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
@@ -473,7 +432,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 191
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mKeyguardManager:Landroid/app/KeyguardManager;
 
     if-eqz v0, :cond_0
@@ -486,16 +444,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 192
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnLockedState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnLockedState;
 
     invoke-virtual {p0, v0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
-    .line 196
     :goto_0
     return-void
 
-    .line 194
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnNormalState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnNormalState;
 
@@ -510,14 +465,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 240
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
 
     invoke-virtual {v0, v1, v2, v2, v2}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 242
     return-void
 .end method
 
@@ -527,7 +480,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 235
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
@@ -536,7 +488,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 237
     return-void
 .end method
 
@@ -546,14 +497,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 230
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
 
     invoke-virtual {v0, v1, v2, v2, v2}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 232
     return-void
 .end method
 
@@ -563,14 +512,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 303
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
 
     invoke-virtual {v0, v1, v2, v2, v2}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 305
     return-void
 .end method
 
@@ -580,7 +527,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 308
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
@@ -589,7 +535,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 310
     return-void
 .end method
 
@@ -599,7 +544,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 257
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v1}, Lcn/nubia/server/breathinglight/BreathingLightService;->isBreathingLightTouchEnable()Z
@@ -608,17 +552,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 258
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventHandler:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 259
     const/16 v0, 0x28
 
-    .line 261
     .local v0, "lights":I
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventHandler:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;
 
@@ -634,10 +575,8 @@
 
     invoke-virtual {v1, v2, v4, v5}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 264
     const/16 v0, 0x38
 
-    .line 266
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventHandler:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;
 
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventHandler:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;
@@ -658,7 +597,6 @@
 
     invoke-virtual {v1, v2}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 270
     .end local v0    # "lights":I
     :cond_0
     return-void
@@ -670,7 +608,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 251
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
@@ -679,7 +616,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 254
     return-void
 .end method
 
@@ -689,14 +625,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 245
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
 
     invoke-virtual {v0, v1, v2, v2, v2}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 247
     return-void
 .end method
 
@@ -706,7 +640,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 216
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightService;->isSingleUiModeEnable()Z
@@ -715,7 +648,6 @@
 
     if-nez v0, :cond_0
 
-    .line 217
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
@@ -724,13 +656,11 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 220
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnNormalState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnNormalState;
 
     invoke-virtual {p0, v0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
-    .line 221
     return-void
 .end method
 
@@ -742,7 +672,6 @@
 
     const/4 v4, 0x0
 
-    .line 224
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
@@ -757,7 +686,6 @@
 
     invoke-virtual {v0, v1, v5, v2, v4}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 227
     return-void
 .end method
 
@@ -767,7 +695,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 273
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v1}, Lcn/nubia/server/breathinglight/BreathingLightService;->isBreathingLightTouchEnable()Z
@@ -776,10 +703,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 274
     const/16 v0, 0x28
 
-    .line 277
     .local v0, "lights":I
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventHandler:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;
 
@@ -787,7 +712,6 @@
 
     invoke-virtual {v1, v2}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 278
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventHandler:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;
 
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventHandler:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;
@@ -802,7 +726,6 @@
 
     invoke-virtual {v1, v2, v4, v5}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 280
     iget-object v1, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventHandler:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;
 
     iget-object v2, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mInputEventHandler:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;
@@ -823,7 +746,6 @@
 
     invoke-virtual {v1, v2}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine$InputEventHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 285
     .end local v0    # "lights":I
     :cond_0
     return-void
@@ -835,14 +757,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 293
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
 
     invoke-virtual {v0, v1, v2, v2, v2}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 295
     return-void
 .end method
 
@@ -852,7 +772,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 298
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
@@ -861,7 +780,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 300
     return-void
 .end method
 
@@ -869,12 +787,10 @@
     .locals 1
 
     .prologue
-    .line 212
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOffState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOffState;
 
     invoke-virtual {p0, v0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
-    .line 213
     return-void
 .end method
 
@@ -884,7 +800,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 199
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     invoke-virtual {v0}, Lcn/nubia/server/breathinglight/BreathingLightService;->isSingleUiModeEnable()Z
@@ -893,7 +808,6 @@
 
     if-nez v0, :cond_0
 
-    .line 201
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
@@ -902,7 +816,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 204
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mKeyguardManager:Landroid/app/KeyguardManager;
 
@@ -916,16 +829,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 205
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnLockedState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnLockedState;
 
     invoke-virtual {p0, v0}, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
-    .line 209
     :goto_0
     return-void
 
-    .line 207
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mSCreenOnNormalState:Lcn/nubia/server/breathinglight/BreathingLightStateMachine$SCreenOnNormalState;
 
@@ -940,7 +850,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 288
     iget-object v0, p0, Lcn/nubia/server/breathinglight/BreathingLightStateMachine;->mService:Lcn/nubia/server/breathinglight/BreathingLightService;
 
     const/16 v1, 0x10
@@ -949,6 +858,5 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Lcn/nubia/server/breathinglight/BreathingLightService;->setBreathingLightState(IIII)V
 
-    .line 290
     return-void
 .end method

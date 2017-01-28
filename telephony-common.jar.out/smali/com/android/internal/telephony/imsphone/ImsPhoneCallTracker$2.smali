@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 231
     iput-object p1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$2;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,12 +36,10 @@
     .locals 1
 
     .prologue
-    .line 233
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$2;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # invokes: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->getImsService()V
     invoke-static {v0}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$800(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)V
 
-    .line 234
     return-void
 .end method

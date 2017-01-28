@@ -24,15 +24,12 @@
     .locals 1
 
     .prologue
-    .line 50
     invoke-direct {p0}, Lorg/ksoap2/SoapFault;-><init>()V
 
-    .line 51
     const/16 v0, 0x78
 
     iput v0, p0, Lorg/ksoap2/SoapFault12;->version:I
 
-    .line 52
     return-void
 .end method
 
@@ -41,13 +38,10 @@
     .param p1, "version"    # I
 
     .prologue
-    .line 55
     invoke-direct {p0}, Lorg/ksoap2/SoapFault;-><init>()V
 
-    .line 56
     iput p1, p0, Lorg/ksoap2/SoapFault12;->version:I
 
-    .line 57
     return-void
 .end method
 
@@ -66,14 +60,12 @@
 
     const/4 v3, 0x2
 
-    .line 71
     const-string v1, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v2, "Fault"
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 73
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
@@ -81,16 +73,13 @@
 
     if-ne v1, v3, :cond_5
 
-    .line 74
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 75
     .local v0, "name":Ljava/lang/String;
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 76
     const-string v1, "Code"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -99,19 +88,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 77
     new-instance v1, Lorg/ksoap2/kdom/Node;
 
     invoke-direct {v1}, Lorg/ksoap2/kdom/Node;-><init>()V
 
     iput-object v1, p0, Lorg/ksoap2/SoapFault12;->Code:Lorg/ksoap2/kdom/Node;
 
-    .line 78
     iget-object v1, p0, Lorg/ksoap2/SoapFault12;->Code:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v1, p1}, Lorg/ksoap2/kdom/Node;->parse(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 95
     :goto_1
     const-string v1, "http://www.w3.org/2003/05/soap-envelope"
 
@@ -119,7 +105,6 @@
 
     goto :goto_0
 
-    .line 79
     :cond_0
     const-string v1, "Reason"
 
@@ -129,21 +114,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 80
     new-instance v1, Lorg/ksoap2/kdom/Node;
 
     invoke-direct {v1}, Lorg/ksoap2/kdom/Node;-><init>()V
 
     iput-object v1, p0, Lorg/ksoap2/SoapFault12;->Reason:Lorg/ksoap2/kdom/Node;
 
-    .line 81
     iget-object v1, p0, Lorg/ksoap2/SoapFault12;->Reason:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v1, p1}, Lorg/ksoap2/kdom/Node;->parse(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_1
 
-    .line 82
     :cond_1
     const-string v1, "Node"
 
@@ -153,21 +135,18 @@
 
     if-eqz v1, :cond_2
 
-    .line 83
     new-instance v1, Lorg/ksoap2/kdom/Node;
 
     invoke-direct {v1}, Lorg/ksoap2/kdom/Node;-><init>()V
 
     iput-object v1, p0, Lorg/ksoap2/SoapFault12;->Node:Lorg/ksoap2/kdom/Node;
 
-    .line 84
     iget-object v1, p0, Lorg/ksoap2/SoapFault12;->Node:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v1, p1}, Lorg/ksoap2/kdom/Node;->parse(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_1
 
-    .line 85
     :cond_2
     const-string v1, "Role"
 
@@ -177,21 +156,18 @@
 
     if-eqz v1, :cond_3
 
-    .line 86
     new-instance v1, Lorg/ksoap2/kdom/Node;
 
     invoke-direct {v1}, Lorg/ksoap2/kdom/Node;-><init>()V
 
     iput-object v1, p0, Lorg/ksoap2/SoapFault12;->Role:Lorg/ksoap2/kdom/Node;
 
-    .line 87
     iget-object v1, p0, Lorg/ksoap2/SoapFault12;->Role:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v1, p1}, Lorg/ksoap2/kdom/Node;->parse(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_1
 
-    .line 88
     :cond_3
     const-string v1, "Detail"
 
@@ -201,21 +177,18 @@
 
     if-eqz v1, :cond_4
 
-    .line 89
     new-instance v1, Lorg/ksoap2/kdom/Node;
 
     invoke-direct {v1}, Lorg/ksoap2/kdom/Node;-><init>()V
 
     iput-object v1, p0, Lorg/ksoap2/SoapFault12;->Detail:Lorg/ksoap2/kdom/Node;
 
-    .line 90
     iget-object v1, p0, Lorg/ksoap2/SoapFault12;->Detail:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v1, p1}, Lorg/ksoap2/kdom/Node;->parse(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_1
 
-    .line 92
     :cond_4
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -241,7 +214,6 @@
 
     throw v1
 
-    .line 97
     .end local v0    # "name":Ljava/lang/String;
     :cond_5
     const-string v1, "http://www.w3.org/2003/05/soap-envelope"
@@ -250,10 +222,8 @@
 
     invoke-interface {p1, v4, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 98
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 100
     return-void
 .end method
 
@@ -263,7 +233,6 @@
     .locals 3
 
     .prologue
-    .line 138
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Reason:Lorg/ksoap2/kdom/Node;
 
     const-string v1, "http://www.w3.org/2003/05/soap-envelope"
@@ -296,10 +265,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 62
     invoke-direct {p0, p1}, Lorg/ksoap2/SoapFault12;->parseSelf(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 64
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Code:Lorg/ksoap2/kdom/Node;
 
     const-string v1, "http://www.w3.org/2003/05/soap-envelope"
@@ -316,7 +283,6 @@
 
     iput-object v0, p0, Lorg/ksoap2/SoapFault12;->faultcode:Ljava/lang/String;
 
-    .line 65
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Reason:Lorg/ksoap2/kdom/Node;
 
     const-string v1, "http://www.w3.org/2003/05/soap-envelope"
@@ -333,17 +299,14 @@
 
     iput-object v0, p0, Lorg/ksoap2/SoapFault12;->faultstring:Ljava/lang/String;
 
-    .line 66
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Detail:Lorg/ksoap2/kdom/Node;
 
     iput-object v0, p0, Lorg/ksoap2/SoapFault12;->detail:Lorg/ksoap2/kdom/Node;
 
-    .line 67
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/ksoap2/SoapFault12;->faultactor:Ljava/lang/String;
 
-    .line 68
     return-void
 .end method
 
@@ -353,7 +316,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 143
     iget-object v2, p0, Lorg/ksoap2/SoapFault12;->Reason:Lorg/ksoap2/kdom/Node;
 
     const-string v3, "http://www.w3.org/2003/05/soap-envelope"
@@ -368,7 +330,6 @@
 
     move-result-object v1
 
-    .line 144
     .local v1, "reason":Ljava/lang/String;
     iget-object v2, p0, Lorg/ksoap2/SoapFault12;->Code:Lorg/ksoap2/kdom/Node;
 
@@ -384,7 +345,6 @@
 
     move-result-object v0
 
-    .line 145
     .local v0, "code":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -427,126 +387,106 @@
     .end annotation
 
     .prologue
-    .line 105
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v1, "Fault"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 108
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v1, "Code"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 109
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Code:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v0, p1}, Lorg/ksoap2/kdom/Node;->write(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 110
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v1, "Code"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 111
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v1, "Reason"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 112
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Reason:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v0, p1}, Lorg/ksoap2/kdom/Node;->write(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 113
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v1, "Reason"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 115
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Node:Lorg/ksoap2/kdom/Node;
 
     if-eqz v0, :cond_0
 
-    .line 116
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v1, "Node"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 117
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Node:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v0, p1}, Lorg/ksoap2/kdom/Node;->write(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 118
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v1, "Node"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 120
     :cond_0
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Role:Lorg/ksoap2/kdom/Node;
 
     if-eqz v0, :cond_1
 
-    .line 121
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v1, "Role"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 122
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Role:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v0, p1}, Lorg/ksoap2/kdom/Node;->write(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 123
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v1, "Role"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 126
     :cond_1
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Detail:Lorg/ksoap2/kdom/Node;
 
     if-eqz v0, :cond_2
 
-    .line 127
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v1, "Detail"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 128
     iget-object v0, p0, Lorg/ksoap2/SoapFault12;->Detail:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v0, p1}, Lorg/ksoap2/kdom/Node;->write(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 129
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
     const-string v1, "Detail"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 131
     :cond_2
     const-string v0, "http://www.w3.org/2003/05/soap-envelope"
 
@@ -554,6 +494,5 @@
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 132
     return-void
 .end method

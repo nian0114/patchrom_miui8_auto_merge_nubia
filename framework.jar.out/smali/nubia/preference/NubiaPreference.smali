@@ -16,13 +16,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     iput-object p1, p0, Lnubia/preference/NubiaPreference;->mContext:Landroid/content/Context;
 
-    .line 14
     return-void
 .end method
 
@@ -33,7 +30,6 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 43
     const/4 v0, 0x0
 
     return-object v0
@@ -43,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const v0, 0x30d004f
 
     return v0
@@ -53,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 38
     const v0, 0x30d0030
 
     return v0
@@ -63,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 28
     const v0, 0x30d0057
 
     return v0
@@ -73,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 23
     const v0, 0x30d0056
 
     return v0
@@ -83,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 18
     const v0, 0x3030021
 
     return v0

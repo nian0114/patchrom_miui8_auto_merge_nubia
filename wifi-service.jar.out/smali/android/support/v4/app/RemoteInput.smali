@@ -44,21 +44,18 @@
     .locals 2
 
     .prologue
-    .line 253
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x14
 
     if-lt v0, v1, :cond_0
 
-    .line 254
     new-instance v0, Landroid/support/v4/app/RemoteInput$ImplApi20;
 
     invoke-direct {v0}, Landroid/support/v4/app/RemoteInput$ImplApi20;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/RemoteInput;->IMPL:Landroid/support/v4/app/RemoteInput$Impl;
 
-    .line 263
     :goto_0
     new-instance v0, Landroid/support/v4/app/RemoteInput$1;
 
@@ -68,7 +65,6 @@
 
     return-void
 
-    .line 255
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -76,7 +72,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 256
     new-instance v0, Landroid/support/v4/app/RemoteInput$ImplJellybean;
 
     invoke-direct {v0}, Landroid/support/v4/app/RemoteInput$ImplJellybean;-><init>()V
@@ -85,7 +80,6 @@
 
     goto :goto_0
 
-    .line 258
     :cond_1
     new-instance v0, Landroid/support/v4/app/RemoteInput$ImplBase;
 
@@ -105,25 +99,18 @@
     .param p5, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;-><init>()V
 
-    .line 45
     iput-object p1, p0, Landroid/support/v4/app/RemoteInput;->mResultKey:Ljava/lang/String;
 
-    .line 46
     iput-object p2, p0, Landroid/support/v4/app/RemoteInput;->mLabel:Ljava/lang/CharSequence;
 
-    .line 47
     iput-object p3, p0, Landroid/support/v4/app/RemoteInput;->mChoices:[Ljava/lang/CharSequence;
 
-    .line 48
     iput-boolean p4, p0, Landroid/support/v4/app/RemoteInput;->mAllowFreeFormInput:Z
 
-    .line 49
     iput-object p5, p0, Landroid/support/v4/app/RemoteInput;->mExtras:Landroid/os/Bundle;
 
-    .line 50
     return-void
 .end method
 
@@ -134,12 +121,10 @@
     .param p2, "results"    # Landroid/os/Bundle;
 
     .prologue
-    .line 204
     sget-object v0, Landroid/support/v4/app/RemoteInput;->IMPL:Landroid/support/v4/app/RemoteInput$Impl;
 
     invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/app/RemoteInput$Impl;->addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 205
     return-void
 .end method
 
@@ -148,7 +133,6 @@
     .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 188
     sget-object v0, Landroid/support/v4/app/RemoteInput;->IMPL:Landroid/support/v4/app/RemoteInput$Impl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/app/RemoteInput$Impl;->getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;
@@ -164,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget-boolean v0, p0, Landroid/support/v4/app/RemoteInput;->mAllowFreeFormInput:Z
 
     return v0
@@ -174,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-object v0, p0, Landroid/support/v4/app/RemoteInput;->mChoices:[Ljava/lang/CharSequence;
 
     return-object v0
@@ -184,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-object v0, p0, Landroid/support/v4/app/RemoteInput;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -194,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Landroid/support/v4/app/RemoteInput;->mLabel:Ljava/lang/CharSequence;
 
     return-object v0
@@ -204,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-object v0, p0, Landroid/support/v4/app/RemoteInput;->mResultKey:Ljava/lang/String;
 
     return-object v0

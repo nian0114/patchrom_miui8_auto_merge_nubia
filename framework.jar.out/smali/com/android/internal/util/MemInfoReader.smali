@@ -12,10 +12,8 @@
     .locals 1
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     const/16 v0, 0xd
 
     new-array v0, v0, [J
@@ -31,7 +29,6 @@
     .locals 4
 
     .prologue
-    .line 56
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->getCachedSizeKb()J
 
     move-result-wide v0
@@ -47,7 +44,6 @@
     .locals 4
 
     .prologue
-    .line 91
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x2
@@ -69,7 +65,6 @@
     .locals 4
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x1
@@ -87,7 +82,6 @@
     .locals 2
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x1
@@ -101,7 +95,6 @@
     .locals 4
 
     .prologue
-    .line 63
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->getKernelUsedSizeKb()J
 
     move-result-wide v0
@@ -117,7 +110,6 @@
     .locals 4
 
     .prologue
-    .line 107
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x5
@@ -147,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 124
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     return-object v0
@@ -157,7 +148,6 @@
     .locals 2
 
     .prologue
-    .line 116
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x7
@@ -171,7 +161,6 @@
     .locals 2
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x6
@@ -185,7 +174,6 @@
     .locals 4
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x0
@@ -203,7 +191,6 @@
     .locals 2
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x0
@@ -217,7 +204,6 @@
     .locals 2
 
     .prologue
-    .line 120
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/16 v1, 0x8
@@ -231,12 +217,10 @@
     .locals 2
 
     .prologue
-    .line 29
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v0
 
-    .line 31
     .local v0, "savedPolicy":Landroid/os/StrictMode$ThreadPolicy;
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
@@ -245,13 +229,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 33
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    .line 35
     return-void
 
-    .line 33
     :catchall_0
     move-exception v1
 

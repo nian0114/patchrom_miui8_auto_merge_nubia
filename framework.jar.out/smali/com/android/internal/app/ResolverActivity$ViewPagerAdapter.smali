@@ -115,47 +115,36 @@
     .end annotation
 
     .prologue
-    .line 864
     .local p3, "payloadIntents":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     .local p5, "rList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Lcom/android/internal/widget/PagerAdapter;-><init>()V
 
-    .line 857
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mLastChosenPosition:I
 
-    .line 865
     iput-object p2, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mContext:Landroid/content/Context;
 
-    .line 866
     iput-object p3, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mIntents:Ljava/util/List;
 
-    .line 867
     iput-object p4, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mInitialIntents:[Landroid/content/Intent;
 
-    .line 868
     iput-object p5, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mBaseResolveList:Ljava/util/List;
 
-    .line 869
     iput p6, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mLaunchedFromUid:I
 
-    .line 870
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 871
     iput-boolean p7, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mFilterLastUsed:Z
 
-    .line 872
     invoke-direct {p0}, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->rebuildList()V
 
-    .line 873
     return-void
 .end method
 
@@ -163,7 +152,6 @@
     .locals 5
 
     .prologue
-    .line 885
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v1, v0, Lcom/android/internal/app/ResolverActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
@@ -180,14 +168,12 @@
 
     invoke-virtual {v1, v0, v2, v3, v4}, Lcom/android/internal/app/NubiaResolverController;->rebuildList(Ljava/util/ArrayList;[Landroid/content/Intent;Ljava/util/List;Z)V
 
-    .line 887
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mDisplayList:Ljava/util/List;
 
-    .line 888
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mDisplayList:Ljava/util/List;
 
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -202,13 +188,10 @@
 
     invoke-interface {v1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 889
     invoke-virtual {p0}, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->onListRebuilt()V
 
-    .line 890
     invoke-virtual {p0}, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->buildViewList()V
 
-    .line 891
     return-void
 .end method
 
@@ -222,34 +205,28 @@
 
     const/4 v14, 0x1
 
-    .line 902
     iget-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mViewLists:Ljava/util/ArrayList;
 
     if-nez v10, :cond_0
 
-    .line 903
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mViewLists:Ljava/util/ArrayList;
 
-    .line 905
     :cond_0
     iget-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mViewLists:Ljava/util/ArrayList;
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->clear()V
 
-    .line 906
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 907
     .local v9, "viewsdata":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/ArrayList<Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;>;>;"
     const/4 v7, 0x0
 
-    .line 908
     .local v7, "tmp":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;>;"
     iget-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mDisplayList:Ljava/util/List;
 
@@ -261,7 +238,6 @@
 
     move-result v6
 
-    .line 910
     .local v6, "tempValue":I
     iget-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mDisplayList:Ljava/util/List;
 
@@ -271,7 +247,6 @@
 
     if-le v10, v11, :cond_1
 
-    .line 911
     iget-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v10}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -288,7 +263,6 @@
 
     move-result-object v4
 
-    .line 914
     .local v4, "mMoreIcon":Landroid/graphics/drawable/Drawable;
     iget-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mContext:Landroid/content/Context;
 
@@ -302,7 +276,6 @@
 
     move-result-object v5
 
-    .line 917
     .local v5, "mMoreLabel":Ljava/lang/CharSequence;
     new-instance v10, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
@@ -310,7 +283,6 @@
 
     iput-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mMoreItem:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
-    .line 918
     iget-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mDisplayList:Ljava/util/List;
 
     const/16 v11, 0xf
@@ -319,13 +291,11 @@
 
     invoke-interface {v10, v11, v12}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 919
     iget-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # setter for: Lcom/android/internal/app/ResolverActivity;->mMoreDisplayFlag:Z
     invoke-static {v10, v14}, Lcom/android/internal/app/ResolverActivity;->access$102(Lcom/android/internal/app/ResolverActivity;Z)Z
 
-    .line 921
     .end local v4    # "mMoreIcon":Landroid/graphics/drawable/Drawable;
     .end local v5    # "mMoreLabel":Ljava/lang/CharSequence;
     :cond_1
@@ -335,22 +305,18 @@
     :goto_0
     if-ge v2, v6, :cond_3
 
-    .line 922
     rem-int/lit8 v10, v2, 0x8
 
     if-nez v10, :cond_2
 
-    .line 923
     new-instance v7, Ljava/util/ArrayList;
 
     .end local v7    # "tmp":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;>;"
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 924
     .restart local v7    # "tmp":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;>;"
     invoke-virtual {v9, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 926
     :cond_2
     iget-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mDisplayList:Ljava/util/List;
 
@@ -360,12 +326,10 @@
 
     invoke-virtual {v7, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 921
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 928
     :cond_3
     new-instance v3, Lcom/android/internal/app/ResolverActivity$ItemClickListener;
 
@@ -373,7 +337,6 @@
 
     invoke-direct {v3, v10}, Lcom/android/internal/app/ResolverActivity$ItemClickListener;-><init>(Lcom/android/internal/app/ResolverActivity;)V
 
-    .line 930
     .local v3, "listener":Lcom/android/internal/app/ResolverActivity$ItemClickListener;
     const/4 v2, 0x0
 
@@ -384,14 +347,12 @@
 
     if-ge v2, v10, :cond_4
 
-    .line 931
     invoke-virtual {v9, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Ljava/util/ArrayList;
 
-    .line 932
     .local v8, "tmpdata":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;>;"
     iget-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
 
@@ -407,7 +368,6 @@
 
     check-cast v1, Landroid/widget/GridView;
 
-    .line 934
     .local v1, "gridview":Landroid/widget/GridView;
     new-instance v0, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;
 
@@ -419,37 +379,29 @@
 
     invoke-direct {v0, v10, v11, v8, v12}, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;-><init>(Lcom/android/internal/app/ResolverActivity;Landroid/content/Context;Ljava/util/ArrayList;Landroid/view/LayoutInflater;)V
 
-    .line 936
     .local v0, "gridAdapter":Lcom/android/internal/app/ResolverActivity$GridViewAdapter;
     invoke-virtual {v1, v0}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 937
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
 
     invoke-virtual {v1, v10}, Landroid/widget/GridView;->setTag(Ljava/lang/Object;)V
 
-    .line 938
     invoke-virtual {v1, v14}, Landroid/widget/GridView;->setChoiceMode(I)V
 
-    .line 939
     invoke-virtual {v1, v3}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 940
     invoke-virtual {v1, v3}, Landroid/widget/GridView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
-    .line 941
     iget-object v10, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mViewLists:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 930
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 944
     .end local v0    # "gridAdapter":Lcom/android/internal/app/ResolverActivity$GridViewAdapter;
     .end local v1    # "gridview":Landroid/widget/GridView;
     .end local v8    # "tmpdata":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;>;"
@@ -464,7 +416,6 @@
     .param p3, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 995
     check-cast p1, Lcom/android/internal/widget/ViewPager;
 
     .end local p1    # "view":Landroid/view/View;
@@ -478,7 +429,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/internal/widget/ViewPager;->removeView(Landroid/view/View;)V
 
-    .line 996
     return-void
 .end method
 
@@ -497,7 +447,6 @@
     .end annotation
 
     .prologue
-    .line 971
     .local p1, "viewsdata":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/ArrayList<Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;>;>;"
     const/4 v0, 0x0
 
@@ -509,26 +458,22 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 972
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/util/ArrayList;
 
-    .line 973
     .local v3, "tmp":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;>;"
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 974
     .local v2, "sb":Ljava/lang/StringBuffer;
     const-string v4, "[\n"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 975
     const/4 v1, 0x0
 
     .local v1, "j":I
@@ -539,7 +484,6 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 976
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -552,23 +496,19 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 975
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 978
     :cond_0
     const-string v4, "]"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 971
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 981
     .end local v1    # "j":I
     .end local v2    # "sb":Ljava/lang/StringBuffer;
     .end local v3    # "tmp":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;>;"
@@ -580,7 +520,6 @@
     .locals 1
 
     .prologue
-    .line 985
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mViewLists:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -598,10 +537,8 @@
 
     const/4 v12, 0x0
 
-    .line 947
     const/4 v7, -0x2
 
-    .line 948
     .local v7, "totalHeight":I
     const/4 v4, 0x0
 
@@ -616,7 +553,6 @@
     :goto_0
     if-ge v4, v6, :cond_2
 
-    .line 949
     iget-object v8, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mViewLists:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -625,7 +561,6 @@
 
     check-cast v2, Landroid/widget/GridView;
 
-    .line 950
     .local v2, "gridview":Landroid/widget/GridView;
     invoke-virtual {v2}, Landroid/widget/GridView;->getAdapter()Landroid/widget/ListAdapter;
 
@@ -633,7 +568,6 @@
 
     check-cast v1, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;
 
-    .line 952
     .local v1, "gridAdapter":Lcom/android/internal/app/ResolverActivity$GridViewAdapter;
     const/4 v8, 0x0
 
@@ -641,20 +575,16 @@
 
     move-result-object v0
 
-    .line 953
     .local v0, "ItemView":Landroid/view/View;
     invoke-virtual {v0, v12, v12}, Landroid/view/View;->measure(II)V
 
-    .line 954
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v3
 
-    .line 955
     .local v3, "height":I
     move v7, v3
 
-    .line 956
     iget-object v8, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v8}, Lcom/android/internal/app/ResolverActivity;->getResources()Landroid/content/res/Resources;
@@ -669,10 +599,8 @@
 
     if-ne v8, v13, :cond_0
 
-    .line 957
     if-gt v6, v13, :cond_1
 
-    .line 958
     invoke-virtual {v1}, Lcom/android/internal/app/ResolverActivity$GridViewAdapter;->getCount()I
 
     move-result v8
@@ -689,22 +617,18 @@
 
     double-to-int v5, v8
 
-    .line 960
     .local v5, "raw":I
     mul-int v7, v3, v5
 
-    .line 948
     .end local v5    # "raw":I
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 962
     :cond_1
     mul-int/lit8 v7, v3, 0x2
 
-    .line 967
     .end local v0    # "ItemView":Landroid/view/View;
     .end local v1    # "gridAdapter":Lcom/android/internal/app/ResolverActivity$GridViewAdapter;
     .end local v2    # "gridview":Landroid/widget/GridView;
@@ -717,13 +641,10 @@
     .locals 1
 
     .prologue
-    .line 876
     invoke-direct {p0}, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->rebuildList()V
 
-    .line 877
     invoke-virtual {p0}, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->notifyDataSetChanged()V
 
-    .line 878
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v0, v0, Lcom/android/internal/app/ResolverActivity;->mNubiaResolverController:Lcom/android/internal/app/NubiaResolverController;
@@ -734,12 +655,10 @@
 
     if-nez v0, :cond_0
 
-    .line 880
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
-    .line 882
     :cond_0
     return-void
 .end method
@@ -748,7 +667,6 @@
     .locals 1
 
     .prologue
-    .line 898
     iget-boolean v0, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mHasExtendedInfo:Z
 
     return v0
@@ -760,7 +678,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 1000
     check-cast p1, Lcom/android/internal/widget/ViewPager;
 
     .end local p1    # "view":Landroid/view/View;
@@ -776,7 +693,6 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/widget/ViewPager;->addView(Landroid/view/View;I)V
 
-    .line 1001
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->mViewLists:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -792,7 +708,6 @@
     .param p2, "arg1"    # Ljava/lang/Object;
 
     .prologue
-    .line 990
     if-ne p1, p2, :cond_0
 
     const/4 v0, 0x1
@@ -810,6 +725,5 @@
     .locals 0
 
     .prologue
-    .line 895
     return-void
 .end method

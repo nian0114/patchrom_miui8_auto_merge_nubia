@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 55
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$LauncherShowObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;
 
-    .line 56
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 57
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 70
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$LauncherShowObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;->mHasObserved:Z
@@ -51,12 +47,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 80
     :cond_0
     :goto_0
     return-void
 
-    .line 73
     :cond_1
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$LauncherShowObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;
 
@@ -77,11 +71,9 @@
 
     move-result v0
 
-    .line 75
     .local v0, "flag":I
     if-ne v0, v4, :cond_0
 
-    .line 76
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$LauncherShowObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;->mListener:Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$LauncherWindowAnimationListener;
@@ -91,7 +83,6 @@
 
     invoke-interface {v1}, Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$LauncherWindowAnimationListener;->onLauncherFirstFrameDraw()V
 
-    .line 77
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$LauncherShowObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;
 
     # setter for: Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;->mHasObserved:Z
@@ -107,21 +98,17 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 62
     :try_start_0
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$LauncherShowObserver;->onChangeInner(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 67
     :goto_0
     return-void
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     .local v0, "e":Ljava/lang/Exception;
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver$LauncherShowObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/LauncherWindowAnimationObserver;
 

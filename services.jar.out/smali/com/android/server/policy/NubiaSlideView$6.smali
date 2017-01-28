@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 448
     iput-object p1, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     iput p2, p0, Lcom/android/server/policy/NubiaSlideView$6;->val$mode:I
@@ -47,22 +46,18 @@
     .prologue
     const/high16 v2, 0x437f0000    # 255.0f
 
-    .line 451
     iget v0, p0, Lcom/android/server/policy/NubiaSlideView$6;->val$mode:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 471
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     invoke-virtual {v0}, Lcom/android/server/policy/NubiaSlideView;->invalidate()V
 
-    .line 472
     return-void
 
-    .line 453
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
@@ -81,7 +76,6 @@
     # setter for: Lcom/android/server/policy/NubiaSlideView;->mEnterBgAlpha:F
     invoke-static {v1, v0}, Lcom/android/server/policy/NubiaSlideView;->access$1102(Lcom/android/server/policy/NubiaSlideView;F)F
 
-    .line 454
     iget-object v0, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     iget-object v1, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
@@ -98,7 +92,6 @@
     # setter for: Lcom/android/server/policy/NubiaSlideView;->mAlpha:I
     invoke-static {v0, v1}, Lcom/android/server/policy/NubiaSlideView;->access$602(Lcom/android/server/policy/NubiaSlideView;I)I
 
-    .line 455
     iget-object v0, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     # getter for: Lcom/android/server/policy/NubiaSlideView;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -115,7 +108,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 456
     iget-object v0, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     # getter for: Lcom/android/server/policy/NubiaSlideView;->mPaint:Landroid/graphics/Paint;
@@ -132,7 +124,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 457
     iget-object v0, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     # getter for: Lcom/android/server/policy/NubiaSlideView;->mDarkenLayerImageView:Landroid/widget/ImageView;
@@ -151,7 +142,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 458
     iget-object v0, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     # getter for: Lcom/android/server/policy/NubiaSlideView;->mDarkenLayerImageView:Landroid/widget/ImageView;
@@ -172,7 +162,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 459
     iget-object v0, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     # getter for: Lcom/android/server/policy/NubiaSlideView;->mFuzzyLayerImageView:Landroid/widget/ImageView;
@@ -191,7 +180,6 @@
 
     goto :goto_0
 
-    .line 463
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
@@ -219,7 +207,6 @@
 
     goto/16 :goto_0
 
-    .line 466
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
@@ -240,7 +227,6 @@
     # setter for: Lcom/android/server/policy/NubiaSlideView;->mTextAlpha:I
     invoke-static {v1, v0}, Lcom/android/server/policy/NubiaSlideView;->access$702(Lcom/android/server/policy/NubiaSlideView;I)I
 
-    .line 467
     iget-object v0, p0, Lcom/android/server/policy/NubiaSlideView$6;->this$0:Lcom/android/server/policy/NubiaSlideView;
 
     # getter for: Lcom/android/server/policy/NubiaSlideView;->mTextPaint:Landroid/graphics/Paint;
@@ -259,7 +245,6 @@
 
     goto/16 :goto_0
 
-    .line 451
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

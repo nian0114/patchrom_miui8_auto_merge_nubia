@@ -16,7 +16,6 @@
     .locals 3
 
     .prologue
-    .line 11
     const-string v0, "1"
 
     const-string v1, "ro.nubia.applock.enable"
@@ -33,7 +32,6 @@
 
     sput-boolean v0, Lcom/android/server/am/AppLockerConfig;->ENABLE:Z
 
-    .line 14
     sget-boolean v0, Lcom/android/server/am/AppLockerConfig;->ENABLE:Z
 
     if-eqz v0, :cond_1
@@ -76,7 +74,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

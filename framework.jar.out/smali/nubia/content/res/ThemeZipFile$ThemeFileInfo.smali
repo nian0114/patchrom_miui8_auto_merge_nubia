@@ -31,17 +31,13 @@
     .param p3, "size"    # J
 
     .prologue
-    .line 473
     iput-object p1, p0, Lnubia/content/res/ThemeZipFile$ThemeFileInfo;->this$0:Lnubia/content/res/ThemeZipFile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 474
     iput-object p2, p0, Lnubia/content/res/ThemeZipFile$ThemeFileInfo;->mInput:Ljava/io/InputStream;
 
-    .line 475
     iput-wide p3, p0, Lnubia/content/res/ThemeZipFile$ThemeFileInfo;->mSize:J
 
-    .line 476
     return-void
 .end method

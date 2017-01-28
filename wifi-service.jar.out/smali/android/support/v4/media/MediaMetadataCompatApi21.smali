@@ -16,10 +16,8 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     return-void
 .end method
 
@@ -29,7 +27,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     check-cast p0, Landroid/media/MediaMetadata;
 
     .end local p0    # "metadataObj":Ljava/lang/Object;
@@ -46,7 +43,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 35
     check-cast p0, Landroid/media/MediaMetadata;
 
     .end local p0    # "metadataObj":Ljava/lang/Object;
@@ -63,7 +59,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     check-cast p0, Landroid/media/MediaMetadata;
 
     .end local p0    # "metadataObj":Ljava/lang/Object;
@@ -80,7 +75,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     check-cast p0, Landroid/media/MediaMetadata;
 
     .end local p0    # "metadataObj":Ljava/lang/Object;
@@ -107,7 +101,6 @@
     .end annotation
 
     .prologue
-    .line 27
     check-cast p0, Landroid/media/MediaMetadata;
 
     .end local p0    # "metadataObj":Ljava/lang/Object;

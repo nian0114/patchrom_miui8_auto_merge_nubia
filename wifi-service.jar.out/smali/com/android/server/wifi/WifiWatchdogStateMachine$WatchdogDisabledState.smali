@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 508
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 512
     return-void
 .end method
 
@@ -48,12 +46,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 516
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 536
     :goto_0
     const/4 v2, 0x0
 
@@ -61,7 +57,6 @@
     :goto_1
     return v2
 
-    .line 518
     :pswitch_0
     iget-object v3, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -72,7 +67,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 519
     iget-object v3, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -87,13 +81,11 @@
 
     goto :goto_1
 
-    .line 522
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/content/Intent;
 
-    .line 523
     .local v0, "intent":Landroid/content/Intent;
     const-string v3, "networkInfo"
 
@@ -103,7 +95,6 @@
 
     check-cast v1, Landroid/net/NetworkInfo;
 
-    .line 526
     .local v1, "networkInfo":Landroid/net/NetworkInfo;
     sget-object v3, Lcom/android/server/wifi/WifiWatchdogStateMachine$4;->$SwitchMap$android$net$NetworkInfo$DetailedState:[I
 
@@ -121,7 +112,6 @@
 
     goto :goto_0
 
-    .line 529
     :pswitch_2
     iget-object v3, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -130,14 +120,12 @@
 
     goto :goto_0
 
-    .line 516
     :pswitch_data_0
     .packed-switch 0x21001
         :pswitch_0
         :pswitch_1
     .end packed-switch
 
-    .line 526
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_2

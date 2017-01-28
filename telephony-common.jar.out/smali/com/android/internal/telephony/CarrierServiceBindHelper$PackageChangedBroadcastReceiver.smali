@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 274
     iput-object p1, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$PackageChangedBroadcastReceiver;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/CarrierServiceBindHelper$1;
 
     .prologue
-    .line 274
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/CarrierServiceBindHelper$PackageChangedBroadcastReceiver;-><init>(Lcom/android/internal/telephony/CarrierServiceBindHelper;)V
 
     return-void
@@ -53,12 +51,10 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 277
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 278
     .local v0, "action":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -81,7 +77,6 @@
     # invokes: Lcom/android/internal/telephony/CarrierServiceBindHelper;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/internal/telephony/CarrierServiceBindHelper;->access$100(Ljava/lang/String;)V
 
-    .line 279
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -94,12 +89,10 @@
     :goto_0
     packed-switch v3, :pswitch_data_0
 
-    .line 293
     :cond_1
     :goto_1
     return-void
 
-    .line 279
     :sswitch_0
     const-string v3, "android.intent.action.PACKAGE_ADDED"
 
@@ -139,7 +132,6 @@
 
     goto :goto_0
 
-    .line 283
     :pswitch_0
     const-string v3, "android.intent.extra.UID"
 
@@ -147,7 +139,6 @@
 
     move-result v2
 
-    .line 284
     .local v2, "uid":I
     iget-object v3, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$PackageChangedBroadcastReceiver;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
@@ -164,11 +155,9 @@
 
     move-result-object v1
 
-    .line 285
     .local v1, "packageName":Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 287
     iget-object v3, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper$PackageChangedBroadcastReceiver;->this$0:Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
     # getter for: Lcom/android/internal/telephony/CarrierServiceBindHelper;->mHandler:Landroid/os/Handler;
@@ -193,7 +182,6 @@
 
     goto :goto_1
 
-    .line 279
     :sswitch_data_0
     .sparse-switch
         -0x304ed112 -> :sswitch_2

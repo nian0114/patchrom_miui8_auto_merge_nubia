@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 608
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 609
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$Builder;->mBundle:Landroid/os/Bundle;
 
-    .line 610
     return-void
 .end method
 
@@ -42,10 +39,8 @@
     .param p1, "source"    # Landroid/support/v4/media/MediaMetadataCompat;
 
     .prologue
-    .line 619
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 620
     new-instance v0, Landroid/os/Bundle;
 
     # getter for: Landroid/support/v4/media/MediaMetadataCompat;->mBundle:Landroid/os/Bundle;
@@ -57,7 +52,6 @@
 
     iput-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$Builder;->mBundle:Landroid/os/Bundle;
 
-    .line 621
     return-void
 .end method
 
@@ -67,7 +61,6 @@
     .locals 3
 
     .prologue
-    .line 779
     new-instance v0, Landroid/support/v4/media/MediaMetadataCompat;
 
     iget-object v1, p0, Landroid/support/v4/media/MediaMetadataCompat$Builder;->mBundle:Landroid/os/Bundle;
@@ -85,7 +78,6 @@
     .param p2, "value"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 763
     # getter for: Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Landroid/support/v4/util/ArrayMap;
     invoke-static {}, Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
 
@@ -97,7 +89,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 764
     # getter for: Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Landroid/support/v4/util/ArrayMap;
     invoke-static {}, Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
 
@@ -117,7 +108,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 765
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -148,13 +138,11 @@
 
     throw v0
 
-    .line 769
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 770
     return-object p0
 .end method
 
@@ -164,7 +152,6 @@
     .param p2, "value"    # J
 
     .prologue
-    .line 714
     # getter for: Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Landroid/support/v4/util/ArrayMap;
     invoke-static {}, Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
 
@@ -176,7 +163,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 715
     # getter for: Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Landroid/support/v4/util/ArrayMap;
     invoke-static {}, Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
 
@@ -194,7 +180,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 716
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -225,13 +210,11 @@
 
     throw v0
 
-    .line 720
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 721
     return-object p0
 .end method
 
@@ -241,7 +224,6 @@
     .param p2, "value"    # Landroid/support/v4/media/RatingCompat;
 
     .prologue
-    .line 738
     # getter for: Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Landroid/support/v4/util/ArrayMap;
     invoke-static {}, Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
 
@@ -253,7 +235,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 739
     # getter for: Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Landroid/support/v4/util/ArrayMap;
     invoke-static {}, Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
 
@@ -273,7 +254,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 740
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -304,13 +284,11 @@
 
     throw v0
 
-    .line 744
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 745
     return-object p0
 .end method
 
@@ -320,7 +298,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 687
     # getter for: Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Landroid/support/v4/util/ArrayMap;
     invoke-static {}, Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
 
@@ -332,7 +309,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 688
     # getter for: Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Landroid/support/v4/util/ArrayMap;
     invoke-static {}, Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
 
@@ -352,7 +328,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 689
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -383,13 +358,11 @@
 
     throw v0
 
-    .line 693
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 694
     return-object p0
 .end method
 
@@ -399,7 +372,6 @@
     .param p2, "value"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 650
     # getter for: Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Landroid/support/v4/util/ArrayMap;
     invoke-static {}, Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
 
@@ -411,7 +383,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 651
     # getter for: Landroid/support/v4/media/MediaMetadataCompat;->METADATA_KEYS_TYPE:Landroid/support/v4/util/ArrayMap;
     invoke-static {}, Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
 
@@ -431,7 +402,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 652
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -462,12 +432,10 @@
 
     throw v0
 
-    .line 656
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 657
     return-object p0
 .end method

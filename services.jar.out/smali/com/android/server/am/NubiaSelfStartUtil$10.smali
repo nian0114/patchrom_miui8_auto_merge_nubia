@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 792
     iput-object p1, p0, Lcom/android/server/am/NubiaSelfStartUtil$10;->this$0:Lcom/android/server/am/NubiaSelfStartUtil;
 
     iput-object p2, p0, Lcom/android/server/am/NubiaSelfStartUtil$10;->val$packageName:Ljava/lang/String;
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 795
     iget-object v1, p0, Lcom/android/server/am/NubiaSelfStartUtil$10;->this$0:Lcom/android/server/am/NubiaSelfStartUtil;
 
     iget-object v2, p0, Lcom/android/server/am/NubiaSelfStartUtil$10;->val$packageName:Ljava/lang/String;
@@ -60,7 +58,6 @@
 
     move-result v0
 
-    .line 796
     .local v0, "result":I
     return-void
 .end method

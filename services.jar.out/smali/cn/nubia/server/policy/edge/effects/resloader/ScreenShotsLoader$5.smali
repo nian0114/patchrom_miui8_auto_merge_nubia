@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 668
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     iput-object p2, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->val$packageName:Ljava/lang/String;
@@ -52,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 668
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -67,7 +65,6 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 688
     invoke-static {}, Landroid/os/Process;->myTid()I
 
     move-result v9
@@ -76,37 +73,30 @@
 
     move-result v7
 
-    .line 689
     .local v7, "origPri":I
     const/16 v9, 0xa
 
     invoke-static {v9}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 691
     const/4 v1, 0x0
 
-    .line 692
     .local v1, "bitmap":Landroid/graphics/Bitmap;
     const/4 v6, 0x0
 
-    .line 693
     .local v6, "name":Ljava/lang/String;
     :try_start_0
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->val$packageName:Ljava/lang/String;
 
     if-nez v9, :cond_0
 
-    .line 694
     const-string v6, "NoStartApp"
 
-    .line 695
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     invoke-virtual {v9}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->getBlackThumbnail()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 704
     :goto_0
     new-instance v2, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;
 
@@ -118,7 +108,6 @@
 
     invoke-direct {v2, v9, v10, v1}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;-><init>(Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;ILandroid/graphics/Bitmap;)V
 
-    .line 705
     .local v2, "data":Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;
     const/4 v9, 0x1
 
@@ -130,14 +119,12 @@
 
     invoke-virtual {p0, v9}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->publishProgress([Ljava/lang/Object;)V
 
-    .line 709
     .end local v2    # "data":Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;
     :goto_1
     const/4 v9, 0x0
 
     return-object v9
 
-    .line 697
     :cond_0
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
@@ -150,7 +137,6 @@
 
     move-result-object v8
 
-    .line 698
     .local v8, "pm":Landroid/content/pm/PackageManager;
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->val$packageName:Ljava/lang/String;
 
@@ -160,19 +146,16 @@
 
     move-result-object v0
 
-    .line 699
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     invoke-virtual {v0, v8}, Landroid/content/pm/ApplicationInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
-    .line 700
     .local v4, "icon":Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0, v8}, Landroid/content/pm/ApplicationInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v5
 
-    .line 701
     .local v5, "label":Ljava/lang/CharSequence;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -194,7 +177,6 @@
 
     move-result-object v6
 
-    .line 702
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     # invokes: Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->getDefaultThumbnail(Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;)Landroid/graphics/Bitmap;
@@ -206,7 +188,6 @@
 
     goto :goto_0
 
-    .line 706
     .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v4    # "icon":Landroid/graphics/drawable/Drawable;
     .end local v5    # "label":Ljava/lang/CharSequence;
@@ -214,7 +195,6 @@
     :catch_0
     move-exception v3
 
-    .line 707
     .local v3, "e":Ljava/lang/Exception;
     iget-object v9, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
@@ -232,7 +212,6 @@
     .locals 0
 
     .prologue
-    .line 668
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->onPostExecute(Ljava/lang/Void;)V
@@ -245,10 +224,8 @@
     .param p1, "result"    # Ljava/lang/Void;
 
     .prologue
-    .line 714
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 716
     return-void
 .end method
 
@@ -257,23 +234,19 @@
     .param p1, "values"    # [Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;
 
     .prologue
-    .line 672
     invoke-virtual {p0}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->isCancelled()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 673
     const/4 v1, 0x0
 
     aget-object v0, p1, v1
 
-    .line 674
     .local v0, "data":Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;
     if-eqz v0, :cond_0
 
-    .line 675
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mHandler:Landroid/os/Handler;
@@ -287,7 +260,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 684
     .end local v0    # "data":Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;
     :cond_0
     return-void
@@ -297,7 +269,6 @@
     .locals 0
 
     .prologue
-    .line 668
     check-cast p1, [Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;->onProgressUpdate([Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;)V

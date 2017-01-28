@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 258
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver$TransitionFinishObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;
 
-    .line 259
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 260
     return-void
 .end method
 
@@ -39,7 +36,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 273
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver$TransitionFinishObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;->mContext:Landroid/content/Context;
@@ -57,7 +53,6 @@
 
     move-result-object v1
 
-    .line 274
     .local v1, "strStop":Ljava/lang/String;
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver$TransitionFinishObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;
 
@@ -68,7 +63,6 @@
 
     move-result-object v0
 
-    .line 275
     .local v0, "output":Ljava/lang/String;
     const-string v2, "Observer"
 
@@ -109,7 +103,6 @@
 
     invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 276
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver$TransitionFinishObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;->mListenedStarting:Z
@@ -130,7 +123,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 277
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver$TransitionFinishObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;->mListener:Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver$WindowAnimationListener;
@@ -140,7 +132,6 @@
 
     invoke-interface {v2}, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver$WindowAnimationListener;->onAnimationEnd()V
 
-    .line 278
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver$TransitionFinishObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;
 
     const/4 v3, 0x0
@@ -148,7 +139,6 @@
     # setter for: Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;->mListenedStarting:Z
     invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;->access$502(Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;Z)Z
 
-    .line 282
     :cond_0
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver$TransitionFinishObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;
 
@@ -162,7 +152,6 @@
     # invokes: Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;->writeMsgOnDebugView(Landroid/widget/TextView;Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v2, v3, v1, v0}, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;->access$800(Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;Landroid/widget/TextView;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 283
     return-void
 .end method
 
@@ -173,21 +162,17 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 265
     :try_start_0
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver$TransitionFinishObserver;->onChangeInner(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 270
     :goto_0
     return-void
 
-    .line 266
     :catch_0
     move-exception v0
 
-    .line 267
     .local v0, "e":Ljava/lang/Exception;
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver$TransitionFinishObserver;->this$0:Lcn/nubia/server/policy/edge/effects/widowobserver/WindowAnimationObserver;
 

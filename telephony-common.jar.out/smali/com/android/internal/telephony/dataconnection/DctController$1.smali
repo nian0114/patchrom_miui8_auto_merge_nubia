@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 106
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     invoke-direct {p0}, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 109
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     const/16 v1, 0x6b
@@ -48,6 +46,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 110
     return-void
 .end method

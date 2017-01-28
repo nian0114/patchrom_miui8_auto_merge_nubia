@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 76
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping$PreAnimUpdateListener$1;->this$1:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping$PreAnimUpdateListener;
 
     iput p2, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping$PreAnimUpdateListener$1;->val$value:F
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 80
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping$PreAnimUpdateListener$1;->this$1:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping$PreAnimUpdateListener;
 
     iget-object v0, v0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping$PreAnimUpdateListener;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping;
@@ -54,6 +52,5 @@
     # invokes: Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping;->onPreAnimUpdate(F)V
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping;->access$100(Lcn/nubia/server/policy/edge/effects/animation/pageflipping/SinglePageFlipping;F)V
 
-    .line 81
     return-void
 .end method

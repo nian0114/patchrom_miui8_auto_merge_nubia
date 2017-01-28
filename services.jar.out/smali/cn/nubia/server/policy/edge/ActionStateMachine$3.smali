@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 113
     iput-object p1, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$3;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,7 +39,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 116
     iget-object v0, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$3;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     # getter for: Lcn/nubia/server/policy/edge/ActionStateMachine;->mContext:Landroid/content/Context;
@@ -62,20 +60,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 119
     const-string v0, "FitActionStateMachine"
 
     const-string v1, "enter single ui mode"
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 120
     iget-object v0, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$3;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     # invokes: Lcn/nubia/server/policy/edge/ActionStateMachine;->sendCancelMessageForInterrupt()V
     invoke-static {v0}, Lcn/nubia/server/policy/edge/ActionStateMachine;->access$000(Lcn/nubia/server/policy/edge/ActionStateMachine;)V
 
-    .line 122
     :cond_0
     return-void
 .end method

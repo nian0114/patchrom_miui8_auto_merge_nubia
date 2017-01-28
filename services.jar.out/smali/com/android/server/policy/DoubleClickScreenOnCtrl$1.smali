@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 50
     iput-object p1, p0, Lcom/android/server/policy/DoubleClickScreenOnCtrl$1;->this$0:Lcom/android/server/policy/DoubleClickScreenOnCtrl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 4
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/policy/DoubleClickScreenOnCtrl$1;->this$0:Lcom/android/server/policy/DoubleClickScreenOnCtrl;
 
     # invokes: Lcom/android/server/policy/DoubleClickScreenOnCtrl;->turnScreenOn()V
     invoke-static {v0}, Lcom/android/server/policy/DoubleClickScreenOnCtrl;->access$000(Lcom/android/server/policy/DoubleClickScreenOnCtrl;)V
 
-    .line 53
     iget-object v0, p0, Lcom/android/server/policy/DoubleClickScreenOnCtrl$1;->this$0:Lcom/android/server/policy/DoubleClickScreenOnCtrl;
 
     iget-object v1, p0, Lcom/android/server/policy/DoubleClickScreenOnCtrl$1;->this$0:Lcom/android/server/policy/DoubleClickScreenOnCtrl;
@@ -65,6 +62,5 @@
     # invokes: Lcom/android/server/policy/DoubleClickScreenOnCtrl;->disableProximity(Landroid/hardware/SensorManager;Landroid/hardware/SensorEventListener;Z)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/policy/DoubleClickScreenOnCtrl;->access$200(Lcom/android/server/policy/DoubleClickScreenOnCtrl;Landroid/hardware/SensorManager;Landroid/hardware/SensorEventListener;Z)V
 
-    .line 54
     return-void
 .end method

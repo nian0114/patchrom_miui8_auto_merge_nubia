@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 110
     iput-object p1, p0, Lnubia/fancydrawable/TimeDrawable$1;->this$0:Lnubia/fancydrawable/TimeDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,22 +39,18 @@
     .locals 6
 
     .prologue
-    .line 113
     iget-object v2, p0, Lnubia/fancydrawable/TimeDrawable$1;->this$0:Lnubia/fancydrawable/TimeDrawable;
 
     invoke-virtual {v2}, Lnubia/fancydrawable/TimeDrawable;->invalidateSelf()V
 
-    .line 115
     iget-object v2, p0, Lnubia/fancydrawable/TimeDrawable$1;->this$0:Lnubia/fancydrawable/TimeDrawable;
 
     iget-object v2, v2, Lnubia/fancydrawable/TimeDrawable;->mHandler:Landroid/os/Handler;
 
     if-eqz v2, :cond_0
 
-    .line 116
     const/16 v1, 0x3c
 
-    .line 117
     .local v1, "second":I
     iget-object v2, p0, Lnubia/fancydrawable/TimeDrawable$1;->this$0:Lnubia/fancydrawable/TimeDrawable;
 
@@ -66,7 +61,6 @@
 
     monitor-enter v3
 
-    .line 118
     :try_start_0
     iget-object v2, p0, Lnubia/fancydrawable/TimeDrawable$1;->this$0:Lnubia/fancydrawable/TimeDrawable;
 
@@ -77,7 +71,6 @@
 
     invoke-virtual {v2}, Landroid/text/format/Time;->setToNow()V
 
-    .line 119
     iget-object v2, p0, Lnubia/fancydrawable/TimeDrawable$1;->this$0:Lnubia/fancydrawable/TimeDrawable;
 
     # getter for: Lnubia/fancydrawable/TimeDrawable;->mCalendar:Landroid/text/format/Time;
@@ -87,19 +80,16 @@
 
     iget v1, v2, Landroid/text/format/Time;->second:I
 
-    .line 120
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 121
     rsub-int/lit8 v2, v1, 0x3c
 
     if-lez v2, :cond_1
 
     rsub-int/lit8 v0, v1, 0x3c
 
-    .line 123
     .local v0, "nexttime":I
     :goto_0
     iget-object v2, p0, Lnubia/fancydrawable/TimeDrawable$1;->this$0:Lnubia/fancydrawable/TimeDrawable;
@@ -119,13 +109,11 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 125
     .end local v0    # "nexttime":I
     .end local v1    # "second":I
     :cond_0
     return-void
 
-    .line 120
     .restart local v1    # "second":I
     :catchall_0
     move-exception v2
@@ -137,7 +125,6 @@
 
     throw v2
 
-    .line 121
     :cond_1
     const/16 v0, 0x3c
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 134
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$1;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     invoke-direct {p0}, Landroid/app/IUserSwitchObserver$Stub;-><init>()V
@@ -43,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 158
     return-void
 .end method
 
@@ -52,7 +50,6 @@
     .param p1, "newUserId"    # I
 
     .prologue
-    .line 153
     return-void
 .end method
 
@@ -67,13 +64,11 @@
     .end annotation
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$1;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     # setter for: Lcom/android/internal/telephony/SubscriptionInfoUpdater;->mCurrentlyActiveUserId:I
     invoke-static {v0, p1}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->access$002(Lcom/android/internal/telephony/SubscriptionInfoUpdater;I)I
 
-    .line 139
     # getter for: Lcom/android/internal/telephony/SubscriptionInfoUpdater;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->access$100()Landroid/content/Context;
 
@@ -103,10 +98,8 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/android/internal/telephony/CarrierAppUtils;->disableCarrierAppsUntilPrivileged(Ljava/lang/String;Landroid/content/pm/IPackageManager;Landroid/telephony/TelephonyManager;I)V
 
-    .line 142
     if-eqz p2, :cond_0
 
-    .line 144
     const/4 v0, 0x0
 
     :try_start_0
@@ -114,12 +107,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
     :cond_0
     :goto_0
     return-void
 
-    .line 145
     :catch_0
     move-exception v0
 

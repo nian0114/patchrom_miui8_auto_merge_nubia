@@ -32,18 +32,14 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 469
     iput-object p1, p0, Lcn/nubia/server/appmgmt/CABCController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 470
     iput p2, p0, Lcn/nubia/server/appmgmt/CABCController$NotePausingActivityRunnable;->mStackId:I
 
-    .line 471
     iput-object p3, p0, Lcn/nubia/server/appmgmt/CABCController$NotePausingActivityRunnable;->mPausingPackage:Ljava/lang/String;
 
-    .line 472
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .locals 3
 
     .prologue
-    .line 476
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     # getter for: Lcn/nubia/server/appmgmt/CABCController;->mResumedPackages:Ljava/util/HashMap;
@@ -73,7 +68,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 477
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     # getter for: Lcn/nubia/server/appmgmt/CABCController;->mResumedPackages:Ljava/util/HashMap;
@@ -93,7 +87,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 478
     .local v0, "resumedPackage":Ljava/lang/String;
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NotePausingActivityRunnable;->mPausingPackage:Ljava/lang/String;
 
@@ -103,13 +96,11 @@
 
     if-nez v1, :cond_1
 
-    .line 492
     .end local v0    # "resumedPackage":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 482
     :cond_1
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
@@ -126,7 +117,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 484
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     # getter for: Lcn/nubia/server/appmgmt/CABCController;->mScreenOn:Z
@@ -136,7 +126,6 @@
 
     if-nez v1, :cond_0
 
-    .line 485
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 
     # getter for: Lcn/nubia/server/appmgmt/CABCController;->mDumpDebugLog:Z
@@ -146,14 +135,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 486
     const-string v1, "CABCController"
 
     const-string v2, "activity paused and screen off. re-adjust CABC mode"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 490
     :cond_2
     iget-object v1, p0, Lcn/nubia/server/appmgmt/CABCController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/CABCController;
 

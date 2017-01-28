@@ -197,7 +197,6 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 1700
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -206,14 +205,12 @@
 
     sput-object v0, Lcn/nubia/internal/R$styleable;->ClockWidgetAnalogClock:[I
 
-    .line 1781
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcn/nubia/internal/R$styleable;->ClockWidgetAnalogClockWithCity:[I
 
-    .line 1870
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -222,14 +219,12 @@
 
     sput-object v0, Lcn/nubia/internal/R$styleable;->ClockWidgetDigitalClockWithCity:[I
 
-    .line 2014
     new-array v0, v1, [I
 
     fill-array-data v0, :array_3
 
     sput-object v0, Lcn/nubia/internal/R$styleable;->NubiaPagerTab:[I
 
-    .line 2099
     const/16 v0, 0xc
 
     new-array v0, v0, [I
@@ -238,7 +233,6 @@
 
     sput-object v0, Lcn/nubia/internal/R$styleable;->NubiaSearchView:[I
 
-    .line 2278
     const/16 v0, 0xb
 
     new-array v0, v0, [I
@@ -247,7 +241,6 @@
 
     sput-object v0, Lcn/nubia/internal/R$styleable;->NubiaSwitch:[I
 
-    .line 2513
     const/16 v0, 0x24
 
     new-array v0, v0, [I
@@ -258,7 +251,6 @@
 
     return-void
 
-    .line 1700
     :array_0
     .array-data 4
         0x3010011
@@ -268,7 +260,6 @@
         0x3010015
     .end array-data
 
-    .line 1781
     :array_1
     .array-data 4
         0x3010016
@@ -277,7 +268,6 @@
         0x3010019
     .end array-data
 
-    .line 1870
     :array_2
     .array-data 4
         0x301001a
@@ -290,7 +280,6 @@
         0x3010021
     .end array-data
 
-    .line 2014
     :array_3
     .array-data 4
         0x301002e
@@ -299,7 +288,6 @@
         0x3010049
     .end array-data
 
-    .line 2099
     :array_4
     .array-data 4
         0x3010022
@@ -316,7 +304,6 @@
         0x301002d
     .end array-data
 
-    .line 2278
     :array_5
     .array-data 4
         0x3010034
@@ -332,7 +319,6 @@
         0x3010043    # 3.7909993E-37f
     .end array-data
 
-    .line 2513
     :array_6
     .array-data 4
         0x3010000
@@ -378,7 +364,6 @@
     .locals 0
 
     .prologue
-    .line 1681
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

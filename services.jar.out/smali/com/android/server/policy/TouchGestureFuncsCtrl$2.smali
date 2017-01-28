@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 164
     iput-object p1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl$2;->this$0:Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "motionEvent"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 167
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl$2;->this$0:Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     # getter for: Lcom/android/server/policy/TouchGestureFuncsCtrl;->mGestureListener:Lnubia/gesture/touch/GestureListener;
@@ -51,6 +49,5 @@
 
     invoke-static {p1, v0}, Lnubia/gesture/touch/GestureManager;->touch(Landroid/view/MotionEvent;Lnubia/gesture/touch/GestureListener;)Z
 
-    .line 168
     return-void
 .end method

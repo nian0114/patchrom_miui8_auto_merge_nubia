@@ -45,67 +45,55 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     const-string v1, "TouchGestureFuncsCtrl"
 
     iput-object v1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->TAG:Ljava/lang/String;
 
-    .line 201
     new-instance v1, Lcom/android/server/policy/TouchGestureFuncsCtrl$3;
 
     invoke-direct {v1, p0}, Lcom/android/server/policy/TouchGestureFuncsCtrl$3;-><init>(Lcom/android/server/policy/TouchGestureFuncsCtrl;)V
 
     iput-object v1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mScreenshotRunnable:Ljava/lang/Runnable;
 
-    .line 233
     new-instance v1, Lcom/android/server/policy/TouchGestureFuncsCtrl$4;
 
     invoke-direct {v1, p0}, Lcom/android/server/policy/TouchGestureFuncsCtrl$4;-><init>(Lcom/android/server/policy/TouchGestureFuncsCtrl;)V
 
     iput-object v1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mScreenSaverReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 63
     iput-object p1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 64
     iput-object p2, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mContext:Landroid/content/Context;
 
-    .line 65
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mHandler:Landroid/os/Handler;
 
-    .line 67
     new-instance v1, Lcom/android/server/policy/MultiFingerSwitchAppCtrl;
 
     invoke-direct {v1, p1, p2}, Lcom/android/server/policy/MultiFingerSwitchAppCtrl;-><init>(Lcom/android/server/policy/PhoneWindowManager;Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mSwitchAppCtrl:Lcom/android/server/policy/MultiFingerSwitchAppCtrl;
 
-    .line 68
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 69
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "com.android.internal.policy.impl.ACTION_SCREEN_SAVER_SHOW"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 70
     iget-object v1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mScreenSaverReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 71
     return-void
 .end method
 
@@ -114,7 +102,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     .prologue
-    .line 41
     iget-boolean v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->isScreenSaverShow:Z
 
     return v0
@@ -126,7 +113,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 41
     iput-boolean p1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->isScreenSaverShow:Z
 
     return p1
@@ -137,7 +123,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Lcom/android/server/policy/TouchGestureFuncsCtrl;->takeSnot()V
 
     return-void
@@ -148,7 +133,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mSwitchAppCtrl:Lcom/android/server/policy/MultiFingerSwitchAppCtrl;
 
     return-object v0
@@ -159,7 +143,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Lcom/android/server/policy/TouchGestureFuncsCtrl;->doPalmCoverLockScreen()V
 
     return-void
@@ -170,7 +153,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mGestureListener:Lnubia/gesture/touch/GestureListener;
 
     return-object v0
@@ -181,7 +163,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/TouchGestureFuncsCtrl;
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
     return-object v0
@@ -191,10 +172,8 @@
     .locals 6
 
     .prologue
-    .line 215
     const/4 v1, 0x0
 
-    .line 217
     .local v1, "isValid":Z
     :try_start_0
     iget-object v3, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
@@ -203,7 +182,6 @@
 
     move-result-object v2
 
-    .line 219
     .local v2, "telephonyManager":Landroid/telecom/TelecomManager;
     if-eqz v2, :cond_1
 
@@ -213,7 +191,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 220
     const-string v3, "TouchGestureFuncsCtrl"
 
     const-string v4, "palm error because phone"
@@ -222,23 +199,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 231
     .end local v2    # "telephonyManager":Landroid/telecom/TelecomManager;
     :cond_0
     :goto_0
     return-void
 
-    .line 223
     .restart local v2    # "telephonyManager":Landroid/telecom/TelecomManager;
     :cond_1
     const/4 v1, 0x1
 
-    .line 227
     .end local v2    # "telephonyManager":Landroid/telecom/TelecomManager;
     :goto_1
     if-eqz v1, :cond_0
 
-    .line 230
     iget-object v3, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v3, v3, Lcom/android/server/policy/PhoneWindowManager;->mPowerManager:Landroid/os/PowerManager;
@@ -251,11 +224,9 @@
 
     goto :goto_0
 
-    .line 224
     :catch_0
     move-exception v0
 
-    .line 225
     .local v0, "ex":Ljava/lang/Exception;
     const-string v3, "TouchGestureFuncsCtrl"
 
@@ -270,7 +241,6 @@
     .locals 4
 
     .prologue
-    .line 209
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mScreenshotRunnable:Ljava/lang/Runnable;
@@ -281,7 +251,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 211
     return-void
 .end method
 
@@ -293,12 +262,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 186
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->pointEventListener:Landroid/view/WindowManagerPolicy$PointerEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 187
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -307,37 +274,30 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->unregisterPointerEventListener(Landroid/view/WindowManagerPolicy$PointerEventListener;)V
 
-    .line 189
     iput-object v2, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->pointEventListener:Landroid/view/WindowManagerPolicy$PointerEventListener;
 
-    .line 191
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mGestureListener:Lnubia/gesture/touch/GestureListener;
 
     if-eqz v0, :cond_1
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mGestureListener:Lnubia/gesture/touch/GestureListener;
 
     invoke-static {v0}, Lnubia/gesture/touch/GestureManager;->unDetect(Lnubia/gesture/touch/GestureListener;)V
 
-    .line 193
     iput-object v2, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mGestureListener:Lnubia/gesture/touch/GestureListener;
 
-    .line 195
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mMultiFingerMove:Z
 
     if-nez v0, :cond_2
 
-    .line 196
     const-string v0, "persist.sys.gesture.capture"
 
     const-string v1, "false"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 198
     :cond_2
     return-void
 .end method
@@ -346,31 +306,26 @@
     .locals 3
 
     .prologue
-    .line 121
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mGestureListener:Lnubia/gesture/touch/GestureListener;
 
     if-nez v0, :cond_1
 
-    .line 122
     new-instance v0, Lcom/android/server/policy/TouchGestureFuncsCtrl$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/TouchGestureFuncsCtrl$1;-><init>(Lcom/android/server/policy/TouchGestureFuncsCtrl;)V
 
     iput-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mGestureListener:Lnubia/gesture/touch/GestureListener;
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->pointEventListener:Landroid/view/WindowManagerPolicy$PointerEventListener;
 
     if-nez v0, :cond_0
 
-    .line 164
     new-instance v0, Lcom/android/server/policy/TouchGestureFuncsCtrl$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/TouchGestureFuncsCtrl$2;-><init>(Lcom/android/server/policy/TouchGestureFuncsCtrl;)V
 
     iput-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->pointEventListener:Landroid/view/WindowManagerPolicy$PointerEventListener;
 
-    .line 172
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -380,7 +335,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->registerPointerEventListener(Landroid/view/WindowManagerPolicy$PointerEventListener;)V
 
-    .line 175
     const/4 v0, 0x2
 
     new-array v0, v0, [Lnubia/gesture/touch/GestureArg;
@@ -411,19 +365,16 @@
 
     invoke-virtual {v0, v1}, Lnubia/gesture/touch/ListenerClient;->setContext(Landroid/content/Context;)V
 
-    .line 179
     iget-boolean v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mMultiFingerMove:Z
 
     if-eqz v0, :cond_1
 
-    .line 180
     const-string v0, "persist.sys.gesture.capture"
 
     const-string v1, "true"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 183
     :cond_1
     return-void
 .end method
@@ -438,7 +389,6 @@
 
     const/4 v1, -0x1
 
-    .line 76
     const-string v0, "multi_point_up"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -447,7 +397,6 @@
 
     invoke-virtual {p1, v0, v2, p2, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 79
     const-string v0, "multi_point_right"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -456,7 +405,6 @@
 
     invoke-virtual {p1, v0, v2, p2, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 82
     const-string v0, "multi_point_left"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -465,7 +413,6 @@
 
     invoke-virtual {p1, v0, v2, p2, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 85
     const-string v0, "palm_cover"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -474,7 +421,6 @@
 
     invoke-virtual {p1, v0, v2, p2, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 88
     return-void
 .end method
 
@@ -488,14 +434,12 @@
 
     const/4 v8, 0x1
 
-    .line 92
     iget-object v6, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    .line 93
     .local v3, "resolver":Landroid/content/ContentResolver;
     const-string v6, "multi_point_up"
 
@@ -503,7 +447,6 @@
 
     move-result v5
 
-    .line 95
     .local v5, "upMove":I
     const-string v6, "palm_cover"
 
@@ -511,7 +454,6 @@
 
     move-result v2
 
-    .line 97
     .local v2, "palmCover":I
     const-string v6, "multi_point_left"
 
@@ -519,7 +461,6 @@
 
     move-result v1
 
-    .line 99
     .local v1, "leftMove":I
     const-string v6, "multi_point_right"
 
@@ -527,7 +468,6 @@
 
     move-result v4
 
-    .line 101
     .local v4, "rightMove":I
     const-string v6, "TouchGestureFuncsCtrl"
 
@@ -581,14 +521,12 @@
 
     invoke-static {v6, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     or-int v6, v5, v2
 
     or-int/2addr v6, v1
 
     or-int v0, v6, v4
 
-    .line 104
     .local v0, "gestureMode":I
     if-eq v5, v8, :cond_0
 
@@ -602,7 +540,6 @@
     :goto_0
     iput-boolean v6, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mMultiFingerMove:Z
 
-    .line 106
     iget-object v6, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mSwitchAppCtrl:Lcom/android/server/policy/MultiFingerSwitchAppCtrl;
 
     if-eq v1, v8, :cond_1
@@ -615,23 +552,18 @@
     :cond_2
     invoke-virtual {v6, v7}, Lcom/android/server/policy/MultiFingerSwitchAppCtrl;->setEnable(Z)V
 
-    .line 108
     iget v6, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mGestureMode:I
 
     if-eq v6, v0, :cond_3
 
-    .line 109
     iput v0, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mGestureMode:I
 
-    .line 110
     iget v6, p0, Lcom/android/server/policy/TouchGestureFuncsCtrl;->mGestureMode:I
 
     if-eqz v6, :cond_5
 
-    .line 111
     invoke-virtual {p0}, Lcom/android/server/policy/TouchGestureFuncsCtrl;->enableTouchGesture()V
 
-    .line 117
     :cond_3
     :goto_1
     return-void
@@ -639,10 +571,8 @@
     :cond_4
     move v6, v7
 
-    .line 104
     goto :goto_0
 
-    .line 113
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/policy/TouchGestureFuncsCtrl;->disableTouchGesture()V
 

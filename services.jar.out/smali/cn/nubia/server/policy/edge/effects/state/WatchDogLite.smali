@@ -39,13 +39,10 @@
     .param p1, "safeGuarder"    # Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mSafeGuarder:Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;
 
-    .line 20
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mSafeGuarder:Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;
 
     new-instance v1, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$1;
@@ -58,14 +55,12 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mHandler:Landroid/os/Handler;
 
-    .line 28
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mTasks:Ljava/util/HashMap;
 
-    .line 29
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .param p1, "x1"    # Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;
 
     .prologue
-    .line 10
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->timeOut(Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;)V
 
     return-void
@@ -86,7 +80,6 @@
     .param p1, "info"    # Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;
 
     .prologue
-    .line 54
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -155,15 +148,12 @@
     .param p3, "calltraceOfCaller"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 32
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->reached(Ljava/lang/String;)V
 
-    .line 33
     new-instance v0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;
 
     invoke-direct {v0, p1, p2, p3}, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V
 
-    .line 34
     .local v0, "info":Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mHandler:Landroid/os/Handler;
 
@@ -173,7 +163,6 @@
 
     move-result-object v1
 
-    .line 35
     .local v1, "msg":Landroid/os/Message;
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mTasks:Ljava/util/HashMap;
 
@@ -187,14 +176,12 @@
 
     invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     iget-object v2, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mHandler:Landroid/os/Handler;
 
     int-to-long v4, p2
 
     invoke-virtual {v2, v1, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 37
     return-void
 .end method
 
@@ -202,14 +189,12 @@
     .locals 5
 
     .prologue
-    .line 47
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mTasks:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object v2
 
-    .line 48
     .local v2, "infoList":Ljava/util/Collection;, "Ljava/util/Collection<Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;>;"
     invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -229,7 +214,6 @@
 
     check-cast v1, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;
 
-    .line 49
     .local v1, "info":Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mHandler:Landroid/os/Handler;
 
@@ -239,14 +223,12 @@
 
     goto :goto_0
 
-    .line 50
     .end local v1    # "info":Lcn/nubia/server/policy/edge/effects/state/WatchDogLite$CallbackInfo;
     :cond_0
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mTasks:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->clear()V
 
-    .line 51
     return-void
 .end method
 
@@ -255,7 +237,6 @@
     .param p1, "callback"    # Ljava/lang/String;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mTasks:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -272,7 +253,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 41
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mHandler:Landroid/os/Handler;
 
     const/high16 v1, 0x10000
@@ -293,7 +273,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
 
-    .line 42
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/state/WatchDogLite;->mTasks:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -306,7 +285,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     :cond_0
     return-void
 .end method

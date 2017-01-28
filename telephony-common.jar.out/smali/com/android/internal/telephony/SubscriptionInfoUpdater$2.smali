@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 168
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 171
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     const-string v5, "[Receiver]+"
@@ -49,12 +47,10 @@
     # invokes: Lcom/android/internal/telephony/SubscriptionInfoUpdater;->logd(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->access$300(Lcom/android/internal/telephony/SubscriptionInfoUpdater;Ljava/lang/String;)V
 
-    .line 172
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 173
     .local v0, "action":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
@@ -79,7 +75,6 @@
     # invokes: Lcom/android/internal/telephony/SubscriptionInfoUpdater;->logd(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->access$300(Lcom/android/internal/telephony/SubscriptionInfoUpdater;Ljava/lang/String;)V
 
-    .line 175
     const-string v4, "android.intent.action.SIM_STATE_CHANGED"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -96,12 +91,10 @@
 
     if-nez v4, :cond_1
 
-    .line 212
     :cond_0
     :goto_0
     return-void
 
-    .line 180
     :cond_1
     const-string v4, "phone"
 
@@ -109,7 +102,6 @@
 
     move-result v3
 
-    .line 182
     .local v3, "slotId":I
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
@@ -134,17 +126,14 @@
     # invokes: Lcom/android/internal/telephony/SubscriptionInfoUpdater;->logd(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->access$300(Lcom/android/internal/telephony/SubscriptionInfoUpdater;Ljava/lang/String;)V
 
-    .line 183
     if-eq v3, v7, :cond_0
 
-    .line 187
     const-string v4, "ss"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 188
     .local v2, "simStatus":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
@@ -169,7 +158,6 @@
     # invokes: Lcom/android/internal/telephony/SubscriptionInfoUpdater;->logd(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->access$300(Lcom/android/internal/telephony/SubscriptionInfoUpdater;Ljava/lang/String;)V
 
-    .line 190
     const-string v4, "android.intent.action.SIM_STATE_CHANGED"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -178,7 +166,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 191
     const-string v4, "ABSENT"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -187,7 +174,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 192
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     iget-object v5, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
@@ -200,7 +186,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->sendMessage(Landroid/os/Message;)Z
 
-    .line 211
     :cond_2
     :goto_1
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
@@ -212,7 +197,6 @@
 
     goto :goto_0
 
-    .line 193
     :cond_3
     const-string v4, "UNKNOWN"
 
@@ -222,7 +206,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 194
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     iget-object v5, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
@@ -237,7 +220,6 @@
 
     goto :goto_1
 
-    .line 195
     :cond_4
     const-string v4, "CARD_IO_ERROR"
 
@@ -247,7 +229,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 196
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     iget-object v5, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
@@ -262,7 +243,6 @@
 
     goto :goto_1
 
-    .line 198
     :cond_5
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
@@ -289,7 +269,6 @@
 
     goto :goto_1
 
-    .line 200
     :cond_6
     const-string v4, "android.intent.action.internal_sim_state_changed"
 
@@ -299,7 +278,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 201
     const-string v4, "LOCKED"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -308,14 +286,12 @@
 
     if-eqz v4, :cond_7
 
-    .line 202
     const-string v4, "reason"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 204
     .local v1, "reason":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
@@ -331,7 +307,6 @@
 
     goto :goto_1
 
-    .line 205
     .end local v1    # "reason":Ljava/lang/String;
     :cond_7
     const-string v4, "LOADED"
@@ -342,7 +317,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 206
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     iget-object v5, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
@@ -357,7 +331,6 @@
 
     goto/16 :goto_1
 
-    .line 208
     :cond_8
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 

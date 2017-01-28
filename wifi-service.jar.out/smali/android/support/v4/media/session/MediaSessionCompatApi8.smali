@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .param p1, "mbr"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 24
     const-string v1, "audio"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -29,11 +27,9 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 25
     .local v0, "am":Landroid/media/AudioManager;
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->registerMediaButtonEventReceiver(Landroid/content/ComponentName;)V
 
-    .line 26
     return-void
 .end method
 
@@ -43,7 +39,6 @@
     .param p1, "mbr"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 29
     const-string v1, "audio"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -52,10 +47,8 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 30
     .local v0, "am":Landroid/media/AudioManager;
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->unregisterMediaButtonEventReceiver(Landroid/content/ComponentName;)V
 
-    .line 31
     return-void
 .end method

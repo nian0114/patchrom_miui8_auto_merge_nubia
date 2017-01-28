@@ -28,7 +28,6 @@
     .param p4, "x2"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 589
     iput-object p1, p0, Lcom/android/server/policy/NubiaGlobalActions$11;->this$0:Lcom/android/server/policy/NubiaGlobalActions;
 
     iput-object p5, p0, Lcom/android/server/policy/NubiaGlobalActions$11;->val$user:Landroid/content/pm/UserInfo;
@@ -44,7 +43,6 @@
     .locals 4
 
     .prologue
-    .line 592
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -58,15 +56,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 597
     :goto_0
     return-void
 
-    .line 594
     :catch_0
     move-exception v0
 
-    .line 595
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "GlobalActions"
 
@@ -97,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 604
     const/4 v0, 0x0
 
     return v0
@@ -107,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 600
     const/4 v0, 0x1
 
     return v0

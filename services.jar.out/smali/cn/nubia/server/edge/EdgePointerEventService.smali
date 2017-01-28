@@ -33,31 +33,24 @@
     .param p3, "input"    # Lcom/android/server/input/InputManagerService;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Lnubia/os/edge/IEdgePointerEventManager$Stub;-><init>()V
 
-    .line 38
     const/4 v1, -0x1
 
     iput v1, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mLastEnableFitState:I
 
-    .line 42
     iput-object p1, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mContext:Landroid/content/Context;
 
-    .line 43
     iput-object p2, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    .line 44
     iput-object p3, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mInputManager:Lcom/android/server/input/InputManagerService;
 
-    .line 45
     invoke-static {}, Lnubia/os/edge/EdgeFeatureConfig;->isEdgeFeatureEnable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 46
     const-string v1, "ro.nubia.edge.channel"
 
     const-string v2, "nubia_edge"
@@ -66,7 +59,6 @@
 
     move-result-object v0
 
-    .line 47
     .local v0, "channelName":Ljava/lang/String;
     new-instance v1, Lcn/nubia/server/edge/EdgePointerEventDispatcher;
 
@@ -82,7 +74,6 @@
 
     iput-object v1, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mEdgePointerEventDispatcher:Lcn/nubia/server/edge/EdgePointerEventDispatcher;
 
-    .line 49
     new-instance v1, Lcn/nubia/server/edge/PointerEventDispatcher;
 
     iget-object v2, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mContext:Landroid/content/Context;
@@ -99,7 +90,6 @@
 
     iput-object v1, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mPointerEventDispatcher:Lcn/nubia/server/edge/PointerEventDispatcher;
 
-    .line 52
     .end local v0    # "channelName":Ljava/lang/String;
     :cond_0
     return-void
@@ -115,19 +105,16 @@
 
     const/4 v4, 0x0
 
-    .line 114
     invoke-static {}, Lnubia/os/edge/EdgeFeatureConfig;->isEdgeIncomplete()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 126
     :cond_0
     :goto_0
     return-void
 
-    .line 115
     :cond_1
     const-string v2, "cn.nubia.edge/cn.nubia.edge.instruct.InstructActivity"
 
@@ -137,7 +124,6 @@
 
     move-result-object v1
 
-    .line 116
     .local v1, "names":[Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -147,7 +133,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 117
     iget-object v2, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -160,7 +145,6 @@
 
     move-result v0
 
-    .line 118
     .local v0, "enableCZone":I
     aget-object v2, v1, v4
 
@@ -196,7 +180,6 @@
 
     if-nez v0, :cond_2
 
-    .line 121
     iget-object v2, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -209,11 +192,9 @@
 
     goto :goto_0
 
-    .line 122
     :cond_2
     if-eqz v0, :cond_0
 
-    .line 123
     iget-object v2, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -233,7 +214,6 @@
     .param p2, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     const/4 v4, 0x1
 
     new-array v0, v4, [Landroid/util/Pair;
@@ -250,11 +230,9 @@
 
     aput-object v5, v0, v4
 
-    .line 98
     .local v0, "disableFitActivities":[Landroid/util/Pair;, "[Landroid/util/Pair<**>;"
     const/4 v1, 0x1
 
-    .line 99
     .local v1, "enable":I
     const/4 v2, 0x0
 
@@ -264,10 +242,8 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 100
     aget-object v3, v0, v2
 
-    .line 101
     .local v3, "item":Landroid/util/Pair;, "Landroid/util/Pair<**>;"
     iget-object v4, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -285,33 +261,27 @@
 
     if-eqz v4, :cond_0
 
-    .line 102
     const-string v4, "EdgePointerEventService"
 
     const-string v5, "Disable fit according top activity"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     const/4 v1, 0x0
 
-    .line 99
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 106
     .end local v3    # "item":Landroid/util/Pair;, "Landroid/util/Pair<**>;"
     :cond_1
     iget v4, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mLastEnableFitState:I
 
     if-eq v4, v1, :cond_2
 
-    .line 107
     iput v1, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mLastEnableFitState:I
 
-    .line 108
     const-string v4, "persist.sys.edgetp.tzone"
 
     iget v5, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mLastEnableFitState:I
@@ -322,7 +292,6 @@
 
     invoke-static {v4, v5}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 111
     :cond_2
     return-void
 .end method
@@ -334,19 +303,16 @@
     .param p1, "listener"    # Lnubia/os/edge/IEdgePointerEventListener;
 
     .prologue
-    .line 57
     invoke-static {}, Lnubia/os/edge/EdgeFeatureConfig;->isEdgeFeatureEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 58
     iget-object v0, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mEdgePointerEventDispatcher:Lcn/nubia/server/edge/EdgePointerEventDispatcher;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/edge/EdgePointerEventDispatcher;->registerEventListener(Ljava/lang/Object;)V
 
-    .line 60
     :cond_0
     return-void
 .end method
@@ -356,19 +322,16 @@
     .param p1, "listener"    # Lnubia/os/edge/IPointerEventListener;
 
     .prologue
-    .line 73
     invoke-static {}, Lnubia/os/edge/EdgeFeatureConfig;->isEdgeFeatureEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 74
     iget-object v0, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mPointerEventDispatcher:Lcn/nubia/server/edge/PointerEventDispatcher;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/edge/PointerEventDispatcher;->registerEventListener(Ljava/lang/Object;)V
 
-    .line 76
     :cond_0
     return-void
 .end method
@@ -378,19 +341,16 @@
     .param p1, "listener"    # Lnubia/os/edge/IEdgePointerEventListener;
 
     .prologue
-    .line 65
     invoke-static {}, Lnubia/os/edge/EdgeFeatureConfig;->isEdgeFeatureEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 66
     iget-object v0, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mEdgePointerEventDispatcher:Lcn/nubia/server/edge/EdgePointerEventDispatcher;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/edge/EdgePointerEventDispatcher;->unregisterEventListener(Ljava/lang/Object;)V
 
-    .line 68
     :cond_0
     return-void
 .end method
@@ -400,19 +360,16 @@
     .param p1, "listener"    # Lnubia/os/edge/IPointerEventListener;
 
     .prologue
-    .line 81
     invoke-static {}, Lnubia/os/edge/EdgeFeatureConfig;->isEdgeFeatureEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 82
     iget-object v0, p0, Lcn/nubia/server/edge/EdgePointerEventService;->mPointerEventDispatcher:Lcn/nubia/server/edge/PointerEventDispatcher;
 
     invoke-virtual {v0, p1}, Lcn/nubia/server/edge/PointerEventDispatcher;->unregisterEventListener(Ljava/lang/Object;)V
 
-    .line 84
     :cond_0
     return-void
 .end method
@@ -423,12 +380,9 @@
     .param p2, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 89
     invoke-direct {p0, p1, p2}, Lcn/nubia/server/edge/EdgePointerEventService;->updateTZone(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 91
     invoke-direct {p0, p1, p2}, Lcn/nubia/server/edge/EdgePointerEventService;->setCZoneConfig(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 92
     return-void
 .end method

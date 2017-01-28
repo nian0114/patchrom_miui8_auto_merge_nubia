@@ -108,7 +108,6 @@
 
     const/4 v3, 0x0
 
-    .line 129
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "Language"
@@ -117,7 +116,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->Language:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 130
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "StateProvince"
@@ -126,7 +124,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->StateProvince:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 131
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "CountyDistrict"
@@ -135,7 +132,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->CountyDistrict:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 132
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "City"
@@ -144,7 +140,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->City:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 133
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "DivisionBorough"
@@ -153,7 +148,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->DivisionBorough:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 134
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "Block"
@@ -164,7 +158,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->Block:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 135
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "StreetGroup"
@@ -175,7 +168,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->StreetGroup:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 136
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "StreetDirection"
@@ -186,7 +178,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->StreetDirection:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 137
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "LeadingStreetSuffix"
@@ -197,7 +188,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->LeadingStreetSuffix:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 138
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "StreetSuffix"
@@ -208,7 +198,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->StreetSuffix:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 139
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "HouseNumber"
@@ -219,7 +208,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->HouseNumber:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 140
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "HouseNumberSuffix"
@@ -230,7 +218,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->HouseNumberSuffix:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 141
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "Landmark"
@@ -241,7 +228,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->Landmark:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 142
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "AdditionalLocation"
@@ -252,7 +238,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->AdditionalLocation:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 143
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "Name"
@@ -263,7 +248,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->Name:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 144
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "PostalZIP"
@@ -274,7 +258,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->PostalZIP:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 145
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "Building"
@@ -285,7 +268,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->Building:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 146
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "Unit"
@@ -296,7 +278,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->Unit:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 147
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "Floor"
@@ -307,7 +288,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->Floor:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 148
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "Room"
@@ -318,7 +298,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->Room:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 149
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "Type"
@@ -329,7 +308,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->Type:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 150
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "PostalCommunity"
@@ -340,7 +318,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->PostalCommunity:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 151
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "POBox"
@@ -351,7 +328,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->POBox:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 152
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "AdditionalCode"
@@ -362,7 +338,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->AdditionalCode:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 153
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "SeatDesk"
@@ -373,7 +348,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->SeatDesk:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 154
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "PrimaryRoad"
@@ -384,7 +358,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->PrimaryRoad:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 155
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "RoadSection"
@@ -395,7 +368,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->RoadSection:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 156
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "BranchRoad"
@@ -406,7 +378,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->BranchRoad:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 157
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "SubBranchRoad"
@@ -417,7 +388,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->SubBranchRoad:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 158
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "StreetNamePreMod"
@@ -428,7 +398,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->StreetNamePreMod:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 159
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "StreetNamePostMod"
@@ -439,7 +408,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->StreetNamePostMod:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 160
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "Script"
@@ -450,7 +418,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->Script:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 161
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     const-string v1, "Reserved"
@@ -461,7 +428,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->Reserved:Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
-    .line 128
     const/16 v0, 0x21
 
     new-array v0, v0, [Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
@@ -668,7 +634,6 @@
     .end annotation
 
     .prologue
-    .line 128
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -679,7 +644,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 128
     const-class v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -695,7 +659,6 @@
     .locals 1
 
     .prologue
-    .line 128
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->$VALUES:[Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;
 
     invoke-virtual {v0}, [Lcom/android/server/wifi/anqp/CivicLocationElement$CAType;->clone()Ljava/lang/Object;

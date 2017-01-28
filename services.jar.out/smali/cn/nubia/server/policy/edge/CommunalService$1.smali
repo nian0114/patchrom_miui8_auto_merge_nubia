@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 132
     iput-object p1, p0, Lcn/nubia/server/policy/edge/CommunalService$1;->this$0:Lcn/nubia/server/policy/edge/CommunalService;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -51,10 +50,8 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 135
     const/4 v7, 0x0
 
-    .line 137
     .local v7, "bm":Landroid/graphics/Bitmap;
     :try_start_0
     const-string v0, "FitCommunalService"
@@ -85,7 +82,6 @@
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 138
     invoke-static {}, Landroid/os/Process;->myTid()I
 
     move-result v0
@@ -94,13 +90,11 @@
 
     move-result v11
 
-    .line 139
     .local v11, "origPri":I
     const/4 v0, -0x2
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 140
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService$1;->this$0:Lcn/nubia/server/policy/edge/CommunalService;
 
     # getter for: Lcn/nubia/server/policy/edge/CommunalService;->mContext:Landroid/content/Context;
@@ -118,7 +112,6 @@
 
     iget v10, v0, Landroid/content/res/Configuration;->orientation:I
 
-    .line 141
     .local v10, "orientation":I
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService$1;->this$0:Lcn/nubia/server/policy/edge/CommunalService;
 
@@ -137,7 +130,6 @@
 
     iget v13, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 142
     .local v13, "screenWidth":I
     iget-object v0, p0, Lcn/nubia/server/policy/edge/CommunalService$1;->this$0:Lcn/nubia/server/policy/edge/CommunalService;
 
@@ -156,7 +148,6 @@
 
     iget v12, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 143
     .local v12, "screenHeight":I
     const/4 v0, 0x2
 
@@ -174,25 +165,21 @@
 
     aput v1, v8, v0
 
-    .line 144
     .local v8, "dims":[F
     if-ne v10, v3, :cond_0
 
-    .line 145
     const/4 v0, 0x0
 
     int-to-float v1, v12
 
     aput v1, v8, v0
 
-    .line 146
     const/4 v0, 0x1
 
     int-to-float v1, v13
 
     aput v1, v8, v0
 
-    .line 148
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
@@ -222,12 +209,10 @@
 
     move-result-object v7
 
-    .line 152
     invoke-static {v11}, Landroid/os/Process;->setThreadPriority(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 156
     .end local v8    # "dims":[F
     .end local v10    # "orientation":I
     .end local v11    # "origPri":I
@@ -236,11 +221,9 @@
     :goto_0
     return-object v7
 
-    .line 153
     :catch_0
     move-exception v9
 
-    .line 154
     .local v9, "e":Ljava/lang/Exception;
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -251,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 132
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/CommunalService$1;->doInBackground([Ljava/lang/Void;)Landroid/graphics/Bitmap;
@@ -266,13 +248,10 @@
     .param p1, "result"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 161
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 162
     move-object v0, p1
 
-    .line 163
     .local v0, "bm":Landroid/graphics/Bitmap;
     iget-object v1, p0, Lcn/nubia/server/policy/edge/CommunalService$1;->this$0:Lcn/nubia/server/policy/edge/CommunalService;
 
@@ -287,7 +266,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 173
     return-void
 .end method
 
@@ -295,7 +273,6 @@
     .locals 0
 
     .prologue
-    .line 132
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcn/nubia/server/policy/edge/CommunalService$1;->onPostExecute(Landroid/graphics/Bitmap;)V

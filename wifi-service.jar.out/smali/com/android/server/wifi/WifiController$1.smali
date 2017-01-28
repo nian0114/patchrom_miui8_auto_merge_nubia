@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 181
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/16 v3, 0xe
 
-    .line 184
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 185
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.android.server.WifiManager.action.DEVICE_IDLE"
 
@@ -56,19 +53,16 @@
 
     if-eqz v2, :cond_1
 
-    .line 186
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const v3, 0x26005
 
     invoke-virtual {v2, v3}, Lcom/android/server/wifi/WifiController;->sendMessage(I)V
 
-    .line 199
     :cond_0
     :goto_0
     return-void
 
-    .line 187
     :cond_1
     const-string v2, "android.net.wifi.STATE_CHANGE"
 
@@ -78,7 +72,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 188
     iget-object v3, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const-string v2, "networkInfo"
@@ -93,7 +86,6 @@
 
     goto :goto_0
 
-    .line 190
     :cond_2
     const-string v2, "android.net.wifi.WIFI_AP_STATE_CHANGED"
 
@@ -103,18 +95,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 191
     const-string v2, "wifi_state"
 
     invoke-virtual {p2, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 194
     .local v1, "state":I
     if-ne v1, v3, :cond_0
 
-    .line 195
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const-string v3, "WifiControllerSoftAP start failed"
@@ -122,7 +111,6 @@
     # invokes: Lcom/android/server/wifi/WifiController;->loge(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/android/server/wifi/WifiController;->access$000(Lcom/android/server/wifi/WifiController;Ljava/lang/String;)V
 
-    .line 196
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const v3, 0x2600d

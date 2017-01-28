@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 563
     iput p1, p0, Lcom/android/internal/telephony/UiccSmsController$1;->val$phoneId:I
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -37,7 +36,6 @@
     .locals 3
 
     .prologue
-    .line 565
     # getter for: Lcom/android/internal/telephony/UiccSmsController;->mIsFlowrateChecked:[Z
     invoke-static {}, Lcom/android/internal/telephony/UiccSmsController;->access$000()[Z
 
@@ -49,6 +47,5 @@
 
     aput-boolean v2, v0, v1
 
-    .line 566
     return-void
 .end method

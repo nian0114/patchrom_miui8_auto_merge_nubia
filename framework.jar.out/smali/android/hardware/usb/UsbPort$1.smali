@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 225
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +44,15 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 228
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 229
     .local v0, "id":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 230
     .local v1, "supportedModes":I
     new-instance v2, Landroid/hardware/usb/UsbPort;
 
@@ -69,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 225
     invoke-virtual {p0, p1}, Landroid/hardware/usb/UsbPort$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/usb/UsbPort;
 
     move-result-object v0
@@ -82,7 +77,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 235
     new-array v0, p1, [Landroid/hardware/usb/UsbPort;
 
     return-object v0
@@ -92,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 225
     invoke-virtual {p0, p1}, Landroid/hardware/usb/UsbPort$1;->newArray(I)[Landroid/hardware/usb/UsbPort;
 
     move-result-object v0

@@ -48,35 +48,25 @@
 
     const/4 v1, 0x0
 
-    .line 1784
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1844
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/hardware/Camera$Face;->id:I
 
-    .line 1853
     iput-object v2, p0, Landroid/hardware/Camera$Face;->leftEye:Landroid/graphics/Point;
 
-    .line 1862
     iput-object v2, p0, Landroid/hardware/Camera$Face;->rightEye:Landroid/graphics/Point;
 
-    .line 1871
     iput-object v2, p0, Landroid/hardware/Camera$Face;->mouth:Landroid/graphics/Point;
 
-    .line 1876
     iput v1, p0, Landroid/hardware/Camera$Face;->smileDegree:I
 
-    .line 1880
     iput v1, p0, Landroid/hardware/Camera$Face;->smileScore:I
 
-    .line 1884
     iput v1, p0, Landroid/hardware/Camera$Face;->blinkDetected:I
 
-    .line 1888
     iput v1, p0, Landroid/hardware/Camera$Face;->faceRecognised:I
 
-    .line 1785
     return-void
 .end method

@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 18
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 19
     const-string v0, "org.codeaurora.ims.qtiims.IQtiImsInterface"
 
     invoke-virtual {p0, p0, v0}, Lorg/codeaurora/ims/qtiims/IQtiImsInterface$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 20
     return-void
 .end method
 
@@ -63,17 +60,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 27
     if-nez p0, :cond_0
 
-    .line 28
     const/4 v0, 0x0
 
-    .line 34
     :goto_0
     return-object v0
 
-    .line 30
     :cond_0
     const-string v1, "org.codeaurora.ims.qtiims.IQtiImsInterface"
 
@@ -81,7 +74,6 @@
 
     move-result-object v0
 
-    .line 31
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -89,12 +81,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
     check-cast v0, Lorg/codeaurora/ims/qtiims/IQtiImsInterface;
 
     goto :goto_0
 
-    .line 34
     :cond_1
     new-instance v0, Lorg/codeaurora/ims/qtiims/IQtiImsInterface$Stub$Proxy;
 
@@ -110,7 +100,6 @@
     .locals 0
 
     .prologue
-    .line 38
     return-object p0
 .end method
 
@@ -129,10 +118,8 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 136
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
@@ -140,7 +127,6 @@
     :goto_0
     return v0
 
-    .line 46
     :sswitch_0
     const-string v0, "org.codeaurora.ims.qtiims.IQtiImsInterface"
 
@@ -148,63 +134,52 @@
 
     move v0, v10
 
-    .line 47
     goto :goto_0
 
-    .line 51
     :sswitch_1
     const-string v0, "org.codeaurora.ims.qtiims.IQtiImsInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 55
     .local v1, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 57
     .local v2, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 59
     .local v3, "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 61
     .local v4, "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 63
     .local v5, "_arg4":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 65
     .local v6, "_arg5":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 67
     .local v7, "_arg6":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 69
     .local v8, "_arg7":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -217,15 +192,12 @@
     .local v9, "_arg8":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
     move-object v0, p0
 
-    .line 70
     invoke-virtual/range {v0 .. v9}, Lorg/codeaurora/ims/qtiims/IQtiImsInterface$Stub;->setCallForwardUncondTimer(IIIIIIILjava/lang/String;Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;)V
 
     move v0, v10
 
-    .line 71
     goto :goto_0
 
-    .line 75
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":I
@@ -240,18 +212,15 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 77
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 79
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 81
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -261,16 +230,13 @@
 
     move-result-object v3
 
-    .line 82
     .local v3, "_arg2":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
     invoke-virtual {p0, v1, v2, v3}, Lorg/codeaurora/ims/qtiims/IQtiImsInterface$Stub;->getCallForwardUncondTimer(IILorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;)V
 
     move v0, v10
 
-    .line 83
     goto :goto_0
 
-    .line 87
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
@@ -279,7 +245,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 89
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -288,23 +253,19 @@
 
     move-result-object v1
 
-    .line 90
     .local v1, "_arg0":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
     invoke-virtual {p0, v1}, Lorg/codeaurora/ims/qtiims/IQtiImsInterface$Stub;->getPacketCount(Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;)V
 
     move v0, v10
 
-    .line 91
     goto :goto_0
 
-    .line 95
     .end local v1    # "_arg0":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
     :sswitch_4
     const-string v0, "org.codeaurora.ims.qtiims.IQtiImsInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 97
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -313,34 +274,28 @@
 
     move-result-object v1
 
-    .line 98
     .restart local v1    # "_arg0":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
     invoke-virtual {p0, v1}, Lorg/codeaurora/ims/qtiims/IQtiImsInterface$Stub;->getPacketErrorCount(Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;)V
 
     move v0, v10
 
-    .line 99
     goto :goto_0
 
-    .line 103
     .end local v1    # "_arg0":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
     :sswitch_5
     const-string v0, "org.codeaurora.ims.qtiims.IQtiImsInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 105
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 107
     .local v1, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 109
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -350,16 +305,13 @@
 
     move-result-object v3
 
-    .line 110
     .restart local v3    # "_arg2":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
     invoke-virtual {p0, v1, v2, v3}, Lorg/codeaurora/ims/qtiims/IQtiImsInterface$Stub;->sendCallDeflectRequest(ILjava/lang/String;Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;)V
 
     move v0, v10
 
-    .line 111
     goto/16 :goto_0
 
-    .line 115
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
@@ -368,7 +320,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 117
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -377,40 +328,33 @@
 
     move-result-object v1
 
-    .line 118
     .local v1, "_arg0":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
     invoke-virtual {p0, v1}, Lorg/codeaurora/ims/qtiims/IQtiImsInterface$Stub;->registerForViceRefreshInfo(Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;)V
 
     move v0, v10
 
-    .line 119
     goto/16 :goto_0
 
-    .line 123
     .end local v1    # "_arg0":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
     :sswitch_7
     const-string v0, "org.codeaurora.ims.qtiims.IQtiImsInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 125
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 127
     .local v1, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 129
     .local v2, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 131
     .local v3, "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -420,16 +364,13 @@
 
     move-result-object v4
 
-    .line 132
     .local v4, "_arg3":Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;
     invoke-virtual {p0, v1, v2, v3, v4}, Lorg/codeaurora/ims/qtiims/IQtiImsInterface$Stub;->sendCallTransferRequest(IILjava/lang/String;Lorg/codeaurora/ims/qtiims/IQtiImsInterfaceListener;)V
 
     move v0, v10
 
-    .line 133
     goto/16 :goto_0
 
-    .line 42
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

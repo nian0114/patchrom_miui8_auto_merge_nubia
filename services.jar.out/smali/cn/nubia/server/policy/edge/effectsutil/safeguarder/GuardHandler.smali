@@ -13,10 +13,8 @@
     .param p1, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 13
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 14
     return-void
 .end method
 
@@ -25,12 +23,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 30
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 36
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -57,16 +53,13 @@
 
     throw v0
 
-    .line 32
     :pswitch_0
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/GuardHandler;->mExceptionListener:Lcn/nubia/server/policy/edge/effectsutil/safeguarder/ExceptionListener;
 
     invoke-interface {v0}, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/ExceptionListener;->onCaughtException()V
 
-    .line 38
     return-void
 
-    .line 30
     :pswitch_data_0
     .packed-switch 0x50001
         :pswitch_0
@@ -80,21 +73,17 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 23
     :try_start_0
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/GuardHandler;->handleMessageInner(Landroid/os/Message;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 27
     :goto_0
     return-void
 
-    .line 24
     :catch_0
     move-exception v0
 
-    .line 25
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "FitAnim"
 
@@ -110,9 +99,7 @@
     .param p1, "exceptionListener"    # Lcn/nubia/server/policy/edge/effectsutil/safeguarder/ExceptionListener;
 
     .prologue
-    .line 17
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effectsutil/safeguarder/GuardHandler;->mExceptionListener:Lcn/nubia/server/policy/edge/effectsutil/safeguarder/ExceptionListener;
 
-    .line 18
     return-void
 .end method

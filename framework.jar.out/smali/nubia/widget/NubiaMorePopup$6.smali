@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 517
     iput-object p1, p0, Lnubia/widget/NubiaMorePopup$6;->this$0:Lnubia/widget/NubiaMorePopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 520
     iget-object v0, p0, Lnubia/widget/NubiaMorePopup$6;->this$0:Lnubia/widget/NubiaMorePopup;
 
     # getter for: Lnubia/widget/NubiaMorePopup;->mBackgroundView:Lnubia/widget/MorePopupRelativeLayout;
@@ -67,6 +65,5 @@
 
     invoke-virtual {v1, v0}, Lnubia/widget/MorePopupRelativeLayout;->setBackgroundColor(I)V
 
-    .line 522
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 341
     iput-object p1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 344
     iget-object v2, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget-boolean v0, v2, Lcom/android/internal/telephony/RIL;->mIsDevicePlugged:Z
 
-    .line 346
     .local v0, "oldState":Z
     iget-object v2, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
@@ -63,20 +60,17 @@
     :cond_0
     iput-boolean v1, v2, Lcom/android/internal/telephony/RIL;->mIsDevicePlugged:Z
 
-    .line 347
     iget-object v1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget-boolean v1, v1, Lcom/android/internal/telephony/RIL;->mIsDevicePlugged:Z
 
     if-eq v1, v0, :cond_1
 
-    .line 348
     iget-object v1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     # invokes: Lcom/android/internal/telephony/RIL;->updateScreenState()V
     invoke-static {v1}, Lcom/android/internal/telephony/RIL;->access$000(Lcom/android/internal/telephony/RIL;)V
 
-    .line 350
     :cond_1
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 46
     iput-object p1, p0, Lcn/nubia/server/policy/edge/RecentTasks$1;->this$0:Lcn/nubia/server/policy/edge/RecentTasks;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 48
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 49
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.ACTIVITY_STACK_CHANGED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 50
     iget-object v1, p0, Lcn/nubia/server/policy/edge/RecentTasks$1;->this$0:Lcn/nubia/server/policy/edge/RecentTasks;
 
     # getter for: Lcn/nubia/server/policy/edge/RecentTasks;->mChangeTaskBySwitch:Z
@@ -64,7 +60,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 51
     iget-object v1, p0, Lcn/nubia/server/policy/edge/RecentTasks$1;->this$0:Lcn/nubia/server/policy/edge/RecentTasks;
 
     const/4 v2, 0x0
@@ -72,12 +67,10 @@
     # setter for: Lcn/nubia/server/policy/edge/RecentTasks;->mChangeTaskBySwitch:Z
     invoke-static {v1, v2}, Lcn/nubia/server/policy/edge/RecentTasks;->access$002(Lcn/nubia/server/policy/edge/RecentTasks;Z)Z
 
-    .line 56
     :cond_0
     :goto_0
     return-void
 
-    .line 54
     :cond_1
     iget-object v1, p0, Lcn/nubia/server/policy/edge/RecentTasks$1;->this$0:Lcn/nubia/server/policy/edge/RecentTasks;
 

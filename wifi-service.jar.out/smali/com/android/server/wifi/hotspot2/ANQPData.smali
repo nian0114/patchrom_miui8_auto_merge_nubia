@@ -44,44 +44,35 @@
     .prologue
     const-wide/16 v2, 0x2710
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput-object p1, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mNetwork:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
-    .line 58
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mANQPElements:Ljava/util/Map;
 
-    .line 59
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mCtime:J
 
-    .line 60
     if-nez p2, :cond_0
 
-    .line 61
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mRetry:I
 
-    .line 62
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mCtime:J
 
     add-long/2addr v0, v2
 
     iput-wide v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mExpiry:J
 
-    .line 68
     :goto_0
     return-void
 
-    .line 65
     :cond_0
     invoke-direct {p2}, Lcom/android/server/wifi/hotspot2/ANQPData;->getRetry()I
 
@@ -97,7 +88,6 @@
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mRetry:I
 
-    .line 66
     const/4 v0, 0x1
 
     iget v1, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mRetry:I
@@ -129,14 +119,11 @@
     .end annotation
 
     .prologue
-    .line 39
     .local p2, "anqpElements":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Lcom/android/server/wifi/anqp/ANQPElement;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mNetwork:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
-    .line 42
     if-eqz p2, :cond_0
 
     invoke-static {p2}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
@@ -146,22 +133,18 @@
     :goto_0
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mANQPElements:Ljava/util/Map;
 
-    .line 43
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mCtime:J
 
-    .line 44
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mRetry:I
 
-    .line 45
     if-nez p2, :cond_1
 
-    .line 46
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mCtime:J
 
     const-wide/16 v2, 0x2710
@@ -170,17 +153,14 @@
 
     iput-wide v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mExpiry:J
 
-    .line 54
     :goto_1
     return-void
 
-    .line 42
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 48
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getAnqpDomainID()I
 
@@ -188,7 +168,6 @@
 
     if-nez v0, :cond_2
 
-    .line 49
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mCtime:J
 
     const-wide/32 v2, 0x493e0
@@ -199,7 +178,6 @@
 
     goto :goto_1
 
-    .line 52
     :cond_2
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mCtime:J
 
@@ -216,7 +194,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mRetry:I
 
     return v0
@@ -228,7 +205,6 @@
     .locals 2
 
     .prologue
-    .line 79
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -245,7 +221,6 @@
     .param p1, "at"    # J
 
     .prologue
-    .line 83
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mExpiry:J
 
     cmp-long v0, v0, p1
@@ -277,7 +252,6 @@
     .end annotation
 
     .prologue
-    .line 71
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mANQPElements:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
@@ -291,7 +265,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mNetwork:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
     return-object v0
@@ -302,7 +275,6 @@
     .param p1, "nwk"    # Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mANQPElements:Ljava/util/Map;
 
     if-eqz v0, :cond_0
@@ -344,7 +316,6 @@
     .locals 1
 
     .prologue
-    .line 120
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/wifi/hotspot2/ANQPData;->toString(Z)Ljava/lang/String;
@@ -361,12 +332,10 @@
     .prologue
     const/16 v4, 0x2d
 
-    .line 97
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 98
     .local v2, "sb":Ljava/lang/StringBuilder;
     iget-object v3, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mNetwork:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
@@ -392,23 +361,19 @@
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 99
     iget-object v3, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mANQPElements:Ljava/util/Map;
 
     if-nez v3, :cond_2
 
-    .line 100
     const-string v3, ", unresolved, "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 105
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 106
     .local v0, "now":J
     iget-wide v6, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mCtime:J
 
@@ -444,10 +409,8 @@
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 108
     if-eqz p1, :cond_4
 
-    .line 109
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wifi/hotspot2/ANQPData;->expired(J)Z
 
     move-result v3
@@ -459,7 +422,6 @@
     :goto_1
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 110
     iget-object v3, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mANQPElements:Ljava/util/Map;
 
     if-nez v3, :cond_0
@@ -469,7 +431,6 @@
     :cond_0
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 115
     :cond_1
     :goto_2
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -478,7 +439,6 @@
 
     return-object v3
 
-    .line 103
     .end local v0    # "now":J
     :cond_2
     const-string v3, ", "
@@ -507,16 +467,13 @@
     :cond_3
     move v3, v4
 
-    .line 109
     goto :goto_1
 
-    .line 112
     :cond_4
     iget-object v3, p0, Lcom/android/server/wifi/hotspot2/ANQPData;->mANQPElements:Ljava/util/Map;
 
     if-eqz v3, :cond_1
 
-    .line 113
     const-string v3, " data="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

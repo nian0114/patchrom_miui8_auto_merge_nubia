@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 852
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Landroid/view/WindowManagerInternal$AppTransitionListener;-><init>()V
@@ -40,29 +39,24 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 856
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v1, p1}, Lcom/android/server/wm/WindowManagerService;->findAppWindowToken(Landroid/os/IBinder;)Lcom/android/server/wm/AppWindowToken;
 
     move-result-object v0
 
-    .line 857
     .local v0, "atoken":Lcom/android/server/wm/AppWindowToken;
     if-nez v0, :cond_1
 
-    .line 876
     :cond_0
     :goto_0
     return-void
 
-    .line 860
     :cond_1
     iget-boolean v1, v0, Lcom/android/server/wm/AppWindowToken;->mLaunchTaskBehind:Z
 
     if-eqz v1, :cond_2
 
-    .line 862
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -74,25 +68,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 865
     :goto_1
     iput-boolean v3, v0, Lcom/android/server/wm/AppWindowToken;->mLaunchTaskBehind:Z
 
     goto :goto_0
 
-    .line 867
     :cond_2
     invoke-virtual {v0}, Lcom/android/server/wm/AppWindowToken;->updateReportedVisibilityLocked()V
 
-    .line 868
     iget-boolean v1, v0, Lcom/android/server/wm/AppWindowToken;->mEnteringAnimation:Z
 
     if-eqz v1, :cond_0
 
-    .line 869
     iput-boolean v3, v0, Lcom/android/server/wm/AppWindowToken;->mEnteringAnimation:Z
 
-    .line 871
     :try_start_1
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -106,13 +95,11 @@
 
     goto :goto_0
 
-    .line 872
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 863
     :catch_1
     move-exception v1
 

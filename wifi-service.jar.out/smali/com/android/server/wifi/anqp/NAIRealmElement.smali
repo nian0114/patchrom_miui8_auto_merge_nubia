@@ -28,28 +28,23 @@
     .end annotation
 
     .prologue
-    .line 26
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 28
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 29
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/wifi/anqp/NAIRealmElement;->mRealmData:Ljava/util/List;
 
-    .line 43
     :cond_0
     return-void
 
-    .line 33
     :cond_1
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -59,7 +54,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 34
     new-instance v1, Ljava/net/ProtocolException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -88,7 +82,6 @@
 
     throw v1
 
-    .line 37
     :cond_2
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -98,7 +91,6 @@
 
     and-int v0, v1, v2
 
-    .line 38
     .local v0, "count":I
     new-instance v1, Ljava/util/ArrayList;
 
@@ -106,11 +98,9 @@
 
     iput-object v1, p0, Lcom/android/server/wifi/anqp/NAIRealmElement;->mRealmData:Ljava/util/List;
 
-    .line 39
     :goto_0
     if-lez v0, :cond_0
 
-    .line 40
     iget-object v1, p0, Lcom/android/server/wifi/anqp/NAIRealmElement;->mRealmData:Ljava/util/List;
 
     new-instance v2, Lcom/android/server/wifi/anqp/NAIRealmData;
@@ -119,7 +109,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 41
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
@@ -140,7 +129,6 @@
     .end annotation
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/android/server/wifi/anqp/NAIRealmElement;->mRealmData:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -155,7 +143,6 @@
     .param p1, "credential"    # Lcom/android/server/wifi/hotspot2/pps/Credential;
 
     .prologue
-    .line 50
     iget-object v5, p0, Lcom/android/server/wifi/anqp/NAIRealmElement;->mRealmData:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
@@ -164,15 +151,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 51
     const/4 v0, 0x0
 
-    .line 64
     :cond_0
     :goto_0
     return v0
 
-    .line 53
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/pps/Credential;->getRealm()Ljava/lang/String;
 
@@ -182,11 +166,9 @@
 
     move-result-object v1
 
-    .line 54
     .local v1, "credLabels":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v0, -0x1
 
-    .line 55
     .local v0, "best":I
     iget-object v5, p0, Lcom/android/server/wifi/anqp/NAIRealmElement;->mRealmData:Ljava/util/List;
 
@@ -208,20 +190,16 @@
 
     check-cast v4, Lcom/android/server/wifi/anqp/NAIRealmData;
 
-    .line 56
     .local v4, "realmData":Lcom/android/server/wifi/anqp/NAIRealmData;
     invoke-virtual {v4, v1, p1}, Lcom/android/server/wifi/anqp/NAIRealmData;->match(Ljava/util/List;Lcom/android/server/wifi/hotspot2/pps/Credential;)I
 
     move-result v3
 
-    .line 57
     .local v3, "match":I
     if-le v3, v0, :cond_2
 
-    .line 58
     move v0, v3
 
-    .line 59
     const/4 v5, 0x7
 
     if-ne v0, v5, :cond_2
@@ -233,18 +211,15 @@
     .locals 4
 
     .prologue
-    .line 69
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 70
     .local v2, "sb":Ljava/lang/StringBuilder;
     const-string v3, "NAI Realm:\n"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 71
     iget-object v3, p0, Lcom/android/server/wifi/anqp/NAIRealmElement;->mRealmData:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -265,13 +240,11 @@
 
     check-cast v0, Lcom/android/server/wifi/anqp/NAIRealmData;
 
-    .line 72
     .local v0, "data":Lcom/android/server/wifi/anqp/NAIRealmData;
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 74
     .end local v0    # "data":Lcom/android/server/wifi/anqp/NAIRealmData;
     :cond_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

@@ -24,7 +24,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 473
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Landroid/app/AlertDialog;->resolveDialogTheme(Landroid/content/Context;I)I
@@ -33,7 +32,6 @@
 
     invoke-direct {p0, p1, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    .line 474
     return-void
 .end method
 
@@ -43,10 +41,8 @@
     .param p2, "themeResId"    # I
 
     .prologue
-    .line 502
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 503
     new-instance v0, Lcom/android/internal/app/AlertController$AlertParams;
 
     new-instance v1, Landroid/view/ContextThemeWrapper;
@@ -61,7 +57,6 @@
 
     iput-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
-    .line 505
     return-void
 .end method
 
@@ -73,7 +68,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1107
     new-instance v0, Landroid/app/AlertDialog;
 
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
@@ -82,7 +76,6 @@
 
     invoke-direct {v0, v1, v2, v2}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;IZ)V
 
-    .line 1108
     .local v0, "dialog":Landroid/app/AlertDialog;
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
@@ -93,26 +86,22 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/app/AlertController$AlertParams;->apply(Lcom/android/internal/app/AlertController;)V
 
-    .line 1109
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-boolean v1, v1, Lcom/android/internal/app/AlertController$AlertParams;->mCancelable:Z
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setCancelable(Z)V
 
-    .line 1110
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-boolean v1, v1, Lcom/android/internal/app/AlertController$AlertParams;->mCancelable:Z
 
     if-eqz v1, :cond_0
 
-    .line 1111
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 1113
     :cond_0
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
@@ -120,28 +109,24 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    .line 1114
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, v1, Lcom/android/internal/app/AlertController$AlertParams;->mOnDismissListener:Landroid/content/DialogInterface$OnDismissListener;
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 1115
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, v1, Lcom/android/internal/app/AlertController$AlertParams;->mOnKeyListener:Landroid/content/DialogInterface$OnKeyListener;
 
     if-eqz v1, :cond_1
 
-    .line 1116
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, v1, Lcom/android/internal/app/AlertController$AlertParams;->mOnKeyListener:Landroid/content/DialogInterface$OnKeyListener;
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
 
-    .line 1118
     :cond_1
     return-object v0
 .end method
@@ -150,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 516
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
@@ -164,17 +148,14 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 784
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mAdapter:Landroid/widget/ListAdapter;
 
-    .line 785
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 786
     return-object p0
 .end method
 
@@ -183,12 +164,10 @@
     .param p1, "cancelable"    # Z
 
     .prologue
-    .line 707
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-boolean p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mCancelable:Z
 
-    .line 708
     return-object p0
 .end method
 
@@ -199,22 +178,18 @@
     .param p3, "labelColumn"    # Ljava/lang/String;
 
     .prologue
-    .line 803
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mCursor:Landroid/database/Cursor;
 
-    .line 804
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mLabelColumn:Ljava/lang/String;
 
-    .line 805
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 806
     return-object p0
 .end method
 
@@ -223,12 +198,10 @@
     .param p1, "customTitleView"    # Landroid/view/View;
 
     .prologue
-    .line 556
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mCustomTitleView:Landroid/view/View;
 
-    .line 557
     return-object p0
 .end method
 
@@ -237,12 +210,10 @@
     .param p1, "iconId"    # I
 
     .prologue
-    .line 588
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIconId:I
 
-    .line 589
     return-object p0
 .end method
 
@@ -251,12 +222,10 @@
     .param p1, "icon"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 603
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 604
     return-object p0
 .end method
 
@@ -265,12 +234,10 @@
     .param p1, "attrId"    # I
 
     .prologue
-    .line 617
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    .line 618
     .local v0, "out":Landroid/util/TypedValue;
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
@@ -284,14 +251,12 @@
 
     invoke-virtual {v1, p1, v0, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 619
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget v2, v0, Landroid/util/TypedValue;->resourceId:I
 
     iput v2, v1, Lcom/android/internal/app/AlertController$AlertParams;->mIconId:I
 
-    .line 620
     return-object p0
 .end method
 
@@ -302,12 +267,10 @@
     .end annotation
 
     .prologue
-    .line 1084
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-boolean p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mForceInverseBackground:Z
 
-    .line 1085
     return-object p0
 .end method
 
@@ -317,7 +280,6 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 756
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
@@ -334,12 +296,10 @@
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mItems:[Ljava/lang/CharSequence;
 
-    .line 757
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 758
     return-object p0
 .end method
 
@@ -349,17 +309,14 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 768
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mItems:[Ljava/lang/CharSequence;
 
-    .line 769
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 770
     return-object p0
 .end method
 
@@ -368,7 +325,6 @@
     .param p1, "messageId"    # I
 
     .prologue
-    .line 566
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
@@ -381,7 +337,6 @@
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mMessage:Ljava/lang/CharSequence;
 
-    .line 567
     return-object p0
 .end method
 
@@ -390,12 +345,10 @@
     .param p1, "message"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 576
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mMessage:Ljava/lang/CharSequence;
 
-    .line 577
     return-object p0
 .end method
 
@@ -406,7 +359,6 @@
     .param p3, "listener"    # Landroid/content/DialogInterface$OnMultiChoiceClickListener;
 
     .prologue
-    .line 829
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
@@ -423,24 +375,20 @@
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mItems:[Ljava/lang/CharSequence;
 
-    .line 830
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnCheckboxClickListener:Landroid/content/DialogInterface$OnMultiChoiceClickListener;
 
-    .line 831
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mCheckedItems:[Z
 
-    .line 832
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIsMultiChoice:Z
 
-    .line 833
     return-object p0
 .end method
 
@@ -452,34 +400,28 @@
     .param p4, "listener"    # Landroid/content/DialogInterface$OnMultiChoiceClickListener;
 
     .prologue
-    .line 883
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mCursor:Landroid/database/Cursor;
 
-    .line 884
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p4, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnCheckboxClickListener:Landroid/content/DialogInterface$OnMultiChoiceClickListener;
 
-    .line 885
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIsCheckedColumn:Ljava/lang/String;
 
-    .line 886
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mLabelColumn:Ljava/lang/String;
 
-    .line 887
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIsMultiChoice:Z
 
-    .line 888
     return-object p0
 .end method
 
@@ -490,29 +432,24 @@
     .param p3, "listener"    # Landroid/content/DialogInterface$OnMultiChoiceClickListener;
 
     .prologue
-    .line 855
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mItems:[Ljava/lang/CharSequence;
 
-    .line 856
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnCheckboxClickListener:Landroid/content/DialogInterface$OnMultiChoiceClickListener;
 
-    .line 857
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mCheckedItems:[Z
 
-    .line 858
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIsMultiChoice:Z
 
-    .line 859
     return-object p0
 .end method
 
@@ -522,7 +459,6 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 657
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
@@ -535,12 +471,10 @@
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mNegativeButtonText:Ljava/lang/CharSequence;
 
-    .line 658
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mNegativeButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 659
     return-object p0
 .end method
 
@@ -550,17 +484,14 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 670
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mNegativeButtonText:Ljava/lang/CharSequence;
 
-    .line 671
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mNegativeButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 672
     return-object p0
 .end method
 
@@ -570,7 +501,6 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 683
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
@@ -583,12 +513,10 @@
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mNeutralButtonText:Ljava/lang/CharSequence;
 
-    .line 684
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mNeutralButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 685
     return-object p0
 .end method
 
@@ -598,17 +526,14 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 696
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mNeutralButtonText:Ljava/lang/CharSequence;
 
-    .line 697
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mNeutralButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 698
     return-object p0
 .end method
 
@@ -617,12 +542,10 @@
     .param p1, "onCancelListener"    # Landroid/content/DialogInterface$OnCancelListener;
 
     .prologue
-    .line 725
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnCancelListener:Landroid/content/DialogInterface$OnCancelListener;
 
-    .line 726
     return-object p0
 .end method
 
@@ -631,12 +554,10 @@
     .param p1, "onDismissListener"    # Landroid/content/DialogInterface$OnDismissListener;
 
     .prologue
-    .line 735
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnDismissListener:Landroid/content/DialogInterface$OnDismissListener;
 
-    .line 736
     return-object p0
 .end method
 
@@ -645,12 +566,10 @@
     .param p1, "listener"    # Landroid/widget/AdapterView$OnItemSelectedListener;
 
     .prologue
-    .line 993
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
-    .line 994
     return-object p0
 .end method
 
@@ -659,12 +578,10 @@
     .param p1, "onKeyListener"    # Landroid/content/DialogInterface$OnKeyListener;
 
     .prologue
-    .line 745
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnKeyListener:Landroid/content/DialogInterface$OnKeyListener;
 
-    .line 746
     return-object p0
 .end method
 
@@ -674,7 +591,6 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 631
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
@@ -687,12 +603,10 @@
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonText:Ljava/lang/CharSequence;
 
-    .line 632
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 633
     return-object p0
 .end method
 
@@ -702,17 +616,14 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 644
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonText:Ljava/lang/CharSequence;
 
-    .line 645
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 646
     return-object p0
 .end method
 
@@ -721,12 +632,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 1092
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-boolean p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mRecycleOnMeasure:Z
 
-    .line 1093
     return-object p0
 .end method
 
@@ -737,7 +646,6 @@
     .param p3, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 908
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
@@ -754,24 +662,20 @@
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mItems:[Ljava/lang/CharSequence;
 
-    .line 909
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 910
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mCheckedItem:I
 
-    .line 911
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIsSingleChoice:Z
 
-    .line 912
     return-object p0
 .end method
 
@@ -783,34 +687,28 @@
     .param p4, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 933
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mCursor:Landroid/database/Cursor;
 
-    .line 934
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p4, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 935
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mCheckedItem:I
 
-    .line 936
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mLabelColumn:Ljava/lang/String;
 
-    .line 937
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIsSingleChoice:Z
 
-    .line 938
     return-object p0
 .end method
 
@@ -821,29 +719,24 @@
     .param p3, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 978
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mAdapter:Landroid/widget/ListAdapter;
 
-    .line 979
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 980
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mCheckedItem:I
 
-    .line 981
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIsSingleChoice:Z
 
-    .line 982
     return-object p0
 .end method
 
@@ -854,29 +747,24 @@
     .param p3, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 956
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mItems:[Ljava/lang/CharSequence;
 
-    .line 957
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 958
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mCheckedItem:I
 
-    .line 959
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIsSingleChoice:Z
 
-    .line 960
     return-object p0
 .end method
 
@@ -885,7 +773,6 @@
     .param p1, "titleId"    # I
 
     .prologue
-    .line 525
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
@@ -898,7 +785,6 @@
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
-    .line 526
     return-object p0
 .end method
 
@@ -907,12 +793,10 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 535
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
-    .line 536
     return-object p0
 .end method
 
@@ -921,26 +805,22 @@
     .param p1, "layoutResId"    # I
 
     .prologue
-    .line 1006
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
-    .line 1007
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mViewLayoutResId:I
 
-    .line 1008
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mViewSpacingSpecified:Z
 
-    .line 1009
     return-object p0
 .end method
 
@@ -951,22 +831,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1027
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
-    .line 1028
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mViewLayoutResId:I
 
-    .line 1029
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-boolean v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mViewSpacingSpecified:Z
 
-    .line 1030
     return-object p0
 .end method
 
@@ -981,46 +857,38 @@
     .end annotation
 
     .prologue
-    .line 1062
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
-    .line 1063
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     const/4 v1, 0x0
 
     iput v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mViewLayoutResId:I
 
-    .line 1064
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mViewSpacingSpecified:Z
 
-    .line 1065
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput p2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mViewSpacingLeft:I
 
-    .line 1066
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput p3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mViewSpacingTop:I
 
-    .line 1067
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput p4, v0, Lcom/android/internal/app/AlertController$AlertParams;->mViewSpacingRight:I
 
-    .line 1068
     iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput p5, v0, Lcom/android/internal/app/AlertController$AlertParams;->mViewSpacingBottom:I
 
-    .line 1069
     return-object p0
 .end method
 
@@ -1028,15 +896,12 @@
     .locals 1
 
     .prologue
-    .line 1132
     invoke-virtual {p0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v0
 
-    .line 1133
     .local v0, "dialog":Landroid/app/AlertDialog;
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 1134
     return-object v0
 .end method

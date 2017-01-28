@@ -24,7 +24,6 @@
     .locals 1
 
     .prologue
-    .line 14
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -42,10 +41,8 @@
     .param p4, "metaData"    # Lnubia/content/res/ThemeResources$MetaData;
 
     .prologue
-    .line 19
     invoke-direct {p0, p1, p2, p3, p4}, Lnubia/content/res/ThemeResources;-><init>(Lnubia/content/res/ThemeResources;Landroid/content/res/Resources;Ljava/lang/String;Lnubia/content/res/ThemeResources$MetaData;)V
 
-    .line 20
     return-void
 .end method
 
@@ -55,10 +52,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     const/4 v1, 0x0
 
-    .line 34
     .local v1, "result":Lnubia/content/res/ThemeResourcesPackage;
     sget-object v2, Lnubia/content/res/ThemeResourcesPackage;->sPackageResources:Ljava/util/Map;
 
@@ -68,7 +63,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 35
     sget-object v2, Lnubia/content/res/ThemeResourcesPackage;->sPackageResources:Ljava/util/Map;
 
     invoke-interface {v2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -84,17 +78,14 @@
     .end local v1    # "result":Lnubia/content/res/ThemeResourcesPackage;
     check-cast v1, Lnubia/content/res/ThemeResourcesPackage;
 
-    .line 37
     .restart local v1    # "result":Lnubia/content/res/ThemeResourcesPackage;
     :cond_0
     if-nez v1, :cond_3
 
-    .line 38
     sget-object v3, Lnubia/content/res/ThemeResourcesPackage;->sPackageResources:Ljava/util/Map;
 
     monitor-enter v3
 
-    .line 40
     :try_start_0
     sget-object v2, Lnubia/content/res/ThemeResourcesPackage;->sPackageResources:Ljava/util/Map;
 
@@ -104,7 +95,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 41
     sget-object v2, Lnubia/content/res/ThemeResourcesPackage;->sPackageResources:Ljava/util/Map;
 
     invoke-interface {v2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -123,16 +113,13 @@
 
     move-object v1, v0
 
-    .line 44
     :cond_1
     if-nez v1, :cond_2
 
-    .line 46
     invoke-static {p0, p1}, Lnubia/content/res/ThemeResourcesPackage;->getTopLevelThemeResources(Landroid/content/res/Resources;Ljava/lang/String;)Lnubia/content/res/ThemeResourcesPackage;
 
     move-result-object v1
 
-    .line 48
     sget-object v2, Lnubia/content/res/ThemeResourcesPackage;->sPackageResources:Ljava/util/Map;
 
     new-instance v4, Ljava/lang/ref/WeakReference;
@@ -141,15 +128,12 @@
 
     invoke-interface {v2, p1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     :cond_2
     monitor-exit v3
 
-    .line 53
     :cond_3
     return-object v1
 
-    .line 51
     :catchall_0
     move-exception v2
 
@@ -166,14 +150,11 @@
     .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     const/4 v0, 0x0
 
-    .line 69
     .local v0, "finalThemeResources":Lnubia/content/res/ThemeResourcesPackage;
     const/4 v2, 0x0
 
-    .line 70
     .local v2, "i":I
     :goto_0
     sget-object v3, Lnubia/content/res/ThemeResourcesPackage;->THEME_PATHS:[Lnubia/content/res/ThemeResources$MetaData;
@@ -182,7 +163,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 71
     new-instance v1, Lnubia/content/res/ThemeResourcesPackage;
 
     sget-object v3, Lnubia/content/res/ThemeResourcesPackage;->THEME_PATHS:[Lnubia/content/res/ThemeResources$MetaData;
@@ -191,7 +171,6 @@
 
     invoke-direct {v1, v0, p0, p1, v3}, Lnubia/content/res/ThemeResourcesPackage;-><init>(Lnubia/content/res/ThemeResourcesPackage;Landroid/content/res/Resources;Ljava/lang/String;Lnubia/content/res/ThemeResources$MetaData;)V
 
-    .line 74
     .end local v0    # "finalThemeResources":Lnubia/content/res/ThemeResourcesPackage;
     .local v1, "finalThemeResources":Lnubia/content/res/ThemeResourcesPackage;
     add-int/lit8 v2, v2, 0x1
@@ -202,7 +181,6 @@
     .restart local v0    # "finalThemeResources":Lnubia/content/res/ThemeResourcesPackage;
     goto :goto_0
 
-    .line 76
     :cond_0
     return-object v0
 .end method
@@ -214,16 +192,13 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 81
     invoke-super {p0, p1}, Lnubia/content/res/ThemeResources;->getThemeCharSequence(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 84
     .local v0, "charSequence":Ljava/lang/CharSequence;
     if-nez v0, :cond_0
 
-    .line 85
     invoke-static {}, Lnubia/content/res/ThemeResourcesPackage;->getSystem()Lnubia/content/res/ThemeResourcesSystem;
 
     move-result-object v1
@@ -232,7 +207,6 @@
 
     move-result-object v0
 
-    .line 86
     :cond_0
     return-object v0
 .end method
@@ -243,16 +217,13 @@
     .param p2, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 92
     const/4 v0, 0x0
 
-    .line 93
     .local v0, "fileInfo":Lnubia/content/res/ThemeZipFile$ThemeFileInfo;
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_1
 
-    .line 94
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -275,10 +246,8 @@
 
     move-result-object v0
 
-    .line 95
     if-nez v0, :cond_0
 
-    .line 96
     invoke-static {}, Lnubia/content/res/ThemeResourcesPackage;->getSystem()Lnubia/content/res/ThemeResourcesSystem;
 
     move-result-object v1
@@ -287,18 +256,15 @@
 
     move-result-object v0
 
-    .line 107
     :cond_0
     :goto_0
     return-object v0
 
-    .line 98
     :cond_1
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_2
 
-    .line 99
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -321,10 +287,8 @@
 
     move-result-object v0
 
-    .line 100
     if-nez v0, :cond_0
 
-    .line 101
     invoke-static {}, Lnubia/content/res/ThemeResourcesPackage;->getSystem()Lnubia/content/res/ThemeResourcesSystem;
 
     move-result-object v1
@@ -335,7 +299,6 @@
 
     goto :goto_0
 
-    .line 104
     :cond_2
     invoke-virtual {p0, p2}, Lnubia/content/res/ThemeResourcesPackage;->getThemeFileStream(Ljava/lang/String;)Lnubia/content/res/ThemeZipFile$ThemeFileInfo;
 
@@ -349,16 +312,13 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 112
     invoke-super {p0, p1}, Lnubia/content/res/ThemeResources;->getThemeInt(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 113
     .local v0, "value":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
-    .line 114
     invoke-static {}, Lnubia/content/res/ThemeResourcesPackage;->getSystem()Lnubia/content/res/ThemeResourcesSystem;
 
     move-result-object v1
@@ -367,7 +327,6 @@
 
     move-result-object v0
 
-    .line 115
     :cond_0
     return-object v0
 .end method
@@ -376,7 +335,6 @@
     .locals 1
 
     .prologue
-    .line 120
     invoke-super {p0}, Lnubia/content/res/ThemeResources;->hasValues()Z
 
     move-result v0

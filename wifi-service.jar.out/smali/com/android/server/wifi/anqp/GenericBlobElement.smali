@@ -14,10 +14,8 @@
     .param p2, "payload"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 14
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 15
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
@@ -26,12 +24,10 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/anqp/GenericBlobElement;->mData:[B
 
-    .line 16
     iget-object v0, p0, Lcom/android/server/wifi/anqp/GenericBlobElement;->mData:[B
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 17
     return-void
 .end method
 
@@ -41,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 20
     iget-object v0, p0, Lcom/android/server/wifi/anqp/GenericBlobElement;->mData:[B
 
     return-object v0
@@ -51,7 +46,6 @@
     .locals 2
 
     .prologue
-    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

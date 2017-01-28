@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 15
     new-instance v0, Lcom/android/server/wifi/anqp/CivicLocationElement$LocationType;
 
     const-string v1, "DHCPServer"
@@ -99,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 15
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -110,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 15
     const-class v0, Lcom/android/server/wifi/anqp/CivicLocationElement$LocationType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 15
     sget-object v0, Lcom/android/server/wifi/anqp/CivicLocationElement$LocationType;->$VALUES:[Lcom/android/server/wifi/anqp/CivicLocationElement$LocationType;
 
     invoke-virtual {v0}, [Lcom/android/server/wifi/anqp/CivicLocationElement$LocationType;->clone()Ljava/lang/Object;

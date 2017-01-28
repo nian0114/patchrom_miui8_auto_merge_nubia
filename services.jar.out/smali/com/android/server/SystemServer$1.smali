@@ -20,7 +20,6 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 235
     invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -32,14 +31,12 @@
     .locals 10
 
     .prologue
-    .line 237
     new-instance v1, Ljava/io/File;
 
     const-string v5, "/data/system/last_space"
 
     invoke-direct {v1, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 238
     .local v1, "file":Ljava/io/File;
     const-string v5, "SystemServer"
 
@@ -47,7 +44,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 240
     :try_start_0
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -55,14 +51,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 242
     .local v4, "out":Ljava/io/FileOutputStream;
     const/16 v5, 0x1000
 
     :try_start_1
     new-array v0, v5, [B
 
-    .line 243
     .local v0, "buffer":[B
     const-wide/32 v6, 0x500000
 
@@ -74,7 +68,6 @@
 
     long-to-int v3, v6
 
-    .line 244
     .local v3, "n":I
     const/4 v2, 0x0
 
@@ -82,7 +75,6 @@
     :goto_0
     if-ge v2, v3, :cond_0
 
-    .line 245
     const/4 v5, 0x0
 
     array-length v6, v0
@@ -91,19 +83,16 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 244
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 248
     :cond_0
     :try_start_2
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->flush()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 250
     :try_start_3
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
@@ -113,14 +102,12 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 253
     :goto_1
     :try_start_4
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 257
     .end local v0    # "buffer":[B
     .end local v2    # "i":I
     .end local v3    # "n":I
@@ -152,10 +139,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     return-void
 
-    .line 248
     .restart local v4    # "out":Ljava/io/FileOutputStream;
     :catchall_0
     move-exception v5
@@ -165,7 +150,6 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
 
-    .line 250
     :try_start_6
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
@@ -175,7 +159,6 @@
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
 
-    .line 253
     :goto_3
     :try_start_7
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
@@ -184,14 +167,12 @@
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_0
 
-    .line 255
     .end local v4    # "out":Ljava/io/FileOutputStream;
     :catch_0
     move-exception v5
 
     goto :goto_2
 
-    .line 251
     .restart local v4    # "out":Ljava/io/FileOutputStream;
     :catch_1
     move-exception v6

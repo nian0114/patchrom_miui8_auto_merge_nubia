@@ -33,10 +33,8 @@
     .end annotation
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v1
@@ -45,7 +43,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 27
     new-instance v1, Ljava/net/ProtocolException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -74,7 +71,6 @@
 
     throw v1
 
-    .line 29
     :cond_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
@@ -84,7 +80,6 @@
 
     iput v1, p0, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;->mProtocol:I
 
-    .line 30
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v1
@@ -95,14 +90,12 @@
 
     iput v1, p0, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;->mPort:I
 
-    .line 31
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v1
 
     and-int/lit16 v0, v1, 0xff
 
-    .line 32
     .local v0, "statusNumber":I
     invoke-static {}, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtoStatus;->values()[Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtoStatus;
 
@@ -121,10 +114,8 @@
     :goto_0
     iput-object v1, p0, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;->mStatus:Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtoStatus;
 
-    .line 35
     return-void
 
-    .line 32
     :cond_1
     const/4 v1, 0x0
 
@@ -142,7 +133,6 @@
     .end annotation
 
     .prologue
-    .line 20
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;-><init>(Ljava/nio/ByteBuffer;)V
 
     return-void
@@ -154,7 +144,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget v0, p0, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;->mPort:I
 
     return v0
@@ -164,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 38
     iget v0, p0, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;->mProtocol:I
 
     return v0
@@ -174,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtocolTuple;->mStatus:Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement$ProtoStatus;
 
     return-object v0
@@ -184,7 +171,6 @@
     .locals 2
 
     .prologue
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

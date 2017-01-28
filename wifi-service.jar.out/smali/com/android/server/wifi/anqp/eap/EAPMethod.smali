@@ -36,13 +36,10 @@
     .param p2, "authParam"    # Lcom/android/server/wifi/anqp/eap/AuthParam;
 
     .prologue
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
     iput-object p1, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mEAPMethodID:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 88
     new-instance v1, Ljava/util/HashMap;
 
     const/4 v2, 0x1
@@ -51,19 +48,15 @@
 
     iput-object v1, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mAuthParams:Ljava/util/Map;
 
-    .line 89
     if-eqz p2, :cond_0
 
-    .line 90
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 91
     .local v0, "authParams":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;"
     invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 92
     iget-object v1, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mAuthParams:Ljava/util/Map;
 
     invoke-interface {p2}, Lcom/android/server/wifi/anqp/eap/AuthParam;->getAuthInfoID()Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
@@ -72,7 +65,6 @@
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
     .end local v0    # "authParams":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;"
     :cond_0
     return-void
@@ -88,10 +80,8 @@
     .end annotation
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v8
@@ -100,7 +90,6 @@
 
     if-ge v8, v9, :cond_0
 
-    .line 27
     new-instance v8, Ljava/net/ProtocolException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -129,7 +118,6 @@
 
     throw v8
 
-    .line 30
     :cond_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
@@ -137,7 +125,6 @@
 
     and-int/lit16 v4, v8, 0xff
 
-    .line 31
     .local v4, "length":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
@@ -145,7 +132,6 @@
 
     and-int/lit16 v5, v8, 0xff
 
-    .line 32
     .local v5, "methodID":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
@@ -153,7 +139,6 @@
 
     and-int/lit16 v1, v8, 0xff
 
-    .line 34
     .local v1, "count":I
     invoke-static {v5}, Lcom/android/server/wifi/anqp/eap/EAP;->mapEAPMethod(I)Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
@@ -161,7 +146,6 @@
 
     iput-object v8, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mEAPMethodID:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 35
     new-instance v8, Ljava/util/EnumMap;
 
     const-class v9, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
@@ -170,10 +154,8 @@
 
     iput-object v8, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mAuthParams:Ljava/util/Map;
 
-    .line 37
     const/4 v7, 0x0
 
-    .line 39
     .local v7, "realCount":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
@@ -185,7 +167,6 @@
 
     move-result-object v6
 
-    .line 40
     .local v6, "paramPayload":Ljava/nio/ByteBuffer;
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->position()I
 
@@ -197,7 +178,6 @@
 
     invoke-virtual {v6, v8}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 41
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v8
@@ -208,7 +188,6 @@
 
     invoke-virtual {p1, v8}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 42
     :goto_0
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -216,24 +195,20 @@
 
     if-eqz v8, :cond_4
 
-    .line 43
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v8
 
     and-int/lit16 v2, v8, 0xff
 
-    .line 45
     .local v2, "id":I
     invoke-static {v2}, Lcom/android/server/wifi/anqp/eap/EAP;->mapAuthMethod(I)Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
     move-result-object v0
 
-    .line 46
     .local v0, "authInfoID":Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
     if-nez v0, :cond_1
 
-    .line 47
     new-instance v8, Ljava/net/ProtocolException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -258,7 +233,6 @@
 
     throw v8
 
-    .line 50
     :cond_1
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->get()B
 
@@ -266,7 +240,6 @@
 
     and-int/lit16 v3, v8, 0xff
 
-    .line 51
     .local v3, "len":I
     if-eqz v3, :cond_2
 
@@ -276,7 +249,6 @@
 
     if-le v3, v8, :cond_3
 
-    .line 52
     :cond_2
     new-instance v8, Ljava/net/ProtocolException;
 
@@ -302,7 +274,6 @@
 
     throw v8
 
-    .line 55
     :cond_3
     sget-object v8, Lcom/android/server/wifi/anqp/eap/EAPMethod$1;->$SwitchMap$com$android$server$wifi$anqp$eap$EAP$AuthInfoID:[I
 
@@ -314,14 +285,11 @@
 
     packed-switch v8, :pswitch_data_0
 
-    .line 79
     :goto_1
     add-int/lit8 v7, v7, 0x1
 
-    .line 80
     goto :goto_0
 
-    .line 57
     :pswitch_0
     new-instance v8, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;
 
@@ -331,7 +299,6 @@
 
     goto :goto_1
 
-    .line 60
     :pswitch_1
     new-instance v8, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;
 
@@ -341,7 +308,6 @@
 
     goto :goto_1
 
-    .line 63
     :pswitch_2
     new-instance v8, Lcom/android/server/wifi/anqp/eap/InnerAuthEAP;
 
@@ -351,7 +317,6 @@
 
     goto :goto_1
 
-    .line 66
     :pswitch_3
     new-instance v8, Lcom/android/server/wifi/anqp/eap/ExpandedEAPMethod;
 
@@ -361,7 +326,6 @@
 
     goto :goto_1
 
-    .line 69
     :pswitch_4
     new-instance v8, Lcom/android/server/wifi/anqp/eap/Credential;
 
@@ -371,7 +335,6 @@
 
     goto :goto_1
 
-    .line 72
     :pswitch_5
     new-instance v8, Lcom/android/server/wifi/anqp/eap/Credential;
 
@@ -381,7 +344,6 @@
 
     goto :goto_1
 
-    .line 75
     :pswitch_6
     new-instance v8, Lcom/android/server/wifi/anqp/eap/VendorSpecificAuth;
 
@@ -391,14 +353,12 @@
 
     goto :goto_1
 
-    .line 81
     .end local v0    # "authInfoID":Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
     .end local v2    # "id":I
     .end local v3    # "len":I
     :cond_4
     if-eq v7, v1, :cond_5
 
-    .line 82
     new-instance v8, Ljava/net/ProtocolException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -433,11 +393,9 @@
 
     throw v8
 
-    .line 84
     :cond_5
     return-void
 
-    .line 55
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -455,7 +413,6 @@
     .param p1, "param"    # Lcom/android/server/wifi/anqp/eap/AuthParam;
 
     .prologue
-    .line 97
     iget-object v1, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mAuthParams:Ljava/util/Map;
 
     invoke-interface {p1}, Lcom/android/server/wifi/anqp/eap/AuthParam;->getAuthInfoID()Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
@@ -468,17 +425,14 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 98
     .local v0, "authParams":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;"
     if-nez v0, :cond_0
 
-    .line 99
     new-instance v0, Ljava/util/HashSet;
 
     .end local v0    # "authParams":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;"
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 100
     .restart local v0    # "authParams":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;"
     iget-object v1, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mAuthParams:Ljava/util/Map;
 
@@ -488,11 +442,9 @@
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 102
     :cond_0
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 103
     return-void
 .end method
 
@@ -507,15 +459,12 @@
 
     const/4 v2, 0x0
 
-    .line 163
     if-ne p0, p1, :cond_1
 
-    .line 171
     :cond_0
     :goto_0
     return v1
 
-    .line 166
     :cond_1
     if-eqz p1, :cond_2
 
@@ -532,16 +481,13 @@
     :cond_2
     move v1, v2
 
-    .line 167
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 170
     check-cast v0, Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
-    .line 171
     .local v0, "that":Lcom/android/server/wifi/anqp/eap/EAPMethod;
     iget-object v3, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mEAPMethodID:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
@@ -571,7 +517,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 151
     iget-object v2, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mAuthParams:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->isEmpty()Z
@@ -580,12 +525,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 158
     :cond_0
     :goto_0
     return-object v1
 
-    .line 154
     :cond_1
     iget-object v2, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mAuthParams:Ljava/util/Map;
 
@@ -603,7 +546,6 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 155
     .local v0, "params":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;"
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
 
@@ -611,7 +553,6 @@
 
     if-nez v2, :cond_0
 
-    .line 158
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -641,7 +582,6 @@
     .end annotation
 
     .prologue
-    .line 106
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mAuthParams:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
@@ -655,7 +595,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mEAPMethodID:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
     return-object v0
@@ -665,14 +604,12 @@
     .locals 3
 
     .prologue
-    .line 176
     iget-object v1, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mEAPMethodID:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
     invoke-virtual {v1}, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->hashCode()I
 
     move-result v0
 
-    .line 177
     .local v0, "result":I
     mul-int/lit8 v1, v0, 0x1f
 
@@ -684,7 +621,6 @@
 
     add-int v0, v1, v2
 
-    .line 178
     return v0
 .end method
 
@@ -699,12 +635,10 @@
 
     const/4 v7, 0x2
 
-    .line 115
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/pps/Credential;->getEAPMethod()Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
     move-result-object v0
 
-    .line 116
     .local v0, "credMethod":Lcom/android/server/wifi/anqp/eap/EAPMethod;
     iget-object v5, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mEAPMethodID:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
@@ -716,13 +650,11 @@
 
     move v7, v6
 
-    .line 146
     :cond_0
     :goto_0
     :pswitch_0
     return v7
 
-    .line 120
     :cond_1
     sget-object v5, Lcom/android/server/wifi/anqp/eap/EAPMethod$1;->$SwitchMap$com$android$server$wifi$anqp$eap$EAP$EAPMethodID:[I
 
@@ -738,7 +670,6 @@
 
     goto :goto_0
 
-    .line 122
     :pswitch_1
     iget-object v5, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mAuthParams:Ljava/util/Map;
 
@@ -748,10 +679,8 @@
 
     if-nez v5, :cond_0
 
-    .line 125
     const/4 v3, 0x0
 
-    .line 127
     .local v3, "paramCount":I
     invoke-virtual {v0}, Lcom/android/server/wifi/anqp/eap/EAPMethod;->getAuthParams()Ljava/util/Map;
 
@@ -780,7 +709,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 128
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;>;"
     iget-object v5, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mAuthParams:Ljava/util/Map;
 
@@ -794,11 +722,9 @@
 
     check-cast v4, Ljava/util/Set;
 
-    .line 129
     .local v4, "params":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;"
     if-eqz v4, :cond_2
 
-    .line 133
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v5
@@ -813,10 +739,8 @@
 
     move v7, v8
 
-    .line 134
     goto :goto_0
 
-    .line 136
     :cond_3
     invoke-interface {v4}, Ljava/util/Set;->size()I
 
@@ -824,10 +748,8 @@
 
     add-int/2addr v3, v5
 
-    .line 137
     goto :goto_1
 
-    .line 138
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;>;"
     .end local v4    # "params":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;"
     :cond_4
@@ -850,10 +772,8 @@
     :pswitch_2
     move v7, v8
 
-    .line 140
     goto :goto_0
 
-    .line 120
     nop
 
     :pswitch_data_0
@@ -870,12 +790,10 @@
     .locals 7
 
     .prologue
-    .line 183
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 184
     .local v4, "sb":Ljava/lang/StringBuilder;
     const-string v5, "EAP Method "
 
@@ -893,7 +811,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 185
     iget-object v5, p0, Lcom/android/server/wifi/anqp/eap/EAPMethod;->mAuthParams:Ljava/util/Map;
 
     invoke-interface {v5}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -917,7 +834,6 @@
 
     check-cast v3, Ljava/util/Set;
 
-    .line 186
     .local v3, "paramSet":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;"
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -937,7 +853,6 @@
 
     check-cast v2, Lcom/android/server/wifi/anqp/eap/AuthParam;
 
-    .line 187
     .local v2, "param":Lcom/android/server/wifi/anqp/eap/AuthParam;
     const-string v5, "      "
 
@@ -953,7 +868,6 @@
 
     goto :goto_0
 
-    .line 190
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "param":Lcom/android/server/wifi/anqp/eap/AuthParam;
     .end local v3    # "paramSet":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/wifi/anqp/eap/AuthParam;>;"

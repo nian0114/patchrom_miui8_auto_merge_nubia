@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,10 +34,8 @@
     .param p1, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 208
     invoke-static {p1}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->abortAnimation(Ljava/lang/Object;)V
 
-    .line 209
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .param p1, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 178
     invoke-static {p1}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->computeScrollOffset(Ljava/lang/Object;)Z
 
     move-result v0
@@ -61,7 +57,6 @@
     .param p2, "interpolator"    # Landroid/view/animation/Interpolator;
 
     .prologue
-    .line 153
     invoke-static {p1, p2}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->createScroller(Landroid/content/Context;Landroid/view/animation/Interpolator;)Ljava/lang/Object;
 
     move-result-object v0
@@ -82,10 +77,8 @@
     .param p9, "maxY"    # I
 
     .prologue
-    .line 195
     invoke-static/range {p1 .. p9}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->fling(Ljava/lang/Object;IIIIIIII)V
 
-    .line 197
     return-void
 .end method
 
@@ -104,10 +97,8 @@
     .param p11, "overY"    # I
 
     .prologue
-    .line 202
     invoke-static/range {p1 .. p11}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->fling(Ljava/lang/Object;IIIIIIIIII)V
 
-    .line 204
     return-void
 .end method
 
@@ -116,7 +107,6 @@
     .param p1, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 173
     const/4 v0, 0x0
 
     return v0
@@ -127,7 +117,6 @@
     .param p1, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 163
     invoke-static {p1}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->getCurrX(Ljava/lang/Object;)I
 
     move-result v0
@@ -140,7 +129,6 @@
     .param p1, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 168
     invoke-static {p1}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->getCurrY(Ljava/lang/Object;)I
 
     move-result v0
@@ -153,7 +141,6 @@
     .param p1, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 229
     invoke-static {p1}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->getFinalX(Ljava/lang/Object;)I
 
     move-result v0
@@ -166,7 +153,6 @@
     .param p1, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 234
     invoke-static {p1}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->getFinalY(Ljava/lang/Object;)I
 
     move-result v0
@@ -179,7 +165,6 @@
     .param p1, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 158
     invoke-static {p1}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->isFinished(Ljava/lang/Object;)Z
 
     move-result v0
@@ -192,7 +177,6 @@
     .param p1, "scroller"    # Ljava/lang/Object;
 
     .prologue
-    .line 224
     invoke-static {p1}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->isOverScrolled(Ljava/lang/Object;)Z
 
     move-result v0
@@ -208,10 +192,8 @@
     .param p4, "overX"    # I
 
     .prologue
-    .line 214
     invoke-static {p1, p2, p3, p4}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->notifyHorizontalEdgeReached(Ljava/lang/Object;III)V
 
-    .line 215
     return-void
 .end method
 
@@ -223,10 +205,8 @@
     .param p4, "overY"    # I
 
     .prologue
-    .line 219
     invoke-static {p1, p2, p3, p4}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->notifyVerticalEdgeReached(Ljava/lang/Object;III)V
 
-    .line 220
     return-void
 .end method
 
@@ -239,10 +219,8 @@
     .param p5, "dy"    # I
 
     .prologue
-    .line 183
     invoke-static {p1, p2, p3, p4, p5}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->startScroll(Ljava/lang/Object;IIII)V
 
-    .line 184
     return-void
 .end method
 
@@ -256,9 +234,7 @@
     .param p6, "duration"    # I
 
     .prologue
-    .line 189
     invoke-static/range {p1 .. p6}, Landroid/support/v4/widget/ScrollerCompatGingerbread;->startScroll(Ljava/lang/Object;IIIII)V
 
-    .line 190
     return-void
 .end method

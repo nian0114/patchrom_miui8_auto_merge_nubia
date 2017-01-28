@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 224
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 227
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController;->mHandler:Landroid/os/Handler;
@@ -50,12 +48,10 @@
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 228
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController;
 
     # invokes: Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController;->loadAllowedData()V
     invoke-static {v0}, Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController;->access$400(Lcn/nubia/server/appmgmt/ApplicationAlarmWakeupController;)V
 
-    .line 229
     return-void
 .end method

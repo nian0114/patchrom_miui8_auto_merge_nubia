@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 386
     iput-object p1, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,21 +36,18 @@
     .locals 2
 
     .prologue
-    .line 389
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     const-string v1, "entering Idle state"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/InboundSmsHandler;->log(Ljava/lang/String;)V
 
-    .line 390
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/InboundSmsHandler;->sendMessage(I)V
 
-    .line 391
     return-void
 .end method
 
@@ -59,19 +55,16 @@
     .locals 2
 
     .prologue
-    .line 395
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/InboundSmsHandler;->acquireWakeLock()V
 
-    .line 396
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     const-string v1, "acquired wakelock, leaving Idle state"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/InboundSmsHandler;->log(Ljava/lang/String;)V
 
-    .line 397
     return-void
 .end method
 
@@ -82,7 +75,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 401
     iget-object v1, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -107,7 +99,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/InboundSmsHandler;->log(Ljava/lang/String;)V
 
-    .line 402
     iget-object v1, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -132,12 +123,10 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/InboundSmsHandler;->log(Ljava/lang/String;)V
 
-    .line 403
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 432
     :pswitch_0
     const/4 v0, 0x0
 
@@ -145,14 +134,12 @@
     :pswitch_1
     return v0
 
-    .line 407
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     # invokes: Lcom/android/internal/telephony/InboundSmsHandler;->deferMessage(Landroid/os/Message;)V
     invoke-static {v1, p1}, Lcom/android/internal/telephony/InboundSmsHandler;->access$300(Lcom/android/internal/telephony/InboundSmsHandler;Landroid/os/Message;)V
 
-    .line 408
     iget-object v1, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     iget-object v2, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
@@ -164,13 +151,11 @@
 
     goto :goto_0
 
-    .line 412
     :pswitch_3
     iget-object v1, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/InboundSmsHandler;->decrementWakeLock()V
 
-    .line 414
     iget-object v1, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     iget-object v1, v1, Lcom/android/internal/telephony/InboundSmsHandler;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -181,7 +166,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 416
     iget-object v1, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -210,7 +194,6 @@
 
     goto :goto_0
 
-    .line 419
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/InboundSmsHandler$IdleState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
@@ -240,7 +223,6 @@
 
     goto :goto_0
 
-    .line 403
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2

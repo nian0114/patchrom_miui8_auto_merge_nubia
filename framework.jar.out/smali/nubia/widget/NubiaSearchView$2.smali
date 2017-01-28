@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 104
     iput-object p1, p0, Lnubia/widget/NubiaSearchView$2;->this$0:Lnubia/widget/NubiaSearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 106
     iget-object v0, p0, Lnubia/widget/NubiaSearchView$2;->this$0:Lnubia/widget/NubiaSearchView;
 
     # invokes: Lnubia/widget/NubiaSearchView;->updateFocusedState()V
     invoke-static {v0}, Lnubia/widget/NubiaSearchView;->access$000(Lnubia/widget/NubiaSearchView;)V
 
-    .line 107
     return-void
 .end method

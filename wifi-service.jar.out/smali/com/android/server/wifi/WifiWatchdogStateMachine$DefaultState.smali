@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 461
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DefaultState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 465
     return-void
 .end method
 
@@ -48,12 +46,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 469
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 498
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DefaultState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -98,12 +94,10 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->loge(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$700(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 501
     :goto_0
     :sswitch_0
     return v3
 
-    .line 471
     :sswitch_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DefaultState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -112,7 +106,6 @@
 
     goto :goto_0
 
-    .line 475
     :sswitch_2
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DefaultState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -130,7 +123,6 @@
 
     goto :goto_0
 
-    .line 479
     :sswitch_3
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DefaultState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -139,7 +131,6 @@
 
     goto :goto_0
 
-    .line 492
     :sswitch_4
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DefaultState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -148,7 +139,6 @@
 
     goto :goto_0
 
-    .line 495
     :sswitch_5
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DefaultState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -159,7 +149,6 @@
 
     goto :goto_0
 
-    .line 469
     :sswitch_data_0
     .sparse-switch
         0x21002 -> :sswitch_0

@@ -31,20 +31,16 @@
     .param p1, "sst"    # Lcom/android/internal/telephony/ServiceStateTracker;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     new-instance v0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay$1;-><init>(Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mNotifyDelay:Ljava/lang/Runnable;
 
-    .line 37
     iput-object p1, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mSST:Lcom/android/internal/telephony/ServiceStateTracker;
 
-    .line 38
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mSST:Lcom/android/internal/telephony/ServiceStateTracker;
@@ -57,7 +53,6 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mHandler:Landroid/os/Handler;
 
-    .line 39
     return-void
 .end method
 
@@ -66,7 +61,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;
 
     .prologue
-    .line 19
     iget-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mSST:Lcom/android/internal/telephony/ServiceStateTracker;
 
     return-object v0
@@ -79,7 +73,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 73
     iget v1, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mPreVoiceServiceState:I
 
     if-eqz v1, :cond_0
@@ -117,7 +110,6 @@
 
     const/4 v0, 0x1
 
-    .line 85
     iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mSST:Lcom/android/internal/telephony/ServiceStateTracker;
 
     iget-object v1, v1, Lcom/android/internal/telephony/ServiceStateTracker;->mSS:Landroid/telephony/ServiceState;
@@ -174,7 +166,6 @@
     .locals 4
 
     .prologue
-    .line 81
     iget-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mNotifyDelay:Ljava/lang/Runnable;
@@ -183,7 +174,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 82
     return-void
 .end method
 
@@ -192,26 +182,22 @@
     .param p1, "cardState"    # I
 
     .prologue
-    .line 93
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->isNeedNotifyDirect(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 94
     iget-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mNotifyDelay:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 95
     iget-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mSST:Lcom/android/internal/telephony/ServiceStateTracker;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/ServiceStateTracker;->notifyServiceStateChanged()V
 
-    .line 97
     :cond_0
     return-void
 .end method
@@ -222,24 +208,20 @@
     .locals 2
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 101
     iget-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mNotifyDelay:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 102
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mHandler:Landroid/os/Handler;
 
-    .line 104
     :cond_0
     return-void
 .end method
@@ -248,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mSST:Lcom/android/internal/telephony/ServiceStateTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/ServiceStateTracker;->mSS:Landroid/telephony/ServiceState;
@@ -259,7 +240,6 @@
 
     iput v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mPreVoiceServiceState:I
 
-    .line 43
     iget-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mSST:Lcom/android/internal/telephony/ServiceStateTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/ServiceStateTracker;->mSS:Landroid/telephony/ServiceState;
@@ -270,7 +250,6 @@
 
     iput v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mPreDataServiceState:I
 
-    .line 44
     iget-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mSST:Lcom/android/internal/telephony/ServiceStateTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/ServiceStateTracker;->mNewSS:Landroid/telephony/ServiceState;
@@ -281,7 +260,6 @@
 
     iput v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mCurVoiceServiceState:I
 
-    .line 45
     iget-object v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mSST:Lcom/android/internal/telephony/ServiceStateTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/ServiceStateTracker;->mNewSS:Landroid/telephony/ServiceState;
@@ -292,7 +270,6 @@
 
     iput v0, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mCurDataServiceState:I
 
-    .line 46
     return-void
 .end method
 
@@ -300,10 +277,8 @@
     .locals 3
 
     .prologue
-    .line 49
     const/4 v0, 0x0
 
-    .line 54
     .local v0, "cardState":I
     :try_start_0
     const-string v1, "extphone"
@@ -318,7 +293,6 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mExtTelephony:Lcom/android/internal/telephony/IExtTelephony;
 
-    .line 56
     iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mExtTelephony:Lcom/android/internal/telephony/IExtTelephony;
 
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mSST:Lcom/android/internal/telephony/ServiceStateTracker;
@@ -338,7 +312,6 @@
 
     move-result v0
 
-    .line 61
     :goto_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -350,27 +323,22 @@
 
     if-eqz v1, :cond_1
 
-    .line 62
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->isNeedBNotifyDelay(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 63
     invoke-direct {p0}, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->notifyDelay()V
 
-    .line 70
     :goto_1
     return-void
 
-    .line 65
     :cond_0
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->notifyDirect(I)V
 
     goto :goto_1
 
-    .line 68
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTrackerNotifyDelay;->mSST:Lcom/android/internal/telephony/ServiceStateTracker;
 
@@ -378,13 +346,11 @@
 
     goto :goto_1
 
-    .line 59
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 58
     :catch_1
     move-exception v1
 

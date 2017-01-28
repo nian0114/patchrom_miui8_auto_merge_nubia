@@ -27,13 +27,10 @@
     .param p1, "pageName"    # Ljava/lang/String;
 
     .prologue
-    .line 499
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 500
     iput-object p1, p0, Lnubia/util/FrameworkDataStatisticsManager$OnPageEnd;->mPageName:Ljava/lang/String;
 
-    .line 501
     return-void
 .end method
 
@@ -49,11 +46,9 @@
     .end annotation
 
     .prologue
-    .line 506
     iget-object v0, p0, Lnubia/util/FrameworkDataStatisticsManager$OnPageEnd;->mPageName:Ljava/lang/String;
 
     invoke-interface {p1, v0}, Lnubia/util/IFrameworkDataStatisticsService;->onPageEnd(Ljava/lang/String;)V
 
-    .line 507
     return-void
 .end method

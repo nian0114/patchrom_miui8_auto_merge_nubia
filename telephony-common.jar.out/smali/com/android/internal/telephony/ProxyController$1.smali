@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 326
     iput-object p1, p0, Lcom/android/internal/telephony/ProxyController$1;->this$0:Lcom/android/internal/telephony/ProxyController;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 329
     iget-object v0, p0, Lcom/android/internal/telephony/ProxyController$1;->this$0:Lcom/android/internal/telephony/ProxyController;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,16 +62,13 @@
     # invokes: Lcom/android/internal/telephony/ProxyController;->logd(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/internal/telephony/ProxyController;->access$000(Lcom/android/internal/telephony/ProxyController;Ljava/lang/String;)V
 
-    .line 330
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 354
     :goto_0
     return-void
 
-    .line 332
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/telephony/ProxyController$1;->this$0:Lcom/android/internal/telephony/ProxyController;
 
@@ -82,7 +77,6 @@
 
     goto :goto_0
 
-    .line 336
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/telephony/ProxyController$1;->this$0:Lcom/android/internal/telephony/ProxyController;
 
@@ -91,7 +85,6 @@
 
     goto :goto_0
 
-    .line 340
     :pswitch_2
     iget-object v0, p0, Lcom/android/internal/telephony/ProxyController$1;->this$0:Lcom/android/internal/telephony/ProxyController;
 
@@ -100,7 +93,6 @@
 
     goto :goto_0
 
-    .line 344
     :pswitch_3
     iget-object v0, p0, Lcom/android/internal/telephony/ProxyController$1;->this$0:Lcom/android/internal/telephony/ProxyController;
 
@@ -108,7 +100,6 @@
 
     goto :goto_0
 
-    .line 348
     :pswitch_4
     iget-object v0, p0, Lcom/android/internal/telephony/ProxyController$1;->this$0:Lcom/android/internal/telephony/ProxyController;
 
@@ -117,7 +108,6 @@
 
     goto :goto_0
 
-    .line 330
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2

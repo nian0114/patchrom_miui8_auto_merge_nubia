@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 898
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam$2;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;
 
     iput-object p2, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam$2;->val$drawContent:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/DrawContent;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 901
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam$2;->this$0:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;
 
     # getter for: Lcn/nubia/server/policy/edge/effects/animation/pageflipping/AnimParam;->mRenderer:Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingRenderer;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/edge/effects/animation/pageflipping/PageFlippingRenderer;->onProcess(Lcn/nubia/server/policy/edge/effects/animation/pageflipping/DrawContent;)V
 
-    .line 902
     return-void
 .end method

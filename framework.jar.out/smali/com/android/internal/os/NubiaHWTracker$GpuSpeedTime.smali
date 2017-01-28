@@ -35,20 +35,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 47
     iput-object p1, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->this$0:Lcom/android/internal/os/NubiaHWTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-boolean v1, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->LOGV:Z
 
-    .line 49
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->MAX_GPUSPEEDS:I
 
-    .line 52
     iput-boolean v1, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mInitSucess:Z
 
     return-void
@@ -60,7 +56,6 @@
     .param p2, "x1"    # Lcom/android/internal/os/NubiaHWTracker$1;
 
     .prologue
-    .line 47
     invoke-direct {p0, p1}, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;-><init>(Lcom/android/internal/os/NubiaHWTracker;)V
 
     return-void
@@ -71,7 +66,6 @@
     .param p1, "busyrate"    # D
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -82,7 +76,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 64
     iget-object v1, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
     aget-wide v2, v1, v0
@@ -95,12 +88,10 @@
 
     aput-wide v2, v1, v0
 
-    .line 63
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 65
     :cond_0
     return-void
 .end method
@@ -113,43 +104,34 @@
 
     const/4 v10, 0x0
 
-    .line 152
     const-string v1, "/sys/class/kgsl/kgsl-3d0/devfreq/trans_stat"
 
-    .line 153
     .local v1, "file":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 154
     .local v4, "reader":Ljava/io/BufferedReader;
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v6
 
-    .line 155
     .local v6, "savedPolicy":Landroid/os/StrictMode$ThreadPolicy;
     iget-object v9, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
-    .line 156
     .local v9, "tempTimes":[J
     const/4 v7, 0x0
 
-    .line 158
     .local v7, "speed":I
     iget-boolean v12, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mInitSucess:Z
 
     if-nez v12, :cond_0
 
-    .line 159
     const/16 v12, 0xa
 
     new-array v9, v12, [J
 
-    .line 165
     :cond_0
     const/4 v2, 0x0
 
-    .line 166
     .local v2, "lastwhite":I
     :try_start_0
     new-instance v5, Ljava/io/BufferedReader;
@@ -164,7 +146,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 167
     .end local v4    # "reader":Ljava/io/BufferedReader;
     .local v5, "reader":Ljava/io/BufferedReader;
     :try_start_1
@@ -172,13 +153,11 @@
 
     move-result-object v3
 
-    .line 168
     .local v3, "line":Ljava/lang/String;
     invoke-virtual {v5}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 170
     :cond_1
     :goto_0
     invoke-virtual {v5}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -187,7 +166,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 172
     array-length v12, v9
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_7
@@ -196,36 +174,29 @@
 
     if-lt v7, v12, :cond_5
 
-    .line 193
     :cond_2
     if-eqz v5, :cond_3
 
-    .line 194
     :try_start_2
     invoke-virtual {v5}, Ljava/io/BufferedReader;->close()V
 
-    .line 196
     :cond_3
     invoke-static {v6}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 203
     iget-boolean v12, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mInitSucess:Z
 
     if-nez v12, :cond_4
 
-    .line 204
     iput-boolean v11, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mInitSucess:Z
 
-    .line 205
     add-int/lit8 v12, v7, -0x1
 
     new-array v12, v12, [J
 
     iput-object v12, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
-    .line 206
     iget-object v12, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
     add-int/lit8 v13, v7, -0x1
@@ -239,12 +210,10 @@
     .restart local v4    # "reader":Ljava/io/BufferedReader;
     move v10, v11
 
-    .line 209
     .end local v3    # "line":Ljava/lang/String;
     :goto_1
     return v10
 
-    .line 177
     .end local v4    # "reader":Ljava/io/BufferedReader;
     .restart local v3    # "line":Ljava/lang/String;
     .restart local v5    # "reader":Ljava/io/BufferedReader;
@@ -256,10 +225,8 @@
 
     move-result v2
 
-    .line 179
     if-lez v2, :cond_1
 
-    .line 180
     add-int/lit8 v12, v2, 0x1
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -270,7 +237,6 @@
 
     move-result-object v8
 
-    .line 181
     .local v8, "strtmp":Ljava/lang/String;
     invoke-static {v8}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -282,17 +248,14 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_6
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 182
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 197
     .end local v8    # "strtmp":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 198
     .local v0, "e":Ljava/io/IOException;
     const-string v11, "NubiaHWTracker"
 
@@ -318,18 +281,15 @@
 
     move-object v4, v5
 
-    .line 199
     .end local v5    # "reader":Ljava/io/BufferedReader;
     .restart local v4    # "reader":Ljava/io/BufferedReader;
     goto :goto_1
 
-    .line 185
     .end local v0    # "e":Ljava/io/IOException;
     .end local v3    # "line":Ljava/lang/String;
     :catch_1
     move-exception v0
 
-    .line 186
     .local v0, "e":Ljava/io/FileNotFoundException;
     :goto_2
     :try_start_4
@@ -357,14 +317,11 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 193
     if-eqz v4, :cond_6
 
-    .line 194
     :try_start_5
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
 
-    .line 196
     :cond_6
     invoke-static {v6}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
     :try_end_5
@@ -372,11 +329,9 @@
 
     goto :goto_1
 
-    .line 197
     :catch_2
     move-exception v0
 
-    .line 198
     .local v0, "e":Ljava/io/IOException;
     const-string v11, "NubiaHWTracker"
 
@@ -402,12 +357,10 @@
 
     goto :goto_1
 
-    .line 188
     .end local v0    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v0
 
-    .line 189
     .restart local v0    # "e":Ljava/io/IOException;
     :goto_3
     :try_start_6
@@ -435,14 +388,11 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 193
     if-eqz v4, :cond_7
 
-    .line 194
     :try_start_7
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
 
-    .line 196
     :cond_7
     invoke-static {v6}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
     :try_end_7
@@ -450,11 +400,9 @@
 
     goto/16 :goto_1
 
-    .line 197
     :catch_4
     move-exception v0
 
-    .line 198
     const-string v11, "NubiaHWTracker"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -479,33 +427,26 @@
 
     goto/16 :goto_1
 
-    .line 192
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v11
 
-    .line 193
     :goto_4
     if-eqz v4, :cond_8
 
-    .line 194
     :try_start_8
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
 
-    .line 196
     :cond_8
     invoke-static {v6}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
 
-    .line 199
     throw v11
 
-    .line 197
     :catch_5
     move-exception v0
 
-    .line 198
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v11, "NubiaHWTracker"
 
@@ -531,7 +472,6 @@
 
     goto/16 :goto_1
 
-    .line 192
     .end local v0    # "e":Ljava/io/IOException;
     .end local v4    # "reader":Ljava/io/BufferedReader;
     .restart local v5    # "reader":Ljava/io/BufferedReader;
@@ -544,7 +484,6 @@
     .restart local v4    # "reader":Ljava/io/BufferedReader;
     goto :goto_4
 
-    .line 188
     .end local v4    # "reader":Ljava/io/BufferedReader;
     .restart local v5    # "reader":Ljava/io/BufferedReader;
     :catch_6
@@ -556,7 +495,6 @@
     .restart local v4    # "reader":Ljava/io/BufferedReader;
     goto :goto_3
 
-    .line 185
     .end local v4    # "reader":Ljava/io/BufferedReader;
     .restart local v5    # "reader":Ljava/io/BufferedReader;
     :catch_7
@@ -573,16 +511,13 @@
     .locals 4
 
     .prologue
-    .line 55
     iget-object v1, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
     if-nez v1, :cond_1
 
-    .line 60
     :cond_0
     return-void
 
-    .line 58
     :cond_1
     const/4 v0, 0x0
 
@@ -594,14 +529,12 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 59
     iget-object v1, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
     const-wide/16 v2, 0x0
 
     aput-wide v2, v1, v0
 
-    .line 58
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -613,32 +546,25 @@
     .locals 20
 
     .prologue
-    .line 103
     const-string v7, "/sys/class/kgsl/kgsl-3d0/gpubusy"
 
-    .line 104
     .local v7, "file":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 105
     .local v9, "reader":Ljava/io/BufferedReader;
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v11
 
-    .line 106
     .local v11, "savedPolicy":Landroid/os/StrictMode$ThreadPolicy;
     const-wide/16 v2, 0x0
 
-    .line 107
     .local v2, "activetime":J
     const-wide/16 v14, 0x0
 
-    .line 108
     .local v14, "totaltime":J
     const-wide/16 v4, 0x0
 
-    .line 113
     .local v4, "busyrate":D
     :try_start_0
     new-instance v10, Ljava/io/BufferedReader;
@@ -657,7 +583,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 114
     .end local v9    # "reader":Ljava/io/BufferedReader;
     .local v10, "reader":Ljava/io/BufferedReader;
     :try_start_1
@@ -665,7 +590,6 @@
 
     move-result-object v8
 
-    .line 115
     .local v8, "line":Ljava/lang/String;
     new-instance v12, Ljava/util/StringTokenizer;
 
@@ -675,7 +599,6 @@
 
     invoke-direct {v12, v8, v0}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
     .local v12, "st":Ljava/util/StringTokenizer;
     invoke-virtual {v12}, Ljava/util/StringTokenizer;->hasMoreElements()Z
 
@@ -683,23 +606,19 @@
 
     if-eqz v16, :cond_0
 
-    .line 117
     invoke-virtual {v12}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 118
     .local v13, "token":Ljava/lang/String;
     invoke-static {v13}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v2
 
-    .line 120
     invoke-virtual {v12}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 121
     invoke-static {v13}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_7
@@ -708,29 +627,24 @@
 
     move-result-wide v14
 
-    .line 131
     .end local v13    # "token":Ljava/lang/String;
     :cond_0
     if-eqz v10, :cond_1
 
-    .line 132
     :try_start_2
     invoke-virtual {v10}, Ljava/io/BufferedReader;->close()V
 
-    .line 134
     :cond_1
     invoke-static {v11}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 141
     const-wide/16 v16, 0x0
 
     cmp-long v16, v14, v16
 
     if-lez v16, :cond_2
 
-    .line 142
     long-to-double v0, v2
 
     move-wide/from16 v16, v0
@@ -741,7 +655,6 @@
 
     div-double v4, v16, v18
 
-    .line 145
     :cond_2
     move-object/from16 v0, p0
 
@@ -751,7 +664,6 @@
 
     if-eqz v16, :cond_3
 
-    .line 146
     const-string v16, "NubiaHWTracker"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -807,13 +719,11 @@
     .restart local v9    # "reader":Ljava/io/BufferedReader;
     move-wide/from16 v16, v4
 
-    .line 148
     .end local v8    # "line":Ljava/lang/String;
     .end local v12    # "st":Ljava/util/StringTokenizer;
     :goto_0
     return-wide v16
 
-    .line 135
     .end local v9    # "reader":Ljava/io/BufferedReader;
     .restart local v8    # "line":Ljava/lang/String;
     .restart local v10    # "reader":Ljava/io/BufferedReader;
@@ -821,7 +731,6 @@
     :catch_0
     move-exception v6
 
-    .line 136
     .local v6, "e":Ljava/io/IOException;
     const-string v16, "NubiaHWTracker"
 
@@ -847,7 +756,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     const-wide/16 v16, 0x0
 
     move-object v9, v10
@@ -856,14 +764,12 @@
     .restart local v9    # "reader":Ljava/io/BufferedReader;
     goto :goto_0
 
-    .line 123
     .end local v6    # "e":Ljava/io/IOException;
     .end local v8    # "line":Ljava/lang/String;
     .end local v12    # "st":Ljava/util/StringTokenizer;
     :catch_1
     move-exception v6
 
-    .line 124
     .local v6, "e":Ljava/io/FileNotFoundException;
     :goto_1
     :try_start_3
@@ -893,17 +799,13 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 125
     const-wide/16 v16, 0x0
 
-    .line 131
     if-eqz v9, :cond_4
 
-    .line 132
     :try_start_4
     invoke-virtual {v9}, Ljava/io/BufferedReader;->close()V
 
-    .line 134
     :cond_4
     invoke-static {v11}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
     :try_end_4
@@ -911,11 +813,9 @@
 
     goto :goto_0
 
-    .line 135
     :catch_2
     move-exception v6
 
-    .line 136
     .local v6, "e":Ljava/io/IOException;
     const-string v16, "NubiaHWTracker"
 
@@ -941,17 +841,14 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     const-wide/16 v16, 0x0
 
     goto :goto_0
 
-    .line 126
     .end local v6    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v6
 
-    .line 127
     .restart local v6    # "e":Ljava/io/IOException;
     :goto_2
     :try_start_5
@@ -981,17 +878,13 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 128
     const-wide/16 v16, 0x0
 
-    .line 131
     if-eqz v9, :cond_5
 
-    .line 132
     :try_start_6
     invoke-virtual {v9}, Ljava/io/BufferedReader;->close()V
 
-    .line 134
     :cond_5
     invoke-static {v11}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
     :try_end_6
@@ -999,11 +892,9 @@
 
     goto/16 :goto_0
 
-    .line 135
     :catch_4
     move-exception v6
 
-    .line 136
     const-string v16, "NubiaHWTracker"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -1028,38 +919,30 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     const-wide/16 v16, 0x0
 
     goto/16 :goto_0
 
-    .line 130
     .end local v6    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v16
 
-    .line 131
     :goto_3
     if-eqz v9, :cond_6
 
-    .line 132
     :try_start_7
     invoke-virtual {v9}, Ljava/io/BufferedReader;->close()V
 
-    .line 134
     :cond_6
     invoke-static {v11}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
 
-    .line 137
     throw v16
 
-    .line 135
     :catch_5
     move-exception v6
 
-    .line 136
     .restart local v6    # "e":Ljava/io/IOException;
     const-string v16, "NubiaHWTracker"
 
@@ -1085,12 +968,10 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     const-wide/16 v16, 0x0
 
     goto/16 :goto_0
 
-    .line 130
     .end local v6    # "e":Ljava/io/IOException;
     .end local v9    # "reader":Ljava/io/BufferedReader;
     .restart local v10    # "reader":Ljava/io/BufferedReader;
@@ -1103,7 +984,6 @@
     .restart local v9    # "reader":Ljava/io/BufferedReader;
     goto :goto_3
 
-    .line 126
     .end local v9    # "reader":Ljava/io/BufferedReader;
     .restart local v10    # "reader":Ljava/io/BufferedReader;
     :catch_6
@@ -1115,7 +995,6 @@
     .restart local v9    # "reader":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 123
     .end local v9    # "reader":Ljava/io/BufferedReader;
     .restart local v10    # "reader":Ljava/io/BufferedReader;
     :catch_7
@@ -1134,30 +1013,24 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 68
     invoke-direct {p0}, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->initDeltaTime()V
 
-    .line 70
     invoke-direct {p0}, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->getCurGpuSpeedTimes()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 71
     iget-object v3, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
-    .line 99
     :goto_0
     return-object v3
 
-    .line 74
     :cond_0
     iget-object v3, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mCurGpuSpeedTimes:[J
 
     if-nez v3, :cond_3
 
-    .line 75
     iget-object v3, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
     array-length v3, v3
@@ -1166,7 +1039,6 @@
 
     iput-object v3, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mCurGpuSpeedTimes:[J
 
-    .line 76
     iget-object v3, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
     iget-object v6, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mCurGpuSpeedTimes:[J
@@ -1177,25 +1049,20 @@
 
     invoke-static {v3, v8, v6, v8, v7}, Ljava/lang/System;->arraycopy([JI[JII)V
 
-    .line 78
     invoke-direct {p0}, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->initDeltaTime()V
 
-    .line 90
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->getGpuBusyRate()D
 
     move-result-wide v0
 
-    .line 91
     .local v0, "busyrate":D
     invoke-direct {p0, v0, v1}, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->busyDeltaTime(D)V
 
-    .line 93
     iget-boolean v3, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->LOGV:Z
 
     if-eqz v3, :cond_2
 
-    .line 94
     const-string v3, "NubiaHWTracker"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1218,7 +1085,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
     const-string v3, "NubiaHWTracker"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1247,7 +1113,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     const-string v3, "NubiaHWTracker"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1276,18 +1141,15 @@
 
     invoke-static {v3, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     :cond_2
     iget-object v3, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
     goto :goto_0
 
-    .line 80
     .end local v0    # "busyrate":D
     :cond_3
     const-wide/16 v4, 0x0
 
-    .line 83
     .local v4, "temp":J
     const/4 v2, 0x0
 
@@ -1299,12 +1161,10 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 84
     iget-object v3, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
     aget-wide v4, v3, v2
 
-    .line 85
     iget-object v3, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mDeltaGpuSpeedsTimes:[J
 
     aget-wide v6, v3, v2
@@ -1317,12 +1177,10 @@
 
     aput-wide v6, v3, v2
 
-    .line 86
     iget-object v3, p0, Lcom/android/internal/os/NubiaHWTracker$GpuSpeedTime;->mCurGpuSpeedTimes:[J
 
     aput-wide v4, v3, v2
 
-    .line 83
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1

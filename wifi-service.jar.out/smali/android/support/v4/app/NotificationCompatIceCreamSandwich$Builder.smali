@@ -39,10 +39,8 @@
     .param p13, "progressIndeterminate"    # Z
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     new-instance v4, Landroid/app/Notification$Builder;
 
     invoke-direct {v4, p1}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
@@ -203,10 +201,8 @@
 
     iput-object v4, p0, Landroid/support/v4/app/NotificationCompatIceCreamSandwich$Builder;->b:Landroid/app/Notification$Builder;
 
-    .line 57
     return-void
 
-    .line 35
     :cond_0
     const/4 v4, 0x0
 
@@ -234,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompatIceCreamSandwich$Builder;->b:Landroid/app/Notification$Builder;
 
     invoke-virtual {v0}, Landroid/app/Notification$Builder;->getNotification()Landroid/app/Notification;
@@ -248,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompatIceCreamSandwich$Builder;->b:Landroid/app/Notification$Builder;
 
     return-object v0

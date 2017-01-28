@@ -43,34 +43,28 @@
     .param p2, "windowManager"    # Lcom/android/server/policy/PhoneWindowManager;
 
     .prologue
-    .line 178
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     new-instance v0, Lcn/nubia/server/policy/SmartFaceManager$1;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/policy/SmartFaceManager$1;-><init>(Lcn/nubia/server/policy/SmartFaceManager;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mHandler:Landroid/os/Handler;
 
-    .line 91
     new-instance v0, Lcn/nubia/server/policy/SmartFaceManager$2;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/policy/SmartFaceManager$2;-><init>(Lcn/nubia/server/policy/SmartFaceManager;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mObserveCallback:Lcn/nubia/server/policy/smartface/observe/ObserverManager$ObserveCallback;
 
-    .line 99
     new-instance v0, Lcn/nubia/server/policy/SmartFaceManager$3;
 
     invoke-direct {v0, p0}, Lcn/nubia/server/policy/SmartFaceManager$3;-><init>(Lcn/nubia/server/policy/SmartFaceManager;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mUpdateCallback:Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
 
-    .line 179
     iput-object p1, p0, Lcn/nubia/server/policy/SmartFaceManager;->mContext:Landroid/content/Context;
 
-    .line 180
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;->getInstance(Landroid/content/Context;)Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
@@ -79,14 +73,12 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mReceiverMonitor:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
-    .line 181
     new-instance v0, Lcom/android/server/policy/PhoneWindowManagerWapper;
 
     invoke-direct {v0, p2}, Lcom/android/server/policy/PhoneWindowManagerWapper;-><init>(Lcom/android/server/policy/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mManagerWapper:Lcom/android/server/policy/PhoneWindowManagerWapper;
 
-    .line 182
     new-instance v0, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     iget-object v1, p0, Lcn/nubia/server/policy/SmartFaceManager;->mContext:Landroid/content/Context;
@@ -99,7 +91,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mSensorMonitor:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
-    .line 183
     new-instance v0, Lcn/nubia/server/policy/smartface/util/ListenerServiceCtrl;
 
     iget-object v1, p0, Lcn/nubia/server/policy/SmartFaceManager;->mContext:Landroid/content/Context;
@@ -108,7 +99,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mServiceCtrl:Lcn/nubia/server/policy/smartface/util/ListenerServiceCtrl;
 
-    .line 184
     new-instance v0, Lcn/nubia/server/policy/smartface/observe/ObserverManager;
 
     iget-object v1, p0, Lcn/nubia/server/policy/SmartFaceManager;->mContext:Landroid/content/Context;
@@ -119,17 +109,14 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mObserverManager:Lcn/nubia/server/policy/smartface/observe/ObserverManager;
 
-    .line 185
     new-instance v0, Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;
 
     invoke-direct {v0, p1}, Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mExceptionManager:Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;
 
-    .line 186
     invoke-virtual {p0}, Lcn/nubia/server/policy/SmartFaceManager;->start()V
 
-    .line 188
     return-void
 .end method
 
@@ -138,7 +125,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/SmartFaceManager;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->handleShow()V
 
     return-void
@@ -149,7 +135,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/SmartFaceManager;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->handleShowLattice()V
 
     return-void
@@ -160,7 +145,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/SmartFaceManager;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->onStop()V
 
     return-void
@@ -171,7 +155,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/SmartFaceManager;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->handleDismiss()V
 
     return-void
@@ -182,7 +165,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/SmartFaceManager;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->handleNotifyScreenOn()V
 
     return-void
@@ -194,7 +176,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 52
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/SmartFaceManager;->handleUpdateRotation(Z)V
 
     return-void
@@ -205,7 +186,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/SmartFaceManager;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->handleTurnOffScreen()V
 
     return-void
@@ -217,7 +197,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 52
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/SmartFaceManager;->controlSmartFaceFunc(Z)V
 
     return-void
@@ -228,7 +207,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/SmartFaceManager;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -239,7 +217,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/SmartFaceManager;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->handleSetFlag()V
 
     return-void
@@ -251,7 +228,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 52
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/SmartFaceManager;->setNeedTurnOffScreen(Z)V
 
     return-void
@@ -262,7 +238,6 @@
     .param p1, "needRun"    # Z
 
     .prologue
-    .line 208
     if-eqz p1, :cond_1
 
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mServiceCtrl:Lcn/nubia/server/policy/smartface/util/ListenerServiceCtrl;
@@ -273,15 +248,12 @@
 
     if-nez v0, :cond_1
 
-    .line 209
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->onResume()V
 
-    .line 213
     :cond_0
     :goto_0
     return-void
 
-    .line 210
     :cond_1
     if-nez p1, :cond_0
 
@@ -293,7 +265,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 211
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->onStop()V
 
     goto :goto_0
@@ -303,17 +274,14 @@
     .locals 1
 
     .prologue
-    .line 162
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mDelegate:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     if-eqz v0, :cond_0
 
-    .line 163
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mDelegate:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->dismiss()V
 
-    .line 164
     :cond_0
     return-void
 .end method
@@ -322,14 +290,12 @@
     .locals 2
 
     .prologue
-    .line 175
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mSensorMonitor:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->openUnLockScreen(Z)V
 
-    .line 176
     return-void
 .end method
 
@@ -337,17 +303,14 @@
     .locals 1
 
     .prologue
-    .line 153
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mDelegate:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     if-eqz v0, :cond_0
 
-    .line 154
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mDelegate:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->setEverSmartFaceNearFlag()V
 
-    .line 155
     :cond_0
     return-void
 .end method
@@ -356,17 +319,14 @@
     .locals 1
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mDelegate:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     if-eqz v0, :cond_0
 
-    .line 144
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mDelegate:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->show()V
 
-    .line 145
     :cond_0
     return-void
 .end method
@@ -375,17 +335,14 @@
     .locals 1
 
     .prologue
-    .line 148
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mDelegate:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     if-eqz v0, :cond_0
 
-    .line 149
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mDelegate:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;->showLattice()V
 
-    .line 150
     :cond_0
     return-void
 .end method
@@ -394,14 +351,12 @@
     .locals 2
 
     .prologue
-    .line 158
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mSensorMonitor:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     iget-boolean v1, p0, Lcn/nubia/server/policy/SmartFaceManager;->needTurnOffScreen:Z
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->turnOffScreen(Z)V
 
-    .line 159
     return-void
 .end method
 
@@ -410,12 +365,10 @@
     .param p1, "oriention"    # Z
 
     .prologue
-    .line 167
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mManagerWapper:Lcom/android/server/policy/PhoneWindowManagerWapper;
 
     invoke-virtual {v0, p1}, Lcom/android/server/policy/PhoneWindowManagerWapper;->updateRotation(Z)V
 
-    .line 168
     return-void
 .end method
 
@@ -425,14 +378,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 234
     iget-object v2, p0, Lcn/nubia/server/policy/SmartFaceManager;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcn/nubia/server/policy/smartface/util/SysPropUtils;->getSmartFaceDisplayFlag(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 235
     .local v0, "flag":I
     if-eq v0, v1, :cond_0
 
@@ -454,7 +405,6 @@
     .locals 1
 
     .prologue
-    .line 240
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mDelegate:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     if-eqz v0, :cond_0
@@ -475,11 +425,9 @@
 
     if-nez v0, :cond_1
 
-    .line 242
     :cond_0
     const/4 v0, 0x0
 
-    .line 244
     :goto_0
     return v0
 
@@ -493,24 +441,20 @@
     .locals 2
 
     .prologue
-    .line 248
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mReceiverMonitor:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;->register()V
 
-    .line 249
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mSensorMonitor:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->onResume()V
 
-    .line 250
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mServiceCtrl:Lcn/nubia/server/policy/smartface/util/ListenerServiceCtrl;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/smartface/util/ListenerServiceCtrl;->maybeCreateListenerService(Z)V
 
-    .line 251
     return-void
 .end method
 
@@ -522,7 +466,6 @@
 
     const/16 v1, 0xb
 
-    .line 254
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->hasMessages(I)Z
@@ -531,12 +474,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 255
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 257
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mHandler:Landroid/os/Handler;
 
@@ -546,30 +487,25 @@
 
     if-eqz v0, :cond_1
 
-    .line 258
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 260
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mReceiverMonitor:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;->unRegister()V
 
-    .line 261
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mSensorMonitor:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->onStop()V
 
-    .line 262
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mServiceCtrl:Lcn/nubia/server/policy/smartface/util/ListenerServiceCtrl;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/smartface/util/ListenerServiceCtrl;->maybeCreateListenerService(Z)V
 
-    .line 263
     return-void
 .end method
 
@@ -577,35 +513,30 @@
     .locals 2
 
     .prologue
-    .line 201
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mSensorMonitor:Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;
 
     iget-object v1, p0, Lcn/nubia/server/policy/SmartFaceManager;->mUpdateCallback:Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/smartface/Listener/SensorMonitor;->registerCallback(Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;)V
 
-    .line 202
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mReceiverMonitor:Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;
 
     iget-object v1, p0, Lcn/nubia/server/policy/SmartFaceManager;->mUpdateCallback:Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/smartface/Listener/ReceiverMonitor;->registerCallback(Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;)V
 
-    .line 203
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mExceptionManager:Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;
 
     iget-object v1, p0, Lcn/nubia/server/policy/SmartFaceManager;->mUpdateCallback:Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;->registerCallback(Lcn/nubia/server/policy/smartface/Listener/MonitorUpdateCallback;)V
 
-    .line 204
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mObserverManager:Lcn/nubia/server/policy/smartface/observe/ObserverManager;
 
     iget-object v1, p0, Lcn/nubia/server/policy/SmartFaceManager;->mObserveCallback:Lcn/nubia/server/policy/smartface/observe/ObserverManager$ObserveCallback;
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/smartface/observe/ObserverManager;->registerCallback(Lcn/nubia/server/policy/smartface/observe/ObserverManager$ObserveCallback;)V
 
-    .line 205
     return-void
 .end method
 
@@ -614,10 +545,8 @@
     .param p1, "isNeed"    # Z
 
     .prologue
-    .line 171
     iput-boolean p1, p0, Lcn/nubia/server/policy/SmartFaceManager;->needTurnOffScreen:Z
 
-    .line 172
     return-void
 .end method
 
@@ -627,7 +556,6 @@
     .locals 1
 
     .prologue
-    .line 272
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcn/nubia/server/policy/smartface/util/SysPropUtils;->disableHapticFeedback(Landroid/content/Context;)Z
@@ -646,7 +574,6 @@
     .prologue
     const-wide/high16 v0, -0x8000000000000000L
 
-    .line 219
     iget-object v2, p0, Lcn/nubia/server/policy/SmartFaceManager;->mExceptionManager:Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;
 
     invoke-virtual {v2, p1}, Lcn/nubia/server/policy/smartface/Listener/ExceptionManager;->forceExit(Landroid/view/KeyEvent;)Z
@@ -655,12 +582,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 230
     :cond_0
     :goto_0
     return-wide v0
 
-    .line 221
     :cond_1
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -670,7 +595,6 @@
 
     goto :goto_0
 
-    .line 226
     :sswitch_0
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->isServiceStart()Z
 
@@ -684,12 +608,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 227
     const-wide/16 v0, 0x0
 
     goto :goto_0
 
-    .line 221
     :sswitch_data_0
     .sparse-switch
         0x3 -> :sswitch_0
@@ -703,7 +625,6 @@
     .locals 1
 
     .prologue
-    .line 267
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcn/nubia/server/policy/smartface/util/SysPropUtils;->needRotationScreen(Landroid/content/Context;)Z
@@ -717,18 +638,14 @@
     .locals 1
 
     .prologue
-    .line 195
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->registerCallback()V
 
-    .line 196
     invoke-direct {p0}, Lcn/nubia/server/policy/SmartFaceManager;->onResume()V
 
-    .line 197
     iget-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mObserverManager:Lcn/nubia/server/policy/smartface/observe/ObserverManager;
 
     invoke-virtual {v0}, Lcn/nubia/server/policy/smartface/observe/ObserverManager;->observe()V
 
-    .line 198
     return-void
 .end method
 
@@ -736,7 +653,6 @@
     .locals 3
 
     .prologue
-    .line 191
     new-instance v0, Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
     iget-object v1, p0, Lcn/nubia/server/policy/SmartFaceManager;->mContext:Landroid/content/Context;
@@ -747,6 +663,5 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/SmartFaceManager;->mDelegate:Lcn/nubia/server/policy/smartface/viewloader/SmartFaceServiceDelegate;
 
-    .line 192
     return-void
 .end method

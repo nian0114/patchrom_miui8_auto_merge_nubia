@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 136
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -37,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 139
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mAdapter:Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;
@@ -47,6 +45,5 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity$ViewPagerAdapter;->handlePackagesChanged()V
 
-    .line 140
     return-void
 .end method

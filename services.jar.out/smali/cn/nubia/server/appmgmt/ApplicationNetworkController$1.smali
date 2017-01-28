@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1138
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 1141
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mHandler:Landroid/os/Handler;
@@ -50,12 +48,10 @@
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1142
     iget-object v0, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$1;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # invokes: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->loadTrafficSettingsFromDb()V
     invoke-static {v0}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->access$2500(Lcn/nubia/server/appmgmt/ApplicationNetworkController;)V
 
-    .line 1143
     return-void
 .end method

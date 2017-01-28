@@ -24,13 +24,10 @@
     .param p1, "activityManagerService"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 7365
     invoke-direct {p0}, Landroid/os/IPermissionController$Stub;-><init>()V
 
-    .line 7366
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$PermissionController;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 7367
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .param p3, "uid"    # I
 
     .prologue
-    .line 7371
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$PermissionController;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/am/ActivityManagerService;->checkPermission(Ljava/lang/String;II)I
@@ -68,7 +64,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 7377
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$PermissionController;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
@@ -93,7 +88,6 @@
 
     const/4 v3, 0x0
 
-    .line 7384
     :try_start_0
     iget-object v4, p0, Lcom/android/server/am/ActivityManagerService$PermissionController;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
@@ -109,7 +103,6 @@
 
     move-result-object v0
 
-    .line 7386
     .local v0, "info":Landroid/content/pm/PermissionInfo;
     iget v4, v0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
     :try_end_0
@@ -117,7 +110,6 @@
 
     if-ne v4, v2, :cond_0
 
-    .line 7390
     .end local v0    # "info":Landroid/content/pm/PermissionInfo;
     :goto_0
     return v2
@@ -126,15 +118,12 @@
     :cond_0
     move v2, v3
 
-    .line 7386
     goto :goto_0
 
-    .line 7387
     .end local v0    # "info":Landroid/content/pm/PermissionInfo;
     :catch_0
     move-exception v1
 
-    .line 7388
     .local v1, "nnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "ActivityManager"
 
@@ -160,6 +149,5 @@
 
     move v2, v3
 
-    .line 7390
     goto :goto_0
 .end method

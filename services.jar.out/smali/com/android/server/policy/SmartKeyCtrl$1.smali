@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/android/server/policy/SmartKeyCtrl$1;->this$0:Lcom/android/server/policy/SmartKeyCtrl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 84
     iget-object v1, p0, Lcom/android/server/policy/SmartKeyCtrl$1;->this$0:Lcom/android/server/policy/SmartKeyCtrl;
 
     # getter for: Lcom/android/server/policy/SmartKeyCtrl;->mEnableSnapshot:Z
@@ -50,14 +48,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 85
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.captureCamera.CaptureCameraService"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 87
     .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/policy/SmartKeyCtrl$1;->this$0:Lcom/android/server/policy/SmartKeyCtrl;
 
@@ -70,7 +66,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 89
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     return-void

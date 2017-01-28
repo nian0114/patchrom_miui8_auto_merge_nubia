@@ -54,34 +54,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 64
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/internal/telephony/PhoneFactory;->sLockProxyPhones:Ljava/lang/Object;
 
-    .line 65
     sput-object v1, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhones:[Lcom/android/internal/telephony/PhoneProxy;
 
-    .line 66
     sput-object v1, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhone:Lcom/android/internal/telephony/PhoneProxy;
 
-    .line 68
     sput-object v1, Lcom/android/internal/telephony/PhoneFactory;->sCommandsInterfaces:[Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 73
     sput-object v1, Lcom/android/internal/telephony/PhoneFactory;->sCommandsInterface:Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 74
     sput-object v1, Lcom/android/internal/telephony/PhoneFactory;->sSubInfoRecordUpdater:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
-    .line 76
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/internal/telephony/PhoneFactory;->sMadeDefaults:Z
 
-    .line 80
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -95,7 +87,6 @@
     .locals 0
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -107,12 +98,10 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 469
     sget-object v1, Lcom/android/internal/telephony/PhoneFactory;->sLocalLogs:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 470
     :try_start_0
     sget-object v0, Lcom/android/internal/telephony/PhoneFactory;->sLocalLogs:Ljava/util/HashMap;
 
@@ -122,7 +111,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 471
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -153,7 +141,6 @@
 
     throw v0
 
-    .line 474
     :catchall_0
     move-exception v0
 
@@ -163,7 +150,6 @@
 
     throw v0
 
-    .line 473
     :cond_0
     :try_start_1
     sget-object v0, Lcom/android/internal/telephony/PhoneFactory;->sLocalLogs:Ljava/util/HashMap;
@@ -174,12 +160,10 @@
 
     invoke-virtual {v0, p0, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 474
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 475
     return-void
 .end method
 
@@ -189,7 +173,6 @@
     .param p1, "phoneSubId"    # I
 
     .prologue
-    .line 325
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v4
@@ -198,11 +181,9 @@
 
     move-result v1
 
-    .line 326
     .local v1, "phoneId":I
     sget v2, Lcom/android/internal/telephony/RILConstants;->PREFERRED_NETWORK_MODE:I
 
-    .line 328
     .local v2, "phoneIdNetworkType":I
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -217,11 +198,9 @@
 
     move-result v2
 
-    .line 333
     :goto_0
     move v0, v2
 
-    .line 334
     .local v0, "networkType":I
     const-string v4, "PhoneFactory"
 
@@ -255,7 +234,6 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v4
@@ -266,7 +244,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 338
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -293,10 +270,8 @@
 
     move-result v0
 
-    .line 342
     if-eq v0, v2, :cond_0
 
-    .line 343
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -305,7 +280,6 @@
 
     invoke-static {v4, v5, v1, v0}, Landroid/telephony/TelephonyManager;->putIntAtIndex(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 351
     :cond_0
     :goto_1
     const-string v4, "PhoneFactory"
@@ -340,15 +314,12 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 353
     return v0
 
-    .line 330
     .end local v0    # "networkType":I
     :catch_0
     move-exception v3
 
-    .line 331
     .local v3, "snfe":Landroid/provider/Settings$SettingNotFoundException;
     const-string v4, "PhoneFactory"
 
@@ -358,7 +329,6 @@
 
     goto :goto_0
 
-    .line 348
     .end local v3    # "snfe":Landroid/provider/Settings$SettingNotFoundException;
     .restart local v0    # "networkType":I
     :cond_1
@@ -400,12 +370,10 @@
     .param p2, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 496
     const-string v10, "PhoneFactory:"
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 497
     invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getPhones()[Lcom/android/internal/telephony/Phone;
 
     move-result-object v10
@@ -416,11 +384,9 @@
 
     check-cast v9, [Lcom/android/internal/telephony/PhoneProxy;
 
-    .line 498
     .local v9, "phones":[Lcom/android/internal/telephony/PhoneProxy;
     const/4 v2, -0x1
 
-    .line 499
     .local v2, "i":I
     move-object v0, v9
 
@@ -436,11 +402,9 @@
 
     aget-object v8, v0, v3
 
-    .line 501
     .local v8, "phoneProxy":Lcom/android/internal/telephony/PhoneProxy;
     add-int/lit8 v2, v2, 0x1
 
-    .line 504
     :try_start_0
     invoke-virtual {v8}, Lcom/android/internal/telephony/PhoneProxy;->getActivePhone()Lcom/android/internal/telephony/Phone;
 
@@ -448,21 +412,17 @@
 
     check-cast v7, Lcom/android/internal/telephony/PhoneBase;
 
-    .line 505
     .local v7, "phoneBase":Lcom/android/internal/telephony/PhoneBase;
     invoke-virtual {v7, p0, p1, p2}, Lcom/android/internal/telephony/PhoneBase;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 511
     invoke-virtual {p1}, Ljava/io/PrintWriter;->flush()V
 
-    .line 512
     const-string v10, "++++++++++++++++++++++++++++++++"
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 515
     :try_start_1
     invoke-virtual {v8}, Lcom/android/internal/telephony/PhoneProxy;->getIccCard()Lcom/android/internal/telephony/IccCard;
 
@@ -474,27 +434,22 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 519
     :goto_1
     invoke-virtual {p1}, Ljava/io/PrintWriter;->flush()V
 
-    .line 520
     const-string v10, "++++++++++++++++++++++++++++++++"
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 499
     .end local v7    # "phoneBase":Lcom/android/internal/telephony/PhoneBase;
     :goto_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 506
     :catch_0
     move-exception v1
 
-    .line 507
     .local v1, "e":Ljava/lang/Exception;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -528,19 +483,16 @@
 
     goto :goto_2
 
-    .line 516
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v7    # "phoneBase":Lcom/android/internal/telephony/PhoneBase;
     :catch_1
     move-exception v1
 
-    .line 517
     .restart local v1    # "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 524
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v7    # "phoneBase":Lcom/android/internal/telephony/PhoneBase;
     .end local v8    # "phoneProxy":Lcom/android/internal/telephony/PhoneProxy;
@@ -554,7 +506,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 530
     :goto_3
     :try_start_3
     sget-object v10, Lcom/android/internal/telephony/PhoneFactory;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
@@ -563,16 +514,13 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 534
     :goto_4
     invoke-virtual {p1}, Ljava/io/PrintWriter;->flush()V
 
-    .line 535
     const-string v10, "++++++++++++++++++++++++++++++++"
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 538
     :try_start_4
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
@@ -582,16 +530,13 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 542
     :goto_5
     invoke-virtual {p1}, Ljava/io/PrintWriter;->flush()V
 
-    .line 543
     const-string v10, "++++++++++++++++++++++++++++++++"
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 546
     :try_start_5
     sget-object v10, Lcom/android/internal/telephony/PhoneFactory;->sSubInfoRecordUpdater:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
@@ -599,21 +544,17 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 550
     :goto_6
     invoke-virtual {p1}, Ljava/io/PrintWriter;->flush()V
 
-    .line 552
     const-string v10, "++++++++++++++++++++++++++++++++"
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 553
     sget-object v11, Lcom/android/internal/telephony/PhoneFactory;->sLocalLogs:Ljava/util/HashMap;
 
     monitor-enter v11
 
-    .line 554
     :try_start_6
     new-instance v4, Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -621,7 +562,6 @@
 
     invoke-direct {v4, p1, v10}, Lcom/android/internal/util/IndentingPrintWriter;-><init>(Ljava/io/Writer;Ljava/lang/String;)V
 
-    .line 555
     .local v4, "ipw":Lcom/android/internal/util/IndentingPrintWriter;
     sget-object v10, Lcom/android/internal/telephony/PhoneFactory;->sLocalLogs:Ljava/util/HashMap;
 
@@ -647,14 +587,11 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 556
     .local v5, "key":Ljava/lang/String;
     invoke-virtual {v4, v5}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 557
     invoke-virtual {v4}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 558
     sget-object v10, Lcom/android/internal/telephony/PhoneFactory;->sLocalLogs:Ljava/util/HashMap;
 
     invoke-virtual {v10, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -665,12 +602,10 @@
 
     invoke-virtual {v10, p0, v4, p2}, Landroid/util/LocalLog;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 559
     invoke-virtual {v4}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
     goto :goto_7
 
-    .line 562
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "ipw":Lcom/android/internal/util/IndentingPrintWriter;
     .end local v5    # "key":Ljava/lang/String;
@@ -683,51 +618,42 @@
 
     throw v10
 
-    .line 525
     .local v3, "i$":I
     :catch_2
     move-exception v1
 
-    .line 526
     .restart local v1    # "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_3
 
-    .line 531
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v1
 
-    .line 532
     .restart local v1    # "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_4
 
-    .line 539
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_4
     move-exception v1
 
-    .line 540
     .restart local v1    # "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_5
 
-    .line 547
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_5
     move-exception v1
 
-    .line 548
     .restart local v1    # "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_6
 
-    .line 561
     .end local v1    # "e":Ljava/lang/Exception;
     .local v3, "i$":Ljava/util/Iterator;
     .restart local v4    # "ipw":Lcom/android/internal/util/IndentingPrintWriter;
@@ -735,12 +661,10 @@
     :try_start_7
     invoke-virtual {v4}, Lcom/android/internal/util/IndentingPrintWriter;->flush()V
 
-    .line 562
     monitor-exit v11
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 563
     return-void
 .end method
 
@@ -749,12 +673,10 @@
     .param p0, "phoneId"    # I
 
     .prologue
-    .line 219
     sget-object v2, Lcom/android/internal/telephony/PhoneProxy;->lockForRadioTechnologyChange:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 220
     :try_start_0
     invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
@@ -772,14 +694,11 @@
 
     move-result-object v0
 
-    .line 222
     .local v0, "phone":Lcom/android/internal/telephony/Phone;
     monitor-exit v2
 
-    .line 223
     return-object v0
 
-    .line 222
     .end local v0    # "phone":Lcom/android/internal/telephony/Phone;
     :catchall_0
     move-exception v1
@@ -795,10 +714,8 @@
     .locals 4
 
     .prologue
-    .line 425
     const/4 v1, -0x1
 
-    .line 428
     .local v1, "subId":I
     :try_start_0
     sget-object v2, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
@@ -815,17 +732,14 @@
 
     move-result v1
 
-    .line 434
     :goto_0
     int-to-long v2, v1
 
     return-wide v2
 
-    .line 430
     :catch_0
     move-exception v0
 
-    .line 431
     .local v0, "snfe":Landroid/provider/Settings$SettingNotFoundException;
     const-string v2, "PhoneFactory"
 
@@ -840,18 +754,15 @@
     .locals 3
 
     .prologue
-    .line 235
     sget-object v1, Lcom/android/internal/telephony/PhoneFactory;->sLockProxyPhones:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 236
     :try_start_0
     sget-boolean v0, Lcom/android/internal/telephony/PhoneFactory;->sMadeDefaults:Z
 
     if-nez v0, :cond_0
 
-    .line 237
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v2, "Default phones haven\'t been made yet!"
@@ -860,7 +771,6 @@
 
     throw v0
 
-    .line 240
     :catchall_0
     move-exception v0
 
@@ -870,7 +780,6 @@
 
     throw v0
 
-    .line 239
     :cond_0
     :try_start_1
     sget-object v0, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhone:Lcom/android/internal/telephony/PhoneProxy;
@@ -886,7 +795,6 @@
     .locals 1
 
     .prologue
-    .line 358
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v0
@@ -903,12 +811,10 @@
     .param p0, "phoneId"    # I
 
     .prologue
-    .line 227
     sget-object v2, Lcom/android/internal/telephony/PhoneProxy;->lockForRadioTechnologyChange:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 228
     :try_start_0
     invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
@@ -926,13 +832,11 @@
 
     move-result-object v0
 
-    .line 230
     .local v0, "phone":Lcom/android/internal/telephony/Phone;
     monitor-exit v2
 
     return-object v0
 
-    .line 231
     .end local v0    # "phone":Lcom/android/internal/telephony/Phone;
     :catchall_0
     move-exception v1
@@ -949,22 +853,18 @@
     .param p0, "phoneId"    # I
 
     .prologue
-    .line 245
     const-string v0, ""
 
-    .line 247
     .local v0, "dbgInfo":Ljava/lang/String;
     sget-object v3, Lcom/android/internal/telephony/PhoneFactory;->sLockProxyPhones:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 248
     :try_start_0
     sget-boolean v2, Lcom/android/internal/telephony/PhoneFactory;->sMadeDefaults:Z
 
     if-nez v2, :cond_0
 
-    .line 249
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v4, "Default phones haven\'t been made yet!"
@@ -973,7 +873,6 @@
 
     throw v2
 
-    .line 265
     :catchall_0
     move-exception v2
 
@@ -983,24 +882,20 @@
 
     throw v2
 
-    .line 251
     :cond_0
     const v2, 0x7fffffff
 
     if-ne p0, v2, :cond_1
 
-    .line 253
     :try_start_1
     sget-object v1, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhone:Lcom/android/internal/telephony/PhoneProxy;
 
-    .line 264
     .local v1, "phone":Lcom/android/internal/telephony/Phone;
     :goto_0
     monitor-exit v3
 
     return-object v1
 
-    .line 256
     .end local v1    # "phone":Lcom/android/internal/telephony/Phone;
     :cond_1
     if-ltz p0, :cond_2
@@ -1036,18 +931,15 @@
     .locals 3
 
     .prologue
-    .line 269
     sget-object v1, Lcom/android/internal/telephony/PhoneFactory;->sLockProxyPhones:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 270
     :try_start_0
     sget-boolean v0, Lcom/android/internal/telephony/PhoneFactory;->sMadeDefaults:Z
 
     if-nez v0, :cond_0
 
-    .line 271
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v2, "Default phones haven\'t been made yet!"
@@ -1056,7 +948,6 @@
 
     throw v0
 
-    .line 274
     :catchall_0
     move-exception v0
 
@@ -1066,7 +957,6 @@
 
     throw v0
 
-    .line 273
     :cond_0
     :try_start_1
     sget-object v0, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhones:[Lcom/android/internal/telephony/PhoneProxy;
@@ -1082,10 +972,8 @@
     .locals 4
 
     .prologue
-    .line 439
     const/4 v1, -0x1
 
-    .line 441
     .local v1, "subId":I
     :try_start_0
     sget-object v2, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
@@ -1102,15 +990,12 @@
 
     move-result v1
 
-    .line 447
     :goto_0
     return v1
 
-    .line 443
     :catch_0
     move-exception v0
 
-    .line 444
     .local v0, "snfe":Landroid/provider/Settings$SettingNotFoundException;
     const-string v2, "PhoneFactory"
 
@@ -1125,10 +1010,8 @@
     .locals 4
 
     .prologue
-    .line 363
     const/4 v1, -0x1
 
-    .line 366
     .local v1, "subId":I
     :try_start_0
     sget-object v2, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
@@ -1145,15 +1028,12 @@
 
     move-result v1
 
-    .line 372
     :goto_0
     return v1
 
-    .line 368
     :catch_0
     move-exception v0
 
-    .line 369
     .local v0, "snfe":Landroid/provider/Settings$SettingNotFoundException;
     const-string v2, "PhoneFactory"
 
@@ -1168,14 +1048,11 @@
     .locals 6
 
     .prologue
-    .line 377
     const/4 v0, 0x0
 
-    .line 378
     .local v0, "prompt":Z
     const/4 v2, 0x0
 
-    .line 380
     .local v2, "value":I
     :try_start_0
     sget-object v3, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
@@ -1192,13 +1069,11 @@
 
     move-result v2
 
-    .line 385
     :goto_0
     if-nez v2, :cond_0
 
     const/4 v0, 0x0
 
-    .line 386
     :goto_1
     const-string v3, "PhoneFactory"
 
@@ -1222,14 +1097,11 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     return v0
 
-    .line 382
     :catch_0
     move-exception v1
 
-    .line 383
     .local v1, "snfe":Landroid/provider/Settings$SettingNotFoundException;
     const-string v3, "PhoneFactory"
 
@@ -1239,7 +1111,6 @@
 
     goto :goto_0
 
-    .line 385
     .end local v1    # "snfe":Landroid/provider/Settings$SettingNotFoundException;
     :cond_0
     const/4 v0, 0x1
@@ -1251,14 +1122,11 @@
     .locals 6
 
     .prologue
-    .line 401
     const/4 v0, 0x0
 
-    .line 402
     .local v0, "prompt":Z
     const/4 v2, 0x0
 
-    .line 404
     .local v2, "value":I
     :try_start_0
     sget-object v3, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
@@ -1275,13 +1143,11 @@
 
     move-result v2
 
-    .line 409
     :goto_0
     if-nez v2, :cond_0
 
     const/4 v0, 0x0
 
-    .line 410
     :goto_1
     const-string v3, "PhoneFactory"
 
@@ -1305,14 +1171,11 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 412
     return v0
 
-    .line 406
     :catch_0
     move-exception v1
 
-    .line 407
     .local v1, "snfe":Landroid/provider/Settings$SettingNotFoundException;
     const-string v3, "PhoneFactory"
 
@@ -1322,7 +1185,6 @@
 
     goto :goto_0
 
-    .line 409
     .end local v1    # "snfe":Landroid/provider/Settings$SettingNotFoundException;
     :cond_0
     const/4 v0, 0x1
@@ -1336,12 +1198,10 @@
     .param p1, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 487
     sget-object v1, Lcom/android/internal/telephony/PhoneFactory;->sLocalLogs:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 488
     :try_start_0
     sget-object v0, Lcom/android/internal/telephony/PhoneFactory;->sLocalLogs:Ljava/util/HashMap;
 
@@ -1351,7 +1211,6 @@
 
     if-nez v0, :cond_0
 
-    .line 489
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1382,7 +1241,6 @@
 
     throw v0
 
-    .line 492
     :catchall_0
     move-exception v0
 
@@ -1392,7 +1250,6 @@
 
     throw v0
 
-    .line 491
     :cond_0
     :try_start_1
     sget-object v0, Lcom/android/internal/telephony/PhoneFactory;->sLocalLogs:Ljava/util/HashMap;
@@ -1405,12 +1262,10 @@
 
     invoke-virtual {v0, p1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 492
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 493
     return-void
 .end method
 
@@ -1419,38 +1274,30 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 93
     sget-object v17, Lcom/android/internal/telephony/PhoneFactory;->sLockProxyPhones:Ljava/lang/Object;
 
     monitor-enter v17
 
-    .line 94
     :try_start_0
     sget-boolean v16, Lcom/android/internal/telephony/PhoneFactory;->sMadeDefaults:Z
 
     if-nez v16, :cond_7
 
-    .line 95
     sput-object p0, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
 
-    .line 98
     invoke-static {}, Lcom/android/internal/telephony/TelephonyDevController;->create()Lcom/android/internal/telephony/TelephonyDevController;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 100
     const/4 v14, 0x0
 
-    .line 102
     .local v14, "retryCount":I
     :goto_0
     const/4 v7, 0x0
 
-    .line 103
     .local v7, "hasException":Z
     add-int/lit8 v14, v14, 0x1
 
-    .line 108
     :try_start_1
     new-instance v16, Landroid/net/LocalServerSocket;
 
@@ -1465,11 +1312,9 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 113
     :goto_1
     if-nez v7, :cond_0
 
-    .line 125
     :try_start_2
     new-instance v16, Lcom/android/internal/telephony/DefaultPhoneNotifier;
 
@@ -1477,12 +1322,10 @@
 
     sput-object v16, Lcom/android/internal/telephony/PhoneFactory;->sPhoneNotifier:Lcom/android/internal/telephony/PhoneNotifier;
 
-    .line 127
     invoke-static/range {p0 .. p0}, Lcom/android/internal/telephony/cdma/CdmaSubscriptionSourceManager;->getDefault(Landroid/content/Context;)I
 
     move-result v4
 
-    .line 128
     .local v4, "cdmaSubscription":I
     const-string v16, "PhoneFactory"
 
@@ -1512,7 +1355,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v16
@@ -1521,11 +1363,9 @@
 
     move-result v10
 
-    .line 134
     .local v10, "numPhones":I
     new-array v9, v10, [I
 
-    .line 135
     .local v9, "networkModes":[I
     new-array v0, v10, [Lcom/android/internal/telephony/PhoneProxy;
 
@@ -1533,7 +1373,6 @@
 
     sput-object v16, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhones:[Lcom/android/internal/telephony/PhoneProxy;
 
-    .line 136
     new-array v0, v10, [Lcom/android/internal/telephony/RIL;
 
     move-object/from16 v16, v0
@@ -1542,14 +1381,12 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 138
     const/4 v8, 0x0
 
     .local v8, "i":I
     :goto_2
     if-ge v8, v10, :cond_2
 
-    .line 142
     :try_start_3
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1570,7 +1407,6 @@
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 150
     :goto_3
     :try_start_4
     const-string v16, "PhoneFactory"
@@ -1605,7 +1441,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     sget-object v16, Lcom/android/internal/telephony/PhoneFactory;->sCommandsInterfaces:[Lcom/android/internal/telephony/CommandsInterface;
 
     new-instance v18, Lcom/android/internal/telephony/RIL;
@@ -1628,12 +1463,10 @@
 
     aput-object v18, v16, v8
 
-    .line 138
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 109
     .end local v4    # "cdmaSubscription":I
     .end local v8    # "i":I
     .end local v9    # "networkModes":[I
@@ -1641,13 +1474,11 @@
     :catch_0
     move-exception v6
 
-    .line 110
     .local v6, "ex":Ljava/io/IOException;
     const/4 v7, 0x1
 
     goto/16 :goto_1
 
-    .line 115
     .end local v6    # "ex":Ljava/io/IOException;
     :cond_0
     const/16 v16, 0x3
@@ -1656,7 +1487,6 @@
 
     if-le v14, v0, :cond_1
 
-    .line 116
     new-instance v16, Ljava/lang/RuntimeException;
 
     const-string v18, "PhoneFactory probably already running"
@@ -1669,7 +1499,6 @@
 
     throw v16
 
-    .line 214
     .end local v7    # "hasException":Z
     .end local v14    # "retryCount":I
     :catchall_0
@@ -1681,7 +1510,6 @@
 
     throw v16
 
-    .line 119
     .restart local v7    # "hasException":Z
     .restart local v14    # "retryCount":I
     :cond_1
@@ -1695,13 +1523,11 @@
 
     goto/16 :goto_0
 
-    .line 120
     :catch_1
     move-exception v16
 
     goto/16 :goto_0
 
-    .line 145
     .restart local v4    # "cdmaSubscription":I
     .restart local v8    # "i":I
     .restart local v9    # "networkModes":[I
@@ -1709,7 +1535,6 @@
     :catch_2
     move-exception v15
 
-    .line 146
     .local v15, "snfe":Landroid/provider/Settings$SettingNotFoundException;
     :try_start_6
     const-string v16, "PhoneFactory"
@@ -1722,14 +1547,12 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     sget v16, Lcom/android/internal/telephony/RILConstants;->PREFERRED_NETWORK_MODE:I
 
     aput v16, v9, v8
 
     goto :goto_3
 
-    .line 154
     .end local v15    # "snfe":Landroid/provider/Settings$SettingNotFoundException;
     :cond_2
     const-string v16, "PhoneFactory"
@@ -1742,7 +1565,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
     move-result-object v16
@@ -1757,7 +1579,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->initSubscriptionController(Landroid/content/Context;[Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 160
     sget-object v16, Lcom/android/internal/telephony/PhoneFactory;->sCommandsInterfaces:[Lcom/android/internal/telephony/CommandsInterface;
 
     move-object/from16 v0, p0
@@ -1770,16 +1591,13 @@
 
     sput-object v16, Lcom/android/internal/telephony/PhoneFactory;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
 
-    .line 162
     const/4 v8, 0x0
 
     :goto_4
     if-ge v8, v10, :cond_5
 
-    .line 163
     const/4 v12, 0x0
 
-    .line 164
     .local v12, "phone":Lcom/android/internal/telephony/PhoneBase;
     aget v16, v9, v8
 
@@ -1787,7 +1605,6 @@
 
     move-result v13
 
-    .line 165
     .local v13, "phoneType":I
     const/16 v16, 0x1
 
@@ -1795,7 +1612,6 @@
 
     if-ne v13, v0, :cond_4
 
-    .line 166
     invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
     move-result-object v16
@@ -1818,7 +1634,6 @@
 
     move-result-object v12
 
-    .line 172
     :cond_3
     :goto_5
     const-string v16, "PhoneFactory"
@@ -1861,7 +1676,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     sget-object v16, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhones:[Lcom/android/internal/telephony/PhoneProxy;
 
     invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
@@ -1876,12 +1690,10 @@
 
     aput-object v18, v16, v8
 
-    .line 162
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_4
 
-    .line 168
     :cond_4
     const/16 v16, 0x2
 
@@ -1889,7 +1701,6 @@
 
     if-ne v13, v0, :cond_3
 
-    .line 169
     invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
     move-result-object v16
@@ -1914,7 +1725,6 @@
 
     goto :goto_5
 
-    .line 176
     .end local v12    # "phone":Lcom/android/internal/telephony/PhoneBase;
     .end local v13    # "phoneType":I
     :cond_5
@@ -1938,7 +1748,6 @@
 
     sput-object v16, Lcom/android/internal/telephony/PhoneFactory;->mProxyController:Lcom/android/internal/telephony/ProxyController;
 
-    .line 182
     sget-object v16, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhones:[Lcom/android/internal/telephony/PhoneProxy;
 
     const/16 v18, 0x0
@@ -1947,7 +1756,6 @@
 
     sput-object v16, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhone:Lcom/android/internal/telephony/PhoneProxy;
 
-    .line 183
     sget-object v16, Lcom/android/internal/telephony/PhoneFactory;->sCommandsInterfaces:[Lcom/android/internal/telephony/CommandsInterface;
 
     const/16 v18, 0x0
@@ -1956,7 +1764,6 @@
 
     sput-object v16, Lcom/android/internal/telephony/PhoneFactory;->sCommandsInterface:Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 187
     const/16 v16, 0x1
 
     move-object/from16 v0, p0
@@ -1967,20 +1774,16 @@
 
     move-result-object v5
 
-    .line 189
     .local v5, "componentName":Landroid/content/ComponentName;
     const-string v11, "NONE"
 
-    .line 190
     .local v11, "packageName":Ljava/lang/String;
     if-eqz v5, :cond_6
 
-    .line 191
     invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 193
     :cond_6
     const-string v16, "PhoneFactory"
 
@@ -2010,15 +1813,12 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     invoke-static/range {p0 .. p0}, Lcom/android/internal/telephony/SmsApplication;->initSmsPackageMonitor(Landroid/content/Context;)V
 
-    .line 198
     const/16 v16, 0x1
 
     sput-boolean v16, Lcom/android/internal/telephony/PhoneFactory;->sMadeDefaults:Z
 
-    .line 200
     const-string v16, "PhoneFactory"
 
     const-string v18, "Creating SubInfoRecordUpdater "
@@ -2029,7 +1829,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
     move-result-object v16
@@ -2052,7 +1851,6 @@
 
     sput-object v16, Lcom/android/internal/telephony/PhoneFactory;->sSubInfoRecordUpdater:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
-    .line 203
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v16
@@ -2065,7 +1863,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/SubscriptionController;->updatePhonesAvailability([Lcom/android/internal/telephony/PhoneProxy;)V
 
-    .line 205
     invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
     move-result-object v16
@@ -2084,25 +1881,21 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->initExtTelephonyClasses(Landroid/content/Context;[Lcom/android/internal/telephony/Phone;[Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 210
     const/4 v8, 0x0
 
     :goto_6
     if-ge v8, v10, :cond_7
 
-    .line 211
     sget-object v16, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhones:[Lcom/android/internal/telephony/PhoneProxy;
 
     aget-object v16, v16, v8
 
     invoke-virtual/range {v16 .. v16}, Lcom/android/internal/telephony/PhoneProxy;->startMonitoringImsService()V
 
-    .line 210
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_6
 
-    .line 214
     .end local v4    # "cdmaSubscription":I
     .end local v5    # "componentName":Landroid/content/ComponentName;
     .end local v7    # "hasException":Z
@@ -2116,7 +1909,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 215
     return-void
 .end method
 
@@ -2125,10 +1917,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 85
     invoke-static {p0}, Lcom/android/internal/telephony/PhoneFactory;->makeDefaultPhone(Landroid/content/Context;)V
 
-    .line 86
     return-void
 .end method
 
@@ -2138,7 +1928,6 @@
     .param p1, "defaultPhone"    # Lcom/android/internal/telephony/Phone;
 
     .prologue
-    .line 455
     sget-object v0, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
 
     invoke-static {v0, p0, p1}, Lcom/android/internal/telephony/imsphone/ImsPhoneFactory;->makePhone(Landroid/content/Context;Lcom/android/internal/telephony/PhoneNotifier;Lcom/android/internal/telephony/Phone;)Lcom/android/internal/telephony/imsphone/ImsPhone;
@@ -2153,7 +1942,6 @@
     .param p0, "sipUri"    # Ljava/lang/String;
 
     .prologue
-    .line 283
     sget-object v0, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
 
     sget-object v1, Lcom/android/internal/telephony/PhoneFactory;->sPhoneNotifier:Lcom/android/internal/telephony/PhoneNotifier;
@@ -2170,7 +1958,6 @@
     .param p0, "subId"    # I
 
     .prologue
-    .line 291
     const-string v3, "persist.radio.default.sub"
 
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -2179,7 +1966,6 @@
 
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 292
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v3
@@ -2188,13 +1974,11 @@
 
     move-result v2
 
-    .line 294
     .local v2, "phoneId":I
     sget-object v4, Lcom/android/internal/telephony/PhoneFactory;->sLockProxyPhones:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 296
     if-ltz v2, :cond_0
 
     :try_start_0
@@ -2204,32 +1988,27 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 297
     sget-object v3, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhones:[Lcom/android/internal/telephony/PhoneProxy;
 
     aget-object v3, v3, v2
 
     sput-object v3, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhone:Lcom/android/internal/telephony/PhoneProxy;
 
-    .line 298
     sget-object v3, Lcom/android/internal/telephony/PhoneFactory;->sCommandsInterfaces:[Lcom/android/internal/telephony/CommandsInterface;
 
     aget-object v3, v3, v2
 
     sput-object v3, Lcom/android/internal/telephony/PhoneFactory;->sCommandsInterface:Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 299
     const/4 v3, 0x1
 
     sput-boolean v3, Lcom/android/internal/telephony/PhoneFactory;->sMadeDefaults:Z
 
-    .line 301
     :cond_0
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 304
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v3
@@ -2238,7 +2017,6 @@
 
     move-result-object v0
 
-    .line 306
     .local v0, "defaultMccMnc":Ljava/lang/String;
     sget-object v3, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
 
@@ -2246,23 +2024,19 @@
 
     invoke-static {v3, v0, v4}, Lcom/android/internal/telephony/MccTable;->updateMccMncConfiguration(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 309
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.ACTION_DEFAULT_SUBSCRIPTION_CHANGED"
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 310
     .local v1, "intent":Landroid/content/Intent;
     const/high16 v3, 0x20000000
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 311
     invoke-static {v1, v2}, Landroid/telephony/SubscriptionManager;->putPhoneIdAndSubIdExtra(Landroid/content/Intent;I)V
 
-    .line 312
     const-string v3, "PhoneFactory"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2291,17 +2065,14 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
     sget-object v3, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
 
     sget-object v4, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {v3, v1, v4}, Landroid/content/Context;->sendStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 315
     return-void
 
-    .line 301
     .end local v0    # "defaultMccMnc":Ljava/lang/String;
     .end local v1    # "intent":Landroid/content/Intent;
     :catchall_0
@@ -2320,12 +2091,10 @@
     .param p0, "enabled"    # Z
 
     .prologue
-    .line 393
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 394
     .local v0, "value":I
     :goto_0
     sget-object v1, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
@@ -2338,7 +2107,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 396
     const-string v1, "PhoneFactory"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2361,10 +2129,8 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     return-void
 
-    .line 393
     .end local v0    # "value":I
     :cond_0
     const/4 v0, 0x1
@@ -2377,12 +2143,10 @@
     .param p0, "enabled"    # Z
 
     .prologue
-    .line 417
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 418
     .local v0, "value":I
     :goto_0
     sget-object v1, Lcom/android/internal/telephony/PhoneFactory;->sContext:Landroid/content/Context;
@@ -2395,7 +2159,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 420
     const-string v1, "PhoneFactory"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2418,10 +2181,8 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
     return-void
 
-    .line 417
     .end local v0    # "value":I
     :cond_0
     const/4 v0, 0x1

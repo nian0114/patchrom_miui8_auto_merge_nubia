@@ -50,19 +50,15 @@
     .end annotation
 
     .prologue
-    .line 522
     .local p2, "parts":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     invoke-direct {p0}, Landroid/telephony/CarrierMessagingServiceManager;-><init>()V
 
-    .line 523
     iput-object p2, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mParts:Ljava/util/List;
 
-    .line 524
     iput-object p3, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mTrackers:[Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
-    .line 525
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .param p1, "carrierMessagingService"    # Landroid/service/carrier/ICarrierMessagingService;
 
     .prologue
-    .line 543
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mParts:Ljava/util/List;
 
@@ -112,15 +107,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 552
     :goto_0
     return-void
 
-    .line 546
     :catch_0
     move-exception v6
 
-    .line 547
     .local v6, "e":Landroid/os/RemoteException;
     const-string v0, "SMSDispatcher"
 
@@ -144,7 +136,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 548
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mSenderCallback:Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;
 
     const/4 v1, 0x1
@@ -162,10 +153,8 @@
     .param p2, "senderCallback"    # Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;
 
     .prologue
-    .line 529
     iput-object p2, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mSenderCallback:Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;
 
-    .line 530
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     iget-object v0, v0, Lcom/android/internal/telephony/SMSDispatcher;->mContext:Landroid/content/Context;
@@ -176,14 +165,12 @@
 
     if-nez v0, :cond_0
 
-    .line 531
     const-string v0, "SMSDispatcher"
 
     const-string v1, "bindService() for carrier messaging service failed"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 532
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mSenderCallback:Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;
 
     const/4 v1, 0x1
@@ -192,11 +179,9 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;->onSendMultipartSmsComplete(I[I)V
 
-    .line 538
     :goto_0
     return-void
 
-    .line 536
     :cond_0
     const-string v0, "SMSDispatcher"
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 249
     iput-object p1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine$DefaultState;->this$2:Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -40,7 +39,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 252
     const-string v1, "RttService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -63,20 +61,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 266
     const/4 v0, 0x0
 
-    .line 268
     :goto_0
     :sswitch_0
     return v0
 
-    .line 255
     :sswitch_1
     iget-object v1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine$DefaultState;->this$2:Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;
 
@@ -89,7 +83,6 @@
 
     goto :goto_0
 
-    .line 258
     :sswitch_2
     iget-object v1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine$DefaultState;->this$2:Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;
 
@@ -98,7 +91,6 @@
 
     goto :goto_0
 
-    .line 261
     :sswitch_3
     iget-object v1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine$DefaultState;->this$2:Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;
 
@@ -112,7 +104,6 @@
 
     goto :goto_0
 
-    .line 253
     nop
 
     :sswitch_data_0

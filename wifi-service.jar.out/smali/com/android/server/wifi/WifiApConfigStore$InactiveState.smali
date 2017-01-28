@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 116
     iput-object p1, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,37 +37,30 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 118
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 129
     const/4 v1, 0x0
 
-    .line 131
     :goto_0
     return v1
 
-    .line 120
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/net/wifi/WifiConfiguration;
 
-    .line 121
     .local v0, "config":Landroid/net/wifi/WifiConfiguration;
     iget-object v1, v0, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 122
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     # setter for: Lcom/android/server/wifi/WifiApConfigStore;->mWifiApConfig:Landroid/net/wifi/WifiConfiguration;
     invoke-static {v1, v0}, Lcom/android/server/wifi/WifiApConfigStore;->access$002(Lcom/android/server/wifi/WifiApConfigStore;Landroid/net/wifi/WifiConfiguration;)Landroid/net/wifi/WifiConfiguration;
 
-    .line 123
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
@@ -81,13 +73,11 @@
     # invokes: Lcom/android/server/wifi/WifiApConfigStore;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/WifiApConfigStore;->access$300(Lcom/android/server/wifi/WifiApConfigStore;Lcom/android/internal/util/IState;)V
 
-    .line 131
     :goto_1
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 125
     :cond_0
     const-string v1, "WifiApConfigStore"
 
@@ -113,7 +103,6 @@
 
     goto :goto_1
 
-    .line 118
     :pswitch_data_0
     .packed-switch 0x20019
         :pswitch_0

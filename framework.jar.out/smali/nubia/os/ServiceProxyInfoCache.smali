@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,7 +24,6 @@
     .end annotation
 
     .prologue
-    .line 16
     const/4 v1, 0x4
 
     new-array v0, v1, [Landroid/app/ServiceProxyInfo;
@@ -62,7 +60,6 @@
 
     aput-object v2, v0, v1
 
-    .line 22
     .local v0, "infos":[Landroid/app/ServiceProxyInfo;, "[Landroid/app/ServiceProxyInfo<*>;"
     return-object v0
 .end method

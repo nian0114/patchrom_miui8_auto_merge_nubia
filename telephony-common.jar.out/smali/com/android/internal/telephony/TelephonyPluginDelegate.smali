@@ -18,10 +18,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 54
     sput-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
-    .line 55
     sput-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sMe:Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
     return-void
@@ -31,10 +29,8 @@
     .locals 0
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     return-void
 .end method
 
@@ -42,19 +38,16 @@
     .locals 2
 
     .prologue
-    .line 61
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sMe:Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
     if-nez v0, :cond_0
 
-    .line 62
     const-string v0, "TelephonyPluginDelegate"
 
     const-string v1, "error: TelephonyPluginDelegate instance is not created!!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     :cond_0
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sMe:Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
@@ -67,12 +60,10 @@
     .param p1, "qtiClassLoader"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 72
     sget-object v6, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sMe:Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
     if-nez v6, :cond_3
 
-    .line 73
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -83,7 +74,6 @@
 
     move-result-object v4
 
-    .line 75
     .local v4, "fullClsName":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -95,15 +85,12 @@
 
     move-result-object v5
 
-    .line 77
     .local v5, "libPath":Ljava/lang/String;
     move-object v0, p1
 
-    .line 78
     .local v0, "classLoader":Ljava/lang/ClassLoader;
     if-nez v0, :cond_0
 
-    .line 79
     new-instance v0, Ldalvik/system/PathClassLoader;
 
     .end local v0    # "classLoader":Ljava/lang/ClassLoader;
@@ -113,7 +100,6 @@
 
     invoke-direct {v0, v5, v6}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
-    .line 87
     .restart local v0    # "classLoader":Ljava/lang/ClassLoader;
     :cond_0
     const-string v6, "TelephonyPluginDelegate"
@@ -138,7 +124,6 @@
 
     invoke-static {v6, v7}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     if-eqz v4, :cond_1
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
@@ -147,7 +132,6 @@
 
     if-nez v6, :cond_2
 
-    .line 90
     :cond_1
     const-string v6, "TelephonyPluginDelegate"
 
@@ -155,14 +139,11 @@
 
     invoke-static {v6, v7}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     const-string v4, "com.android.internal.telephony.DefaultTelephonyPlugin"
 
-    .line 93
     :cond_2
     const/4 v1, 0x0
 
-    .line 95
     .local v1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v6, 0x0
 
@@ -171,7 +152,6 @@
 
     move-result-object v1
 
-    .line 96
     const-string v6, "TelephonyPluginDelegate"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -194,7 +174,6 @@
 
     invoke-static {v6, v7}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     const/4 v6, 0x0
 
     new-array v6, v6, [Ljava/lang/Class;
@@ -203,7 +182,6 @@
 
     move-result-object v2
 
-    .line 98
     .local v2, "custMethod":Ljava/lang/reflect/Constructor;
     const-string v6, "TelephonyPluginDelegate"
 
@@ -227,7 +205,6 @@
 
     invoke-static {v6, v7}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     const/4 v6, 0x0
 
     new-array v6, v6, [Ljava/lang/Object;
@@ -242,7 +219,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 106
     .end local v2    # "custMethod":Ljava/lang/reflect/Constructor;
     :goto_0
     new-instance v6, Lcom/android/internal/telephony/TelephonyPluginDelegate;
@@ -251,7 +227,6 @@
 
     sput-object v6, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sMe:Lcom/android/internal/telephony/TelephonyPluginDelegate;
 
-    .line 110
     .end local v0    # "classLoader":Ljava/lang/ClassLoader;
     .end local v1    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v4    # "fullClsName":Ljava/lang/String;
@@ -259,7 +234,6 @@
     :goto_1
     return-void
 
-    .line 100
     .restart local v0    # "classLoader":Ljava/lang/ClassLoader;
     .restart local v1    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .restart local v4    # "fullClsName":Ljava/lang/String;
@@ -267,18 +241,15 @@
     :catch_0
     move-exception v3
 
-    .line 101
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 102
     const-string v6, "TelephonyPluginDelegate"
 
     const-string v7, "Error loading TelephonyPlugin"
 
     invoke-static {v6, v7}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     new-instance v6, Lcom/android/internal/telephony/DefaultTelephonyPlugin;
 
     invoke-direct {v6}, Lcom/android/internal/telephony/DefaultTelephonyPlugin;-><init>()V
@@ -287,7 +258,6 @@
 
     goto :goto_0
 
-    .line 108
     .end local v0    # "classLoader":Ljava/lang/ClassLoader;
     .end local v1    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v3    # "e":Ljava/lang/Exception;
@@ -312,12 +282,10 @@
     .param p3, "commandsInterfaces"    # [Lcom/android/internal/telephony/CommandsInterface;
 
     .prologue
-    .line 150
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/TelephonyPluginBase;->initExtTelephonyClasses(Landroid/content/Context;[Lcom/android/internal/telephony/Phone;[Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 151
     return-void
 .end method
 
@@ -327,12 +295,10 @@
     .param p2, "commandsInterfaces"    # [Lcom/android/internal/telephony/CommandsInterface;
 
     .prologue
-    .line 126
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/telephony/TelephonyPluginBase;->initSubscriptionController(Landroid/content/Context;[Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 127
     return-void
 .end method
 
@@ -344,7 +310,6 @@
     .param p4, "phoneId"    # I
 
     .prologue
-    .line 145
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/internal/telephony/TelephonyPluginBase;->makeCDMALTEPhone(Landroid/content/Context;Lcom/android/internal/telephony/CommandsInterface;Lcom/android/internal/telephony/PhoneNotifier;I)Lcom/android/internal/telephony/PhoneBase;
@@ -359,7 +324,6 @@
     .param p1, "phone"    # Lcom/android/internal/telephony/PhoneBase;
 
     .prologue
-    .line 113
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/TelephonyPluginBase;->makeDcTracker(Lcom/android/internal/telephony/PhoneBase;)Lcom/android/internal/telephony/dataconnection/DcTracker;
@@ -374,7 +338,6 @@
     .param p1, "phones"    # [Lcom/android/internal/telephony/PhoneProxy;
 
     .prologue
-    .line 121
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/TelephonyPluginBase;->makeDctController([Lcom/android/internal/telephony/PhoneProxy;)Lcom/android/internal/telephony/dataconnection/DctController;
@@ -389,12 +352,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 117
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/TelephonyPluginBase;->makeDefaultPhones(Landroid/content/Context;)V
 
-    .line 118
     return-void
 .end method
 
@@ -406,7 +367,6 @@
     .param p4, "phoneId"    # I
 
     .prologue
-    .line 136
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/internal/telephony/TelephonyPluginBase;->makeGSMPhone(Landroid/content/Context;Lcom/android/internal/telephony/CommandsInterface;Lcom/android/internal/telephony/PhoneNotifier;I)Lcom/android/internal/telephony/PhoneBase;
@@ -421,7 +381,6 @@
     .param p1, "phone"    # Lcom/android/internal/telephony/gsm/GSMPhone;
 
     .prologue
-    .line 154
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/TelephonyPluginBase;->makeGsmServiceStateTracker(Lcom/android/internal/telephony/gsm/GSMPhone;)Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
@@ -436,7 +395,6 @@
     .param p1, "phone"    # Lcom/android/internal/telephony/PhoneBase;
 
     .prologue
-    .line 140
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/TelephonyPluginBase;->makePhoneProxy(Lcom/android/internal/telephony/PhoneBase;)Lcom/android/internal/telephony/PhoneProxy;
@@ -453,7 +411,6 @@
     .param p3, "ci"    # Lcom/android/internal/telephony/CommandsInterface;
 
     .prologue
-    .line 158
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/TelephonyPluginBase;->makeSIMRecords(Lcom/android/internal/telephony/uicc/UiccCardApplication;Landroid/content/Context;Lcom/android/internal/telephony/CommandsInterface;)Lcom/android/internal/telephony/uicc/SIMRecords;
@@ -470,7 +427,6 @@
     .param p3, "commandsInterfaces"    # [Lcom/android/internal/telephony/CommandsInterface;
 
     .prologue
-    .line 131
     sget-object v0, Lcom/android/internal/telephony/TelephonyPluginDelegate;->sPlugin:Lcom/android/internal/telephony/TelephonyPluginBase;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/TelephonyPluginBase;->makeSubscriptionInfoUpdater(Landroid/content/Context;[Lcom/android/internal/telephony/Phone;[Lcom/android/internal/telephony/CommandsInterface;)Lcom/android/internal/telephony/SubscriptionInfoUpdater;

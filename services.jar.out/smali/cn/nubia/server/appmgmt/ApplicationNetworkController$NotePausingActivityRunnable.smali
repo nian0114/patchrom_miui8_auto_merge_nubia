@@ -35,21 +35,16 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 532
     iput-object p1, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 533
     iput p2, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->mStackId:I
 
-    .line 534
     iput p3, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->mUid:I
 
-    .line 535
     iput-object p4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->mPausingPackage:Ljava/lang/String;
 
-    .line 536
     return-void
 .end method
 
@@ -59,7 +54,6 @@
     .locals 8
 
     .prologue
-    .line 540
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mResumedPackages:Ljava/util/HashMap;
@@ -75,7 +69,6 @@
 
     invoke-virtual {v4, v5}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 541
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mResumedPackageUids:Ljava/util/HashMap;
@@ -91,7 +84,6 @@
 
     invoke-virtual {v4, v5}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 543
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     # getter for: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->mResumedPackages:Ljava/util/HashMap;
@@ -125,7 +117,6 @@
 
     move-result v2
 
-    .line 544
     .local v2, "stackId":I
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -144,7 +135,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 545
     .local v1, "name":Ljava/lang/String;
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -167,7 +157,6 @@
 
     move-result v3
 
-    .line 547
     .local v3, "uid":I
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->mPausingPackage:Ljava/lang/String;
 
@@ -181,7 +170,6 @@
 
     if-ne v4, v3, :cond_0
 
-    .line 548
     :cond_1
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -192,7 +180,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 549
     const-string v4, "ApplicationNetworkController"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -233,7 +220,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 559
     .end local v1    # "name":Ljava/lang/String;
     .end local v2    # "stackId":I
     .end local v3    # "uid":I
@@ -241,7 +227,6 @@
     :goto_0
     return-void
 
-    .line 557
     :cond_3
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
@@ -250,7 +235,6 @@
     # invokes: Lcn/nubia/server/appmgmt/ApplicationNetworkController;->cancelPendingControlRunnable(I)V
     invoke-static {v4, v5}, Lcn/nubia/server/appmgmt/ApplicationNetworkController;->access$700(Lcn/nubia/server/appmgmt/ApplicationNetworkController;I)V
 
-    .line 558
     iget-object v4, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->this$0:Lcn/nubia/server/appmgmt/ApplicationNetworkController;
 
     iget v5, p0, Lcn/nubia/server/appmgmt/ApplicationNetworkController$NotePausingActivityRunnable;->mUid:I

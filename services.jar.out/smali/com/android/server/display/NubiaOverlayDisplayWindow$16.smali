@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1752
     iput-object p1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$16;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,18 +45,15 @@
 
     const/4 v2, 0x0
 
-    .line 1756
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1764
     :goto_0
     return v2
 
-    .line 1758
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$16;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
@@ -65,7 +61,6 @@
 
     goto :goto_0
 
-    .line 1761
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$16;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
@@ -75,7 +70,6 @@
 
     goto :goto_0
 
-    .line 1756
     nop
 
     :pswitch_data_0

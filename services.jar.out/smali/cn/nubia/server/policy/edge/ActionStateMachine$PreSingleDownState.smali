@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 412
     iput-object p1, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$PreSingleDownState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,14 +36,12 @@
     .locals 2
 
     .prologue
-    .line 415
     const-string v0, "FitActionStateMachine"
 
     const-string v1, "enter PreSingleDownState"
 
     invoke-static {v0, v1}, Lcn/nubia/server/policy/edge/LogUtils;->sysi(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 416
     return-void
 .end method
 
@@ -55,12 +52,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 420
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcn/nubia/edgegesture/EdgeGesture;
 
-    .line 421
     .local v0, "gesture":Lcn/nubia/edgegesture/EdgeGesture;
     const-string v2, "FitActionStateMachine"
 
@@ -101,18 +96,15 @@
 
     invoke-static {v2, v3}, Lcn/nubia/server/policy/edge/LogUtils;->sysd(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 423
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 439
     const/4 v1, 0x0
 
     :goto_0
     return v1
 
-    .line 425
     :sswitch_0
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$PreSingleDownState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
@@ -121,7 +113,6 @@
 
     goto :goto_0
 
-    .line 428
     :sswitch_1
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$PreSingleDownState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
@@ -130,7 +121,6 @@
 
     goto :goto_0
 
-    .line 431
     :sswitch_2
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$PreSingleDownState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
@@ -139,7 +129,6 @@
 
     goto :goto_0
 
-    .line 435
     :sswitch_3
     iget-object v2, p0, Lcn/nubia/server/policy/edge/ActionStateMachine$PreSingleDownState;->this$0:Lcn/nubia/server/policy/edge/ActionStateMachine;
 
@@ -148,7 +137,6 @@
 
     goto :goto_0
 
-    .line 423
     :sswitch_data_0
     .sparse-switch
         0x1002 -> :sswitch_1

@@ -154,39 +154,32 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     const/4 v0, 0x6
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->MAX_CLEAR_BITMAP:I
 
-    .line 98
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
-    .line 99
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mRecentAppSwitchList:Ljava/util/List;
 
-    .line 100
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mBitmapOptions:Landroid/graphics/BitmapFactory$Options;
 
-    .line 101
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mBitmapOptions:Landroid/graphics/BitmapFactory$Options;
 
     sget-object v1, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
     iput-object v1, v0, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 102
     const-string v0, "activity"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -197,7 +190,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mAm:Landroid/app/ActivityManager;
 
-    .line 103
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -212,7 +204,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mScreenWidth:I
 
-    .line 104
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -227,7 +218,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mScreenHight:I
 
-    .line 105
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -242,7 +232,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailWidth:I
 
-    .line 106
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -257,7 +246,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailHeight:I
 
-    .line 107
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -272,7 +260,6 @@
 
     iput v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mDensity:F
 
-    .line 108
     return-void
 .end method
 
@@ -281,7 +268,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mCallBack:Lcn/nubia/server/policy/edge/effects/resloader/IScreenCallback;
 
     return-object v0
@@ -292,7 +278,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mSafeGuarder:Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;
 
     return-object v0
@@ -303,7 +288,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -317,7 +301,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 61
     invoke-direct {p0, p1, p2, p3}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->getBlurWallpaper(ZZI)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -331,7 +314,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 61
     invoke-direct {p0, p1}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->getThumbnail(I)Landroid/app/ActivityManager$TaskThumbnail;
 
     move-result-object v0
@@ -344,7 +326,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     .prologue
-    .line 61
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailWidth:I
 
     return v0
@@ -355,7 +336,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     .prologue
-    .line 61
     iget v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailHeight:I
 
     return v0
@@ -366,7 +346,6 @@
     .param p0, "x0"    # Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -379,7 +358,6 @@
     .param p2, "x2"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 61
     invoke-direct {p0, p1, p2}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->getDefaultThumbnail(Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -395,24 +373,20 @@
     .param p4, "funs"    # I
 
     .prologue
-    .line 518
     if-eqz p2, :cond_1
 
     const/16 v5, 0x2d0
 
-    .line 519
     .local v5, "bWidth":I
     :goto_0
     if-eqz p2, :cond_2
 
     const/16 v4, 0x500
 
-    .line 520
     .local v4, "bHeight":I
     :goto_1
     const/16 v16, 0x28
 
-    .line 521
     .local v16, "yOffset":I
     int-to-float v0, v5
 
@@ -432,7 +406,6 @@
 
     div-float v10, v17, v18
 
-    .line 522
     .local v10, "ratio":F
     sget-object v17, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -442,13 +415,11 @@
 
     move-result-object v8
 
-    .line 523
     .local v8, "newBm":Landroid/graphics/Bitmap;
     new-instance v6, Landroid/graphics/Canvas;
 
     invoke-direct {v6, v8}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 524
     .local v6, "canvas":Landroid/graphics/Canvas;
     new-instance v11, Landroid/graphics/Rect;
 
@@ -474,7 +445,6 @@
 
     invoke-direct {v11, v0, v1, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 525
     .local v11, "src":Landroid/graphics/Rect;
     new-instance v7, Landroid/graphics/Rect;
 
@@ -488,13 +458,11 @@
 
     invoke-direct {v7, v0, v1, v5, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 526
     .local v7, "dst":Landroid/graphics/Rect;
     new-instance v9, Landroid/graphics/Paint;
 
     invoke-direct {v9}, Landroid/graphics/Paint;-><init>()V
 
-    .line 527
     .local v9, "paint":Landroid/graphics/Paint;
     const/16 v17, 0x1
 
@@ -502,18 +470,14 @@
 
     invoke-virtual {v9, v0}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 528
     move-object/from16 v0, p1
 
     invoke-virtual {v6, v0, v11, v7, v9}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 530
     if-eqz p2, :cond_0
 
-    .line 531
     const/4 v13, 0x0
 
-    .line 532
     .local v13, "tipsStr":Ljava/lang/String;
     const/16 v17, 0x2712
 
@@ -523,7 +487,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 533
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
@@ -540,7 +503,6 @@
 
     move-result-object v13
 
-    .line 537
     :goto_2
     move-object/from16 v0, p0
 
@@ -548,11 +510,9 @@
 
     move-result-object v12
 
-    .line 539
     .local v12, "tipBitmap":Landroid/graphics/Bitmap;
     if-nez p3, :cond_4
 
-    .line 540
     invoke-virtual {v12}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v17
@@ -561,7 +521,6 @@
 
     div-int/lit8 v14, v17, 0x2
 
-    .line 541
     .local v14, "x":I
     move/from16 v0, v16
 
@@ -583,7 +542,6 @@
 
     float-to-int v15, v0
 
-    .line 546
     .local v15, "y":I
     :goto_3
     int-to-float v0, v14
@@ -604,7 +562,6 @@
 
     invoke-virtual {v6, v12, v0, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 548
     .end local v12    # "tipBitmap":Landroid/graphics/Bitmap;
     .end local v13    # "tipsStr":Ljava/lang/String;
     .end local v14    # "x":I
@@ -612,7 +569,6 @@
     :cond_0
     return-object v8
 
-    .line 518
     .end local v4    # "bHeight":I
     .end local v5    # "bWidth":I
     .end local v6    # "canvas":Landroid/graphics/Canvas;
@@ -629,7 +585,6 @@
 
     goto/16 :goto_0
 
-    .line 519
     .restart local v5    # "bWidth":I
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Bitmap;->getHeight()I
@@ -638,7 +593,6 @@
 
     goto/16 :goto_1
 
-    .line 535
     .restart local v4    # "bHeight":I
     .restart local v6    # "canvas":Landroid/graphics/Canvas;
     .restart local v7    # "dst":Landroid/graphics/Rect;
@@ -667,7 +621,6 @@
 
     goto :goto_2
 
-    .line 543
     .restart local v12    # "tipBitmap":Landroid/graphics/Bitmap;
     :cond_4
     invoke-virtual {v12}, Landroid/graphics/Bitmap;->getWidth()I
@@ -678,7 +631,6 @@
 
     div-int/lit8 v14, v17, 0x2
 
-    .line 544
     .restart local v14    # "x":I
     move/from16 v0, v16
 
@@ -722,18 +674,15 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 448
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
 
-    .line 449
     .local v4, "sourceBitmapWidth":I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
 
-    .line 451
     .local v3, "sourceBitmapHeight":I
     int-to-float v6, v3
 
@@ -751,7 +700,6 @@
 
     float-to-int v1, v6
 
-    .line 452
     .local v1, "clipBitmapWidth":I
     sub-int v6, v4, v1
 
@@ -761,7 +709,6 @@
 
     move-result v5
 
-    .line 453
     .local v5, "x":I
     sget-object v6, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -769,13 +716,11 @@
 
     move-result-object v0
 
-    .line 455
     .local v0, "bm":Landroid/graphics/Bitmap;
     new-instance v2, Landroid/graphics/Canvas;
 
     invoke-direct {v2, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 456
     .local v2, "copyCanvas":Landroid/graphics/Canvas;
     new-instance v6, Landroid/graphics/Rect;
 
@@ -791,10 +736,8 @@
 
     invoke-virtual {v2, p1, v6, v7, v8}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 459
     invoke-virtual {v2, p2}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 460
     return-object v0
 .end method
 
@@ -803,7 +746,6 @@
     .param p1, "bm"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 436
     :try_start_0
     const-string v3, "nubia.util.BlurUtil"
 
@@ -811,7 +753,6 @@
 
     move-result-object v0
 
-    .line 437
     .local v0, "blurUtil":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v3, "doBlur"
 
@@ -847,13 +788,11 @@
 
     move-result-object v2
 
-    .line 439
     .local v2, "getBlur":Ljava/lang/reflect/Method;
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 440
     const/4 v3, 0x4
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -900,17 +839,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 443
     .end local v0    # "blurUtil":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v2    # "getBlur":Ljava/lang/reflect/Method;
     :goto_0
     return-object v3
 
-    .line 441
     :catch_0
     move-exception v1
 
-    .line 443
     .local v1, "e":Ljava/lang/Exception;
     const/4 v3, 0x0
 
@@ -927,7 +863,6 @@
     .param p6, "funs"    # I
 
     .prologue
-    .line 464
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
@@ -936,15 +871,12 @@
 
     move-result-object v1
 
-    .line 465
     .local v1, "d":Landroid/graphics/drawable/Drawable;
     const/4 v0, 0x0
 
-    .line 466
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     const/4 v3, 0x0
 
-    .line 467
     .local v3, "newBm":Landroid/graphics/Bitmap;
     if-eqz v1, :cond_0
 
@@ -952,7 +884,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 468
     check-cast v1, Landroid/graphics/drawable/BitmapDrawable;
 
     .end local v1    # "d":Landroid/graphics/drawable/Drawable;
@@ -964,18 +895,15 @@
 
     move-result-object v2
 
-    .line 470
     .local v2, "liveWallpaperThumb":Landroid/graphics/Bitmap;
     invoke-direct {p0, v2}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->doBlurBitmapNoScale(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 471
     invoke-direct {p0, v0, p4, p5, p6}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->addTipToWallpaper(Landroid/graphics/Bitmap;ZZI)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    .line 473
     .end local v2    # "liveWallpaperThumb":Landroid/graphics/Bitmap;
     :cond_0
     return-object v3
@@ -988,10 +916,8 @@
     .param p3, "funs"    # I
 
     .prologue
-    .line 419
     const/4 v7, 0x0
 
-    .line 420
     .local v7, "bitmap":Landroid/graphics/Bitmap;
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
@@ -1003,14 +929,11 @@
 
     move-result-object v2
 
-    .line 422
     .local v2, "info":Landroid/app/WallpaperInfo;
     if-eqz v2, :cond_0
 
-    .line 423
     const/high16 v3, 0x27000000
 
-    .line 424
     .local v3, "maskColor":I
     iget-object v1, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
@@ -1026,12 +949,10 @@
 
     move-result-object v7
 
-    .line 430
     .end local v3    # "maskColor":I
     :goto_0
     return-object v7
 
-    .line 427
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->getBlurWallpaperNew(ZZI)Landroid/graphics/Bitmap;
 
@@ -1046,7 +967,6 @@
     .param p2, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 168
     iget v11, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailWidth:I
 
     iget v12, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailHeight:I
@@ -1057,7 +977,6 @@
 
     move-result-object v0
 
-    .line 169
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     iget v11, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailHeight:I
 
@@ -1069,7 +988,6 @@
 
     div-float v6, v11, v12
 
-    .line 170
     .local v6, "ratioY":F
     iget v11, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailWidth:I
 
@@ -1081,7 +999,6 @@
 
     div-float v5, v11, v12
 
-    .line 171
     .local v5, "ratioX":F
     const v11, 0x436e4ccd    # 238.3f
 
@@ -1093,7 +1010,6 @@
 
     float-to-int v10, v11
 
-    .line 172
     .local v10, "transY":I
     const/high16 v11, 0x43110000    # 145.0f
 
@@ -1105,7 +1021,6 @@
 
     float-to-int v9, v11
 
-    .line 173
     .local v9, "transX":I
     const/high16 v11, 0x428c0000    # 70.0f
 
@@ -1117,7 +1032,6 @@
 
     float-to-int v3, v11
 
-    .line 174
     .local v3, "iconW":I
     const/high16 v11, 0x428c0000    # 70.0f
 
@@ -1129,7 +1043,6 @@
 
     float-to-int v2, v11
 
-    .line 175
     .local v2, "iconH":I
     iget v11, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mScreenWidth:I
 
@@ -1143,7 +1056,6 @@
 
     float-to-int v7, v11
 
-    .line 176
     .local v7, "textX":I
     const v11, 0x43a32666    # 326.3f
 
@@ -1155,25 +1067,21 @@
 
     float-to-int v8, v11
 
-    .line 177
     .local v8, "textY":I
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 178
     .local v1, "c":Landroid/graphics/Canvas;
     new-instance v4, Landroid/graphics/Paint;
 
     invoke-direct {v4}, Landroid/graphics/Paint;-><init>()V
 
-    .line 179
     .local v4, "paint":Landroid/graphics/Paint;
     sget-object v11, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v4, v11}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 180
     const/high16 v11, 0x41600000    # 14.0f
 
     mul-float/2addr v11, v5
@@ -1184,48 +1092,38 @@
 
     invoke-virtual {v4, v11}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 181
     const/4 v11, -0x1
 
     invoke-virtual {v1, v11}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 182
     const/4 v11, 0x0
 
     const/4 v12, 0x0
 
     invoke-virtual {p1, v11, v12, v3, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 183
     invoke-virtual {v1}, Landroid/graphics/Canvas;->save()I
 
-    .line 184
     int-to-float v11, v9
 
     int-to-float v12, v10
 
     invoke-virtual {v1, v11, v12}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 185
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 186
     invoke-virtual {v1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 187
     invoke-virtual {v1}, Landroid/graphics/Canvas;->save()I
 
-    .line 188
     const/16 v11, 0x8a
 
     invoke-virtual {v4, v11}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 189
     const/4 v11, 0x1
 
     invoke-virtual {v4, v11}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 190
     invoke-interface/range {p2 .. p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v11
@@ -1236,10 +1134,8 @@
 
     invoke-virtual {v1, v11, v12, v13, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 191
     invoke-virtual {v1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 192
     return-object v0
 .end method
 
@@ -1249,22 +1145,18 @@
     .param p2, "packageManager"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 236
     iget-object v2, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v1, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 237
     .local v1, "pInfo":Landroid/content/pm/PackageItemInfo;
     invoke-virtual {v1, p2}, Landroid/content/pm/PackageItemInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 239
     .local v0, "iconDrawable":Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_0
 
-    .line 242
     .end local v0    # "iconDrawable":Landroid/graphics/drawable/Drawable;
     :goto_0
     return-object v0
@@ -1283,25 +1175,21 @@
     .param p1, "r"    # Landroid/app/ActivityManager$RecentTaskInfo;
 
     .prologue
-    .line 140
     new-instance v0, Landroid/content/Intent;
 
     iget-object v3, p1, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
     invoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 141
     .local v0, "intent":Landroid/content/Intent;
     iget-object v3, p1, Landroid/app/ActivityManager$RecentTaskInfo;->origActivity:Landroid/content/ComponentName;
 
     if-eqz v3, :cond_0
 
-    .line 142
     iget-object v3, p1, Landroid/app/ActivityManager$RecentTaskInfo;->origActivity:Landroid/content/ComponentName;
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 144
     :cond_0
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
@@ -1309,7 +1197,6 @@
 
     move-result-object v1
 
-    .line 145
     .local v1, "pm":Landroid/content/pm/PackageManager;
     invoke-virtual {v0}, Landroid/content/Intent;->getFlags()I
 
@@ -1325,14 +1212,12 @@
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 147
     const/4 v3, 0x0
 
     invoke-virtual {v1, v0, v3}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v2
 
-    .line 150
     .local v2, "resolveInfo":Landroid/content/pm/ResolveInfo;
     invoke-direct {p0, v2, v1}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->getFullResIcon(Landroid/content/pm/ResolveInfo;Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
@@ -1349,38 +1234,31 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 302
     if-nez p1, :cond_1
 
-    .line 317
     :cond_0
     :goto_0
     return-object v4
 
-    .line 306
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 307
     .local v2, "iconWidth":I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
-    .line 309
     .local v1, "iconHeight":I
     if-lez v2, :cond_0
 
     if-lez v1, :cond_0
 
-    .line 313
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 314
     .local v0, "blurPaint":Landroid/graphics/Paint;
     new-instance v5, Landroid/graphics/BlurMaskFilter;
 
@@ -1390,12 +1268,10 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setMaskFilter(Landroid/graphics/MaskFilter;)Landroid/graphics/MaskFilter;
 
-    .line 316
     invoke-virtual {p1, v0, v4}, Landroid/graphics/Bitmap;->extractAlpha(Landroid/graphics/Paint;[I)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    .line 317
     .local v3, "resultBm":Landroid/graphics/Bitmap;
     const/4 v4, 0x0
 
@@ -1413,35 +1289,29 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 246
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mAm:Landroid/app/ActivityManager;
 
     invoke-virtual {v4, p1}, Landroid/app/ActivityManager;->getTaskThumbnail(I)Landroid/app/ActivityManager$TaskThumbnail;
 
     move-result-object v1
 
-    .line 247
     .local v1, "taskThumbnail":Landroid/app/ActivityManager$TaskThumbnail;
     if-nez v1, :cond_1
 
     move-object v1, v3
 
-    .line 267
     .end local v1    # "taskThumbnail":Landroid/app/ActivityManager$TaskThumbnail;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 250
     .restart local v1    # "taskThumbnail":Landroid/app/ActivityManager$TaskThumbnail;
     :cond_1
     iget-object v2, v1, Landroid/app/ActivityManager$TaskThumbnail;->mainThumbnail:Landroid/graphics/Bitmap;
 
-    .line 252
     .local v2, "thumbnail":Landroid/graphics/Bitmap;
     iget-object v0, v1, Landroid/app/ActivityManager$TaskThumbnail;->thumbnailFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
-    .line 253
     .local v0, "descriptor":Landroid/os/ParcelFileDescriptor;
     const-string v4, "FitAnim"
 
@@ -1475,12 +1345,10 @@
 
     invoke-static {v4, v5}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     if-nez v2, :cond_2
 
     if-eqz v0, :cond_2
 
-    .line 255
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v4
@@ -1491,10 +1359,8 @@
 
     move-result-object v2
 
-    .line 258
     iput-object v2, v1, Landroid/app/ActivityManager$TaskThumbnail;->mainThumbnail:Landroid/graphics/Bitmap;
 
-    .line 260
     :cond_2
     const-string v3, "FitAnim"
 
@@ -1520,10 +1386,8 @@
 
     invoke-static {v3, v4}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     if-eqz v0, :cond_0
 
-    .line 263
     :try_start_0
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_0
@@ -1531,7 +1395,6 @@
 
     goto :goto_0
 
-    .line 264
     :catch_0
     move-exception v3
 
@@ -1544,7 +1407,6 @@
     .locals 2
 
     .prologue
-    .line 815
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mGuideIconLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
@@ -1559,19 +1421,16 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 816
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mGuideIconLoader:Landroid/os/AsyncTask;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 817
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mGuideIconLoader:Landroid/os/AsyncTask;
 
-    .line 819
     :cond_0
     return-void
 .end method
@@ -1584,7 +1443,6 @@
 
     const/4 v2, 0x1
 
-    .line 822
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mCurrentScreenLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
@@ -1599,15 +1457,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 823
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mCurrentScreenLoader:Landroid/os/AsyncTask;
 
     invoke-virtual {v0, v2}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 824
     iput-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mCurrentScreenLoader:Landroid/os/AsyncTask;
 
-    .line 826
     :cond_0
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mBlurWallpaperLoader:Landroid/os/AsyncTask;
 
@@ -1623,15 +1478,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 827
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mBlurWallpaperLoader:Landroid/os/AsyncTask;
 
     invoke-virtual {v0, v2}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 828
     iput-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mBlurWallpaperLoader:Landroid/os/AsyncTask;
 
-    .line 830
     :cond_1
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailLoader:Landroid/os/AsyncTask;
 
@@ -1647,15 +1499,12 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 831
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailLoader:Landroid/os/AsyncTask;
 
     invoke-virtual {v0, v2}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 832
     iput-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailLoader:Landroid/os/AsyncTask;
 
-    .line 834
     :cond_2
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mStartScreenLoader:Landroid/os/AsyncTask;
 
@@ -1671,15 +1520,12 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 835
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mStartScreenLoader:Landroid/os/AsyncTask;
 
     invoke-virtual {v0, v2}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 836
     iput-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mStartScreenLoader:Landroid/os/AsyncTask;
 
-    .line 838
     :cond_3
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mGuideIconLoader:Landroid/os/AsyncTask;
 
@@ -1695,15 +1541,12 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 839
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mGuideIconLoader:Landroid/os/AsyncTask;
 
     invoke-virtual {v0, v2}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 840
     iput-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mGuideIconLoader:Landroid/os/AsyncTask;
 
-    .line 842
     :cond_4
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mSplitWallpaperLoader:Landroid/os/AsyncTask;
 
@@ -1719,15 +1562,12 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 843
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mSplitWallpaperLoader:Landroid/os/AsyncTask;
 
     invoke-virtual {v0, v2}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 844
     iput-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mSplitWallpaperLoader:Landroid/os/AsyncTask;
 
-    .line 846
     :cond_5
     return-void
 .end method
@@ -1738,41 +1578,32 @@
     .param p2, "isRight"    # Z
 
     .prologue
-    .line 271
     if-nez p1, :cond_0
 
-    .line 272
     const/4 v3, 0x0
 
-    .line 299
     :goto_0
     return-object v3
 
-    .line 275
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 276
     .local v2, "oriWidth":I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
-    .line 277
     .local v1, "oriHeigth":I
     const/16 v8, 0x14
 
-    .line 278
     .local v8, "shadowWidth":I
     const/16 v5, 0x14
 
-    .line 279
     .local v5, "shadowHeigth":I
     const/high16 v7, 0x41200000    # 10.0f
 
-    .line 280
     .local v7, "shadowRadius":F
     add-int v9, v2, v8
 
@@ -1784,41 +1615,34 @@
 
     move-result-object v3
 
-    .line 285
     .local v3, "resultBm":Landroid/graphics/Bitmap;
     invoke-direct {p0, p1, v7}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->getShadowBitmap(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
-    .line 287
     .local v4, "shadowBm":Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 288
     .local v0, "canvas":Landroid/graphics/Canvas;
     new-instance v6, Landroid/graphics/Paint;
 
     invoke-direct {v6}, Landroid/graphics/Paint;-><init>()V
 
-    .line 289
     .local v6, "shadowPaint":Landroid/graphics/Paint;
     const/high16 v9, 0x38000000
 
     invoke-virtual {v6, v9}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 290
     if-eqz p2, :cond_1
 
-    .line 291
     int-to-float v9, v8
 
     int-to-float v10, v5
 
     invoke-virtual {v0, v4, v9, v10, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 292
     const/4 v9, 0x0
 
     const/4 v10, 0x0
@@ -1829,7 +1653,6 @@
 
     goto :goto_0
 
-    .line 295
     :cond_1
     const/4 v9, 0x0
 
@@ -1837,7 +1660,6 @@
 
     invoke-virtual {v0, v4, v9, v10, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 296
     int-to-float v9, v8
 
     const/4 v10, 0x0
@@ -1855,12 +1677,10 @@
     .param p2, "ratio"    # F
 
     .prologue
-    .line 478
     new-instance v4, Landroid/graphics/Paint;
 
     invoke-direct {v4}, Landroid/graphics/Paint;-><init>()V
 
-    .line 479
     .local v4, "paint":Landroid/graphics/Paint;
     const/high16 v8, 0x41900000    # 18.0f
 
@@ -1872,27 +1692,22 @@
 
     invoke-virtual {v4, v8}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 480
     const/4 v8, -0x1
 
     invoke-virtual {v4, v8}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 482
     sget-object v8, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v4, v8}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 483
     const/4 v8, 0x1
 
     invoke-virtual {v4, v8}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 484
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
-    .line 485
     .local v5, "rect":Landroid/graphics/Rect;
     const/4 v8, 0x0
 
@@ -1902,12 +1717,10 @@
 
     invoke-virtual {v4, p1, v8, v9, v5}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    .line 487
     invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
 
     move-result v7
 
-    .line 488
     .local v7, "strWidth":I
     invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
 
@@ -1923,7 +1736,6 @@
 
     add-int v6, v8, v9
 
-    .line 489
     .local v6, "strHight":I
     sget-object v8, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -1931,19 +1743,16 @@
 
     move-result-object v1
 
-    .line 490
     .local v1, "bitmap":Landroid/graphics/Bitmap;
     new-instance v2, Landroid/graphics/Canvas;
 
     invoke-direct {v2, v1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 491
     .local v2, "canvas":Landroid/graphics/Canvas;
     invoke-virtual {v4}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v3
 
-    .line 492
     .local v3, "fontMetrics":Landroid/graphics/Paint$FontMetricsInt;
     iget v8, v3, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
@@ -1955,7 +1764,6 @@
 
     div-int/lit8 v0, v8, 0x2
 
-    .line 493
     .local v0, "baseline":I
     div-int/lit8 v8, v7, 0x2
 
@@ -1965,7 +1773,6 @@
 
     invoke-virtual {v2, p1, v8, v9, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 494
     return-object v1
 .end method
 
@@ -1974,25 +1781,21 @@
     .param p1, "r"    # Landroid/app/ActivityManager$RecentTaskInfo;
 
     .prologue
-    .line 221
     new-instance v0, Landroid/content/Intent;
 
     iget-object v4, p1, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 222
     .local v0, "intent":Landroid/content/Intent;
     iget-object v4, p1, Landroid/app/ActivityManager$RecentTaskInfo;->origActivity:Landroid/content/ComponentName;
 
     if-eqz v4, :cond_0
 
-    .line 223
     iget-object v4, p1, Landroid/app/ActivityManager$RecentTaskInfo;->origActivity:Landroid/content/ComponentName;
 
     invoke-virtual {v0, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 225
     :cond_0
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
@@ -2000,7 +1803,6 @@
 
     move-result-object v2
 
-    .line 226
     .local v2, "pm":Landroid/content/pm/PackageManager;
     invoke-virtual {v0}, Landroid/content/Intent;->getFlags()I
 
@@ -2016,20 +1818,17 @@
 
     invoke-virtual {v0, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 228
     const/4 v4, 0x0
 
     invoke-virtual {v2, v0, v4}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v3
 
-    .line 230
     .local v3, "resolveInfo":Landroid/content/pm/ResolveInfo;
     iget-object v4, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v1, v4, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 231
     .local v1, "pInfo":Landroid/content/pm/PackageItemInfo;
     invoke-virtual {v1, v2}, Landroid/content/pm/PackageItemInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
@@ -2042,14 +1841,12 @@
     .locals 6
 
     .prologue
-    .line 196
     iget-object v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 197
     .local v2, "res":Landroid/content/res/Resources;
     iget v3, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailWidth:I
 
@@ -2061,19 +1858,16 @@
 
     move-result-object v0
 
-    .line 198
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 199
     .local v1, "c":Landroid/graphics/Canvas;
     const v3, -0x777778
 
     invoke-virtual {v1, v3}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 200
     return-object v0
 .end method
 
@@ -2084,14 +1878,11 @@
     .param p3, "funs"    # I
 
     .prologue
-    .line 498
     const/4 v1, 0x0
 
-    .line 499
     .local v1, "bitmap":Landroid/graphics/Bitmap;
     const/4 v5, 0x0
 
-    .line 501
     .local v5, "newBm":Landroid/graphics/Bitmap;
     :try_start_0
     iget-object v7, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mContext:Landroid/content/Context;
@@ -2100,13 +1891,11 @@
 
     move-result-object v6
 
-    .line 502
     .local v6, "wpm":Landroid/app/WallpaperManager;
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 503
     .local v2, "cla":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v7, "clipFitBlurWallpaper"
 
@@ -2130,7 +1919,6 @@
 
     move-result-object v4
 
-    .line 505
     .local v4, "getBlurMethod":Ljava/lang/reflect/Method;
     const/4 v7, 0x2
 
@@ -2162,12 +1950,10 @@
 
     move-object v1, v0
 
-    .line 506
     invoke-direct {p0, v1, p1, p2, p3}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->addTipToWallpaper(Landroid/graphics/Bitmap;ZZI)Landroid/graphics/Bitmap;
 
     move-result-object v5
 
-    .line 507
     const-string v7, "FitAnim"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2234,18 +2020,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 512
     .end local v2    # "cla":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v4    # "getBlurMethod":Ljava/lang/reflect/Method;
     .end local v6    # "wpm":Landroid/app/WallpaperManager;
     :goto_0
     return-object v5
 
-    .line 509
     :catch_0
     move-exception v3
 
-    .line 510
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -2256,10 +2039,8 @@
     .locals 6
 
     .prologue
-    .line 127
     const/4 v0, 0x0
 
-    .line 128
     .local v0, "component":Landroid/content/ComponentName;
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mAm:Landroid/app/ActivityManager;
 
@@ -2269,7 +2050,6 @@
 
     move-result-object v2
 
-    .line 129
     .local v2, "runningTask":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningTaskInfo;>;"
     iget-object v4, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mAm:Landroid/app/ActivityManager;
 
@@ -2277,7 +2057,6 @@
 
     move-result-object v1
 
-    .line 130
     .local v1, "runningProcess":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     if-eqz v2, :cond_0
 
@@ -2287,7 +2066,6 @@
 
     if-lez v4, :cond_0
 
-    .line 131
     const/4 v4, 0x0
 
     invoke-interface {v2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2296,14 +2074,11 @@
 
     check-cast v3, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 132
     .local v3, "task":Landroid/app/ActivityManager$RunningTaskInfo;
     if-eqz v3, :cond_0
 
-    .line 133
     iget-object v0, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
-    .line 136
     .end local v3    # "task":Landroid/app/ActivityManager$RunningTaskInfo;
     :cond_0
     return-object v0
@@ -2313,7 +2088,6 @@
     .locals 2
 
     .prologue
-    .line 163
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -2333,7 +2107,6 @@
     .param p2, "iconId"    # I
 
     .prologue
-    .line 155
     :try_start_0
     invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -2341,7 +2114,6 @@
 
     iget v1, v2, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    .line 156
     .local v1, "iconDpi":I
     invoke-virtual {p1, p2, v1}, Landroid/content/res/Resources;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
     :try_end_0
@@ -2349,16 +2121,13 @@
 
     move-result-object v2
 
-    .line 158
     .end local v1    # "iconDpi":I
     :goto_0
     return-object v2
 
-    .line 157
     :catch_0
     move-exception v0
 
-    .line 158
     .local v0, "e":Landroid/content/res/Resources$NotFoundException;
     invoke-virtual {p0}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->getFullResDefaultActivityIcon()Landroid/graphics/drawable/Drawable;
 
@@ -2376,36 +2145,30 @@
 
     const/4 v6, 0x0
 
-    .line 205
     const-string v3, "FitAnim"
 
     const-string v4, "getHandledScreenBitmap start"
 
     invoke-static {v3, v4}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     if-nez p1, :cond_0
 
-    .line 208
     sget-object v3, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v5, v5, v3}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 209
     .local v2, "newBitmap":Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 210
     .local v0, "c":Landroid/graphics/Canvas;
     const v3, -0x777778
 
     invoke-virtual {v0, v3}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 216
     .end local v0    # "c":Landroid/graphics/Canvas;
     :goto_0
     const-string v3, "FitAnim"
@@ -2414,10 +2177,8 @@
 
     invoke-static {v3, v4}, Lcn/nubia/server/policy/edge/effectsutil/EffectsLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
     return-object v2
 
-    .line 212
     .end local v2    # "newBitmap":Landroid/graphics/Bitmap;
     :cond_0
     const/16 v3, 0x438
@@ -2430,13 +2191,11 @@
 
     move-result-object v2
 
-    .line 213
     .restart local v2    # "newBitmap":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 214
     .local v1, "canvas":Landroid/graphics/Canvas;
     new-instance v3, Landroid/graphics/Paint;
 
@@ -2451,7 +2210,6 @@
     .locals 2
 
     .prologue
-    .line 793
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mCurrentScreenLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
@@ -2481,7 +2239,6 @@
     .locals 2
 
     .prologue
-    .line 808
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mGuideIconLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
@@ -2511,7 +2268,6 @@
     .locals 2
 
     .prologue
-    .line 812
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mSplitWallpaperLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
@@ -2541,7 +2297,6 @@
     .locals 2
 
     .prologue
-    .line 804
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mStartScreenLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
@@ -2571,7 +2326,6 @@
     .locals 2
 
     .prologue
-    .line 801
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
@@ -2601,7 +2355,6 @@
     .locals 2
 
     .prologue
-    .line 797
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mBlurWallpaperLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
@@ -2635,19 +2388,16 @@
     .param p4, "funs"    # I
 
     .prologue
-    .line 370
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mBlurWallpaperLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
 
-    .line 371
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mBlurWallpaperLoader:Landroid/os/AsyncTask;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 374
     :cond_0
     new-instance v0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$2;
 
@@ -2665,7 +2415,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mBlurWallpaperLoader:Landroid/os/AsyncTask;
 
-    .line 414
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mBlurWallpaperLoader:Landroid/os/AsyncTask;
 
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
@@ -2676,7 +2425,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 415
     return-void
 .end method
 
@@ -2685,19 +2433,16 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 321
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mSplitWallpaperLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
 
-    .line 322
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mSplitWallpaperLoader:Landroid/os/AsyncTask;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 325
     :cond_0
     new-instance v0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$1;
 
@@ -2705,7 +2450,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mSplitWallpaperLoader:Landroid/os/AsyncTask;
 
-    .line 365
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mSplitWallpaperLoader:Landroid/os/AsyncTask;
 
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
@@ -2716,7 +2460,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 366
     return-void
 .end method
 
@@ -2733,20 +2476,17 @@
     .end annotation
 
     .prologue
-    .line 552
     .local p1, "subList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
 
-    .line 553
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailLoader:Landroid/os/AsyncTask;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 556
     :cond_0
     new-instance v0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$3;
 
@@ -2754,7 +2494,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailLoader:Landroid/os/AsyncTask;
 
-    .line 616
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mThumbnailLoader:Landroid/os/AsyncTask;
 
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
@@ -2765,7 +2504,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 618
     return-void
 .end method
 
@@ -2775,19 +2513,16 @@
     .param p2, "screenBitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 621
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mCurrentScreenLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
 
-    .line 622
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mCurrentScreenLoader:Landroid/os/AsyncTask;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 624
     :cond_0
     new-instance v0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$4;
 
@@ -2795,7 +2530,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mCurrentScreenLoader:Landroid/os/AsyncTask;
 
-    .line 663
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mCurrentScreenLoader:Landroid/os/AsyncTask;
 
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
@@ -2806,7 +2540,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 664
     return-void
 .end method
 
@@ -2828,21 +2561,18 @@
     .end annotation
 
     .prologue
-    .line 725
     .local p1, "packageList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p2, "hashList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mGuideIconLoader:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
 
-    .line 726
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mGuideIconLoader:Landroid/os/AsyncTask;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 729
     :cond_0
     new-instance v0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$6;
 
@@ -2850,7 +2580,6 @@
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mGuideIconLoader:Landroid/os/AsyncTask;
 
-    .line 787
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mGuideIconLoader:Landroid/os/AsyncTask;
 
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
@@ -2861,7 +2590,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 789
     return-void
 .end method
 
@@ -2870,14 +2598,12 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 668
     new-instance v0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;
 
     invoke-direct {v0, p0, p1}, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$5;-><init>(Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mStartScreenLoader:Landroid/os/AsyncTask;
 
-    .line 719
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mStartScreenLoader:Landroid/os/AsyncTask;
 
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
@@ -2888,7 +2614,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 722
     return-void
 .end method
 
@@ -2905,11 +2630,9 @@
     .end annotation
 
     .prologue
-    .line 123
     .local p1, "recentAppSwitchList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mRecentAppSwitchList:Ljava/util/List;
 
-    .line 124
     return-void
 .end method
 
@@ -2918,10 +2641,8 @@
     .param p1, "callback"    # Lcn/nubia/server/policy/edge/effects/resloader/IScreenCallback;
 
     .prologue
-    .line 115
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mCallBack:Lcn/nubia/server/policy/edge/effects/resloader/IScreenCallback;
 
-    .line 116
     return-void
 .end method
 
@@ -2930,10 +2651,8 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 111
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mHandler:Landroid/os/Handler;
 
-    .line 112
     return-void
 .end method
 
@@ -2942,9 +2661,7 @@
     .param p1, "safeGuarder"    # Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;
 
     .prologue
-    .line 119
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;->mSafeGuarder:Lcn/nubia/server/policy/edge/effectsutil/safeguarder/SafeGuarder;
 
-    .line 120
     return-void
 .end method

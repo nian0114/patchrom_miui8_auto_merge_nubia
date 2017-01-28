@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 381
     iput-object p1, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$2$1;->this$1:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$2;
 
     iput-object p2, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$2$1;->val$data:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$ResultData;
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 385
     iget-object v0, p0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$2$1;->this$1:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$2;
 
     iget-object v0, v0, Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader$2;->this$0:Lcn/nubia/server/policy/edge/effects/resloader/ScreenShotsLoader;
@@ -64,6 +62,5 @@
 
     invoke-interface {v0, v1, v2}, Lcn/nubia/server/policy/edge/effects/resloader/IScreenCallback;->insertTaskBitmap(ILandroid/graphics/Bitmap;)V
 
-    .line 386
     return-void
 .end method

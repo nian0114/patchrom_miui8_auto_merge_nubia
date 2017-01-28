@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 5
     invoke-direct {p0}, Lcn/nubia/edgegesture/GestureAction;-><init>()V
 
     return-void

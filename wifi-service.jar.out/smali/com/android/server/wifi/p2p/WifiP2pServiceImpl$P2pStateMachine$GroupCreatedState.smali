@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1884
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -35,10 +34,8 @@
     .locals 3
 
     .prologue
-    .line 1887
     const/4 v0, 0x1
 
-    .line 1888
     .local v0, "remove":Z
     iget-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
@@ -64,14 +61,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1889
     const-string v1, "WifiP2pService"
 
     const-string v2, "Removed P2P group successfully"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1890
     iget-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     iget-object v2, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -84,7 +79,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$11500(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1897
     :goto_0
     iget-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
@@ -97,25 +91,21 @@
 
     if-eqz v1, :cond_1
 
-    .line 1898
     const-string v1, "WifiP2pService"
 
     const-string v2, "AutonomousGroup is set, reform P2P Group"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1899
     iget-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     const v2, 0x2200d
 
     invoke-virtual {v1, v2}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->sendMessage(I)V
 
-    .line 1903
     :goto_1
     return v0
 
-    .line 1892
     :cond_0
     const-string v1, "WifiP2pService"
 
@@ -123,13 +113,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1893
     iget-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->handleGroupRemoved()V
     invoke-static {v1}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$11600(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 1894
     iget-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     iget-object v2, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -142,12 +130,10 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$11700(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1895
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1901
     :cond_1
     const-string v1, "WifiP2pService"
 
@@ -168,7 +154,6 @@
 
     const/4 v3, 0x0
 
-    .line 1908
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -206,7 +191,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 1909
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->mPendingReformGroupIndication:Z
@@ -216,21 +200,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1910
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->mPendingReformGroupIndication:Z
     invoke-static {v0, v3}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$9202(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;Z)Z
 
-    .line 1911
     invoke-direct {p0}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->handlP2pGroupRestart()Z
 
-    .line 1930
     :cond_0
     :goto_0
     return-void
 
-    .line 1914
     :cond_1
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
@@ -241,7 +221,6 @@
 
     invoke-virtual {v0}, Landroid/net/wifi/p2p/WifiP2pConfig;->invalidate()V
 
-    .line 1915
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
@@ -255,13 +234,11 @@
 
     invoke-virtual {v0, v1, v4, v4}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1917
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->updateThisDevice(I)V
     invoke-static {v0, v3}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$11800(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;I)V
 
-    .line 1920
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->mGroup:Landroid/net/wifi/p2p/WifiP2pGroup;
@@ -275,7 +252,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1921
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     const-string v1, "192.168.49.1"
@@ -287,7 +263,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->setWifiP2pInfoOnGroupFormation(Ljava/net/InetAddress;)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$11900(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;Ljava/net/InetAddress;)V
 
-    .line 1926
     :cond_2
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
@@ -300,7 +275,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1927
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->sendP2pConnectionChangedBroadcast()V
@@ -315,7 +289,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2188
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     const/4 v1, 0x3
@@ -323,13 +296,11 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->updateThisDevice(I)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$11800(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;I)V
 
-    .line 2189
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->resetWifiP2pInfo()V
     invoke-static {v0}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$12800(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 2190
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
@@ -343,13 +314,11 @@
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2191
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
 
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->sendP2pConnectionChangedBroadcast()V
     invoke-static {v0}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$2900(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 2192
     return-void
 .end method
 
@@ -358,7 +327,6 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 1934
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
 
@@ -398,7 +366,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 1935
     :cond_0
     move-object/from16 v0, p1
 
@@ -408,14 +375,11 @@
 
     sparse-switch v21, :sswitch_data_0
 
-    .line 2182
     const/16 v21, 0x0
 
-    .line 2184
     :goto_0
     return v21
 
-    .line 1942
     :sswitch_0
     move-object/from16 v0, p1
 
@@ -423,15 +387,12 @@
 
     check-cast v8, Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;
 
-    .line 1943
     .local v8, "deviceSpecInfo":Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;
     iget-object v6, v8, Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;->mWifiP2pDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 1945
     .local v6, "device":Landroid/net/wifi/p2p/WifiP2pDevice;
     iget-object v7, v6, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceAddress:Ljava/lang/String;
 
-    .line 1947
     .local v7, "deviceAddress":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -463,10 +424,8 @@
 
     invoke-virtual/range {v21 .. v23}, Lcom/android/server/wifi/WifiNative;->setP2pGroupIdle(Ljava/lang/String;I)Z
 
-    .line 1948
     if-eqz v7, :cond_4
 
-    .line 1949
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -486,7 +445,6 @@
 
     if-eqz v21, :cond_3
 
-    .line 1950
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -517,7 +475,6 @@
 
     invoke-virtual/range {v21 .. v22}, Landroid/net/wifi/p2p/WifiP2pGroup;->addClient(Landroid/net/wifi/p2p/WifiP2pDevice;)V
 
-    .line 1954
     :goto_1
     move-object/from16 v0, p0
 
@@ -538,7 +495,6 @@
 
     invoke-virtual {v0, v7, v1}, Landroid/net/wifi/p2p/WifiP2pDeviceList;->updateStatus(Ljava/lang/String;I)V
 
-    .line 1955
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
 
@@ -576,7 +532,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 1956
     :cond_1
     move-object/from16 v0, p0
 
@@ -587,7 +542,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->sendPeersChangedBroadcast()V
     invoke-static/range {v21 .. v21}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$3200(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 1965
     :goto_2
     move-object/from16 v0, p0
 
@@ -602,7 +556,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->sendP2pConnectionChangedBroadcast(Ljava/lang/String;)V
     invoke-static/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$12000(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;Ljava/lang/String;)V
 
-    .line 2184
     .end local v6    # "device":Landroid/net/wifi/p2p/WifiP2pDevice;
     .end local v7    # "deviceAddress":Ljava/lang/String;
     .end local v8    # "deviceSpecInfo":Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;
@@ -612,7 +565,6 @@
 
     goto/16 :goto_0
 
-    .line 1952
     .restart local v6    # "device":Landroid/net/wifi/p2p/WifiP2pDevice;
     .restart local v7    # "deviceAddress":Ljava/lang/String;
     .restart local v8    # "deviceSpecInfo":Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;
@@ -634,7 +586,6 @@
 
     goto :goto_1
 
-    .line 1958
     :cond_4
     move-object/from16 v0, p0
 
@@ -648,7 +599,6 @@
 
     goto :goto_2
 
-    .line 1969
     .end local v6    # "device":Landroid/net/wifi/p2p/WifiP2pDevice;
     .end local v7    # "deviceAddress":Ljava/lang/String;
     .end local v8    # "deviceSpecInfo":Lnubia/net/wifi/NubiaWifiP2pDeviceSpecInfo;
@@ -659,15 +609,12 @@
 
     check-cast v6, Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 1970
     .restart local v6    # "device":Landroid/net/wifi/p2p/WifiP2pDevice;
     iget-object v7, v6, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceAddress:Ljava/lang/String;
 
-    .line 1971
     .restart local v7    # "deviceAddress":Ljava/lang/String;
     if-eqz v7, :cond_b
 
-    .line 1972
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -687,7 +634,6 @@
 
     invoke-virtual {v0, v7, v1}, Landroid/net/wifi/p2p/WifiP2pDeviceList;->updateStatus(Ljava/lang/String;I)V
 
-    .line 1973
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -707,7 +653,6 @@
 
     if-eqz v21, :cond_8
 
-    .line 1974
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
 
@@ -743,7 +688,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 1975
     :cond_5
     move-object/from16 v0, p0
 
@@ -781,7 +725,6 @@
 
     if-eqz v21, :cond_7
 
-    .line 1976
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -792,7 +735,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 1977
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -821,7 +763,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/WifiNative;->p2pGroupRemove(Ljava/lang/String;)Z
 
-    .line 1990
     :cond_6
     :goto_4
     move-object/from16 v0, p0
@@ -833,7 +774,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->sendPeersChangedBroadcast()V
     invoke-static/range {v21 .. v21}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$3200(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 1991
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
 
@@ -873,7 +813,6 @@
 
     goto/16 :goto_3
 
-    .line 1982
     :cond_7
     move-object/from16 v0, p0
 
@@ -886,7 +825,6 @@
 
     goto :goto_4
 
-    .line 1985
     :cond_8
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
@@ -923,7 +861,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 1986
     :cond_9
     move-object/from16 v0, p0
 
@@ -959,7 +896,6 @@
 
     check-cast v4, Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 1987
     .local v4, "c":Landroid/net/wifi/p2p/WifiP2pDevice;
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
@@ -1000,7 +936,6 @@
 
     goto :goto_5
 
-    .line 1993
     .end local v4    # "c":Landroid/net/wifi/p2p/WifiP2pDevice;
     .end local v11    # "i$":Ljava/util/Iterator;
     :cond_b
@@ -1034,7 +969,6 @@
 
     goto/16 :goto_3
 
-    .line 2000
     .end local v6    # "device":Landroid/net/wifi/p2p/WifiP2pDevice;
     .end local v7    # "deviceAddress":Ljava/lang/String;
     :sswitch_2
@@ -1044,14 +978,12 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2001
     invoke-direct/range {p0 .. p0}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->handlP2pGroupRestart()Z
 
     move-result v21
 
     if-eqz v21, :cond_c
 
-    .line 2002
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1071,7 +1003,6 @@
 
     goto/16 :goto_3
 
-    .line 2005
     :cond_c
     move-object/from16 v0, p0
 
@@ -1096,7 +1027,6 @@
 
     goto/16 :goto_3
 
-    .line 2011
     :sswitch_3
     move-object/from16 v0, p1
 
@@ -1104,7 +1034,6 @@
 
     check-cast v9, Landroid/net/DhcpResults;
 
-    .line 2012
     .local v9, "dhcpResults":Landroid/net/DhcpResults;
     move-object/from16 v0, p0
 
@@ -1115,7 +1044,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->enableBTCoex()V
     invoke-static/range {v21 .. v21}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$12100(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 2013
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->arg1:I
@@ -1132,7 +1060,6 @@
 
     if-eqz v9, :cond_e
 
-    .line 2015
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
 
@@ -1168,7 +1095,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 2016
     :cond_d
     move-object/from16 v0, p0
 
@@ -1183,7 +1109,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->setWifiP2pInfoOnGroupFormation(Ljava/net/InetAddress;)V
     invoke-static/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$11900(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;Ljava/net/InetAddress;)V
 
-    .line 2017
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1193,7 +1118,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->sendP2pConnectionChangedBroadcast()V
     invoke-static/range {v21 .. v21}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$2900(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 2019
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1224,7 +1148,6 @@
 
     invoke-virtual/range {v21 .. v23}, Lcom/android/server/wifi/WifiNative;->setP2pPowerSave(Ljava/lang/String;Z)Z
 
-    .line 2021
     :try_start_0
     move-object/from16 v0, p0
 
@@ -1241,7 +1164,6 @@
 
     move-result-object v13
 
-    .line 2022
     .local v13, "iface":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1276,12 +1198,10 @@
 
     goto/16 :goto_3
 
-    .line 2024
     .end local v13    # "iface":Ljava/lang/String;
     :catch_0
     move-exception v10
 
-    .line 2025
     .local v10, "e":Landroid/os/RemoteException;
     move-object/from16 v0, p0
 
@@ -1313,12 +1233,10 @@
 
     goto/16 :goto_3
 
-    .line 2026
     .end local v10    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v12
 
-    .line 2027
     .local v12, "ie":Ljava/lang/IllegalStateException;
     move-object/from16 v0, p0
 
@@ -1350,7 +1268,6 @@
 
     goto/16 :goto_3
 
-    .line 2030
     .end local v12    # "ie":Ljava/lang/IllegalStateException;
     :cond_e
     move-object/from16 v0, p0
@@ -1363,7 +1280,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 2031
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1394,7 +1310,6 @@
 
     goto/16 :goto_3
 
-    .line 2035
     .end local v9    # "dhcpResults":Landroid/net/DhcpResults;
     :sswitch_4
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
@@ -1434,7 +1349,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 2040
     :cond_f
     move-object/from16 v0, p0
 
@@ -1445,7 +1359,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->enableBTCoex()V
     invoke-static/range {v21 .. v21}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$12100(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 2041
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1478,7 +1391,6 @@
 
     if-eqz v21, :cond_10
 
-    .line 2042
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1499,7 +1411,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$12200(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 2043
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1519,7 +1430,6 @@
 
     goto/16 :goto_3
 
-    .line 2045
     :cond_10
     move-object/from16 v0, p0
 
@@ -1530,7 +1440,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->handleGroupRemoved()V
     invoke-static/range {v21 .. v21}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$11600(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 2046
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1551,7 +1460,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$12300(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 2047
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1575,7 +1483,6 @@
 
     goto/16 :goto_3
 
-    .line 2063
     :sswitch_5
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
@@ -1614,7 +1521,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 2068
     :cond_11
     move-object/from16 v0, p0
 
@@ -1625,7 +1531,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->enableBTCoex()V
     invoke-static/range {v21 .. v21}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$12100(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 2069
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1635,7 +1540,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->handleGroupRemoved()V
     invoke-static/range {v21 .. v21}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$11600(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 2070
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1658,7 +1562,6 @@
 
     goto/16 :goto_3
 
-    .line 2073
     :sswitch_6
     move-object/from16 v0, p1
 
@@ -1666,7 +1569,6 @@
 
     check-cast v6, Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 2075
     .restart local v6    # "device":Landroid/net/wifi/p2p/WifiP2pDevice;
     move-object/from16 v0, p0
 
@@ -1687,7 +1589,6 @@
 
     if-eqz v21, :cond_13
 
-    .line 2076
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
 
@@ -1723,7 +1624,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 2077
     :cond_12
     move-object/from16 v0, p0
 
@@ -1740,18 +1640,15 @@
 
     invoke-virtual {v0, v6}, Landroid/net/wifi/p2p/WifiP2pDeviceList;->updateSupplicantDetails(Landroid/net/wifi/p2p/WifiP2pDevice;)V
 
-    .line 2078
     const/16 v21, 0x1
 
     goto/16 :goto_0
 
-    .line 2081
     :cond_13
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
-    .line 2083
     .end local v6    # "device":Landroid/net/wifi/p2p/WifiP2pDevice;
     :sswitch_7
     move-object/from16 v0, p0
@@ -1764,7 +1661,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->sendMessage(I)V
 
-    .line 2084
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1780,7 +1676,6 @@
 
     goto/16 :goto_3
 
-    .line 2089
     :sswitch_8
     move-object/from16 v0, p1
 
@@ -1790,11 +1685,9 @@
 
     check-cast v20, Landroid/net/wifi/WpsInfo;
 
-    .line 2090
     .local v20, "wps":Landroid/net/wifi/WpsInfo;
     if-nez v20, :cond_14
 
-    .line 2091
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1814,11 +1707,9 @@
 
     goto/16 :goto_3
 
-    .line 2094
     :cond_14
     const/16 v18, 0x1
 
-    .line 2095
     .local v18, "ret":Z
     move-object/from16 v0, v20
 
@@ -1828,7 +1719,6 @@
 
     if-nez v21, :cond_15
 
-    .line 2096
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1861,7 +1751,6 @@
 
     move-result v18
 
-    .line 2111
     :goto_6
     move-object/from16 v0, p0
 
@@ -1885,7 +1774,6 @@
 
     goto/16 :goto_3
 
-    .line 2098
     :cond_15
     move-object/from16 v0, v20
 
@@ -1895,7 +1783,6 @@
 
     if-nez v21, :cond_16
 
-    .line 2099
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1926,12 +1813,10 @@
 
     move-result-object v16
 
-    .line 2101
     .local v16, "pin":Ljava/lang/String;
     :try_start_1
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    .line 2102
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -1953,17 +1838,14 @@
 
     goto :goto_6
 
-    .line 2103
     :catch_2
     move-exception v14
 
-    .line 2104
     .local v14, "ignore":Ljava/lang/NumberFormatException;
     const/16 v18, 0x0
 
     goto :goto_6
 
-    .line 2107
     .end local v14    # "ignore":Ljava/lang/NumberFormatException;
     .end local v16    # "pin":Ljava/lang/String;
     :cond_16
@@ -2005,13 +1887,11 @@
 
     goto :goto_6
 
-    .line 2111
     :cond_17
     const v21, 0x2203f
 
     goto :goto_7
 
-    .line 2115
     .end local v18    # "ret":Z
     .end local v20    # "wps":Landroid/net/wifi/WpsInfo;
     :sswitch_9
@@ -2021,7 +1901,6 @@
 
     check-cast v5, Landroid/net/wifi/p2p/WifiP2pConfig;
 
-    .line 2116
     .local v5, "config":Landroid/net/wifi/p2p/WifiP2pConfig;
     move-object/from16 v0, p0
 
@@ -2038,7 +1917,6 @@
 
     if-eqz v21, :cond_18
 
-    .line 2117
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2067,7 +1945,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 2118
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2087,7 +1964,6 @@
 
     goto/16 :goto_3
 
-    .line 2121
     :cond_18
     move-object/from16 v0, p0
 
@@ -2119,7 +1995,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 2122
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2131,7 +2006,6 @@
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->mSavedPeerConfig:Landroid/net/wifi/p2p/WifiP2pConfig;
     invoke-static {v0, v5}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$5202(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;Landroid/net/wifi/p2p/WifiP2pConfig;)Landroid/net/wifi/p2p/WifiP2pConfig;
 
-    .line 2123
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2164,7 +2038,6 @@
 
     if-eqz v21, :cond_19
 
-    .line 2124
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2184,7 +2057,6 @@
 
     invoke-virtual/range {v21 .. v23}, Landroid/net/wifi/p2p/WifiP2pDeviceList;->updateStatus(Ljava/lang/String;I)V
 
-    .line 2125
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2194,7 +2066,6 @@
     # invokes: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->sendPeersChangedBroadcast()V
     invoke-static/range {v21 .. v21}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$3200(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;)V
 
-    .line 2126
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2214,7 +2085,6 @@
 
     goto/16 :goto_3
 
-    .line 2128
     :cond_19
     move-object/from16 v0, p0
 
@@ -2239,7 +2109,6 @@
 
     goto/16 :goto_3
 
-    .line 2134
     .end local v5    # "config":Landroid/net/wifi/p2p/WifiP2pConfig;
     :sswitch_a
     move-object/from16 v0, p1
@@ -2250,7 +2119,6 @@
 
     check-cast v19, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStatus;
 
-    .line 2135
     .local v19, "status":Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStatus;
     sget-object v21, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStatus;->SUCCESS:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStatus;
 
@@ -2260,7 +2128,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 2139
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2291,7 +2158,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 2140
     sget-object v21, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStatus;->UNKNOWN_P2P_GROUP:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStatus;
 
     move-object/from16 v0, v19
@@ -2300,7 +2166,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 2143
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2316,11 +2181,9 @@
 
     move-result v15
 
-    .line 2144
     .local v15, "netId":I
     if-ltz v15, :cond_2
 
-    .line 2145
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
 
@@ -2338,7 +2201,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 2146
     :cond_1a
     move-object/from16 v0, p0
 
@@ -2378,7 +2240,6 @@
 
     if-nez v21, :cond_1b
 
-    .line 2149
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2389,7 +2250,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 2152
     :cond_1b
     move-object/from16 v0, p0
 
@@ -2414,7 +2274,6 @@
 
     goto/16 :goto_3
 
-    .line 2159
     .end local v15    # "netId":I
     .end local v19    # "status":Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStatus;
     :sswitch_b
@@ -2426,7 +2285,6 @@
 
     check-cast v17, Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;
 
-    .line 2160
     .local v17, "provDisc":Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;
     move-object/from16 v0, p0
 
@@ -2441,7 +2299,6 @@
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->mSavedPeerConfig:Landroid/net/wifi/p2p/WifiP2pConfig;
     invoke-static/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->access$5202(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;Landroid/net/wifi/p2p/WifiP2pConfig;)Landroid/net/wifi/p2p/WifiP2pConfig;
 
-    .line 2161
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2471,7 +2328,6 @@
 
     iput-object v0, v1, Landroid/net/wifi/p2p/WifiP2pConfig;->deviceAddress:Ljava/lang/String;
 
-    .line 2162
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->what:I
@@ -2486,7 +2342,6 @@
 
     if-ne v0, v1, :cond_1e
 
-    .line 2163
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2512,7 +2367,6 @@
 
     iput v0, v1, Landroid/net/wifi/WpsInfo;->setup:I
 
-    .line 2170
     :goto_8
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
@@ -2562,7 +2416,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 2171
     :cond_1c
     move-object/from16 v0, p0
 
@@ -2581,7 +2434,6 @@
 
     if-eqz v21, :cond_2
 
-    .line 2172
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$200()Z
 
@@ -2589,7 +2441,6 @@
 
     if-eqz v21, :cond_1d
 
-    .line 2173
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2600,7 +2451,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 2175
     :cond_1d
     move-object/from16 v0, p0
 
@@ -2624,7 +2474,6 @@
 
     goto/16 :goto_3
 
-    .line 2164
     :cond_1e
     move-object/from16 v0, p1
 
@@ -2640,7 +2489,6 @@
 
     if-ne v0, v1, :cond_1f
 
-    .line 2165
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2666,7 +2514,6 @@
 
     iput v0, v1, Landroid/net/wifi/WpsInfo;->setup:I
 
-    .line 2166
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine$GroupCreatedState;->this$1:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -2698,7 +2545,6 @@
 
     goto/16 :goto_8
 
-    .line 2168
     :cond_1f
     move-object/from16 v0, p0
 
@@ -2727,7 +2573,6 @@
 
     goto/16 :goto_8
 
-    .line 2179
     .end local v17    # "provDisc":Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;
     :sswitch_c
     move-object/from16 v0, p0
@@ -2742,7 +2587,6 @@
 
     goto/16 :goto_3
 
-    .line 1935
     nop
 
     :sswitch_data_0

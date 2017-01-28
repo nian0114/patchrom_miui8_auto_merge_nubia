@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 822
     iput-object p1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$MutiWindowContentObserver;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
-    .line 823
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 824
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 3
 
     .prologue
-    .line 827
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$MutiWindowContentObserver;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mContext:Landroid/content/Context;
@@ -52,7 +48,6 @@
 
     move-result-object v0
 
-    .line 828
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "ss_multi_window_enabled"
 
@@ -64,12 +59,10 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 830
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$MutiWindowContentObserver;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-virtual {v1}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->updateSUMode()V
 
-    .line 831
     return-void
 .end method
 
@@ -78,12 +71,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 840
     iget-object v0, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$MutiWindowContentObserver;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     invoke-virtual {v0}, Lcom/android/server/display/NubiaOverlayDisplayWindow;->updateSUMode()V
 
-    .line 841
     return-void
 .end method
 
@@ -91,7 +82,6 @@
     .locals 2
 
     .prologue
-    .line 834
     iget-object v1, p0, Lcom/android/server/display/NubiaOverlayDisplayWindow$MutiWindowContentObserver;->this$0:Lcom/android/server/display/NubiaOverlayDisplayWindow;
 
     # getter for: Lcom/android/server/display/NubiaOverlayDisplayWindow;->mContext:Landroid/content/Context;
@@ -103,10 +93,8 @@
 
     move-result-object v0
 
-    .line 835
     .local v0, "resolver":Landroid/content/ContentResolver;
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 836
     return-void
 .end method

@@ -12,10 +12,8 @@
     .locals 1
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/nubia/server/policy/edge/effects/GestureActionFilter;->mLocked:Z
@@ -29,12 +27,10 @@
     .locals 1
 
     .prologue
-    .line 29
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/nubia/server/policy/edge/effects/GestureActionFilter;->mLocked:Z
 
-    .line 30
     return-void
 .end method
 
@@ -45,16 +41,13 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 18
     iget-boolean v1, p0, Lcn/nubia/server/policy/edge/effects/GestureActionFilter;->mLocked:Z
 
     if-eqz v1, :cond_0
 
-    .line 25
     :goto_0
     return v0
 
-    .line 21
     :cond_0
     iget v1, p1, Lcn/nubia/server/policy/edge/effectsutil/EffectsEdgeGesture;->mAction:I
 
@@ -68,11 +61,9 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 23
     :cond_1
     iput-boolean v0, p0, Lcn/nubia/server/policy/edge/effects/GestureActionFilter;->mLocked:Z
 
-    .line 25
     :cond_2
     iget-boolean v0, p0, Lcn/nubia/server/policy/edge/effects/GestureActionFilter;->mLocked:Z
 

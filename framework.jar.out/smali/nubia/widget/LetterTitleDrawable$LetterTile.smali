@@ -38,37 +38,30 @@
 
     const/4 v2, 0x1
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lnubia/widget/LetterTitleDrawable$LetterTile;->mPaint:Landroid/graphics/Paint;
 
-    .line 36
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lnubia/widget/LetterTitleDrawable$LetterTile;->mRect:Landroid/graphics/Rect;
 
-    .line 37
     const/4 v0, 0x3
 
     new-array v0, v0, [C
 
     iput-object v0, p0, Lnubia/widget/LetterTitleDrawable$LetterTile;->mShowChar:[C
 
-    .line 40
     iput v1, p0, Lnubia/widget/LetterTitleDrawable$LetterTile;->mDefaultColor:I
 
-    .line 41
     iput v1, p0, Lnubia/widget/LetterTitleDrawable$LetterTile;->mTileFontColor:I
 
-    .line 42
     const v0, 0x3090074
 
     invoke-virtual {p1, v0, v2, v2}, Landroid/content/res/Resources;->getFraction(III)F
@@ -77,19 +70,16 @@
 
     iput v0, p0, Lnubia/widget/LetterTitleDrawable$LetterTile;->mLetterToTileRatio:F
 
-    .line 44
     iget-object v0, p0, Lnubia/widget/LetterTitleDrawable$LetterTile;->mPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 45
     iget-object v0, p0, Lnubia/widget/LetterTitleDrawable$LetterTile;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 46
     return-void
 .end method
 
@@ -99,7 +89,6 @@
     .param p2, "x1"    # Lnubia/widget/LetterTitleDrawable$1;
 
     .prologue
-    .line 27
     invoke-direct {p0, p1}, Lnubia/widget/LetterTitleDrawable$LetterTile;-><init>(Landroid/content/res/Resources;)V
 
     return-void
@@ -110,7 +99,6 @@
     .param p0, "x0"    # Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lnubia/widget/LetterTitleDrawable$LetterTile;->mRect:Landroid/graphics/Rect;
 
     return-object v0
@@ -121,7 +109,6 @@
     .param p0, "x0"    # Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lnubia/widget/LetterTitleDrawable$LetterTile;->mPaint:Landroid/graphics/Paint;
 
     return-object v0
@@ -132,7 +119,6 @@
     .param p0, "x0"    # Lnubia/widget/LetterTitleDrawable$LetterTile;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lnubia/widget/LetterTitleDrawable$LetterTile;->mShowChar:[C
 
     return-object v0

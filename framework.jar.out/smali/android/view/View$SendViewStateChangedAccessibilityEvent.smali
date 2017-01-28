@@ -34,12 +34,10 @@
     .locals 1
 
     .prologue
-    .line 22334
     iput-object p1, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->this$0:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22335
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mChangeTypes:I
@@ -53,7 +51,6 @@
     .param p2, "x1"    # Landroid/view/View$1;
 
     .prologue
-    .line 22334
     invoke-direct {p0, p1}, Landroid/view/View$SendViewStateChangedAccessibilityEvent;-><init>(Landroid/view/View;)V
 
     return-void
@@ -67,20 +64,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 22342
     iput-boolean v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mPosted:Z
 
-    .line 22343
     iput-boolean v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mPostedWithDelay:Z
 
-    .line 22344
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mLastEventTimeMillis:J
 
-    .line 22345
     iget-object v1, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->this$0:Landroid/view/View;
 
     iget-object v1, v1, Landroid/view/View;->mContext:Landroid/content/Context;
@@ -95,33 +88,27 @@
 
     if-eqz v1, :cond_0
 
-    .line 22346
     invoke-static {}, Landroid/view/accessibility/AccessibilityEvent;->obtain()Landroid/view/accessibility/AccessibilityEvent;
 
     move-result-object v0
 
-    .line 22347
     .local v0, "event":Landroid/view/accessibility/AccessibilityEvent;
     const/16 v1, 0x800
 
     invoke-virtual {v0, v1}, Landroid/view/accessibility/AccessibilityEvent;->setEventType(I)V
 
-    .line 22348
     iget v1, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mChangeTypes:I
 
     invoke-virtual {v0, v1}, Landroid/view/accessibility/AccessibilityEvent;->setContentChangeTypes(I)V
 
-    .line 22349
     iget-object v1, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->this$0:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->sendAccessibilityEventUnchecked(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 22351
     .end local v0    # "event":Landroid/view/accessibility/AccessibilityEvent;
     :cond_0
     iput v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mChangeTypes:I
 
-    .line 22352
     return-void
 .end method
 
@@ -132,14 +119,12 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 22355
     iget v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mChangeTypes:I
 
     or-int/2addr v4, p1
 
     iput v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mChangeTypes:I
 
-    .line 22359
     iget-object v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->this$0:Landroid/view/View;
 
     # invokes: Landroid/view/View;->inLiveRegion()Z
@@ -149,47 +134,38 @@
 
     if-eqz v4, :cond_2
 
-    .line 22361
     iget-boolean v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mPostedWithDelay:Z
 
     if-eqz v4, :cond_0
 
-    .line 22362
     iget-object v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->this$0:Landroid/view/View;
 
     invoke-virtual {v4, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 22363
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mPostedWithDelay:Z
 
-    .line 22366
     :cond_0
     iget-boolean v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mPosted:Z
 
     if-nez v4, :cond_1
 
-    .line 22367
     iget-object v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->this$0:Landroid/view/View;
 
     invoke-virtual {v4, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 22368
     iput-boolean v8, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mPosted:Z
 
-    .line 22387
     :cond_1
     :goto_0
     return-void
 
-    .line 22373
     :cond_2
     iget-boolean v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mPosted:Z
 
     if-nez v4, :cond_1
 
-    .line 22377
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
@@ -198,29 +174,24 @@
 
     sub-long v2, v4, v6
 
-    .line 22378
     .local v2, "timeSinceLastMillis":J
     invoke-static {}, Landroid/view/ViewConfiguration;->getSendRecurringAccessibilityEventsInterval()J
 
     move-result-wide v0
 
-    .line 22380
     .local v0, "minEventIntevalMillis":J
     cmp-long v4, v2, v0
 
     if-ltz v4, :cond_3
 
-    .line 22381
     iget-object v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->this$0:Landroid/view/View;
 
     invoke-virtual {v4, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 22382
     invoke-virtual {p0}, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->run()V
 
     goto :goto_0
 
-    .line 22384
     :cond_3
     iget-object v4, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->this$0:Landroid/view/View;
 
@@ -228,7 +199,6 @@
 
     invoke-virtual {v4, p0, v6, v7}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 22385
     iput-boolean v8, p0, Landroid/view/View$SendViewStateChangedAccessibilityEvent;->mPostedWithDelay:Z
 
     goto :goto_0

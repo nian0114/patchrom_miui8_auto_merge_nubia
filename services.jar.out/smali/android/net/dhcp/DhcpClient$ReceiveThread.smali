@@ -27,19 +27,16 @@
     .locals 1
 
     .prologue
-    .line 352
     iput-object p1, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 354
     const/16 v0, 0x5dc
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->mPacket:[B
 
-    .line 355
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->stopped:Z
@@ -53,18 +50,15 @@
     .locals 1
 
     .prologue
-    .line 358
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->stopped:Z
 
-    .line 359
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
 
     # invokes: Landroid/net/dhcp/DhcpClient;->closeSockets()V
     invoke-static {v0}, Landroid/net/dhcp/DhcpClient;->access$000(Landroid/net/dhcp/DhcpClient;)V
 
-    .line 360
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 364
     iget-object v3, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
 
     const-string v4, "Receive thread started"
@@ -82,17 +75,14 @@
     # invokes: Landroid/net/dhcp/DhcpClient;->maybeLog(Ljava/lang/String;)V
     invoke-static {v3, v4}, Landroid/net/dhcp/DhcpClient;->access$100(Landroid/net/dhcp/DhcpClient;Ljava/lang/String;)V
 
-    .line 365
     :cond_0
     :goto_0
     iget-boolean v3, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->stopped:Z
 
     if-nez v3, :cond_1
 
-    .line 366
     const/4 v1, 0x0
 
-    .line 368
     .local v1, "length":I
     :try_start_0
     iget-object v3, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
@@ -114,10 +104,8 @@
 
     move-result v1
 
-    .line 369
     const/4 v2, 0x0
 
-    .line 370
     .local v2, "packet":Landroid/net/dhcp/DhcpPacket;
     iget-object v3, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->mPacket:[B
 
@@ -127,7 +115,6 @@
 
     move-result-object v2
 
-    .line 371
     iget-object v3, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -151,7 +138,6 @@
     # invokes: Landroid/net/dhcp/DhcpClient;->maybeLog(Ljava/lang/String;)V
     invoke-static {v3, v4}, Landroid/net/dhcp/DhcpClient;->access$100(Landroid/net/dhcp/DhcpClient;Ljava/lang/String;)V
 
-    .line 372
     iget-object v3, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
 
     const v4, 0x30066
@@ -164,19 +150,16 @@
 
     goto :goto_0
 
-    .line 373
     .end local v2    # "packet":Landroid/net/dhcp/DhcpPacket;
     :catch_0
     move-exception v0
 
-    .line 374
     .local v0, "e":Ljava/lang/Exception;
     :goto_1
     iget-boolean v3, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->stopped:Z
 
     if-nez v3, :cond_0
 
-    .line 375
     const-string v3, "DhcpClient"
 
     const-string v4, "Read error"
@@ -185,12 +168,10 @@
 
     goto :goto_0
 
-    .line 377
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
 
-    .line 378
     .local v0, "e":Landroid/net/dhcp/DhcpPacket$ParseException;
     const-string v3, "DhcpClient"
 
@@ -218,7 +199,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
     const-string v3, "DhcpClient"
 
     iget-object v4, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->mPacket:[B
@@ -231,7 +211,6 @@
 
     goto :goto_0
 
-    .line 384
     .end local v0    # "e":Landroid/net/dhcp/DhcpPacket$ParseException;
     .end local v1    # "length":I
     :cond_1
@@ -242,10 +221,8 @@
     # invokes: Landroid/net/dhcp/DhcpClient;->maybeLog(Ljava/lang/String;)V
     invoke-static {v3, v4}, Landroid/net/dhcp/DhcpClient;->access$100(Landroid/net/dhcp/DhcpClient;Ljava/lang/String;)V
 
-    .line 385
     return-void
 
-    .line 373
     .restart local v1    # "length":I
     :catch_2
     move-exception v0

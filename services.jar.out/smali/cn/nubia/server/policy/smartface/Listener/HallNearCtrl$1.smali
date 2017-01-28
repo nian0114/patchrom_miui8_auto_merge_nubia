@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 51
     iput-object p1, p0, Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
     iput-boolean p2, p0, Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl$1;->val$enable:Z
@@ -44,13 +43,11 @@
     .locals 2
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl$1;->this$0:Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;
 
     iget-boolean v1, p0, Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl$1;->val$enable:Z
 
     invoke-virtual {v0, v1}, Lcn/nubia/server/policy/smartface/Listener/HallNearCtrl;->setSmartFaceDisplayFlag(Z)V
 
-    .line 55
     return-void
 .end method

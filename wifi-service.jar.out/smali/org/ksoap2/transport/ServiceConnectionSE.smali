@@ -21,14 +21,12 @@
     .end annotation
 
     .prologue
-    .line 47
     const/4 v0, 0x0
 
     const/16 v1, 0x4e20
 
     invoke-direct {p0, v0, p1, v1}, Lorg/ksoap2/transport/ServiceConnectionSE;-><init>(Ljava/net/Proxy;Ljava/lang/String;I)V
 
-    .line 48
     return-void
 .end method
 
@@ -43,12 +41,10 @@
     .end annotation
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1, p2}, Lorg/ksoap2/transport/ServiceConnectionSE;-><init>(Ljava/net/Proxy;Ljava/lang/String;I)V
 
-    .line 62
     return-void
 .end method
 
@@ -63,12 +59,10 @@
     .end annotation
 
     .prologue
-    .line 51
     const/16 v0, 0x4e20
 
     invoke-direct {p0, p1, p2, v0}, Lorg/ksoap2/transport/ServiceConnectionSE;-><init>(Ljava/net/Proxy;Ljava/lang/String;I)V
 
-    .line 52
     return-void
 .end method
 
@@ -86,10 +80,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/net/URL;
@@ -105,37 +97,30 @@
     :goto_0
     iput-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
-    .line 68
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
 
-    .line 69
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, v2}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
-    .line 70
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, v2}, Ljava/net/HttpURLConnection;->setDoInput(Z)V
 
-    .line 71
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p3}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 72
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p3}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 73
     return-void
 
-    .line 65
     :cond_0
     new-instance v0, Ljava/net/URL;
 
@@ -161,12 +146,10 @@
     .end annotation
 
     .prologue
-    .line 76
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->connect()V
 
-    .line 77
     return-void
 .end method
 
@@ -174,12 +157,10 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    .line 81
     return-void
 .end method
 
@@ -187,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
@@ -201,7 +181,6 @@
     .locals 1
 
     .prologue
-    .line 132
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getURL()Ljava/net/URL;
@@ -219,7 +198,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getURL()Ljava/net/URL;
@@ -237,7 +215,6 @@
     .locals 1
 
     .prologue
-    .line 136
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getURL()Ljava/net/URL;
@@ -255,26 +232,22 @@
     .locals 9
 
     .prologue
-    .line 84
     iget-object v7, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v7}, Ljava/net/HttpURLConnection;->getHeaderFields()Ljava/util/Map;
 
     move-result-object v4
 
-    .line 85
     .local v4, "properties":Ljava/util/Map;
     invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v3
 
-    .line 86
     .local v3, "keys":Ljava/util/Set;
     new-instance v5, Ljava/util/LinkedList;
 
     invoke-direct {v5}, Ljava/util/LinkedList;-><init>()V
 
-    .line 88
     .local v5, "retList":Ljava/util/List;
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -288,14 +261,12 @@
 
     if-eqz v7, :cond_1
 
-    .line 89
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 90
     .local v2, "key":Ljava/lang/String;
     invoke-interface {v4, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -303,7 +274,6 @@
 
     check-cast v6, Ljava/util/List;
 
-    .line 92
     .local v6, "values":Ljava/util/List;
     const/4 v1, 0x0
 
@@ -315,7 +285,6 @@
 
     if-ge v1, v7, :cond_0
 
-    .line 93
     new-instance v8, Lorg/ksoap2/HeaderProperty;
 
     invoke-interface {v6, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -328,12 +297,10 @@
 
     invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 92
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 97
     .end local v1    # "j":I
     .end local v2    # "key":Ljava/lang/String;
     .end local v6    # "values":Ljava/util/List;
@@ -350,7 +317,6 @@
     .end annotation
 
     .prologue
-    .line 124
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
@@ -369,7 +335,6 @@
     .end annotation
 
     .prologue
-    .line 120
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
@@ -384,12 +349,10 @@
     .param p1, "contentLength"    # I
 
     .prologue
-    .line 116
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->setFixedLengthStreamingMode(I)V
 
-    .line 117
     return-void
 .end method
 
@@ -403,12 +366,10 @@
     .end annotation
 
     .prologue
-    .line 105
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 106
     return-void
 .end method
 
@@ -418,11 +379,9 @@
     .param p2, "soapAction"    # Ljava/lang/String;
 
     .prologue
-    .line 101
     iget-object v0, p0, Lorg/ksoap2/transport/ServiceConnectionSE;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1, p2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 102
     return-void
 .end method
