@@ -1,0 +1,109 @@
+From 25ad26bcb3596bad04a594da199abd296a05ae3a Mon Sep 17 00:00:00 2001
+From: nian0114 <268078545@qq.com>
+Date: Sat, 28 Jan 2017 21:33:40 +0800
+Subject: [PATCH] hack theme manager(1/2)
+
+---
+ .../thememanager/util/ThemeOperationHandler.smali  | 74 ++--------------------
+ 1 file changed, 4 insertions(+), 70 deletions(-)
+
+--- a/ThemeManager/smali/com/android/thememanager/util/ThemeOperationHandler.smali
++++ b/ThemeManager/smali/com/android/thememanager/util/ThemeOperationHandler.smali
+@@ -1317,11 +1317,8 @@
+     .locals 1
+ 
+     .prologue
+-    iget-object v0, p0, Lcom/android/thememanager/util/ThemeOperationHandler;->mResource:Lcom/android/thememanager/model/Resource;
+-
+-    invoke-virtual {v0}, Lcom/android/thememanager/model/Resource;->isProductBought()Z
+ 
+-    move-result v0
++    const/4 v0, 0x1
+ 
+     return v0
+ .end method
+@@ -1476,7 +1473,7 @@
+     .locals 1
+ 
+     .prologue
+-    iget-boolean v0, p0, Lcom/android/thememanager/util/ThemeOperationHandler;->mIsLegal:Z
++    const/4 v0, 0x1
+ 
+     return v0
+ .end method
+@@ -1532,70 +1529,9 @@
+     .locals 2
+ 
+     .prologue
+-    new-instance v0, Ljava/io/File;
+-
+-    iget-object v1, p0, Lcom/android/thememanager/util/ThemeOperationHandler;->mResResolver:Lcom/android/thememanager/model/ResourceResolver;
+-
+-    invoke-virtual {v1}, Lcom/android/thememanager/model/ResourceResolver;->getRightsPath()Ljava/lang/String;
+-
+-    move-result-object v1
+-
+-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+-
+-    .local v0, "rightsFile":Ljava/io/File;
+-    invoke-virtual {p0}, Lcom/android/thememanager/util/ThemeOperationHandler;->isAuthorizedResource()Z
+-
+-    move-result v1
+-
+-    if-nez v1, :cond_1
+-
+-    invoke-virtual {p0}, Lcom/android/thememanager/util/ThemeOperationHandler;->getPrice()I
+-
+-    move-result v1
+-
+-    if-eqz v1, :cond_1
+-
+-    invoke-virtual {p0}, Lcom/android/thememanager/util/ThemeOperationHandler;->isLocalResource()Z
+-
+-    move-result v1
+-
+-    if-eqz v1, :cond_0
+ 
+-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+-
+-    move-result v1
+-
+-    if-nez v1, :cond_0
+-
+-    invoke-virtual {p0}, Lcom/android/thememanager/util/ThemeOperationHandler;->isTrialable()Z
+-
+-    move-result v1
+-
+-    if-eqz v1, :cond_1
+-
+-    :cond_0
+-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+-
+-    move-result v1
+-
+-    if-eqz v1, :cond_2
+-
+-    invoke-static {v0}, Lmiui/drm/DrmManager;->isPermanentRights(Ljava/io/File;)Z
+-
+-    move-result v1
+-
+-    if-eqz v1, :cond_2
+-
+-    :cond_1
+-    const/4 v1, 0x1
+-
+-    :goto_0
+-    return v1
+-
+-    :cond_2
+-    const/4 v1, 0x0
+-
+-    goto :goto_0
++    return v0
++    
+ .end method
+ 
+ .method public isPicker()Z
+-- 
+2.10.1
+

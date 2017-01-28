@@ -22,7 +22,7 @@ local-miui-removed-apps := FM MiuiCamera Updater
 local-miui-modified-apps := TeleService InCallUI MiuiHome
 
 local-miui-modified-apps-smali := DeskClock MiuiSystemUI TelephonyProvider SecurityCenter \
-SecurityCoreAdd MiuiKeyguard XiaomiServiceFramework Settings miuisystem
+SecurityCoreAdd MiuiKeyguard XiaomiServiceFramework Settings miuisystem ThemeManager
 
 PORT_PRODUCT := nian_z11
 

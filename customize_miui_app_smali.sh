@@ -76,3 +76,7 @@ fi
 if [ $1 = "miuisystem" ];then
     applyPatch $1 $2
 fi
+
+if [ $1 = "ThemeManager" ];then
+    applyPatch $1 $2
+fi
