@@ -1100,6 +1100,10 @@
 
     if-eq v8, v9, :cond_a
 
+    iget v8, p0, Lcom/android/server/wm/WindowAnimator;->mForceHiding:I
+
+    if-eqz v8, :cond_a
+
     move v3, v6
 
     .local v3, "keyguardOn":Z
