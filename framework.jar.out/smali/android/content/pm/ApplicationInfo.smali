@@ -695,6 +695,12 @@
 
     iput v0, p0, Landroid/content/pm/ApplicationInfo;->fullBackupContent:I
 
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Landroid/content/pm/ApplicationInfo;->nextActivityTheme:I
+
     return-void
 
     :cond_0
@@ -2161,6 +2167,10 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     iget v0, p0, Landroid/content/pm/ApplicationInfo;->fullBackupContent:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget v0, p0, Landroid/content/pm/ApplicationInfo;->nextActivityTheme:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

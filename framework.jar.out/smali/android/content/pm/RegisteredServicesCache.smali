@@ -2325,6 +2325,8 @@
     move-result-object v6
 
     .local v6, "packages":[Ljava/lang/String;
+    if-eqz v6, :cond_0
+
     move-object v0, v6
 
     .local v0, "arr$":[Ljava/lang/String;
