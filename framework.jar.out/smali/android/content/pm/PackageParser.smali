@@ -6676,7 +6676,7 @@
 .end method
 
 .method private static parseApkLite(Ljava/lang/String;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;I[Landroid/content/pm/Signature;)Landroid/content/pm/PackageParser$ApkLite;
-    .locals 19
+    .locals 24
     .param p0, "codePath"    # Ljava/lang/String;
     .param p1, "res"    # Landroid/content/res/Resources;
     .param p2, "parser"    # Lorg/xmlpull/v1/XmlPullParser;
@@ -6694,302 +6694,413 @@
     .prologue
     invoke-static/range {p2 .. p4}, Landroid/content/pm/PackageParser;->parsePackageSplitNames(Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;I)Landroid/util/Pair;
 
-    move-result-object v15
+    move-result-object v19
 
-    .local v15, "packageSplit":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
-    const/4 v7, -0x1
+    .local v19, "packageSplit":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
+    const/4 v8, -0x1
 
-    .local v7, "installLocation":I
-    const/4 v5, 0x0
-
-    .local v5, "versionCode":I
+    .local v8, "installLocation":I
     const/4 v6, 0x0
 
-    .local v6, "revisionCode":I
-    const/4 v10, 0x0
+    .local v6, "versionCode":I
+    const/4 v7, 0x0
 
-    .local v10, "coreApp":Z
+    .local v7, "revisionCode":I
     const/4 v11, 0x0
 
-    .local v11, "multiArch":Z
-    const/4 v12, 0x1
+    .local v11, "coreApp":Z
+    const/4 v12, 0x0
 
-    .local v12, "extractNativeLibs":Z
-    const/4 v14, 0x0
+    .local v12, "multiArch":Z
+    const/4 v13, 0x1
 
-    .local v14, "i":I
+    .local v13, "extractNativeLibs":Z
+    const/16 v16, 0x0
+
+    .local v16, "i":I
     :goto_0
     invoke-interface/range {p3 .. p3}, Landroid/util/AttributeSet;->getAttributeCount()I
 
-    move-result v1
+    move-result v2
 
-    if-ge v14, v1, :cond_4
+    move/from16 v0, v16
 
-    move-object/from16 v0, p3
-
-    invoke-interface {v0, v14}, Landroid/util/AttributeSet;->getAttributeName(I)Ljava/lang/String;
-
-    move-result-object v13
-
-    .local v13, "attr":Ljava/lang/String;
-    const-string v1, "installLocation"
-
-    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 v1, -0x1
+    if-ge v0, v2, :cond_4
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v14, v1}, Landroid/util/AttributeSet;->getAttributeIntValue(II)I
+    move/from16 v1, v16
 
-    move-result v7
+    invoke-interface {v0, v1}, Landroid/util/AttributeSet;->getAttributeName(I)Ljava/lang/String;
+
+    move-result-object v15
+
+    .local v15, "attr":Ljava/lang/String;
+    const-string v2, "installLocation"
+
+    invoke-virtual {v15, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v2, -0x1
+
+    move-object/from16 v0, p3
+
+    move/from16 v1, v16
+
+    invoke-interface {v0, v1, v2}, Landroid/util/AttributeSet;->getAttributeIntValue(II)I
+
+    move-result v8
 
     :cond_0
     :goto_1
-    add-int/lit8 v14, v14, 0x1
+    add-int/lit8 v16, v16, 0x1
 
     goto :goto_0
 
     :cond_1
-    const-string v1, "versionCode"
+    const-string v2, "versionCode"
 
-    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v15, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_2
+    if-eqz v2, :cond_2
 
-    const/4 v1, 0x0
-
-    move-object/from16 v0, p3
-
-    invoke-interface {v0, v14, v1}, Landroid/util/AttributeSet;->getAttributeIntValue(II)I
-
-    move-result v5
-
-    goto :goto_1
-
-    :cond_2
-    const-string v1, "revisionCode"
-
-    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v14, v1}, Landroid/util/AttributeSet;->getAttributeIntValue(II)I
+    move/from16 v1, v16
+
+    invoke-interface {v0, v1, v2}, Landroid/util/AttributeSet;->getAttributeIntValue(II)I
 
     move-result v6
 
     goto :goto_1
 
-    :cond_3
-    const-string v1, "coreApp"
+    :cond_2
+    const-string v2, "revisionCode"
 
-    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v15, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_3
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v14, v1}, Landroid/util/AttributeSet;->getAttributeBooleanValue(IZ)Z
+    move/from16 v1, v16
 
-    move-result v10
+    invoke-interface {v0, v1, v2}, Landroid/util/AttributeSet;->getAttributeIntValue(II)I
+
+    move-result v7
 
     goto :goto_1
 
-    .end local v13    # "attr":Ljava/lang/String;
-    :cond_4
-    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+    :cond_3
+    const-string v2, "coreApp"
 
-    move-result v1
+    invoke-virtual {v15, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    add-int/lit8 v16, v1, 0x1
+    move-result v2
 
-    .local v16, "searchDepth":I
-    new-instance v8, Ljava/util/ArrayList;
+    if-eqz v2, :cond_0
 
-    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
-
-    .local v8, "verifiers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/VerifierInfo;>;"
-    :cond_5
-    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
-
-    move-result v17
-
-    .local v17, "type":I
-    const/4 v1, 0x1
-
-    move/from16 v0, v17
-
-    if-eq v0, v1, :cond_a
-
-    const/4 v1, 0x3
-
-    move/from16 v0, v17
-
-    if-ne v0, v1, :cond_6
-
-    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
-
-    move-result v1
-
-    move/from16 v0, v16
-
-    if-lt v1, v0, :cond_a
-
-    :cond_6
-    const/4 v1, 0x3
-
-    move/from16 v0, v17
-
-    if-eq v0, v1, :cond_5
-
-    const/4 v1, 0x4
-
-    move/from16 v0, v17
-
-    if-eq v0, v1, :cond_5
-
-    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
-
-    move-result v1
-
-    move/from16 v0, v16
-
-    if-ne v1, v0, :cond_7
-
-    const-string v1, "package-verifier"
-
-    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    invoke-static/range {p1 .. p4}, Landroid/content/pm/PackageParser;->parseVerifier(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;I)Landroid/content/pm/VerifierInfo;
-
-    move-result-object v18
-
-    .local v18, "verifier":Landroid/content/pm/VerifierInfo;
-    if-eqz v18, :cond_7
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v8, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .end local v18    # "verifier":Landroid/content/pm/VerifierInfo;
-    :cond_7
-    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
-
-    move-result v1
-
-    move/from16 v0, v16
-
-    if-ne v1, v0, :cond_5
-
-    const-string v1, "application"
-
-    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    const/4 v14, 0x0
-
-    :goto_2
-    invoke-interface/range {p3 .. p3}, Landroid/util/AttributeSet;->getAttributeCount()I
-
-    move-result v1
-
-    if-ge v14, v1, :cond_5
+    const/4 v2, 0x0
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v14}, Landroid/util/AttributeSet;->getAttributeName(I)Ljava/lang/String;
+    move/from16 v1, v16
 
-    move-result-object v13
-
-    .restart local v13    # "attr":Ljava/lang/String;
-    const-string v1, "multiArch"
-
-    invoke-virtual {v1, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    const/4 v1, 0x0
-
-    move-object/from16 v0, p3
-
-    invoke-interface {v0, v14, v1}, Landroid/util/AttributeSet;->getAttributeBooleanValue(IZ)Z
+    invoke-interface {v0, v1, v2}, Landroid/util/AttributeSet;->getAttributeBooleanValue(IZ)Z
 
     move-result v11
 
-    :cond_8
-    const-string v1, "extractNativeLibs"
+    goto :goto_1
 
-    invoke-virtual {v1, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .end local v15    # "attr":Ljava/lang/String;
+    :cond_4
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_9
+    add-int/lit8 v21, v2, 0x1
 
-    const/4 v1, 0x1
+    .local v21, "searchDepth":I
+    const/4 v14, 0x0
+
+    .local v14, "originalPackages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
+
+    .local v9, "verifiers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/VerifierInfo;>;"
+    :cond_5
+    :goto_2
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
+
+    move-result v22
+
+    .local v22, "type":I
+    const/4 v2, 0x1
+
+    move/from16 v0, v22
+
+    if-eq v0, v2, :cond_d
+
+    const/4 v2, 0x3
+
+    move/from16 v0, v22
+
+    if-ne v0, v2, :cond_6
+
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+
+    move-result v2
+
+    move/from16 v0, v21
+
+    if-lt v2, v0, :cond_d
+
+    :cond_6
+    const/4 v2, 0x3
+
+    move/from16 v0, v22
+
+    if-eq v0, v2, :cond_5
+
+    const/4 v2, 0x4
+
+    move/from16 v0, v22
+
+    if-eq v0, v2, :cond_5
+
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+
+    move-result v2
+
+    move/from16 v0, v21
+
+    if-ne v2, v0, :cond_7
+
+    const-string v2, "package-verifier"
+
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    invoke-static/range {p1 .. p4}, Landroid/content/pm/PackageParser;->parseVerifier(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;I)Landroid/content/pm/VerifierInfo;
+
+    move-result-object v23
+
+    .local v23, "verifier":Landroid/content/pm/VerifierInfo;
+    if-eqz v23, :cond_7
+
+    move-object/from16 v0, v23
+
+    invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .end local v23    # "verifier":Landroid/content/pm/VerifierInfo;
+    :cond_7
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+
+    move-result v2
+
+    move/from16 v0, v21
+
+    if-ne v2, v0, :cond_a
+
+    const-string v2, "application"
+
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_a
+
+    const/16 v16, 0x0
+
+    :goto_3
+    invoke-interface/range {p3 .. p3}, Landroid/util/AttributeSet;->getAttributeCount()I
+
+    move-result v2
+
+    move/from16 v0, v16
+
+    if-ge v0, v2, :cond_a
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v14, v1}, Landroid/util/AttributeSet;->getAttributeBooleanValue(IZ)Z
+    move/from16 v1, v16
+
+    invoke-interface {v0, v1}, Landroid/util/AttributeSet;->getAttributeName(I)Ljava/lang/String;
+
+    move-result-object v15
+
+    .restart local v15    # "attr":Ljava/lang/String;
+    const-string v2, "multiArch"
+
+    invoke-virtual {v2, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_8
+
+    const/4 v2, 0x0
+
+    move-object/from16 v0, p3
+
+    move/from16 v1, v16
+
+    invoke-interface {v0, v1, v2}, Landroid/util/AttributeSet;->getAttributeBooleanValue(IZ)Z
 
     move-result v12
 
+    :cond_8
+    const-string v2, "extractNativeLibs"
+
+    invoke-virtual {v2, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    const/4 v2, 0x1
+
+    move-object/from16 v0, p3
+
+    move/from16 v1, v16
+
+    invoke-interface {v0, v1, v2}, Landroid/util/AttributeSet;->getAttributeBooleanValue(IZ)Z
+
+    move-result v13
+
     :cond_9
-    add-int/lit8 v14, v14, 0x1
+    add-int/lit8 v16, v16, 0x1
 
-    goto :goto_2
+    goto :goto_3
 
-    .end local v13    # "attr":Ljava/lang/String;
+    .end local v15    # "attr":Ljava/lang/String;
     :cond_a
-    new-instance v1, Landroid/content/pm/PackageParser$ApkLite;
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    iget-object v3, v15, Landroid/util/Pair;->first:Ljava/lang/Object;
+    move-result v2
 
-    check-cast v3, Ljava/lang/String;
+    move/from16 v0, v21
 
-    iget-object v4, v15, Landroid/util/Pair;->second:Ljava/lang/Object;
+    if-ne v2, v0, :cond_5
+
+    const-string v2, "original-package"
+
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    move-object/from16 v0, v19
+
+    iget-object v0, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    move-object/from16 v18, v0
+
+    check-cast v18, Ljava/lang/String;
+
+    .local v18, "packageName":Ljava/lang/String;
+    sget-object v2, Lcom/android/internal/R$styleable;->AndroidManifestOriginalPackage:[I
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, p3
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object v20
+
+    .local v20, "sa":Landroid/content/res/TypedArray;
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move-object/from16 v0, v20
+
+    invoke-virtual {v0, v2, v3}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
+
+    move-result-object v17
+
+    .local v17, "orig":Ljava/lang/String;
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, v17
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_c
+
+    if-nez v14, :cond_b
+
+    new-instance v14, Ljava/util/ArrayList;
+
+    .end local v14    # "originalPackages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
+
+    .restart local v14    # "originalPackages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    :cond_b
+    move-object/from16 v0, v17
+
+    invoke-virtual {v14, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_c
+    invoke-virtual/range {v20 .. v20}, Landroid/content/res/TypedArray;->recycle()V
+
+    goto/16 :goto_2
+
+    .end local v17    # "orig":Ljava/lang/String;
+    .end local v18    # "packageName":Ljava/lang/String;
+    .end local v20    # "sa":Landroid/content/res/TypedArray;
+    :cond_d
+    new-instance v2, Landroid/content/pm/PackageParser$ApkLite;
+
+    move-object/from16 v0, v19
+
+    iget-object v4, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v4, Ljava/lang/String;
 
-    move-object/from16 v2, p0
+    move-object/from16 v0, v19
 
-    move-object/from16 v9, p5
+    iget-object v5, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    invoke-direct/range {v1 .. v12}, Landroid/content/pm/PackageParser$ApkLite;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/util/List;[Landroid/content/pm/Signature;ZZZ)V
+    check-cast v5, Ljava/lang/String;
 
-    return-object v1
+    move-object/from16 v3, p0
+
+    move-object/from16 v10, p5
+
+    invoke-direct/range {v2 .. v14}, Landroid/content/pm/PackageParser$ApkLite;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/util/List;[Landroid/content/pm/Signature;ZZZLjava/util/List;)V
+
+    return-object v2
 .end method
 
 .method private parseBaseApk(Landroid/content/res/Resources;Landroid/content/res/XmlResourceParser;I[Ljava/lang/String;)Landroid/content/pm/PackageParser$Package;

@@ -455,6 +455,12 @@
     if-eqz v1, :cond_1
 
     :cond_0
+    invoke-virtual {p0}, Landroid/content/pm/UserInfo;->isSpace()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
     const/4 v0, 0x1
 
     :cond_1

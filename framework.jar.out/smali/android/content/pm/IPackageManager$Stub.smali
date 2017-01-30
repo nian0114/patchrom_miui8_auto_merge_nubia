@@ -7335,6 +7335,46 @@
 
     nop
 
+    :sswitch_99
+    const-string v4, "android.content.pm.IPackageManager"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v5
+
+    .restart local v5    # "_arg0":Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v6
+
+    .local v6, "_arg1":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v4
+
+    invoke-static {v4}, Landroid/content/pm/IPackageDataObserver$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageDataObserver;
+
+    move-result-object v7
+
+    .local v7, "_arg2":Landroid/content/pm/IPackageDataObserver;
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v5, v6, v7}, Landroid/content/pm/IPackageManager$Stub;->deleteApplicationCacheFilesForUser(Ljava/lang/String;ILandroid/content/pm/IPackageDataObserver;)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    const/4 v4, 0x1
+
+    goto/16 :goto_0
+
+    .end local v5    # "_arg0":Ljava/lang/String;
+    .end local v6    # "_arg1":I
+    .end local v7    # "_arg2":Landroid/content/pm/IPackageDataObserver;
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -7483,6 +7523,7 @@
         0x90 -> :sswitch_90
         0x91 -> :sswitch_91
         0x92 -> :sswitch_92
+        0x99 -> :sswitch_99
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

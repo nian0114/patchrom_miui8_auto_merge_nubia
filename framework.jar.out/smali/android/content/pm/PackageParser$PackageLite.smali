@@ -98,6 +98,10 @@
 
     iput-boolean v0, p0, Landroid/content/pm/PackageParser$PackageLite;->extractNativeLibs:Z
 
+    iget-object v0, p2, Landroid/content/pm/PackageParser$ApkLite;->originalPackages:Ljava/util/List;
+
+    iput-object v0, p0, Landroid/content/pm/PackageParser$PackageLite;->originalPackages:Ljava/util/List;
+
     return-void
 .end method
 

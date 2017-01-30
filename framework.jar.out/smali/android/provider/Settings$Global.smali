@@ -1439,6 +1439,15 @@
     goto :goto_0
 
     :cond_2
+    const/4 v0, 0x4
+
+    if-ne p0, v0, :cond_miui_3
+
+    const-string v0, "ZEN_MODE_MIUI_SILENT"
+
+    goto :goto_0
+
+    :cond_miui_3
     const-string v0, "ZEN_MODE_OFF"
 
     goto :goto_0
