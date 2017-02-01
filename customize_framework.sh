@@ -54,7 +54,8 @@ then
     applyPatch "overlay/services"
     appendSmaliPart "services"
     cp -rf overlay/services/smali/com/android/server/am/*.smali $2/smali/com/android/server/am
-	sed -i 's/user_setup_complete/xbt_setup_complete/g' `grep -lnr "user_setup_complete" $2/smali`
+    sed -i 's/user_setup_complete/xbt_setup_complete/g' `grep -lnr "user_setup_complete" $2/smali`
+    sed -i 's/device_provisioned/xbt_setup_complete/g' `grep -lnr "device_provisioned" $2/smali`  
 fi
 
 if [ $2 = "$BUILD_OUT/telephony-common" ]
