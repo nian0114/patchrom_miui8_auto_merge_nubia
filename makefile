@@ -14,7 +14,7 @@ local-previous-target-dir :=
 # All apps from original ZIP, but has smali files chanded
 local-modified-apps := SettingsProvider
 
-local-modified-jars :=
+local-modified-jars := pm
 
 # All apks from MIUI
 local-miui-removed-apps := FM MiuiCamera Updater
