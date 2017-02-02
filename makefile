@@ -19,10 +19,10 @@ local-modified-jars := pm
 # All apks from MIUI
 local-miui-removed-apps := FM MiuiCamera Updater
 
-local-miui-modified-apps := TeleService InCallUI MiuiHome
+local-miui-modified-apps := TeleService InCallUI FindDevice
 
 local-miui-modified-apps-smali := DeskClock MiuiSystemUI TelephonyProvider SecurityCenter \
-SecurityCoreAdd MiuiKeyguard XiaomiServiceFramework Settings miuisystem ThemeManager
+SecurityCoreAdd MiuiKeyguard XiaomiServiceFramework Settings miuisystem ThemeManager Weather
 
 PORT_PRODUCT := nian_z11
 
