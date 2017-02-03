@@ -4,27 +4,27 @@ Date: Fri, 3 Feb 2017 21:53:58 +0800
 Subject: [PATCH] fix nubia phone fc
 
 ---
- TeleService/smali/com/android/phone/PhoneGlobals.smali | 10 +++++++++-
- 1 file changed, 9 insertions(+), 1 deletion(-)
+ TeleService/smali/com/android/phone/PhoneGlobals.smali | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
 
 --- a/TeleService/smali/com/android/phone/PhoneGlobals.smali
 +++ b/TeleService/smali/com/android/phone/PhoneGlobals.smali
-@@ -1507,7 +1507,15 @@
-
-     if-nez v13, :cond_3
-
--    invoke-static/range {p0 .. p0}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->init(Landroid/content/Context;)V
-+    const-class v13, Lcom/qti/internal/telephony/QtiTelephonyPlugin;
+@@ -1507,7 +1507,14 @@
+ 
+     if-nez v11, :cond_2
+ 
+-    invoke-static {p0}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->init(Landroid/content/Context;)V
++    const-class v11, Lcom/qti/internal/telephony/QtiTelephonyPlugin;
 +
-+    invoke-virtual {v13}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
++    invoke-virtual {v11}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 +
-+    move-result-object v13
++    move-result-object v11
 +
-+    move-object/from16 v0, p0
-+    invoke-static {v0, v13}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->init(Landroid/content/Context;Ljava/lang/ClassLoader;)V
++    invoke-static {p0, v11}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->init(Landroid/content/Context;Ljava/lang/ClassLoader;)V
 +
-
+ 
      invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
-
---
+ 
+-- 
 2.10.1
+
