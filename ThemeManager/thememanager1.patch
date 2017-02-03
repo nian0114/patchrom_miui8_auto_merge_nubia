@@ -4,8 +4,8 @@ Date: Sun, 29 Jan 2017 01:17:04 +0800
 Subject: [PATCH] Hack Theme
 
 ---
- .../thememanager/util/ThemeOperationHandler.smali  | 74 ++--------------------
- 1 file changed, 4 insertions(+), 70 deletions(-)
+ .../thememanager/util/ThemeOperationHandler.smali  | 76 ++--------------------
+ 1 file changed, 4 insertions(+), 72 deletions(-)
 
 --- a/ThemeManager/smali/com/android/thememanager/util/ThemeOperationHandler.smali
 +++ b/ThemeManager/smali/com/android/thememanager/util/ThemeOperationHandler.smali

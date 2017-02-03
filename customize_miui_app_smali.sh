@@ -80,3 +80,7 @@ fi
 if [ $1 = "ThemeManager" ];then
     applyPatch $1 $2
 fi
+
+if [ $1 = "Telecom" ];then
+    applyPatch $1 $2
+fi
