@@ -22,6 +22,7 @@ PrintSpooler \
 QtiTelephonyService \
 SingleHandPageSet \
 SmartBar \
+SmartcardService \
 Stk \
 SuperSnap \
 TimeService \
