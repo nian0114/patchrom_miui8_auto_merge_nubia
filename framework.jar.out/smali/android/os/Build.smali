@@ -124,14 +124,6 @@
 
     sput-object v3, Landroid/os/Build;->BOARD:Ljava/lang/String;
 
-    const-string v3, "ro.product.manufacturer"
-
-    invoke-static {v3}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    sput-object v3, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
-
     const-string v3, "ro.product.brand"
 
     invoke-static {v3}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -139,14 +131,6 @@
     move-result-object v3
 
     sput-object v3, Landroid/os/Build;->BRAND:Ljava/lang/String;
-
-    const-string v3, "ro.product.model"
-
-    invoke-static {v3}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    sput-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v3, "ro.bootloader"
 
@@ -180,6 +164,39 @@
 
     sput-object v3, Landroid/os/Build;->SERIAL:Ljava/lang/String;
 
+    const-string v3, "ro.product.model"
+
+    invoke-static {v3}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    sput-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v3, "ro.product.manufacturer"
+
+    invoke-static {v3}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    sput-object v3, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v3, "persist.sys.w2ry_enabled"
+
+    invoke-static {v3, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    if-ne v3, v1, :cond_nian_0
+
+    const-string v3, "MI 5"
+
+    sput-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v3, "Xiaomi"
+
+    sput-object v3, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    :cond_nian_0
     const-string v3, "ro.product.cpu.abilist"
 
     const-string v4, ","
