@@ -41,6 +41,7 @@ package_extract_file("firmware-update/rpm.mbn", "/dev/block/bootdevice/by-name/r
 package_extract_file("firmware-update/tz.mbn", "/dev/block/bootdevice/by-name/tz");
 package_extract_file("firmware-update/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");
 package_extract_file("firmware-update/xbl.elf", "/dev/block/bootdevice/by-name/xbl");
+package_extract_file("firmware-update/NON-HLOS.bin", "/dev/block/bootdevice/by-name/modem");
 package_extract_file("firmware-update/hyp.mbn", "/dev/block/bootdevice/by-name/hyp");
 package_extract_file("firmware-update/BTFM.bin", "/dev/block/bootdevice/by-name/bluetooth");
 package_extract_file("firmware-update/pmic.elf", "/dev/block/bootdevice/by-name/pmic");
