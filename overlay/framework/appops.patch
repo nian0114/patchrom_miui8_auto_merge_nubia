@@ -1,0 +1,166 @@
+From 414ab2166bc84e44520d13f3cc3c490e11c5d640 Mon Sep 17 00:00:00 2001
+From: nian0114 <268078545@qq.com>
+Date: Tue, 28 Feb 2017 17:18:37 +0800
+Subject: [PATCH] fix appops
+
+---
+ .../smali/android/app/AppOpsManager.smali          |  82 ++++++++++++++++++++-
+ 1 files changed, 80 insertions(+), 2 deletions(-)
+
+--- a/framework/smali/android/app/AppOpsManager.smali
++++ b/framework/smali/android/app/AppOpsManager.smali
+@@ -267,7 +267,7 @@
+ 
+ .field public static final TAG:Ljava/lang/String; = "AppOps"
+ 
+-.field public static _NUM_OP:I
++.field public static final _NUM_OP:I = 0x42
+ 
+ .field private static sOpAllowSystemRestrictionBypass:[Z
+ 
+@@ -341,7 +341,7 @@
+ 
+     const/4 v6, 0x0
+ 
+-    const/16 v5, 0x3f
++    const/16 v5, 0x42
+ 
+     const/4 v4, 0x0
+ 
+@@ -665,6 +665,24 @@
+ 
+     aput-object v3, v1, v2
+ 
++     const/16 v2, 0x3f
++
++     const-string v3, "android:wifi_change"
++
++    aput-object v3, v1, v2
++
++    const/16 v2, 0x40
++
++    const-string v3, "android:bluetooth_change"
++
++    aput-object v3, v1, v2
++
++    const/16 v2, 0x41
++
++    const-string v3, "android:install_shortcut"
++
++    aput-object v3, v1, v2
++
+     sput-object v1, Landroid/app/AppOpsManager;->sOpToString:[Ljava/lang/String;
+ 
+     new-array v1, v5, [Ljava/lang/String;
+@@ -1041,6 +1059,24 @@
+ 
+     aput-object v3, v1, v2
+ 
++    const/16 v2, 0x3f
++
++    const-string v3, "WIFI_CHANGE"
++
++    aput-object v3, v1, v2
++
++    const/16 v2, 0x40
++
++    const-string v3, "BLUETOOTH_CHANGE"
++
++    aput-object v3, v1, v2
++
++    const/16 v2, 0x41
++
++    const-string v3, "INSTALL_SHORTCUT"
++
++    aput-object v3, v1, v2
++
+     sput-object v1, Landroid/app/AppOpsManager;->sOpNames:[Ljava/lang/String;
+ 
+     new-array v1, v5, [Ljava/lang/String;
+@@ -1361,6 +1397,24 @@
+ 
+     aput-object v3, v1, v2
+ 
++    const/16 v2, 0x3f
++
++    const-string v3, "android.permission.CHANGE_WIFI_STATE"
++
++    aput-object v3, v1, v2
++
++    const/16 v2, 0x40
++
++    const-string v3, "android.permission.BLUETOOTH"
++
++    aput-object v3, v1, v2
++
++    const/16 v2, 0x41
++
++    const-string v3, "com.android.launcher.permission.INSTALL_SHORTCUT"
++
++    aput-object v3, v1, v2
++
+     sput-object v1, Landroid/app/AppOpsManager;->sOpPerms:[Ljava/lang/String;
+ 
+     new-array v1, v5, [Ljava/lang/String;
+@@ -1667,6 +1721,18 @@
+ 
+     aput-object v4, v1, v2
+ 
++    const/16 v2, 0x3f
++
++    aput-object v4, v1, v2
++
++    const/16 v2, 0x40
++
++    aput-object v4, v1, v2
++
++    const/16 v2, 0x41
++
++    aput-object v4, v1, v2
++
+     sput-object v1, Landroid/app/AppOpsManager;->sOpRestrictions:[Ljava/lang/String;
+ 
+     new-array v1, v5, [Z
+@@ -2223,6 +2289,9 @@
+         0x3c
+         0x3d
+         0x3e
++        0x3f
++        0x40
++        0x41
+     .end array-data
+ 
+     :array_1
+@@ -2290,6 +2359,9 @@
+         0x0t
+         0x0t
+         0x0t
++        0x0t
++        0x0t
++        0x0t
+     .end array-data
+ 
+     :array_2
+@@ -2357,6 +2429,9 @@
+         0x0
+         0x0
+         0x0
++        0x0
++        0x0
++        0x0
+     .end array-data
+ 
+     :array_3
+@@ -2380,6 +2455,9 @@
+         0x0t
+         0x0t
+         0x0t
++        0x0t
++        0x0t
++        0x0t
+         0x0t
+         0x0t
+         0x0t
+-- 
+2.10.1
+
