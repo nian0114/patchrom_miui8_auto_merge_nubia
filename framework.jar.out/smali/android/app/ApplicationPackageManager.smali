@@ -218,7 +218,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x1080340
+    const v1, 0x1080335
 
     :goto_0
     return v1
@@ -230,9 +230,9 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x11020056
+    sget v1, Landroid/miui/R$drawable;->ic_corp_icon_xspace:I
 
-    goto :goto_0
+    return v1
 
     :cond_1
     const/4 v1, 0x0
@@ -5056,7 +5056,7 @@
 
     move-result-object v2
 
-    const v3, 0x1080338
+    const v3, 0x1080333
 
     invoke-virtual {v2, v3, p2}, Landroid/content/res/Resources;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
 
