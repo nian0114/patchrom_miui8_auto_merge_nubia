@@ -1971,32 +1971,11 @@
 .end method
 
 .method private isInternalVersion()Z
-    .locals 2
+    .locals 1
 
-    .prologue
-    iget-object v1, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mIsInternationVersion:Ljava/lang/Boolean;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v0, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mIsInternationVersion:Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    monitor-exit v1
+    const/4 v0, 0x1
 
     return v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
 .end method
 
 .method private isLimited(Ljava/lang/String;)Z
@@ -4150,51 +4129,7 @@
     .locals 1
 
     .prologue
-    iget-boolean v0, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mFirstBoot:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mFirstBoot:Z
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->buildType()V
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->checkNBSecurity()V
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isNBSecurityExist()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInternalVersion()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->initHandler()V
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->setWhiteListPkgNames()V
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->setProtectionListPkgNames()V
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->setBlackListPkgNames()V
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->setWidgetListPkgNames()V
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->setBindListPkgNames()V
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->setCallerListPkgNames()V
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->setStartServiceListPkgNames()V
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->setContentProviderListPkgNames()V
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->setLimitListPkgNames()V
-
-    :cond_0
+    
     return-void
 .end method
 
@@ -4209,510 +4144,51 @@
 .end method
 
 .method public isAllowedSelfStartFromBindService(Lcom/android/server/am/ServiceRecord;I)Z
-    .locals 6
+    .locals 1
     .param p1, "serviceRecord"    # Lcom/android/server/am/ServiceRecord;
     .param p2, "callingUid"    # I
 
     .prologue
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInternalVersion()Z
+    const/4 v0, 0x1
 
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isNBSecurityExist()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    :cond_0
-    const/4 v2, 0x1
-
-    :cond_1
-    :goto_0
-    return v2
-
-    :cond_2
-    const/4 v2, 0x0
-
-    .local v2, "result":Z
-    iget-object v3, p1, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget-object v1, v3, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    .local v1, "packageName":Ljava/lang/String;
-    iget-object v3, p1, Lcom/android/server/am/ServiceRecord;->name:Landroid/content/ComponentName;
-
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
-
-    move-result-object v0
-
-    .local v0, "className":Ljava/lang/String;
-    invoke-direct {p0, p2}, Lcom/android/server/am/NubiaSelfStartUtil;->isRootOrShell(I)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    iget-object v3, p1, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
-
-    invoke-direct {p0, v3}, Lcom/android/server/am/NubiaSelfStartUtil;->isDefaultAllow(Landroid/content/pm/ApplicationInfo;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    invoke-direct {p0, v1}, Lcom/android/server/am/NubiaSelfStartUtil;->isInWhiteList(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    invoke-direct {p0, v1}, Lcom/android/server/am/NubiaSelfStartUtil;->isInProtectList(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    :cond_3
-    invoke-direct {p0, v1}, Lcom/android/server/am/NubiaSelfStartUtil;->isLimited(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    :cond_4
-    invoke-direct {p0, v1}, Lcom/android/server/am/NubiaSelfStartUtil;->isWidget(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_5
-
-    invoke-direct {p0, v1, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInBindList(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    :cond_5
-    const/4 v2, 0x1
-
-    :cond_6
-    if-eqz v2, :cond_7
-
-    const-string v3, "NubiaSelfStartUtil"
-
-    const-string v4, "bindServiceLocked"
-
-    invoke-direct {p0, v1, v4}, Lcom/android/server/am/NubiaSelfStartUtil;->getPermittedStr(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :cond_7
-    if-nez v2, :cond_1
-
-    const-string v3, "NubiaSelfStartUtil"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Not allow packageName=="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, " from bind service autostart"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
+    return v0
 .end method
 
 .method isAllowedSelfStartPkg(Landroid/content/pm/ApplicationInfo;ILjava/lang/String;)Z
-    .locals 4
+    .locals 1
     .param p1, "appInfo"    # Landroid/content/pm/ApplicationInfo;
     .param p2, "callingUid"    # I
     .param p3, "offer"    # Ljava/lang/String;
 
     .prologue
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInternalVersion()Z
+    const/4 v0, 0x1
+    
+    return v0
 
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isNBSecurityExist()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    :cond_0
-    const/4 v1, 0x1
-
-    :cond_1
-    :goto_0
-    return v1
-
-    :cond_2
-    const/4 v1, 0x0
-
-    .local v1, "result":Z
-    iget-object v0, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    .local v0, "packageName":Ljava/lang/String;
-    invoke-direct {p0, p2}, Lcom/android/server/am/NubiaSelfStartUtil;->isRootOrShell(I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    invoke-direct {p0, p1}, Lcom/android/server/am/NubiaSelfStartUtil;->isDefaultAllow(Landroid/content/pm/ApplicationInfo;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInWhiteList(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInProtectList(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    :cond_3
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isLimited(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    :cond_4
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isWidget(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    :cond_5
-    const/4 v1, 0x1
-
-    :cond_6
-    if-eqz v1, :cond_7
-
-    const-string v2, "NubiaSelfStartUtil"
-
-    invoke-direct {p0, v0, p3}, Lcom/android/server/am/NubiaSelfStartUtil;->getPermittedStr(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :cond_7
-    if-nez v1, :cond_1
-
-    const-string v2, "NubiaSelfStartUtil"
-
-    invoke-direct {p0, v0, p3}, Lcom/android/server/am/NubiaSelfStartUtil;->getForbidStr(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
 .end method
 
 .method isAllowedSelfStartPkg(Lcom/android/server/am/BroadcastRecord;Landroid/content/pm/ResolveInfo;)Z
-    .locals 5
+    .locals 1
     .param p1, "r"    # Lcom/android/server/am/BroadcastRecord;
     .param p2, "info"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInternalVersion()Z
+    const/4 v0, 0x1
 
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isNBSecurityExist()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    :cond_0
-    const/4 v1, 0x1
-
-    :cond_1
-    :goto_0
-    return v1
-
-    :cond_2
-    const/4 v1, 0x0
-
-    .local v1, "result":Z
-    iget-object v2, p2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v2, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget-object v0, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    .local v0, "packageName":Ljava/lang/String;
-    iget v2, p1, Lcom/android/server/am/BroadcastRecord;->callingUid:I
-
-    invoke-direct {p0, v2}, Lcom/android/server/am/NubiaSelfStartUtil;->isRootOrShell(I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    iget-object v2, p2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v2, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    invoke-direct {p0, v2}, Lcom/android/server/am/NubiaSelfStartUtil;->isDefaultAllow(Landroid/content/pm/ApplicationInfo;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInWhiteList(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInProtectList(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    :cond_3
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isLimited(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    :cond_4
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isWidget(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_5
-
-    invoke-direct {p0, p1}, Lcom/android/server/am/NubiaSelfStartUtil;->isWidgetAction(Lcom/android/server/am/BroadcastRecord;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    :cond_5
-    const/4 v1, 0x1
-
-    :cond_6
-    if-eqz v1, :cond_7
-
-    const-string v2, "NubiaSelfStartUtil"
-
-    invoke-direct {p0, v0, p1}, Lcom/android/server/am/NubiaSelfStartUtil;->getPermittedStr(Ljava/lang/String;Lcom/android/server/am/BroadcastRecord;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :cond_7
-    if-nez v1, :cond_1
-
-    const-string v2, "NubiaSelfStartUtil"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Not allow packageName=="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, " R=="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
+    return v0
 .end method
 
 .method isAllowedSelfStartPkg(Ljava/lang/String;Landroid/content/pm/ApplicationInfo;I)Z
-    .locals 5
+    .locals 1
     .param p1, "authority"    # Ljava/lang/String;
     .param p2, "appInfo"    # Landroid/content/pm/ApplicationInfo;
     .param p3, "callingUid"    # I
 
     .prologue
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInternalVersion()Z
+    const/4 v0, 0x1
 
-    move-result v2
+    return v0
 
-    if-nez v2, :cond_0
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isNBSecurityExist()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    :cond_0
-    const/4 v1, 0x1
-
-    :cond_1
-    :goto_0
-    return v1
-
-    :cond_2
-    const/4 v1, 0x0
-
-    .local v1, "result":Z
-    iget-object v0, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    .local v0, "packageName":Ljava/lang/String;
-    invoke-direct {p0, p3}, Lcom/android/server/am/NubiaSelfStartUtil;->isRootOrShell(I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    invoke-direct {p0, p2}, Lcom/android/server/am/NubiaSelfStartUtil;->isDefaultAllow(Landroid/content/pm/ApplicationInfo;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInWhiteList(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInProtectList(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    :cond_3
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isLimited(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    :cond_4
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->isWidget(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_5
-
-    invoke-direct {p0, p1}, Lcom/android/server/am/NubiaSelfStartUtil;->isAuthorityAllow(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    :cond_5
-    const/4 v1, 0x1
-
-    :cond_6
-    if-eqz v1, :cond_7
-
-    const-string v2, "NubiaSelfStartUtil"
-
-    invoke-direct {p0, v0}, Lcom/android/server/am/NubiaSelfStartUtil;->getCPPermittedStr(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :cond_7
-    if-nez v1, :cond_1
-
-    const-string v2, "NubiaSelfStartUtil"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Not allow packageName=="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, " from contentProvider autostart"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
 .end method
 
 .method isAllowedServiceRestart(Lcom/android/server/am/ProcessRecord;)Z
@@ -4868,97 +4344,14 @@
 .end method
 
 .method isInCallerList(I)Z
-    .locals 8
+    .locals 1
     .param p1, "callerUid"    # I
 
     .prologue
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInternalVersion()Z
+    const/4 v0, 0x1
 
-    move-result v7
+    return v0
 
-    if-nez v7, :cond_0
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isNBSecurityExist()Z
-
-    move-result v7
-
-    if-nez v7, :cond_2
-
-    :cond_0
-    const/4 v6, 0x1
-
-    :cond_1
-    :goto_0
-    return v6
-
-    :cond_2
-    const/4 v6, 0x0
-
-    .local v6, "result":Z
-    iget-object v7, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mContext:Landroid/content/Context;
-
-    if-eqz v7, :cond_1
-
-    :try_start_0
-    iget-object v7, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v7}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v7
-
-    invoke-virtual {v7, p1}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
-
-    move-result-object v1
-
-    .local v1, "callerPkgList":[Ljava/lang/String;
-    if-eqz v1, :cond_1
-
-    move-object v0, v1
-
-    .local v0, "arr$":[Ljava/lang/String;
-    array-length v4, v0
-
-    .local v4, "len$":I
-    const/4 v3, 0x0
-
-    .local v3, "i$":I
-    :goto_1
-    if-ge v3, v4, :cond_1
-
-    aget-object v5, v0, v3
-
-    .local v5, "pkgName":Ljava/lang/String;
-    iget-object v7, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mCallerListPkgNames:Ljava/util/Set;
-
-    invoke-interface {v7, v5}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v7
-
-    if-eqz v7, :cond_3
-
-    const/4 v6, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    .end local v0    # "arr$":[Ljava/lang/String;
-    .end local v1    # "callerPkgList":[Ljava/lang/String;
-    .end local v3    # "i$":I
-    .end local v4    # "len$":I
-    .end local v5    # "pkgName":Ljava/lang/String;
-    :catch_0
-    move-exception v2
-
-    .local v2, "e":Ljava/lang/Exception;
-    invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
 .end method
 
 .method isInContentProviderList(Lcom/android/server/am/ContentProviderRecord;)Z
@@ -4966,323 +4359,26 @@
     .param p1, "record"    # Lcom/android/server/am/ContentProviderRecord;
 
     .prologue
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInternalVersion()Z
+    const/4 v0, 0x1
 
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isNBSecurityExist()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    :cond_0
-    const/4 v2, 0x1
-
-    :cond_1
-    :goto_0
-    return v2
-
-    :cond_2
-    const/4 v2, 0x0
-
-    .local v2, "result":Z
-    iget-object v3, p1, Lcom/android/server/am/ContentProviderRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, p1, Lcom/android/server/am/ContentProviderRecord;->name:Landroid/content/ComponentName;
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, p1, Lcom/android/server/am/ContentProviderRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget-object v1, v3, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    .local v1, "packageName":Ljava/lang/String;
-    iget-object v3, p1, Lcom/android/server/am/ContentProviderRecord;->name:Landroid/content/ComponentName;
-
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
-
-    move-result-object v0
-
-    .local v0, "className":Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mProviderListNames:Ljava/util/Map;
-
-    invoke-interface {v3, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v3, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mProviderListNames:Ljava/util/Map;
-
-    invoke-interface {v3, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Set;
-
-    invoke-interface {v3, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    goto :goto_0
+    return v0
 .end method
 
 .method isInStartServiceList(Lcom/android/server/am/ServiceRecord;)Z
-    .locals 4
+    .locals 1
     .param p1, "serviceRecord"    # Lcom/android/server/am/ServiceRecord;
 
     .prologue
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInternalVersion()Z
+    const/4 v0, 0x1
 
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isNBSecurityExist()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    :cond_0
-    const/4 v2, 0x1
-
-    :cond_1
-    :goto_0
-    return v2
-
-    :cond_2
-    const/4 v2, 0x0
-
-    .local v2, "result":Z
-    iget-object v3, p1, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, p1, Lcom/android/server/am/ServiceRecord;->name:Landroid/content/ComponentName;
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, p1, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget-object v1, v3, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    .local v1, "packageName":Ljava/lang/String;
-    iget-object v3, p1, Lcom/android/server/am/ServiceRecord;->name:Landroid/content/ComponentName;
-
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
-
-    move-result-object v0
-
-    .local v0, "className":Ljava/lang/String;
-    if-eqz v1, :cond_1
-
-    if-eqz v0, :cond_1
-
-    iget-object v3, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mStartServiceListNames:Ljava/util/Map;
-
-    invoke-interface {v3, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v3, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mStartServiceListNames:Ljava/util/Map;
-
-    invoke-interface {v3, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Set;
-
-    invoke-interface {v3, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    goto :goto_0
+    return v0
 .end method
 
 .method registerSelfStartObserver()V
-    .locals 5
+    .locals 1
 
     .prologue
-    const/4 v4, 0x1
+    const/4 v0, 0x1
 
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isInternalVersion()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0}, Lcom/android/server/am/NubiaSelfStartUtil;->isNBSecurityExist()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    :goto_0
     return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/am/NubiaSelfStartUtil;->CONTENT_URI_SELFSTART:Landroid/net/Uri;
-
-    new-instance v2, Lcom/android/server/am/NubiaSelfStartUtil$1;
-
-    new-instance v3, Landroid/os/Handler;
-
-    invoke-direct {v3}, Landroid/os/Handler;-><init>()V
-
-    invoke-direct {v2, p0, v3}, Lcom/android/server/am/NubiaSelfStartUtil$1;-><init>(Lcom/android/server/am/NubiaSelfStartUtil;Landroid/os/Handler;)V
-
-    invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
-
-    iget-object v0, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/am/NubiaSelfStartUtil;->CONTENT_URI_SELFSTART_PROTECTION_LIST:Landroid/net/Uri;
-
-    new-instance v2, Lcom/android/server/am/NubiaSelfStartUtil$2;
-
-    new-instance v3, Landroid/os/Handler;
-
-    invoke-direct {v3}, Landroid/os/Handler;-><init>()V
-
-    invoke-direct {v2, p0, v3}, Lcom/android/server/am/NubiaSelfStartUtil$2;-><init>(Lcom/android/server/am/NubiaSelfStartUtil;Landroid/os/Handler;)V
-
-    invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
-
-    iget-object v0, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/am/NubiaSelfStartUtil;->CONTENT_URI_SELFSTART_BLACK_LIST:Landroid/net/Uri;
-
-    new-instance v2, Lcom/android/server/am/NubiaSelfStartUtil$3;
-
-    new-instance v3, Landroid/os/Handler;
-
-    invoke-direct {v3}, Landroid/os/Handler;-><init>()V
-
-    invoke-direct {v2, p0, v3}, Lcom/android/server/am/NubiaSelfStartUtil$3;-><init>(Lcom/android/server/am/NubiaSelfStartUtil;Landroid/os/Handler;)V
-
-    invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
-
-    iget-object v0, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/am/NubiaSelfStartUtil;->CONTENT_URI_SELFSTART_BIND_LIST:Landroid/net/Uri;
-
-    new-instance v2, Lcom/android/server/am/NubiaSelfStartUtil$4;
-
-    new-instance v3, Landroid/os/Handler;
-
-    invoke-direct {v3}, Landroid/os/Handler;-><init>()V
-
-    invoke-direct {v2, p0, v3}, Lcom/android/server/am/NubiaSelfStartUtil$4;-><init>(Lcom/android/server/am/NubiaSelfStartUtil;Landroid/os/Handler;)V
-
-    invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
-
-    iget-object v0, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/am/NubiaSelfStartUtil;->CONTENT_URI_SELFSTART_CALLER_LIST:Landroid/net/Uri;
-
-    new-instance v2, Lcom/android/server/am/NubiaSelfStartUtil$5;
-
-    new-instance v3, Landroid/os/Handler;
-
-    invoke-direct {v3}, Landroid/os/Handler;-><init>()V
-
-    invoke-direct {v2, p0, v3}, Lcom/android/server/am/NubiaSelfStartUtil$5;-><init>(Lcom/android/server/am/NubiaSelfStartUtil;Landroid/os/Handler;)V
-
-    invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
-
-    iget-object v0, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/am/NubiaSelfStartUtil;->CONTENT_URI_SELFSTART_STARTSERVICE_LIST:Landroid/net/Uri;
-
-    new-instance v2, Lcom/android/server/am/NubiaSelfStartUtil$6;
-
-    new-instance v3, Landroid/os/Handler;
-
-    invoke-direct {v3}, Landroid/os/Handler;-><init>()V
-
-    invoke-direct {v2, p0, v3}, Lcom/android/server/am/NubiaSelfStartUtil$6;-><init>(Lcom/android/server/am/NubiaSelfStartUtil;Landroid/os/Handler;)V
-
-    invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
-
-    iget-object v0, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/am/NubiaSelfStartUtil;->CONTENT_URI_SELFSTART_PROVIDER_LIST:Landroid/net/Uri;
-
-    new-instance v2, Lcom/android/server/am/NubiaSelfStartUtil$7;
-
-    new-instance v3, Landroid/os/Handler;
-
-    invoke-direct {v3}, Landroid/os/Handler;-><init>()V
-
-    invoke-direct {v2, p0, v3}, Lcom/android/server/am/NubiaSelfStartUtil$7;-><init>(Lcom/android/server/am/NubiaSelfStartUtil;Landroid/os/Handler;)V
-
-    invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
-
-    iget-object v0, p0, Lcom/android/server/am/NubiaSelfStartUtil;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/am/NubiaSelfStartUtil;->CONTENT_URI_SELFSTART_LIMIT_LIST:Landroid/net/Uri;
-
-    new-instance v2, Lcom/android/server/am/NubiaSelfStartUtil$8;
-
-    new-instance v3, Landroid/os/Handler;
-
-    invoke-direct {v3}, Landroid/os/Handler;-><init>()V
-
-    invoke-direct {v2, p0, v3}, Lcom/android/server/am/NubiaSelfStartUtil$8;-><init>(Lcom/android/server/am/NubiaSelfStartUtil;Landroid/os/Handler;)V
-
-    invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
-
-    goto/16 :goto_0
 .end method
