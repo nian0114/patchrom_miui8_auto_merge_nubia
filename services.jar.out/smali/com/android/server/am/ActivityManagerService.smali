@@ -2112,6 +2112,16 @@
     :goto_0
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
+    invoke-static {}, Lcom/android/server/am/NubiaSelfStartUtil;->getInstance()Lcom/android/server/am/NubiaSelfStartUtil;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mNubiaSelfStartUtil:Lcom/android/server/am/NubiaSelfStartUtil;
+
+    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mNubiaSelfStartUtil:Lcom/android/server/am/NubiaSelfStartUtil;
+
+    invoke-virtual {v0, p1}, Lcom/android/server/am/NubiaSelfStartUtil;->initContext(Landroid/content/Context;)V
+
     invoke-static {}, Landroid/os/FactoryTest;->getMode()I
 
     move-result v0
@@ -20906,6 +20916,12 @@
     const/4 v6, 0x0
 
     .local v6, "cpi":Landroid/content/pm/ProviderInfo;
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Lcom/android/server/am/ActivityManagerService;->mNubiaSelfStartUtil:Lcom/android/server/am/NubiaSelfStartUtil;
+
+    invoke-virtual {v5}, Lcom/android/server/am/NubiaSelfStartUtil;->firstBootGetAllowPkgNames()V
+
     monitor-enter p0
 
     :try_start_0
@@ -22539,6 +22555,33 @@
 
     move-result v5
 
+    if-nez v5, :cond_1e
+
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Lcom/android/server/am/ActivityManagerService;->mNubiaSelfStartUtil:Lcom/android/server/am/NubiaSelfStartUtil;
+
+    move-object/from16 v0, v38
+
+    iget v10, v0, Lcom/android/server/am/ProcessRecord;->uid:I
+
+    invoke-virtual {v5, v10}, Lcom/android/server/am/NubiaSelfStartUtil;->isInCallerList(I)Z
+
+    move-result v5
+
+    if-nez v5, :cond_1e
+
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Lcom/android/server/am/ActivityManagerService;->mNubiaSelfStartUtil:Lcom/android/server/am/NubiaSelfStartUtil;
+
+    invoke-virtual {v5, v4}, Lcom/android/server/am/NubiaSelfStartUtil;->isInContentProviderList(Lcom/android/server/am/ContentProviderRecord;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1f
+
+    :cond_1e
     const/16 v29, 0x1
 
     :cond_1f
@@ -82330,6 +82373,10 @@
     throw v0
 
     :cond_1
+    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mNubiaSelfStartUtil:Lcom/android/server/am/NubiaSelfStartUtil;
+
+    invoke-virtual {v0}, Lcom/android/server/am/NubiaSelfStartUtil;->firstBootGetAllowPkgNames()V
+
     monitor-enter p0
 
     :try_start_0
@@ -82399,6 +82446,10 @@
     .end annotation
 
     .prologue
+    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mNubiaSelfStartUtil:Lcom/android/server/am/NubiaSelfStartUtil;
+
+    invoke-virtual {v0}, Lcom/android/server/am/NubiaSelfStartUtil;->firstBootGetAllowPkgNames()V
+
     monitor-enter p0
 
     :try_start_0
@@ -84071,6 +84122,12 @@
     move-result-wide v8
 
     invoke-static {v4, v8, v9}, Landroid/util/EventLog;->writeEvent(IJ)I
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/server/am/ActivityManagerService;->mNubiaSelfStartUtil:Lcom/android/server/am/NubiaSelfStartUtil;
+
+    invoke-virtual {v4}, Lcom/android/server/am/NubiaSelfStartUtil;->registerSelfStartObserver()V
 
     monitor-enter p0
 
